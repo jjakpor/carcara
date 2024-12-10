@@ -44,7 +44,9 @@ mod resolution;
 mod utils;
 
 use crate::benchmarking::{CollectResults, OnlineBenchmarkResults, RunMeasurement};
+use ast::{AnchorArg, Problem, Proof, ProofCommand, ProofStep};
 use checker::{error::CheckerError, CheckerStatistics};
+use indexmap::IndexSet;
 use parser::{ParserError, Position};
 use std::io;
 use std::time::{Duration, Instant};
@@ -311,4 +313,54 @@ pub fn generate_lia_smt_instances<T: io::BufRead>(
         }
     }
     Ok(result)
+}
+
+pub fn mini_slice(proof: &Proof, id: &str, problem: &Problem) -> Option<(Proof, Problem)> {
+
+    // Create a new proof with the same constant definitions but otherwise empty and a new problem with the same prelude
+    let mut new_proof : Proof = Proof { constant_definitions: proof.constant_definitions.clone(), commands: Vec::new()};
+    let mut new_problem : Problem = Problem { prelude: problem.prelude.clone(), premises: IndexSet::new()};
+
+    let mut iter = proof.iter();
+    let mut anchor_args_stack: Vec<&Vec<AnchorArg>> = Vec::new();
+    let mut sliced_step: Option<&ProofCommand> = None;
+    while let Some(command) = iter.next() {
+        if command.id() == id {
+            sliced_step = Some(command);
+            break;
+        }
+        if let ProofCommand::Subproof(subproof) = command {
+            anchor_args_stack.push(&subproof.args);
+        }
+
+        if iter.is_end_step() {
+            anchor_args_stack.pop();
+        }
+    }
+
+    if let Some(ProofCommand::Step(proof_step)) = sliced_step {
+
+        let premises : Vec<&ProofCommand> = 
+        proof_step.premises.iter().map(|(d, i)| iter.get_premise((*d, *i))).collect();
+
+        for p in premises {
+             match p {
+                ProofCommand::Assume { id, term } => {
+                    new_problem.premises.insert(term.clone());
+                    new_proof.commands.push(ProofCommand::Assume { id: id.to_string(), term: term.clone() });
+                },
+                ProofCommand::Step(step) => {
+                    new_proof.commands.push(
+                        ProofCommand::Step(
+                            ProofStep { rule: "hole".to_string(), premises: Vec::new(), ..step.clone() }));
+                },
+                _ => {},
+            }
+        }
+        Some((new_proof, new_problem))
+    }
+
+    else {
+        None
+    }
 }
