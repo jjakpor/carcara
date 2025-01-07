@@ -4,8 +4,7 @@ mod logger;
 mod path_args;
 
 use carcara::{
-    ast, benchmarking::OnlineBenchmarkResults, check, check_and_elaborate, check_parallel, checker,
-    elaborator, generate_lia_smt_instances, parser,
+    ast, benchmarking::OnlineBenchmarkResults, check, check_and_elaborate, check_parallel, checker, elaborator, generate_lia_smt_instances, parser, small_slice1b
 };
 use clap::{AppSettings, ArgEnum, Args, Parser, Subcommand};
 use const_format::{formatcp, str_index};
@@ -395,6 +394,9 @@ struct SliceCommandOptions {
     #[clap(long, short = 'd')]
     max_distance: Option<usize>,
 
+    #[clap(long)]
+    small: bool,
+
     // To make slice more convenient to use, we accept (and ignore!) some options from the `check`
     // subcommand
     #[clap(short, long, hide = true)]
@@ -613,13 +615,18 @@ fn slice_command(
     let (problem, proof) = get_instance(&options.input)?;
     let (problem, proof, pool) = parser::parse_instance(problem, proof, options.parsing.into())
         .map_err(carcara::Error::from)?;
-
-    let node = ast::ProofNode::from_commands_with_root_id(proof.commands, &options.from)
+    
+    let sliced= if options.small {
+        small_slice1b(&proof, &options.from)
+    } else {
+        let node = ast::ProofNode::from_commands_with_root_id(proof.commands, &options.from)
         .ok_or_else(|| CliError::InvalidSliceId(options.from))?;
-    let sliced = ast::Proof {
+    ast::Proof {
         commands: node.into_commands(),
         ..proof
+    }
     };
+    
 
     Ok((problem, sliced, pool))
 }

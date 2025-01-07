@@ -248,6 +248,8 @@ pub struct SubproofNode {
 /// Converts a list of proof commands into a `ProofNode`.
 fn proof_list_to_node(commands: Vec<ProofCommand>, root_id: Option<&str>) -> Option<Rc<ProofNode>> {
     use indexmap::IndexSet;
+    // Tracing
+    // println!("{:?}", commands);
 
     struct Frame {
         commands: std::vec::IntoIter<ProofCommand>,
@@ -321,6 +323,8 @@ fn proof_list_to_node(commands: Vec<ProofCommand>, root_id: Option<&str>) -> Opt
             None => {
                 let mut frame = stack.pop().unwrap();
                 if stack.is_empty() {
+                    // Tracing
+                    println!("{:?}", frame.accumulator[15]);
                     break frame.accumulator;
                 }
 
@@ -340,7 +344,15 @@ fn proof_list_to_node(commands: Vec<ProofCommand>, root_id: Option<&str>) -> Opt
         };
         stack.last_mut().unwrap().accumulator.push(Rc::new(node));
     };
+// Jibiana: This is the final step. We have proof. Now, if we were supplied a root id, we look for the node with that id. 
+// This does not go into subproofs because the vector of nodes we get is from the bottom frame. We make a new stack frame whenever we enter a subproof, so we only
+// get the highest level subproofs but not their steps
 
+// However, this does not go into subproofs just because it's an iterator over the vector of nodes, but subproof steps aren't in this vector. (Actually, this statement may be wrong. 
+// I'm not sure when things are getting into the top level frame's accumulator really)--actually yes, I think it is just the stuff at the top level
+// So I want to not just look over proof nodes but also recursively search subproofs for id
+// If id is in subproof, need to get outbound premises
+// Now what we end up with doesn't transform premimses to assumptions or anything if I'm understanding correctly. Do we want to do that though?
     if let Some(root_id) = root_id {
         new_root_proof.into_iter().find(|node| node.id() == root_id)
     } else {

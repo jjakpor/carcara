@@ -1,0 +1,5 @@
+(assume a0 (! (= (! (not (! (= (! (f a) :named @p_3) d) :named @p_2)) :named @p_1) (! (not (! (= d (! (f b) :named @p_6)) :named @p_5)) :named @p_4)) :named @p_0))
+(step t11 (cl (not (! (= @p_0 (! (= @p_4 (! (not (! (= d @p_3) :named @p_10)) :named @p_9)) :named @p_8)) :named @p_7)) (not @p_0) @p_8) :rule hole)
+(step t14 (cl @p_7) :rule hole)
+(step t15 (cl @p_8) :rule resolution :premises (a0 t11 t14))
+(step t42 (cl) :rule hole)

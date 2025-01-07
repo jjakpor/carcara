@@ -1,0 +1,6 @@
+(anchor :step t240b)
+(step t2.t136 (cl (! (= y$n15s4 (! (ite y$en (! (ite (! (= y$n15s4 y$n1s4) :named @p_3) y$n1s4 (! (Add_4_4_4 y$n1s4 y$n1s4) :named @p_4)) :named @p_2) y$n1s4) :named @p_1)) :named @p_0)) :rule hole)
+(step t2.t225 (cl (! (= @p_1 y$n1s4) :named @p_5)) :rule hole)
+(step t2.t226 (cl @p_3) :rule trans :premises (t2.t136 t2.t225))
+(step t2 (cl (not (! (= y$n1s4 @p_1) :named @p_6)) (! (not @p_0) :named @p_7) @p_3) :rule hole)
+(step t240b (cl) :rule hole)

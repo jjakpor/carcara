@@ -44,10 +44,10 @@ mod resolution;
 mod utils;
 
 use crate::benchmarking::{CollectResults, OnlineBenchmarkResults, RunMeasurement};
-use ast::{AnchorArg, Problem, Proof, ProofCommand, ProofStep};
+use ast::{Proof, ProofCommand, ProofIter, ProofStep, Subproof};
 use checker::{error::CheckerError, CheckerStatistics};
-use indexmap::IndexSet;
 use parser::{ParserError, Position};
+use core::{panic, slice};
 use std::io;
 use std::time::{Duration, Instant};
 use thiserror::Error;
@@ -315,7 +315,190 @@ pub fn generate_lia_smt_instances<T: io::BufRead>(
     Ok(result)
 }
 
-pub fn mini_slice(proof: &Proof, id: &str, problem: &Problem) -> Option<(Proof, Problem)> {
+/** If command is a step, replace rule with hole. If assume, leave alone. Otherwise, panic. */
+fn holeify_premise(step: ProofCommand) -> ProofCommand{
+    match step {
+        ProofCommand::Step(step) => 
+        ProofCommand::Step(ProofStep {rule: "hole".to_string(),
+         premises: Vec::new(), 
+         discharge: Vec::new(),
+          id: step.id.clone(), 
+          clause: step.clause.clone(), 
+          args:step.args.clone()}),
+        ProofCommand::Assume {id:_, term:_}=> step,
+        _ => panic!("Expected step or assume"),
+
+    }
+     
+}
+/* fn commands_at_depth(mut premises_iter: &std::slice::Iter<'_, (usize, usize)>, 
+depth: usize, 
+index:usize, 
+mut commands: &mut Vec<ProofCommand>,
+mut iter: &ProofIter<'_>) -> Option<&(usize, usize)>  {
+    while let Some((d, i)) = *premises_iter.next()  {
+        if *d == depth {
+            commands.push(holeify_premise(iter.get_premise((*d, *i)).clone()));
+        }
+    }
+}  */
+fn commands_at_depth<'a>(depth: usize, commands: &'a mut Vec<ProofCommand>, mut next_premise: Option<&'a (usize, usize)>, new_premises: &mut Vec<(usize, usize)>, iter: &ProofIter<'a>, premises_iter: &mut std::slice::Iter<'a, (usize, usize)>) -> Option<&'a (usize, usize)> {
+    let mut new_premise_index = 0;
+    while let Some((d, i)) = next_premise  {
+        if *d == depth {
+            commands.push(holeify_premise(iter.get_premise((*d, *i)).clone()));
+            new_premises.push((0, new_premise_index));
+            new_premise_index += 1;
+            next_premise = premises_iter.next();
+        } else {
+            break;
+        }
+    }
+    next_premise
+}
+pub fn small_slice1b(proof: &Proof, id: &str) -> Proof {
+
+    let mut new_proof : Proof = Proof { constant_definitions: proof.constant_definitions.clone(), commands: Vec::new()};
+
+    let mut iter = proof.iter();
+    let mut subproof_stack: Vec<&Subproof> = Vec::new();
+    let mut sliced_step: Option<&ProofCommand> = None;
+    while let Some(command) = iter.next() {
+        if command.id() == id {
+            sliced_step = Some(command);
+            break;
+        }
+        if let ProofCommand::Subproof(subproof) = command {
+            subproof_stack.push(&subproof);
+        }
+
+        if iter.is_end_step() {
+            subproof_stack.pop();
+        }
+    }
+    // println!("{:?}", sliced_step);
+    // if let Some(ProofCommand::Step(proof_step)) = sliced_step
+    if matches!(sliced_step, Some(ProofCommand::Step(_))) | matches!(sliced_step, Some(ProofCommand::Subproof(_))) {
+        let proof_step : &ProofStep = match sliced_step {
+            Some(ProofCommand::Step(step)) => step,
+            Some(ProofCommand::Subproof(sp)) => {
+                let last_command = sp.commands.last().unwrap();
+                if let ProofCommand::Step(s) =  last_command {
+                    s
+                } else {
+                    panic!("Subproof does not end in step")
+                }
+            },
+            _ => panic!("Command is not step or subproof despite matching")
+        };
+        // println!("{:?}", proof_step);
+        let mut premises = proof_step.premises.clone();
+        premises.sort();
+
+        let mut premises_iter= premises.iter();
+        let mut next_premise: Option<&(usize, usize)> = premises_iter.next();
+
+        
+
+        let mut commands: &mut Vec<ProofCommand> = &mut new_proof.commands;
+
+        let mut new_premises : Vec<(usize, usize)> = Vec::new();
+        let mut new_premise_index: usize = 0;
+        
+        // next_premise = commands_at_depth(0, commands, next_premise, &mut new_premises, &iter, &mut premises_iter);
+        // Code smell--just wanted to avoid missing this case
+        while let Some((d, i)) = next_premise  {
+            if *d == 0 {
+                commands.push(holeify_premise(iter.get_premise((*d, *i)).clone()));
+                new_premises.push((0, new_premise_index));
+                new_premise_index += 1;
+                next_premise = premises_iter.next();
+            } else {
+                break;
+            }
+        }
+
+        
+
+        // Collect top level premises
+        // If not in subproof, that's the end.
+        // If in subproof, need to get deeper premises and create subproofs
+        if !iter.is_in_subproof() {
+            let new_step = ProofStep {
+                premises: new_premises,
+                 ..proof_step.clone() // Discharges could be wrong
+                };
+            commands.push(ProofCommand::Step(new_step));
+        }
+        else {
+       
+        let mut depth:usize = 0;
+        /* I could make top-level "level 0" */
+        // println!("Subproof stack length is {}", subproof_stack.len());
+        for (j, sp) in subproof_stack.iter().enumerate() {
+            new_premise_index = 0;
+            let new_sp = 
+            Subproof { commands: Vec::new(), args: sp.args.clone(), context_id: sp.context_id.clone()};
+            commands.push(ProofCommand::Subproof(new_sp));
+
+            if let ProofCommand::Subproof(last_subproof) = commands.last_mut().unwrap() {
+                commands = &mut last_subproof.commands;
+            } else {
+                panic!("Subproof expected.");
+            }
+            depth += 1;
+            
+            while let Some((d, i)) = next_premise  {
+                if *d == depth {
+                    commands.push(holeify_premise(iter.get_premise((*d, *i)).clone()));
+                    new_premises.push((depth, new_premise_index));
+                    new_premise_index += 1;
+                    next_premise = premises_iter.next();
+                }
+            }
+
+            // TODO: check that this handles the edge cases properly
+            if j == subproof_stack.len() - 1 {
+                commands.push(ProofCommand::Step(ProofStep { id: proof_step.id.clone(),
+                     clause: proof_step.clause.clone(),
+                      rule: proof_step.rule.clone(),
+                       premises: new_premises.clone(),
+                        args: proof_step.args.clone(),
+                         discharge: proof_step.discharge.clone() }));
+            }
+
+            // DONE: make hole
+            let penult = &sp.commands[sp.commands.len() - 1];
+            if id != penult.id() {
+                commands.push(holeify_premise(penult.clone()));
+            }
+            let ult = &sp.commands[sp.commands.len() - 2];
+            if id != ult.id() {
+            commands.push(holeify_premise(ult.clone()));
+            }
+        }
+    }
+        // println!("{:?}", new_proof);
+        commands.push(ProofCommand::Step(
+            ProofStep {clause: Vec::new(), 
+                rule:"hole".to_string(), 
+                premises :Vec::new(),
+            discharge: Vec::new(),
+        args: Vec::new(),
+        id: proof.commands.last().unwrap().id().to_string() + "b"
+    }));
+        return new_proof;
+    }
+    else {
+        panic!("Command to slice was not a step.");
+    }
+    
+
+}
+
+/* 
+
+pub fn mini_slice2(proof: &Proof, id: &str, problem: &Problem) -> Option<(Proof, Problem)> {
 
     // Create a new proof with the same constant definitions but otherwise empty and a new problem with the same prelude
     let mut new_proof : Proof = Proof { constant_definitions: proof.constant_definitions.clone(), commands: Vec::new()};
@@ -364,3 +547,4 @@ pub fn mini_slice(proof: &Proof, id: &str, problem: &Problem) -> Option<(Proof, 
         None
     }
 }
+    */
