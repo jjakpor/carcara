@@ -4,7 +4,7 @@ mod logger;
 mod path_args;
 
 use carcara::{
-    ast, benchmarking::OnlineBenchmarkResults, check, check_and_elaborate, check_parallel, checker, elaborator, generate_lia_smt_instances, parser, small_slice1b
+    ast, benchmarking::OnlineBenchmarkResults, check, check_and_elaborate, check_parallel, checker, elaborator, generate_lia_smt_instances, parser, small_slice1b, small_slice2
 };
 use clap::{AppSettings, ArgEnum, Args, Parser, Subcommand};
 use const_format::{formatcp, str_index};
@@ -613,11 +613,12 @@ fn slice_command(
     options: SliceCommandOptions,
 ) -> CliResult<(ast::Problem, ast::Proof, ast::PrimitivePool)> {
     let (problem, proof) = get_instance(&options.input)?;
-    let (problem, proof, pool) = parser::parse_instance(problem, proof, options.parsing.into())
+    let (problem, proof, mut pool) = parser::parse_instance(problem, proof, options.parsing.into())
         .map_err(carcara::Error::from)?;
     
     let sliced= if options.small {
-        small_slice1b(&proof, &options.from)
+        // small_slice1b(&proof, &options.from)
+        small_slice2(&problem, &proof, &options.from, &mut pool)
     } else {
         let node = ast::ProofNode::from_commands_with_root_id(proof.commands, &options.from)
         .ok_or_else(|| CliError::InvalidSliceId(options.from))?;

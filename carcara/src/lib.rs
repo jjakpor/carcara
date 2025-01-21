@@ -44,7 +44,7 @@ mod resolution;
 mod utils;
 
 use crate::benchmarking::{CollectResults, OnlineBenchmarkResults, RunMeasurement};
-use ast::{Proof, ProofCommand, ProofIter, ProofStep, Subproof};
+use ast::{pool, Operator, PrimitivePool, Problem, Proof, ProofCommand, ProofIter, ProofStep, Rc, Subproof, Term, TermPool};
 use checker::{error::CheckerError, CheckerStatistics};
 use parser::{ParserError, Position};
 use core::{panic, slice};
@@ -343,7 +343,7 @@ mut iter: &ProofIter<'_>) -> Option<&(usize, usize)>  {
     }
 }  */
 fn commands_at_depth<'a>(depth: usize, commands: &'a mut Vec<ProofCommand>, mut next_premise: Option<&'a (usize, usize)>, new_premises: &mut Vec<(usize, usize)>, iter: &ProofIter<'a>, premises_iter: &mut std::slice::Iter<'a, (usize, usize)>) -> Option<&'a (usize, usize)> {
-    let mut new_premise_index = 0;
+   let mut new_premise_index = 0;
     while let Some((d, i)) = next_premise  {
         if *d == depth {
             commands.push(holeify_premise(iter.get_premise((*d, *i)).clone()));
@@ -363,6 +363,8 @@ pub fn small_slice1b(proof: &Proof, id: &str) -> Proof {
     let mut iter = proof.iter();
     let mut subproof_stack: Vec<&Subproof> = Vec::new();
     let mut sliced_step: Option<&ProofCommand> = None;
+
+    let mut prev_was_end: bool = false;
     while let Some(command) = iter.next() {
         if command.id() == id {
             sliced_step = Some(command);
@@ -373,11 +375,16 @@ pub fn small_slice1b(proof: &Proof, id: &str) -> Proof {
         }
 
         if iter.is_end_step() {
+            prev_was_end = true;
+            continue;
+        }
+
+        if prev_was_end {
             subproof_stack.pop();
+            prev_was_end = false;
         }
     }
-    // println!("{:?}", sliced_step);
-    // if let Some(ProofCommand::Step(proof_step)) = sliced_step
+    
     if matches!(sliced_step, Some(ProofCommand::Step(_))) | matches!(sliced_step, Some(ProofCommand::Subproof(_))) {
         let proof_step : &ProofStep = match sliced_step {
             Some(ProofCommand::Step(step)) => step,
@@ -391,7 +398,7 @@ pub fn small_slice1b(proof: &Proof, id: &str) -> Proof {
             },
             _ => panic!("Command is not step or subproof despite matching")
         };
-        // println!("{:?}", proof_step);
+        
         let mut premises = proof_step.premises.clone();
         premises.sort();
 
@@ -405,7 +412,7 @@ pub fn small_slice1b(proof: &Proof, id: &str) -> Proof {
         let mut new_premises : Vec<(usize, usize)> = Vec::new();
         let mut new_premise_index: usize = 0;
         
-        // next_premise = commands_at_depth(0, commands, next_premise, &mut new_premises, &iter, &mut premises_iter);
+        // next_premise = commands_at_depth(0, commands, next_premise, &mut new_premises, iter, premises_iter);
         // Code smell--just wanted to avoid missing this case
         while let Some((d, i)) = next_premise  {
             if *d == 0 {
@@ -426,7 +433,7 @@ pub fn small_slice1b(proof: &Proof, id: &str) -> Proof {
         if !iter.is_in_subproof() {
             let new_step = ProofStep {
                 premises: new_premises,
-                 ..proof_step.clone() // Discharges could be wrong
+                 ..proof_step.clone() // Discharges could be wrong -- actually, I think this just returns {} because if not in subproof, there should be no discharges
                 };
             commands.push(ProofCommand::Step(new_step));
         }
@@ -434,9 +441,9 @@ pub fn small_slice1b(proof: &Proof, id: &str) -> Proof {
        
         let mut depth:usize = 0;
         /* I could make top-level "level 0" */
-        // println!("Subproof stack length is {}", subproof_stack.len());
         for (j, sp) in subproof_stack.iter().enumerate() {
             new_premise_index = 0;
+
             let new_sp = 
             Subproof { commands: Vec::new(), args: sp.args.clone(), context_id: sp.context_id.clone()};
             commands.push(ProofCommand::Subproof(new_sp));
@@ -459,12 +466,14 @@ pub fn small_slice1b(proof: &Proof, id: &str) -> Proof {
 
             // TODO: check that this handles the edge cases properly
             if j == subproof_stack.len() - 1 {
+
+                // proof_step.discharge.iter().map(|(d, i)|);
                 commands.push(ProofCommand::Step(ProofStep { id: proof_step.id.clone(),
                      clause: proof_step.clause.clone(),
                       rule: proof_step.rule.clone(),
                        premises: new_premises.clone(),
                         args: proof_step.args.clone(),
-                         discharge: proof_step.discharge.clone() }));
+                         discharge: Vec::new()/* proof_step.discharge.clone() */ })); // TODO: add discharges properly
             }
 
             // DONE: make hole
@@ -472,13 +481,15 @@ pub fn small_slice1b(proof: &Proof, id: &str) -> Proof {
             if id != penult.id() {
                 commands.push(holeify_premise(penult.clone()));
             }
+            // TODO: add discharges
             let ult = &sp.commands[sp.commands.len() - 2];
             if id != ult.id() {
             commands.push(holeify_premise(ult.clone()));
             }
         }
     }
-        // println!("{:?}", new_proof);
+        
+        // Add empty clause to end
         commands.push(ProofCommand::Step(
             ProofStep {clause: Vec::new(), 
                 rule:"hole".to_string(), 
@@ -495,6 +506,137 @@ pub fn small_slice1b(proof: &Proof, id: &str) -> Proof {
     
 
 }
+
+
+fn extract_step(sliced_step: Option<&ProofCommand>) -> &ProofStep {
+    match sliced_step {
+        Some(ProofCommand::Step(step)) => step,
+        Some(ProofCommand::Subproof(sp)) => {
+            let last_command = sp.commands.last().unwrap();
+            if let ProofCommand::Step(s) =  last_command {
+                s
+            } else {
+                panic!("Subproof does not end in step")
+            }
+        },
+        _ => panic!("Command is not step or subproof despite matching")
+    }
+}
+
+fn termify_clause(clause: &[Rc<Term>], pool: &mut PrimitivePool) -> Rc<Term> {
+    if clause.is_empty() {
+        pool.add(Term::new_bool(false))
+    } else if clause.len() == 1 {
+        clause[0].clone()
+    } else {
+        pool.add(Term::Op(Operator::Or, clause.to_vec()))
+    }  
+}
+
+/**
+ * clause: a clause
+ * pool: The term pool to add the negations to
+ * 
+ * Returns: a vector containing the negation of each disjunct in a clause
+ */
+fn negation_conjuncts(clause: &[Rc<Term>], pool: &mut PrimitivePool) -> Vec<Rc<Term>> {
+    let negs : Vec<Rc<Term>> = clause.iter().map(|t| pool.add(Term::Op(Operator::Not, [t.clone()].to_vec()))).collect();
+    negs
+}
+/* 
+problem: string (or should I add printing capacity)?
+proof: Use data structure, then convert
+
+*/
+// Note: this is not the right signature. I just want to see if it transforms things how I want
+pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Proof {
+    use std::fmt::Write;
+    let mut asserts : Vec<Rc<Term>>  = Vec::new();
+    let mut new_proof : Proof = Proof { constant_definitions: proof.constant_definitions.clone(), commands: Vec::new()};
+
+    let mut iter = proof.iter();
+    let mut sliced_step: Option<&ProofCommand> = None;
+
+    let mut prev_was_end: bool = false;
+    while let Some(command) = iter.next() {
+        if command.id() == id {
+            sliced_step = Some(command);
+            break;
+        }
+    }
+    
+    let proof_step = extract_step(sliced_step);
+    let premise_clauses: Vec<_> = proof_step.premises.iter().map(|(d, i)| iter.get_premise((*d, *i)).clause()).collect();
+    
+    // Add premises (with empty clause replaced with false term and clauses with two or more elements replaced with disjunction terms)
+    for clause in premise_clauses {
+        asserts.push(termify_clause(clause, pool));
+    }
+
+    // Add the negation of the goal
+    let negated_goal = negation_conjuncts(&proof_step.clause, pool);
+    let mut negation_index = asserts.len();
+    let mut resolution_premises: Vec<(usize, usize)> = Vec::new();
+
+    for conjunct in negated_goal {
+        asserts.push(conjunct);
+        resolution_premises.push((0, negation_index));
+        negation_index += 1;
+    }
+
+    let mut problem_string = String::new();
+    write!(&mut problem_string, "{}", problem.prelude).unwrap();
+
+    let mut bytes = Vec::new();
+    ast::printer::write_asserts(pool, &problem.prelude, &mut bytes, &asserts, false);
+    
+    write!(&mut problem_string, "{}", String::from_utf8(bytes).unwrap()).unwrap();
+    writeln!(&mut problem_string, "(check-sat)").unwrap();
+    writeln!(&mut problem_string, "(exit)").unwrap();
+
+    println!("{}", problem_string);
+    
+
+
+    let mut new_premises : Vec<(usize, usize)> = Vec::new();
+    let mut ors : Vec<((usize, usize), Vec<Rc<Term>>)> = Vec::new(); // Keep track of indices and clauses
+    for (i, a) in asserts.iter().enumerate() {
+        new_proof.commands.push(ProofCommand::Assume { id: format!("a{i}"), term: a.clone() });
+        
+        
+        if let Some(disjuncts) = match_term!((or ...) = *a) {
+            // If is or, add to list to be broken up
+            ors.push(((0, i), disjuncts.to_vec()));
+        } else {
+            // If is fine, add to new premises immediately.
+            new_premises.push((0, i));
+        }
+    }
+
+    let assumes_len = new_proof.commands.len();
+    
+    // let new_iter = new_proof.iter();
+    let mut step_count: usize = 0;
+    for ((d, i), disjuncts) in ors {
+         // let disj_assumption = new_iter.get_premise((d, i));
+        let step = ProofStep {id: format!("t{step_count}"), clause: disjuncts, rule: "or".to_string(), premises: [(d, i)].to_vec(), args: Vec::new(), discharge: Vec::new()};
+        new_proof.commands.push(ProofCommand::Step(step));
+        step_count += 1;
+        // also need to add to new premises
+        new_premises.push((0, assumes_len + i));
+    }
+
+    let goal_step = ProofStep {id: format!("t{step_count}"), clause: proof_step.clause.clone(), rule: proof_step.rule.clone(), premises: new_premises, args: Vec::new(), discharge: Vec::new()};
+    new_proof.commands.push(ProofCommand::Step(goal_step));
+    step_count += 1;
+
+    resolution_premises.push((0, new_proof.commands.len() - 1));
+    let final_step = ProofStep {id: format!("t{step_count}"), clause: Vec::new(), premises: resolution_premises, rule: "resolution".to_string(), args: Vec::new(), discharge: Vec::new()};
+
+    new_proof.commands.push(ProofCommand::Step(final_step));
+    new_proof
+
+    }
 
 /* 
 
