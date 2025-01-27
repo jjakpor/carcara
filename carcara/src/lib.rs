@@ -44,6 +44,7 @@ mod resolution;
 mod utils;
 
 use crate::benchmarking::{CollectResults, OnlineBenchmarkResults, RunMeasurement};
+use ast::printer::proof_to_string;
 use ast::{pool, Operator, PrimitivePool, Problem, Proof, ProofCommand, ProofIter, ProofStep, Rc, Subproof, Term, TermPool};
 use checker::{error::CheckerError, CheckerStatistics};
 use parser::{ParserError, Position};
@@ -548,8 +549,8 @@ problem: string (or should I add printing capacity)?
 proof: Use data structure, then convert
 
 */
-// Note: this is not the right signature. I just want to see if it transforms things how I want
-pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Proof {
+
+pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut PrimitivePool) -> (Proof, String, String) {
     use std::fmt::Write;
     let mut asserts : Vec<Rc<Term>>  = Vec::new();
     let mut new_proof : Proof = Proof { constant_definitions: proof.constant_definitions.clone(), commands: Vec::new()};
@@ -557,7 +558,6 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     let mut iter = proof.iter();
     let mut sliced_step: Option<&ProofCommand> = None;
 
-    let mut prev_was_end: bool = false;
     while let Some(command) = iter.next() {
         if command.id() == id {
             sliced_step = Some(command);
@@ -594,7 +594,7 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     writeln!(&mut problem_string, "(check-sat)").unwrap();
     writeln!(&mut problem_string, "(exit)").unwrap();
 
-    println!("{}", problem_string);
+    // println!("{}", problem_string);
     
 
 
@@ -615,15 +615,17 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
 
     let assumes_len = new_proof.commands.len();
     
+
     // let new_iter = new_proof.iter();
     let mut step_count: usize = 0;
     for ((d, i), disjuncts) in ors {
          // let disj_assumption = new_iter.get_premise((d, i));
         let step = ProofStep {id: format!("t{step_count}"), clause: disjuncts, rule: "or".to_string(), premises: [(d, i)].to_vec(), args: Vec::new(), discharge: Vec::new()};
         new_proof.commands.push(ProofCommand::Step(step));
-        step_count += 1;
+        
         // also need to add to new premises
-        new_premises.push((0, assumes_len + i));
+        new_premises.push((0, assumes_len + step_count));
+        step_count += 1;
     }
 
     let goal_step = ProofStep {id: format!("t{step_count}"), clause: proof_step.clause.clone(), rule: proof_step.rule.clone(), premises: new_premises, args: Vec::new(), discharge: Vec::new()};
@@ -634,59 +636,8 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     let final_step = ProofStep {id: format!("t{step_count}"), clause: Vec::new(), premises: resolution_premises, rule: "resolution".to_string(), args: Vec::new(), discharge: Vec::new()};
 
     new_proof.commands.push(ProofCommand::Step(final_step));
-    new_proof
+
+    let proof_string = proof_to_string(pool, &problem.prelude, &new_proof, false);
+    (new_proof, problem_string, proof_string)
 
     }
-
-/* 
-
-pub fn mini_slice2(proof: &Proof, id: &str, problem: &Problem) -> Option<(Proof, Problem)> {
-
-    // Create a new proof with the same constant definitions but otherwise empty and a new problem with the same prelude
-    let mut new_proof : Proof = Proof { constant_definitions: proof.constant_definitions.clone(), commands: Vec::new()};
-    let mut new_problem : Problem = Problem { prelude: problem.prelude.clone(), premises: IndexSet::new()};
-
-    let mut iter = proof.iter();
-    let mut anchor_args_stack: Vec<&Vec<AnchorArg>> = Vec::new();
-    let mut sliced_step: Option<&ProofCommand> = None;
-    while let Some(command) = iter.next() {
-        if command.id() == id {
-            sliced_step = Some(command);
-            break;
-        }
-        if let ProofCommand::Subproof(subproof) = command {
-            anchor_args_stack.push(&subproof.args);
-        }
-
-        if iter.is_end_step() {
-            anchor_args_stack.pop();
-        }
-    }
-
-    if let Some(ProofCommand::Step(proof_step)) = sliced_step {
-
-        let premises : Vec<&ProofCommand> = 
-        proof_step.premises.iter().map(|(d, i)| iter.get_premise((*d, *i))).collect();
-
-        for p in premises {
-             match p {
-                ProofCommand::Assume { id, term } => {
-                    new_problem.premises.insert(term.clone());
-                    new_proof.commands.push(ProofCommand::Assume { id: id.to_string(), term: term.clone() });
-                },
-                ProofCommand::Step(step) => {
-                    new_proof.commands.push(
-                        ProofCommand::Step(
-                            ProofStep { rule: "hole".to_string(), premises: Vec::new(), ..step.clone() }));
-                },
-                _ => {},
-            }
-        }
-        Some((new_proof, new_problem))
-    }
-
-    else {
-        None
-    }
-}
-    */

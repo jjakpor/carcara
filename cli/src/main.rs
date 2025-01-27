@@ -612,13 +612,25 @@ fn bench_command(options: BenchCommandOptions) -> CliResult<()> {
 fn slice_command(
     options: SliceCommandOptions,
 ) -> CliResult<(ast::Problem, ast::Proof, ast::PrimitivePool)> {
+    use std::io::Write;
     let (problem, proof) = get_instance(&options.input)?;
     let (problem, proof, mut pool) = parser::parse_instance(problem, proof, options.parsing.into())
         .map_err(carcara::Error::from)?;
     
     let sliced= if options.small {
         // small_slice1b(&proof, &options.from)
-        small_slice2(&problem, &proof, &options.from, &mut pool)
+        let (sliced_proof, sliced_problem_string, sliced_proof_string) = small_slice2(&problem, &proof, &options.from, &mut pool);
+        let file_name_without_extension = options.input.proof_file.clone().replace(".alethe", ""); 
+        let sliced_problem_file_name = format!("{}-{}.smt2", file_name_without_extension, options.from);
+        let sliced_proof_file_name = format!("{}-{}.alethe", file_name_without_extension, options.from); 
+        let mut sliced_problem_file = File::create(sliced_problem_file_name)?;
+        
+        write!(sliced_problem_file, "{}", sliced_problem_string)?;
+        let mut sliced_proof_file = File::create(sliced_proof_file_name)?;
+        write!(sliced_proof_file, "{}", sliced_proof_string)?;
+        
+
+        sliced_proof
     } else {
         let node = ast::ProofNode::from_commands_with_root_id(proof.commands, &options.from)
         .ok_or_else(|| CliError::InvalidSliceId(options.from))?;

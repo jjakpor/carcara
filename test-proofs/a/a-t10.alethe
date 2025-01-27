@@ -1,0 +1,5 @@
+(assume a0 (= (not (= d (f b))) (not (= d (f b)))))
+(assume a1 (= (not (not (= d (f a)))) (= d (f a))))
+(assume a2 (not (= (or (not (= d (f b))) (not (not (= d (f a))))) (or (not (= d (f b))) (= d (f a))))))
+(step t0 (cl (= (or (not (= d (f b))) (not (not (= d (f a))))) (or (not (= d (f b))) (= d (f a))))) :rule cong :premises (a0 a1 a2))
+(step t1 (cl) :rule resolution :premises (a2 t0))

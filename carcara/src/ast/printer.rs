@@ -30,6 +30,18 @@ pub fn print_proof(
     AlethePrinter::new(pool, prelude, use_sharing, &mut stdout).write_proof(proof)
 }
 
+// Like print_proof, but to write to a string, not stdout
+pub fn proof_to_string(
+    pool: &mut PrimitivePool,
+    prelude: &ProblemPrelude,
+    proof: &Proof,
+    use_sharing: bool,
+) -> String {
+    let mut bytes = Vec::new();
+    AlethePrinter::new(pool, prelude, use_sharing, &mut bytes).write_proof(proof);
+    String::from_utf8(bytes).unwrap()
+}
+
 /// Given the conclusion clause of a `lia_generic` step, this method will write to `dest` the
 /// corresponding SMT problem instance.
 pub fn write_lia_smt_instance(

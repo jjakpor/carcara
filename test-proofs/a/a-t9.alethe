@@ -1,0 +1,3 @@
+(assume a0 (not (= (not (not (= d (f a)))) (= d (f a)))))
+(step t0 (cl (= (not (not (= d (f a)))) (= d (f a)))) :rule hole :premises (a0))
+(step t1 (cl) :rule resolution :premises (a0 t0))
