@@ -1,0 +1,3 @@
+(assume nt3.0 (not (= (not (= d (f b))) (not (= d (f b))))))
+(step t3 (cl (= (not (= d (f b))) (not (= d (f b))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt3.0 t3))

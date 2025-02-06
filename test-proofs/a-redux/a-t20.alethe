@@ -1,0 +1,5 @@
+(assume t19 (or (or (not (= d (f b))) (not (not (= d (f a))))) (or (not (= d (f b))) (not (not (= d (f a)))))))
+(assume nt20.0 (not (or (not (= d (f b))) (not (not (= d (f a)))))))
+(step t19' (cl (or (not (= d (f b))) (not (not (= d (f a))))) (or (not (= d (f b))) (not (not (= d (f a)))))) :rule or :premises (t19))
+(step t20 (cl (or (not (= d (f b))) (not (not (= d (f a)))))) :rule contraction :premises (t19'))
+(step t.end (cl) :rule resolution :premises (nt20.0 t20))

@@ -1,0 +1,5 @@
+(assume t2 (= (not (= (f a) d)) (not (= d (f a)))))
+(assume t3 (= (not (= d (f b))) (not (= d (f b)))))
+(assume nt4.0 (not (= (or (not (= (f a) d)) (not (= d (f b)))) (or (not (= d (f a))) (not (= d (f b)))))))
+(step t4 (cl (= (or (not (= (f a) d)) (not (= d (f b)))) (or (not (= d (f a))) (not (= d (f b)))))) :rule cong :premises (t2 t3))
+(step t.end (cl) :rule resolution :premises (nt4.0 t4))

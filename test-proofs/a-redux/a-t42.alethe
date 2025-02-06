@@ -1,0 +1,5 @@
+(assume t7 (or (not (= d (f b))) (not (= d (f a)))))
+(assume t41 (= d (f a)))
+(assume t40 (= d (f b)))
+(step t7' (cl (not (= d (f b))) (not (= d (f a)))) :rule or :premises (t7))
+(step t42 (cl) :rule resolution :premises (t7' t41 t40))

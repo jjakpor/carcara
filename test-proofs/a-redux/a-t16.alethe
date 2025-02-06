@@ -1,0 +1,5 @@
+(assume t15 (= (not (= d (f b))) (not (= d (f a)))))
+(assume nt16.0 (not (not (= d (f b)))))
+(assume nt16.1 (not (not (not (= d (f a))))))
+(step t16 (cl (not (= d (f b))) (not (not (= d (f a))))) :rule equiv2 :premises (t15))
+(step t.end (cl) :rule resolution :premises (nt16.0 nt16.1 t16))

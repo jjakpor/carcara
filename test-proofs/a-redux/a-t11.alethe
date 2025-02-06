@@ -1,0 +1,5 @@
+(assume nt11.0 (not (not (= (= (not (= (f a) d)) (not (= d (f b)))) (= (not (= d (f b))) (not (= d (f a))))))))
+(assume nt11.1 (not (not (= (not (= (f a) d)) (not (= d (f b)))))))
+(assume nt11.2 (not (= (not (= d (f b))) (not (= d (f a))))))
+(step t11 (cl (not (= (= (not (= (f a) d)) (not (= d (f b)))) (= (not (= d (f b))) (not (= d (f a)))))) (not (= (not (= (f a) d)) (not (= d (f b))))) (= (not (= d (f b))) (not (= d (f a))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt11.0 nt11.1 nt11.2 t11))

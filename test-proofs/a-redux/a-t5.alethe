@@ -1,0 +1,7 @@
+(assume t0 (or (not (= (or (not (= (f a) d)) (not (= d (f b)))) (or (not (= d (f a))) (not (= d (f b)))))) (not (or (not (= (f a) d)) (not (= d (f b))))) (or (not (= d (f a))) (not (= d (f b))))))
+(assume t4 (= (or (not (= (f a) d)) (not (= d (f b)))) (or (not (= d (f a))) (not (= d (f b))))))
+(assume a1 (or (not (= (f a) d)) (not (= d (f b)))))
+(assume nt5.0 (not (or (not (= d (f a))) (not (= d (f b))))))
+(step t0' (cl (not (= (or (not (= (f a) d)) (not (= d (f b)))) (or (not (= d (f a))) (not (= d (f b)))))) (not (or (not (= (f a) d)) (not (= d (f b))))) (or (not (= d (f a))) (not (= d (f b))))) :rule or :premises (t0))
+(step t5 (cl (or (not (= d (f a))) (not (= d (f b))))) :rule resolution :premises (t0' t4 a1))
+(step t.end (cl) :rule resolution :premises (nt5.0 t5))

@@ -1,0 +1,5 @@
+(assume t1 (= (= (f a) d) (= d (f a))))
+(assume t24 (= (= d (f b)) (= d (f b))))
+(assume nt25.0 (not (= (or (= (f a) d) (= d (f b))) (or (= d (f a)) (= d (f b))))))
+(step t25 (cl (= (or (= (f a) d) (= d (f b))) (or (= d (f a)) (= d (f b))))) :rule cong :premises (t1 t24))
+(step t.end (cl) :rule resolution :premises (nt25.0 t25))

@@ -1,0 +1,5 @@
+(assume t38 (or (= d (f b)) (not (= d (f a)))))
+(assume nt39.0 (not (= d (f b))))
+(assume nt39.1 (not (not (= d (f a)))))
+(step t39 (cl (= d (f b)) (not (= d (f a)))) :rule or :premises (t38))
+(step t.end (cl) :rule resolution :premises (nt39.0 nt39.1 t39))

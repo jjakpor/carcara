@@ -1,0 +1,4 @@
+(assume nt2.t189.0 (not (not (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))))
+(assume nt2.t189.1 (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))
+(step t2.t189 (cl (not (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nt2.t189.0 nt2.t189.1 t2.t189))

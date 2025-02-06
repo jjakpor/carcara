@@ -1,0 +1,5 @@
+(assume nt29.0 (not (not (= (or (not (not (= d (f b)))) (not (= d (f a)))) (or (= d (f b)) (not (= d (f a))))))))
+(assume nt29.1 (not (not (or (not (not (= d (f b)))) (not (= d (f a)))))))
+(assume nt29.2 (not (or (= d (f b)) (not (= d (f a))))))
+(step t29 (cl (not (= (or (not (not (= d (f b)))) (not (= d (f a)))) (or (= d (f b)) (not (= d (f a)))))) (not (or (not (not (= d (f b)))) (not (= d (f a))))) (or (= d (f b)) (not (= d (f a))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt29.0 nt29.1 nt29.2 t29))

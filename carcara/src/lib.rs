@@ -557,7 +557,8 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     struct Premise {
         termified: Rc<Term>,
         singleton: bool, // Cases considered are single and multiple, not empty,
-        assumption_index: (usize, usize)
+        assumption_index: (usize, usize),
+        premise_index: Option<(usize, usize)>
     }
 
     let mut premise_map: HashMap<(usize, usize), Premise> = HashMap::new();
@@ -578,11 +579,10 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     let proof_step = extract_step(sliced_step);
 
 
-    for premise in &proof_step.premises {
+    for (i, premise) in proof_step.premises.iter().enumerate() {
         let premise_clause = iter.get_premise(*premise).clause();
         let termified = termify_clause(premise_clause, pool);
-        asserts.push(termified.clone());
-        premise_map.insert(*premise, Premise {termified: termified, singleton: premise_clause.len() == 1, assumption_index: (0, asserts.len() - 1)});
+        premise_map.insert(*premise, Premise {termified: termified, singleton: premise_clause.len() == 1, assumption_index: (0, i), premise_index: None});
     }
 
 
@@ -590,9 +590,69 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     let negated_goal = negation_conjuncts(&proof_step.clause, pool);
     let mut resolution_premises: Vec<(usize, usize)> = Vec::new();
 
+    let negation_base_index = proof_step.premises.len();
+
+    for i  in 0..negated_goal.len() {
+        resolution_premises.push((0, negation_base_index + i)); // If we do add a resolution step. I think last step of proof is special case
+    }
+    
+
+    // Add termified premises as assumptions
+    // Need to fix this to be deterministic order
+    for premise in &proof_step.premises {
+        let entry_opt = premise_map.get_mut(premise);
+        let entry = entry_opt.unwrap();
+        let premise_command = iter.get_premise(*premise);
+        new_proof.commands.push(ProofCommand::Assume { id: premise_command.id().to_string(), term: entry.termified.clone()});
+        if entry.singleton {
+            entry.premise_index = Some(entry.assumption_index);
+        }
+    }
+   
+    // Add negated goal as assumptions
+    for (i, conjunct) in negated_goal.iter().enumerate() {
+        new_proof.commands.push(ProofCommand::Assume { id: format!("n{}.{}", proof_step.id, i), term: conjunct.clone() })
+    }
+    
+    for (premise, entry) in &mut premise_map {
+        if !entry.singleton {
+            let premise_command = iter.get_premise(*premise);
+            let step = ProofStep {
+                clause: premise_command.clause().to_vec(),
+                rule: "or".to_string(),
+                premises: [entry.assumption_index].to_vec(), 
+                id: format!("{}'", premise_command.id()), 
+                args: Vec::new(), discharge: Vec::new()
+            };
+
+            new_proof.commands.push(ProofCommand::Step(step));
+            entry.premise_index = Some((0, new_proof.commands.len() - 1));
+            
+    }
+    }
+
+    let mut new_premises: Vec<(usize, usize)> = Vec::new();
+    for premise in &proof_step.premises {
+        new_premises.push(premise_map.get(premise).unwrap().premise_index.unwrap());
+    }
+     
+    let goal_step = ProofStep {id: proof_step.id.clone(), clause: proof_step.clause.clone(), rule: proof_step.rule.clone(), premises: new_premises, args: Vec::new(), discharge: Vec::new()};
+    new_proof.commands.push(ProofCommand::Step(goal_step));
+    resolution_premises.push((0, new_proof.commands.len() - 1));
+    
+    if proof_step.clause.len() != 0 {
+        let final_step = ProofStep {id: "t.end".to_string(), clause: Vec::new(), premises: resolution_premises, rule: "resolution".to_string(), args: Vec::new(), discharge: Vec::new()};
+        new_proof.commands.push(ProofCommand::Step(final_step));
+    }
+    
+    let proof_string = proof_to_string(pool, &problem.prelude, &new_proof, false);
+
+    let mut asserts = Vec::new();
+    for premise in &proof_step.premises {
+        asserts.push(premise_map.get(&premise).unwrap().termified.clone());
+    }
     for conjunct in negated_goal {
         asserts.push(conjunct);
-        resolution_premises.push((0, asserts.len() - 1)); // If we do add a resolution step. I think last step of proof is special case
     }
 
     let mut problem_string = String::new();
@@ -606,38 +666,6 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     writeln!(&mut problem_string, "(exit)").unwrap();
 
 
-
-    let mut new_premises : Vec<(usize, usize)> = Vec::new();
-    
-    for (i, a) in asserts.iter().enumerate() {
-        new_proof.commands.push(ProofCommand::Assume { id: format!("a{i}"), term: a.clone() });
-    }
-
-    let mut step_count: usize = 0;
-    for (premise, entry) in &premise_map {
-        if entry.singleton {
-            new_premises.push(entry.assumption_index);
-        } else {
-            let step = ProofStep {id: format!("t{step_count}"), 
-            clause: iter.get_premise(*premise).clause().to_vec(), 
-            rule: "or".to_string(), 
-            premises: [entry.assumption_index].to_vec(), args: Vec::new(), discharge: Vec::new()};
-            new_proof.commands.push(ProofCommand::Step(step));
-            new_premises.push((0, new_proof.commands.len()-1));
-            step_count += 1;
-        }
-    }
-
-    let goal_step = ProofStep {id: format!("t{step_count}"), clause: proof_step.clause.clone(), rule: proof_step.rule.clone(), premises: new_premises, args: Vec::new(), discharge: Vec::new()};
-    new_proof.commands.push(ProofCommand::Step(goal_step));
-    step_count += 1;
-
-    resolution_premises.push((0, new_proof.commands.len() - 1));
-    let final_step = ProofStep {id: format!("t{step_count}"), clause: Vec::new(), premises: resolution_premises, rule: "resolution".to_string(), args: Vec::new(), discharge: Vec::new()};
-
-    new_proof.commands.push(ProofCommand::Step(final_step));
-
-    let proof_string = proof_to_string(pool, &problem.prelude, &new_proof, false);
     (new_proof, problem_string, proof_string)
 
     }

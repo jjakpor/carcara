@@ -1,0 +1,4 @@
+(assume a0 (not (= y$n1s4 y$n15s4)))
+(assume nt198.0 (not (not (= y$n15s4 y$n1s4))))
+(step t198 (cl (not (= y$n15s4 y$n1s4))) :rule not_symm :premises (a0))
+(step t.end (cl) :rule resolution :premises (nt198.0 t198))

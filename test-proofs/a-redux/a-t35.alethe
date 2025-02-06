@@ -1,0 +1,4 @@
+(assume nt35.0 (not (or (not (not (= d (f b)))) (not (= d (f a))))))
+(assume nt35.1 (not (not (not (= d (f a))))))
+(step t35 (cl (or (not (not (= d (f b)))) (not (= d (f a)))) (not (not (= d (f a))))) :rule or_neg)
+(step t.end (cl) :rule resolution :premises (nt35.0 nt35.1 t35))

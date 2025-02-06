@@ -1,0 +1,7 @@
+(assume t11 (or (not (= (= (not (= (f a) d)) (not (= d (f b)))) (= (not (= d (f b))) (not (= d (f a)))))) (not (= (not (= (f a) d)) (not (= d (f b))))) (= (not (= d (f b))) (not (= d (f a))))))
+(assume t14 (= (= (not (= (f a) d)) (not (= d (f b)))) (= (not (= d (f b))) (not (= d (f a))))))
+(assume a0 (= (not (= (f a) d)) (not (= d (f b)))))
+(assume nt15.0 (not (= (not (= d (f b))) (not (= d (f a))))))
+(step t11' (cl (not (= (= (not (= (f a) d)) (not (= d (f b)))) (= (not (= d (f b))) (not (= d (f a)))))) (not (= (not (= (f a) d)) (not (= d (f b))))) (= (not (= d (f b))) (not (= d (f a))))) :rule or :premises (t11))
+(step t15 (cl (= (not (= d (f b))) (not (= d (f a))))) :rule resolution :premises (t11' t14 a0))
+(step t.end (cl) :rule resolution :premises (nt15.0 t15))

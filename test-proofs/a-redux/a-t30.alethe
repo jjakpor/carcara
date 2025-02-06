@@ -1,0 +1,3 @@
+(assume nt30.0 (not (= (not (not (= d (f b)))) (= d (f b)))))
+(step t30 (cl (= (not (not (= d (f b)))) (= d (f b)))) :rule hole)
+(step t.end (cl) :rule resolution :premises (nt30.0 t30))

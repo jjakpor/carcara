@@ -1,0 +1,5 @@
+(assume t12 (= (= (not (= (f a) d)) (not (= d (f b)))) (= (not (= d (f a))) (not (= d (f b))))))
+(assume t13 (= (= (not (= d (f a))) (not (= d (f b)))) (= (not (= d (f b))) (not (= d (f a))))))
+(assume nt14.0 (not (= (= (not (= (f a) d)) (not (= d (f b)))) (= (not (= d (f b))) (not (= d (f a)))))))
+(step t14 (cl (= (= (not (= (f a) d)) (not (= d (f b)))) (= (not (= d (f b))) (not (= d (f a)))))) :rule trans :premises (t12 t13))
+(step t.end (cl) :rule resolution :premises (nt14.0 t14))

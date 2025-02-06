@@ -1,0 +1,5 @@
+(assume t21 (or (not (= d (f b))) (= d (f a))))
+(assume nt22.0 (not (not (= d (f b)))))
+(assume nt22.1 (not (= d (f a))))
+(step t22 (cl (not (= d (f b))) (= d (f a))) :rule or :premises (t21))
+(step t.end (cl) :rule resolution :premises (nt22.0 nt22.1 t22))
