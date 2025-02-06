@@ -1,0 +1,5 @@
+(assume a0 (= (= y$28 (= y$27 y$prop$next)) (= y$28 (= (not (= y$X$next y$n15s4)) y$prop$next))))
+(assume a1 (= (= y$28 (= (not (= y$X$next y$n15s4)) y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4))))))
+(assume a2 (not (= (= y$28 (= y$27 y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4)))))))
+(step t0 (cl (= (= y$28 (= y$27 y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4)))))) :rule trans :premises (a0 a1))
+(step t1 (cl) :rule resolution :premises (a2 t0))

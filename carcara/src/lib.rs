@@ -49,6 +49,7 @@ use ast::{pool, Operator, PrimitivePool, Problem, Proof, ProofCommand, ProofIter
 use checker::{error::CheckerError, CheckerStatistics};
 use parser::{ParserError, Position};
 use core::{panic, slice};
+use std::collections::HashMap;
 use std::io;
 use std::time::{Duration, Instant};
 use thiserror::Error;
@@ -552,6 +553,15 @@ proof: Use data structure, then convert
 
 pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut PrimitivePool) -> (Proof, String, String) {
     use std::fmt::Write;
+
+    struct Premise {
+        termified: Rc<Term>,
+        singleton: bool, // Cases considered are single and multiple, not empty,
+        assumption_index: (usize, usize)
+    }
+
+    let mut premise_map: HashMap<(usize, usize), Premise> = HashMap::new();
+
     let mut asserts : Vec<Rc<Term>>  = Vec::new();
     let mut new_proof : Proof = Proof { constant_definitions: proof.constant_definitions.clone(), commands: Vec::new()};
 
@@ -566,22 +576,23 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     }
     
     let proof_step = extract_step(sliced_step);
-    let premise_clauses: Vec<_> = proof_step.premises.iter().map(|(d, i)| iter.get_premise((*d, *i)).clause()).collect();
-    
-    // Add premises (with empty clause replaced with false term and clauses with two or more elements replaced with disjunction terms)
-    for clause in premise_clauses {
-        asserts.push(termify_clause(clause, pool));
+
+
+    for premise in &proof_step.premises {
+        let premise_clause = iter.get_premise(*premise).clause();
+        let termified = termify_clause(premise_clause, pool);
+        asserts.push(termified.clone());
+        premise_map.insert(*premise, Premise {termified: termified, singleton: premise_clause.len() == 1, assumption_index: (0, asserts.len() - 1)});
     }
+
 
     // Add the negation of the goal
     let negated_goal = negation_conjuncts(&proof_step.clause, pool);
-    let mut negation_index = asserts.len();
     let mut resolution_premises: Vec<(usize, usize)> = Vec::new();
 
     for conjunct in negated_goal {
         asserts.push(conjunct);
-        resolution_premises.push((0, negation_index));
-        negation_index += 1;
+        resolution_premises.push((0, asserts.len() - 1)); // If we do add a resolution step. I think last step of proof is special case
     }
 
     let mut problem_string = String::new();
@@ -594,38 +605,27 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     writeln!(&mut problem_string, "(check-sat)").unwrap();
     writeln!(&mut problem_string, "(exit)").unwrap();
 
-    // println!("{}", problem_string);
-    
 
 
     let mut new_premises : Vec<(usize, usize)> = Vec::new();
-    let mut ors : Vec<((usize, usize), Vec<Rc<Term>>)> = Vec::new(); // Keep track of indices and clauses
+    
     for (i, a) in asserts.iter().enumerate() {
         new_proof.commands.push(ProofCommand::Assume { id: format!("a{i}"), term: a.clone() });
-        
-        
-        if let Some(disjuncts) = match_term!((or ...) = *a) {
-            // If is or, add to list to be broken up
-            ors.push(((0, i), disjuncts.to_vec()));
-        } else {
-            // If is fine, add to new premises immediately.
-            new_premises.push((0, i));
-        }
     }
 
-    let assumes_len = new_proof.commands.len();
-    
-
-    // let new_iter = new_proof.iter();
     let mut step_count: usize = 0;
-    for ((d, i), disjuncts) in ors {
-         // let disj_assumption = new_iter.get_premise((d, i));
-        let step = ProofStep {id: format!("t{step_count}"), clause: disjuncts, rule: "or".to_string(), premises: [(d, i)].to_vec(), args: Vec::new(), discharge: Vec::new()};
-        new_proof.commands.push(ProofCommand::Step(step));
-        
-        // also need to add to new premises
-        new_premises.push((0, assumes_len + step_count));
-        step_count += 1;
+    for (premise, entry) in &premise_map {
+        if entry.singleton {
+            new_premises.push(entry.assumption_index);
+        } else {
+            let step = ProofStep {id: format!("t{step_count}"), 
+            clause: iter.get_premise(*premise).clause().to_vec(), 
+            rule: "or".to_string(), 
+            premises: [entry.assumption_index].to_vec(), args: Vec::new(), discharge: Vec::new()};
+            new_proof.commands.push(ProofCommand::Step(step));
+            new_premises.push((0, new_proof.commands.len()-1));
+            step_count += 1;
+        }
     }
 
     let goal_step = ProofStep {id: format!("t{step_count}"), clause: proof_step.clause.clone(), rule: proof_step.rule.clone(), premises: new_premises, args: Vec::new(), discharge: Vec::new()};

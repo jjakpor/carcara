@@ -1,0 +1,7 @@
+(assume a0 (or (not (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4)))) (not (= (= y$n15s4 y$X) y$6)) (= y$6 (= y$X y$n15s4))))
+(assume a1 (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4))))
+(assume a2 (= (= y$n15s4 y$X) y$6))
+(assume a3 (not (= y$6 (= y$X y$n15s4))))
+(step t0 (cl (not (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4)))) (not (= (= y$n15s4 y$X) y$6)) (= y$6 (= y$X y$n15s4))) :rule or :premises (a0))
+(step t1 (cl (= y$6 (= y$X y$n15s4))) :rule resolution :premises (a1 t0 a2))
+(step t2 (cl) :rule resolution :premises (a3 t1))

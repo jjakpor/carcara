@@ -1,0 +1,8 @@
+(assume a0 (or (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false) (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))))
+(assume a1 (or (not (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))
+(assume a2 (not (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false)))
+(assume a3 (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))
+(step t0 (cl (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false) (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) :rule or :premises (a0))
+(step t1 (cl (not (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) :rule or :premises (a1))
+(step t2 (cl (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) :rule resolution :premises (t0 t1))
+(step t3 (cl) :rule resolution :premises (a2 a3 t2))

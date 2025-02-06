@@ -1,0 +1,4 @@
+(assume a0 (= y$26 true))
+(assume a1 (not (= (not y$26) (not true))))
+(step t0 (cl (= (not y$26) (not true))) :rule cong :premises (a0))
+(step t1 (cl) :rule resolution :premises (a1 t0))

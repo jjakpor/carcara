@@ -6,5 +6,5 @@
 (step t0 (cl (not (not (= d (f b)))) (not (= d (f a)))) :rule or :premises (a0))
 (step t1 (cl (or (not (not (= d (f b)))) (not (= d (f a)))) (not (not (not (= d (f b)))))) :rule or :premises (a1))
 (step t2 (cl (or (not (not (= d (f b)))) (not (= d (f a)))) (not (not (= d (f a))))) :rule or :premises (a2))
-(step t3 (cl (or (not (not (= d (f b)))) (not (= d (f a)))) (or (not (not (= d (f b)))) (not (= d (f a))))) :rule resolution :premises (a3 a4 t0 t1 t2))
+(step t3 (cl (or (not (not (= d (f b)))) (not (= d (f a)))) (or (not (not (= d (f b)))) (not (= d (f a))))) :rule resolution :premises (t0 t1 t2))
 (step t4 (cl) :rule resolution :premises (a3 a4 t3))

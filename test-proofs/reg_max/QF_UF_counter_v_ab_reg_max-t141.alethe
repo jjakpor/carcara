@@ -1,0 +1,5 @@
+(assume a0 (not (not (= y$26 (= y$26 true)))))
+(assume a1 (not (not y$26)))
+(assume a2 (not (= y$26 true)))
+(step t0 (cl (not (= y$26 (= y$26 true))) (not y$26) (= y$26 true)) :rule equiv_pos2)
+(step t1 (cl) :rule resolution :premises (a0 a1 a2 t0))

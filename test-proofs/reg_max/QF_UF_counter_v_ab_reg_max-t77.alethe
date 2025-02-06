@@ -1,0 +1,5 @@
+(assume a0 (= y$6 y$6))
+(assume a1 (= (= y$n15s4 y$X) (= y$X y$n15s4)))
+(assume a2 (not (= (= y$6 (= y$n15s4 y$X)) (= y$6 (= y$X y$n15s4)))))
+(step t0 (cl (= (= y$6 (= y$n15s4 y$X)) (= y$6 (= y$X y$n15s4)))) :rule cong :premises (a0 a1))
+(step t1 (cl) :rule resolution :premises (a2 t0))

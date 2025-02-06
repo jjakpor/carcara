@@ -1,0 +1,5 @@
+(step a0 (cl (not (= (or (not (= d (f b))) (not (not (= d (f a))))) (or (not (= d (f b))) (= d (f a)))))) :rule hole)
+(step t3 (cl (= (not (= d (f b))) (not (= d (f b))))) :rule hole)
+(step t9 (cl (= (not (not (= d (f a)))) (= d (f a)))) :rule hole :args ("TRUST_THEORY_REWRITE" (= (not (not (= d (f a)))) (= d (f a))) 1 6))
+(step t10 (cl (= (or (not (= d (f b))) (not (not (= d (f a))))) (or (not (= d (f b))) (= d (f a))))) :rule cong :premises (t3 t9))
+(step t11 (cl) :rule resolution :premises (a0 t10))

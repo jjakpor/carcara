@@ -2,5 +2,5 @@
 (assume a1 (not (= d (f a))))
 (assume a2 (not (= d (f b))))
 (step t0 (cl (= d (f a)) (= d (f b))) :rule or :premises (a0))
-(step t1 (cl (= d (f a)) (= d (f b))) :rule or :premises (a1 a2 t0))
+(step t1 (cl (= d (f a)) (= d (f b))) :rule or :premises (t0))
 (step t2 (cl) :rule resolution :premises (a1 a2 t1))

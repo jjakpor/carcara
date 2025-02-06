@@ -1,0 +1,4 @@
+(assume a0 (= (= y$26 true) y$26))
+(assume a1 (not (= y$26 (= y$26 true))))
+(step t0 (cl (= y$26 (= y$26 true))) :rule symm :premises (a0))
+(step t1 (cl) :rule resolution :premises (a1 t0))

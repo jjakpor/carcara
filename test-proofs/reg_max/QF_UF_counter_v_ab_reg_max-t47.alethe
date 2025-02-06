@@ -1,0 +1,3 @@
+(assume a0 (not (= y$n1s4 y$n1s4)))
+(step t0 (cl (= y$n1s4 y$n1s4)) :rule refl)
+(step t1 (cl) :rule resolution :premises (a0 t0))

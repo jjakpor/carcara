@@ -1,0 +1,16 @@
+QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t0 invalid
+QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t1 invalid
+QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t2 invalid
+QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t3 invalid
+QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t4 invalid
+QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t5 invalid
+QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t6 invalid
+QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t7 invalid
+/Users/jibianajakpor/carcara/QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t0 invalid
+/Users/jibianajakpor/carcara/QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t1 invalid
+/Users/jibianajakpor/carcara/QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t2 invalid
+/Users/jibianajakpor/carcara/QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t3 invalid
+/Users/jibianajakpor/carcara/QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t4 invalid
+/Users/jibianajakpor/carcara/QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t5 invalid
+/Users/jibianajakpor/carcara/QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t6 invalid
+/Users/jibianajakpor/carcara/QF_UF_sample/20170829-Rodin/"smt2080745738819601301"_dir/smt2080745738819601301.alethe t7 invalid

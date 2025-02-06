@@ -62,7 +62,7 @@ find "$input_dir" -type f -name "*.alethe" | while read -r proof_file; do
     done 
 done
 
-echo "valid: $(grep valid $log_file | wc -l)"
-echo "holey: $(grep holey $log_file | wc -l)"
-echo "invalid: $(grep invalid $log_file | wc -l)"
+echo "valid: $(grep -w valid $log_file | wc -l)"
+echo "holey: $(grep -w holey $log_file | wc -l)"
+echo "invalid: $(grep -w invalid $log_file | wc -l)"
 

@@ -1,0 +1,5 @@
+(assume a0 (not (not (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next))))))
+(assume a1 (not (not (= y$28 (= y$prop$next y$27)))))
+(assume a2 (not (= y$28 (= y$27 y$prop$next))))
+(step t0 (cl (not (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next)))) (not (= y$28 (= y$prop$next y$27))) (= y$28 (= y$27 y$prop$next))) :rule equiv_pos2)
+(step t1 (cl) :rule resolution :premises (a0 a1 a2 t0))
