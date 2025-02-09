@@ -1,0 +1,5 @@
+(assume nt0.0 (not (not (= (not (= nf0 flash)) false))))
+(assume nt0.1 (not (not (not (= nf0 flash)))))
+(assume nt0.2 (not false))
+(step t0 (cl (not (= (not (= nf0 flash)) false)) (not (not (= nf0 flash))) false) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt0.0 nt0.1 nt0.2 t0))

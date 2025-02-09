@@ -1,0 +1,3 @@
+(assume nt2.t223.0 (not (not y$en)))
+(assume t2.t223 (not y$en))
+(step t.end (cl) :rule resolution :premises (nt2.t223.0 t2.t223))

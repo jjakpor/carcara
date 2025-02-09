@@ -1,0 +1,7 @@
+(assume t61' (or (not (= (= y$2 (= y$n1s4 y$X)) (= y$2 (= y$X y$n1s4)))) (not (= y$2 (= y$n1s4 y$X))) (= y$2 (= y$X y$n1s4))))
+(assume t64 (= (= y$2 (= y$n1s4 y$X)) (= y$2 (= y$X y$n1s4))))
+(assume a1 (= y$2 (= y$n1s4 y$X)))
+(assume nt65.0 (not (= y$2 (= y$X y$n1s4))))
+(step t61'' (cl (not (= (= y$2 (= y$n1s4 y$X)) (= y$2 (= y$X y$n1s4)))) (not (= y$2 (= y$n1s4 y$X))) (= y$2 (= y$X y$n1s4))) :rule or :premises (t61'))
+(step t65 (cl (= y$2 (= y$X y$n1s4))) :rule resolution :premises (t61'' t64 a1))
+(step t.end (cl) :rule resolution :premises (nt65.0 t65))

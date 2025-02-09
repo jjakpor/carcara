@@ -1,0 +1,3 @@
+(assume nt128.0 (not (= (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
+(assume t128 (= (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4))))
+(step t.end (cl) :rule resolution :premises (nt128.0 t128))

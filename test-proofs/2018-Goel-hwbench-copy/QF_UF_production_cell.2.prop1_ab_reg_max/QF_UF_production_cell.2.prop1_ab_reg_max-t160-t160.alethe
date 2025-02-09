@@ -1,0 +1,4 @@
+(assume t159 (= (= y$v_k_Table y$v_k_Table) true))
+(assume nt160.0 (not (= (not (= y$v_k_Table y$v_k_Table)) (not true))))
+(step t160 (cl (= (not (= y$v_k_Table y$v_k_Table)) (not true))) :rule cong :premises (t159))
+(step t.end (cl) :rule resolution :premises (nt160.0 t160))

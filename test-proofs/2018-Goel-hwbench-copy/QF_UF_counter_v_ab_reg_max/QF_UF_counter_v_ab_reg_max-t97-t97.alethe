@@ -1,0 +1,7 @@
+(assume t92' (or (not (= (= y$27 (not (= y$n15s4 y$X$next))) (= y$27 (not (= y$X$next y$n15s4))))) (not (= y$27 (not (= y$n15s4 y$X$next)))) (= y$27 (not (= y$X$next y$n15s4)))))
+(assume t96 (= (= y$27 (not (= y$n15s4 y$X$next))) (= y$27 (not (= y$X$next y$n15s4)))))
+(assume a7 (= y$27 (not (= y$n15s4 y$X$next))))
+(assume nt97.0 (not (= y$27 (not (= y$X$next y$n15s4)))))
+(step t92'' (cl (not (= (= y$27 (not (= y$n15s4 y$X$next))) (= y$27 (not (= y$X$next y$n15s4))))) (not (= y$27 (not (= y$n15s4 y$X$next)))) (= y$27 (not (= y$X$next y$n15s4)))) :rule or :premises (t92'))
+(step t97 (cl (= y$27 (not (= y$X$next y$n15s4)))) :rule resolution :premises (t92'' t96 a7))
+(step t.end (cl) :rule resolution :premises (nt97.0 t97))

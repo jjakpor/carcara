@@ -1,0 +1,3 @@
+(assume nt2.t13.0 (not (= y$en y$en)))
+(step t2.t13 (cl (= y$en y$en)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt2.t13.0 t2.t13))

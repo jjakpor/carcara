@@ -1,0 +1,6 @@
+(assume nt73.0 (not (not (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4))))))
+(assume nt73.1 (not (not (= (= y$n15s4 y$X) y$6))))
+(assume nt73.2 (not (= y$6 (= y$X y$n15s4))))
+(assume t73 (or (not (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4)))) (not (= (= y$n15s4 y$X) y$6)) (= y$6 (= y$X y$n15s4))))
+(step t73' (cl (not (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4)))) (not (= (= y$n15s4 y$X) y$6)) (= y$6 (= y$X y$n15s4))) :rule or :premises (t73))
+(step t.end (cl) :rule resolution :premises (nt73.0 nt73.1 nt73.2 t73'))

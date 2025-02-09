@@ -1,0 +1,5 @@
+(assume nt2.t8.0 (not (not (= (= y$13 (= y$X$next y$X$next_rhs_op)) (= y$13 (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)))))))
+(assume nt2.t8.1 (not (not (= y$13 (= y$X$next y$X$next_rhs_op)))))
+(assume nt2.t8.2 (not (= y$13 (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)))))
+(step t2.t8 (cl (not (= (= y$13 (= y$X$next y$X$next_rhs_op)) (= y$13 (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X))))) (not (= y$13 (= y$X$next y$X$next_rhs_op))) (= y$13 (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt2.t8.0 nt2.t8.1 nt2.t8.2 t2.t8))

@@ -1,0 +1,5 @@
+(assume nt41.0 (not (not y$dve_invalid$next)))
+(assume nt41.1 (not (not y$1084)))
+(assume t41 (or (not y$dve_invalid$next) (not y$1084)))
+(step t41' (cl (not y$dve_invalid$next) (not y$1084)) :rule or :premises (t41))
+(step t.end (cl) :rule resolution :premises (nt41.0 nt41.1 t41'))

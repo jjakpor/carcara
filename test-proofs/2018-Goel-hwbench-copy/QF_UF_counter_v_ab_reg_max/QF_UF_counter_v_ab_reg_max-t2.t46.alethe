@@ -1,0 +1,5 @@
+(assume t2.t35 (= y$28 y$28))
+(assume t2.t45 (= (= (not (= y$X$next y$n15s4)) y$prop$next) (= y$prop$next (not (= y$X$next y$n15s4)))))
+(assume nt2.t46.0 (not (= (= y$28 (= (not (= y$X$next y$n15s4)) y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4)))))))
+(step t2.t46 (cl (= (= y$28 (= (not (= y$X$next y$n15s4)) y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4)))))) :rule cong :premises (t2.t35 t2.t45))
+(step t.end (cl) :rule resolution :premises (nt2.t46.0 t2.t46))

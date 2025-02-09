@@ -1,0 +1,3 @@
+(assume nt84.0 (not (= y$v_k_Belt y$v_k_Press)))
+(assume t84 (= y$v_k_Belt y$v_k_Press))
+(step t.end (cl) :rule resolution :premises (nt84.0 t84))

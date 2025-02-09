@@ -1,0 +1,5 @@
+(assume nt0.0 (not (not (= y$id36_op (and y$25 y$v3_1517448494_34_op)))))
+(assume nt0.1 (not (not y$id36_op)))
+(assume nt0.2 (not (and y$25 y$v3_1517448494_34_op)))
+(step t0 (cl (not (= y$id36_op (and y$25 y$v3_1517448494_34_op))) (not y$id36_op) (and y$25 y$v3_1517448494_34_op)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt0.0 nt0.1 nt0.2 t0))

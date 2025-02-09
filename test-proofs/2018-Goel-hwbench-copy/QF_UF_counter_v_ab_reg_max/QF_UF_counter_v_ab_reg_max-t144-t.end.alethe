@@ -1,0 +1,3 @@
+(assume nt144.0 (not y$26))
+(assume t144 y$26)
+(step t.end (cl) :rule resolution :premises (nt144.0 t144))

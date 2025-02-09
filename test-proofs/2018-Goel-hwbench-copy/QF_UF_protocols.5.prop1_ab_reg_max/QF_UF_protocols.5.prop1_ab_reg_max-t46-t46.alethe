@@ -1,0 +1,5 @@
+(assume nt46.0 (not (not (= (= y$1093 (= y$prop$next y$1092)) (= y$1093 (= y$1092 y$prop$next))))))
+(assume nt46.1 (not (not (= y$1093 (= y$prop$next y$1092)))))
+(assume nt46.2 (not (= y$1093 (= y$1092 y$prop$next))))
+(step t46 (cl (not (= (= y$1093 (= y$prop$next y$1092)) (= y$1093 (= y$1092 y$prop$next)))) (not (= y$1093 (= y$prop$next y$1092))) (= y$1093 (= y$1092 y$prop$next))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt46.0 nt46.1 nt46.2 t46))

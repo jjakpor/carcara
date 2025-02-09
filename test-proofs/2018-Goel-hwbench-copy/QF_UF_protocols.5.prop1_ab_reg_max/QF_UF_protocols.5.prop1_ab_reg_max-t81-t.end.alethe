@@ -1,0 +1,3 @@
+(assume nt81.0 (not y$v3_1517448506_500_op))
+(assume t81 y$v3_1517448506_500_op)
+(step t.end (cl) :rule resolution :premises (nt81.0 t81))

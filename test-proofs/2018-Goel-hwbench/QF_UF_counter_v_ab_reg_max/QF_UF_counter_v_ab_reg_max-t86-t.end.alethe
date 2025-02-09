@@ -1,0 +1,3 @@
+(assume nt86.0 (not (= y$X$next_rhs_op (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X))))
+(assume t86 (= y$X$next_rhs_op (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)))
+(step t.end (cl) :rule resolution :premises (nt86.0 t86))

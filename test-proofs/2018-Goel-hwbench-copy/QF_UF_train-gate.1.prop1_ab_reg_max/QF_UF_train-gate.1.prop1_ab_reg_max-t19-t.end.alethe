@@ -1,0 +1,5 @@
+(assume nt19.0 (not (not (and y$45 y$v3_1517448508_35_op))))
+(assume nt19.1 (not y$v3_1517448508_35_op))
+(assume t19 (or (not (and y$45 y$v3_1517448508_35_op)) y$v3_1517448508_35_op))
+(step t19' (cl (not (and y$45 y$v3_1517448508_35_op)) y$v3_1517448508_35_op) :rule or :premises (t19))
+(step t.end (cl) :rule resolution :premises (nt19.0 nt19.1 t19'))

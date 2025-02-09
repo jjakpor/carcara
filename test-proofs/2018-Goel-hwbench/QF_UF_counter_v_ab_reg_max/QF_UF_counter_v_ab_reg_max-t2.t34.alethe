@@ -1,0 +1,5 @@
+(assume nt2.t34.0 (not (not (= (= y$28 (= y$27 y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4))))))))
+(assume nt2.t34.1 (not (not (= y$28 (= y$27 y$prop$next)))))
+(assume nt2.t34.2 (not (= y$28 (= y$prop$next (not (= y$X$next y$n15s4))))))
+(step t2.t34 (cl (not (= (= y$28 (= y$27 y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4)))))) (not (= y$28 (= y$27 y$prop$next))) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt2.t34.0 nt2.t34.1 nt2.t34.2 t2.t34))

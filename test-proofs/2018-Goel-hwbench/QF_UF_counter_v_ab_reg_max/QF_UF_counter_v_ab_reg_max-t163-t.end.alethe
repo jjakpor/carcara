@@ -1,0 +1,3 @@
+(assume nt163.0 (not (= (= y$n1s4 y$n1s4) true)))
+(assume t163 (= (= y$n1s4 y$n1s4) true))
+(step t.end (cl) :rule resolution :premises (nt163.0 t163))

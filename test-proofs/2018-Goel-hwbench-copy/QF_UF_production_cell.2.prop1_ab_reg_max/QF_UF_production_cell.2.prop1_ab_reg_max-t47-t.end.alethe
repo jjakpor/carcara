@@ -1,0 +1,6 @@
+(assume nt47.0 (not (not (= y$74 (= y$v_done y$v_k_Belt)))))
+(assume nt47.1 (not (not y$74)))
+(assume nt47.2 (not (= y$v_done y$v_k_Belt)))
+(assume t47 (or (not (= y$74 (= y$v_done y$v_k_Belt))) (not y$74) (= y$v_done y$v_k_Belt)))
+(step t47' (cl (not (= y$74 (= y$v_done y$v_k_Belt))) (not y$74) (= y$v_done y$v_k_Belt)) :rule or :premises (t47))
+(step t.end (cl) :rule resolution :premises (nt47.0 nt47.1 nt47.2 t47'))

@@ -1,0 +1,3 @@
+(assume nt5.0 (not (= y$1518 y$1518)))
+(assume t5 (= y$1518 y$1518))
+(step t.end (cl) :rule resolution :premises (nt5.0 t5))

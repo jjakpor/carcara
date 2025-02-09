@@ -1,0 +1,3 @@
+(assume nt2.t19.0 (not (= (= y$n15s4 y$X) (= y$X y$n15s4))))
+(assume t2.t19 (= (= y$n15s4 y$X) (= y$X y$n15s4)))
+(step t.end (cl) :rule resolution :premises (nt2.t19.0 t2.t19))

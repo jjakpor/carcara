@@ -1,0 +1,3 @@
+(assume nt9.0 (not (not y$id84_op)))
+(assume t9 (not y$id84_op))
+(step t.end (cl) :rule resolution :premises (nt9.0 t9))

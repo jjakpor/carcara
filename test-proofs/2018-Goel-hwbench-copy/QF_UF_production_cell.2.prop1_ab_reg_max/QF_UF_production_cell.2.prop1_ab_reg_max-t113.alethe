@@ -1,0 +1,5 @@
+(assume nt113.0 (not (not (= (= y$id44_op (and y$59 y$1522)) (= y$id44_op (and y$59 (= y$n5s8 y$v_done)))))))
+(assume nt113.1 (not (not (= y$id44_op (and y$59 y$1522)))))
+(assume nt113.2 (not (= y$id44_op (and y$59 (= y$n5s8 y$v_done)))))
+(step t113 (cl (not (= (= y$id44_op (and y$59 y$1522)) (= y$id44_op (and y$59 (= y$n5s8 y$v_done))))) (not (= y$id44_op (and y$59 y$1522))) (= y$id44_op (and y$59 (= y$n5s8 y$v_done)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt113.0 nt113.1 nt113.2 t113))

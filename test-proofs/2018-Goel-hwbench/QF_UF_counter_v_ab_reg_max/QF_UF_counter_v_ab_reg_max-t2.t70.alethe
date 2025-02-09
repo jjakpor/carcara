@@ -1,0 +1,5 @@
+(assume t2.t66 (= y$X y$n1s4))
+(assume t2.t69 (= y$n15s4 y$n15s4))
+(assume nt2.t70.0 (not (= (= y$X y$n15s4) (= y$n1s4 y$n15s4))))
+(step t2.t70 (cl (= (= y$X y$n15s4) (= y$n1s4 y$n15s4))) :rule cong :premises (t2.t66 t2.t69))
+(step t.end (cl) :rule resolution :premises (nt2.t70.0 t2.t70))

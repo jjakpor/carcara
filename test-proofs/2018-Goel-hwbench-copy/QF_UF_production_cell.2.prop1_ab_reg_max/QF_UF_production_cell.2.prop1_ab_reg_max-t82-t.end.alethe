@@ -1,0 +1,3 @@
+(assume nt82.0 (not (= y$v_k_Deposit y$v_k_Press)))
+(assume t82 (= y$v_k_Deposit y$v_k_Press))
+(step t.end (cl) :rule resolution :premises (nt82.0 t82))

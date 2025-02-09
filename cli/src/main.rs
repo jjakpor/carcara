@@ -12,7 +12,7 @@ use error::{CliError, CliResult};
 use git_version::git_version;
 use path_args::{get_instances_from_paths, infer_problem_path};
 use std::{
-    fs::File,
+    fs::{create_dir_all, File},
     io::{self, BufRead, IsTerminal},
     path::Path,
     sync::atomic,
@@ -623,10 +623,12 @@ fn slice_command(
         let file_name_without_extension = options.input.proof_file.clone().replace(".alethe", ""); 
         let sliced_problem_file_name = format!("{}-{}.smt2", file_name_without_extension, options.from);
         let sliced_proof_file_name = format!("{}-{}.alethe", file_name_without_extension, options.from); 
-        let mut sliced_problem_file = File::create(sliced_problem_file_name)?;
+        
+        // create_dir_all(file_name_without_extension.clone())?;
+        let mut sliced_problem_file = File::create(format!("{}", sliced_problem_file_name))?;
         
         write!(sliced_problem_file, "{}", sliced_problem_string)?;
-        let mut sliced_proof_file = File::create(sliced_proof_file_name)?;
+        let mut sliced_proof_file = File::create(format!("{}", sliced_proof_file_name))?;
         write!(sliced_proof_file, "{}", sliced_proof_string)?;
         
 

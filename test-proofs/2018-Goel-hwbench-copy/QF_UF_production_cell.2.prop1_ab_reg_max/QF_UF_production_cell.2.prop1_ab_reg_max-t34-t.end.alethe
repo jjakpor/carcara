@@ -1,0 +1,3 @@
+(assume nt34.0 (not (= y$70 (= y$v_at_table y$v_count))))
+(assume t34 (= y$70 (= y$v_at_table y$v_count)))
+(step t.end (cl) :rule resolution :premises (nt34.0 t34))

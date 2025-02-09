@@ -1,0 +1,5 @@
+(assume nt70.0 (not (not (= y$78 (= y$v_k_Deposit y$v_k_Press)))))
+(assume nt70.1 (not (not y$78)))
+(assume nt70.2 (not (= y$v_k_Deposit y$v_k_Press)))
+(step t70 (cl (not (= y$78 (= y$v_k_Deposit y$v_k_Press))) (not y$78) (= y$v_k_Deposit y$v_k_Press)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt70.0 nt70.1 nt70.2 t70))

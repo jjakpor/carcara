@@ -1,0 +1,5 @@
+(assume nt145.0 (not (not (and y$a_got_msg_Receiver y$19))))
+(assume nt145.1 (not y$a_got_msg_Receiver))
+(assume t145 (or (not (and y$a_got_msg_Receiver y$19)) y$a_got_msg_Receiver))
+(step t145' (cl (not (and y$a_got_msg_Receiver y$19)) y$a_got_msg_Receiver) :rule or :premises (t145))
+(step t.end (cl) :rule resolution :premises (nt145.0 nt145.1 t145'))

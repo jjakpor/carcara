@@ -1,0 +1,3 @@
+(assume nt50.0 (not (= y$1093 (= y$1092 y$prop$next))))
+(assume t50 (= y$1093 (= y$1092 y$prop$next)))
+(step t.end (cl) :rule resolution :premises (nt50.0 t50))

@@ -1,0 +1,6 @@
+(assume t143 (or (not (and y$v3_1517448506_266_op y$v3_1517448506_301_op)) y$v3_1517448506_301_op))
+(assume t150 (not y$v3_1517448506_301_op))
+(assume nt151.0 (not (not (and y$v3_1517448506_266_op y$v3_1517448506_301_op))))
+(step t143' (cl (not (and y$v3_1517448506_266_op y$v3_1517448506_301_op)) y$v3_1517448506_301_op) :rule or :premises (t143))
+(step t151 (cl (not (and y$v3_1517448506_266_op y$v3_1517448506_301_op))) :rule resolution :premises (t143' t150))
+(step t.end (cl) :rule resolution :premises (nt151.0 t151))

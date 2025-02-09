@@ -1,0 +1,3 @@
+(assume nt39.0 (not (= y$1047 y$dve_invalid$next)))
+(assume t39 (= y$1047 y$dve_invalid$next))
+(step t.end (cl) :rule resolution :premises (nt39.0 t39))

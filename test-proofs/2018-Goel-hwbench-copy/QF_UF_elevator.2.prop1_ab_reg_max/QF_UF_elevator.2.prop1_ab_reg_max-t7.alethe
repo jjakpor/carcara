@@ -1,0 +1,5 @@
+(assume t5 (= y$1518 y$1518))
+(assume t6 (= (= y$prop y$1517) (= y$1517 y$prop)))
+(assume nt7.0 (not (= (= y$1518 (= y$prop y$1517)) (= y$1518 (= y$1517 y$prop)))))
+(step t7 (cl (= (= y$1518 (= y$prop y$1517)) (= y$1518 (= y$1517 y$prop)))) :rule cong :premises (t5 t6))
+(step t.end (cl) :rule resolution :premises (nt7.0 t7))

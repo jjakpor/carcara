@@ -1,0 +1,7 @@
+(assume t206' (or (not (= (= y$42 (not y$44)) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) (not (= y$42 (not y$44))) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
+(assume t233 (= (= y$42 (not y$44)) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
+(assume a17 (= y$42 (not y$44)))
+(assume nt234.0 (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
+(step t206'' (cl (not (= (= y$42 (not y$44)) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) (not (= y$42 (not y$44))) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))) :rule or :premises (t206'))
+(step t234 (cl (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))) :rule resolution :premises (t206'' t233 a17))
+(step t.end (cl) :rule resolution :premises (nt234.0 t234))

@@ -1,0 +1,6 @@
+(assume nt207.0 (not (not (= (= y$42 (and y$2 y$33)) (= y$42 (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4))))))))
+(assume nt207.1 (not (not (= y$42 (and y$2 y$33)))))
+(assume nt207.2 (not (= y$42 (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4))))))
+(assume t207 (or (not (= (= y$42 (and y$2 y$33)) (= y$42 (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4)))))) (not (= y$42 (and y$2 y$33))) (= y$42 (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4))))))
+(step t207' (cl (not (= (= y$42 (and y$2 y$33)) (= y$42 (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4)))))) (not (= y$42 (and y$2 y$33))) (= y$42 (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4))))) :rule or :premises (t207))
+(step t.end (cl) :rule resolution :premises (nt207.0 nt207.1 nt207.2 t207'))

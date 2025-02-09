@@ -1,0 +1,6 @@
+(assume nt32.0 (not (not (= y$1048 (= y$1047 y$dve_invalid$next)))))
+(assume nt32.1 (not (not y$1048)))
+(assume nt32.2 (not (= y$1047 y$dve_invalid$next)))
+(assume t32 (or (not (= y$1048 (= y$1047 y$dve_invalid$next))) (not y$1048) (= y$1047 y$dve_invalid$next)))
+(step t32' (cl (not (= y$1048 (= y$1047 y$dve_invalid$next))) (not y$1048) (= y$1047 y$dve_invalid$next)) :rule or :premises (t32))
+(step t.end (cl) :rule resolution :premises (nt32.0 nt32.1 nt32.2 t32'))

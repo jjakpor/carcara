@@ -1,0 +1,3 @@
+(assume nt7.0 (not (not y$a_done)))
+(assume t7 (not y$a_done))
+(step t.end (cl) :rule resolution :premises (nt7.0 t7))

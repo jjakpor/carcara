@@ -1,0 +1,5 @@
+(assume t19 (= y$v_B y$v_at_press))
+(assume t102 (= y$v_at_press y$v_k_Table))
+(assume nt103.0 (not (= y$v_B y$v_k_Table)))
+(step t103 (cl (= y$v_B y$v_k_Table)) :rule trans :premises (t19 t102))
+(step t.end (cl) :rule resolution :premises (nt103.0 t103))

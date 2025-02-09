@@ -1,0 +1,7 @@
+(assume t130' (or (not (= (not y$1525) y$id44_op)) (not (not y$1525)) y$id44_op))
+(assume t131 (= (not y$1525) y$id44_op))
+(assume t144 (not y$1525))
+(assume nt145.0 (not y$id44_op))
+(step t130'' (cl (not (= (not y$1525) y$id44_op)) (not (not y$1525)) y$id44_op) :rule or :premises (t130'))
+(step t145 (cl y$id44_op) :rule resolution :premises (t130'' t131 t144))
+(step t.end (cl) :rule resolution :premises (nt145.0 t145))

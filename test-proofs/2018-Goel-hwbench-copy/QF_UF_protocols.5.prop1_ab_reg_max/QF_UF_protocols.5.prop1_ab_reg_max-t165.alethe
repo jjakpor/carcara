@@ -1,0 +1,6 @@
+(assume t90 (or (not y$a_consume0$next_rhs_op) (not y$956)))
+(assume t164 y$956)
+(assume nt165.0 (not (not y$a_consume0$next_rhs_op)))
+(step t90' (cl (not y$a_consume0$next_rhs_op) (not y$956)) :rule or :premises (t90))
+(step t165 (cl (not y$a_consume0$next_rhs_op)) :rule resolution :premises (t90' t164))
+(step t.end (cl) :rule resolution :premises (nt165.0 t165))

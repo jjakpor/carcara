@@ -1,0 +1,3 @@
+(assume nt166.0 (not (= (not true) false)))
+(assume t166 (= (not true) false))
+(step t.end (cl) :rule resolution :premises (nt166.0 t166))

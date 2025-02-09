@@ -1,0 +1,3 @@
+(assume nt159.0 (not (= y$44 true)))
+(assume t159 (= y$44 true))
+(step t.end (cl) :rule resolution :premises (nt159.0 t159))

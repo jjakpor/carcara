@@ -1,0 +1,3 @@
+(assume nt164.0 (not (= (not (= y$n255s8 y$v_k_Table)) (not (= y$n255s8 y$v_k_Table)))))
+(step t164 (cl (= (not (= y$n255s8 y$v_k_Table)) (not (= y$n255s8 y$v_k_Table)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt164.0 t164))

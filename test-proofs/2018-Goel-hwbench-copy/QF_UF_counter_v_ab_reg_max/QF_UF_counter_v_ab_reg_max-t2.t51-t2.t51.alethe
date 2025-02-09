@@ -1,0 +1,7 @@
+(assume t2.t48' (or (not (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next)))) (not (= y$28 (= y$prop$next y$27))) (= y$28 (= y$27 y$prop$next))))
+(assume t2.t50 (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next))))
+(assume a8 (= y$28 (= y$prop$next y$27)))
+(assume nt2.t51.0 (not (= y$28 (= y$27 y$prop$next))))
+(step t2.t48'' (cl (not (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next)))) (not (= y$28 (= y$prop$next y$27))) (= y$28 (= y$27 y$prop$next))) :rule or :premises (t2.t48'))
+(step t2.t51 (cl (= y$28 (= y$27 y$prop$next))) :rule resolution :premises (t2.t48'' t2.t50 a8))
+(step t.end (cl) :rule resolution :premises (nt2.t51.0 t2.t51))

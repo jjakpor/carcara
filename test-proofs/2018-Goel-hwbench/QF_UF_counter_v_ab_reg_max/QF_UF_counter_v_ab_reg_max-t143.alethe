@@ -1,0 +1,4 @@
+(assume t142 (= (= y$26 true) y$26))
+(assume nt143.0 (not (= y$26 (= y$26 true))))
+(step t143 (cl (= y$26 (= y$26 true))) :rule symm :premises (t142))
+(step t.end (cl) :rule resolution :premises (nt143.0 t143))

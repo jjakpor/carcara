@@ -1,0 +1,3 @@
+(assume nt2.t39.0 (not (= (not (= y$n15s4 y$X$next)) (not (= y$X$next y$n15s4)))))
+(assume t2.t39 (= (not (= y$n15s4 y$X$next)) (not (= y$X$next y$n15s4))))
+(step t.end (cl) :rule resolution :premises (nt2.t39.0 t2.t39))

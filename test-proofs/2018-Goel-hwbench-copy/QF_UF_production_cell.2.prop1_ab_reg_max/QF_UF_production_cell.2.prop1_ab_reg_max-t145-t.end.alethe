@@ -1,0 +1,3 @@
+(assume nt145.0 (not y$id44_op))
+(assume t145 y$id44_op)
+(step t.end (cl) :rule resolution :premises (nt145.0 t145))

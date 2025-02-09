@@ -1,0 +1,3 @@
+(assume nt2.t90.0 (not (= (not y$26) (not true))))
+(assume t2.t90 (= (not y$26) (not true)))
+(step t.end (cl) :rule resolution :premises (nt2.t90.0 t2.t90))

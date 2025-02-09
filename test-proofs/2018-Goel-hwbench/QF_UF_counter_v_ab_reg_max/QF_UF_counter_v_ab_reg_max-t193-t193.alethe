@@ -1,0 +1,6 @@
+(assume t186 (= (= y$n15s4 y$n1s4) (= y$n15s4 y$n1s4)))
+(assume t191 (= (= (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (= (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))
+(assume t192 (= (= (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) (Add_4_4_4 y$n1s4 y$n1s4)) (= (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) (Add_4_4_4 y$n1s4 y$n1s4))))
+(assume nt193.0 (not (= (ite (= y$n15s4 y$n1s4) (= (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (= (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) (Add_4_4_4 y$n1s4 y$n1s4))) (ite (= y$n15s4 y$n1s4) (= (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (= (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) (Add_4_4_4 y$n1s4 y$n1s4))))))
+(step t193 (cl (= (ite (= y$n15s4 y$n1s4) (= (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (= (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) (Add_4_4_4 y$n1s4 y$n1s4))) (ite (= y$n15s4 y$n1s4) (= (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (= (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) (Add_4_4_4 y$n1s4 y$n1s4))))) :rule cong :premises (t186 t191 t192))
+(step t.end (cl) :rule resolution :premises (nt193.0 t193))

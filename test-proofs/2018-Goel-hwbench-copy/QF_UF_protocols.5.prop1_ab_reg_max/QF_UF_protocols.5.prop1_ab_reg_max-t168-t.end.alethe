@@ -1,0 +1,3 @@
+(assume nt168.0 (not y$1085))
+(assume t168 y$1085)
+(step t.end (cl) :rule resolution :premises (nt168.0 t168))

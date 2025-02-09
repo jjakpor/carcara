@@ -1,0 +1,5 @@
+(assume t69 (= y$v_k_Belt y$v_k_Deposit))
+(assume t82 (= y$v_k_Deposit y$v_k_Press))
+(assume nt84.0 (not (= y$v_k_Belt y$v_k_Press)))
+(step t84 (cl (= y$v_k_Belt y$v_k_Press)) :rule trans :premises (t69 t82))
+(step t.end (cl) :rule resolution :premises (nt84.0 t84))

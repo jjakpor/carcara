@@ -1,0 +1,5 @@
+(assume nt2.t85.0 (not (not (= y$26 (= y$26 true)))))
+(assume nt2.t85.1 (not (not y$26)))
+(assume nt2.t85.2 (not (= y$26 true)))
+(step t2.t85 (cl (not (= y$26 (= y$26 true))) (not y$26) (= y$26 true)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt2.t85.0 nt2.t85.1 nt2.t85.2 t2.t85))

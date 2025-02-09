@@ -1,0 +1,5 @@
+(assume nt90.0 (not (not (= (= y$28 (= y$27 y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4))))))))
+(assume nt90.1 (not (not (= y$28 (= y$27 y$prop$next)))))
+(assume nt90.2 (not (= y$28 (= y$prop$next (not (= y$X$next y$n15s4))))))
+(step t90 (cl (not (= (= y$28 (= y$27 y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4)))))) (not (= y$28 (= y$27 y$prop$next))) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt90.0 nt90.1 nt90.2 t90))

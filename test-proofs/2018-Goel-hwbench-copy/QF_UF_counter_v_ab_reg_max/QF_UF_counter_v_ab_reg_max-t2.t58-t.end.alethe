@@ -1,0 +1,3 @@
+(assume nt2.t58.0 (not (= y$44 y$44)))
+(assume t2.t58 (= y$44 y$44))
+(step t.end (cl) :rule resolution :premises (nt2.t58.0 t2.t58))

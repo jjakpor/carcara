@@ -1,0 +1,3 @@
+(assume nt12.0 (not (= y$55379 y$55379)))
+(assume t12 (= y$55379 y$55379))
+(step t.end (cl) :rule resolution :premises (nt12.0 t12))

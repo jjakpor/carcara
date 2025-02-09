@@ -1,0 +1,6 @@
+(assume nt0.0 (not (not (= y$id84_op (not y$3079)))))
+(assume nt0.1 (not y$id84_op))
+(assume nt0.2 (not (not (not y$3079))))
+(assume t0 (or (not (= y$id84_op (not y$3079))) y$id84_op (not (not y$3079))))
+(step t0' (cl (not (= y$id84_op (not y$3079))) y$id84_op (not (not y$3079))) :rule or :premises (t0))
+(step t.end (cl) :rule resolution :premises (nt0.0 nt0.1 nt0.2 t0'))

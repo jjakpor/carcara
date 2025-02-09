@@ -1,0 +1,4 @@
+(assume t68 (and y$v3_1517448506_526_op y$1040))
+(assume nt69.0 (not y$v3_1517448506_526_op))
+(step t69 (cl y$v3_1517448506_526_op) :rule and :premises (t68))
+(step t.end (cl) :rule resolution :premises (nt69.0 t69))

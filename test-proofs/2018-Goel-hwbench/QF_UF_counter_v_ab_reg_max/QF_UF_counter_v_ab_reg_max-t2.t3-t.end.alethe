@@ -1,0 +1,6 @@
+(assume nt2.t3.0 (not (not (= (= y$2 (= y$n1s4 y$X)) (= y$2 (= y$X y$n1s4))))))
+(assume nt2.t3.1 (not (not (= y$2 (= y$n1s4 y$X)))))
+(assume nt2.t3.2 (not (= y$2 (= y$X y$n1s4))))
+(assume t2.t3 (or (not (= (= y$2 (= y$n1s4 y$X)) (= y$2 (= y$X y$n1s4)))) (not (= y$2 (= y$n1s4 y$X))) (= y$2 (= y$X y$n1s4))))
+(step t2.t3' (cl (not (= (= y$2 (= y$n1s4 y$X)) (= y$2 (= y$X y$n1s4)))) (not (= y$2 (= y$n1s4 y$X))) (= y$2 (= y$X y$n1s4))) :rule or :premises (t2.t3))
+(step t.end (cl) :rule resolution :premises (nt2.t3.0 nt2.t3.1 nt2.t3.2 t2.t3'))

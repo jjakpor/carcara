@@ -1,0 +1,3 @@
+(assume nt2.t15.0 (not (= y$s$4_op y$s$4_op)))
+(assume t2.t15 (= y$s$4_op y$s$4_op))
+(step t.end (cl) :rule resolution :premises (nt2.t15.0 t2.t15))

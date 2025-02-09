@@ -1,0 +1,3 @@
+(assume nt103.0 (not (= y$v_B y$v_k_Table)))
+(assume t103 (= y$v_B y$v_k_Table))
+(step t.end (cl) :rule resolution :premises (nt103.0 t103))

@@ -1,0 +1,5 @@
+(assume a310 (= y$v3_1517448506_301_op (and y$a_got_msg_Receiver y$19)))
+(assume nt144.0 (not (not y$v3_1517448506_301_op)))
+(assume nt144.1 (not (and y$a_got_msg_Receiver y$19)))
+(step t144 (cl (not y$v3_1517448506_301_op) (and y$a_got_msg_Receiver y$19)) :rule equiv1 :premises (a310))
+(step t.end (cl) :rule resolution :premises (nt144.0 nt144.1 t144))

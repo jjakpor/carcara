@@ -1,0 +1,5 @@
+(assume t163 (= (= y$n1s4 y$n1s4) true))
+(assume t223 (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))
+(assume nt224.0 (not (= (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (and true (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))))
+(step t224 (cl (= (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (and true (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) :rule cong :premises (t163 t223))
+(step t.end (cl) :rule resolution :premises (nt224.0 t224))

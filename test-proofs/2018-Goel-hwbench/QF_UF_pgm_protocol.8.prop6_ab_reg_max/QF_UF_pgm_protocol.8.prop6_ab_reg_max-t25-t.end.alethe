@@ -1,0 +1,3 @@
+(assume nt25.0 (not (not (and y$a_r4 y$v3_1517448504_182_op))))
+(assume t25 (not (and y$a_r4 y$v3_1517448504_182_op)))
+(step t.end (cl) :rule resolution :premises (nt25.0 t25))

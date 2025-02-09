@@ -1,0 +1,6 @@
+(assume nt27.0 (not (not (= y$v3_1517448506_529_op (and y$v3_1517448506_526_op y$1040)))))
+(assume nt27.1 (not (not y$v3_1517448506_529_op)))
+(assume nt27.2 (not (and y$v3_1517448506_526_op y$1040)))
+(assume t27 (or (not (= y$v3_1517448506_529_op (and y$v3_1517448506_526_op y$1040))) (not y$v3_1517448506_529_op) (and y$v3_1517448506_526_op y$1040)))
+(step t27' (cl (not (= y$v3_1517448506_529_op (and y$v3_1517448506_526_op y$1040))) (not y$v3_1517448506_529_op) (and y$v3_1517448506_526_op y$1040)) :rule or :premises (t27))
+(step t.end (cl) :rule resolution :premises (nt27.0 nt27.1 nt27.2 t27'))

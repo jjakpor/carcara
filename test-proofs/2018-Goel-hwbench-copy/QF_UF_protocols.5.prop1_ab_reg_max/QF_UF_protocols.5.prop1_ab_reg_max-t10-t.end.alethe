@@ -1,0 +1,3 @@
+(assume nt10.0 (not (= y$a_consume0$next y$a_consume0$next_rhs_op)))
+(assume t10 (= y$a_consume0$next y$a_consume0$next_rhs_op))
+(step t.end (cl) :rule resolution :premises (nt10.0 t10))

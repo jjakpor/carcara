@@ -1,0 +1,6 @@
+(assume t3' (or (not y$a_done) (not y$1)))
+(assume t6 y$1)
+(assume nt7.0 (not (not y$a_done)))
+(step t3'' (cl (not y$a_done) (not y$1)) :rule or :premises (t3'))
+(step t7 (cl (not y$a_done)) :rule resolution :premises (t3'' t6))
+(step t.end (cl) :rule resolution :premises (nt7.0 t7))

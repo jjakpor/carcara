@@ -1,0 +1,7 @@
+(assume t2.t85' (or (not (= y$26 (= y$26 true))) (not y$26) (= y$26 true)))
+(assume t2.t87 (= y$26 (= y$26 true)))
+(assume t2.t88 y$26)
+(assume nt2.t89.0 (not (= y$26 true)))
+(step t2.t85'' (cl (not (= y$26 (= y$26 true))) (not y$26) (= y$26 true)) :rule or :premises (t2.t85'))
+(step t2.t89 (cl (= y$26 true)) :rule resolution :premises (t2.t85'' t2.t87 t2.t88))
+(step t.end (cl) :rule resolution :premises (nt2.t89.0 t2.t89))

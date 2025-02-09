@@ -1,0 +1,3 @@
+(assume nt2.t49.0 (not (= (= y$prop$next y$27) (= y$27 y$prop$next))))
+(assume t2.t49 (= (= y$prop$next y$27) (= y$27 y$prop$next)))
+(step t.end (cl) :rule resolution :premises (nt2.t49.0 t2.t49))

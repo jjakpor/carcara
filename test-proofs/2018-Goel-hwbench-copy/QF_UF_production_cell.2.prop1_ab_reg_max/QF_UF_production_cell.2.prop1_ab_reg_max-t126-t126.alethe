@@ -1,0 +1,5 @@
+(assume t123 (= y$59 true))
+(assume t125 (= (= y$n5s8 y$v_done) (= y$n5s8 y$v_k_Table)))
+(assume nt126.0 (not (= (and y$59 (= y$n5s8 y$v_done)) (and true (= y$n5s8 y$v_k_Table)))))
+(step t126 (cl (= (and y$59 (= y$n5s8 y$v_done)) (and true (= y$n5s8 y$v_k_Table)))) :rule cong :premises (t123 t125))
+(step t.end (cl) :rule resolution :premises (nt126.0 t126))

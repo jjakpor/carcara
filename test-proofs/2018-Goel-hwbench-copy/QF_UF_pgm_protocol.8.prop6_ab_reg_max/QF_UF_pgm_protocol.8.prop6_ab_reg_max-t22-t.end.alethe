@@ -1,0 +1,5 @@
+(assume nt22.0 (not (not y$a_r4)))
+(assume nt22.1 (not (not y$81)))
+(assume t22 (or (not y$a_r4) (not y$81)))
+(step t22' (cl (not y$a_r4) (not y$81)) :rule or :premises (t22))
+(step t.end (cl) :rule resolution :premises (nt22.0 nt22.1 t22'))

@@ -1,0 +1,3 @@
+(assume nt129.0 (not (= y$id44_op (= y$n5s8 y$v_k_Table))))
+(assume t129 (= y$id44_op (= y$n5s8 y$v_k_Table)))
+(step t.end (cl) :rule resolution :premises (nt129.0 t129))

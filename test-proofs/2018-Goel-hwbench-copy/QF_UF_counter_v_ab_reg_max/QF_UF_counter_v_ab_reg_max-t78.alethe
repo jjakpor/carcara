@@ -1,0 +1,5 @@
+(assume t74 (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$n15s4 y$X))))
+(assume t77 (= (= y$6 (= y$n15s4 y$X)) (= y$6 (= y$X y$n15s4))))
+(assume nt78.0 (not (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4)))))
+(step t78 (cl (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4)))) :rule trans :premises (t74 t77))
+(step t.end (cl) :rule resolution :premises (nt78.0 t78))

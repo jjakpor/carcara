@@ -1,0 +1,6 @@
+(assume nt133.0 (not (not (= (= y$1526 (= y$prop y$1525)) (= y$1526 (= y$1525 y$prop))))))
+(assume nt133.1 (not (not (= y$1526 (= y$prop y$1525)))))
+(assume nt133.2 (not (= y$1526 (= y$1525 y$prop))))
+(assume t133 (or (not (= (= y$1526 (= y$prop y$1525)) (= y$1526 (= y$1525 y$prop)))) (not (= y$1526 (= y$prop y$1525))) (= y$1526 (= y$1525 y$prop))))
+(step t133' (cl (not (= (= y$1526 (= y$prop y$1525)) (= y$1526 (= y$1525 y$prop)))) (not (= y$1526 (= y$prop y$1525))) (= y$1526 (= y$1525 y$prop))) :rule or :premises (t133))
+(step t.end (cl) :rule resolution :premises (nt133.0 nt133.1 nt133.2 t133'))

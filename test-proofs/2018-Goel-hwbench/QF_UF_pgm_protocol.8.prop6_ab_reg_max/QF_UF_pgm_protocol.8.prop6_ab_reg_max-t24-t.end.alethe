@@ -1,0 +1,3 @@
+(assume nt24.0 (not (not y$a_r4)))
+(assume t24 (not y$a_r4))
+(step t.end (cl) :rule resolution :premises (nt24.0 t24))
