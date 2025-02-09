@@ -1,0 +1,7 @@
+(assume t2' (or (not (= y$62 (= y$n0s8 y$v_A))) (not y$62) (= y$n0s8 y$v_A)))
+(assume a32 (= y$62 (= y$n0s8 y$v_A)))
+(assume t5 y$62)
+(assume nt6.0 (not (= y$n0s8 y$v_A)))
+(step t2'' (cl (not (= y$62 (= y$n0s8 y$v_A))) (not y$62) (= y$n0s8 y$v_A)) :rule or :premises (t2'))
+(step t6 (cl (= y$n0s8 y$v_A)) :rule resolution :premises (t2'' a32 t5))
+(step t.end (cl) :rule resolution :premises (nt6.0 t6))

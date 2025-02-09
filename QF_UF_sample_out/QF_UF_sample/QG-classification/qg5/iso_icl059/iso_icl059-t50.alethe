@@ -1,0 +1,5 @@
+(assume t30 (= e0 e0))
+(assume t49 (= (op e4 e4) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))
+(assume nt50.0 (not (= (= e0 (op e4 e4)) (= e0 (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))))
+(step t50 (cl (= (= e0 (op e4 e4)) (= e0 (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) :rule cong :premises (t30 t49))
+(step t.end (cl) :rule resolution :premises (nt50.0 t50))

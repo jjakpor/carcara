@@ -1,0 +1,3 @@
+(assume nt8.0 (not (= (= prt prt) true)))
+(step t8 (cl (= (= prt prt) true)) :rule rare_rewrite)
+(step t.end (cl) :rule resolution :premises (nt8.0 t8))

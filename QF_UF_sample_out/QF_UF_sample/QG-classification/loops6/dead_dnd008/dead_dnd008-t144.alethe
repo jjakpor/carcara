@@ -1,0 +1,5 @@
+(assume t109 (= e1 e1))
+(assume t143 (= (op e1 unit) (op e1 e0)))
+(assume nt144.0 (not (= (= e1 (op e1 unit)) (= e1 (op e1 e0)))))
+(step t144 (cl (= (= e1 (op e1 unit)) (= e1 (op e1 e0)))) :rule cong :premises (t109 t143))
+(step t.end (cl) :rule resolution :premises (nt144.0 t144))

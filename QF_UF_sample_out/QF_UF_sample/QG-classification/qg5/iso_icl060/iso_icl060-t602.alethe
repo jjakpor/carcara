@@ -1,0 +1,5 @@
+(assume nt602.0 (not (not (= (op e1 e3) (op (op (op e1 e3) e3) e1)))))
+(assume nt602.1 (not (not (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))))
+(assume nt602.2 (not (= e1 (op (op (op e1 e3) e3) (op e1 e3)))))
+(step t602 (cl (not (= (op e1 e3) (op (op (op e1 e3) e3) e1))) (not (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))) (= e1 (op (op (op e1 e3) e3) (op e1 e3)))) :rule subproof)
+(step t.end (cl) :rule resolution :premises (nt602.0 nt602.1 nt602.2 t602))

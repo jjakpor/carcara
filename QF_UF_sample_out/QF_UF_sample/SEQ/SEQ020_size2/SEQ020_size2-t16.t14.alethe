@@ -1,0 +1,4 @@
+(assume nt16.t14.0 (not (not (not (not (p1 (f7 c_1) c_1))))))
+(assume nt16.t14.1 (not (p1 (f7 c_1) c_1)))
+(step t16.t14 (cl (not (not (not (p1 (f7 c_1) c_1)))) (p1 (f7 c_1) c_1)) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nt16.t14.0 nt16.t14.1 t16.t14))

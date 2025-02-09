@@ -1,0 +1,7 @@
+(assume t691 (or (not (= (not (= (op e0 e0) (op e4 e0))) (not (= (op e0 e0) (op (op e0 e0) e0))))) (not (not (= (op e0 e0) (op e4 e0)))) (not (= (op e0 e0) (op (op e0 e0) e0)))))
+(assume t693 (= (not (= (op e0 e0) (op e4 e0))) (not (= (op e0 e0) (op (op e0 e0) e0)))))
+(assume t694 (not (= (op e0 e0) (op e4 e0))))
+(assume nt695.0 (not (not (= (op e0 e0) (op (op e0 e0) e0)))))
+(step t691' (cl (not (= (not (= (op e0 e0) (op e4 e0))) (not (= (op e0 e0) (op (op e0 e0) e0))))) (not (not (= (op e0 e0) (op e4 e0)))) (not (= (op e0 e0) (op (op e0 e0) e0)))) :rule or :premises (t691))
+(step t695 (cl (not (= (op e0 e0) (op (op e0 e0) e0)))) :rule resolution :premises (t691' t693 t694))
+(step t.end (cl) :rule resolution :premises (nt695.0 t695))

@@ -1,0 +1,4 @@
+(assume t918 (= (= (op e1 e2) (op e1 e4)) (= (op e1 (op e1 e1)) (op e1 (op (op e1 e1) (op e1 (op e1 e1)))))))
+(assume nt919.0 (not (= (not (= (op e1 e2) (op e1 e4))) (not (= (op e1 (op e1 e1)) (op e1 (op (op e1 e1) (op e1 (op e1 e1)))))))))
+(step t919 (cl (= (not (= (op e1 e2) (op e1 e4))) (not (= (op e1 (op e1 e1)) (op e1 (op (op e1 e1) (op e1 (op e1 e1)))))))) :rule cong :premises (t918))
+(step t.end (cl) :rule resolution :premises (nt919.0 t919))

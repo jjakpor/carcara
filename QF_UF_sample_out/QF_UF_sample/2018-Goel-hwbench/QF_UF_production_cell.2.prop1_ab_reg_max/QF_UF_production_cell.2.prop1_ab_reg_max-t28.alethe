@@ -1,0 +1,5 @@
+(assume nt28.0 (not (not (= y$70 (= y$v_at_table y$v_count)))))
+(assume nt28.1 (not (not y$70)))
+(assume nt28.2 (not (= y$v_at_table y$v_count)))
+(step t28 (cl (not (= y$70 (= y$v_at_table y$v_count))) (not y$70) (= y$v_at_table y$v_count)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt28.0 nt28.1 nt28.2 t28))

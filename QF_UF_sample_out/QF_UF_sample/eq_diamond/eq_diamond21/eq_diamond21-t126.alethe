@@ -1,0 +1,6 @@
+(assume t125 (or (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11)))) (= x10 x11)))
+(assume nt126.0 (not (= x10 x11)))
+(assume nt126.1 (not (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))))
+(step t125' (cl (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11)))) (= x10 x11)) :rule or :premises (t125))
+(step t126 (cl (= x10 x11) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))) :rule reordering :premises (t125'))
+(step t.end (cl) :rule resolution :premises (nt126.0 nt126.1 t126))

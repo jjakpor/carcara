@@ -1,0 +1,5 @@
+(assume t2.t2 (= e1 e1))
+(assume a11 (= unit e0))
+(assume nt2.t3.0 (not (= (op e1 unit) (op e1 e0))))
+(step t2.t3 (cl (= (op e1 unit) (op e1 e0))) :rule cong :premises (t2.t2 a11))
+(step t.end (cl) :rule resolution :premises (nt2.t3.0 t2.t3))

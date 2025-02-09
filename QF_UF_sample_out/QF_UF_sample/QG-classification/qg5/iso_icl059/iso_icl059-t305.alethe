@@ -1,0 +1,4 @@
+(assume t304 (= (= (op e1 e0) (op e1 e1)) (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))
+(assume nt305.0 (not (= (not (= (op e1 e0) (op e1 e1))) (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))))
+(step t305 (cl (= (not (= (op e1 e0) (op e1 e1))) (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) :rule cong :premises (t304))
+(step t.end (cl) :rule resolution :premises (nt305.0 t305))

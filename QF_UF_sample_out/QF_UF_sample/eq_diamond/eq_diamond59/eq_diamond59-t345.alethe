@@ -1,0 +1,4 @@
+(assume t344 (and (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12))))
+(assume nt345.0 (not (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12))))
+(step t345 (cl (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12))) :rule and :premises (t344))
+(step t.end (cl) :rule resolution :premises (nt345.0 t345))

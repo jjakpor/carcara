@@ -1,0 +1,4 @@
+(assume nt173.0 (not (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))))))
+(assume nt173.1 (not (= e3 (op e3 e0))))
+(step t173 (cl (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) (= e3 (op e3 e0))) :rule and_pos)
+(step t.end (cl) :rule resolution :premises (nt173.0 nt173.1 t173))

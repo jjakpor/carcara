@@ -1,0 +1,6 @@
+(assume nt3.0 (not (not (= y$1407 (= y$1406 y$prop)))))
+(assume nt3.1 (not (not y$1407)))
+(assume nt3.2 (not (= y$1406 y$prop)))
+(assume t3 (or (not (= y$1407 (= y$1406 y$prop))) (not y$1407) (= y$1406 y$prop)))
+(step t3' (cl (not (= y$1407 (= y$1406 y$prop))) (not y$1407) (= y$1406 y$prop)) :rule or :premises (t3))
+(step t.end (cl) :rule resolution :premises (nt3.0 nt3.1 nt3.2 t3'))

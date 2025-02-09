@@ -1,0 +1,6 @@
+(assume t58 (or (or (not car) (not clk)) clk))
+(assume nt59.0 (not clk))
+(assume nt59.1 (not (or (not car) (not clk))))
+(step t58' (cl (or (not car) (not clk)) clk) :rule or :premises (t58))
+(step t59 (cl clk (or (not car) (not clk))) :rule reordering :premises (t58'))
+(step t.end (cl) :rule resolution :premises (nt59.0 nt59.1 t59))

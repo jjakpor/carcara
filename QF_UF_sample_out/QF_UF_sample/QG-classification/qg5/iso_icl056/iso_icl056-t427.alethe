@@ -1,0 +1,4 @@
+(assume t426 (and (and (and (and (= (op e0 e2) (op e2 e0)) (= (op e1 e2) (op e2 e1))) (= (op e2 e2) (op e2 e2))) (= (op e3 e2) (op e2 e3))) (= (op e4 e2) (op e2 e4))))
+(assume nt427.0 (not (and (and (and (= (op e0 e2) (op e2 e0)) (= (op e1 e2) (op e2 e1))) (= (op e2 e2) (op e2 e2))) (= (op e3 e2) (op e2 e3)))))
+(step t427 (cl (and (and (and (= (op e0 e2) (op e2 e0)) (= (op e1 e2) (op e2 e1))) (= (op e2 e2) (op e2 e2))) (= (op e3 e2) (op e2 e3)))) :rule and :premises (t426))
+(step t.end (cl) :rule resolution :premises (nt427.0 t427))

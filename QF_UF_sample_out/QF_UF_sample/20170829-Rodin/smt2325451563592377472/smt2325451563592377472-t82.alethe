@@ -1,0 +1,5 @@
+(assume t37 (= (not (not prt)) prt))
+(assume t81 (= (not (or (not car) (not clk))) (not (or (not car) (not clk)))))
+(assume nt82.0 (not (= (or (not (not prt)) (not (or (not car) (not clk)))) (or prt (not (or (not car) (not clk)))))))
+(step t82 (cl (= (or (not (not prt)) (not (or (not car) (not clk)))) (or prt (not (or (not car) (not clk)))))) :rule cong :premises (t37 t81))
+(step t.end (cl) :rule resolution :premises (nt82.0 t82))

@@ -1,0 +1,6 @@
+(assume t379 (or (= x32 x33) (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))))))
+(assume t375 (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))))
+(assume nt380.0 (not (= x32 x33)))
+(step t379' (cl (= x32 x33) (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))))) :rule or :premises (t379))
+(step t380 (cl (= x32 x33)) :rule resolution :premises (t379' t375))
+(step t.end (cl) :rule resolution :premises (nt380.0 t380))

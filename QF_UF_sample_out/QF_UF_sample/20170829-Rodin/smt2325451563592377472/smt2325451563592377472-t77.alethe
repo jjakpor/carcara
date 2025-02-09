@@ -1,0 +1,7 @@
+(assume t60 (or (not (= (or (or (not car) (not clk)) (not (not car))) (or (or (not car) (not clk)) car))) (not (or (or (not car) (not clk)) (not (not car)))) (or (or (not car) (not clk)) car)))
+(assume t71 (= (or (or (not car) (not clk)) (not (not car))) (or (or (not car) (not clk)) car)))
+(assume t76 (or (or (not car) (not clk)) (not (not car))))
+(assume nt77.0 (not (or (or (not car) (not clk)) car)))
+(step t60' (cl (not (= (or (or (not car) (not clk)) (not (not car))) (or (or (not car) (not clk)) car))) (not (or (or (not car) (not clk)) (not (not car)))) (or (or (not car) (not clk)) car)) :rule or :premises (t60))
+(step t77 (cl (or (or (not car) (not clk)) car)) :rule resolution :premises (t60' t71 t76))
+(step t.end (cl) :rule resolution :premises (nt77.0 t77))

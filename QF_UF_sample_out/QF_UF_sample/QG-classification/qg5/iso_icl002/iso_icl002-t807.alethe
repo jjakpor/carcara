@@ -1,0 +1,5 @@
+(assume t796 (= (= (op e0 e0) (op (op e0 (op e0 e0)) (op e0 e0))) (= (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0))))
+(assume t806 (= (= (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0)) false))
+(assume nt807.0 (not (= (= (op e0 e0) (op (op e0 (op e0 e0)) (op e0 e0))) false)))
+(step t807 (cl (= (= (op e0 e0) (op (op e0 (op e0 e0)) (op e0 e0))) false)) :rule trans :premises (t796 t806))
+(step t.end (cl) :rule resolution :premises (nt807.0 t807))

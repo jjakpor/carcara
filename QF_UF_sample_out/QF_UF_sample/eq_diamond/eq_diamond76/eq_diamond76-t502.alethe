@@ -1,0 +1,3 @@
+(assume nt502.0 (not (= (= (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (and (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (=> (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (= x44 x45)))) true)))
+(step t502 (cl (= (= (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (and (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (=> (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (= x44 x45)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nt502.0 t502))

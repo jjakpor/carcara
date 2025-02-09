@@ -1,0 +1,5 @@
+(assume nt986.t2.0 (not (not (= (= (op e3 (op e3 e2)) e2) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))))))
+(assume nt986.t2.1 (not (not (= (op e3 (op e3 e2)) e2))))
+(assume nt986.t2.2 (not (= (op e1 e3) (op e3 (op e3 (op e1 e3))))))
+(step t986.t2 (cl (not (= (= (op e3 (op e3 e2)) e2) (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))) (not (= (op e3 (op e3 e2)) e2)) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt986.t2.0 nt986.t2.1 nt986.t2.2 t986.t2))

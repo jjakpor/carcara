@@ -1,0 +1,8 @@
+(assume t178 (or (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))) (= e3 (op e3 (op e3 e3)))))
+(assume t179 (or (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))) (not (= e3 (op e3 (op e3 e3))))))
+(assume nt180.0 (not (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3))))))
+(assume nt180.1 (not (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3))))))
+(step t179' (cl (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))) (not (= e3 (op e3 (op e3 e3))))) :rule or :premises (t179))
+(step t178' (cl (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))) (= e3 (op e3 (op e3 e3)))) :rule or :premises (t178))
+(step t180 (cl (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))) (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3))))) :rule resolution :premises (t178' t179'))
+(step t.end (cl) :rule resolution :premises (nt180.0 nt180.1 t180))

@@ -1,0 +1,7 @@
+(assume t402 (or (not (= (not (= (op e1 e2) (op e2 e2))) (not (= (op e1 (op e1 e1)) (op (op e1 e1) (op e1 e1)))))) (not (not (= (op e1 e2) (op e2 e2)))) (not (= (op e1 (op e1 e1)) (op (op e1 e1) (op e1 e1))))))
+(assume t404 (= (not (= (op e1 e2) (op e2 e2))) (not (= (op e1 (op e1 e1)) (op (op e1 e1) (op e1 e1))))))
+(assume t407 (not (= (op e1 e2) (op e2 e2))))
+(assume nt408.0 (not (not (= (op e1 (op e1 e1)) (op (op e1 e1) (op e1 e1))))))
+(step t402' (cl (not (= (not (= (op e1 e2) (op e2 e2))) (not (= (op e1 (op e1 e1)) (op (op e1 e1) (op e1 e1)))))) (not (not (= (op e1 e2) (op e2 e2)))) (not (= (op e1 (op e1 e1)) (op (op e1 e1) (op e1 e1))))) :rule or :premises (t402))
+(step t408 (cl (not (= (op e1 (op e1 e1)) (op (op e1 e1) (op e1 e1))))) :rule resolution :premises (t402' t404 t407))
+(step t.end (cl) :rule resolution :premises (nt408.0 t408))

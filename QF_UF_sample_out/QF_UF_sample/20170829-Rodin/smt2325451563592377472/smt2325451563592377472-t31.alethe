@@ -1,0 +1,3 @@
+(assume nt31.0 (not (= prt prt)))
+(step t31 (cl (= prt prt)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt31.0 t31))

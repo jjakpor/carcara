@@ -1,0 +1,5 @@
+(assume t19 (= (not (= flash nf0)) (not (= nf0 nf0))))
+(assume t20 (= (= nf nf0) (= nf0 nf0)))
+(assume nt21.0 (not (= (and (not (= flash nf0)) (= nf nf0)) (and (not (= nf0 nf0)) (= nf0 nf0)))))
+(step t21 (cl (= (and (not (= flash nf0)) (= nf nf0)) (and (not (= nf0 nf0)) (= nf0 nf0)))) :rule cong :premises (t19 t20))
+(step t.end (cl) :rule resolution :premises (nt21.0 t21))

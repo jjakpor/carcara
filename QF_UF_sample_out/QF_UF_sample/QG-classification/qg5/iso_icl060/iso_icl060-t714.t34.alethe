@@ -1,0 +1,4 @@
+(assume t714.t33 (and (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e0) (op e3 e2)))))
+(assume nt714.t34.0 (not (not (= (op e3 e0) (op e3 e1)))))
+(step t714.t34 (cl (not (= (op e3 e0) (op e3 e1)))) :rule and :premises (t714.t33))
+(step t.end (cl) :rule resolution :premises (nt714.t34.0 t714.t34))

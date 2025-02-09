@@ -1,0 +1,7 @@
+(assume t58 (or (not (= y$76 (= y$v_k_Belt y$v_k_Deposit))) (not y$76) (= y$v_k_Belt y$v_k_Deposit)))
+(assume t67 (= y$76 (= y$v_k_Belt y$v_k_Deposit)))
+(assume t68 y$76)
+(assume nt69.0 (not (= y$v_k_Belt y$v_k_Deposit)))
+(step t58' (cl (not (= y$76 (= y$v_k_Belt y$v_k_Deposit))) (not y$76) (= y$v_k_Belt y$v_k_Deposit)) :rule or :premises (t58))
+(step t69 (cl (= y$v_k_Belt y$v_k_Deposit)) :rule resolution :premises (t58' t67 t68))
+(step t.end (cl) :rule resolution :premises (nt69.0 t69))

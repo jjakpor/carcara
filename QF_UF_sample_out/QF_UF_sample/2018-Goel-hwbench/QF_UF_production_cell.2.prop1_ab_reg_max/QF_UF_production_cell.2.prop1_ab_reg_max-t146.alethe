@@ -1,0 +1,7 @@
+(assume t112 (or (not (= y$id44_op (= y$n5s8 y$v_k_Table))) (not y$id44_op) (= y$n5s8 y$v_k_Table)))
+(assume t129 (= y$id44_op (= y$n5s8 y$v_k_Table)))
+(assume t145 y$id44_op)
+(assume nt146.0 (not (= y$n5s8 y$v_k_Table)))
+(step t112' (cl (not (= y$id44_op (= y$n5s8 y$v_k_Table))) (not y$id44_op) (= y$n5s8 y$v_k_Table)) :rule or :premises (t112))
+(step t146 (cl (= y$n5s8 y$v_k_Table)) :rule resolution :premises (t112' t129 t145))
+(step t.end (cl) :rule resolution :premises (nt146.0 t146))

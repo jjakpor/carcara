@@ -1,0 +1,8 @@
+(assume t1040 (or (= (op e3 e4) (op (op e4 e3) (op e4 e3))) (= (op e3 e3) (op (op e4 e3) (op e4 e3))) (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3))) (= (op (op e4 e3) (op e4 e3)) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op (op e4 e3) (op e4 e3)) (op e3 (op e4 e3)))))
+(assume nt1041.0 (not (= (op e3 e4) (op (op e4 e3) (op e4 e3)))))
+(assume nt1041.1 (not (= (op e3 e3) (op (op e4 e3) (op e4 e3)))))
+(assume nt1041.2 (not (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3)))))
+(assume nt1041.3 (not (= (op (op e4 e3) (op e4 e3)) (op e3 (op (op e4 e3) (op e4 e3))))))
+(assume nt1041.4 (not (= (op (op e4 e3) (op e4 e3)) (op e3 (op e4 e3)))))
+(step t1041 (cl (= (op e3 e4) (op (op e4 e3) (op e4 e3))) (= (op e3 e3) (op (op e4 e3) (op e4 e3))) (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3))) (= (op (op e4 e3) (op e4 e3)) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op (op e4 e3) (op e4 e3)) (op e3 (op e4 e3)))) :rule or :premises (t1040))
+(step t.end (cl) :rule resolution :premises (nt1041.0 nt1041.1 nt1041.2 nt1041.3 nt1041.4 t1041))

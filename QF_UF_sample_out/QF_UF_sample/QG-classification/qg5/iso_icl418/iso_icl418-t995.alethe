@@ -1,0 +1,5 @@
+(assume t993 (= (op e4 (op e3 e4)) (op (op e4 e3) e4)))
+(assume t994 (= (op (op e3 e4) e4) (op (op e3 e4) e4)))
+(assume nt995.0 (not (= (= (op e4 (op e3 e4)) (op (op e3 e4) e4)) (= (op (op e4 e3) e4) (op (op e3 e4) e4)))))
+(step t995 (cl (= (= (op e4 (op e3 e4)) (op (op e3 e4) e4)) (= (op (op e4 e3) e4) (op (op e3 e4) e4)))) :rule cong :premises (t993 t994))
+(step t.end (cl) :rule resolution :premises (nt995.0 t995))

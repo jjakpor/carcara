@@ -1,0 +1,4 @@
+(assume t647 (= (= (op e3 (op e4 e3)) (op e3 e4)) (= (op e3 e4) (op e3 (op e4 e3)))))
+(assume nt648.0 (not (= (not (= (op e3 (op e4 e3)) (op e3 e4))) (not (= (op e3 e4) (op e3 (op e4 e3)))))))
+(step t648 (cl (= (not (= (op e3 (op e4 e3)) (op e3 e4))) (not (= (op e3 e4) (op e3 (op e4 e3)))))) :rule cong :premises (t647))
+(step t.end (cl) :rule resolution :premises (nt648.0 t648))

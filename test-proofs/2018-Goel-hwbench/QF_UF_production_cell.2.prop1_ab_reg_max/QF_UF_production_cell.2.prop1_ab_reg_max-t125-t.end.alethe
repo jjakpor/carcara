@@ -1,0 +1,3 @@
+(assume nt125.0 (not (= (= y$n5s8 y$v_done) (= y$n5s8 y$v_k_Table))))
+(assume t125 (= (= y$n5s8 y$v_done) (= y$n5s8 y$v_k_Table)))
+(step t.end (cl) :rule resolution :premises (nt125.0 t125))

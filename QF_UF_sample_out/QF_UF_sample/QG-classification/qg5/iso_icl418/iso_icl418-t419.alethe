@@ -1,0 +1,3 @@
+(assume nt419.0 (not (= (= (= e4 (op (op (op e4 e3) (op e4 e3)) e3)) false) (not (= e4 (op (op (op e4 e3) (op e4 e3)) e3))))))
+(step t419 (cl (= (= (= e4 (op (op (op e4 e3) (op e4 e3)) e3)) false) (not (= e4 (op (op (op e4 e3) (op e4 e3)) e3))))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nt419.0 t419))

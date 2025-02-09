@@ -1,0 +1,6 @@
+(assume t179 (or (not (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16)))) (= x15 x16)))
+(assume nt180.0 (not (= x15 x16)))
+(assume nt180.1 (not (not (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))))))
+(step t179' (cl (not (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16)))) (= x15 x16)) :rule or :premises (t179))
+(step t180 (cl (= x15 x16) (not (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))))) :rule reordering :premises (t179'))
+(step t.end (cl) :rule resolution :premises (nt180.0 nt180.1 t180))

@@ -1,0 +1,5 @@
+(assume t846 (= (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op e0 e0))) false) (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op e0 e0))))))
+(assume nt847.0 (not (not (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op e0 e0))) false))))
+(assume nt847.1 (not (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op e0 e0))))))
+(step t847 (cl (not (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op e0 e0))) false)) (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op e0 e0))))) :rule equiv1 :premises (t846))
+(step t.end (cl) :rule resolution :premises (nt847.0 nt847.1 t847))

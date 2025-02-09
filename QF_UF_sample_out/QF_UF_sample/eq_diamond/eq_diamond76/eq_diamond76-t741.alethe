@@ -1,0 +1,5 @@
+(assume nt741.0 (not (not (= (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (and (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (=> (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (= x66 x67)))))))
+(assume nt741.1 (not (not (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))))))
+(assume nt741.2 (not (and (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (=> (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (= x66 x67)))))
+(step t741 (cl (not (= (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (and (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (=> (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (= x66 x67))))) (not (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67)))) (and (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (=> (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (= x66 x67)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt741.0 nt741.1 nt741.2 t741))

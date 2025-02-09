@@ -1,0 +1,5 @@
+(assume t788 (= (= (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))) false) (not (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))))))
+(assume nt789.0 (not (not (= (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))) false))))
+(assume nt789.1 (not (not (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))))))
+(step t789 (cl (not (= (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))) false)) (not (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))))) :rule equiv1 :premises (t788))
+(step t.end (cl) :rule resolution :premises (nt789.0 nt789.1 t789))

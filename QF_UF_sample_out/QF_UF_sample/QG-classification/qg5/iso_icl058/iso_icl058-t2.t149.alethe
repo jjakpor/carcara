@@ -1,0 +1,7 @@
+(assume t2.t137 (or (not (= (not (= e1 e2)) (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))) (not (not (= e1 e2))) (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
+(assume t2.t142 (= (not (= e1 e2)) (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
+(assume t2.t148 (not (= e1 e2)))
+(assume nt2.t149.0 (not (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
+(step t2.t137' (cl (not (= (not (= e1 e2)) (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))) (not (not (= e1 e2))) (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))) :rule or :premises (t2.t137))
+(step t2.t149 (cl (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))) :rule resolution :premises (t2.t137' t2.t142 t2.t148))
+(step t.end (cl) :rule resolution :premises (nt2.t149.0 t2.t149))

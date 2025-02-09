@@ -1,0 +1,4 @@
+(assume t101 (and (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9))))
+(assume nt102.0 (not (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9))))
+(step t102 (cl (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9))) :rule and :premises (t101))
+(step t.end (cl) :rule resolution :premises (nt102.0 t102))

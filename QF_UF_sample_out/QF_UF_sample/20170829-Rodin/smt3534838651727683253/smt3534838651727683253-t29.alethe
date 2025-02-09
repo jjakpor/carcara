@@ -1,0 +1,5 @@
+(assume t21 (= (and (not (= flash nf0)) (= nf nf0)) (and (not (= nf0 nf0)) (= nf0 nf0))))
+(assume t28 (= (and (not (= nf0 nf0)) (= nf0 nf0)) false))
+(assume nt29.0 (not (= (and (not (= flash nf0)) (= nf nf0)) false)))
+(step t29 (cl (= (and (not (= flash nf0)) (= nf nf0)) false)) :rule trans :premises (t21 t28))
+(step t.end (cl) :rule resolution :premises (nt29.0 t29))

@@ -1,0 +1,7 @@
+(assume t778 (or (not (= (= (op e1 e2) (op e2 e1)) (= (op (op (op e0 (op e0 e0)) e0) (op e0 (op e0 e0))) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0))))) (not (= (op e1 e2) (op e2 e1))) (= (op (op (op e0 (op e0 e0)) e0) (op e0 (op e0 e0))) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)))))
+(assume t781 (= (= (op e1 e2) (op e2 e1)) (= (op (op (op e0 (op e0 e0)) e0) (op e0 (op e0 e0))) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)))))
+(assume t786 (= (op e1 e2) (op e2 e1)))
+(assume nt787.0 (not (= (op (op (op e0 (op e0 e0)) e0) (op e0 (op e0 e0))) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)))))
+(step t778' (cl (not (= (= (op e1 e2) (op e2 e1)) (= (op (op (op e0 (op e0 e0)) e0) (op e0 (op e0 e0))) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0))))) (not (= (op e1 e2) (op e2 e1))) (= (op (op (op e0 (op e0 e0)) e0) (op e0 (op e0 e0))) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)))) :rule or :premises (t778))
+(step t787 (cl (= (op (op (op e0 (op e0 e0)) e0) (op e0 (op e0 e0))) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)))) :rule resolution :premises (t778' t781 t786))
+(step t.end (cl) :rule resolution :premises (nt787.0 t787))

@@ -1,0 +1,7 @@
+(assume t986.t2 (or (not (= (= (op e3 (op e3 e2)) e2) (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))) (not (= (op e3 (op e3 e2)) e2)) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))))
+(assume t986.t6 (= (= (op e3 (op e3 e2)) e2) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))))
+(assume t986.t9 (= (op e3 (op e3 e2)) e2))
+(assume nt986.t10.0 (not (= (op e1 e3) (op e3 (op e3 (op e1 e3))))))
+(step t986.t2' (cl (not (= (= (op e3 (op e3 e2)) e2) (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))) (not (= (op e3 (op e3 e2)) e2)) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) :rule or :premises (t986.t2))
+(step t986.t10 (cl (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) :rule resolution :premises (t986.t2' t986.t6 t986.t9))
+(step t.end (cl) :rule resolution :premises (nt986.t10.0 t986.t10))

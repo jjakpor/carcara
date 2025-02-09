@@ -1,0 +1,6 @@
+(assume t60 (or (not (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) (not (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) (not (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) (not (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) false))
+(assume nt61.0 (not (not (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1))))))
+(assume nt61.1 (not false))
+(step t60' (cl (not (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) (not (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) (not (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) (not (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) false) :rule or :premises (t60))
+(step t61 (cl (not (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) false) :rule contraction :premises (t60'))
+(step t.end (cl) :rule resolution :premises (nt61.0 nt61.1 t61))

@@ -1,0 +1,4 @@
+(assume t178.t11 (= (f6 c_0) c_0))
+(assume nt178.t12.0 (not (= c_0 (f6 c_0))))
+(step t178.t12 (cl (= c_0 (f6 c_0))) :rule symm :premises (t178.t11))
+(step t.end (cl) :rule resolution :premises (nt178.t12.0 t178.t12))

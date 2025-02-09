@@ -1,0 +1,4 @@
+(assume a612 (= y$v3_1517448506_500_op (not y$974)))
+(assume nt20.0 (not (= (not y$974) y$v3_1517448506_500_op)))
+(step t20 (cl (= (not y$974) y$v3_1517448506_500_op)) :rule symm :premises (a612))
+(step t.end (cl) :rule resolution :premises (nt20.0 t20))

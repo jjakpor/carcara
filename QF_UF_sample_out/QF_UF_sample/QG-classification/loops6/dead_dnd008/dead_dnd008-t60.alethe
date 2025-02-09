@@ -1,0 +1,3 @@
+(assume nt60.0 (not (= (= e0 (op e2 (op e2 e0))) (= e0 (op e2 (op e2 e0))))))
+(step t60 (cl (= (= e0 (op e2 (op e2 e0))) (= e0 (op e2 (op e2 e0))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt60.0 t60))

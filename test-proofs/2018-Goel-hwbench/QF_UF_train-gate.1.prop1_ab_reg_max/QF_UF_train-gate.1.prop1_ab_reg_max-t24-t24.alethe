@@ -1,0 +1,6 @@
+(assume t22' (or (not y$a_Cross_Train_1) (not y$5)))
+(assume t23 y$5)
+(assume nt24.0 (not (not y$a_Cross_Train_1)))
+(step t22'' (cl (not y$a_Cross_Train_1) (not y$5)) :rule or :premises (t22'))
+(step t24 (cl (not y$a_Cross_Train_1)) :rule resolution :premises (t22'' t23))
+(step t.end (cl) :rule resolution :premises (nt24.0 t24))

@@ -1,0 +1,3 @@
+(assume nt217.0 (not (= (= (f5 c_0) c_0) (= c_0 (f5 c_0)))))
+(step t217 (cl (= (= (f5 c_0) c_0) (= c_0 (f5 c_0)))) :rule rare_rewrite)
+(step t.end (cl) :rule resolution :premises (nt217.0 t217))

@@ -1,0 +1,8 @@
+(assume t521 (= (= e1 (op e4 e4)) (= (op e4 e3) (op e4 e4))))
+(assume t522 (= (= e1 (op e3 e4)) (= (op e4 e3) (op e3 e4))))
+(assume t59 (= (= e1 (op e2 e4)) (= (op e4 e3) (op (op e3 e4) e4))))
+(assume t447 (= (= e1 (op e0 e4)) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4))))
+(assume t523 (= (= e1 (op e1 e4)) (= (op e4 e3) (op (op e4 e3) e4))))
+(assume nt524.0 (not (= (or (= e1 (op e4 e4)) (= e1 (op e3 e4)) (= e1 (op e2 e4)) (= e1 (op e0 e4)) (= e1 (op e1 e4))) (or (= (op e4 e3) (op e4 e4)) (= (op e4 e3) (op e3 e4)) (= (op e4 e3) (op (op e3 e4) e4)) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4)) (= (op e4 e3) (op (op e4 e3) e4))))))
+(step t524 (cl (= (or (= e1 (op e4 e4)) (= e1 (op e3 e4)) (= e1 (op e2 e4)) (= e1 (op e0 e4)) (= e1 (op e1 e4))) (or (= (op e4 e3) (op e4 e4)) (= (op e4 e3) (op e3 e4)) (= (op e4 e3) (op (op e3 e4) e4)) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4)) (= (op e4 e3) (op (op e4 e3) e4))))) :rule cong :premises (t521 t522 t59 t447 t523))
+(step t.end (cl) :rule resolution :premises (nt524.0 t524))

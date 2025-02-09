@@ -1,0 +1,7 @@
+(assume t258 (or (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))))
+(assume nt259.0 (not (p1 (f7 c_0) c_0)))
+(assume nt259.1 (not (not (= c_1 (f7 c_0)))))
+(assume nt259.2 (not (not (= c_1 (f6 c_0)))))
+(assume nt259.3 (not (not (p1 (f6 c_0) c_0))))
+(step t259 (cl (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))) :rule or :premises (t258))
+(step t.end (cl) :rule resolution :premises (nt259.0 nt259.1 nt259.2 nt259.3 t259))

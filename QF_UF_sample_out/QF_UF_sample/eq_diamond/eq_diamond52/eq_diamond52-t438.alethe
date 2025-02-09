@@ -1,0 +1,6 @@
+(assume t437 (or (= x38 x39) (not (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))))))
+(assume t433 (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))))
+(assume nt438.0 (not (= x38 x39)))
+(step t437' (cl (= x38 x39) (not (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))))) :rule or :premises (t437))
+(step t438 (cl (= x38 x39)) :rule resolution :premises (t437' t433))
+(step t.end (cl) :rule resolution :premises (nt438.0 t438))

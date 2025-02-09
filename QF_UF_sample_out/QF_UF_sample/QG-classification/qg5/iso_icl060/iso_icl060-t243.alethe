@@ -1,0 +1,4 @@
+(assume t242 (= (= (op (op (op e1 e3) e1) e3) (op e1 e3)) (= (op e1 e3) (op (op (op e1 e3) e1) e3))))
+(assume nt243.0 (not (= (not (= (op (op (op e1 e3) e1) e3) (op e1 e3))) (not (= (op e1 e3) (op (op (op e1 e3) e1) e3))))))
+(step t243 (cl (= (not (= (op (op (op e1 e3) e1) e3) (op e1 e3))) (not (= (op e1 e3) (op (op (op e1 e3) e1) e3))))) :rule cong :premises (t242))
+(step t.end (cl) :rule resolution :premises (nt243.0 t243))

@@ -1,0 +1,8 @@
+(assume t725 (or (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false) (not (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))))
+(assume t726 (or (not (not (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))
+(assume nt727.0 (not (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false)))
+(assume nt727.1 (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))
+(step t726' (cl (not (not (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) :rule or :premises (t726))
+(step t725' (cl (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false) (not (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))) :rule or :premises (t725))
+(step t727 (cl (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) :rule resolution :premises (t725' t726'))
+(step t.end (cl) :rule resolution :premises (nt727.0 nt727.1 t727))

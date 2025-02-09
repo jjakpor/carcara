@@ -1,0 +1,7 @@
+(assume t230 (or (not (= e0 (op e4 (op e4 e0)))) (= e4 (op e4 (op e4 e4))) (not (= e4 (op e4 e0)))))
+(assume t250 (not (= e4 (op e4 (op e4 e4)))))
+(assume t258 (= e4 (op e4 e0)))
+(assume nt259.0 (not (not (= e0 (op e4 (op e4 e0))))))
+(step t230' (cl (not (= e0 (op e4 (op e4 e0)))) (= e4 (op e4 (op e4 e4))) (not (= e4 (op e4 e0)))) :rule or :premises (t230))
+(step t259 (cl (not (= e0 (op e4 (op e4 e0))))) :rule resolution :premises (t230' t250 t258))
+(step t.end (cl) :rule resolution :premises (nt259.0 t259))

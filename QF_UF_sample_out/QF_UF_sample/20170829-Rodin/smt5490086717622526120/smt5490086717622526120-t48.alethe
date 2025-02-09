@@ -1,0 +1,5 @@
+(assume t47 (or (not red_SR) prt))
+(assume nt48.0 (not (not red_SR)))
+(assume nt48.1 (not prt))
+(step t48 (cl (not red_SR) prt) :rule or :premises (t47))
+(step t.end (cl) :rule resolution :premises (nt48.0 nt48.1 t48))

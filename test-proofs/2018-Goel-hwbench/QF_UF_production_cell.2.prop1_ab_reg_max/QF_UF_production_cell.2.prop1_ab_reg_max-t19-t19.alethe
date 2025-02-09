@@ -1,0 +1,7 @@
+(assume t13' (or (not (= y$66 (= y$v_B y$v_at_press))) (not y$66) (= y$v_B y$v_at_press)))
+(assume t17 (= y$66 (= y$v_B y$v_at_press)))
+(assume t18 y$66)
+(assume nt19.0 (not (= y$v_B y$v_at_press)))
+(step t13'' (cl (not (= y$66 (= y$v_B y$v_at_press))) (not y$66) (= y$v_B y$v_at_press)) :rule or :premises (t13'))
+(step t19 (cl (= y$v_B y$v_at_press)) :rule resolution :premises (t13'' t17 t18))
+(step t.end (cl) :rule resolution :premises (nt19.0 t19))

@@ -1,0 +1,3 @@
+(assume nt2.0 (not (= (not y$1406) y$id37_op)))
+(assume t2 (= (not y$1406) y$id37_op))
+(step t.end (cl) :rule resolution :premises (nt2.0 t2))

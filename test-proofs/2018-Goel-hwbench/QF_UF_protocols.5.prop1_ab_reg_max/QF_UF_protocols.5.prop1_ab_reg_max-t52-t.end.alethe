@@ -1,0 +1,3 @@
+(assume nt52.0 (not (= y$1092 y$prop$next)))
+(assume t52 (= y$1092 y$prop$next))
+(step t.end (cl) :rule resolution :premises (nt52.0 t52))

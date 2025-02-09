@@ -1,0 +1,3 @@
+(assume nt166.0 (not (not y$a_consume0$next)))
+(assume t166 (not y$a_consume0$next))
+(step t.end (cl) :rule resolution :premises (nt166.0 t166))

@@ -1,0 +1,5 @@
+(assume t14 (= e3 e3))
+(assume t19 (= (op e4 e4) (op (op (op e1 e3) e3) (op (op e1 e3) e3))))
+(assume nt344.0 (not (= (= e3 (op e4 e4)) (= e3 (op (op (op e1 e3) e3) (op (op e1 e3) e3))))))
+(step t344 (cl (= (= e3 (op e4 e4)) (= e3 (op (op (op e1 e3) e3) (op (op e1 e3) e3))))) :rule cong :premises (t14 t19))
+(step t.end (cl) :rule resolution :premises (nt344.0 t344))

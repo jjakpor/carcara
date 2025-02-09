@@ -1,0 +1,5 @@
+(assume t12 (= y$v_A y$v_B))
+(assume t50 (= y$v_B y$v_done))
+(assume nt51.0 (not (= y$v_A y$v_done)))
+(step t51 (cl (= y$v_A y$v_done)) :rule trans :premises (t12 t50))
+(step t.end (cl) :rule resolution :premises (nt51.0 t51))

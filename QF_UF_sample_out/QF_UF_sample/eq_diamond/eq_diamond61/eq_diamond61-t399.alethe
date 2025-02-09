@@ -1,0 +1,6 @@
+(assume t398 (or (= x35 x36) (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))))
+(assume t394 (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))
+(assume nt399.0 (not (= x35 x36)))
+(step t398' (cl (= x35 x36) (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))) :rule or :premises (t398))
+(step t399 (cl (= x35 x36)) :rule resolution :premises (t398' t394))
+(step t.end (cl) :rule resolution :premises (nt399.0 t399))

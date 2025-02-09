@@ -1,0 +1,4 @@
+(assume nt284.0 (not (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0)))))
+(assume nt284.1 (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))))
+(step t284 (cl (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) :rule implies_neg1)
+(step t.end (cl) :rule resolution :premises (nt284.0 nt284.1 t284))

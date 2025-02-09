@@ -1,0 +1,5 @@
+(assume t851 (= (or (or (or (or (= (op e0 e2) e0) (= (op e1 e2) e0)) (= (op e2 e2) e0)) (= (op e3 e2) e0)) (= (op e4 e2) e0)) (or (= (op e4 e2) e0) (= (op e3 e2) e0) (= (op e2 e2) e0) (= (op e0 e2) e0) (= (op e1 e2) e0))))
+(assume t855 (= (or (= (op e4 e2) e0) (= (op e3 e2) e0) (= (op e2 e2) e0) (= (op e0 e2) e0) (= (op e1 e2) e0)) (or (= e0 (op e4 e2)) (= e0 (op e3 e2)) (= e0 (op e2 e2)) (= e0 (op e0 e2)) (= e0 (op e1 e2)))))
+(assume nt856.0 (not (= (or (or (or (or (= (op e0 e2) e0) (= (op e1 e2) e0)) (= (op e2 e2) e0)) (= (op e3 e2) e0)) (= (op e4 e2) e0)) (or (= e0 (op e4 e2)) (= e0 (op e3 e2)) (= e0 (op e2 e2)) (= e0 (op e0 e2)) (= e0 (op e1 e2))))))
+(step t856 (cl (= (or (or (or (or (= (op e0 e2) e0) (= (op e1 e2) e0)) (= (op e2 e2) e0)) (= (op e3 e2) e0)) (= (op e4 e2) e0)) (or (= e0 (op e4 e2)) (= e0 (op e3 e2)) (= e0 (op e2 e2)) (= e0 (op e0 e2)) (= e0 (op e1 e2))))) :rule trans :premises (t851 t855))
+(step t.end (cl) :rule resolution :premises (nt856.0 t856))

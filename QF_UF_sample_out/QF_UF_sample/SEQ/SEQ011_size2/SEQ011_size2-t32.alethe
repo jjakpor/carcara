@@ -1,0 +1,4 @@
+(assume nt32.0 (not (or (not (p1 (f5 c_1) c_1)) (not (= c_1 (f5 c_1))) (not (= c_1 (f7 c_1))) (not (not (p1 (f7 c_1) c_1))))))
+(assume nt32.1 (not (not (not (p1 (f5 c_1) c_1)))))
+(step t32 (cl (or (not (p1 (f5 c_1) c_1)) (not (= c_1 (f5 c_1))) (not (= c_1 (f7 c_1))) (not (not (p1 (f7 c_1) c_1)))) (not (not (p1 (f5 c_1) c_1)))) :rule or_neg)
+(step t.end (cl) :rule resolution :premises (nt32.0 nt32.1 t32))

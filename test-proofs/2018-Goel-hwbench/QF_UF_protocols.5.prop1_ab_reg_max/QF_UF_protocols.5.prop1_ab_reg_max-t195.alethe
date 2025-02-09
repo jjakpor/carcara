@@ -1,0 +1,7 @@
+(assume t0 (or (and y$1085 y$1086) (not y$1085) (not y$1086)))
+(assume t168 y$1085)
+(assume t194 y$1086)
+(assume nt195.0 (not (and y$1085 y$1086)))
+(step t0' (cl (and y$1085 y$1086) (not y$1085) (not y$1086)) :rule or :premises (t0))
+(step t195 (cl (and y$1085 y$1086)) :rule resolution :premises (t0' t168 t194))
+(step t.end (cl) :rule resolution :premises (nt195.0 t195))

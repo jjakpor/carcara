@@ -1,0 +1,6 @@
+(assume t153.t15 (or (= (p1 (f7 c_0) c_0) false) (p1 (f7 c_0) c_0)))
+(assume t153.a0 (not (p1 (f7 c_0) c_0)))
+(assume nt153.t16.0 (not (= (p1 (f7 c_0) c_0) false)))
+(step t153.t15' (cl (= (p1 (f7 c_0) c_0) false) (p1 (f7 c_0) c_0)) :rule or :premises (t153.t15))
+(step t153.t16 (cl (= (p1 (f7 c_0) c_0) false)) :rule resolution :premises (t153.t15' t153.a0))
+(step t.end (cl) :rule resolution :premises (nt153.t16.0 t153.t16))

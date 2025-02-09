@@ -1,0 +1,6 @@
+(assume nt96.0 (not (not (= (and y$287 y$288) y$v3_1517448506_161_op))))
+(assume nt96.1 (not (not (and y$287 y$288))))
+(assume nt96.2 (not y$v3_1517448506_161_op))
+(assume t96 (or (not (= (and y$287 y$288) y$v3_1517448506_161_op)) (not (and y$287 y$288)) y$v3_1517448506_161_op))
+(step t96' (cl (not (= (and y$287 y$288) y$v3_1517448506_161_op)) (not (and y$287 y$288)) y$v3_1517448506_161_op) :rule or :premises (t96))
+(step t.end (cl) :rule resolution :premises (nt96.0 nt96.1 nt96.2 t96'))

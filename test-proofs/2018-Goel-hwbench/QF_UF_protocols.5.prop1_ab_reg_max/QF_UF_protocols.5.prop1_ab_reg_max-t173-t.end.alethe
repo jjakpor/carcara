@@ -1,0 +1,3 @@
+(assume nt173.0 (not (= y$a_consume1$next y$a_consume1$next_rhs_op)))
+(assume t173 (= y$a_consume1$next y$a_consume1$next_rhs_op))
+(step t.end (cl) :rule resolution :premises (nt173.0 t173))

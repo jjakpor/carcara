@@ -1,0 +1,4 @@
+(assume nt99.0 (not (not (not (not y$287)))))
+(assume nt99.1 (not y$287))
+(step t99 (cl (not (not (not y$287))) y$287) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nt99.0 nt99.1 t99))

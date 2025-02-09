@@ -1,0 +1,6 @@
+(assume t16.t3 (or (= (p1 (f5 c_1) c_1) true) (not (p1 (f5 c_1) c_1))))
+(assume t16.a3 (p1 (f5 c_1) c_1))
+(assume nt16.t4.0 (not (= (p1 (f5 c_1) c_1) true)))
+(step t16.t3' (cl (= (p1 (f5 c_1) c_1) true) (not (p1 (f5 c_1) c_1))) :rule or :premises (t16.t3))
+(step t16.t4 (cl (= (p1 (f5 c_1) c_1) true)) :rule resolution :premises (t16.t3' t16.a3))
+(step t.end (cl) :rule resolution :premises (nt16.t4.0 t16.t4))

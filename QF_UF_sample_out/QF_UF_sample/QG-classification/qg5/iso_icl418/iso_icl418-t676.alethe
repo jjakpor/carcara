@@ -1,0 +1,3 @@
+(assume nt676.0 (not (= (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3)))))))
+(step t676 (cl (= (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3)))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt676.0 t676))

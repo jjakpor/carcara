@@ -1,0 +1,6 @@
+(assume t170 (or y$a_consume1$next (not (not y$1086))))
+(assume t192 (not y$a_consume1$next))
+(assume nt193.0 (not (not (not y$1086))))
+(step t170' (cl y$a_consume1$next (not (not y$1086))) :rule or :premises (t170))
+(step t193 (cl (not (not y$1086))) :rule resolution :premises (t170' t192))
+(step t.end (cl) :rule resolution :premises (nt193.0 t193))

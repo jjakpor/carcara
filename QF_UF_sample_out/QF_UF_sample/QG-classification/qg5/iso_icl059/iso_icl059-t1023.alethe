@@ -1,0 +1,4 @@
+(assume t1022 (= (= (op e1 e1) (op e3 e1)) (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)))))
+(assume nt1023.0 (not (= (not (= (op e1 e1) (op e3 e1))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)))))))
+(step t1023 (cl (= (not (= (op e1 e1) (op e3 e1))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)))))) :rule cong :premises (t1022))
+(step t.end (cl) :rule resolution :premises (nt1023.0 t1023))

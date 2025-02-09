@@ -1,0 +1,8 @@
+(assume t2.t20 (= (= e4 (op e4 e0)) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))
+(assume t2.t24 (= (= e3 (op e3 e0)) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))
+(assume t2.t25 (= (= e2 (op e2 e0)) (= (op e0 e0) (op (op e0 e0) e0))))
+(assume t2.t26 (= (= e0 (op e0 e0)) (= e0 (op e0 e0))))
+(assume t2.t31 (= (= e1 (op e1 e0)) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0))))
+(assume nt2.t32.0 (not (= (or (= e4 (op e4 e0)) (= e3 (op e3 e0)) (= e2 (op e2 e0)) (= e0 (op e0 e0)) (= e1 (op e1 e0))) (or (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0)) (= (op e0 e0) (op (op e0 e0) e0)) (= e0 (op e0 e0)) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0))))))
+(step t2.t32 (cl (= (or (= e4 (op e4 e0)) (= e3 (op e3 e0)) (= e2 (op e2 e0)) (= e0 (op e0 e0)) (= e1 (op e1 e0))) (or (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0)) (= (op e0 e0) (op (op e0 e0) e0)) (= e0 (op e0 e0)) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0))))) :rule cong :premises (t2.t20 t2.t24 t2.t25 t2.t26 t2.t31))
+(step t.end (cl) :rule resolution :premises (nt2.t32.0 t2.t32))

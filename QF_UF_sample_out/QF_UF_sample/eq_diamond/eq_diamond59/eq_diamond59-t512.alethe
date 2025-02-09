@@ -1,0 +1,6 @@
+(assume t511 (or (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28)))) (= x27 x28)))
+(assume nt512.0 (not (= x27 x28)))
+(assume nt512.1 (not (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))))
+(step t511' (cl (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28)))) (= x27 x28)) :rule or :premises (t511))
+(step t512 (cl (= x27 x28) (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))) :rule reordering :premises (t511'))
+(step t.end (cl) :rule resolution :premises (nt512.0 nt512.1 t512))

@@ -1,0 +1,5 @@
+(assume t14 (= e3 e3))
+(assume t820.t1 (= e1 (op e3 (op (op e1 e3) e3))))
+(assume nt820.t2.0 (not (= (op e3 e1) (op e3 (op e3 (op (op e1 e3) e3))))))
+(step t820.t2 (cl (= (op e3 e1) (op e3 (op e3 (op (op e1 e3) e3))))) :rule cong :premises (t14 t820.t1))
+(step t.end (cl) :rule resolution :premises (nt820.t2.0 t820.t2))

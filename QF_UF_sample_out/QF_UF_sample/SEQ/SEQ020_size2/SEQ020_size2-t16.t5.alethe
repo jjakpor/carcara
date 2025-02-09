@@ -1,0 +1,4 @@
+(assume t16.t4 (= (p1 (f5 c_1) c_1) true))
+(assume nt16.t5.0 (not (= true (p1 (f5 c_1) c_1))))
+(step t16.t5 (cl (= true (p1 (f5 c_1) c_1))) :rule symm :premises (t16.t4))
+(step t.end (cl) :rule resolution :premises (nt16.t5.0 t16.t5))

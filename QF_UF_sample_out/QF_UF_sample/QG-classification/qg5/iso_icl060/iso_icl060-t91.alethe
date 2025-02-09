@@ -1,0 +1,5 @@
+(assume t89 (= (op e2 e0) (op (op e1 e3) (op (op e1 e3) e1))))
+(assume t90 (= (op e3 e0) (op e3 (op (op e1 e3) e1))))
+(assume nt91.0 (not (= (= (op e2 e0) (op e3 e0)) (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))))
+(step t91 (cl (= (= (op e2 e0) (op e3 e0)) (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))) :rule cong :premises (t89 t90))
+(step t.end (cl) :rule resolution :premises (nt91.0 t91))

@@ -1,0 +1,8 @@
+(assume t234 (or (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0)) (= (op e0 e0) (op (op e0 e0) e0)) (= e0 (op e0 e0)) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0))))
+(assume nt235.0 (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))
+(assume nt235.1 (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))
+(assume nt235.2 (not (= (op e0 e0) (op (op e0 e0) e0))))
+(assume nt235.3 (not (= e0 (op e0 e0))))
+(assume nt235.4 (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0))))
+(step t235 (cl (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0)) (= (op e0 e0) (op (op e0 e0) e0)) (= e0 (op e0 e0)) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0))) :rule or :premises (t234))
+(step t.end (cl) :rule resolution :premises (nt235.0 nt235.1 nt235.2 nt235.3 nt235.4 t235))

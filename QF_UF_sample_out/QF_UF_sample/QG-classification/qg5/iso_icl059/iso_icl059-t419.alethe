@@ -1,0 +1,8 @@
+(assume t415 (= (= (op e4 e2) e4) (= e4 (op e4 e2))))
+(assume t9 (= (= (op e3 e2) e4) (= e4 (op e3 e2))))
+(assume t416 (= (= (op e2 e2) e4) (= e4 (op e2 e2))))
+(assume t417 (= (= (op e0 e2) e4) (= e4 (op e0 e2))))
+(assume t418 (= (= (op e1 e2) e4) (= e4 (op e1 e2))))
+(assume nt419.0 (not (= (or (= (op e4 e2) e4) (= (op e3 e2) e4) (= (op e2 e2) e4) (= (op e0 e2) e4) (= (op e1 e2) e4)) (or (= e4 (op e4 e2)) (= e4 (op e3 e2)) (= e4 (op e2 e2)) (= e4 (op e0 e2)) (= e4 (op e1 e2))))))
+(step t419 (cl (= (or (= (op e4 e2) e4) (= (op e3 e2) e4) (= (op e2 e2) e4) (= (op e0 e2) e4) (= (op e1 e2) e4)) (or (= e4 (op e4 e2)) (= e4 (op e3 e2)) (= e4 (op e2 e2)) (= e4 (op e0 e2)) (= e4 (op e1 e2))))) :rule cong :premises (t415 t9 t416 t417 t418))
+(step t.end (cl) :rule resolution :premises (nt419.0 t419))

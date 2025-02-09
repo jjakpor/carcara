@@ -1,0 +1,57 @@
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t0 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t1 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t2 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t3 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t4 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t5 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t6 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t7 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t8 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t9 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t10 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t11 valid
+valid:       12
+holey:        0
+invalid:        0
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t11.alethe t11 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t5.alethe t5 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t5.alethe t.end valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t9.alethe t7' invalid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t9.alethe t9 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t9.alethe t.end valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t7.alethe t7 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t7.alethe t.end valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t3.alethe t3 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t3.alethe t.end valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t1.alethe t1 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t1.alethe t.end valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t4.alethe t0' invalid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t4.alethe t4 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t4.alethe t.end valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t8.alethe t8 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t8.alethe t.end valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t10.alethe t5' invalid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t10.alethe t10 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t10.alethe t.end valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t6.alethe t6 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t6.alethe t.end valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t2.alethe t1' invalid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t2.alethe t2 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t2.alethe t.end valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t0 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t1 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t2 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t3 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t4 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t5 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t6 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t7 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t8 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t9 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t10 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max.alethe t11 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t0.alethe t0 valid
+test-proofs/2018-Goel-hwbench/QF_UF_sw_sym_ex_ab_reg_max/QF_UF_sw_sym_ex_ab_reg_max-t0.alethe t.end valid
+valid:       48
+holey:        1
+invalid:        5

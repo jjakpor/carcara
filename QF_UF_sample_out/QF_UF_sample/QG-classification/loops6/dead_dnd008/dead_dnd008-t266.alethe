@@ -1,0 +1,5 @@
+(assume nt266.0 (not (not (= e5 (op e5 e0)))))
+(assume nt266.1 (not (not (= e0 (op e5 (op e5 e0))))))
+(assume nt266.2 (not (= e5 (op e5 (op e5 e5)))))
+(step t266 (cl (not (= e5 (op e5 e0))) (not (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5)))) :rule subproof)
+(step t.end (cl) :rule resolution :premises (nt266.0 nt266.1 nt266.2 t266))

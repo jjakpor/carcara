@@ -1,0 +1,4 @@
+(assume t111.t2 (= c_0 c8))
+(assume nt111.t3.0 (not (= (p4 c_0) (p4 c8))))
+(step t111.t3 (cl (= (p4 c_0) (p4 c8))) :rule cong :premises (t111.t2))
+(step t.end (cl) :rule resolution :premises (nt111.t3.0 t111.t3))

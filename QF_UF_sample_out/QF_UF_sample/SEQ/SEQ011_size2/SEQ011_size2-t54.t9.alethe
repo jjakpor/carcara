@@ -1,0 +1,3 @@
+(assume nt54.t9.0 (not (= c_1 c_1)))
+(step t54.t9 (cl (= c_1 c_1)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt54.t9.0 t54.t9))

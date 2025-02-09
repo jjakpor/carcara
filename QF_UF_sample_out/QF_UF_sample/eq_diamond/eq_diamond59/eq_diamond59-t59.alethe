@@ -1,0 +1,3 @@
+(assume nt59.0 (not (= (not (= x32 x33)) (not (= x32 x33)))))
+(step t59 (cl (= (not (= x32 x33)) (not (= x32 x33)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt59.0 t59))

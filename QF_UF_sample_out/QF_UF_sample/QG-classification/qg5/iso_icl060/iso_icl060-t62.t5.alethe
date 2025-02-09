@@ -1,0 +1,5 @@
+(assume t9 (= e1 e1))
+(assume t62.t4 (= (op e2 (op e2 e1)) (op (op e1 e3) (op (op e1 e3) e1))))
+(assume nt62.t5.0 (not (= (= e1 (op e2 (op e2 e1))) (= e1 (op (op e1 e3) (op (op e1 e3) e1))))))
+(step t62.t5 (cl (= (= e1 (op e2 (op e2 e1))) (= e1 (op (op e1 e3) (op (op e1 e3) e1))))) :rule cong :premises (t9 t62.t4))
+(step t.end (cl) :rule resolution :premises (nt62.t5.0 t62.t5))

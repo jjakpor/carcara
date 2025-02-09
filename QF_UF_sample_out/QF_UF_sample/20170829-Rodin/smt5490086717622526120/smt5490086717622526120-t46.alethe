@@ -1,0 +1,5 @@
+(assume t45 (or (or (not red_SR) (not (not prt))) (or (not red_SR) (not (not prt)))))
+(assume nt46.0 (not (or (not red_SR) (not (not prt)))))
+(step t45' (cl (or (not red_SR) (not (not prt))) (or (not red_SR) (not (not prt)))) :rule or :premises (t45))
+(step t46 (cl (or (not red_SR) (not (not prt)))) :rule contraction :premises (t45'))
+(step t.end (cl) :rule resolution :premises (nt46.0 t46))

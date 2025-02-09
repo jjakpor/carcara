@@ -1,0 +1,3 @@
+(assume nt84.t634.0 (not (= (= (= x0 x58) false) (not (= x0 x58)))))
+(step t84.t634 (cl (= (= (= x0 x58) false) (not (= x0 x58)))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nt84.t634.0 t84.t634))

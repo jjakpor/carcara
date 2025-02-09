@@ -1,0 +1,4 @@
+(assume t347 (and (and (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2)) (= (op (op e1 e3) e1) e3)) (= (op (op e1 e4) e1) e4)))
+(assume nt348.0 (not (and (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2)) (= (op (op e1 e3) e1) e3))))
+(step t348 (cl (and (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2)) (= (op (op e1 e3) e1) e3))) :rule and :premises (t347))
+(step t.end (cl) :rule resolution :premises (nt348.0 t348))

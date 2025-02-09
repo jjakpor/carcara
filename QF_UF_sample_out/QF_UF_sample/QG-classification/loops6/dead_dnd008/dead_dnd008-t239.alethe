@@ -1,0 +1,5 @@
+(assume a8 (= unit e0))
+(assume t238 (= e4 e4))
+(assume nt239.0 (not (= (= unit e4) (= e0 e4))))
+(step t239 (cl (= (= unit e4) (= e0 e4))) :rule cong :premises (a8 t238))
+(step t.end (cl) :rule resolution :premises (nt239.0 t239))

@@ -1,0 +1,5 @@
+(assume t87 (or (or (not (not prt)) (not (or (not car) (not clk)))) (or (not (not prt)) (not (or (not car) (not clk))))))
+(assume nt88.0 (not (or (not (not prt)) (not (or (not car) (not clk))))))
+(step t87' (cl (or (not (not prt)) (not (or (not car) (not clk)))) (or (not (not prt)) (not (or (not car) (not clk))))) :rule or :premises (t87))
+(step t88 (cl (or (not (not prt)) (not (or (not car) (not clk))))) :rule contraction :premises (t87'))
+(step t.end (cl) :rule resolution :premises (nt88.0 t88))

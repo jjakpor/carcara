@@ -1,0 +1,5 @@
+(assume t53 (= e3 (op (op (op e0 (op e0 e0)) e0) e0)))
+(assume t56 (= (op e4 e2) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))))
+(assume nt948.0 (not (= (= e3 (op e4 e2)) (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))))))
+(step t948 (cl (= (= e3 (op e4 e2)) (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))))) :rule cong :premises (t53 t56))
+(step t.end (cl) :rule resolution :premises (nt948.0 t948))

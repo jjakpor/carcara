@@ -1,0 +1,8 @@
+(assume t893 (or (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))) (= (op e1 e3) (op e3 (op (op e1 e3) e3))) (= (op e1 e3) (op (op e1 e3) (op (op e1 e3) e3))) (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) (= (op e1 e3) (op e1 (op (op e1 e3) e3)))))
+(assume nt894.0 (not (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3)))))
+(assume nt894.1 (not (= (op e1 e3) (op e3 (op (op e1 e3) e3)))))
+(assume nt894.2 (not (= (op e1 e3) (op (op e1 e3) (op (op e1 e3) e3)))))
+(assume nt894.3 (not (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))
+(assume nt894.4 (not (= (op e1 e3) (op e1 (op (op e1 e3) e3)))))
+(step t894 (cl (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))) (= (op e1 e3) (op e3 (op (op e1 e3) e3))) (= (op e1 e3) (op (op e1 e3) (op (op e1 e3) e3))) (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) (= (op e1 e3) (op e1 (op (op e1 e3) e3)))) :rule or :premises (t893))
+(step t.end (cl) :rule resolution :premises (nt894.0 nt894.1 nt894.2 nt894.3 nt894.4 t894))

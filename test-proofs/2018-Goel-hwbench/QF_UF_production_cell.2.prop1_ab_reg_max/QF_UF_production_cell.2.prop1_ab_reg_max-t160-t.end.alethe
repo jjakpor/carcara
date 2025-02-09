@@ -1,0 +1,3 @@
+(assume nt160.0 (not (= (not (= y$v_k_Table y$v_k_Table)) (not true))))
+(assume t160 (= (not (= y$v_k_Table y$v_k_Table)) (not true)))
+(step t.end (cl) :rule resolution :premises (nt160.0 t160))

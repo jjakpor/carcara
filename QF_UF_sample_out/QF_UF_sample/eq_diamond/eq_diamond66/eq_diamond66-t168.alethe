@@ -1,0 +1,6 @@
+(assume t167 (or (= x1 x2) (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))))))
+(assume t163 (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))))
+(assume nt168.0 (not (= x1 x2)))
+(step t167' (cl (= x1 x2) (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))))) :rule or :premises (t167))
+(step t168 (cl (= x1 x2)) :rule resolution :premises (t167' t163))
+(step t.end (cl) :rule resolution :premises (nt168.0 t168))

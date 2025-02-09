@@ -1,0 +1,4 @@
+(assume nt780.t28.0 (not (not (not (not (= (op e3 e1) (op e3 e3)))))))
+(assume nt780.t28.1 (not (= (op e3 e1) (op e3 e3))))
+(step t780.t28 (cl (not (not (not (= (op e3 e1) (op e3 e3))))) (= (op e3 e1) (op e3 e3))) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nt780.t28.0 nt780.t28.1 t780.t28))

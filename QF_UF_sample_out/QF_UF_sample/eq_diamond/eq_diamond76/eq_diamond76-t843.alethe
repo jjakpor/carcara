@@ -1,0 +1,5 @@
+(assume t842 (= (= (= x0 x75) false) (not (= x0 x75))))
+(assume nt843.0 (not (= (= x0 x75) false)))
+(assume nt843.1 (not (not (not (= x0 x75)))))
+(step t843 (cl (= (= x0 x75) false) (not (not (= x0 x75)))) :rule equiv2 :premises (t842))
+(step t.end (cl) :rule resolution :premises (nt843.0 nt843.1 t843))

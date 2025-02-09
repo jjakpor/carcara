@@ -1,0 +1,3 @@
+(assume nt150.0 (not (= (not (p1 (f6 c_0) c_0)) (not (p1 (f6 c_0) c_0)))))
+(step t150 (cl (= (not (p1 (f6 c_0) c_0)) (not (p1 (f6 c_0) c_0)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt150.0 t150))

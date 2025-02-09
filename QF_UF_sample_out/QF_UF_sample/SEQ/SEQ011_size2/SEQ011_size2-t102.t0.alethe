@@ -1,0 +1,3 @@
+(assume nt102.t0.0 (not (= (= (p4 c_0) true) (p4 c_0))))
+(step t102.t0 (cl (= (= (p4 c_0) true) (p4 c_0))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nt102.t0.0 t102.t0))

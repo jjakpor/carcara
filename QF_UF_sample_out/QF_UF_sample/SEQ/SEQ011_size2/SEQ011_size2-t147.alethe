@@ -1,0 +1,6 @@
+(assume t139 (or (not (= (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0)) true)) (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0))))
+(assume t146 (= (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0)) true))
+(assume nt147.0 (not (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0))))
+(step t139' (cl (not (= (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0)) true)) (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0))) :rule or :premises (t139))
+(step t147 (cl (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0))) :rule resolution :premises (t139' t146))
+(step t.end (cl) :rule resolution :premises (nt147.0 t147))

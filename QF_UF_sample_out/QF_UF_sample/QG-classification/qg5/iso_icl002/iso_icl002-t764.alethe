@@ -1,0 +1,5 @@
+(assume t73 (= (op e2 e4) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))
+(assume t32 (= (op e4 e4) (op (op e0 e0) (op e0 e0))))
+(assume nt764.0 (not (= (= (op e2 e4) (op e4 e4)) (= (op (op (op e0 (op e0 e0)) e0) (op e0 e0)) (op (op e0 e0) (op e0 e0))))))
+(step t764 (cl (= (= (op e2 e4) (op e4 e4)) (= (op (op (op e0 (op e0 e0)) e0) (op e0 e0)) (op (op e0 e0) (op e0 e0))))) :rule cong :premises (t73 t32))
+(step t.end (cl) :rule resolution :premises (nt764.0 t764))

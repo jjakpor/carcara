@@ -1,0 +1,5 @@
+(assume t84.t265 (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25)))
+(assume nt84.t266.0 (not (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))))))
+(assume nt84.t266.1 (not (= x24 x25)))
+(step t84.t266 (cl (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25)))) (= x24 x25)) :rule implies :premises (t84.t265))
+(step t.end (cl) :rule resolution :premises (nt84.t266.0 nt84.t266.1 t84.t266))

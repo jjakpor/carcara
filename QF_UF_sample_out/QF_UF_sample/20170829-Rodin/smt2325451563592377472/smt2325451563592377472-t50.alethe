@@ -1,0 +1,3 @@
+(assume nt50.0 (not (= (or (not car) (not clk)) (or (not car) (not clk)))))
+(step t50 (cl (= (or (not car) (not clk)) (or (not car) (not clk)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt50.0 t50))

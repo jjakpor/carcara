@@ -1,0 +1,5 @@
+(assume t5 (= prt prt))
+(assume t6 (= (not (not prt)) prt))
+(assume nt7.0 (not (= (= prt (not (not prt))) (= prt prt))))
+(step t7 (cl (= (= prt (not (not prt))) (= prt prt))) :rule cong :premises (t5 t6))
+(step t.end (cl) :rule resolution :premises (nt7.0 t7))

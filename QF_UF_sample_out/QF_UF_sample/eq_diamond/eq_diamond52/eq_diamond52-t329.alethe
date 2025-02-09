@@ -1,0 +1,5 @@
+(assume nt329.0 (not (not (= (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (and (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (=> (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (= x29 x30)))))))
+(assume nt329.1 (not (not (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))))))
+(assume nt329.2 (not (and (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (=> (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (= x29 x30)))))
+(step t329 (cl (not (= (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (and (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (=> (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (= x29 x30))))) (not (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30)))) (and (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (=> (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (= x29 x30)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt329.0 nt329.1 nt329.2 t329))

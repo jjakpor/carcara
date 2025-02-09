@@ -1,0 +1,5 @@
+(assume t1031 (= (or (or (or (or (= (op e0 e4) e2) (= (op e1 e4) e2)) (= (op e2 e4) e2)) (= (op e3 e4) e2)) (= (op e4 e4) e2)) (or (= (op e4 e4) e2) (= (op e3 e4) e2) (= (op e2 e4) e2) (= (op e0 e4) e2) (= (op e1 e4) e2))))
+(assume t1036 (= (or (= (op e4 e4) e2) (= (op e3 e4) e2) (= (op e2 e4) e2) (= (op e0 e4) e2) (= (op e1 e4) e2)) (or (= e2 (op e4 e4)) (= e2 (op e3 e4)) (= e2 (op e2 e4)) (= e2 (op e0 e4)) (= e2 (op e1 e4)))))
+(assume nt1037.0 (not (= (or (or (or (or (= (op e0 e4) e2) (= (op e1 e4) e2)) (= (op e2 e4) e2)) (= (op e3 e4) e2)) (= (op e4 e4) e2)) (or (= e2 (op e4 e4)) (= e2 (op e3 e4)) (= e2 (op e2 e4)) (= e2 (op e0 e4)) (= e2 (op e1 e4))))))
+(step t1037 (cl (= (or (or (or (or (= (op e0 e4) e2) (= (op e1 e4) e2)) (= (op e2 e4) e2)) (= (op e3 e4) e2)) (= (op e4 e4) e2)) (or (= e2 (op e4 e4)) (= e2 (op e3 e4)) (= e2 (op e2 e4)) (= e2 (op e0 e4)) (= e2 (op e1 e4))))) :rule trans :premises (t1031 t1036))
+(step t.end (cl) :rule resolution :premises (nt1037.0 t1037))

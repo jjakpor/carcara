@@ -1,0 +1,4 @@
+(assume t530 (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))
+(assume nt722.0 (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) (op (op (op e0 e0) e0) e0))))
+(step t722 (cl (= (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) (op (op (op e0 e0) e0) e0))) :rule symm :premises (t530))
+(step t.end (cl) :rule resolution :premises (nt722.0 t722))

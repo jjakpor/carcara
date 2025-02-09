@@ -1,0 +1,6 @@
+(assume t308 (or (= (= (op e3 e3) (op (op (op e1 e3) e1) e3)) false) (= (op e3 e3) (op (op (op e1 e3) e1) e3))))
+(assume t317 (not (= (op e3 e3) (op (op (op e1 e3) e1) e3))))
+(assume nt318.0 (not (= (= (op e3 e3) (op (op (op e1 e3) e1) e3)) false)))
+(step t308' (cl (= (= (op e3 e3) (op (op (op e1 e3) e1) e3)) false) (= (op e3 e3) (op (op (op e1 e3) e1) e3))) :rule or :premises (t308))
+(step t318 (cl (= (= (op e3 e3) (op (op (op e1 e3) e1) e3)) false)) :rule resolution :premises (t308' t317))
+(step t.end (cl) :rule resolution :premises (nt318.0 t318))

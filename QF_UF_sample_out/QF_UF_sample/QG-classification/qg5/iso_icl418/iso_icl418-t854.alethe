@@ -1,0 +1,6 @@
+(assume t830 (or (not (= (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4))) false)) (not (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4))))))
+(assume t853 (= (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4))) false))
+(assume nt854.0 (not (not (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4))))))
+(step t830' (cl (not (= (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4))) false)) (not (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4))))) :rule or :premises (t830))
+(step t854 (cl (not (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4))))) :rule resolution :premises (t830' t853))
+(step t.end (cl) :rule resolution :premises (nt854.0 t854))

@@ -1,0 +1,6 @@
+(assume t262 (or (= e0 (op e5 (op e5 e0))) (not (and (= e0 (op e5 (op e5 e0))) (not (= e0 (op e5 e0)))))))
+(assume t306 (not (= e0 (op e5 (op e5 e0)))))
+(assume nt307.0 (not (not (and (= e0 (op e5 (op e5 e0))) (not (= e0 (op e5 e0)))))))
+(step t262' (cl (= e0 (op e5 (op e5 e0))) (not (and (= e0 (op e5 (op e5 e0))) (not (= e0 (op e5 e0)))))) :rule or :premises (t262))
+(step t307 (cl (not (and (= e0 (op e5 (op e5 e0))) (not (= e0 (op e5 e0)))))) :rule resolution :premises (t262' t306))
+(step t.end (cl) :rule resolution :premises (nt307.0 t307))

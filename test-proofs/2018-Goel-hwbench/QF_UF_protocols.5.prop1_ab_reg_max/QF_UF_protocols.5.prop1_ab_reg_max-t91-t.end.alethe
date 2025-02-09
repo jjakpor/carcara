@@ -1,0 +1,5 @@
+(assume nt91.0 (not (not (not (not y$956)))))
+(assume nt91.1 (not y$956))
+(assume t91 (or (not (not (not y$956))) y$956))
+(step t91' (cl (not (not (not y$956))) y$956) :rule or :premises (t91))
+(step t.end (cl) :rule resolution :premises (nt91.0 nt91.1 t91'))

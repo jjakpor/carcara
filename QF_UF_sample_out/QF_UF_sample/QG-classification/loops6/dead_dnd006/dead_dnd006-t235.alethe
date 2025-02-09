@@ -1,0 +1,5 @@
+(assume t233 (= (not (= (op e4 (op e4 e4)) e4)) (not (= e4 (op e4 (op e4 e4))))))
+(assume t234 (= (= e4 unit) (= unit e4)))
+(assume nt235.0 (not (= (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit)) (or (not (= e4 (op e4 (op e4 e4)))) (= unit e4)))))
+(step t235 (cl (= (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit)) (or (not (= e4 (op e4 (op e4 e4)))) (= unit e4)))) :rule cong :premises (t233 t234))
+(step t.end (cl) :rule resolution :premises (nt235.0 t235))

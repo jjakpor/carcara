@@ -1,0 +1,5 @@
+(assume t265.t8 (= e5 (op e5 e0)))
+(assume t265.t14 (= (op e5 e0) (op e5 (op e5 e5))))
+(assume nt265.t15.0 (not (= e5 (op e5 (op e5 e5)))))
+(step t265.t15 (cl (= e5 (op e5 (op e5 e5)))) :rule trans :premises (t265.t8 t265.t14))
+(step t.end (cl) :rule resolution :premises (nt265.t15.0 t265.t15))

@@ -1,0 +1,3 @@
+(assume nt644.t0.0 (not (= (= (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) (op (op e1 e3) e3))) false) (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) (op (op e1 e3) e3)))))))
+(step t644.t0 (cl (= (= (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) (op (op e1 e3) e3))) false) (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) (op (op e1 e3) e3)))))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nt644.t0.0 t644.t0))

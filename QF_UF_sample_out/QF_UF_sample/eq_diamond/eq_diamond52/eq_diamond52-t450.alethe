@@ -1,0 +1,5 @@
+(assume nt450.0 (not (not (= (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (and (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (=> (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (= x40 x41)))))))
+(assume nt450.1 (not (not (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))))))
+(assume nt450.2 (not (and (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (=> (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (= x40 x41)))))
+(step t450 (cl (not (= (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (and (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (=> (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (= x40 x41))))) (not (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41)))) (and (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (=> (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (= x40 x41)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt450.0 nt450.1 nt450.2 t450))

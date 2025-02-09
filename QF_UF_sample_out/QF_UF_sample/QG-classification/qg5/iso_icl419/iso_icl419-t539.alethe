@@ -1,0 +1,5 @@
+(assume t536 (= (= (op (op e3 e4) e3) e4) (= e4 (op (op e3 e4) e3))))
+(assume t538 (= (= e4 (op (op e3 e4) e3)) (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) e3))))
+(assume nt539.0 (not (= (= (op (op e3 e4) e3) e4) (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) e3)))))
+(step t539 (cl (= (= (op (op e3 e4) e3) e4) (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) e3)))) :rule trans :premises (t536 t538))
+(step t.end (cl) :rule resolution :premises (nt539.0 t539))

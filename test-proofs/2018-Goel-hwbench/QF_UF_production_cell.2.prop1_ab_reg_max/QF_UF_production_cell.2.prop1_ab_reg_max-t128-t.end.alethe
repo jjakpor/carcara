@@ -1,0 +1,3 @@
+(assume nt128.0 (not (= (and true (= y$n5s8 y$v_k_Table)) (= y$n5s8 y$v_k_Table))))
+(assume t128 (= (and true (= y$n5s8 y$v_k_Table)) (= y$n5s8 y$v_k_Table)))
+(step t.end (cl) :rule resolution :premises (nt128.0 t128))

@@ -1,0 +1,6 @@
+(assume t23 (or (= x2 x3) (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))))
+(assume t19 (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))
+(assume nt24.0 (not (= x2 x3)))
+(step t23' (cl (= x2 x3) (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))) :rule or :premises (t23))
+(step t24 (cl (= x2 x3)) :rule resolution :premises (t23' t19))
+(step t.end (cl) :rule resolution :premises (nt24.0 t24))

@@ -1,0 +1,3 @@
+(assume nt18.0 (not (not false)))
+(step t18 (cl (not false)) :rule false)
+(step t.end (cl) :rule resolution :premises (nt18.0 t18))

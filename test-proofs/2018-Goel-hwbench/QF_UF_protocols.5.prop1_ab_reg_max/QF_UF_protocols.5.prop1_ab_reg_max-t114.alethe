@@ -1,0 +1,6 @@
+(assume t104 (or (not (not (not y$281))) y$281))
+(assume t113 (not (not y$281)))
+(assume nt114.0 (not y$281))
+(step t104' (cl (not (not (not y$281))) y$281) :rule or :premises (t104))
+(step t114 (cl y$281) :rule resolution :premises (t104' t113))
+(step t.end (cl) :rule resolution :premises (nt114.0 t114))

@@ -1,0 +1,3 @@
+(assume nt50.0 (not (= y$v_B y$v_done)))
+(assume t50 (= y$v_B y$v_done))
+(step t.end (cl) :rule resolution :premises (nt50.0 t50))

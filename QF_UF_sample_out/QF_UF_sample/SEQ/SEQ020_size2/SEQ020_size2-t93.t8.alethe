@@ -1,0 +1,5 @@
+(assume t93.t3 (= (p4 c_1) (p4 c8)))
+(assume t93.t7 (= (p4 c8) true))
+(assume nt93.t8.0 (not (= (p4 c_1) true)))
+(step t93.t8 (cl (= (p4 c_1) true)) :rule trans :premises (t93.t3 t93.t7))
+(step t.end (cl) :rule resolution :premises (nt93.t8.0 t93.t8))

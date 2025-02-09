@@ -1,0 +1,5 @@
+(assume t0 (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))
+(assume nt1.0 (not (and (= x14 y14) (= y14 x15))))
+(assume nt1.1 (not (and (= x14 z14) (= z14 x15))))
+(step t1 (cl (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) :rule or :premises (t0))
+(step t.end (cl) :rule resolution :premises (nt1.0 nt1.1 t1))

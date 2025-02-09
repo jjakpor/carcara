@@ -1,0 +1,5 @@
+(assume t723 (= (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))
+(assume t728 (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false))
+(assume nt729.0 (not (= (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false)))
+(step t729 (cl (= (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false)) :rule trans :premises (t723 t728))
+(step t.end (cl) :rule resolution :premises (nt729.0 t729))

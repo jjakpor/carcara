@@ -1,0 +1,5 @@
+(assume t444 (= (not (= e1 e4)) (not (= e4 e1))))
+(assume t448 (= (not (= e4 e1)) (not (= (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(assume nt449.0 (not (= (not (= e1 e4)) (not (= (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))))
+(step t449 (cl (= (not (= e1 e4)) (not (= (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))) :rule trans :premises (t444 t448))
+(step t.end (cl) :rule resolution :premises (nt449.0 t449))

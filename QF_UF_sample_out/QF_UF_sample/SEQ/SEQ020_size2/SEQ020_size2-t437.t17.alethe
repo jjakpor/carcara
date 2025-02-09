@@ -1,0 +1,7 @@
+(assume t437.t5 (= true (p1 (f6 c_1) c_1)))
+(assume t437.t8 (= (p1 (f6 c_1) c_1) (p1 c_0 c_1)))
+(assume t437.t11 (= (p1 c_0 c_1) (p1 (f7 c_1) c_1)))
+(assume t437.t16 (= (p1 (f7 c_1) c_1) false))
+(assume nt437.t17.0 (not (= true false)))
+(step t437.t17 (cl (= true false)) :rule trans :premises (t437.t5 t437.t8 t437.t11 t437.t16))
+(step t.end (cl) :rule resolution :premises (nt437.t17.0 t437.t17))

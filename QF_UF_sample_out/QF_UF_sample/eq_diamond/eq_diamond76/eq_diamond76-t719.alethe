@@ -1,0 +1,5 @@
+(assume nt719.0 (not (not (= (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (and (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65)))))))
+(assume nt719.1 (not (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))))))
+(assume nt719.2 (not (and (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65)))))
+(step t719 (cl (not (= (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (and (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65))))) (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65)))) (and (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt719.0 nt719.1 nt719.2 t719))

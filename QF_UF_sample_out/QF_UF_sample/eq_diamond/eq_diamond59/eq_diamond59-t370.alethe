@@ -1,0 +1,6 @@
+(assume t369 (or (= x13 x14) (not (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))))))
+(assume t365 (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))))
+(assume nt370.0 (not (= x13 x14)))
+(step t369' (cl (= x13 x14) (not (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))))) :rule or :premises (t369))
+(step t370 (cl (= x13 x14)) :rule resolution :premises (t369' t365))
+(step t.end (cl) :rule resolution :premises (nt370.0 t370))

@@ -1,0 +1,4 @@
+(assume t367.a2 (= c_1 (f7 c_1)))
+(assume nt367.t8.0 (not (= (f7 c_1) c_1)))
+(step t367.t8 (cl (= (f7 c_1) c_1)) :rule symm :premises (t367.a2))
+(step t.end (cl) :rule resolution :premises (nt367.t8.0 t367.t8))

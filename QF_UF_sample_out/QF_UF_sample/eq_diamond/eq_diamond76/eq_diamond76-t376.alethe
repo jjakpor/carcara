@@ -1,0 +1,6 @@
+(assume t375 (or (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33)))) (= x32 x33)))
+(assume nt376.0 (not (= x32 x33)))
+(assume nt376.1 (not (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))))))
+(step t375' (cl (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33)))) (= x32 x33)) :rule or :premises (t375))
+(step t376 (cl (= x32 x33) (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))))) :rule reordering :premises (t375'))
+(step t.end (cl) :rule resolution :premises (nt376.0 nt376.1 t376))

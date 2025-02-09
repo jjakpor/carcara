@@ -1,0 +1,5 @@
+(assume a599 (= y$v3_1517448506_492_op (not y$956)))
+(assume nt92.0 (not y$v3_1517448506_492_op))
+(assume nt92.1 (not (not (not y$956))))
+(step t92 (cl y$v3_1517448506_492_op (not (not y$956))) :rule equiv2 :premises (a599))
+(step t.end (cl) :rule resolution :premises (nt92.0 nt92.1 t92))

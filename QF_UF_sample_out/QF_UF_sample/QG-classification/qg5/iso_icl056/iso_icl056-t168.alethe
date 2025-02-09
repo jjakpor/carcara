@@ -1,0 +1,5 @@
+(assume t46 (= e4 (op (op e1 e1) (op e1 (op e1 e1)))))
+(assume t47 (= (op e4 e4) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))
+(assume nt168.0 (not (= (= e4 (op e4 e4)) (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))))
+(step t168 (cl (= (= e4 (op e4 e4)) (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))) :rule cong :premises (t46 t47))
+(step t.end (cl) :rule resolution :premises (nt168.0 t168))

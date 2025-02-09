@@ -1,0 +1,5 @@
+(assume t499 (=> (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (= x26 x27)))
+(assume nt500.0 (not (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))))))
+(assume nt500.1 (not (= x26 x27)))
+(step t500 (cl (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27)))) (= x26 x27)) :rule implies :premises (t499))
+(step t.end (cl) :rule resolution :premises (nt500.0 nt500.1 t500))

@@ -1,0 +1,5 @@
+(assume t31 (= y$n0s8 y$v_at_table))
+(assume t32 (= y$v_count y$v_count))
+(assume nt33.0 (not (= (= y$n0s8 y$v_count) (= y$v_at_table y$v_count))))
+(step t33 (cl (= (= y$n0s8 y$v_count) (= y$v_at_table y$v_count))) :rule cong :premises (t31 t32))
+(step t.end (cl) :rule resolution :premises (nt33.0 t33))

@@ -1,0 +1,5 @@
+(assume nt311.0 (not (not (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))))))
+(assume nt311.1 (not (not (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)))))
+(assume nt311.2 (not (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))))
+(step t311 (cl (not (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))) (not (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit))) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt311.0 nt311.1 nt311.2 t311))

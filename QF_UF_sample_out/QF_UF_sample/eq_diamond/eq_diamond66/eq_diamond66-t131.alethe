@@ -1,0 +1,6 @@
+(assume t130 (or (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5)))) (= x4 x5)))
+(assume nt131.0 (not (= x4 x5)))
+(assume nt131.1 (not (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))))
+(step t130' (cl (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5)))) (= x4 x5)) :rule or :premises (t130))
+(step t131 (cl (= x4 x5) (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))) :rule reordering :premises (t130'))
+(step t.end (cl) :rule resolution :premises (nt131.0 nt131.1 t131))

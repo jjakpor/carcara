@@ -1,0 +1,5 @@
+(assume t1252 (= (= (= (op e1 e1) (op e1 (op (op e1 e3) e3))) false) (not (= (op e1 e1) (op e1 (op (op e1 e3) e3))))))
+(assume nt1253.0 (not (= (= (op e1 e1) (op e1 (op (op e1 e3) e3))) false)))
+(assume nt1253.1 (not (not (not (= (op e1 e1) (op e1 (op (op e1 e3) e3)))))))
+(step t1253 (cl (= (= (op e1 e1) (op e1 (op (op e1 e3) e3))) false) (not (not (= (op e1 e1) (op e1 (op (op e1 e3) e3)))))) :rule equiv2 :premises (t1252))
+(step t.end (cl) :rule resolution :premises (nt1253.0 nt1253.1 t1253))

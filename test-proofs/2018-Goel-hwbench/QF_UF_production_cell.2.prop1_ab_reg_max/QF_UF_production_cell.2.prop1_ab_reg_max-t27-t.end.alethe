@@ -1,0 +1,3 @@
+(assume nt27.0 (not (= y$v_at_press y$v_at_table)))
+(assume t27 (= y$v_at_press y$v_at_table))
+(step t.end (cl) :rule resolution :premises (nt27.0 t27))

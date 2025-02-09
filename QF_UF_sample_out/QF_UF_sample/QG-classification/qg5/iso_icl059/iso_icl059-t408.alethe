@@ -1,0 +1,5 @@
+(assume t394 (= (= (op e0 (op e0 e0)) (op (op e0 e0) e0)) (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0)))))
+(assume t407 (= (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0))) false))
+(assume nt408.0 (not (= (= (op e0 (op e0 e0)) (op (op e0 e0) e0)) false)))
+(step t408 (cl (= (= (op e0 (op e0 e0)) (op (op e0 e0) e0)) false)) :rule trans :premises (t394 t407))
+(step t.end (cl) :rule resolution :premises (nt408.0 t408))

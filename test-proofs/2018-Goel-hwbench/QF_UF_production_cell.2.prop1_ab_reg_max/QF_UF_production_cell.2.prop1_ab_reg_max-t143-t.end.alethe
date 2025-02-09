@@ -1,0 +1,3 @@
+(assume nt143.0 (not (not y$prop)))
+(assume t143 (not y$prop))
+(step t.end (cl) :rule resolution :premises (nt143.0 t143))

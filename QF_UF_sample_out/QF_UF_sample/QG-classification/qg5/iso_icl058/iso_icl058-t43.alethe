@@ -1,0 +1,5 @@
+(assume t29 (= e2 (op e0 e0)))
+(assume t29 (= e2 (op e0 e0)))
+(assume nt43.0 (not (= (op e2 e2) (op (op e0 e0) (op e0 e0)))))
+(step t43 (cl (= (op e2 e2) (op (op e0 e0) (op e0 e0)))) :rule cong :premises (t29 t29))
+(step t.end (cl) :rule resolution :premises (nt43.0 t43))

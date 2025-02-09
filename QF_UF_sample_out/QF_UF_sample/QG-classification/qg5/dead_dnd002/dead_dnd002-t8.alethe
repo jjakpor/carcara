@@ -1,0 +1,4 @@
+(assume t7 (and (= (op e0 (op e0 e0)) e0) (= (op e0 (op e0 e1)) e1)))
+(assume nt8.0 (not (= (op e0 (op e0 e0)) e0)))
+(step t8 (cl (= (op e0 (op e0 e0)) e0)) :rule and :premises (t7))
+(step t.end (cl) :rule resolution :premises (nt8.0 t8))

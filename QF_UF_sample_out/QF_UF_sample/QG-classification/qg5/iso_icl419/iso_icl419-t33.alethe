@@ -1,0 +1,5 @@
+(assume nt33.0 (not (not (= (= e4 (op e1 e2)) (= e4 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))))
+(assume nt33.1 (not (not (= e4 (op e1 e2)))))
+(assume nt33.2 (not (= e4 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))
+(step t33 (cl (not (= (= e4 (op e1 e2)) (= e4 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))) (not (= e4 (op e1 e2))) (= e4 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt33.0 nt33.1 nt33.2 t33))

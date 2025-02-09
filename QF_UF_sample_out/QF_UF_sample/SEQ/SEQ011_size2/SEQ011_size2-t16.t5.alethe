@@ -1,0 +1,8 @@
+(assume t16.t3 (or (= (p1 (f7 c_1) c_1) false) (not (not (p1 (f7 c_1) c_1)))))
+(assume t16.t4 (or (not (not (not (p1 (f7 c_1) c_1)))) (p1 (f7 c_1) c_1)))
+(assume nt16.t5.0 (not (= (p1 (f7 c_1) c_1) false)))
+(assume nt16.t5.1 (not (p1 (f7 c_1) c_1)))
+(step t16.t4' (cl (not (not (not (p1 (f7 c_1) c_1)))) (p1 (f7 c_1) c_1)) :rule or :premises (t16.t4))
+(step t16.t3' (cl (= (p1 (f7 c_1) c_1) false) (not (not (p1 (f7 c_1) c_1)))) :rule or :premises (t16.t3))
+(step t16.t5 (cl (= (p1 (f7 c_1) c_1) false) (p1 (f7 c_1) c_1)) :rule resolution :premises (t16.t3' t16.t4'))
+(step t.end (cl) :rule resolution :premises (nt16.t5.0 nt16.t5.1 t16.t5))

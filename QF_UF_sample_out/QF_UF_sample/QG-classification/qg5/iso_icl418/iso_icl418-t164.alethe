@@ -1,0 +1,7 @@
+(assume t148 (or (not (= (not (= (op e0 e4) (op e3 e4))) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4))))) (not (not (= (op e0 e4) (op e3 e4)))) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4)))))
+(assume t153 (= (not (= (op e0 e4) (op e3 e4))) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4)))))
+(assume t163 (not (= (op e0 e4) (op e3 e4))))
+(assume nt164.0 (not (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4)))))
+(step t148' (cl (not (= (not (= (op e0 e4) (op e3 e4))) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4))))) (not (not (= (op e0 e4) (op e3 e4)))) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4)))) :rule or :premises (t148))
+(step t164 (cl (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4)))) :rule resolution :premises (t148' t153 t163))
+(step t.end (cl) :rule resolution :premises (nt164.0 t164))

@@ -1,0 +1,5 @@
+(assume t45 (= e2 (op (op e0 (op e0 e0)) e0)))
+(assume t94 (= (op e0 e3) (op e0 (op (op (op e0 (op e0 e0)) e0) e0))))
+(assume nt368.0 (not (= (= e2 (op e0 e3)) (= (op (op e0 (op e0 e0)) e0) (op e0 (op (op (op e0 (op e0 e0)) e0) e0))))))
+(step t368 (cl (= (= e2 (op e0 e3)) (= (op (op e0 (op e0 e0)) e0) (op e0 (op (op (op e0 (op e0 e0)) e0) e0))))) :rule cong :premises (t45 t94))
+(step t.end (cl) :rule resolution :premises (nt368.0 t368))

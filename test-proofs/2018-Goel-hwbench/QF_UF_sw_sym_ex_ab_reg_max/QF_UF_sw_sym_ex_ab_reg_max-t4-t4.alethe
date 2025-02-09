@@ -1,0 +1,7 @@
+(assume t0' (or (not (= y$205 (= y$14 y$prop))) (not y$205) (= y$14 y$prop)))
+(assume a11 (= y$205 (= y$14 y$prop)))
+(assume t3 y$205)
+(assume nt4.0 (not (= y$14 y$prop)))
+(step t0'' (cl (not (= y$205 (= y$14 y$prop))) (not y$205) (= y$14 y$prop)) :rule or :premises (t0'))
+(step t4 (cl (= y$14 y$prop)) :rule resolution :premises (t0'' a11 t3))
+(step t.end (cl) :rule resolution :premises (nt4.0 t4))

@@ -1,0 +1,4 @@
+(assume t199 (and (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18))))
+(assume nt200.0 (not (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18))))
+(step t200 (cl (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18))) :rule and :premises (t199))
+(step t.end (cl) :rule resolution :premises (nt200.0 t200))

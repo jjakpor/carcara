@@ -1,0 +1,4 @@
+(assume t84.t451 (and (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42))))
+(assume nt84.t452.0 (not (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42))))
+(step t84.t452 (cl (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42))) :rule and :premises (t84.t451))
+(step t.end (cl) :rule resolution :premises (nt84.t452.0 t84.t452))

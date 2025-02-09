@@ -1,0 +1,7 @@
+(assume t184 (or (not (= (not (= (op e2 e3) (op e3 e3))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op e1 (op e1 e1))))))) (not (not (= (op e2 e3) (op e3 e3)))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))))))
+(assume t186 (= (not (= (op e2 e3) (op e3 e3))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))))))
+(assume t192 (not (= (op e2 e3) (op e3 e3))))
+(assume nt193.0 (not (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))))))
+(step t184' (cl (not (= (not (= (op e2 e3) (op e3 e3))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op e1 (op e1 e1))))))) (not (not (= (op e2 e3) (op e3 e3)))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))))) :rule or :premises (t184))
+(step t193 (cl (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))))) :rule resolution :premises (t184' t186 t192))
+(step t.end (cl) :rule resolution :premises (nt193.0 t193))

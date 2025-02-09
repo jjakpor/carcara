@@ -1,0 +1,6 @@
+(assume t359 (or (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32)))) (= x31 x32)))
+(assume nt360.0 (not (= x31 x32)))
+(assume nt360.1 (not (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))))))
+(step t359' (cl (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32)))) (= x31 x32)) :rule or :premises (t359))
+(step t360 (cl (= x31 x32) (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))))) :rule reordering :premises (t359'))
+(step t.end (cl) :rule resolution :premises (nt360.0 nt360.1 t360))

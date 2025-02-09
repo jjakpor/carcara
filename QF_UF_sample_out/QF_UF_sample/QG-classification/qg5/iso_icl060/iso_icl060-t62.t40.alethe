@@ -1,0 +1,5 @@
+(assume nt62.t40.0 (not (not (= (not (= (op e2 e0) (op e3 e0))) (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))))))
+(assume nt62.t40.1 (not (not (not (= (op e2 e0) (op e3 e0))))))
+(assume nt62.t40.2 (not (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))))
+(step t62.t40 (cl (not (= (not (= (op e2 e0) (op e3 e0))) (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))) (not (not (= (op e2 e0) (op e3 e0)))) (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt62.t40.0 nt62.t40.1 nt62.t40.2 t62.t40))

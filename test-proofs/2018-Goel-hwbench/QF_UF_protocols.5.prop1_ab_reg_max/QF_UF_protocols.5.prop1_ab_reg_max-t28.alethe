@@ -1,0 +1,5 @@
+(assume nt28.0 (not (not (= y$v3_1517448506_530_op (and y$v3_1517448506_460_op y$v3_1517448506_529_op)))))
+(assume nt28.1 (not (not y$v3_1517448506_530_op)))
+(assume nt28.2 (not (and y$v3_1517448506_460_op y$v3_1517448506_529_op)))
+(step t28 (cl (not (= y$v3_1517448506_530_op (and y$v3_1517448506_460_op y$v3_1517448506_529_op))) (not y$v3_1517448506_530_op) (and y$v3_1517448506_460_op y$v3_1517448506_529_op)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt28.0 nt28.1 nt28.2 t28))

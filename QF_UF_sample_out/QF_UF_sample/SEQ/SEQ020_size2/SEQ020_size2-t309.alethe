@@ -1,0 +1,3 @@
+(assume nt309.0 (not (= (not (p4 c_0)) (not (p4 c_0)))))
+(step t309 (cl (= (not (p4 c_0)) (not (p4 c_0)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt309.0 t309))

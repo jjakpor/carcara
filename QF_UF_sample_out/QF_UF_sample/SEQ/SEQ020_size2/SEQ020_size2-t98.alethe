@@ -1,0 +1,6 @@
+(assume t97 (or (not (and (p4 c8) (= c8 c_1))) (not (and (p4 c8) (= c8 c_1))) (p4 c_1)))
+(assume nt98.0 (not (not (and (p4 c8) (= c8 c_1)))))
+(assume nt98.1 (not (p4 c_1)))
+(step t97' (cl (not (and (p4 c8) (= c8 c_1))) (not (and (p4 c8) (= c8 c_1))) (p4 c_1)) :rule or :premises (t97))
+(step t98 (cl (not (and (p4 c8) (= c8 c_1))) (p4 c_1)) :rule contraction :premises (t97'))
+(step t.end (cl) :rule resolution :premises (nt98.0 nt98.1 t98))

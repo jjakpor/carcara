@@ -1,0 +1,3 @@
+(assume nt6.0 (not (= y$n0s8 y$v_A)))
+(assume t6 (= y$n0s8 y$v_A))
+(step t.end (cl) :rule resolution :premises (nt6.0 t6))

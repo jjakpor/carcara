@@ -1,0 +1,6 @@
+(assume t397 (or (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35)))) (= x34 x35)))
+(assume nt398.0 (not (= x34 x35)))
+(assume nt398.1 (not (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))))
+(step t397' (cl (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35)))) (= x34 x35)) :rule or :premises (t397))
+(step t398 (cl (= x34 x35) (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))) :rule reordering :premises (t397'))
+(step t.end (cl) :rule resolution :premises (nt398.0 nt398.1 t398))

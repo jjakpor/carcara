@@ -1,0 +1,3 @@
+(assume nt76.0 (not (= (not (= x15 x16)) (not (= x15 x16)))))
+(step t76 (cl (= (not (= x15 x16)) (not (= x15 x16)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt76.0 t76))

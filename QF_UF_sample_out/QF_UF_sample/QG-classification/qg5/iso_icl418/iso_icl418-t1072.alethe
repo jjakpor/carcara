@@ -1,0 +1,4 @@
+(assume t1071 (and (and (= (op (op e4 e0) e4) e0) (= (op (op e4 e1) e4) e1)) (= (op (op e4 e2) e4) e2)))
+(assume nt1072.0 (not (and (= (op (op e4 e0) e4) e0) (= (op (op e4 e1) e4) e1))))
+(step t1072 (cl (and (= (op (op e4 e0) e4) e0) (= (op (op e4 e1) e4) e1))) :rule and :premises (t1071))
+(step t.end (cl) :rule resolution :premises (nt1072.0 t1072))

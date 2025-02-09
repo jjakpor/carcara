@@ -1,0 +1,3 @@
+(assume nt386.0 (not (= (= (= (op e1 (op e1 e3)) (op (op (op e1 e3) e3) (op e1 e3))) false) (not (= (op e1 (op e1 e3)) (op (op (op e1 e3) e3) (op e1 e3)))))))
+(step t386 (cl (= (= (= (op e1 (op e1 e3)) (op (op (op e1 e3) e3) (op e1 e3))) false) (not (= (op e1 (op e1 e3)) (op (op (op e1 e3) e3) (op e1 e3)))))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nt386.0 t386))

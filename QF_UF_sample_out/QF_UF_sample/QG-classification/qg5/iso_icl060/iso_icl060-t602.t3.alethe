@@ -1,0 +1,5 @@
+(assume t9 (= e1 e1))
+(assume t602.t2 (= (op e4 (op e4 e1)) (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))
+(assume nt602.t3.0 (not (= (= e1 (op e4 (op e4 e1))) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))))
+(step t602.t3 (cl (= (= e1 (op e4 (op e4 e1))) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))) :rule cong :premises (t9 t602.t2))
+(step t.end (cl) :rule resolution :premises (nt602.t3.0 t602.t3))

@@ -1,0 +1,5 @@
+(assume t98 (or (= c8 c_0) (= c8 c_1)))
+(assume nt99.0 (not (= c8 c_0)))
+(assume nt99.1 (not (= c8 c_1)))
+(step t99 (cl (= c8 c_0) (= c8 c_1)) :rule or :premises (t98))
+(step t.end (cl) :rule resolution :premises (nt99.0 nt99.1 t99))

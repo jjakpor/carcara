@@ -1,0 +1,4 @@
+(assume t484 (and (or (or (or (or (= (op e0 e0) e0) (= (op e1 e1) e0)) (= (op e2 e2) e0)) (= (op e3 e3) e0)) (= (op e4 e4) e0)) (or (or (or (or (= (op e0 e0) e1) (= (op e1 e1) e1)) (= (op e2 e2) e1)) (= (op e3 e3) e1)) (= (op e4 e4) e1))))
+(assume nt485.0 (not (or (or (or (or (= (op e0 e0) e1) (= (op e1 e1) e1)) (= (op e2 e2) e1)) (= (op e3 e3) e1)) (= (op e4 e4) e1))))
+(step t485 (cl (or (or (or (or (= (op e0 e0) e1) (= (op e1 e1) e1)) (= (op e2 e2) e1)) (= (op e3 e3) e1)) (= (op e4 e4) e1))) :rule and :premises (t484))
+(step t.end (cl) :rule resolution :premises (nt485.0 t485))

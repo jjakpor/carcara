@@ -1,0 +1,6 @@
+(assume t721 (or (= x46 x47) (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))))))
+(assume t717 (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))))
+(assume nt722.0 (not (= x46 x47)))
+(step t721' (cl (= x46 x47) (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))))) :rule or :premises (t721))
+(step t722 (cl (= x46 x47)) :rule resolution :premises (t721' t717))
+(step t.end (cl) :rule resolution :premises (nt722.0 t722))

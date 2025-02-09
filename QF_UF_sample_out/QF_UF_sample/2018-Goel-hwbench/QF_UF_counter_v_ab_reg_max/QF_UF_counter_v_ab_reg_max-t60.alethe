@@ -1,0 +1,3 @@
+(assume nt60.0 (not (= y$58 y$58)))
+(step t60 (cl (= y$58 y$58)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt60.0 t60))

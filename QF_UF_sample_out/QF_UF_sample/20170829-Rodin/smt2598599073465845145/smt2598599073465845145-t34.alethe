@@ -1,0 +1,3 @@
+(assume nt34.0 (not (not false)))
+(step t34 (cl (not false)) :rule false)
+(step t.end (cl) :rule resolution :premises (nt34.0 t34))

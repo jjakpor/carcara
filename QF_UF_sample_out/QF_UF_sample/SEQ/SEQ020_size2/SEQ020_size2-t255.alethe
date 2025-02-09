@@ -1,0 +1,4 @@
+(assume nt255.0 (not (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0)))))
+(assume nt255.1 (not (not (not (p1 (f6 c_0) c_0)))))
+(step t255 (cl (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))) (not (not (p1 (f6 c_0) c_0)))) :rule or_neg)
+(step t.end (cl) :rule resolution :premises (nt255.0 nt255.1 t255))

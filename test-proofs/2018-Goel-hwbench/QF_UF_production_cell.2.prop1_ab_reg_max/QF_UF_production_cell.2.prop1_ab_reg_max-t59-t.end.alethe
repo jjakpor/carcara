@@ -1,0 +1,3 @@
+(assume nt59.0 (not (= y$v_count y$v_k_Belt)))
+(assume t59 (= y$v_count y$v_k_Belt))
+(step t.end (cl) :rule resolution :premises (nt59.0 t59))

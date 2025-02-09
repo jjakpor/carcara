@@ -1,0 +1,4 @@
+(assume t84.t187 (and (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18))))
+(assume nt84.t188.0 (not (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18))))
+(step t84.t188 (cl (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18))) :rule and :premises (t84.t187))
+(step t.end (cl) :rule resolution :premises (nt84.t188.0 t84.t188))

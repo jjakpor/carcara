@@ -1,0 +1,6 @@
+(assume t491 (or (= (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4)) false) (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4))))
+(assume t500 (not (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4))))
+(assume nt501.0 (not (= (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4)) false)))
+(step t491' (cl (= (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4)) false) (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4))) :rule or :premises (t491))
+(step t501 (cl (= (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4)) false)) :rule resolution :premises (t491' t500))
+(step t.end (cl) :rule resolution :premises (nt501.0 t501))

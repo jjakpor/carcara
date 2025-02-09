@@ -1,0 +1,7 @@
+(assume t409 (or (not (= (not (= (op e1 e1) (op e1 e2))) (not (= (op e1 e1) (op e1 (op e1 e1)))))) (not (not (= (op e1 e1) (op e1 e2)))) (not (= (op e1 e1) (op e1 (op e1 e1))))))
+(assume t411 (= (not (= (op e1 e1) (op e1 e2))) (not (= (op e1 e1) (op e1 (op e1 e1))))))
+(assume t419 (not (= (op e1 e1) (op e1 e2))))
+(assume nt420.0 (not (not (= (op e1 e1) (op e1 (op e1 e1))))))
+(step t409' (cl (not (= (not (= (op e1 e1) (op e1 e2))) (not (= (op e1 e1) (op e1 (op e1 e1)))))) (not (not (= (op e1 e1) (op e1 e2)))) (not (= (op e1 e1) (op e1 (op e1 e1))))) :rule or :premises (t409))
+(step t420 (cl (not (= (op e1 e1) (op e1 (op e1 e1))))) :rule resolution :premises (t409' t411 t419))
+(step t.end (cl) :rule resolution :premises (nt420.0 t420))

@@ -1,0 +1,4 @@
+(assume nt40.0 (not (not (not (not (= x0 x3))))))
+(assume nt40.1 (not (= x0 x3)))
+(step t40 (cl (not (not (not (= x0 x3)))) (= x0 x3)) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nt40.0 nt40.1 t40))

@@ -1,0 +1,6 @@
+(assume t420 (or (= x36 x37) (not (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))))))
+(assume t416 (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))))
+(assume nt421.0 (not (= x36 x37)))
+(step t420' (cl (= x36 x37) (not (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))))) :rule or :premises (t420))
+(step t421 (cl (= x36 x37)) :rule resolution :premises (t420' t416))
+(step t.end (cl) :rule resolution :premises (nt421.0 t421))

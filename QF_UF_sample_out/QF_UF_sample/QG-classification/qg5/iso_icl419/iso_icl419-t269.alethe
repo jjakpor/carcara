@@ -1,0 +1,6 @@
+(assume t260 (or (= (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) false) (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))
+(assume t268 (not (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))
+(assume nt269.0 (not (= (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) false)))
+(step t260' (cl (= (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) false) (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))) :rule or :premises (t260))
+(step t269 (cl (= (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) false)) :rule resolution :premises (t260' t268))
+(step t.end (cl) :rule resolution :premises (nt269.0 t269))

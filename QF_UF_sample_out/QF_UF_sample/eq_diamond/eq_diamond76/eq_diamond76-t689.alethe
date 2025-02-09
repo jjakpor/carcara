@@ -1,0 +1,3 @@
+(assume nt689.0 (not (= (= (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (and (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (=> (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (= x61 x62)))) true)))
+(step t689 (cl (= (= (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (and (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (=> (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (= x61 x62)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nt689.0 t689))

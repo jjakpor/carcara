@@ -1,0 +1,4 @@
+(assume t236.t4 (= (p1 (f6 c_0) c_0) true))
+(assume nt236.t5.0 (not (= true (p1 (f6 c_0) c_0))))
+(step t236.t5 (cl (= true (p1 (f6 c_0) c_0))) :rule symm :premises (t236.t4))
+(step t.end (cl) :rule resolution :premises (nt236.t5.0 t236.t5))

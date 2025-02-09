@@ -1,0 +1,4 @@
+(assume t199 (= (Add_4_4_4 y$n1s4 y$n1s4) (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4))))
+(assume nt200.0 (not (= (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) (Add_4_4_4 y$n1s4 y$n1s4))))
+(step t200 (cl (= (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) (Add_4_4_4 y$n1s4 y$n1s4))) :rule symm :premises (t199))
+(step t.end (cl) :rule resolution :premises (nt200.0 t200))

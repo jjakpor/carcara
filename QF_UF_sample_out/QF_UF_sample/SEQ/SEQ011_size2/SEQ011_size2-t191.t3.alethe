@@ -1,0 +1,5 @@
+(assume t191.t2 (= (= (p1 (f7 c_0) c_0) false) (not (p1 (f7 c_0) c_0))))
+(assume nt191.t3.0 (not (= (p1 (f7 c_0) c_0) false)))
+(assume nt191.t3.1 (not (not (not (p1 (f7 c_0) c_0)))))
+(step t191.t3 (cl (= (p1 (f7 c_0) c_0) false) (not (not (p1 (f7 c_0) c_0)))) :rule equiv2 :premises (t191.t2))
+(step t.end (cl) :rule resolution :premises (nt191.t3.0 nt191.t3.1 t191.t3))

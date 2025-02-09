@@ -1,0 +1,6 @@
+(assume t14 (or (not y$prop) (not y$1437)))
+(assume t15 y$1437)
+(assume nt16.0 (not (not y$prop)))
+(step t14' (cl (not y$prop) (not y$1437)) :rule or :premises (t14))
+(step t16 (cl (not y$prop)) :rule resolution :premises (t14' t15))
+(step t.end (cl) :rule resolution :premises (nt16.0 t16))

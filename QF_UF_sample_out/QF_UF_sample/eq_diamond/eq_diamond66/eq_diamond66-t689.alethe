@@ -1,0 +1,5 @@
+(assume nt689.0 (not (not (= (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (and (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (=> (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (= x61 x62)))))))
+(assume nt689.1 (not (not (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))))))
+(assume nt689.2 (not (and (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (=> (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (= x61 x62)))))
+(step t689 (cl (not (= (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (and (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (=> (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (= x61 x62))))) (not (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62)))) (and (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (=> (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (= x61 x62)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt689.0 nt689.1 nt689.2 t689))

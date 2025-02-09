@@ -1,0 +1,4 @@
+(assume t607 (and (and (and (not (= (op e2 e0) (op e2 e1))) (not (= (op e2 e0) (op e2 e2)))) (not (= (op e2 e0) (op e2 e3)))) (not (= (op e2 e0) (op e2 e4)))))
+(assume nt608.0 (not (not (= (op e2 e0) (op e2 e4)))))
+(step t608 (cl (not (= (op e2 e0) (op e2 e4)))) :rule and :premises (t607))
+(step t.end (cl) :rule resolution :premises (nt608.0 t608))

@@ -1,0 +1,8 @@
+(assume t844 (or (= (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3))) false) (not (not (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3)))))))
+(assume t845 (or (not (not (not (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3)))))) (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3)))))
+(assume nt846.0 (not (= (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3))) false)))
+(assume nt846.1 (not (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3)))))
+(step t845' (cl (not (not (not (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3)))))) (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3)))) :rule or :premises (t845))
+(step t844' (cl (= (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3))) false) (not (not (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3)))))) :rule or :premises (t844))
+(step t846 (cl (= (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3))) false) (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3)))) :rule resolution :premises (t844' t845'))
+(step t.end (cl) :rule resolution :premises (nt846.0 nt846.1 t846))

@@ -1,0 +1,3 @@
+(assume nt58.0 (not y$id34$next_op))
+(assume t58 y$id34$next_op)
+(step t.end (cl) :rule resolution :premises (nt58.0 t58))

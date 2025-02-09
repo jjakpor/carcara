@@ -1,0 +1,5 @@
+(assume t363 (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32)))
+(assume nt364.0 (not (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))))))
+(assume nt364.1 (not (= x31 x32)))
+(step t364 (cl (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32)))) (= x31 x32)) :rule implies :premises (t363))
+(step t.end (cl) :rule resolution :premises (nt364.0 nt364.1 t364))
