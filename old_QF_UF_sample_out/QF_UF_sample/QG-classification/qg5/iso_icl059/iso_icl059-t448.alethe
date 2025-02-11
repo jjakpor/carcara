@@ -1,0 +1,5 @@
+(assume t447 (= (op e0 (op e0 e0)) (op (op (op (op e0 e0) e0) e0) e0)))
+(assume t367 (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)))
+(assume nt448.0 (not (= (= (op e0 (op e0 e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)))))
+(step t448 (cl (= (= (op e0 (op e0 e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)))) :rule cong :premises (t447 t367))
+(step t.end (cl) :rule resolution :premises (nt448.0 t448))

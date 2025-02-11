@@ -1,0 +1,5 @@
+(assume t35 (= e2 (op e1 e1)))
+(assume t50 (= (op e1 e1) (op e1 e1)))
+(assume nt86.0 (not (= (= e2 (op e1 e1)) (= (op e1 e1) (op e1 e1)))))
+(step t86 (cl (= (= e2 (op e1 e1)) (= (op e1 e1) (op e1 e1)))) :rule cong :premises (t35 t50))
+(step t.end (cl) :rule resolution :premises (nt86.0 t86))

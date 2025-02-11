@@ -1,0 +1,5 @@
+(assume t15 (= (op e2 e3) (op (op e1 e3) e3)))
+(assume t145 (= (op e4 e3) (op (op (op e1 e3) e3) e3)))
+(assume nt467.0 (not (= (= (op e2 e3) (op e4 e3)) (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3)))))
+(step t467 (cl (= (= (op e2 e3) (op e4 e3)) (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3)))) :rule cong :premises (t15 t145))
+(step t.end (cl) :rule resolution :premises (nt467.0 t467))

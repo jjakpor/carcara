@@ -1,0 +1,6 @@
+(assume t437.t3 (or (= (p1 (f6 c_1) c_1) true) (not (p1 (f6 c_1) c_1))))
+(assume t437.a3 (p1 (f6 c_1) c_1))
+(assume nt437.t4.0 (not (= (p1 (f6 c_1) c_1) true)))
+(step t437.t3' (cl (= (p1 (f6 c_1) c_1) true) (not (p1 (f6 c_1) c_1))) :rule or :premises (t437.t3))
+(step t437.t4 (cl (= (p1 (f6 c_1) c_1) true)) :rule resolution :premises (t437.t3' t437.a3))
+(step t.end (cl) :rule resolution :premises (nt437.t4.0 t437.t4))

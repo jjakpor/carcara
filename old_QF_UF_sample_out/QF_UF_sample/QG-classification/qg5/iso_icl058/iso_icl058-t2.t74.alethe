@@ -1,0 +1,4 @@
+(assume t2.t73 (= (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op e0 e0) e0) e0)) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))
+(assume nt2.t74.0 (not (= (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op e0 e0) e0) e0))) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))))
+(step t2.t74 (cl (= (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op e0 e0) e0) e0))) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))) :rule cong :premises (t2.t73))
+(step t.end (cl) :rule resolution :premises (nt2.t74.0 t2.t74))

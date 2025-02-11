@@ -1,0 +1,7 @@
+(assume t1095 (or (not (= (not (= (op e3 e0) (op e3 e4))) (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))))) (not (not (= (op e3 e0) (op e3 e4)))) (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))))
+(assume t1097 (= (not (= (op e3 e0) (op e3 e4))) (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))))
+(assume t1098 (not (= (op e3 e0) (op e3 e4))))
+(assume nt1099.0 (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))))
+(step t1095' (cl (not (= (not (= (op e3 e0) (op e3 e4))) (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))))) (not (not (= (op e3 e0) (op e3 e4)))) (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) :rule or :premises (t1095))
+(step t1099 (cl (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) :rule resolution :premises (t1095' t1097 t1098))
+(step t.end (cl) :rule resolution :premises (nt1099.0 t1099))

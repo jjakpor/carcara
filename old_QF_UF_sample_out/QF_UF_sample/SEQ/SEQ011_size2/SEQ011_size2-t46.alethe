@@ -1,0 +1,7 @@
+(assume t41 (or (not (= (or (= (f7 c_1) c_0) (= (f7 c_1) c_1)) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1))))) (not (or (= (f7 c_1) c_0) (= (f7 c_1) c_1))) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1)))))
+(assume t44 (= (or (= (f7 c_1) c_0) (= (f7 c_1) c_1)) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1)))))
+(assume t45 (or (= (f7 c_1) c_0) (= (f7 c_1) c_1)))
+(assume nt46.0 (not (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1)))))
+(step t41' (cl (not (= (or (= (f7 c_1) c_0) (= (f7 c_1) c_1)) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1))))) (not (or (= (f7 c_1) c_0) (= (f7 c_1) c_1))) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1)))) :rule or :premises (t41))
+(step t46 (cl (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1)))) :rule resolution :premises (t41' t44 t45))
+(step t.end (cl) :rule resolution :premises (nt46.0 t46))

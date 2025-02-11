@@ -49,7 +49,7 @@ use ast::{pool, Operator, PrimitivePool, Problem, Proof, ProofCommand, ProofIter
 use checker::{error::CheckerError, CheckerStatistics};
 use parser::{ParserError, Position};
 use core::{panic, slice};
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 use std::io;
 use std::time::{Duration, Instant};
 use thiserror::Error;
@@ -557,13 +557,12 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     struct Premise {
         termified: Rc<Term>,
         singleton: bool, // Cases considered are single and multiple, not empty,
-        assumption_index: (usize, usize),
+        assumption_index: Option<(usize, usize)>,
         premise_index: Option<(usize, usize)>
     }
 
     let mut premise_map: HashMap<(usize, usize), Premise> = HashMap::new();
 
-    let mut asserts : Vec<Rc<Term>>  = Vec::new();
     let mut new_proof : Proof = Proof { constant_definitions: proof.constant_definitions.clone(), commands: Vec::new()};
 
     let mut iter = proof.iter();
@@ -582,15 +581,14 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     for (i, premise) in proof_step.premises.iter().enumerate() {
         let premise_clause = iter.get_premise(*premise).clause();
         let termified = termify_clause(premise_clause, pool);
-        premise_map.insert(*premise, Premise {termified: termified, singleton: premise_clause.len() == 1, assumption_index: (0, i), premise_index: None});
+        premise_map.insert(*premise, Premise {termified: termified, singleton: premise_clause.len() == 1, assumption_index: None, premise_index: None});
     }
-
 
     // Add the negation of the goal
     let negated_goal = negation_conjuncts(&proof_step.clause, pool);
     let mut resolution_premises: Vec<(usize, usize)> = Vec::new();
 
-    let negation_base_index = proof_step.premises.len();
+    let negation_base_index = premise_map.len();
 
     for i  in 0..negated_goal.len() {
         resolution_premises.push((0, negation_base_index + i)); // If we do add a resolution step. I think last step of proof is special case
@@ -599,13 +597,18 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
 
     // Add termified premises as assumptions
     // Need to fix this to be deterministic order
+    let mut processed_premises: HashSet<(usize, usize)> = HashSet::new();
     for premise in &proof_step.premises {
-        let entry_opt = premise_map.get_mut(premise);
-        let entry = entry_opt.unwrap();
-        let premise_command = iter.get_premise(*premise);
-        new_proof.commands.push(ProofCommand::Assume { id: premise_command.id().to_string(), term: entry.termified.clone()});
-        if entry.singleton {
-            entry.premise_index = Some(entry.assumption_index);
+        if processed_premises.insert(*premise) {
+
+            let entry_opt = premise_map.get_mut(premise);
+            let entry = entry_opt.unwrap();
+            let premise_command = iter.get_premise(*premise);
+            new_proof.commands.push(ProofCommand::Assume { id: premise_command.id().to_string(), term: entry.termified.clone()});
+            entry.assumption_index = Some((0, new_proof.commands.len() - 1));
+            if entry.singleton {
+                entry.premise_index = entry.assumption_index;
+            }
         }
     }
    
@@ -620,7 +623,7 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
             let step = ProofStep {
                 clause: premise_command.clause().to_vec(),
                 rule: "or".to_string(),
-                premises: [entry.assumption_index].to_vec(), 
+                premises: [entry.assumption_index.unwrap()].to_vec(), 
                 id: format!("{}'", premise_command.id()), 
                 args: Vec::new(), discharge: Vec::new()
             };
@@ -633,7 +636,11 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
 
     let mut new_premises: Vec<(usize, usize)> = Vec::new();
     for premise in &proof_step.premises {
+
+            // println!("Inserting premise {:?}", *premise);
         new_premises.push(premise_map.get(premise).unwrap().premise_index.unwrap());
+        
+        
     }
      
     let goal_step = ProofStep {id: proof_step.id.clone(), clause: proof_step.clause.clone(), rule: proof_step.rule.clone(), premises: new_premises, args: Vec::new(), discharge: Vec::new()};
@@ -648,8 +655,11 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     let proof_string = proof_to_string(pool, &problem.prelude, &new_proof, false);
 
     let mut asserts = Vec::new();
+    processed_premises.clear();
     for premise in &proof_step.premises {
-        asserts.push(premise_map.get(&premise).unwrap().termified.clone());
+        if processed_premises.insert(*premise) {
+            asserts.push(premise_map.get(&premise).unwrap().termified.clone()); 
+        }
     }
     for conjunct in negated_goal {
         asserts.push(conjunct);

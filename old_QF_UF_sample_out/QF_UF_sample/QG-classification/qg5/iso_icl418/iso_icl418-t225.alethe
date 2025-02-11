@@ -1,0 +1,5 @@
+(assume t222 (= (= (op e1 (op e1 e1)) e1) (= e1 (op e1 (op e1 e1)))))
+(assume t224 (= (= e1 (op e1 (op e1 e1))) (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))))
+(assume nt225.0 (not (= (= (op e1 (op e1 e1)) e1) (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3)))))))
+(step t225 (cl (= (= (op e1 (op e1 e1)) e1) (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3)))))) :rule trans :premises (t222 t224))
+(step t.end (cl) :rule resolution :premises (nt225.0 t225))

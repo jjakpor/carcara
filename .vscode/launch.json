@@ -3,5 +3,20 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": []
+    "configurations": [
+
+        {
+            "name": "(lldb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/Users/jibianajakpor/carcara/target/debug/carcara",
+            "args": ["slice", "--small", "--from", "t462", "/Users/jibianajakpor/carcara/QF_UF_sample/SEQ/SEQ020_size2.alethe", "/Users/jibianajakpor/carcara/QF_UF_sample/SEQ/SEQ020_size2.smt2"],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
+        }
+
+    ]
 }

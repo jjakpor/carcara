@@ -1,0 +1,6 @@
+(assume t293 (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0)))
+(assume nt294.0 (not (= e5 e0)))
+(assume nt294.1 (not (not (= e5 (op e5 (op e5 e5))))))
+(step t293' (cl (not (= e5 (op e5 (op e5 e5)))) (= e5 e0)) :rule or :premises (t293))
+(step t294 (cl (= e5 e0) (not (= e5 (op e5 (op e5 e5))))) :rule reordering :premises (t293'))
+(step t.end (cl) :rule resolution :premises (nt294.0 nt294.1 t294))

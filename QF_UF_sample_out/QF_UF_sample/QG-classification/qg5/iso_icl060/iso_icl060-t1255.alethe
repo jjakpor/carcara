@@ -2,7 +2,7 @@
 (assume t1254 (or (not (not (not (= (op e1 e1) (op e1 (op (op e1 e3) e3)))))) (= (op e1 e1) (op e1 (op (op e1 e3) e3)))))
 (assume nt1255.0 (not (= (= (op e1 e1) (op e1 (op (op e1 e3) e3))) false)))
 (assume nt1255.1 (not (= (op e1 e1) (op e1 (op (op e1 e3) e3)))))
-(step t1253' (cl (= (= (op e1 e1) (op e1 (op (op e1 e3) e3))) false) (not (not (= (op e1 e1) (op e1 (op (op e1 e3) e3)))))) :rule or :premises (t1253))
 (step t1254' (cl (not (not (not (= (op e1 e1) (op e1 (op (op e1 e3) e3)))))) (= (op e1 e1) (op e1 (op (op e1 e3) e3)))) :rule or :premises (t1254))
+(step t1253' (cl (= (= (op e1 e1) (op e1 (op (op e1 e3) e3))) false) (not (not (= (op e1 e1) (op e1 (op (op e1 e3) e3)))))) :rule or :premises (t1253))
 (step t1255 (cl (= (= (op e1 e1) (op e1 (op (op e1 e3) e3))) false) (= (op e1 e1) (op e1 (op (op e1 e3) e3)))) :rule resolution :premises (t1253' t1254'))
 (step t.end (cl) :rule resolution :premises (nt1255.0 nt1255.1 t1255))

@@ -1,0 +1,7 @@
+(assume t236.t0 (or (not (= (= true false) false)) (not (= true false)) false))
+(assume t236.t1 (= (= true false) false))
+(assume t236.t17 (= true false))
+(assume nt236.t18.0 (not false))
+(step t236.t0' (cl (not (= (= true false) false)) (not (= true false)) false) :rule or :premises (t236.t0))
+(step t236.t18 (cl false) :rule resolution :premises (t236.t0' t236.t1 t236.t17))
+(step t.end (cl) :rule resolution :premises (nt236.t18.0 t236.t18))

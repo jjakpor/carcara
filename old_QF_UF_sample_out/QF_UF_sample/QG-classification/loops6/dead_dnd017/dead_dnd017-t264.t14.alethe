@@ -1,0 +1,5 @@
+(assume t264.t2 (= e5 e5))
+(assume t264.t13 (= e0 (op e5 e5)))
+(assume nt264.t14.0 (not (= (op e5 e0) (op e5 (op e5 e5)))))
+(step t264.t14 (cl (= (op e5 e0) (op e5 (op e5 e5)))) :rule cong :premises (t264.t2 t264.t13))
+(step t.end (cl) :rule resolution :premises (nt264.t14.0 t264.t14))

@@ -1,0 +1,7 @@
+(assume t598 (or (not (= (not (= (op e2 e0) (op e4 e0))) (not (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))) (not (not (= (op e2 e0) (op e4 e0)))) (not (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)))))
+(assume t600 (= (not (= (op e2 e0) (op e4 e0))) (not (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)))))
+(assume t601 (not (= (op e2 e0) (op e4 e0))))
+(assume nt602.0 (not (not (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)))))
+(step t598' (cl (not (= (not (= (op e2 e0) (op e4 e0))) (not (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))) (not (not (= (op e2 e0) (op e4 e0)))) (not (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)))) :rule or :premises (t598))
+(step t602 (cl (not (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)))) :rule resolution :premises (t598' t600 t601))
+(step t.end (cl) :rule resolution :premises (nt602.0 t602))

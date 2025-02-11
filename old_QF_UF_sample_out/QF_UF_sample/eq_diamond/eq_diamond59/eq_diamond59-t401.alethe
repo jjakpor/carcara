@@ -1,0 +1,5 @@
+(assume t400 (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18)))
+(assume nt401.0 (not (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))))))
+(assume nt401.1 (not (= x17 x18)))
+(step t401 (cl (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18)))) (= x17 x18)) :rule implies :premises (t400))
+(step t.end (cl) :rule resolution :premises (nt401.0 nt401.1 t401))

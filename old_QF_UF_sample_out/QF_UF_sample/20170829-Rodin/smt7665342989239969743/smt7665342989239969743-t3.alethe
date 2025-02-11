@@ -1,0 +1,7 @@
+(assume t1 (or (not (= (not (not org)) org)) (not (not (not org))) org))
+(assume t2 (= (not (not org)) org))
+(assume a5 (not (not org)))
+(assume nt3.0 (not org))
+(step t1' (cl (not (= (not (not org)) org)) (not (not (not org))) org) :rule or :premises (t1))
+(step t3 (cl org) :rule resolution :premises (t1' t2 a5))
+(step t.end (cl) :rule resolution :premises (nt3.0 t3))

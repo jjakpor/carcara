@@ -1,0 +1,5 @@
+(assume t282 (= (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)) (or (not (= e5 (op e5 (op e5 e5)))) (= unit e5))))
+(assume t289 (= (or (not (= e5 (op e5 (op e5 e5)))) (= unit e5)) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0))))
+(assume nt290.0 (not (= (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0)))))
+(step t290 (cl (= (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0)))) :rule trans :premises (t282 t289))
+(step t.end (cl) :rule resolution :premises (nt290.0 t290))

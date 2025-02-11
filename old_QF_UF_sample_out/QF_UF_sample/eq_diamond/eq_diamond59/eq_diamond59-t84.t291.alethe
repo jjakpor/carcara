@@ -1,0 +1,5 @@
+(assume nt84.t291.0 (not (not (= (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (and (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (=> (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (= x27 x28)))))))
+(assume nt84.t291.1 (not (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))))
+(assume nt84.t291.2 (not (and (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (=> (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (= x27 x28)))))
+(step t84.t291 (cl (not (= (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (and (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (=> (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (= x27 x28))))) (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28)))) (and (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (=> (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (= x27 x28)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt84.t291.0 nt84.t291.1 nt84.t291.2 t84.t291))

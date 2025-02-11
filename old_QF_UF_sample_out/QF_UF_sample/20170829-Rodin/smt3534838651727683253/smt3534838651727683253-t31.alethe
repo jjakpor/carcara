@@ -1,0 +1,7 @@
+(assume t0 (or (not (= (not (not (and (not (= nf0 flash)) (= nf0 nf)))) false)) (not (not (not (and (not (= nf0 flash)) (= nf0 nf))))) false))
+(assume t30 (= (not (not (and (not (= nf0 flash)) (= nf0 nf)))) false))
+(assume a3 (not (not (and (not (= nf0 flash)) (= nf0 nf)))))
+(assume nt31.0 (not false))
+(step t0' (cl (not (= (not (not (and (not (= nf0 flash)) (= nf0 nf)))) false)) (not (not (not (and (not (= nf0 flash)) (= nf0 nf))))) false) :rule or :premises (t0))
+(step t31 (cl false) :rule resolution :premises (t0' t30 a3))
+(step t.end (cl) :rule resolution :premises (nt31.0 t31))

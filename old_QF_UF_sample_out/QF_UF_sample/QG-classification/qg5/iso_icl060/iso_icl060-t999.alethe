@@ -1,0 +1,4 @@
+(assume nt999.0 (not (or (not (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))) (not (not (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))) (not (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1)))))))
+(assume nt999.1 (not (not (not (= (op e1 e3) (op e3 (op e3 (op e1 e3))))))))
+(step t999 (cl (or (not (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))) (not (not (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))) (not (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))) (not (not (= (op e1 e3) (op e3 (op e3 (op e1 e3))))))) :rule or_neg)
+(step t.end (cl) :rule resolution :premises (nt999.0 nt999.1 t999))

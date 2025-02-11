@@ -1,0 +1,5 @@
+(assume t1 (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))
+(assume t744 (not (and (= x14 z14) (= z14 x15))))
+(assume t746 (not (and (= x14 y14) (= y14 x15))))
+(step t1' (cl (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) :rule or :premises (t1))
+(step t747 (cl) :rule resolution :premises (t1' t744 t746))

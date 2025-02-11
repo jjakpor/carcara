@@ -1,0 +1,7 @@
+(assume t831 (= (op e4 (op e3 e4)) (op (op (op e3 e4) e3) (op e3 e4))))
+(assume t840 (= (op (op (op e3 e4) e3) (op e3 e4)) e3))
+(assume t663 (= e3 (op (op (op e4 e3) e3) (op e4 e3))))
+(assume t751 (= (op (op (op e4 e3) e3) (op e4 e3)) (op (op e3 e4) (op e4 e3))))
+(assume nt841.0 (not (= (op e4 (op e3 e4)) (op (op e3 e4) (op e4 e3)))))
+(step t841 (cl (= (op e4 (op e3 e4)) (op (op e3 e4) (op e4 e3)))) :rule trans :premises (t831 t840 t663 t751))
+(step t.end (cl) :rule resolution :premises (nt841.0 t841))

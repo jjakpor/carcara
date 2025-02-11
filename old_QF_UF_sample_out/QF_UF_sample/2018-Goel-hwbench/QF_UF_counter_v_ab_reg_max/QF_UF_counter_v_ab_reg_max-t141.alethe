@@ -1,0 +1,5 @@
+(assume nt141.0 (not (not (= y$26 (= y$26 true)))))
+(assume nt141.1 (not (not y$26)))
+(assume nt141.2 (not (= y$26 true)))
+(step t141 (cl (not (= y$26 (= y$26 true))) (not y$26) (= y$26 true)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt141.0 nt141.1 nt141.2 t141))

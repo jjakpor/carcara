@@ -1,0 +1,5 @@
+(assume t33 (= (= prt (not (not prt))) (= prt prt)))
+(assume t34 (= (= prt prt) true))
+(assume nt35.0 (not (= (= prt (not (not prt))) true)))
+(step t35 (cl (= (= prt (not (not prt))) true)) :rule trans :premises (t33 t34))
+(step t.end (cl) :rule resolution :premises (nt35.0 t35))

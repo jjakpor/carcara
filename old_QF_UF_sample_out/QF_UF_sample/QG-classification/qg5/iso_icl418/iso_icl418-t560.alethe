@@ -1,0 +1,5 @@
+(assume t557 (= (not (= (op e4 e1) (op e4 e3))) (not (= (op e4 (op e4 e3)) (op e4 e3)))))
+(assume t559 (= (not (= (op e4 (op e4 e3)) (op e4 e3))) (not (= (op e4 e3) (op e4 (op e4 e3))))))
+(assume nt560.0 (not (= (not (= (op e4 e1) (op e4 e3))) (not (= (op e4 e3) (op e4 (op e4 e3)))))))
+(step t560 (cl (= (not (= (op e4 e1) (op e4 e3))) (not (= (op e4 e3) (op e4 (op e4 e3)))))) :rule trans :premises (t557 t559))
+(step t.end (cl) :rule resolution :premises (nt560.0 t560))

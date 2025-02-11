@@ -1,0 +1,7 @@
+(assume t605 (or (= e1 (op (op (op e1 e3) e3) (op e1 e3))) (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))) (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))))))
+(assume nt606.0 (not (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))))))
+(assume nt606.1 (not (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))))))
+(assume nt606.2 (not (= e1 (op (op (op e1 e3) e3) (op e1 e3)))))
+(step t605' (cl (= e1 (op (op (op e1 e3) e3) (op e1 e3))) (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))) (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))))) :rule or :premises (t605))
+(step t606 (cl (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))) (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))) (= e1 (op (op (op e1 e3) e3) (op e1 e3)))) :rule reordering :premises (t605'))
+(step t.end (cl) :rule resolution :premises (nt606.0 nt606.1 nt606.2 t606))

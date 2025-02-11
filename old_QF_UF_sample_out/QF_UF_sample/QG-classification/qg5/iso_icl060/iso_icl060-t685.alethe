@@ -1,0 +1,5 @@
+(assume nt685.0 (not (not (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))))
+(assume nt685.1 (not (not (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))))
+(assume nt685.2 (not (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op e1 e3)))))
+(step t685 (cl (not (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))) (not (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))) (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op e1 e3)))) :rule subproof)
+(step t.end (cl) :rule resolution :premises (nt685.0 nt685.1 nt685.2 t685))

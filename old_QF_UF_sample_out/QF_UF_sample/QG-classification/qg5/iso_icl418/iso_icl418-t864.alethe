@@ -1,0 +1,8 @@
+(assume t862 (= (= e4 (op e3 e0)) (= e4 (op e3 (op (op e4 e3) (op e4 e3))))))
+(assume t57 (= (= e3 (op e3 e0)) (= e3 (op e3 (op (op e4 e3) (op e4 e3))))))
+(assume t580 (= (= e2 (op e3 e0)) (= (op e3 e4) (op e3 (op (op e4 e3) (op e4 e3))))))
+(assume t863 (= (= e0 (op e3 e0)) (= (op (op e4 e3) (op e4 e3)) (op e3 (op (op e4 e3) (op e4 e3))))))
+(assume t672 (= (= e1 (op e3 e0)) (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3))))))
+(assume nt864.0 (not (= (or (= e4 (op e3 e0)) (= e3 (op e3 e0)) (= e2 (op e3 e0)) (= e0 (op e3 e0)) (= e1 (op e3 e0))) (or (= e4 (op e3 (op (op e4 e3) (op e4 e3)))) (= e3 (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e3 e4) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op (op e4 e3) (op e4 e3)) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3))))))))
+(step t864 (cl (= (or (= e4 (op e3 e0)) (= e3 (op e3 e0)) (= e2 (op e3 e0)) (= e0 (op e3 e0)) (= e1 (op e3 e0))) (or (= e4 (op e3 (op (op e4 e3) (op e4 e3)))) (= e3 (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e3 e4) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op (op e4 e3) (op e4 e3)) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3))))))) :rule cong :premises (t862 t57 t580 t863 t672))
+(step t.end (cl) :rule resolution :premises (nt864.0 t864))

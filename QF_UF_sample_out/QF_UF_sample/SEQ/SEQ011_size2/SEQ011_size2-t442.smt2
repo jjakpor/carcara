@@ -26,7 +26,6 @@
 (assert (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1))))
 (assert (or (p1 (f7 c_1) c_1) (not (p1 (f5 c_1) c_1)) (not (= c_0 (f7 c_1))) (not (= c_0 (f5 c_1)))))
 (assert (p1 (f5 c_1) c_1))
-(assert (not (p1 (f7 c_1) c_1)))
 (assert (or (= c_0 (f6 c_1)) (= c_1 (f6 c_1))))
 (assert (or (= (f6 c_1) (f5 c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))))
 (assert (not (= (f6 c_1) (f5 c_1))))

@@ -1,0 +1,4 @@
+(assume t184 (= (= e0 e2) (= e2 e0)))
+(assume nt185.0 (not (= (not (= e0 e2)) (not (= e2 e0)))))
+(step t185 (cl (= (not (= e0 e2)) (not (= e2 e0)))) :rule cong :premises (t184))
+(step t.end (cl) :rule resolution :premises (nt185.0 t185))

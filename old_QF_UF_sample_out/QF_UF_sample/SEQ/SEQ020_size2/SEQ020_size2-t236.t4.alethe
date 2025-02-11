@@ -1,0 +1,6 @@
+(assume t236.t3 (or (= (p1 (f6 c_0) c_0) true) (not (p1 (f6 c_0) c_0))))
+(assume t236.a3 (p1 (f6 c_0) c_0))
+(assume nt236.t4.0 (not (= (p1 (f6 c_0) c_0) true)))
+(step t236.t3' (cl (= (p1 (f6 c_0) c_0) true) (not (p1 (f6 c_0) c_0))) :rule or :premises (t236.t3))
+(step t236.t4 (cl (= (p1 (f6 c_0) c_0) true)) :rule resolution :premises (t236.t3' t236.a3))
+(step t.end (cl) :rule resolution :premises (nt236.t4.0 t236.t4))

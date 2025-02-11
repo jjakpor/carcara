@@ -1,0 +1,7 @@
+(assume t335 (or (not (= (= (op e0 e3) (op e3 e0)) (= (op (op (op (op e0 e0) e0) e0) e0) (op e0 (op (op (op e0 e0) e0) e0))))) (not (= (op e0 e3) (op e3 e0))) (= (op (op (op (op e0 e0) e0) e0) e0) (op e0 (op (op (op e0 e0) e0) e0)))))
+(assume t338 (= (= (op e0 e3) (op e3 e0)) (= (op (op (op (op e0 e0) e0) e0) e0) (op e0 (op (op (op e0 e0) e0) e0)))))
+(assume t340 (= (op e0 e3) (op e3 e0)))
+(assume nt341.0 (not (= (op (op (op (op e0 e0) e0) e0) e0) (op e0 (op (op (op e0 e0) e0) e0)))))
+(step t335' (cl (not (= (= (op e0 e3) (op e3 e0)) (= (op (op (op (op e0 e0) e0) e0) e0) (op e0 (op (op (op e0 e0) e0) e0))))) (not (= (op e0 e3) (op e3 e0))) (= (op (op (op (op e0 e0) e0) e0) e0) (op e0 (op (op (op e0 e0) e0) e0)))) :rule or :premises (t335))
+(step t341 (cl (= (op (op (op (op e0 e0) e0) e0) e0) (op e0 (op (op (op e0 e0) e0) e0)))) :rule resolution :premises (t335' t338 t340))
+(step t.end (cl) :rule resolution :premises (nt341.0 t341))

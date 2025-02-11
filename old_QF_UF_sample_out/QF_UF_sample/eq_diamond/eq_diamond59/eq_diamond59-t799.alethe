@@ -1,0 +1,6 @@
+(assume t798 (or (= x53 x54) (not (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))))))
+(assume t794 (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))))
+(assume nt799.0 (not (= x53 x54)))
+(step t798' (cl (= x53 x54) (not (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))))) :rule or :premises (t798))
+(step t799 (cl (= x53 x54)) :rule resolution :premises (t798' t794))
+(step t.end (cl) :rule resolution :premises (nt799.0 t799))

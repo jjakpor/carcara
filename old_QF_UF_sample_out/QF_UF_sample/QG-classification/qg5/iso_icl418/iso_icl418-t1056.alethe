@@ -1,0 +1,5 @@
+(assume t1053 (= (= (op (op e1 e2) e1) e2) (= e2 (op (op e1 e2) e1))))
+(assume t1055 (= (= e2 (op (op e1 e2) e1)) (= (op e3 e4) (op (op (op e4 e3) (op e3 e4)) (op e4 e3)))))
+(assume nt1056.0 (not (= (= (op (op e1 e2) e1) e2) (= (op e3 e4) (op (op (op e4 e3) (op e3 e4)) (op e4 e3))))))
+(step t1056 (cl (= (= (op (op e1 e2) e1) e2) (= (op e3 e4) (op (op (op e4 e3) (op e3 e4)) (op e4 e3))))) :rule trans :premises (t1053 t1055))
+(step t.end (cl) :rule resolution :premises (nt1056.0 t1056))

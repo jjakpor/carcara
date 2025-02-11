@@ -1,0 +1,6 @@
+(assume t4 (or (not (= (= (not (not clk)) clk) true)) (= (not (not clk)) clk)))
+(assume t11 (= (= (not (not clk)) clk) true))
+(assume nt12.0 (not (= (not (not clk)) clk)))
+(step t4' (cl (not (= (= (not (not clk)) clk) true)) (= (not (not clk)) clk)) :rule or :premises (t4))
+(step t12 (cl (= (not (not clk)) clk)) :rule resolution :premises (t4' t11))
+(step t.end (cl) :rule resolution :premises (nt12.0 t12))

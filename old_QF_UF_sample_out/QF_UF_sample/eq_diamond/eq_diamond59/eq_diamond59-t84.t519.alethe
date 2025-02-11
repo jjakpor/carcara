@@ -1,0 +1,5 @@
+(assume t84.t518 (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48)))
+(assume nt84.t519.0 (not (not (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))))))
+(assume nt84.t519.1 (not (= x47 x48)))
+(step t84.t519 (cl (not (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48)))) (= x47 x48)) :rule implies :premises (t84.t518))
+(step t.end (cl) :rule resolution :premises (nt84.t519.0 nt84.t519.1 t84.t519))

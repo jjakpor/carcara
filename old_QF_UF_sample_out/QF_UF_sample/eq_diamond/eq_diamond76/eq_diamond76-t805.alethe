@@ -1,0 +1,6 @@
+(assume t804 (or (not (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72)))) (= x71 x72)))
+(assume nt805.0 (not (= x71 x72)))
+(assume nt805.1 (not (not (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))))))
+(step t804' (cl (not (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72)))) (= x71 x72)) :rule or :premises (t804))
+(step t805 (cl (= x71 x72) (not (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))))) :rule reordering :premises (t804'))
+(step t.end (cl) :rule resolution :premises (nt805.0 nt805.1 t805))

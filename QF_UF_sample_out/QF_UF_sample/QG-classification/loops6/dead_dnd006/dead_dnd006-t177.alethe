@@ -2,7 +2,7 @@
 (assume t176 (or (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) (= e3 (op e3 (op e3 e3)))))
 (assume nt177.0 (not (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3))))))
 (assume nt177.1 (not (= e3 (op e3 (op e3 e3)))))
-(step t170' (cl (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))) (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) :rule or :premises (t170))
 (step t176' (cl (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) (= e3 (op e3 (op e3 e3)))) :rule or :premises (t176))
+(step t170' (cl (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))) (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) :rule or :premises (t170))
 (step t177 (cl (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))) (= e3 (op e3 (op e3 e3)))) :rule resolution :premises (t170' t176'))
 (step t.end (cl) :rule resolution :premises (nt177.0 nt177.1 t177))

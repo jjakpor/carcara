@@ -1,0 +1,8 @@
+(assume t922 (or (= e1 (op e3 (op (op e1 e3) e3))) (= e1 (op e3 e3)) (= e1 (op e3 (op e1 e3))) (= e1 (op e3 (op (op e1 e3) e1))) (= e1 (op e3 e1))))
+(assume nt923.0 (not (= e1 (op e3 (op (op e1 e3) e3)))))
+(assume nt923.1 (not (= e1 (op e3 e3))))
+(assume nt923.2 (not (= e1 (op e3 (op e1 e3)))))
+(assume nt923.3 (not (= e1 (op e3 (op (op e1 e3) e1)))))
+(assume nt923.4 (not (= e1 (op e3 e1))))
+(step t923 (cl (= e1 (op e3 (op (op e1 e3) e3))) (= e1 (op e3 e3)) (= e1 (op e3 (op e1 e3))) (= e1 (op e3 (op (op e1 e3) e1))) (= e1 (op e3 e1))) :rule or :premises (t922))
+(step t.end (cl) :rule resolution :premises (nt923.0 nt923.1 nt923.2 nt923.3 nt923.4 t923))

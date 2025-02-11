@@ -1,0 +1,3 @@
+(assume nt1.0 (not (= (not i2) (not i2))))
+(step t1 (cl (= (not i2) (not i2))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt1.0 t1))

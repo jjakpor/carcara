@@ -1,0 +1,5 @@
+(assume nt756.0 (not (not (= (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (and (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (=> (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (= x50 x51)))))))
+(assume nt756.1 (not (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))))))
+(assume nt756.2 (not (and (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (=> (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (= x50 x51)))))
+(step t756 (cl (not (= (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (and (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (=> (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (= x50 x51))))) (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51)))) (and (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (=> (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (= x50 x51)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt756.0 nt756.1 nt756.2 t756))

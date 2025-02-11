@@ -1,0 +1,7 @@
+(assume t602.t0 (or (not (= (= (op e4 (op e4 e1)) e1) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))) (not (= (op e4 (op e4 e1)) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))))
+(assume t602.t4 (= (= (op e4 (op e4 e1)) e1) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))))
+(assume t602.t9 (= (op e4 (op e4 e1)) e1))
+(assume nt602.t10.0 (not (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))))
+(step t602.t0' (cl (not (= (= (op e4 (op e4 e1)) e1) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))) (not (= (op e4 (op e4 e1)) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))) :rule or :premises (t602.t0))
+(step t602.t10 (cl (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))) :rule resolution :premises (t602.t0' t602.t4 t602.t9))
+(step t.end (cl) :rule resolution :premises (nt602.t10.0 t602.t10))

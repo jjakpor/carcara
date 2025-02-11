@@ -1,0 +1,3 @@
+(assume nt106.0 (not (= (= e4 (op (op e4 e3) (op e3 e4))) (= e4 (op (op e4 e3) (op e3 e4))))))
+(step t106 (cl (= (= e4 (op (op e4 e3) (op e3 e4))) (= e4 (op (op e4 e3) (op e3 e4))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt106.0 t106))

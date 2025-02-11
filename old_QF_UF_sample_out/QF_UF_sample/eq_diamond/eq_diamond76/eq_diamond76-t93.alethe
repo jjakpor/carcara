@@ -1,0 +1,4 @@
+(assume t92 (and (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5))))
+(assume nt93.0 (not (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5))))
+(step t93 (cl (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5))) :rule and :premises (t92))
+(step t.end (cl) :rule resolution :premises (nt93.0 t93))

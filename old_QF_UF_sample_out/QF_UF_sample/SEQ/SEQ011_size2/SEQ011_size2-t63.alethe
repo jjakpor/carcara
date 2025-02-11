@@ -1,0 +1,4 @@
+(assume nt63.0 (not (=> (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false)))
+(assume nt63.1 (not (not false)))
+(step t63 (cl (=> (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false) (not false)) :rule implies_neg2)
+(step t.end (cl) :rule resolution :premises (nt63.0 nt63.1 t63))

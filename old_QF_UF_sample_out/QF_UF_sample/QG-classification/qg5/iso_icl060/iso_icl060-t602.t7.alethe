@@ -1,0 +1,4 @@
+(assume t602.t6 (and (and (and (= (op e4 (op e4 e0)) e0) (= (op e4 (op e4 e1)) e1)) (= (op e4 (op e4 e2)) e2)) (= (op e4 (op e4 e3)) e3)))
+(assume nt602.t7.0 (not (and (and (= (op e4 (op e4 e0)) e0) (= (op e4 (op e4 e1)) e1)) (= (op e4 (op e4 e2)) e2))))
+(step t602.t7 (cl (and (and (= (op e4 (op e4 e0)) e0) (= (op e4 (op e4 e1)) e1)) (= (op e4 (op e4 e2)) e2))) :rule and :premises (t602.t6))
+(step t.end (cl) :rule resolution :premises (nt602.t7.0 t602.t7))

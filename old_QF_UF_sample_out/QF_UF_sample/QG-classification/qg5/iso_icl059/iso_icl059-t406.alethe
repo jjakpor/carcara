@@ -1,0 +1,7 @@
+(assume t399 (or (not (= (not (= (op e2 e3) (op e3 e3))) (not (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0)))))) (not (not (= (op e2 e3) (op e3 e3)))) (not (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0))))))
+(assume t401 (= (not (= (op e2 e3) (op e3 e3))) (not (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0))))))
+(assume t405 (not (= (op e2 e3) (op e3 e3))))
+(assume nt406.0 (not (not (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0))))))
+(step t399' (cl (not (= (not (= (op e2 e3) (op e3 e3))) (not (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0)))))) (not (not (= (op e2 e3) (op e3 e3)))) (not (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0))))) :rule or :premises (t399))
+(step t406 (cl (not (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0))))) :rule resolution :premises (t399' t401 t405))
+(step t.end (cl) :rule resolution :premises (nt406.0 t406))

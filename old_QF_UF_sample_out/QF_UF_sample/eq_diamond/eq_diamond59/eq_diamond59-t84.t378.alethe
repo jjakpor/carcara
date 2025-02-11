@@ -1,0 +1,6 @@
+(assume t84.t377 (or (= x34 x35) (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))))
+(assume t84.t373 (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))
+(assume nt84.t378.0 (not (= x34 x35)))
+(step t84.t377' (cl (= x34 x35) (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))) :rule or :premises (t84.t377))
+(step t84.t378 (cl (= x34 x35)) :rule resolution :premises (t84.t377' t84.t373))
+(step t.end (cl) :rule resolution :premises (nt84.t378.0 t84.t378))

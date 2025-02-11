@@ -1,0 +1,5 @@
+(assume t111 (= (or (not (= e1 (op e1 (op e1 e1)))) (= unit e1)) (or (not (= e1 (op e1 (op e1 e1)))) (= e0 e1))))
+(assume t113 (= (or (not (= e1 (op e1 (op e1 e1)))) (= e0 e1)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0))))
+(assume nt114.0 (not (= (or (not (= e1 (op e1 (op e1 e1)))) (= unit e1)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)))))
+(step t114 (cl (= (or (not (= e1 (op e1 (op e1 e1)))) (= unit e1)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)))) :rule trans :premises (t111 t113))
+(step t.end (cl) :rule resolution :premises (nt114.0 t114))

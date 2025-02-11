@@ -1,0 +1,4 @@
+(assume t84.t20 (and (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (=> (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (= x9 x10))))
+(assume nt84.t21.0 (not (=> (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (= x9 x10))))
+(step t84.t21 (cl (=> (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (= x9 x10))) :rule and :premises (t84.t20))
+(step t.end (cl) :rule resolution :premises (nt84.t21.0 t84.t21))

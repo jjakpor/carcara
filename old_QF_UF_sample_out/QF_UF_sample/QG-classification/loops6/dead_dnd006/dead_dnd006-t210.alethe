@@ -1,0 +1,4 @@
+(assume t209 (and (= (op unit e3) e3) (= (op e3 unit) e3)))
+(assume nt210.0 (not (= (op e3 unit) e3)))
+(step t210 (cl (= (op e3 unit) e3)) :rule and :premises (t209))
+(step t.end (cl) :rule resolution :premises (nt210.0 t210))

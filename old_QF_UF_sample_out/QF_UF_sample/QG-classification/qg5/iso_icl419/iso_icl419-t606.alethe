@@ -1,0 +1,4 @@
+(assume nt606.0 (not (not (not (not (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3))))))))
+(assume nt606.1 (not (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3)))))
+(step t606 (cl (not (not (not (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3)))))) (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3)))) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nt606.0 nt606.1 t606))

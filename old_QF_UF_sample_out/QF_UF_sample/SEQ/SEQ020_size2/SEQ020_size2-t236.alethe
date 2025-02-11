@@ -1,0 +1,7 @@
+(assume nt236.0 (not (not (not (p1 (f7 c_0) c_0)))))
+(assume nt236.1 (not (not (= c_1 (f7 c_0)))))
+(assume nt236.2 (not (not (= c_1 (f6 c_0)))))
+(assume nt236.3 (not (not (p1 (f6 c_0) c_0))))
+(assume nt236.4 (not false))
+(step t236 (cl (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0)) false) :rule subproof)
+(step t.end (cl) :rule resolution :premises (nt236.0 nt236.1 nt236.2 nt236.3 nt236.4 t236))

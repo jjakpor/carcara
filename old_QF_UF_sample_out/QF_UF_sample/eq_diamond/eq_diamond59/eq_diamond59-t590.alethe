@@ -1,0 +1,6 @@
+(assume t589 (or (= x34 x35) (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))))
+(assume t585 (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))
+(assume nt590.0 (not (= x34 x35)))
+(step t589' (cl (= x34 x35) (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))) :rule or :premises (t589))
+(step t590 (cl (= x34 x35)) :rule resolution :premises (t589' t585))
+(step t.end (cl) :rule resolution :premises (nt590.0 t590))

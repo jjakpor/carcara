@@ -1,0 +1,3 @@
+(assume nt101.0 (not (= (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) true)))
+(step t101 (cl (= (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) true)) :rule rare_rewrite)
+(step t.end (cl) :rule resolution :premises (nt101.0 t101))

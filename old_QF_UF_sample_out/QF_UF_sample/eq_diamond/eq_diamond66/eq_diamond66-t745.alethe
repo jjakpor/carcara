@@ -1,0 +1,4 @@
+(assume nt745.0 (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15)))))
+(assume nt745.1 (not (not (and (= x14 y14) (= y14 x15)))))
+(step t745 (cl (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (not (and (= x14 y14) (= y14 x15)))) :rule or_neg)
+(step t.end (cl) :rule resolution :premises (nt745.0 nt745.1 t745))

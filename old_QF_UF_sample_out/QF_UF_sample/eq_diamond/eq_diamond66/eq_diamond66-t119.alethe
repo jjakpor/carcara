@@ -1,0 +1,6 @@
+(assume t118 (or (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (= x5 x6)))
+(assume nt119.0 (not (= x5 x6)))
+(assume nt119.1 (not (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))))
+(step t118' (cl (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (= x5 x6)) :rule or :premises (t118))
+(step t119 (cl (= x5 x6) (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))) :rule reordering :premises (t118'))
+(step t.end (cl) :rule resolution :premises (nt119.0 nt119.1 t119))

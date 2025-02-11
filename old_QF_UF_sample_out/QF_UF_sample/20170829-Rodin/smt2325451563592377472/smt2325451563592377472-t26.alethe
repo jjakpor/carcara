@@ -1,0 +1,5 @@
+(assume t25 (not (and prt (or (not car) clk))))
+(assume nt26.0 (not (not prt)))
+(assume nt26.1 (not (not (or (not car) clk))))
+(step t26 (cl (not prt) (not (or (not car) clk))) :rule not_and :premises (t25))
+(step t.end (cl) :rule resolution :premises (nt26.0 nt26.1 t26))

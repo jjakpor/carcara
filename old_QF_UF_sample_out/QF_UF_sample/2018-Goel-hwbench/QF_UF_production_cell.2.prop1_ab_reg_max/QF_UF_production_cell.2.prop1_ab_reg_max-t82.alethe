@@ -1,0 +1,7 @@
+(assume t70 (or (not (= y$78 (= y$v_k_Deposit y$v_k_Press))) (not y$78) (= y$v_k_Deposit y$v_k_Press)))
+(assume t80 (= y$78 (= y$v_k_Deposit y$v_k_Press)))
+(assume t81 y$78)
+(assume nt82.0 (not (= y$v_k_Deposit y$v_k_Press)))
+(step t70' (cl (not (= y$78 (= y$v_k_Deposit y$v_k_Press))) (not y$78) (= y$v_k_Deposit y$v_k_Press)) :rule or :premises (t70))
+(step t82 (cl (= y$v_k_Deposit y$v_k_Press)) :rule resolution :premises (t70' t80 t81))
+(step t.end (cl) :rule resolution :premises (nt82.0 t82))

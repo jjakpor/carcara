@@ -1,0 +1,7 @@
+(assume t153.t0 (or (not (= (= true false) false)) (not (= true false)) false))
+(assume t153.t1 (= (= true false) false))
+(assume t153.t17 (= true false))
+(assume nt153.t18.0 (not false))
+(step t153.t0' (cl (not (= (= true false) false)) (not (= true false)) false) :rule or :premises (t153.t0))
+(step t153.t18 (cl false) :rule resolution :premises (t153.t0' t153.t1 t153.t17))
+(step t.end (cl) :rule resolution :premises (nt153.t18.0 t153.t18))

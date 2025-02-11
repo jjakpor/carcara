@@ -1,0 +1,5 @@
+(assume nt1192.0 (not (not (= (not (= (op e0 e0) (op e3 e0))) (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))))))
+(assume nt1192.1 (not (not (not (= (op e0 e0) (op e3 e0))))))
+(assume nt1192.2 (not (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))))
+(step t1192 (cl (not (= (not (= (op e0 e0) (op e3 e0))) (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))) (not (not (= (op e0 e0) (op e3 e0)))) (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt1192.0 nt1192.1 nt1192.2 t1192))

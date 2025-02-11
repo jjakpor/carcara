@@ -1,0 +1,4 @@
+(assume t8 (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3))))
+(assume nt9.0 (not (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3))))
+(step t9 (cl (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3))) :rule and :premises (t8))
+(step t.end (cl) :rule resolution :premises (nt9.0 t9))

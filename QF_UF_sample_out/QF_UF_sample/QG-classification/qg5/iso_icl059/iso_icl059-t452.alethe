@@ -2,7 +2,7 @@
 (assume t451 (or (not (not (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))) (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))
 (assume nt452.0 (not (= (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)) false)))
 (assume nt452.1 (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))
-(step t451' (cl (not (not (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))) (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))) :rule or :premises (t451))
 (step t450' (cl (= (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)) false) (not (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))) :rule or :premises (t450))
+(step t451' (cl (not (not (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))) (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))) :rule or :premises (t451))
 (step t452 (cl (= (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)) false) (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))) :rule resolution :premises (t450' t451'))
 (step t.end (cl) :rule resolution :premises (nt452.0 nt452.1 t452))

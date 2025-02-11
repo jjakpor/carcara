@@ -1,0 +1,5 @@
+(assume nt723.0 (not (not (= (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (and (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48)))))))
+(assume nt723.1 (not (not (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))))))
+(assume nt723.2 (not (and (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48)))))
+(step t723 (cl (not (= (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (and (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48))))) (not (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48)))) (and (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt723.0 nt723.1 nt723.2 t723))

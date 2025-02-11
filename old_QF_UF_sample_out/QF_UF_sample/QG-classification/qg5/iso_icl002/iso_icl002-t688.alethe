@@ -1,0 +1,5 @@
+(assume t687 (= (= (= (op e0 e0) (op (op e0 e0) e0)) false) (not (= (op e0 e0) (op (op e0 e0) e0)))))
+(assume nt688.0 (not (= (= (op e0 e0) (op (op e0 e0) e0)) false)))
+(assume nt688.1 (not (not (not (= (op e0 e0) (op (op e0 e0) e0))))))
+(step t688 (cl (= (= (op e0 e0) (op (op e0 e0) e0)) false) (not (not (= (op e0 e0) (op (op e0 e0) e0))))) :rule equiv2 :premises (t687))
+(step t.end (cl) :rule resolution :premises (nt688.0 nt688.1 t688))

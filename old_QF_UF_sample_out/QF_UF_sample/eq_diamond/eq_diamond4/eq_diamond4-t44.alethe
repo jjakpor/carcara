@@ -1,0 +1,5 @@
+(assume t37 (= (= x1 x2) (= x0 x3)))
+(assume t43 (= (= x0 x3) false))
+(assume nt44.0 (not (= (= x1 x2) false)))
+(step t44 (cl (= (= x1 x2) false)) :rule trans :premises (t37 t43))
+(step t.end (cl) :rule resolution :premises (nt44.0 t44))

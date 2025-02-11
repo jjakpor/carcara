@@ -1,0 +1,5 @@
+(assume t105 (= y$n0s8 y$v_k_Table))
+(assume t109 (= y$n255s8 y$n255s8))
+(assume nt110.0 (not (= (= y$n0s8 y$n255s8) (= y$v_k_Table y$n255s8))))
+(step t110 (cl (= (= y$n0s8 y$n255s8) (= y$v_k_Table y$n255s8))) :rule cong :premises (t105 t109))
+(step t.end (cl) :rule resolution :premises (nt110.0 t110))

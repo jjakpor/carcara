@@ -1,0 +1,5 @@
+(assume nt84.t236.0 (not (not (= (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (and (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23)))))))
+(assume nt84.t236.1 (not (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))))))
+(assume nt84.t236.2 (not (and (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23)))))
+(step t84.t236 (cl (not (= (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (and (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23))))) (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23)))) (and (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt84.t236.0 nt84.t236.1 nt84.t236.2 t84.t236))

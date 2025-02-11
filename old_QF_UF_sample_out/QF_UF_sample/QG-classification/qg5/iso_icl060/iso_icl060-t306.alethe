@@ -1,0 +1,5 @@
+(assume t305 (= (= (= (op e3 e3) (op (op (op e1 e3) e1) e3)) false) (not (= (op e3 e3) (op (op (op e1 e3) e1) e3)))))
+(assume nt306.0 (not (= (= (op e3 e3) (op (op (op e1 e3) e1) e3)) false)))
+(assume nt306.1 (not (not (not (= (op e3 e3) (op (op (op e1 e3) e1) e3))))))
+(step t306 (cl (= (= (op e3 e3) (op (op (op e1 e3) e1) e3)) false) (not (not (= (op e3 e3) (op (op (op e1 e3) e1) e3))))) :rule equiv2 :premises (t305))
+(step t.end (cl) :rule resolution :premises (nt306.0 nt306.1 t306))

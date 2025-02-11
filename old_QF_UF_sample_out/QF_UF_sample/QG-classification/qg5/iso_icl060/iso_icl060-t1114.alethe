@@ -1,0 +1,7 @@
+(assume nt1114.0 (not (and (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) (= e1 (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op e3 (op e1 e3))))))
+(assume nt1114.1 (not (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))))
+(assume nt1114.2 (not (not (= e1 (op (op (op e1 e3) e1) e3)))))
+(assume nt1114.3 (not (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)))))
+(assume nt1114.4 (not (not (= (op (op e1 e3) e1) (op e3 (op e1 e3))))))
+(step t1114 (cl (and (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) (= e1 (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op e3 (op e1 e3)))) (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (not (= e1 (op (op (op e1 e3) e1) e3))) (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3))) (not (= (op (op e1 e3) e1) (op e3 (op e1 e3))))) :rule and_neg)
+(step t.end (cl) :rule resolution :premises (nt1114.0 nt1114.1 nt1114.2 nt1114.3 nt1114.4 t1114))

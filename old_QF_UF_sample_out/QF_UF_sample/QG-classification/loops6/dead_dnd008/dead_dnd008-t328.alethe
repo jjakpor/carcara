@@ -1,0 +1,4 @@
+(assume t137 (and (not (= e0 e1)) (not (= e0 e2))))
+(assume nt328.0 (not (not (= e0 e2))))
+(step t328 (cl (not (= e0 e2))) :rule and :premises (t137))
+(step t.end (cl) :rule resolution :premises (nt328.0 t328))

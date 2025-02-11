@@ -1,0 +1,7 @@
+(assume t90 (or (not (= (= y$28 (= y$27 y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4)))))) (not (= y$28 (= y$27 y$prop$next))) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4))))))
+(assume t103 (= (= y$28 (= y$27 y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4))))))
+(assume t107 (= y$28 (= y$27 y$prop$next)))
+(assume nt108.0 (not (= y$28 (= y$prop$next (not (= y$X$next y$n15s4))))))
+(step t90' (cl (not (= (= y$28 (= y$27 y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4)))))) (not (= y$28 (= y$27 y$prop$next))) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4))))) :rule or :premises (t90))
+(step t108 (cl (= y$28 (= y$prop$next (not (= y$X$next y$n15s4))))) :rule resolution :premises (t90' t103 t107))
+(step t.end (cl) :rule resolution :premises (nt108.0 t108))

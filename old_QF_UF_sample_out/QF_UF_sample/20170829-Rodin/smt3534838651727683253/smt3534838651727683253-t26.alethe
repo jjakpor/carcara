@@ -1,0 +1,5 @@
+(assume t25 (= (not (= nf0 nf0)) false))
+(assume t22 (= (= nf0 nf0) true))
+(assume nt26.0 (not (= (and (not (= nf0 nf0)) (= nf0 nf0)) (and false true))))
+(step t26 (cl (= (and (not (= nf0 nf0)) (= nf0 nf0)) (and false true))) :rule cong :premises (t25 t22))
+(step t.end (cl) :rule resolution :premises (nt26.0 t26))

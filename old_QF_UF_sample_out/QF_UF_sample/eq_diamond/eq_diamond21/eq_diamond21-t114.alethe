@@ -1,0 +1,5 @@
+(assume t113 (=> (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (= x9 x10)))
+(assume nt114.0 (not (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))))
+(assume nt114.1 (not (= x9 x10)))
+(step t114 (cl (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10)))) (= x9 x10)) :rule implies :premises (t113))
+(step t.end (cl) :rule resolution :premises (nt114.0 nt114.1 t114))

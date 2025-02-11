@@ -1,0 +1,6 @@
+(assume t243 (or (not (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21)))) (= x20 x21)))
+(assume nt244.0 (not (= x20 x21)))
+(assume nt244.1 (not (not (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21))))))
+(step t243' (cl (not (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21)))) (= x20 x21)) :rule or :premises (t243))
+(step t244 (cl (= x20 x21) (not (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21))))) :rule reordering :premises (t243'))
+(step t.end (cl) :rule resolution :premises (nt244.0 nt244.1 t244))

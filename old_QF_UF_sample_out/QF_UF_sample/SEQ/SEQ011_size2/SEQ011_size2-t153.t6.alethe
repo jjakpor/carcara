@@ -1,0 +1,4 @@
+(assume t153.a2 (= c_0 (f6 c_0)))
+(assume nt153.t6.0 (not (= (f6 c_0) c_0)))
+(step t153.t6 (cl (= (f6 c_0) c_0)) :rule symm :premises (t153.a2))
+(step t.end (cl) :rule resolution :premises (nt153.t6.0 t153.t6))

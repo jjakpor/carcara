@@ -1,0 +1,6 @@
+(assume t84.t552 (or (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51)))) (= x50 x51)))
+(assume nt84.t553.0 (not (= x50 x51)))
+(assume nt84.t553.1 (not (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))))))
+(step t84.t552' (cl (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51)))) (= x50 x51)) :rule or :premises (t84.t552))
+(step t84.t553 (cl (= x50 x51) (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))))) :rule reordering :premises (t84.t552'))
+(step t.end (cl) :rule resolution :premises (nt84.t553.0 nt84.t553.1 t84.t553))

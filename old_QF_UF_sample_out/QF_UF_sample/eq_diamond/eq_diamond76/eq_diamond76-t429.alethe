@@ -1,0 +1,4 @@
+(assume t428 (and (or (and (= x37 y37) (= y37 x38)) (and (= x37 z37) (= z37 x38))) (=> (or (and (= x37 y37) (= y37 x38)) (and (= x37 z37) (= z37 x38))) (= x37 x38))))
+(assume nt429.0 (not (=> (or (and (= x37 y37) (= y37 x38)) (and (= x37 z37) (= z37 x38))) (= x37 x38))))
+(step t429 (cl (=> (or (and (= x37 y37) (= y37 x38)) (and (= x37 z37) (= z37 x38))) (= x37 x38))) :rule and :premises (t428))
+(step t.end (cl) :rule resolution :premises (nt429.0 t429))

@@ -1,0 +1,5 @@
+(assume nt1.0 (not (not (= (not (not org)) org))))
+(assume nt1.1 (not (not (not (not org)))))
+(assume nt1.2 (not org))
+(step t1 (cl (not (= (not (not org)) org)) (not (not (not org))) org) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt1.0 nt1.1 nt1.2 t1))

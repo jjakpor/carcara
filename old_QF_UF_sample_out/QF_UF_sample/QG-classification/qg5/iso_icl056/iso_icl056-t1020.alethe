@@ -1,0 +1,8 @@
+(assume t565 (= (= (op e3 e4) e0) (= e0 (op e3 e4))))
+(assume t968 (= (= (op e3 e3) e0) (= e0 (op e3 e3))))
+(assume t821 (= (= (op e3 e2) e0) (= e0 (op e3 e2))))
+(assume t1019 (= (= (op e3 e0) e0) (= e0 (op e3 e0))))
+(assume t10 (= (= (op e3 e1) e0) (= e0 (op e3 e1))))
+(assume nt1020.0 (not (= (or (= (op e3 e4) e0) (= (op e3 e3) e0) (= (op e3 e2) e0) (= (op e3 e0) e0) (= (op e3 e1) e0)) (or (= e0 (op e3 e4)) (= e0 (op e3 e3)) (= e0 (op e3 e2)) (= e0 (op e3 e0)) (= e0 (op e3 e1))))))
+(step t1020 (cl (= (or (= (op e3 e4) e0) (= (op e3 e3) e0) (= (op e3 e2) e0) (= (op e3 e0) e0) (= (op e3 e1) e0)) (or (= e0 (op e3 e4)) (= e0 (op e3 e3)) (= e0 (op e3 e2)) (= e0 (op e3 e0)) (= e0 (op e3 e1))))) :rule cong :premises (t565 t968 t821 t1019 t10))
+(step t.end (cl) :rule resolution :premises (nt1020.0 t1020))

@@ -1,0 +1,7 @@
+(assume t274 (or (not (= (= (op (op e0 e2) e0) e2) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3))))) (not (= (op (op e0 e2) e0) e2)) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)))))
+(assume t278 (= (= (op (op e0 e2) e0) e2) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)))))
+(assume t283 (= (op (op e0 e2) e0) e2))
+(assume nt284.0 (not (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)))))
+(step t274' (cl (not (= (= (op (op e0 e2) e0) e2) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3))))) (not (= (op (op e0 e2) e0) e2)) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)))) :rule or :premises (t274))
+(step t284 (cl (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)))) :rule resolution :premises (t274' t278 t283))
+(step t.end (cl) :rule resolution :premises (nt284.0 t284))

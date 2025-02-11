@@ -1,0 +1,5 @@
+(assume t97 (= y$27 (not (= y$X$next y$n15s4))))
+(assume t98 (= y$prop$next y$prop$next))
+(assume nt99.0 (not (= (= y$27 y$prop$next) (= (not (= y$X$next y$n15s4)) y$prop$next))))
+(step t99 (cl (= (= y$27 y$prop$next) (= (not (= y$X$next y$n15s4)) y$prop$next))) :rule cong :premises (t97 t98))
+(step t.end (cl) :rule resolution :premises (nt99.0 t99))

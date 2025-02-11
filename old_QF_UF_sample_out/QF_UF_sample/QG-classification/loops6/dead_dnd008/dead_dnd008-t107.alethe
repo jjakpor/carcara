@@ -1,0 +1,5 @@
+(assume t105 (= (not (= (op e1 (op e1 e1)) e1)) (not (= e1 (op e1 (op e1 e1))))))
+(assume t106 (= (= e1 unit) (= unit e1)))
+(assume nt107.0 (not (= (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit)) (or (not (= e1 (op e1 (op e1 e1)))) (= unit e1)))))
+(step t107 (cl (= (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit)) (or (not (= e1 (op e1 (op e1 e1)))) (= unit e1)))) :rule cong :premises (t105 t106))
+(step t.end (cl) :rule resolution :premises (nt107.0 t107))

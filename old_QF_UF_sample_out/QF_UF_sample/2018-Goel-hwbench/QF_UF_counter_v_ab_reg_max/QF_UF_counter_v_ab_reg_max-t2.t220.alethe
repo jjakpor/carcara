@@ -1,0 +1,6 @@
+(assume t2.t190 (or (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))
+(assume t2.t219 (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))
+(assume nt2.t220.0 (not (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false)))
+(step t2.t190' (cl (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) :rule or :premises (t2.t190))
+(step t2.t220 (cl (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false)) :rule resolution :premises (t2.t190' t2.t219))
+(step t.end (cl) :rule resolution :premises (nt2.t220.0 t2.t220))

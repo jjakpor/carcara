@@ -1,0 +1,5 @@
+(assume t202 (= (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))) false) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))))))
+(assume nt203.0 (not (not (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))) false))))
+(assume nt203.1 (not (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))))))
+(step t203 (cl (not (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))) false)) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))))) :rule equiv1 :premises (t202))
+(step t.end (cl) :rule resolution :premises (nt203.0 nt203.1 t203))

@@ -1,0 +1,7 @@
+(assume t147 (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0)))
+(assume t148 (= (not (= c_0 (f7 c_0))) (not (= c_0 (f7 c_0)))))
+(assume t149 (= (not (= c_0 (f6 c_0))) (not (= c_0 (f6 c_0)))))
+(assume t150 (= (not (p1 (f6 c_0) c_0)) (not (p1 (f6 c_0) c_0))))
+(assume nt151.0 (not (= (or (not (not (p1 (f7 c_0) c_0))) (not (= c_0 (f7 c_0))) (not (= c_0 (f6 c_0))) (not (p1 (f6 c_0) c_0))) (or (p1 (f7 c_0) c_0) (not (= c_0 (f7 c_0))) (not (= c_0 (f6 c_0))) (not (p1 (f6 c_0) c_0))))))
+(step t151 (cl (= (or (not (not (p1 (f7 c_0) c_0))) (not (= c_0 (f7 c_0))) (not (= c_0 (f6 c_0))) (not (p1 (f6 c_0) c_0))) (or (p1 (f7 c_0) c_0) (not (= c_0 (f7 c_0))) (not (= c_0 (f6 c_0))) (not (p1 (f6 c_0) c_0))))) :rule cong :premises (t147 t148 t149 t150))
+(step t.end (cl) :rule resolution :premises (nt151.0 t151))

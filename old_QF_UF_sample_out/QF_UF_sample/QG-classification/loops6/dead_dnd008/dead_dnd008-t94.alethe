@@ -1,0 +1,7 @@
+(assume t93 (or (= e1 (op e1 (op e1 e1))) (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))))))
+(assume nt94.0 (not (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))))))
+(assume nt94.1 (not (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))))))
+(assume nt94.2 (not (= e1 (op e1 (op e1 e1)))))
+(step t93' (cl (= e1 (op e1 (op e1 e1))) (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))))) :rule or :premises (t93))
+(step t94 (cl (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (= e1 (op e1 (op e1 e1)))) :rule reordering :premises (t93'))
+(step t.end (cl) :rule resolution :premises (nt94.0 nt94.1 nt94.2 t94))

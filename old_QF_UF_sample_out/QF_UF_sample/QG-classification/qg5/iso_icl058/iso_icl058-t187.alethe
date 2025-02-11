@@ -1,0 +1,3 @@
+(assume nt187.0 (not (= (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) true)))
+(step t187 (cl (= (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) true)) :rule rare_rewrite)
+(step t.end (cl) :rule resolution :premises (nt187.0 t187))

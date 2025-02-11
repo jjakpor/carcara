@@ -1,0 +1,5 @@
+(assume nt256.0 (not (not (= (= (op e3 e4) (op e4 e3)) (= (op (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0)))))))
+(assume nt256.1 (not (not (= (op e3 e4) (op e4 e3)))))
+(assume nt256.2 (not (= (op (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0)))))
+(step t256 (cl (not (= (= (op e3 e4) (op e4 e3)) (= (op (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0))))) (not (= (op e3 e4) (op e4 e3))) (= (op (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt256.0 nt256.1 nt256.2 t256))

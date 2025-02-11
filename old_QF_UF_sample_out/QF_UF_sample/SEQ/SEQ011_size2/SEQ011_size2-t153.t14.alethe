@@ -1,0 +1,4 @@
+(assume nt153.t14.0 (not (not (not (not (p1 (f7 c_0) c_0))))))
+(assume nt153.t14.1 (not (p1 (f7 c_0) c_0)))
+(step t153.t14 (cl (not (not (not (p1 (f7 c_0) c_0)))) (p1 (f7 c_0) c_0)) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nt153.t14.0 nt153.t14.1 t153.t14))

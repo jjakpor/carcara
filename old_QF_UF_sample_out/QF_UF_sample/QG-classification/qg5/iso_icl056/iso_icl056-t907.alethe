@@ -1,0 +1,8 @@
+(assume t320 (= (= (op e4 e4) e3) (= e3 (op e4 e4))))
+(assume t563 (= (= (op e3 e4) e3) (= e3 (op e3 e4))))
+(assume t905 (= (= (op e2 e4) e3) (= e3 (op e2 e4))))
+(assume t22 (= (= (op e0 e4) e3) (= e3 (op e0 e4))))
+(assume t906 (= (= (op e1 e4) e3) (= e3 (op e1 e4))))
+(assume nt907.0 (not (= (or (= (op e4 e4) e3) (= (op e3 e4) e3) (= (op e2 e4) e3) (= (op e0 e4) e3) (= (op e1 e4) e3)) (or (= e3 (op e4 e4)) (= e3 (op e3 e4)) (= e3 (op e2 e4)) (= e3 (op e0 e4)) (= e3 (op e1 e4))))))
+(step t907 (cl (= (or (= (op e4 e4) e3) (= (op e3 e4) e3) (= (op e2 e4) e3) (= (op e0 e4) e3) (= (op e1 e4) e3)) (or (= e3 (op e4 e4)) (= e3 (op e3 e4)) (= e3 (op e2 e4)) (= e3 (op e0 e4)) (= e3 (op e1 e4))))) :rule cong :premises (t320 t563 t905 t22 t906))
+(step t.end (cl) :rule resolution :premises (nt907.0 t907))

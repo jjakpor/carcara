@@ -1,0 +1,4 @@
+(assume t807 (= (op (op e4 e3) (op (op e4 e3) (op e4 e3))) (op e3 (op e3 e4))))
+(assume nt808.0 (not (= (op e3 (op e3 e4)) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))))
+(step t808 (cl (= (op e3 (op e3 e4)) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))) :rule symm :premises (t807))
+(step t.end (cl) :rule resolution :premises (nt808.0 t808))

@@ -1,0 +1,5 @@
+(assume t11 (= (not (not prt)) prt))
+(assume t61 (= (not red_MR) (not red_MR)))
+(assume nt62.0 (not (= (or (not (not prt)) (not red_MR)) (or prt (not red_MR)))))
+(step t62 (cl (= (or (not (not prt)) (not red_MR)) (or prt (not red_MR)))) :rule cong :premises (t11 t61))
+(step t.end (cl) :rule resolution :premises (nt62.0 t62))

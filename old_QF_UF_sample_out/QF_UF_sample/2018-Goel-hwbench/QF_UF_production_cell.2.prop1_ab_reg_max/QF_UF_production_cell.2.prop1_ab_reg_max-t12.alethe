@@ -1,0 +1,7 @@
+(assume t7 (or (not (= y$64 (= y$v_A y$v_B))) (not y$64) (= y$v_A y$v_B)))
+(assume t10 (= y$64 (= y$v_A y$v_B)))
+(assume t11 y$64)
+(assume nt12.0 (not (= y$v_A y$v_B)))
+(step t7' (cl (not (= y$64 (= y$v_A y$v_B))) (not y$64) (= y$v_A y$v_B)) :rule or :premises (t7))
+(step t12 (cl (= y$v_A y$v_B)) :rule resolution :premises (t7' t10 t11))
+(step t.end (cl) :rule resolution :premises (nt12.0 t12))

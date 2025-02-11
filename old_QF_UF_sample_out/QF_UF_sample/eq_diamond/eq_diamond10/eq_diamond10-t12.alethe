@@ -1,0 +1,3 @@
+(assume nt12.0 (not (= (= (= x4 x5) false) (not (= x4 x5)))))
+(step t12 (cl (= (= (= x4 x5) false) (not (= x4 x5)))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nt12.0 t12))

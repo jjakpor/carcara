@@ -1,0 +1,5 @@
+(assume t779 (= (= (op e1 e2) (op e2 e1)) (= (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 (op e0 e0))))))
+(assume t780 (= (= (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 (op e0 e0)))) (= (op (op (op e0 (op e0 e0)) e0) (op e0 (op e0 e0))) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)))))
+(assume nt781.0 (not (= (= (op e1 e2) (op e2 e1)) (= (op (op (op e0 (op e0 e0)) e0) (op e0 (op e0 e0))) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0))))))
+(step t781 (cl (= (= (op e1 e2) (op e2 e1)) (= (op (op (op e0 (op e0 e0)) e0) (op e0 (op e0 e0))) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0))))) :rule trans :premises (t779 t780))
+(step t.end (cl) :rule resolution :premises (nt781.0 t781))

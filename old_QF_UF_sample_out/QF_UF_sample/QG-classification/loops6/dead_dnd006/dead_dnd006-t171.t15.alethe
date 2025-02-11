@@ -1,0 +1,5 @@
+(assume t171.t8 (= e3 (op e3 e0)))
+(assume t171.t14 (= (op e3 e0) (op e3 (op e3 e3))))
+(assume nt171.t15.0 (not (= e3 (op e3 (op e3 e3)))))
+(step t171.t15 (cl (= e3 (op e3 (op e3 e3)))) :rule trans :premises (t171.t8 t171.t14))
+(step t.end (cl) :rule resolution :premises (nt171.t15.0 t171.t15))

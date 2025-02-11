@@ -1,0 +1,5 @@
+(assume t138 (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))
+(assume nt139.0 (not (not (= e2 (op e2 (op e2 e2))))))
+(assume nt139.1 (not (= e2 e0)))
+(step t139 (cl (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)) :rule or :premises (t138))
+(step t.end (cl) :rule resolution :premises (nt139.0 nt139.1 t139))

@@ -1,0 +1,4 @@
+(assume t331 (and (and (and (not (= (op e0 e2) (op e1 e2))) (not (= (op e0 e2) (op e2 e2)))) (not (= (op e0 e2) (op e3 e2)))) (not (= (op e0 e2) (op e4 e2)))))
+(assume nt332.0 (not (and (and (not (= (op e0 e2) (op e1 e2))) (not (= (op e0 e2) (op e2 e2)))) (not (= (op e0 e2) (op e3 e2))))))
+(step t332 (cl (and (and (not (= (op e0 e2) (op e1 e2))) (not (= (op e0 e2) (op e2 e2)))) (not (= (op e0 e2) (op e3 e2))))) :rule and :premises (t331))
+(step t.end (cl) :rule resolution :premises (nt332.0 t332))

@@ -1,0 +1,5 @@
+(assume t439 (= (or (or (or (or (= (op e0 e4) e0) (= (op e0 e4) e1)) (= (op e0 e4) e2)) (= (op e0 e4) e3)) (= (op e0 e4) e4)) (or (= (op e0 e4) e4) (= (op e0 e4) e3) (= (op e0 e4) e2) (= (op e0 e4) e0) (= (op e0 e4) e1))))
+(assume t443 (= (or (= (op e0 e4) e4) (= (op e0 e4) e3) (= (op e0 e4) e2) (= (op e0 e4) e0) (= (op e0 e4) e1)) (or (= e4 (op e0 e4)) (= e3 (op e0 e4)) (= e2 (op e0 e4)) (= e0 (op e0 e4)) (= e1 (op e0 e4)))))
+(assume nt444.0 (not (= (or (or (or (or (= (op e0 e4) e0) (= (op e0 e4) e1)) (= (op e0 e4) e2)) (= (op e0 e4) e3)) (= (op e0 e4) e4)) (or (= e4 (op e0 e4)) (= e3 (op e0 e4)) (= e2 (op e0 e4)) (= e0 (op e0 e4)) (= e1 (op e0 e4))))))
+(step t444 (cl (= (or (or (or (or (= (op e0 e4) e0) (= (op e0 e4) e1)) (= (op e0 e4) e2)) (= (op e0 e4) e3)) (= (op e0 e4) e4)) (or (= e4 (op e0 e4)) (= e3 (op e0 e4)) (= e2 (op e0 e4)) (= e0 (op e0 e4)) (= e1 (op e0 e4))))) :rule trans :premises (t439 t443))
+(step t.end (cl) :rule resolution :premises (nt444.0 t444))

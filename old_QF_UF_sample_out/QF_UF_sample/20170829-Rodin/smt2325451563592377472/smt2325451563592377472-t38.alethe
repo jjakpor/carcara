@@ -1,0 +1,3 @@
+(assume nt38.0 (not (= (not clk) (not clk))))
+(step t38 (cl (= (not clk) (not clk))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt38.0 t38))

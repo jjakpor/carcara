@@ -3,7 +3,7 @@
 (assume nt1153.0 (not (not (= (op (op e1 e3) e1) (op e3 (op e1 e3))))))
 (assume nt1153.1 (not (not (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))))
 (assume nt1153.2 (not (= (op e1 e3) (op e3 (op (op e1 e3) e1)))))
-(step t1140' (cl (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))) (not (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))) :rule or :premises (t1140))
 (step t1152' (cl (not (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))) (= (op e1 e3) (op e3 (op (op e1 e3) e1)))) :rule or :premises (t1152))
+(step t1140' (cl (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))) (not (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))) :rule or :premises (t1140))
 (step t1153 (cl (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))) (not (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (= (op e1 e3) (op e3 (op (op e1 e3) e1)))) :rule resolution :premises (t1140' t1152'))
 (step t.end (cl) :rule resolution :premises (nt1153.0 nt1153.1 nt1153.2 t1153))

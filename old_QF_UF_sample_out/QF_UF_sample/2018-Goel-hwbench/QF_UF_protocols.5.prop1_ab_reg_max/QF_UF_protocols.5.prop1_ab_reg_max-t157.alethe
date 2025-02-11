@@ -1,0 +1,6 @@
+(assume t120 (or (not (not (not y$288))) y$288))
+(assume t156 (not (not y$288)))
+(assume nt157.0 (not y$288))
+(step t120' (cl (not (not (not y$288))) y$288) :rule or :premises (t120))
+(step t157 (cl y$288) :rule resolution :premises (t120' t156))
+(step t.end (cl) :rule resolution :premises (nt157.0 t157))

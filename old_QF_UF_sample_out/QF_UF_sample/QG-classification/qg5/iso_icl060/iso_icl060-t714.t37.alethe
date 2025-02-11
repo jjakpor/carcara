@@ -1,0 +1,5 @@
+(assume t714.t14 (= (= (op (op e1 e3) e3) (op e3 (op (op e1 e3) e1))) (= (op e3 e1) (op e3 (op (op e1 e3) e1)))))
+(assume t714.t36 (= (= (op e3 e1) (op e3 (op (op e1 e3) e1))) false))
+(assume nt714.t37.0 (not (= (= (op (op e1 e3) e3) (op e3 (op (op e1 e3) e1))) false)))
+(step t714.t37 (cl (= (= (op (op e1 e3) e3) (op e3 (op (op e1 e3) e1))) false)) :rule trans :premises (t714.t14 t714.t36))
+(step t.end (cl) :rule resolution :premises (nt714.t37.0 t714.t37))

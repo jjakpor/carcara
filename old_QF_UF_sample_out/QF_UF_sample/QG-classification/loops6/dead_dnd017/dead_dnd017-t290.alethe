@@ -1,0 +1,5 @@
+(assume t288 (= (not (= (op e5 (op e5 e5)) e5)) (not (= e5 (op e5 (op e5 e5))))))
+(assume t289 (= (= e5 unit) (= unit e5)))
+(assume nt290.0 (not (= (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)) (or (not (= e5 (op e5 (op e5 e5)))) (= unit e5)))))
+(step t290 (cl (= (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)) (or (not (= e5 (op e5 (op e5 e5)))) (= unit e5)))) :rule cong :premises (t288 t289))
+(step t.end (cl) :rule resolution :premises (nt290.0 t290))

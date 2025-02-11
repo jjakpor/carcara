@@ -1,0 +1,5 @@
+(assume t341 (or (=> (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))) (= (f6 c_1) (f5 c_1))) (=> (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))) (= (f6 c_1) (f5 c_1)))))
+(assume nt342.0 (not (=> (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))) (= (f6 c_1) (f5 c_1)))))
+(step t341' (cl (=> (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))) (= (f6 c_1) (f5 c_1))) (=> (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))) (= (f6 c_1) (f5 c_1)))) :rule or :premises (t341))
+(step t342 (cl (=> (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))) (= (f6 c_1) (f5 c_1)))) :rule contraction :premises (t341'))
+(step t.end (cl) :rule resolution :premises (nt342.0 t342))

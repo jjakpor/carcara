@@ -2,7 +2,7 @@
 (assume t441 (or (not (not (not (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0))))) (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0))))
 (assume nt442.0 (not (= (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)) false)))
 (assume nt442.1 (not (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0))))
-(step t440' (cl (= (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)) false) (not (not (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0))))) :rule or :premises (t440))
 (step t441' (cl (not (not (not (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0))))) (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0))) :rule or :premises (t441))
+(step t440' (cl (= (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)) false) (not (not (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0))))) :rule or :premises (t440))
 (step t442 (cl (= (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)) false) (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0))) :rule resolution :premises (t440' t441'))
 (step t.end (cl) :rule resolution :premises (nt442.0 nt442.1 t442))

@@ -1,0 +1,4 @@
+(assume t164 (and (= (op unit e0) e0) (= (op e0 unit) e0)))
+(assume nt165.0 (not (= (op unit e0) e0)))
+(step t165 (cl (= (op unit e0) e0)) :rule and :premises (t164))
+(step t.end (cl) :rule resolution :premises (nt165.0 t165))

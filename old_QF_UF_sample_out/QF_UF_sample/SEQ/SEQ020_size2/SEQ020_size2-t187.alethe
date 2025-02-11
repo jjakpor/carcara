@@ -1,0 +1,4 @@
+(assume nt187.0 (not (=> (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false)))
+(assume nt187.1 (not (not false)))
+(step t187 (cl (=> (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false) (not false)) :rule implies_neg2)
+(step t.end (cl) :rule resolution :premises (nt187.0 nt187.1 t187))

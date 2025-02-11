@@ -1,0 +1,5 @@
+(assume t342 (= e0 (op e0 (op (op (op e0 e0) e0) e0))))
+(assume t768 (= (op e0 (op (op e0 e0) e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0))))
+(assume nt769.0 (not (= (= e0 (op e0 (op (op e0 e0) e0))) (= (op e0 (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0))))))
+(step t769 (cl (= (= e0 (op e0 (op (op e0 e0) e0))) (= (op e0 (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0))))) :rule cong :premises (t342 t768))
+(step t.end (cl) :rule resolution :premises (nt769.0 t769))

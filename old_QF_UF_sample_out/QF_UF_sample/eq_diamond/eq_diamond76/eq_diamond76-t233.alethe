@@ -1,0 +1,6 @@
+(assume t232 (or (not (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20)))) (= x19 x20)))
+(assume nt233.0 (not (= x19 x20)))
+(assume nt233.1 (not (not (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))))))
+(step t232' (cl (not (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20)))) (= x19 x20)) :rule or :premises (t232))
+(step t233 (cl (= x19 x20) (not (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))))) :rule reordering :premises (t232'))
+(step t.end (cl) :rule resolution :premises (nt233.0 nt233.1 t233))

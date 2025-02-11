@@ -1,0 +1,5 @@
+(assume nt1000.0 (not (not (= (not (= (op e1 e4) (op e2 e4))) (not (= (op (op e4 e3) e4) (op (op e3 e4) e4)))))))
+(assume nt1000.1 (not (not (not (= (op e1 e4) (op e2 e4))))))
+(assume nt1000.2 (not (not (= (op (op e4 e3) e4) (op (op e3 e4) e4)))))
+(step t1000 (cl (not (= (not (= (op e1 e4) (op e2 e4))) (not (= (op (op e4 e3) e4) (op (op e3 e4) e4))))) (not (not (= (op e1 e4) (op e2 e4)))) (not (= (op (op e4 e3) e4) (op (op e3 e4) e4)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt1000.0 nt1000.1 nt1000.2 t1000))

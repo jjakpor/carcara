@@ -1,0 +1,3 @@
+(assume nt8.0 (not (= flash flash)))
+(step t8 (cl (= flash flash)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt8.0 t8))

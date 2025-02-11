@@ -1,0 +1,5 @@
+(assume nt438.0 (not (not (= (not (= (op e1 e1) (op e1 e2))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op e0 e0))))))))
+(assume nt438.1 (not (not (not (= (op e1 e1) (op e1 e2))))))
+(assume nt438.2 (not (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op e0 e0))))))
+(step t438 (cl (not (= (not (= (op e1 e1) (op e1 e2))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op e0 e0)))))) (not (not (= (op e1 e1) (op e1 e2)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op e0 e0))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt438.0 nt438.1 nt438.2 t438))

@@ -1,0 +1,3 @@
+(assume nt437.t7.0 (not (= c_1 c_1)))
+(step t437.t7 (cl (= c_1 c_1)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt437.t7.0 t437.t7))

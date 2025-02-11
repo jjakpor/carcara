@@ -1,0 +1,3 @@
+(assume nt525.0 (not (= (= (op e4 e3) (op e4 e4)) (= (op e4 e3) (op e4 e4)))))
+(step t525 (cl (= (= (op e4 e3) (op e4 e4)) (= (op e4 e3) (op e4 e4)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt525.0 t525))

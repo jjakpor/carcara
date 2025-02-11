@@ -1,0 +1,5 @@
+(assume t118 (= y$id44_op (and y$59 (= y$n5s8 y$v_done))))
+(assume t126 (= (and y$59 (= y$n5s8 y$v_done)) (and true (= y$n5s8 y$v_k_Table))))
+(assume nt127.0 (not (= y$id44_op (and true (= y$n5s8 y$v_k_Table)))))
+(step t127 (cl (= y$id44_op (and true (= y$n5s8 y$v_k_Table)))) :rule trans :premises (t118 t126))
+(step t.end (cl) :rule resolution :premises (nt127.0 t127))

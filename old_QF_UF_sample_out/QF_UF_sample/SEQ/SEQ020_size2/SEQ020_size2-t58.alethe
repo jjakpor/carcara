@@ -1,0 +1,6 @@
+(assume t50 (or (not (= (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1))) true)) (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1)))))
+(assume t57 (= (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1))) true))
+(assume nt58.0 (not (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1)))))
+(step t50' (cl (not (= (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1))) true)) (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1)))) :rule or :premises (t50))
+(step t58 (cl (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1)))) :rule resolution :premises (t50' t57))
+(step t.end (cl) :rule resolution :premises (nt58.0 t58))

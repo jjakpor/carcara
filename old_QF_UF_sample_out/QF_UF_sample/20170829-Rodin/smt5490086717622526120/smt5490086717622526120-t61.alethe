@@ -1,0 +1,3 @@
+(assume nt61.0 (not (= (not red_MR) (not red_MR))))
+(step t61 (cl (= (not red_MR) (not red_MR))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt61.0 t61))

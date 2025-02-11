@@ -1,0 +1,4 @@
+(assume t747 (and (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (=> (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (= x66 x67))))
+(assume nt748.0 (not (=> (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (= x66 x67))))
+(step t748 (cl (=> (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (= x66 x67))) :rule and :premises (t747))
+(step t.end (cl) :rule resolution :premises (nt748.0 t748))

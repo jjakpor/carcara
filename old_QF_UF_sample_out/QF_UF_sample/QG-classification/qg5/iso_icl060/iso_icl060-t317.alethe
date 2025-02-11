@@ -1,0 +1,7 @@
+(assume t309 (or (not (= (not (= (op e0 e3) (op e3 e3))) (not (= (op e3 e3) (op (op (op e1 e3) e1) e3))))) (not (not (= (op e0 e3) (op e3 e3)))) (not (= (op e3 e3) (op (op (op e1 e3) e1) e3)))))
+(assume t315 (= (not (= (op e0 e3) (op e3 e3))) (not (= (op e3 e3) (op (op (op e1 e3) e1) e3)))))
+(assume t316 (not (= (op e0 e3) (op e3 e3))))
+(assume nt317.0 (not (not (= (op e3 e3) (op (op (op e1 e3) e1) e3)))))
+(step t309' (cl (not (= (not (= (op e0 e3) (op e3 e3))) (not (= (op e3 e3) (op (op (op e1 e3) e1) e3))))) (not (not (= (op e0 e3) (op e3 e3)))) (not (= (op e3 e3) (op (op (op e1 e3) e1) e3)))) :rule or :premises (t309))
+(step t317 (cl (not (= (op e3 e3) (op (op (op e1 e3) e1) e3)))) :rule resolution :premises (t309' t315 t316))
+(step t.end (cl) :rule resolution :premises (nt317.0 t317))

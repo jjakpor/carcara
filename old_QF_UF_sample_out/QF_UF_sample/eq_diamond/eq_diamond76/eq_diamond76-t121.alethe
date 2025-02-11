@@ -1,0 +1,4 @@
+(assume t120 (= x2 x3))
+(assume nt121.0 (not (= x3 x2)))
+(step t121 (cl (= x3 x2)) :rule symm :premises (t120))
+(step t.end (cl) :rule resolution :premises (nt121.0 t121))

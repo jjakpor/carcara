@@ -1,0 +1,3 @@
+(assume nt133.0 (not (= (or (or (or (or (= (op e0 e2) e3) (= (op e1 e2) e3)) (= (op e2 e2) e3)) (= (op e3 e2) e3)) (= (op e4 e2) e3)) (or (= (op e4 e2) e3) (= (op e3 e2) e3) (= (op e2 e2) e3) (= (op e0 e2) e3) (= (op e1 e2) e3)))))
+(step t133 (cl (= (or (or (or (or (= (op e0 e2) e3) (= (op e1 e2) e3)) (= (op e2 e2) e3)) (= (op e3 e2) e3)) (= (op e4 e2) e3)) (or (= (op e4 e2) e3) (= (op e3 e2) e3) (= (op e2 e2) e3) (= (op e0 e2) e3) (= (op e1 e2) e3)))) :rule hole)
+(step t.end (cl) :rule resolution :premises (nt133.0 t133))

@@ -1,0 +1,6 @@
+(assume t826 (or (not (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74)))) (= x73 x74)))
+(assume nt827.0 (not (= x73 x74)))
+(assume nt827.1 (not (not (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))))))
+(step t826' (cl (not (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74)))) (= x73 x74)) :rule or :premises (t826))
+(step t827 (cl (= x73 x74) (not (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))))) :rule reordering :premises (t826'))
+(step t.end (cl) :rule resolution :premises (nt827.0 nt827.1 t827))

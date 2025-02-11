@@ -1,0 +1,6 @@
+(assume t118 (or (= x9 x10) (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))))
+(assume t114 (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))
+(assume nt119.0 (not (= x9 x10)))
+(step t118' (cl (= x9 x10) (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))) :rule or :premises (t118))
+(step t119 (cl (= x9 x10)) :rule resolution :premises (t118' t114))
+(step t.end (cl) :rule resolution :premises (nt119.0 t119))

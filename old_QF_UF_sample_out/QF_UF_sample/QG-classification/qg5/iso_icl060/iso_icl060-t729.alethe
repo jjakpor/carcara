@@ -1,0 +1,4 @@
+(assume nt729.0 (not (or (not (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3))))) (not (= e1 (op e3 (op (op e1 e3) e3)))) (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (not (= (op (op e1 e3) e3) (op e3 (op (op e1 e3) e1)))))))
+(assume nt729.1 (not (not (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))))))
+(step t729 (cl (or (not (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3))))) (not (= e1 (op e3 (op (op e1 e3) e3)))) (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (not (= (op (op e1 e3) e3) (op e3 (op (op e1 e3) e1))))) (not (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))))) :rule or_neg)
+(step t.end (cl) :rule resolution :premises (nt729.0 nt729.1 t729))

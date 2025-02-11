@@ -1,0 +1,5 @@
+(assume nt165.0 (not (not (= (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))))))
+(assume nt165.1 (not (not (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)))))
+(assume nt165.2 (not (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))))
+(step t165 (cl (not (= (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0))))) (not (or (= (f7 c_0) c_0) (= (f7 c_0) c_1))) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt165.0 nt165.1 nt165.2 t165))

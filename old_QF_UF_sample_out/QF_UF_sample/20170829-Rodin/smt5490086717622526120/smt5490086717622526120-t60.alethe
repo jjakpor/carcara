@@ -1,0 +1,5 @@
+(assume nt60.0 (not (not (= (or (not (not prt)) (not red_MR)) (or prt (not red_MR))))))
+(assume nt60.1 (not (not (or (not (not prt)) (not red_MR)))))
+(assume nt60.2 (not (or prt (not red_MR))))
+(step t60 (cl (not (= (or (not (not prt)) (not red_MR)) (or prt (not red_MR)))) (not (or (not (not prt)) (not red_MR))) (or prt (not red_MR))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt60.0 nt60.1 nt60.2 t60))

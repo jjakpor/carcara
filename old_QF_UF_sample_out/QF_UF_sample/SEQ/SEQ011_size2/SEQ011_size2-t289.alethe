@@ -1,0 +1,7 @@
+(assume t288 (or (= (f6 c_0) (f5 c_0)) (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))))))
+(assume nt289.0 (not (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))))))
+(assume nt289.1 (not (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))))))
+(assume nt289.2 (not (= (f6 c_0) (f5 c_0))))
+(step t288' (cl (= (f6 c_0) (f5 c_0)) (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))))) :rule or :premises (t288))
+(step t289 (cl (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (= (f6 c_0) (f5 c_0))) :rule reordering :premises (t288'))
+(step t.end (cl) :rule resolution :premises (nt289.0 nt289.1 nt289.2 t289))

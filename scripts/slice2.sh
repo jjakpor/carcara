@@ -12,8 +12,7 @@ output_dir="$2"
 mkdir -p "$output_dir"
 
 nr_steps=0
-nr_total_files=$(find "$input_dir" -type f -name "*.alethe" | wc -l)
-echo "Found $nr_total_files"
+
 
 nr_valid_total=0
 nr_holey_total=0
@@ -79,3 +78,6 @@ done
 echo "valid: $nr_valid_total" >> "$log_file"
 echo "holey: $nr_holey_total" >> "$log_file"
 echo "invalid: $nr_invalid_total" >> "$log_file"
+
+nr_total_files=$(find "$input_dir" -type f -name "*.alethe" | wc -l)
+echo "Found $nr_total_files"

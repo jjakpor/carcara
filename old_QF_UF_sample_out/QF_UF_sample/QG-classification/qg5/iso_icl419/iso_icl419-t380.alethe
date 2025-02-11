@@ -1,0 +1,5 @@
+(assume nt380.0 (not (not (= (or (not (= (op e0 e1) e0)) (= (op e1 e0) e0)) (or (not (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3))))) (= (op e3 e3) (op (op (op e3 e3) (op e3 e3)) (op e3 e3))))))))
+(assume nt380.1 (not (not (or (not (= (op e0 e1) e0)) (= (op e1 e0) e0)))))
+(assume nt380.2 (not (or (not (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3))))) (= (op e3 e3) (op (op (op e3 e3) (op e3 e3)) (op e3 e3))))))
+(step t380 (cl (not (= (or (not (= (op e0 e1) e0)) (= (op e1 e0) e0)) (or (not (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3))))) (= (op e3 e3) (op (op (op e3 e3) (op e3 e3)) (op e3 e3)))))) (not (or (not (= (op e0 e1) e0)) (= (op e1 e0) e0))) (or (not (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3))))) (= (op e3 e3) (op (op (op e3 e3) (op e3 e3)) (op e3 e3))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt380.0 nt380.1 nt380.2 t380))

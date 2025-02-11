@@ -1,0 +1,8 @@
+(assume t471 (= (= (op e4 e4) e4) (= e4 (op e4 e4))))
+(assume t472 (= (= (op e3 e4) e4) (= e4 (op e3 e4))))
+(assume t473 (= (= (op e2 e4) e4) (= e4 (op e2 e4))))
+(assume t474 (= (= (op e0 e4) e4) (= e4 (op e0 e4))))
+(assume t126 (= (= (op e1 e4) e4) (= e4 (op e1 e4))))
+(assume nt475.0 (not (= (or (= (op e4 e4) e4) (= (op e3 e4) e4) (= (op e2 e4) e4) (= (op e0 e4) e4) (= (op e1 e4) e4)) (or (= e4 (op e4 e4)) (= e4 (op e3 e4)) (= e4 (op e2 e4)) (= e4 (op e0 e4)) (= e4 (op e1 e4))))))
+(step t475 (cl (= (or (= (op e4 e4) e4) (= (op e3 e4) e4) (= (op e2 e4) e4) (= (op e0 e4) e4) (= (op e1 e4) e4)) (or (= e4 (op e4 e4)) (= e4 (op e3 e4)) (= e4 (op e2 e4)) (= e4 (op e0 e4)) (= e4 (op e1 e4))))) :rule cong :premises (t471 t472 t473 t474 t126))
+(step t.end (cl) :rule resolution :premises (nt475.0 t475))

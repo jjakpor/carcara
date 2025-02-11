@@ -1,0 +1,5 @@
+(assume t125 (= (not (= e2 (op e2 (op e2 e2)))) (not (= e2 (op e2 (op e2 e2))))))
+(assume t129 (= (= e0 e2) (= e2 e0)))
+(assume nt130.0 (not (= (or (not (= e2 (op e2 (op e2 e2)))) (= e0 e2)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))))
+(step t130 (cl (= (or (not (= e2 (op e2 (op e2 e2)))) (= e0 e2)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))) :rule cong :premises (t125 t129))
+(step t.end (cl) :rule resolution :premises (nt130.0 t130))

@@ -1,0 +1,6 @@
+(assume t123 (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)))
+(assume nt124.0 (not (= e1 e0)))
+(assume nt124.1 (not (not (= e1 (op e1 (op e1 e1))))))
+(step t123' (cl (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)) :rule or :premises (t123))
+(step t124 (cl (= e1 e0) (not (= e1 (op e1 (op e1 e1))))) :rule reordering :premises (t123'))
+(step t.end (cl) :rule resolution :premises (nt124.0 nt124.1 t124))

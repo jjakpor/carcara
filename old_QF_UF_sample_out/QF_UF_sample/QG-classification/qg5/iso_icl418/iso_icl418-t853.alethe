@@ -1,0 +1,5 @@
+(assume t842 (= (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4))) (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3)))))
+(assume t852 (= (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3))) false))
+(assume nt853.0 (not (= (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4))) false)))
+(step t853 (cl (= (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4))) false)) :rule trans :premises (t842 t852))
+(step t.end (cl) :rule resolution :premises (nt853.0 t853))

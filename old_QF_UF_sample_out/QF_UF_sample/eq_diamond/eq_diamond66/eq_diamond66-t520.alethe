@@ -1,0 +1,4 @@
+(assume t519 (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46))))
+(assume nt520.0 (not (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46))))
+(step t520 (cl (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46))) :rule and :premises (t519))
+(step t.end (cl) :rule resolution :premises (nt520.0 t520))

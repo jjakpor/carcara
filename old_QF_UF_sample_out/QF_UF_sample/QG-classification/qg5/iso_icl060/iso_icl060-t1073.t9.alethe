@@ -1,0 +1,4 @@
+(assume nt1073.t9.0 (not (not (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))))))
+(assume nt1073.t9.1 (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))))
+(step t1073.t9 (cl (not (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))))) (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nt1073.t9.0 nt1073.t9.1 t1073.t9))

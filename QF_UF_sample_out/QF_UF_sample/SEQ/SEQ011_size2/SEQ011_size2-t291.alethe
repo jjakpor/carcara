@@ -2,7 +2,7 @@
 (assume t290 (or (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (= (f6 c_0) (f5 c_0))))
 (assume nt291.0 (not (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0)))))
 (assume nt291.1 (not (= (f6 c_0) (f5 c_0))))
-(step t284' (cl (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) :rule or :premises (t284))
 (step t290' (cl (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (= (f6 c_0) (f5 c_0))) :rule or :premises (t290))
+(step t284' (cl (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) :rule or :premises (t284))
 (step t291 (cl (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (= (f6 c_0) (f5 c_0))) :rule resolution :premises (t284' t290'))
 (step t.end (cl) :rule resolution :premises (nt291.0 nt291.1 t291))

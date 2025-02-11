@@ -1,0 +1,6 @@
+(assume t1 (or (not rd1) (not rd2)))
+(assume a10 rd2)
+(assume nt2.0 (not (not rd1)))
+(step t1' (cl (not rd1) (not rd2)) :rule or :premises (t1))
+(step t2 (cl (not rd1)) :rule resolution :premises (t1' a10))
+(step t.end (cl) :rule resolution :premises (nt2.0 t2))

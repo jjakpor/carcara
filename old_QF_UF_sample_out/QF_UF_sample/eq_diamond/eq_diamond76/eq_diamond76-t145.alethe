@@ -1,0 +1,4 @@
+(assume t144 (= x0 x1))
+(assume nt145.0 (not (= x1 x0)))
+(step t145 (cl (= x1 x0)) :rule symm :premises (t144))
+(step t.end (cl) :rule resolution :premises (nt145.0 t145))

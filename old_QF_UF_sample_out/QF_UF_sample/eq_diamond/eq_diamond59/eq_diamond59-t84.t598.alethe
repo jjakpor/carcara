@@ -1,0 +1,6 @@
+(assume t84.t597 (or (= x54 x55) (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))))))
+(assume t84.t593 (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))))
+(assume nt84.t598.0 (not (= x54 x55)))
+(step t84.t597' (cl (= x54 x55) (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))))) :rule or :premises (t84.t597))
+(step t84.t598 (cl (= x54 x55)) :rule resolution :premises (t84.t597' t84.t593))
+(step t.end (cl) :rule resolution :premises (nt84.t598.0 t84.t598))

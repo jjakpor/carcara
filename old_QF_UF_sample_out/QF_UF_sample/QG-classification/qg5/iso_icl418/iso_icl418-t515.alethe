@@ -1,0 +1,3 @@
+(assume nt515.0 (not (= (or (or (or (or (= (op e0 e4) e1) (= (op e1 e4) e1)) (= (op e2 e4) e1)) (= (op e3 e4) e1)) (= (op e4 e4) e1)) (or (= (op e4 e4) e1) (= (op e3 e4) e1) (= (op e2 e4) e1) (= (op e0 e4) e1) (= (op e1 e4) e1)))))
+(step t515 (cl (= (or (or (or (or (= (op e0 e4) e1) (= (op e1 e4) e1)) (= (op e2 e4) e1)) (= (op e3 e4) e1)) (= (op e4 e4) e1)) (or (= (op e4 e4) e1) (= (op e3 e4) e1) (= (op e2 e4) e1) (= (op e0 e4) e1) (= (op e1 e4) e1)))) :rule hole)
+(step t.end (cl) :rule resolution :premises (nt515.0 t515))

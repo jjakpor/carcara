@@ -1,0 +1,5 @@
+(assume t26 (= e0 e0))
+(assume t155 (= (op e3 e0) (op (op (op (op e0 e0) e0) e0) e0)))
+(assume nt156.0 (not (= (= e0 (op e3 e0)) (= e0 (op (op (op (op e0 e0) e0) e0) e0)))))
+(step t156 (cl (= (= e0 (op e3 e0)) (= e0 (op (op (op (op e0 e0) e0) e0) e0)))) :rule cong :premises (t26 t155))
+(step t.end (cl) :rule resolution :premises (nt156.0 t156))

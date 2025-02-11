@@ -1,0 +1,4 @@
+(assume nt1009.0 (not (not (and (= (op (op e4 e3) e4) (op e4 (op e4 e3))) (= (op e3 (op e4 e3)) (op (op e4 e3) e3)) (= (op (op e3 e4) (op e4 e3)) (op (op e4 e3) (op e3 e4))) (= (op (op e4 e3) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e4 e3)))))))
+(assume nt1009.1 (not (= (op e3 (op e4 e3)) (op (op e4 e3) e3))))
+(step t1009 (cl (not (and (= (op (op e4 e3) e4) (op e4 (op e4 e3))) (= (op e3 (op e4 e3)) (op (op e4 e3) e3)) (= (op (op e3 e4) (op e4 e3)) (op (op e4 e3) (op e3 e4))) (= (op (op e4 e3) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))))) (= (op e3 (op e4 e3)) (op (op e4 e3) e3))) :rule and_pos)
+(step t.end (cl) :rule resolution :premises (nt1009.0 nt1009.1 t1009))

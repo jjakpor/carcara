@@ -1,0 +1,4 @@
+(assume nt16.0 (not (or (not prt) (not car) (not (not clk)))))
+(assume nt16.1 (not (not (not prt))))
+(step t16 (cl (or (not prt) (not car) (not (not clk))) (not (not prt))) :rule or_neg)
+(step t.end (cl) :rule resolution :premises (nt16.0 nt16.1 t16))

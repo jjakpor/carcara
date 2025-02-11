@@ -1,0 +1,8 @@
+(assume t372 (= (= (op e0 e3) e4) (= e4 (op e0 e3))))
+(assume t23 (= (= (op e0 e3) e3) (= e3 (op e0 e3))))
+(assume t126 (= (= (op e0 e3) e2) (= e2 (op e0 e3))))
+(assume t373 (= (= (op e0 e3) e0) (= e0 (op e0 e3))))
+(assume t374 (= (= (op e0 e3) e1) (= e1 (op e0 e3))))
+(assume nt375.0 (not (= (or (= (op e0 e3) e4) (= (op e0 e3) e3) (= (op e0 e3) e2) (= (op e0 e3) e0) (= (op e0 e3) e1)) (or (= e4 (op e0 e3)) (= e3 (op e0 e3)) (= e2 (op e0 e3)) (= e0 (op e0 e3)) (= e1 (op e0 e3))))))
+(step t375 (cl (= (or (= (op e0 e3) e4) (= (op e0 e3) e3) (= (op e0 e3) e2) (= (op e0 e3) e0) (= (op e0 e3) e1)) (or (= e4 (op e0 e3)) (= e3 (op e0 e3)) (= e2 (op e0 e3)) (= e0 (op e0 e3)) (= e1 (op e0 e3))))) :rule cong :premises (t372 t23 t126 t373 t374))
+(step t.end (cl) :rule resolution :premises (nt375.0 t375))

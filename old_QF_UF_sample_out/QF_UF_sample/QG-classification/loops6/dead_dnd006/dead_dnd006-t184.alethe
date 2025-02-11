@@ -1,0 +1,5 @@
+(assume nt184.0 (not (not (= (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit)) (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0))))))
+(assume nt184.1 (not (not (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit)))))
+(assume nt184.2 (not (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0))))
+(step t184 (cl (not (= (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit)) (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0)))) (not (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit))) (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt184.0 nt184.1 nt184.2 t184))

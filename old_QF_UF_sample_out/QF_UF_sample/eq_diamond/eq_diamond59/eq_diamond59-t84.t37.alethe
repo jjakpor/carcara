@@ -1,0 +1,4 @@
+(assume t84.t36 (= x8 x9))
+(assume nt84.t37.0 (not (= x9 x8)))
+(step t84.t37 (cl (= x9 x8)) :rule symm :premises (t84.t36))
+(step t.end (cl) :rule resolution :premises (nt84.t37.0 t84.t37))

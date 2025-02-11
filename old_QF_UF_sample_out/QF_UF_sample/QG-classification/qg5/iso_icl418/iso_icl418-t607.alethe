@@ -1,0 +1,5 @@
+(assume t606 (= (= (op e3 e4) (op (op e4 e3) (op (op e4 e3) (op e4 e3)))) (= (op e3 e4) (op e4 e3))))
+(assume t246 (= (= (op e3 e4) (op e4 e3)) false))
+(assume nt607.0 (not (= (= (op e3 e4) (op (op e4 e3) (op (op e4 e3) (op e4 e3)))) false)))
+(step t607 (cl (= (= (op e3 e4) (op (op e4 e3) (op (op e4 e3) (op e4 e3)))) false)) :rule trans :premises (t606 t246))
+(step t.end (cl) :rule resolution :premises (nt607.0 t607))

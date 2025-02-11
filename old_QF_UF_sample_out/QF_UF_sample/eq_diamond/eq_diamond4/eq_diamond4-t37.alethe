@@ -1,0 +1,5 @@
+(assume t25 (= x1 x0))
+(assume t36 (= x2 x3))
+(assume nt37.0 (not (= (= x1 x2) (= x0 x3))))
+(step t37 (cl (= (= x1 x2) (= x0 x3))) :rule cong :premises (t25 t36))
+(step t.end (cl) :rule resolution :premises (nt37.0 t37))

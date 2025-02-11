@@ -1,0 +1,5 @@
+(assume t7 (= (= prt (not (not prt))) (= prt prt)))
+(assume t8 (= (= prt prt) true))
+(assume nt9.0 (not (= (= prt (not (not prt))) true)))
+(step t9 (cl (= (= prt (not (not prt))) true)) :rule trans :premises (t7 t8))
+(step t.end (cl) :rule resolution :premises (nt9.0 t9))

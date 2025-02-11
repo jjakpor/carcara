@@ -5,7 +5,7 @@
 (assume nt215.1 (not (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))))))
 (assume nt215.2 (not (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))))))
 (step t212' (cl (not (= c_1 (f5 c_0))) (not (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0))) :rule or :premises (t212))
-(step t214' (cl (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (= c_1 (f6 c_0))) :rule or :premises (t214))
 (step t213' (cl (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (= c_1 (f5 c_0))) :rule or :premises (t213))
+(step t214' (cl (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (= c_1 (f6 c_0))) :rule or :premises (t214))
 (step t215 (cl (= (f6 c_0) (f5 c_0)) (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))))) :rule resolution :premises (t212' t213' t214'))
 (step t.end (cl) :rule resolution :premises (nt215.0 nt215.1 nt215.2 t215))

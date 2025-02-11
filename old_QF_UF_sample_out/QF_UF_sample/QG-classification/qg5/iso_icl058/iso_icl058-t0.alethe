@@ -1,0 +1,7 @@
+(assume nt0.0 (not (and (= e0 (op (op (op (op e0 e0) e0) e0) e0)) (= e0 (op (op e0 e0) (op e0 e0))) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) (op e0 e0))) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))))
+(assume nt0.1 (not (not (= e0 (op (op (op (op e0 e0) e0) e0) e0)))))
+(assume nt0.2 (not (not (= e0 (op (op e0 e0) (op e0 e0))))))
+(assume nt0.3 (not (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) (op e0 e0))))))
+(assume nt0.4 (not (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))))
+(step t0 (cl (and (= e0 (op (op (op (op e0 e0) e0) e0) e0)) (= e0 (op (op e0 e0) (op e0 e0))) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) (op e0 e0))) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0))) (not (= e0 (op (op (op (op e0 e0) e0) e0) e0))) (not (= e0 (op (op e0 e0) (op e0 e0)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) (op e0 e0)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))) :rule and_neg)
+(step t.end (cl) :rule resolution :premises (nt0.0 nt0.1 nt0.2 nt0.3 nt0.4 t0))

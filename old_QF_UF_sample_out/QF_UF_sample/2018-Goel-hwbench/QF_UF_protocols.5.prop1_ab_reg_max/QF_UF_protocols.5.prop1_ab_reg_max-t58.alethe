@@ -1,0 +1,7 @@
+(assume t43 (or (not (= (not y$1092) y$id34$next_op)) (not (not y$1092)) y$id34$next_op))
+(assume t44 (= (not y$1092) y$id34$next_op))
+(assume t57 (not y$1092))
+(assume nt58.0 (not y$id34$next_op))
+(step t43' (cl (not (= (not y$1092) y$id34$next_op)) (not (not y$1092)) y$id34$next_op) :rule or :premises (t43))
+(step t58 (cl y$id34$next_op) :rule resolution :premises (t43' t44 t57))
+(step t.end (cl) :rule resolution :premises (nt58.0 t58))

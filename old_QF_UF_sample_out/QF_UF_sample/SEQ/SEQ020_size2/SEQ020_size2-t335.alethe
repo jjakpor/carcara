@@ -1,0 +1,3 @@
+(assume nt335.0 (not (= (not (= c_1 (f6 c_1))) (not (= c_1 (f6 c_1))))))
+(step t335 (cl (= (not (= c_1 (f6 c_1))) (not (= c_1 (f6 c_1))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt335.0 t335))

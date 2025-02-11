@@ -1,0 +1,5 @@
+(assume t616 (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55)))
+(assume nt617.0 (not (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))))))
+(assume nt617.1 (not (= x54 x55)))
+(step t617 (cl (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55)))) (= x54 x55)) :rule implies :premises (t616))
+(step t.end (cl) :rule resolution :premises (nt617.0 nt617.1 t617))

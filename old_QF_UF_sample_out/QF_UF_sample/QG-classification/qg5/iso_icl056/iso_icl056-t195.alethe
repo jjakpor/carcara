@@ -1,0 +1,5 @@
+(assume t71 (= (op e2 e2) (op (op e1 e1) (op e1 e1))))
+(assume t43 (= (op e2 e3) (op (op e1 e1) (op e1 (op e1 e1)))))
+(assume nt195.0 (not (= (= (op e2 e2) (op e2 e3)) (= (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1)))))))
+(step t195 (cl (= (= (op e2 e2) (op e2 e3)) (= (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1)))))) :rule cong :premises (t71 t43))
+(step t.end (cl) :rule resolution :premises (nt195.0 t195))

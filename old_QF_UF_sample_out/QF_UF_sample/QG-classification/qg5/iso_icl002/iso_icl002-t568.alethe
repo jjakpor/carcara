@@ -1,0 +1,5 @@
+(assume t566 (= (= (op e0 e2) (op e2 e0)) (= (op e0 (op (op e0 (op e0 e0)) e0)) (op (op (op e0 (op e0 e0)) e0) e0))))
+(assume t567 (= (= (op e0 (op (op e0 (op e0 e0)) e0)) (op (op (op e0 (op e0 e0)) e0) e0)) (= (op (op (op e0 (op e0 e0)) e0) e0) (op e0 (op (op e0 (op e0 e0)) e0)))))
+(assume nt568.0 (not (= (= (op e0 e2) (op e2 e0)) (= (op (op (op e0 (op e0 e0)) e0) e0) (op e0 (op (op e0 (op e0 e0)) e0))))))
+(step t568 (cl (= (= (op e0 e2) (op e2 e0)) (= (op (op (op e0 (op e0 e0)) e0) e0) (op e0 (op (op e0 (op e0 e0)) e0))))) :rule trans :premises (t566 t567))
+(step t.end (cl) :rule resolution :premises (nt568.0 t568))

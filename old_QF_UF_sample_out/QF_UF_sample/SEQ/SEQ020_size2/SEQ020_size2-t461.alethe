@@ -1,0 +1,8 @@
+(assume t460 (or (p1 (f7 c_1) c_1) (not (= c_0 (f7 c_1))) (not (= c_0 (f6 c_1))) (not (p1 (f6 c_1) c_1))))
+(assume nt461.0 (not (p1 (f7 c_1) c_1)))
+(assume nt461.1 (not (not (p1 (f6 c_1) c_1))))
+(assume nt461.2 (not (not (= c_0 (f6 c_1)))))
+(assume nt461.3 (not (not (= c_0 (f7 c_1)))))
+(step t460' (cl (p1 (f7 c_1) c_1) (not (= c_0 (f7 c_1))) (not (= c_0 (f6 c_1))) (not (p1 (f6 c_1) c_1))) :rule or :premises (t460))
+(step t461 (cl (p1 (f7 c_1) c_1) (not (p1 (f6 c_1) c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f7 c_1)))) :rule reordering :premises (t460'))
+(step t.end (cl) :rule resolution :premises (nt461.0 nt461.1 nt461.2 nt461.3 t461))

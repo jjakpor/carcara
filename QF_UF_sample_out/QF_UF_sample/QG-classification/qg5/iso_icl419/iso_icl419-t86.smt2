@@ -9,7 +9,6 @@
 (declare-fun e1 () I)
 (declare-fun e0 () I)
 (assert (= e1 (op (op e3 e3) (op e3 e3))))
-(assert (= e1 (op (op e3 e3) (op e3 e3))))
 (assert (not (= (op e1 e1) (op (op (op e3 e3) (op e3 e3)) (op (op e3 e3) (op e3 e3))))))
 (check-sat)
 (exit)

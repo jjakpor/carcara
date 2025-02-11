@@ -2,7 +2,7 @@
 (assume t97 (or (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))) (not (= e1 (op e1 (op e1 e1))))))
 (assume nt98.0 (not (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1))))))
 (assume nt98.1 (not (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1))))))
-(step t97' (cl (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))) (not (= e1 (op e1 (op e1 e1))))) :rule or :premises (t97))
 (step t96' (cl (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))) (= e1 (op e1 (op e1 e1)))) :rule or :premises (t96))
+(step t97' (cl (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))) (not (= e1 (op e1 (op e1 e1))))) :rule or :premises (t97))
 (step t98 (cl (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))) (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1))))) :rule resolution :premises (t96' t97'))
 (step t.end (cl) :rule resolution :premises (nt98.0 nt98.1 t98))

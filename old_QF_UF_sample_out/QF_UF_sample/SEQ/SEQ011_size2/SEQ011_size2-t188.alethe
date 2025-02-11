@@ -1,0 +1,3 @@
+(assume nt188.0 (not (= (not (= c_1 (f7 c_0))) (not (= c_1 (f7 c_0))))))
+(step t188 (cl (= (not (= c_1 (f7 c_0))) (not (= c_1 (f7 c_0))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt188.0 t188))

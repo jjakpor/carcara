@@ -1,0 +1,7 @@
+(assume t428 (or (not (= (not (= (op e2 e0) (op e3 e0))) (not (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0))))) (not (not (= (op e2 e0) (op e3 e0)))) (not (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)))))
+(assume t430 (= (not (= (op e2 e0) (op e3 e0))) (not (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)))))
+(assume t431 (not (= (op e2 e0) (op e3 e0))))
+(assume nt432.0 (not (not (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)))))
+(step t428' (cl (not (= (not (= (op e2 e0) (op e3 e0))) (not (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0))))) (not (not (= (op e2 e0) (op e3 e0)))) (not (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)))) :rule or :premises (t428))
+(step t432 (cl (not (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)))) :rule resolution :premises (t428' t430 t431))
+(step t.end (cl) :rule resolution :premises (nt432.0 t432))

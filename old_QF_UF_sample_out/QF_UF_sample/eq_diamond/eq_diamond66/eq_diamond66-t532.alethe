@@ -1,0 +1,5 @@
+(assume t531 (=> (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))) (= x46 x47)))
+(assume nt532.0 (not (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))))))
+(assume nt532.1 (not (= x46 x47)))
+(step t532 (cl (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47)))) (= x46 x47)) :rule implies :premises (t531))
+(step t.end (cl) :rule resolution :premises (nt532.0 nt532.1 t532))

@@ -1,0 +1,6 @@
+(assume t362 (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1))))
+(assume t442 (not (= c_0 (f5 c_1))))
+(assume nt443.0 (not (= c_1 (f5 c_1))))
+(step t362' (cl (= c_0 (f5 c_1)) (= c_1 (f5 c_1))) :rule or :premises (t362))
+(step t443 (cl (= c_1 (f5 c_1))) :rule resolution :premises (t362' t442))
+(step t.end (cl) :rule resolution :premises (nt443.0 t443))

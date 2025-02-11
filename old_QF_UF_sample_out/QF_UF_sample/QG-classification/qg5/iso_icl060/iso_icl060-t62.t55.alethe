@@ -1,0 +1,5 @@
+(assume t62.t35 (= (= e1 (op (op (op e1 e3) e3) (op (op e1 e3) e3))) (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))
+(assume t62.t54 (= (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))) false))
+(assume nt62.t55.0 (not (= (= e1 (op (op (op e1 e3) e3) (op (op e1 e3) e3))) false)))
+(step t62.t55 (cl (= (= e1 (op (op (op e1 e3) e3) (op (op e1 e3) e3))) false)) :rule trans :premises (t62.t35 t62.t54))
+(step t.end (cl) :rule resolution :premises (nt62.t55.0 t62.t55))

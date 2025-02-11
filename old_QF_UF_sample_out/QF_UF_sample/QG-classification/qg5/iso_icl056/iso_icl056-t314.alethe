@@ -1,0 +1,4 @@
+(assume t313 (and (and (= (op e0 e1) (op e1 e0)) (= (op e1 e1) (op e1 e1))) (= (op e2 e1) (op e1 e2))))
+(assume nt314.0 (not (= (op e2 e1) (op e1 e2))))
+(step t314 (cl (= (op e2 e1) (op e1 e2))) :rule and :premises (t313))
+(step t.end (cl) :rule resolution :premises (nt314.0 t314))

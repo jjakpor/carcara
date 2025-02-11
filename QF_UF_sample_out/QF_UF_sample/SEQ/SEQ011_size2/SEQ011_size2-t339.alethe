@@ -2,7 +2,7 @@
 (assume t338 (or (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1)))) (= (f6 c_1) (f5 c_1))))
 (assume nt339.0 (not (=> (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))) (= (f6 c_1) (f5 c_1)))))
 (assume nt339.1 (not (= (f6 c_1) (f5 c_1))))
-(step t332' (cl (=> (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))) (= (f6 c_1) (f5 c_1))) (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1)))) :rule or :premises (t332))
 (step t338' (cl (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1)))) (= (f6 c_1) (f5 c_1))) :rule or :premises (t338))
+(step t332' (cl (=> (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))) (= (f6 c_1) (f5 c_1))) (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1)))) :rule or :premises (t332))
 (step t339 (cl (=> (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))) (= (f6 c_1) (f5 c_1))) (= (f6 c_1) (f5 c_1))) :rule resolution :premises (t332' t338'))
 (step t.end (cl) :rule resolution :premises (nt339.0 nt339.1 t339))

@@ -1,0 +1,4 @@
+(assume t302 (= (= e2 e3) (= e3 e2)))
+(assume nt303.0 (not (= (not (= e2 e3)) (not (= e3 e2)))))
+(step t303 (cl (= (not (= e2 e3)) (not (= e3 e2)))) :rule cong :premises (t302))
+(step t.end (cl) :rule resolution :premises (nt303.0 t303))

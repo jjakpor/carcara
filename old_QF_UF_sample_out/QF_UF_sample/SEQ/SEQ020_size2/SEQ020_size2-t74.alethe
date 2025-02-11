@@ -1,0 +1,5 @@
+(assume t73 (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))))
+(assume nt74.0 (not (not (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))))))
+(assume nt74.1 (not (not (= c_0 (f5 c_1)))))
+(step t74 (cl (not (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1)))) (not (= c_0 (f5 c_1)))) :rule implies :premises (t73))
+(step t.end (cl) :rule resolution :premises (nt74.0 nt74.1 t74))

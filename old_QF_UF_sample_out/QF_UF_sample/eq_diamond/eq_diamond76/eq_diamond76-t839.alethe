@@ -1,0 +1,6 @@
+(assume t838 (or (= x74 x75) (not (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))))))
+(assume t834 (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))))
+(assume nt839.0 (not (= x74 x75)))
+(step t838' (cl (= x74 x75) (not (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))))) :rule or :premises (t838))
+(step t839 (cl (= x74 x75)) :rule resolution :premises (t838' t834))
+(step t.end (cl) :rule resolution :premises (nt839.0 t839))

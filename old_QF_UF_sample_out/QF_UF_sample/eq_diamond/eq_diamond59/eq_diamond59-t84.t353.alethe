@@ -1,0 +1,4 @@
+(assume t84.t352 (and (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (=> (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (= x32 x33))))
+(assume nt84.t353.0 (not (=> (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (= x32 x33))))
+(step t84.t353 (cl (=> (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (= x32 x33))) :rule and :premises (t84.t352))
+(step t.end (cl) :rule resolution :premises (nt84.t353.0 t84.t353))

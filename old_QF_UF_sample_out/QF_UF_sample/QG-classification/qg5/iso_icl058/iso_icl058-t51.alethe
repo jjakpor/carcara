@@ -1,0 +1,8 @@
+(assume t37 (= (= e0 (op e2 e4)) (= e0 (op (op e0 e0) (op (op e0 e0) e0)))))
+(assume t42 (= (= e0 (op e2 e3)) (= e0 (op (op e0 e0) (op (op (op e0 e0) e0) e0)))))
+(assume t44 (= (= e0 (op e2 e2)) (= e0 (op (op e0 e0) (op e0 e0)))))
+(assume t45 (= (= e0 (op e2 e0)) (= e0 (op (op e0 e0) e0))))
+(assume t50 (= (= e0 (op e2 e1)) (= e0 (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
+(assume nt51.0 (not (= (or (= e0 (op e2 e4)) (= e0 (op e2 e3)) (= e0 (op e2 e2)) (= e0 (op e2 e0)) (= e0 (op e2 e1))) (or (= e0 (op (op e0 e0) (op (op e0 e0) e0))) (= e0 (op (op e0 e0) (op (op (op e0 e0) e0) e0))) (= e0 (op (op e0 e0) (op e0 e0))) (= e0 (op (op e0 e0) e0)) (= e0 (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))))
+(step t51 (cl (= (or (= e0 (op e2 e4)) (= e0 (op e2 e3)) (= e0 (op e2 e2)) (= e0 (op e2 e0)) (= e0 (op e2 e1))) (or (= e0 (op (op e0 e0) (op (op e0 e0) e0))) (= e0 (op (op e0 e0) (op (op (op e0 e0) e0) e0))) (= e0 (op (op e0 e0) (op e0 e0))) (= e0 (op (op e0 e0) e0)) (= e0 (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))) :rule cong :premises (t37 t42 t44 t45 t50))
+(step t.end (cl) :rule resolution :premises (nt51.0 t51))

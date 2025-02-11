@@ -1,0 +1,3 @@
+(assume nt991.0 (not (= (= (op e2 e0) e4) (= e4 (op e2 e0)))))
+(step t991 (cl (= (= (op e2 e0) e4) (= e4 (op e2 e0)))) :rule rare_rewrite)
+(step t.end (cl) :rule resolution :premises (nt991.0 t991))

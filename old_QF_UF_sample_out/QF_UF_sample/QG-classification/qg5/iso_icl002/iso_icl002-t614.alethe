@@ -1,0 +1,4 @@
+(assume t613 (= (= e3 e1) (= (op (op (op e0 (op e0 e0)) e0) e0) (op e0 (op e0 e0)))))
+(assume nt614.0 (not (= (not (= e3 e1)) (not (= (op (op (op e0 (op e0 e0)) e0) e0) (op e0 (op e0 e0)))))))
+(step t614 (cl (= (not (= e3 e1)) (not (= (op (op (op e0 (op e0 e0)) e0) e0) (op e0 (op e0 e0)))))) :rule cong :premises (t613))
+(step t.end (cl) :rule resolution :premises (nt614.0 t614))

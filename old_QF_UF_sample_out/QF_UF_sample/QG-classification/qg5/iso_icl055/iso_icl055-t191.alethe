@@ -1,0 +1,5 @@
+(assume t188 (= (not (= e0 e1)) (not (= e1 e0))))
+(assume t190 (= (not (= e1 e0)) (not (= e1 (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))
+(assume nt191.0 (not (= (not (= e0 e1)) (not (= e1 (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))))
+(step t191 (cl (= (not (= e0 e1)) (not (= e1 (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))) :rule trans :premises (t188 t190))
+(step t.end (cl) :rule resolution :premises (nt191.0 t191))

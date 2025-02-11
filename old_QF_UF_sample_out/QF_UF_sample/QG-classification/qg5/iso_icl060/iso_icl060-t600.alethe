@@ -1,0 +1,5 @@
+(assume nt600.0 (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))))
+(assume nt600.1 (not (not (= (op e1 e3) (op (op (op e1 e3) e3) e1)))))
+(assume nt600.2 (not (not (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))))
+(step t600 (cl (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))) (not (= (op e1 e3) (op (op (op e1 e3) e3) e1))) (not (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))) :rule and_neg)
+(step t.end (cl) :rule resolution :premises (nt600.0 nt600.1 nt600.2 t600))

@@ -1,0 +1,4 @@
+(assume t387 (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34))))
+(assume nt388.0 (not (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34))))
+(step t388 (cl (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34))) :rule and :premises (t387))
+(step t.end (cl) :rule resolution :premises (nt388.0 t388))

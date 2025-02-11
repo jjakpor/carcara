@@ -1,0 +1,5 @@
+(assume t301 (= (not (= (f5 c_0) (f6 c_0))) (not (= (f6 c_0) (f5 c_0)))))
+(assume t302 (= (not (p4 c_0)) (not (p4 c_0))))
+(assume nt303.0 (not (= (or (not (= (f5 c_0) (f6 c_0))) (not (p4 c_0))) (or (not (= (f6 c_0) (f5 c_0))) (not (p4 c_0))))))
+(step t303 (cl (= (or (not (= (f5 c_0) (f6 c_0))) (not (p4 c_0))) (or (not (= (f6 c_0) (f5 c_0))) (not (p4 c_0))))) :rule cong :premises (t301 t302))
+(step t.end (cl) :rule resolution :premises (nt303.0 t303))

@@ -1,0 +1,6 @@
+(assume t316 (or (= x27 x28) (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))))
+(assume t312 (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))
+(assume nt317.0 (not (= x27 x28)))
+(step t316' (cl (= x27 x28) (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))) :rule or :premises (t316))
+(step t317 (cl (= x27 x28)) :rule resolution :premises (t316' t312))
+(step t.end (cl) :rule resolution :premises (nt317.0 t317))

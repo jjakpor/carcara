@@ -1,0 +1,6 @@
+(assume t13 (or (not (= (= x11 x12) false)) (not (= x11 x12))))
+(assume t848 (= (= x11 x12) false))
+(assume nt849.0 (not (not (= x11 x12))))
+(step t13' (cl (not (= (= x11 x12) false)) (not (= x11 x12))) :rule or :premises (t13))
+(step t849 (cl (not (= x11 x12))) :rule resolution :premises (t13' t848))
+(step t.end (cl) :rule resolution :premises (nt849.0 t849))

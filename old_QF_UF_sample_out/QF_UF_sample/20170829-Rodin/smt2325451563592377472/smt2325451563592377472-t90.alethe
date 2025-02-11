@@ -1,0 +1,5 @@
+(assume t89 (or prt (not (or (not car) (not clk)))))
+(assume nt90.0 (not prt))
+(assume nt90.1 (not (not (or (not car) (not clk)))))
+(step t90 (cl prt (not (or (not car) (not clk)))) :rule or :premises (t89))
+(step t.end (cl) :rule resolution :premises (nt90.0 nt90.1 t90))

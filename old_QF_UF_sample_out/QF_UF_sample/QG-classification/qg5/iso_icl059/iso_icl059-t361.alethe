@@ -1,0 +1,7 @@
+(assume t344 (or (not (= (not (= e0 e2)) (not (= e0 (op e0 e0))))) (not (not (= e0 e2))) (not (= e0 (op e0 e0)))))
+(assume t351 (= (not (= e0 e2)) (not (= e0 (op e0 e0)))))
+(assume t360 (not (= e0 e2)))
+(assume nt361.0 (not (not (= e0 (op e0 e0)))))
+(step t344' (cl (not (= (not (= e0 e2)) (not (= e0 (op e0 e0))))) (not (not (= e0 e2))) (not (= e0 (op e0 e0)))) :rule or :premises (t344))
+(step t361 (cl (not (= e0 (op e0 e0)))) :rule resolution :premises (t344' t351 t360))
+(step t.end (cl) :rule resolution :premises (nt361.0 t361))

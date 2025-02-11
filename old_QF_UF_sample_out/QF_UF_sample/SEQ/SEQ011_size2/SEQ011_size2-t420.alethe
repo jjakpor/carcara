@@ -1,0 +1,7 @@
+(assume t419 (or (not (p1 (f5 c_1) c_1)) (not (= c_0 (f5 c_1))) (not (= c_0 (f7 c_1))) (p1 (f7 c_1) c_1)))
+(assume nt420.0 (not (not (p1 (f5 c_1) c_1))))
+(assume nt420.1 (not (not (= c_0 (f5 c_1)))))
+(assume nt420.2 (not (not (= c_0 (f7 c_1)))))
+(assume nt420.3 (not (p1 (f7 c_1) c_1)))
+(step t420 (cl (not (p1 (f5 c_1) c_1)) (not (= c_0 (f5 c_1))) (not (= c_0 (f7 c_1))) (p1 (f7 c_1) c_1)) :rule or :premises (t419))
+(step t.end (cl) :rule resolution :premises (nt420.0 nt420.1 nt420.2 nt420.3 t420))

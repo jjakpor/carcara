@@ -1,0 +1,5 @@
+(assume nt202.0 (not (not (= (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (and (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (=> (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (= x18 x19)))))))
+(assume nt202.1 (not (not (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))))))
+(assume nt202.2 (not (and (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (=> (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (= x18 x19)))))
+(step t202 (cl (not (= (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (and (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (=> (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (= x18 x19))))) (not (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19)))) (and (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (=> (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (= x18 x19)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt202.0 nt202.1 nt202.2 t202))

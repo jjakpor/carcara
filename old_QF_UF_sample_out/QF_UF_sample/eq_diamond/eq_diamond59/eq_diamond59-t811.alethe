@@ -1,0 +1,5 @@
+(assume nt811.0 (not (not (= (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (and (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (=> (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (= x55 x56)))))))
+(assume nt811.1 (not (not (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))))))
+(assume nt811.2 (not (and (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (=> (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (= x55 x56)))))
+(step t811 (cl (not (= (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (and (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (=> (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (= x55 x56))))) (not (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56)))) (and (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (=> (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (= x55 x56)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt811.0 nt811.1 nt811.2 t811))

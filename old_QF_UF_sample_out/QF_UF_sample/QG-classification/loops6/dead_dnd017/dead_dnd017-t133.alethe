@@ -1,0 +1,3 @@
+(assume nt133.0 (not (= (not (= e2 (op e2 (op e2 e2)))) (not (= e2 (op e2 (op e2 e2)))))))
+(step t133 (cl (= (not (= e2 (op e2 (op e2 e2)))) (not (= e2 (op e2 (op e2 e2)))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt133.0 t133))

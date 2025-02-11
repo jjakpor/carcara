@@ -1,0 +1,5 @@
+(assume nt331.0 (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1)))))
+(assume nt331.1 (not (not (= c_1 (f5 c_1)))))
+(assume nt331.2 (not (not (= c_1 (f6 c_1)))))
+(step t331 (cl (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))) (not (= c_1 (f6 c_1)))) :rule and_neg)
+(step t.end (cl) :rule resolution :premises (nt331.0 nt331.1 nt331.2 t331))

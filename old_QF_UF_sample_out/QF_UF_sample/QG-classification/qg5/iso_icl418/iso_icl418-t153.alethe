@@ -1,0 +1,5 @@
+(assume t150 (= (not (= (op e0 e4) (op e3 e4))) (not (= (op (op (op e4 e3) (op e4 e3)) e4) (op e3 e4)))))
+(assume t152 (= (not (= (op (op (op e4 e3) (op e4 e3)) e4) (op e3 e4))) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4)))))
+(assume nt153.0 (not (= (not (= (op e0 e4) (op e3 e4))) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4))))))
+(step t153 (cl (= (not (= (op e0 e4) (op e3 e4))) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4))))) :rule trans :premises (t150 t152))
+(step t.end (cl) :rule resolution :premises (nt153.0 t153))

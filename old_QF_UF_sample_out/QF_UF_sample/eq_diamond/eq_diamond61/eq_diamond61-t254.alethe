@@ -1,0 +1,5 @@
+(assume t253 (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23)))
+(assume nt254.0 (not (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))))))
+(assume nt254.1 (not (= x22 x23)))
+(step t254 (cl (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23)))) (= x22 x23)) :rule implies :premises (t253))
+(step t.end (cl) :rule resolution :premises (nt254.0 nt254.1 t254))

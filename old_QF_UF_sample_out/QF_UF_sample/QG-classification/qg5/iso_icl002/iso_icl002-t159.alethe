@@ -1,0 +1,8 @@
+(assume t158 (or (= (op e0 e0) (op (op e0 (op e0 e0)) (op e0 e0))) (= (op e0 e0) (op (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) e0))) (= (op e0 e0) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0))) (= (op e0 e0) (op (op e0 (op e0 e0)) e0)) (= (op e0 e0) (op (op e0 (op e0 e0)) (op e0 (op e0 e0))))))
+(assume nt159.0 (not (= (op e0 e0) (op (op e0 (op e0 e0)) (op e0 e0)))))
+(assume nt159.1 (not (= (op e0 e0) (op (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) e0)))))
+(assume nt159.2 (not (= (op e0 e0) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)))))
+(assume nt159.3 (not (= (op e0 e0) (op (op e0 (op e0 e0)) e0))))
+(assume nt159.4 (not (= (op e0 e0) (op (op e0 (op e0 e0)) (op e0 (op e0 e0))))))
+(step t159 (cl (= (op e0 e0) (op (op e0 (op e0 e0)) (op e0 e0))) (= (op e0 e0) (op (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) e0))) (= (op e0 e0) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0))) (= (op e0 e0) (op (op e0 (op e0 e0)) e0)) (= (op e0 e0) (op (op e0 (op e0 e0)) (op e0 (op e0 e0))))) :rule or :premises (t158))
+(step t.end (cl) :rule resolution :premises (nt159.0 nt159.1 nt159.2 nt159.3 nt159.4 t159))

@@ -1,0 +1,3 @@
+(assume nt18.0 (not (= (= org_MR false) (not org_MR))))
+(step t18 (cl (= (= org_MR false) (not org_MR))) :rule rare_rewrite)
+(step t.end (cl) :rule resolution :premises (nt18.0 t18))

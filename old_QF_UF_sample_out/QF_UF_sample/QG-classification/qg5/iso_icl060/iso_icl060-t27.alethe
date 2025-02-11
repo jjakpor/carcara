@@ -1,0 +1,5 @@
+(assume t25 (= e0 (op e2 e1)))
+(assume t26 (= (op e2 e1) (op (op e1 e3) e1)))
+(assume nt27.0 (not (= e0 (op (op e1 e3) e1))))
+(step t27 (cl (= e0 (op (op e1 e3) e1))) :rule trans :premises (t25 t26))
+(step t.end (cl) :rule resolution :premises (nt27.0 t27))

@@ -1,0 +1,5 @@
+(assume t485 (= (= (= e3 (op (op (op e4 e3) (op e4 e3)) e4)) false) (not (= e3 (op (op (op e4 e3) (op e4 e3)) e4)))))
+(assume nt486.0 (not (not (= (= e3 (op (op (op e4 e3) (op e4 e3)) e4)) false))))
+(assume nt486.1 (not (not (= e3 (op (op (op e4 e3) (op e4 e3)) e4)))))
+(step t486 (cl (not (= (= e3 (op (op (op e4 e3) (op e4 e3)) e4)) false)) (not (= e3 (op (op (op e4 e3) (op e4 e3)) e4)))) :rule equiv1 :premises (t485))
+(step t.end (cl) :rule resolution :premises (nt486.0 nt486.1 t486))

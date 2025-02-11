@@ -1,0 +1,6 @@
+(assume nt917.0 (not (and (= (op (op (op e0 e0) e0) (op e0 e0)) (op (op e0 e0) (op (op e0 e0) e0))) (= (op e0 e0) (op (op e0 e0) (op (op e0 e0) e0))) (= (op e0 e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0))))))
+(assume nt917.1 (not (not (= (op (op (op e0 e0) e0) (op e0 e0)) (op (op e0 e0) (op (op e0 e0) e0))))))
+(assume nt917.2 (not (not (= (op e0 e0) (op (op e0 e0) (op (op e0 e0) e0))))))
+(assume nt917.3 (not (not (= (op e0 e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0))))))
+(step t917 (cl (and (= (op (op (op e0 e0) e0) (op e0 e0)) (op (op e0 e0) (op (op e0 e0) e0))) (= (op e0 e0) (op (op e0 e0) (op (op e0 e0) e0))) (= (op e0 e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0)))) (not (= (op (op (op e0 e0) e0) (op e0 e0)) (op (op e0 e0) (op (op e0 e0) e0)))) (not (= (op e0 e0) (op (op e0 e0) (op (op e0 e0) e0)))) (not (= (op e0 e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0))))) :rule and_neg)
+(step t.end (cl) :rule resolution :premises (nt917.0 nt917.1 nt917.2 nt917.3 t917))

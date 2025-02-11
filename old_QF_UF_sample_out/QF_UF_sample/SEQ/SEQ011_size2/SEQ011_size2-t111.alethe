@@ -1,0 +1,5 @@
+(assume t110 (or (=> (and (p4 c8) (= c8 c_0)) (p4 c_0)) (=> (and (p4 c8) (= c8 c_0)) (p4 c_0))))
+(assume nt111.0 (not (=> (and (p4 c8) (= c8 c_0)) (p4 c_0))))
+(step t110' (cl (=> (and (p4 c8) (= c8 c_0)) (p4 c_0)) (=> (and (p4 c8) (= c8 c_0)) (p4 c_0))) :rule or :premises (t110))
+(step t111 (cl (=> (and (p4 c8) (= c8 c_0)) (p4 c_0))) :rule contraction :premises (t110'))
+(step t.end (cl) :rule resolution :premises (nt111.0 t111))

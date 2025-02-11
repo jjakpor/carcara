@@ -1,0 +1,5 @@
+(assume t128 (= (= (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0)) true) (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0))))
+(assume nt129.0 (not (not (= (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0)) true))))
+(assume nt129.1 (not (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0))))
+(step t129 (cl (not (= (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0)) true)) (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0))) :rule equiv1 :premises (t128))
+(step t.end (cl) :rule resolution :premises (nt129.0 nt129.1 t129))

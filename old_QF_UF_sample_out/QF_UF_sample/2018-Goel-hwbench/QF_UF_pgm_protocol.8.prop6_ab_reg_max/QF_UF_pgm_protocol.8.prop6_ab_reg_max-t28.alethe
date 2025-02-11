@@ -1,0 +1,7 @@
+(assume t0 (or (not (= y$id185_op (and y$111 y$v3_1517448504_183_op))) (not y$id185_op) (and y$111 y$v3_1517448504_183_op)))
+(assume t18 y$id185_op)
+(assume t27 (not (and y$111 y$v3_1517448504_183_op)))
+(assume nt28.0 (not (not (= y$id185_op (and y$111 y$v3_1517448504_183_op)))))
+(step t0' (cl (not (= y$id185_op (and y$111 y$v3_1517448504_183_op))) (not y$id185_op) (and y$111 y$v3_1517448504_183_op)) :rule or :premises (t0))
+(step t28 (cl (not (= y$id185_op (and y$111 y$v3_1517448504_183_op)))) :rule resolution :premises (t0' t18 t27))
+(step t.end (cl) :rule resolution :premises (nt28.0 t28))

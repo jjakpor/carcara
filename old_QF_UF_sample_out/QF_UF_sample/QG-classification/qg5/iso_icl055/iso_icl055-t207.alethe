@@ -1,0 +1,7 @@
+(assume t197 (or (not (= (not (= e1 e4)) (not (= e1 (op (op e1 e1) (op e1 e1)))))) (not (not (= e1 e4))) (not (= e1 (op (op e1 e1) (op e1 e1))))))
+(assume t205 (= (not (= e1 e4)) (not (= e1 (op (op e1 e1) (op e1 e1))))))
+(assume t206 (not (= e1 e4)))
+(assume nt207.0 (not (not (= e1 (op (op e1 e1) (op e1 e1))))))
+(step t197' (cl (not (= (not (= e1 e4)) (not (= e1 (op (op e1 e1) (op e1 e1)))))) (not (not (= e1 e4))) (not (= e1 (op (op e1 e1) (op e1 e1))))) :rule or :premises (t197))
+(step t207 (cl (not (= e1 (op (op e1 e1) (op e1 e1))))) :rule resolution :premises (t197' t205 t206))
+(step t.end (cl) :rule resolution :premises (nt207.0 t207))

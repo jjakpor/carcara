@@ -1,0 +1,5 @@
+(assume t42 (= e3 (op (op e0 e0) e0)))
+(assume t39 (= (op e2 e0) (op (op e0 e0) e0)))
+(assume nt76.0 (not (= (= e3 (op e2 e0)) (= (op (op e0 e0) e0) (op (op e0 e0) e0)))))
+(step t76 (cl (= (= e3 (op e2 e0)) (= (op (op e0 e0) e0) (op (op e0 e0) e0)))) :rule cong :premises (t42 t39))
+(step t.end (cl) :rule resolution :premises (nt76.0 t76))

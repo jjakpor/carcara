@@ -1,0 +1,5 @@
+(assume t84.t221 (=> (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21))) (= x20 x21)))
+(assume nt84.t222.0 (not (not (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21))))))
+(assume nt84.t222.1 (not (= x20 x21)))
+(step t84.t222 (cl (not (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21)))) (= x20 x21)) :rule implies :premises (t84.t221))
+(step t.end (cl) :rule resolution :premises (nt84.t222.0 nt84.t222.1 t84.t222))

@@ -1,0 +1,5 @@
+(assume nt342.0 (not (not (= (= (op (op e1 e2) e1) e2) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3))))))))
+(assume nt342.1 (not (not (= (op (op e1 e2) e1) e2))))
+(assume nt342.2 (not (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3))))))
+(step t342 (cl (not (= (= (op (op e1 e2) e1) e2) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3)))))) (not (= (op (op e1 e2) e1) e2)) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt342.0 nt342.1 nt342.2 t342))

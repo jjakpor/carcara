@@ -1,0 +1,5 @@
+(assume t321 (= e1 (op (op (op e1 e3) e1) e3)))
+(assume t1216.t4 (= (op e3 (op (op e1 e3) e3)) (op (op (op e1 e3) e3) e3)))
+(assume nt1216.t5.0 (not (= (= e1 (op e3 (op (op e1 e3) e3))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))))
+(step t1216.t5 (cl (= (= e1 (op e3 (op (op e1 e3) e3))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) :rule cong :premises (t321 t1216.t4))
+(step t.end (cl) :rule resolution :premises (nt1216.t5.0 t1216.t5))

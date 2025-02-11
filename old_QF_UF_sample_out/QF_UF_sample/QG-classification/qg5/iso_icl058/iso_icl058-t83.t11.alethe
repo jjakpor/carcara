@@ -1,0 +1,4 @@
+(assume t83.t10 (and (and (and (and (= (op e0 e1) (op e1 e0)) (= (op e1 e1) (op e1 e1))) (= (op e2 e1) (op e1 e2))) (= (op e3 e1) (op e1 e3))) (= (op e4 e1) (op e1 e4))))
+(assume nt83.t11.0 (not (and (and (and (= (op e0 e1) (op e1 e0)) (= (op e1 e1) (op e1 e1))) (= (op e2 e1) (op e1 e2))) (= (op e3 e1) (op e1 e3)))))
+(step t83.t11 (cl (and (and (and (= (op e0 e1) (op e1 e0)) (= (op e1 e1) (op e1 e1))) (= (op e2 e1) (op e1 e2))) (= (op e3 e1) (op e1 e3)))) :rule and :premises (t83.t10))
+(step t.end (cl) :rule resolution :premises (nt83.t11.0 t83.t11))

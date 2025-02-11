@@ -1,0 +1,5 @@
+(assume t836 (=> (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (= x74 x75)))
+(assume nt837.0 (not (not (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))))))
+(assume nt837.1 (not (= x74 x75)))
+(step t837 (cl (not (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75)))) (= x74 x75)) :rule implies :premises (t836))
+(step t.end (cl) :rule resolution :premises (nt837.0 nt837.1 t837))

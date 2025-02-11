@@ -1,0 +1,6 @@
+(assume t1 (or (not y$id14_op) (and y$a_done y$7)))
+(assume t8 (not (and y$a_done y$7)))
+(assume nt9.0 (not (not y$id14_op)))
+(step t1' (cl (not y$id14_op) (and y$a_done y$7)) :rule or :premises (t1))
+(step t9 (cl (not y$id14_op)) :rule resolution :premises (t1' t8))
+(step t.end (cl) :rule resolution :premises (nt9.0 t9))

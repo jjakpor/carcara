@@ -1,0 +1,3 @@
+(assume nt1011.0 (not (= (= (= (op e3 (op e4 e3)) (op (op e4 e3) e3)) false) (not (= (op e3 (op e4 e3)) (op (op e4 e3) e3))))))
+(step t1011 (cl (= (= (= (op e3 (op e4 e3)) (op (op e4 e3) e3)) false) (not (= (op e3 (op e4 e3)) (op (op e4 e3) e3))))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nt1011.0 t1011))

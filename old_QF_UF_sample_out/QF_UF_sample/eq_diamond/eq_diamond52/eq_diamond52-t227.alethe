@@ -1,0 +1,5 @@
+(assume t226 (=> (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))) (= x19 x20)))
+(assume nt227.0 (not (not (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))))))
+(assume nt227.1 (not (= x19 x20)))
+(step t227 (cl (not (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20)))) (= x19 x20)) :rule implies :premises (t226))
+(step t.end (cl) :rule resolution :premises (nt227.0 nt227.1 t227))

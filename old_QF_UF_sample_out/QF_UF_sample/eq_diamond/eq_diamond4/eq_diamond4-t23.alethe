@@ -1,0 +1,6 @@
+(assume t22 (or (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (= x0 x1)))
+(assume nt23.0 (not (= x0 x1)))
+(assume nt23.1 (not (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))))
+(step t22' (cl (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (= x0 x1)) :rule or :premises (t22))
+(step t23 (cl (= x0 x1) (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))) :rule reordering :premises (t22'))
+(step t.end (cl) :rule resolution :premises (nt23.0 nt23.1 t23))

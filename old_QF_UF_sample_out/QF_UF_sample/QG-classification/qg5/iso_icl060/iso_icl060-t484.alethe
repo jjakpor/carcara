@@ -1,0 +1,5 @@
+(assume t473 (= (= e1 (op (op (op e1 e3) e3) e3)) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))
+(assume t483 (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) false))
+(assume nt484.0 (not (= (= e1 (op (op (op e1 e3) e3) e3)) false)))
+(step t484 (cl (= (= e1 (op (op (op e1 e3) e3) e3)) false)) :rule trans :premises (t473 t483))
+(step t.end (cl) :rule resolution :premises (nt484.0 t484))

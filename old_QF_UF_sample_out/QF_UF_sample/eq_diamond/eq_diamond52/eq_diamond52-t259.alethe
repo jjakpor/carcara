@@ -1,0 +1,4 @@
+(assume t258 (and (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23))))
+(assume nt259.0 (not (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23))))
+(step t259 (cl (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23))) :rule and :premises (t258))
+(step t.end (cl) :rule resolution :premises (nt259.0 t259))

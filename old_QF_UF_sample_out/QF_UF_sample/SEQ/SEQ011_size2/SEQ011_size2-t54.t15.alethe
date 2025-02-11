@@ -1,0 +1,5 @@
+(assume t54.t14 (= (= (p1 (f6 c_1) c_1) true) (p1 (f6 c_1) c_1)))
+(assume nt54.t15.0 (not (= (p1 (f6 c_1) c_1) true)))
+(assume nt54.t15.1 (not (not (p1 (f6 c_1) c_1))))
+(step t54.t15 (cl (= (p1 (f6 c_1) c_1) true) (not (p1 (f6 c_1) c_1))) :rule equiv2 :premises (t54.t14))
+(step t.end (cl) :rule resolution :premises (nt54.t15.0 nt54.t15.1 t54.t15))

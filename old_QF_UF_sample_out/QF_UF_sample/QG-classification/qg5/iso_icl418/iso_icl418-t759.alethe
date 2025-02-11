@@ -1,0 +1,8 @@
+(assume t755 (= (= (op e4 e2) e0) (= e0 (op e4 e2))))
+(assume t756 (= (= (op e3 e2) e0) (= e0 (op e3 e2))))
+(assume t14 (= (= (op e2 e2) e0) (= e0 (op e2 e2))))
+(assume t757 (= (= (op e0 e2) e0) (= e0 (op e0 e2))))
+(assume t758 (= (= (op e1 e2) e0) (= e0 (op e1 e2))))
+(assume nt759.0 (not (= (or (= (op e4 e2) e0) (= (op e3 e2) e0) (= (op e2 e2) e0) (= (op e0 e2) e0) (= (op e1 e2) e0)) (or (= e0 (op e4 e2)) (= e0 (op e3 e2)) (= e0 (op e2 e2)) (= e0 (op e0 e2)) (= e0 (op e1 e2))))))
+(step t759 (cl (= (or (= (op e4 e2) e0) (= (op e3 e2) e0) (= (op e2 e2) e0) (= (op e0 e2) e0) (= (op e1 e2) e0)) (or (= e0 (op e4 e2)) (= e0 (op e3 e2)) (= e0 (op e2 e2)) (= e0 (op e0 e2)) (= e0 (op e1 e2))))) :rule cong :premises (t755 t756 t14 t757 t758))
+(step t.end (cl) :rule resolution :premises (nt759.0 t759))

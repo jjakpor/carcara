@@ -1,0 +1,6 @@
+(assume t169 (or (= x14 x15) (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))))
+(assume t165 (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))
+(assume nt170.0 (not (= x14 x15)))
+(step t169' (cl (= x14 x15) (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))) :rule or :premises (t169))
+(step t170 (cl (= x14 x15)) :rule resolution :premises (t169' t165))
+(step t.end (cl) :rule resolution :premises (nt170.0 t170))

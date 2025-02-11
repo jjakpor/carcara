@@ -1,0 +1,4 @@
+(assume t93.a1 (= c8 c_1))
+(assume nt93.t2.0 (not (= c_1 c8)))
+(step t93.t2 (cl (= c_1 c8)) :rule symm :premises (t93.a1))
+(step t.end (cl) :rule resolution :premises (nt93.t2.0 t93.t2))
