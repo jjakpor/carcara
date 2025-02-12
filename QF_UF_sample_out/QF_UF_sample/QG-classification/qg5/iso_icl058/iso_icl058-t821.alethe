@@ -1,4 +1,4 @@
 (assume t586 (and (or (or (or (or (= (op e3 e0) e3) (= (op e3 e1) e3)) (= (op e3 e2) e3)) (= (op e3 e3) e3)) (= (op e3 e4) e3)) (or (or (or (or (= (op e0 e3) e3) (= (op e1 e3) e3)) (= (op e2 e3) e3)) (= (op e3 e3) e3)) (= (op e4 e3) e3))))
 (assume nt821.0 (not (or (or (or (or (= (op e3 e0) e3) (= (op e3 e1) e3)) (= (op e3 e2) e3)) (= (op e3 e3) e3)) (= (op e3 e4) e3))))
-(step t821 (cl (or (or (or (or (= (op e3 e0) e3) (= (op e3 e1) e3)) (= (op e3 e2) e3)) (= (op e3 e3) e3)) (= (op e3 e4) e3))) :rule and :premises (t586))
+(step t821 (cl (or (or (or (or (= (op e3 e0) e3) (= (op e3 e1) e3)) (= (op e3 e2) e3)) (= (op e3 e3) e3)) (= (op e3 e4) e3))) :rule and :premises (t586) :args (0))
 (step t.end (cl) :rule resolution :premises (nt821.0 t821))

@@ -1,4 +1,4 @@
 (assume t370 (and (and (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4))) (not (= e1 e2))) (not (= e1 e3))))
 (assume nt371.0 (not (and (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4))) (not (= e1 e2)))))
-(step t371 (cl (and (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4))) (not (= e1 e2)))) :rule and :premises (t370))
+(step t371 (cl (and (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4))) (not (= e1 e2)))) :rule and :premises (t370) :args (0))
 (step t.end (cl) :rule resolution :premises (nt371.0 t371))

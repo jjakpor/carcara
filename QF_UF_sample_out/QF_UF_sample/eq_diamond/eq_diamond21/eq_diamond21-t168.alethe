@@ -1,4 +1,4 @@
 (assume t167 (and (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15))))
 (assume nt168.0 (not (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15))))
-(step t168 (cl (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15))) :rule and :premises (t167))
+(step t168 (cl (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15))) :rule and :premises (t167) :args (1))
 (step t.end (cl) :rule resolution :premises (nt168.0 t168))

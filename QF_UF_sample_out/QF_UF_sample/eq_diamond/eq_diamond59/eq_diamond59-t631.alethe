@@ -1,4 +1,4 @@
 (assume t630 (and (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (=> (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (= x38 x39))))
 (assume nt631.0 (not (=> (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (= x38 x39))))
-(step t631 (cl (=> (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (= x38 x39))) :rule and :premises (t630))
+(step t631 (cl (=> (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (= x38 x39))) :rule and :premises (t630) :args (1))
 (step t.end (cl) :rule resolution :premises (nt631.0 t631))

@@ -1,4 +1,4 @@
 (assume t553 (and (or (or (or (or (= (op e3 e0) e2) (= (op e3 e1) e2)) (= (op e3 e2) e2)) (= (op e3 e3) e2)) (= (op e3 e4) e2)) (or (or (or (or (= (op e0 e3) e2) (= (op e1 e3) e2)) (= (op e2 e3) e2)) (= (op e3 e3) e2)) (= (op e4 e3) e2))))
 (assume nt802.0 (not (or (or (or (or (= (op e3 e0) e2) (= (op e3 e1) e2)) (= (op e3 e2) e2)) (= (op e3 e3) e2)) (= (op e3 e4) e2))))
-(step t802 (cl (or (or (or (or (= (op e3 e0) e2) (= (op e3 e1) e2)) (= (op e3 e2) e2)) (= (op e3 e3) e2)) (= (op e3 e4) e2))) :rule and :premises (t553))
+(step t802 (cl (or (or (or (or (= (op e3 e0) e2) (= (op e3 e1) e2)) (= (op e3 e2) e2)) (= (op e3 e3) e2)) (= (op e3 e4) e2))) :rule and :premises (t553) :args (0))
 (step t.end (cl) :rule resolution :premises (nt802.0 t802))

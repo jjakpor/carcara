@@ -1,4 +1,4 @@
 (assume nt112.0 (not (not (and (p4 c8) (= c8 c_0)))))
 (assume nt112.1 (not (p4 c8)))
-(step t112 (cl (not (and (p4 c8) (= c8 c_0))) (p4 c8)) :rule and_pos)
+(step t112 (cl (not (and (p4 c8) (= c8 c_0))) (p4 c8)) :rule and_pos :args (0))
 (step t.end (cl) :rule resolution :premises (nt112.0 nt112.1 t112))

@@ -1,4 +1,4 @@
 (assume t719 (and (or (or (or (or (= (op e2 e0) e0) (= (op e2 e1) e0)) (= (op e2 e2) e0)) (= (op e2 e3) e0)) (= (op e2 e4) e0)) (or (or (or (or (= (op e0 e2) e0) (= (op e1 e2) e0)) (= (op e2 e2) e0)) (= (op e3 e2) e0)) (= (op e4 e2) e0))))
 (assume nt862.0 (not (or (or (or (or (= (op e0 e2) e0) (= (op e1 e2) e0)) (= (op e2 e2) e0)) (= (op e3 e2) e0)) (= (op e4 e2) e0))))
-(step t862 (cl (or (or (or (or (= (op e0 e2) e0) (= (op e1 e2) e0)) (= (op e2 e2) e0)) (= (op e3 e2) e0)) (= (op e4 e2) e0))) :rule and :premises (t719))
+(step t862 (cl (or (or (or (or (= (op e0 e2) e0) (= (op e1 e2) e0)) (= (op e2 e2) e0)) (= (op e3 e2) e0)) (= (op e4 e2) e0))) :rule and :premises (t719) :args (1))
 (step t.end (cl) :rule resolution :premises (nt862.0 t862))

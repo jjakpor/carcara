@@ -1,4 +1,4 @@
 (assume t157 (and (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4))) (not (= e0 e5))))
 (assume nt158.0 (not (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4)))))
-(step t158 (cl (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4)))) :rule and :premises (t157))
+(step t158 (cl (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4)))) :rule and :premises (t157) :args (0))
 (step t.end (cl) :rule resolution :premises (nt158.0 t158))

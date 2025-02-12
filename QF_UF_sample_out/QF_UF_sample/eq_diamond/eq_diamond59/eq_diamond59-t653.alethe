@@ -1,4 +1,4 @@
 (assume t652 (and (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (=> (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (= x40 x41))))
 (assume nt653.0 (not (=> (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (= x40 x41))))
-(step t653 (cl (=> (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (= x40 x41))) :rule and :premises (t652))
+(step t653 (cl (=> (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (= x40 x41))) :rule and :premises (t652) :args (1))
 (step t.end (cl) :rule resolution :premises (nt653.0 t653))

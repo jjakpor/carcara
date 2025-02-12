@@ -1,3 +1,3 @@
 (assume nt704.0 (not (= (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (= (op e3 e1) (op e3 (op (op e1 e3) e1))))))
-(step t704 (cl (= (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) :rule rare_rewrite)
+(step t704 (cl (= (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) :rule rare_rewrite :args ("bool-double-not-elim" (= (op e3 e1) (op e3 (op (op e1 e3) e1)))))
 (step t.end (cl) :rule resolution :premises (nt704.0 t704))

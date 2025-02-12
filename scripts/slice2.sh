@@ -50,7 +50,7 @@ find "$input_dir" -type f -name "*.alethe" | while read -r proof_file; do
         mv "$base_name-$step_id.smt2" "$target_dir"
         mv "$base_name-$step_id.alethe" "$target_dir"
 
-        validity=$(carcara check "$sliced_proof_file" "$sliced_problem_file" -i)
+        validity=$($dev_carcara check "$sliced_proof_file" "$sliced_problem_file" -i)
         
 
         echo "$validity"

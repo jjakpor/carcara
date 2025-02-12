@@ -490,6 +490,7 @@ impl<'c> ProofChecker<'c> {
                 log::warn!("encountered \"lia_generic\" rule, ignoring");
                 Ok(())
             },
+            "trust" => |_| Ok(()),
 
             // The Alethe specification does not yet describe how this more strict version of the
             // resolution rule will be called. Until that is decided and added to the specification,

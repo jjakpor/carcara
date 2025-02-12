@@ -1,5 +1,0 @@
-(assume nt107.0 (not (not (= e2 (op e2 e0)))))
-(assume nt107.1 (not (not (= e0 (op e2 (op e2 e0))))))
-(assume nt107.2 (not (= e2 (op e2 (op e2 e2)))))
-(step t107 (cl (not (= e2 (op e2 e0))) (not (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2)))) :rule subproof)
-(step t.end (cl) :rule resolution :premises (nt107.0 nt107.1 nt107.2 t107))

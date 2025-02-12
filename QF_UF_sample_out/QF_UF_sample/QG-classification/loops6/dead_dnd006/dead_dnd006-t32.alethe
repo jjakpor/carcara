@@ -1,3 +1,3 @@
 (assume nt32.0 (not (= (= (op e2 e0) unit) (= unit (op e2 e0)))))
-(step t32 (cl (= (= (op e2 e0) unit) (= unit (op e2 e0)))) :rule rare_rewrite)
+(step t32 (cl (= (= (op e2 e0) unit) (= unit (op e2 e0)))) :rule rare_rewrite :args ("eq-symm" (op e2 e0) unit))
 (step t.end (cl) :rule resolution :premises (nt32.0 t32))

@@ -1,4 +1,4 @@
 (assume nt172.0 (not (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))))))
 (assume nt172.1 (not (= e0 (op e3 (op e3 e0)))))
-(step t172 (cl (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) (= e0 (op e3 (op e3 e0)))) :rule and_pos)
+(step t172 (cl (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) (= e0 (op e3 (op e3 e0)))) :rule and_pos :args (1))
 (step t.end (cl) :rule resolution :premises (nt172.0 nt172.1 t172))

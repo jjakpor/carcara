@@ -2,7 +2,7 @@
 (assume t7 (or (not (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0))))) (= e2 (op e2 (op e2 e2)))))
 (assume nt8.0 (not (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2))))))
 (assume nt8.1 (not (= e2 (op e2 (op e2 e2)))))
-(step t7' (cl (not (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0))))) (= e2 (op e2 (op e2 e2)))) :rule or :premises (t7))
 (step t1' (cl (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2)))) (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0))))) :rule or :premises (t1))
+(step t7' (cl (not (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0))))) (= e2 (op e2 (op e2 e2)))) :rule or :premises (t7))
 (step t8 (cl (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2)))) (= e2 (op e2 (op e2 e2)))) :rule resolution :premises (t1' t7'))
 (step t.end (cl) :rule resolution :premises (nt8.0 nt8.1 t8))

@@ -1,4 +1,4 @@
 (assume t116 (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3))))
 (assume nt117.0 (not (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3))))
-(step t117 (cl (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3))) :rule and :premises (t116))
+(step t117 (cl (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3))) :rule and :premises (t116) :args (1))
 (step t.end (cl) :rule resolution :premises (nt117.0 t117))

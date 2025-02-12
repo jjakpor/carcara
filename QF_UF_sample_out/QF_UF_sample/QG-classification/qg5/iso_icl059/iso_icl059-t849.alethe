@@ -1,4 +1,4 @@
 (assume t189 (and (and (= (op e2 (op e2 e0)) e0) (= (op e2 (op e2 e1)) e1)) (= (op e2 (op e2 e2)) e2)))
 (assume nt849.0 (not (= (op e2 (op e2 e2)) e2)))
-(step t849 (cl (= (op e2 (op e2 e2)) e2)) :rule and :premises (t189))
+(step t849 (cl (= (op e2 (op e2 e2)) e2)) :rule and :premises (t189) :args (1))
 (step t.end (cl) :rule resolution :premises (nt849.0 t849))

@@ -1,4 +1,4 @@
 (assume nt262.0 (not (not (and (= e0 (op e5 (op e5 e0))) (not (= e0 (op e5 e0)))))))
 (assume nt262.1 (not (= e0 (op e5 (op e5 e0)))))
-(step t262 (cl (not (and (= e0 (op e5 (op e5 e0))) (not (= e0 (op e5 e0))))) (= e0 (op e5 (op e5 e0)))) :rule and_pos)
+(step t262 (cl (not (and (= e0 (op e5 (op e5 e0))) (not (= e0 (op e5 e0))))) (= e0 (op e5 (op e5 e0)))) :rule and_pos :args (0))
 (step t.end (cl) :rule resolution :premises (nt262.0 nt262.1 t262))

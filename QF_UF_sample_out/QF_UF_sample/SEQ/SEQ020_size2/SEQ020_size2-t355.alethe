@@ -1,4 +1,4 @@
 (assume nt355.0 (not (or (not (not (p1 (f7 c_1) c_1))) (not (= c_1 (f7 c_1))) (not (= c_1 (f6 c_1))) (not (p1 (f6 c_1) c_1)))))
 (assume nt355.1 (not (not (not (not (p1 (f7 c_1) c_1))))))
-(step t355 (cl (or (not (not (p1 (f7 c_1) c_1))) (not (= c_1 (f7 c_1))) (not (= c_1 (f6 c_1))) (not (p1 (f6 c_1) c_1))) (not (not (not (p1 (f7 c_1) c_1))))) :rule or_neg)
+(step t355 (cl (or (not (not (p1 (f7 c_1) c_1))) (not (= c_1 (f7 c_1))) (not (= c_1 (f6 c_1))) (not (p1 (f6 c_1) c_1))) (not (not (not (p1 (f7 c_1) c_1))))) :rule or_neg :args (0))
 (step t.end (cl) :rule resolution :premises (nt355.0 nt355.1 t355))

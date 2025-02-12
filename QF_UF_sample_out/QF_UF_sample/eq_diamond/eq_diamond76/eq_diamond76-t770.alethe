@@ -1,4 +1,4 @@
 (assume t769 (and (or (and (= x68 y68) (= y68 x69)) (and (= x68 z68) (= z68 x69))) (=> (or (and (= x68 y68) (= y68 x69)) (and (= x68 z68) (= z68 x69))) (= x68 x69))))
 (assume nt770.0 (not (=> (or (and (= x68 y68) (= y68 x69)) (and (= x68 z68) (= z68 x69))) (= x68 x69))))
-(step t770 (cl (=> (or (and (= x68 y68) (= y68 x69)) (and (= x68 z68) (= z68 x69))) (= x68 x69))) :rule and :premises (t769))
+(step t770 (cl (=> (or (and (= x68 y68) (= y68 x69)) (and (= x68 z68) (= z68 x69))) (= x68 x69))) :rule and :premises (t769) :args (1))
 (step t.end (cl) :rule resolution :premises (nt770.0 t770))

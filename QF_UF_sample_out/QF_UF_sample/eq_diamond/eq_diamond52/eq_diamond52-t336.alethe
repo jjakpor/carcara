@@ -1,4 +1,4 @@
 (assume t335 (and (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (=> (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (= x29 x30))))
 (assume nt336.0 (not (=> (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (= x29 x30))))
-(step t336 (cl (=> (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (= x29 x30))) :rule and :premises (t335))
+(step t336 (cl (=> (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (= x29 x30))) :rule and :premises (t335) :args (1))
 (step t.end (cl) :rule resolution :premises (nt336.0 t336))

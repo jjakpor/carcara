@@ -1,4 +1,4 @@
 (assume t469 (and (not (= e0 e1)) (not (= e0 e2))))
 (assume nt470.0 (not (not (= e0 e2))))
-(step t470 (cl (not (= e0 e2))) :rule and :premises (t469))
+(step t470 (cl (not (= e0 e2))) :rule and :premises (t469) :args (1))
 (step t.end (cl) :rule resolution :premises (nt470.0 t470))

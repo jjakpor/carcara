@@ -1,4 +1,4 @@
 (assume t409 (and (and (and (and (and (and (not (= (op e0 e0) (op e0 e1))) (not (= (op e0 e0) (op e0 e2)))) (not (= (op e0 e0) (op e0 e3)))) (not (= (op e0 e0) (op e0 e4)))) (not (= (op e0 e1) (op e0 e2)))) (not (= (op e0 e1) (op e0 e3)))) (not (= (op e0 e1) (op e0 e4)))))
 (assume nt410.0 (not (and (and (and (and (and (not (= (op e0 e0) (op e0 e1))) (not (= (op e0 e0) (op e0 e2)))) (not (= (op e0 e0) (op e0 e3)))) (not (= (op e0 e0) (op e0 e4)))) (not (= (op e0 e1) (op e0 e2)))) (not (= (op e0 e1) (op e0 e3))))))
-(step t410 (cl (and (and (and (and (and (not (= (op e0 e0) (op e0 e1))) (not (= (op e0 e0) (op e0 e2)))) (not (= (op e0 e0) (op e0 e3)))) (not (= (op e0 e0) (op e0 e4)))) (not (= (op e0 e1) (op e0 e2)))) (not (= (op e0 e1) (op e0 e3))))) :rule and :premises (t409))
+(step t410 (cl (and (and (and (and (and (not (= (op e0 e0) (op e0 e1))) (not (= (op e0 e0) (op e0 e2)))) (not (= (op e0 e0) (op e0 e3)))) (not (= (op e0 e0) (op e0 e4)))) (not (= (op e0 e1) (op e0 e2)))) (not (= (op e0 e1) (op e0 e3))))) :rule and :premises (t409) :args (0))
 (step t.end (cl) :rule resolution :premises (nt410.0 t410))

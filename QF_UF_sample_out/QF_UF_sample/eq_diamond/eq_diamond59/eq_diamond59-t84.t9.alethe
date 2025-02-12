@@ -1,4 +1,4 @@
 (assume t84.t8 (and (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11))))
 (assume nt84.t9.0 (not (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11))))
-(step t84.t9 (cl (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11))) :rule and :premises (t84.t8))
+(step t84.t9 (cl (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11))) :rule and :premises (t84.t8) :args (1))
 (step t.end (cl) :rule resolution :premises (nt84.t9.0 t84.t9))

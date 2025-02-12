@@ -1,4 +1,4 @@
 (assume t84.t231 (and (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (=> (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (= x21 x22))))
 (assume nt84.t232.0 (not (=> (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (= x21 x22))))
-(step t84.t232 (cl (=> (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (= x21 x22))) :rule and :premises (t84.t231))
+(step t84.t232 (cl (=> (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (= x21 x22))) :rule and :premises (t84.t231) :args (1))
 (step t.end (cl) :rule resolution :premises (nt84.t232.0 t84.t232))

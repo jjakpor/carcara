@@ -1,3 +1,3 @@
 (assume nt166.0 (not (= (and (not (= y$n1s8 y$v_k_Table)) (not (= y$n255s8 y$v_k_Table)) false (not (= y$n1s8 y$n255s8)) (not (= y$n1s8 y$v_k_Table)) (not (= y$n255s8 y$v_k_Table))) false)))
-(step t166 (cl (= (and (not (= y$n1s8 y$v_k_Table)) (not (= y$n255s8 y$v_k_Table)) false (not (= y$n1s8 y$n255s8)) (not (= y$n1s8 y$v_k_Table)) (not (= y$n255s8 y$v_k_Table))) false)) :rule rare_rewrite)
+(step t166 (cl (= (and (not (= y$n1s8 y$v_k_Table)) (not (= y$n255s8 y$v_k_Table)) false (not (= y$n1s8 y$n255s8)) (not (= y$n1s8 y$v_k_Table)) (not (= y$n255s8 y$v_k_Table))) false)) :rule rare_rewrite :args ("bool-and-false" (rare-list (not (= y$n1s8 y$v_k_Table)) (not (= y$n255s8 y$v_k_Table))) (rare-list (not (= y$n1s8 y$n255s8)) (not (= y$n1s8 y$v_k_Table)) (not (= y$n255s8 y$v_k_Table)))))
 (step t.end (cl) :rule resolution :premises (nt166.0 t166))

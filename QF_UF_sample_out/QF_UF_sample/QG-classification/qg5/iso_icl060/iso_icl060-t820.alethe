@@ -1,5 +1,0 @@
-(assume nt820.0 (not (not (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))))))
-(assume nt820.1 (not (not (= e1 (op e3 (op (op e1 e3) e3))))))
-(assume nt820.2 (not (= (op e3 e1) (op (op e1 e3) e3))))
-(step t820 (cl (not (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3))))) (not (= e1 (op e3 (op (op e1 e3) e3)))) (= (op e3 e1) (op (op e1 e3) e3))) :rule subproof)
-(step t.end (cl) :rule resolution :premises (nt820.0 nt820.1 nt820.2 t820))

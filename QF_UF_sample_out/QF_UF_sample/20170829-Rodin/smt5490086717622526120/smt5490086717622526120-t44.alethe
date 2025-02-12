@@ -1,4 +1,4 @@
 (assume nt44.0 (not (or (not red_SR) (not (not prt)))))
 (assume nt44.1 (not (not (not (not prt)))))
-(step t44 (cl (or (not red_SR) (not (not prt))) (not (not (not prt)))) :rule or_neg)
+(step t44 (cl (or (not red_SR) (not (not prt))) (not (not (not prt)))) :rule or_neg :args (1))
 (step t.end (cl) :rule resolution :premises (nt44.0 nt44.1 t44))

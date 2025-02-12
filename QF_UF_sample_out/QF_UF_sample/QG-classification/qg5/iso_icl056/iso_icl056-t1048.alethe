@@ -1,4 +1,4 @@
 (assume t616 (and (or (or (or (or (= (op e4 e0) e4) (= (op e4 e1) e4)) (= (op e4 e2) e4)) (= (op e4 e3) e4)) (= (op e4 e4) e4)) (or (or (or (or (= (op e0 e4) e4) (= (op e1 e4) e4)) (= (op e2 e4) e4)) (= (op e3 e4) e4)) (= (op e4 e4) e4))))
 (assume nt1048.0 (not (or (or (or (or (= (op e4 e0) e4) (= (op e4 e1) e4)) (= (op e4 e2) e4)) (= (op e4 e3) e4)) (= (op e4 e4) e4))))
-(step t1048 (cl (or (or (or (or (= (op e4 e0) e4) (= (op e4 e1) e4)) (= (op e4 e2) e4)) (= (op e4 e3) e4)) (= (op e4 e4) e4))) :rule and :premises (t616))
+(step t1048 (cl (or (or (or (or (= (op e4 e0) e4) (= (op e4 e1) e4)) (= (op e4 e2) e4)) (= (op e4 e3) e4)) (= (op e4 e4) e4))) :rule and :premises (t616) :args (0))
 (step t.end (cl) :rule resolution :premises (nt1048.0 t1048))

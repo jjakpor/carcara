@@ -1,3 +1,3 @@
 (assume nt155.0 (not (= (= y$v_k_Table y$n1s8) (= y$n1s8 y$v_k_Table))))
-(step t155 (cl (= (= y$v_k_Table y$n1s8) (= y$n1s8 y$v_k_Table))) :rule rare_rewrite)
+(step t155 (cl (= (= y$v_k_Table y$n1s8) (= y$n1s8 y$v_k_Table))) :rule rare_rewrite :args ("eq-symm" y$v_k_Table y$n1s8))
 (step t.end (cl) :rule resolution :premises (nt155.0 t155))

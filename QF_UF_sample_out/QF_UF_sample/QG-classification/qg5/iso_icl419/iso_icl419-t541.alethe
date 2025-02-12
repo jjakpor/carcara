@@ -1,4 +1,4 @@
 (assume t540 (and (and (and (and (= (op (op e3 e0) e3) e0) (= (op (op e3 e1) e3) e1)) (= (op (op e3 e2) e3) e2)) (= (op (op e3 e3) e3) e3)) (= (op (op e3 e4) e3) e4)))
 (assume nt541.0 (not (= (op (op e3 e4) e3) e4)))
-(step t541 (cl (= (op (op e3 e4) e3) e4)) :rule and :premises (t540))
+(step t541 (cl (= (op (op e3 e4) e3) e4)) :rule and :premises (t540) :args (1))
 (step t.end (cl) :rule resolution :premises (nt541.0 t541))

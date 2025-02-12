@@ -1,4 +1,4 @@
 (assume t405 (and (and (and (and (and (not (= (op e0 e2) (op e1 e2))) (not (= (op e0 e2) (op e2 e2)))) (not (= (op e0 e2) (op e3 e2)))) (not (= (op e0 e2) (op e4 e2)))) (not (= (op e1 e2) (op e2 e2)))) (not (= (op e1 e2) (op e3 e2)))))
 (assume nt442.0 (not (not (= (op e1 e2) (op e3 e2)))))
-(step t442 (cl (not (= (op e1 e2) (op e3 e2)))) :rule and :premises (t405))
+(step t442 (cl (not (= (op e1 e2) (op e3 e2)))) :rule and :premises (t405) :args (1))
 (step t.end (cl) :rule resolution :premises (nt442.0 t442))

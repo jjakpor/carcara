@@ -1,4 +1,4 @@
 (assume t90.t11 (and (= (op unit e1) e1) (= (op e1 unit) e1)))
 (assume nt90.t12.0 (not (= (op e1 unit) e1)))
-(step t90.t12 (cl (= (op e1 unit) e1)) :rule and :premises (t90.t11))
+(step t90.t12 (cl (= (op e1 unit) e1)) :rule and :premises (t90.t11) :args (1))
 (step t.end (cl) :rule resolution :premises (nt90.t12.0 t90.t12))

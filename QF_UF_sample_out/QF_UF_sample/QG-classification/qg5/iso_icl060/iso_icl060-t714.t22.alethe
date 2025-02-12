@@ -1,3 +1,3 @@
 (assume nt714.t22.0 (not (= (= (op e3 (op (op e1 e3) e1)) (op e3 e1)) (= (op e3 e1) (op e3 (op (op e1 e3) e1))))))
-(step t714.t22 (cl (= (= (op e3 (op (op e1 e3) e1)) (op e3 e1)) (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) :rule rare_rewrite)
+(step t714.t22 (cl (= (= (op e3 (op (op e1 e3) e1)) (op e3 e1)) (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) :rule rare_rewrite :args ("eq-symm" (op e3 (op (op e1 e3) e1)) (op e3 e1)))
 (step t.end (cl) :rule resolution :premises (nt714.t22.0 t714.t22))

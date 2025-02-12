@@ -1,4 +1,4 @@
 (assume t2.t36 (and (or (or (or (or (= (op e0 e0) e0) (= (op e1 e0) e1)) (= (op e2 e0) e2)) (= (op e3 e0) e3)) (= (op e4 e0) e4)) (or (or (or (or (= (op e0 e1) e0) (= (op e1 e1) e1)) (= (op e2 e1) e2)) (= (op e3 e1) e3)) (= (op e4 e1) e4))))
 (assume nt2.t37.0 (not (or (or (or (or (= (op e0 e0) e0) (= (op e1 e0) e1)) (= (op e2 e0) e2)) (= (op e3 e0) e3)) (= (op e4 e0) e4))))
-(step t2.t37 (cl (or (or (or (or (= (op e0 e0) e0) (= (op e1 e0) e1)) (= (op e2 e0) e2)) (= (op e3 e0) e3)) (= (op e4 e0) e4))) :rule and :premises (t2.t36))
+(step t2.t37 (cl (or (or (or (or (= (op e0 e0) e0) (= (op e1 e0) e1)) (= (op e2 e0) e2)) (= (op e3 e0) e3)) (= (op e4 e0) e4))) :rule and :premises (t2.t36) :args (0))
 (step t.end (cl) :rule resolution :premises (nt2.t37.0 t2.t37))

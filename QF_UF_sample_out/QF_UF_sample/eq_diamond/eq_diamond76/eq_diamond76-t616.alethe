@@ -1,4 +1,4 @@
 (assume t615 (and (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55))))
 (assume nt616.0 (not (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55))))
-(step t616 (cl (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55))) :rule and :premises (t615))
+(step t616 (cl (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55))) :rule and :premises (t615) :args (1))
 (step t.end (cl) :rule resolution :premises (nt616.0 t616))

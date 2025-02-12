@@ -1,4 +1,4 @@
 (assume nt427.0 (not (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))))
 (assume nt427.1 (not (not (not (= c_1 (f6 c_1))))))
-(step t427 (cl (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))) (not (not (= c_1 (f6 c_1))))) :rule or_neg)
+(step t427 (cl (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))) (not (not (= c_1 (f6 c_1))))) :rule or_neg :args (1))
 (step t.end (cl) :rule resolution :premises (nt427.0 nt427.1 t427))

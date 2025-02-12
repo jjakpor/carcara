@@ -2,7 +2,7 @@
 (assume t2.t189 (or (not (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))
 (assume nt2.t190.0 (not (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false)))
 (assume nt2.t190.1 (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))
-(step t2.t189' (cl (not (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) :rule or :premises (t2.t189))
 (step t2.t188' (cl (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false) (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) :rule or :premises (t2.t188))
+(step t2.t189' (cl (not (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) :rule or :premises (t2.t189))
 (step t2.t190 (cl (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) :rule resolution :premises (t2.t188' t2.t189'))
 (step t.end (cl) :rule resolution :premises (nt2.t190.0 nt2.t190.1 t2.t190))

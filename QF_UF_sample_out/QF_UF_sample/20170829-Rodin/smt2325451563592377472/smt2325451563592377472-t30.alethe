@@ -1,3 +1,3 @@
 (assume nt30.0 (not (= (= (not (not prt)) prt) (= prt (not (not prt))))))
-(step t30 (cl (= (= (not (not prt)) prt) (= prt (not (not prt))))) :rule rare_rewrite)
+(step t30 (cl (= (= (not (not prt)) prt) (= prt (not (not prt))))) :rule rare_rewrite :args ("eq-symm" (not (not prt)) prt))
 (step t.end (cl) :rule resolution :premises (nt30.0 t30))

@@ -1,4 +1,4 @@
 (assume t728 (and (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65))))
 (assume nt729.0 (not (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65))))
-(step t729 (cl (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65))) :rule and :premises (t728))
+(step t729 (cl (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65))) :rule and :premises (t728) :args (1))
 (step t.end (cl) :rule resolution :premises (nt729.0 t729))

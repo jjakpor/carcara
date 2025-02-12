@@ -1,4 +1,4 @@
 (assume t57 (and (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5))))
 (assume nt58.0 (not (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5))))
-(step t58 (cl (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5))) :rule and :premises (t57))
+(step t58 (cl (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5))) :rule and :premises (t57) :args (1))
 (step t.end (cl) :rule resolution :premises (nt58.0 t58))

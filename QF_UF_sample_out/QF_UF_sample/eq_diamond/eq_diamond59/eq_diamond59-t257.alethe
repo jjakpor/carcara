@@ -1,4 +1,4 @@
 (assume t256 (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4))))
 (assume nt257.0 (not (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4))))
-(step t257 (cl (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4))) :rule and :premises (t256))
+(step t257 (cl (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4))) :rule and :premises (t256) :args (1))
 (step t.end (cl) :rule resolution :premises (nt257.0 t257))

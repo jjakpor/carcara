@@ -2,7 +2,7 @@
 (assume t311 (or (not (not (not (= (op (op e4 e3) e4) (op (op e4 e3) e3))))) (= (op (op e4 e3) e4) (op (op e4 e3) e3))))
 (assume nt312.0 (not (= (= (op (op e4 e3) e4) (op (op e4 e3) e3)) false)))
 (assume nt312.1 (not (= (op (op e4 e3) e4) (op (op e4 e3) e3))))
-(step t310' (cl (= (= (op (op e4 e3) e4) (op (op e4 e3) e3)) false) (not (not (= (op (op e4 e3) e4) (op (op e4 e3) e3))))) :rule or :premises (t310))
 (step t311' (cl (not (not (not (= (op (op e4 e3) e4) (op (op e4 e3) e3))))) (= (op (op e4 e3) e4) (op (op e4 e3) e3))) :rule or :premises (t311))
+(step t310' (cl (= (= (op (op e4 e3) e4) (op (op e4 e3) e3)) false) (not (not (= (op (op e4 e3) e4) (op (op e4 e3) e3))))) :rule or :premises (t310))
 (step t312 (cl (= (= (op (op e4 e3) e4) (op (op e4 e3) e3)) false) (= (op (op e4 e3) e4) (op (op e4 e3) e3))) :rule resolution :premises (t310' t311'))
 (step t.end (cl) :rule resolution :premises (nt312.0 nt312.1 t312))

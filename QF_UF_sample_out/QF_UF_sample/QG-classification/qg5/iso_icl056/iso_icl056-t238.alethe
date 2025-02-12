@@ -2,7 +2,7 @@
 (assume t237 (or (not (not (not (= e1 (op (op e1 e1) (op e1 (op e1 e1))))))) (= e1 (op (op e1 e1) (op e1 (op e1 e1))))))
 (assume nt238.0 (not (= (= e1 (op (op e1 e1) (op e1 (op e1 e1)))) false)))
 (assume nt238.1 (not (= e1 (op (op e1 e1) (op e1 (op e1 e1))))))
-(step t236' (cl (= (= e1 (op (op e1 e1) (op e1 (op e1 e1)))) false) (not (not (= e1 (op (op e1 e1) (op e1 (op e1 e1))))))) :rule or :premises (t236))
 (step t237' (cl (not (not (not (= e1 (op (op e1 e1) (op e1 (op e1 e1))))))) (= e1 (op (op e1 e1) (op e1 (op e1 e1))))) :rule or :premises (t237))
+(step t236' (cl (= (= e1 (op (op e1 e1) (op e1 (op e1 e1)))) false) (not (not (= e1 (op (op e1 e1) (op e1 (op e1 e1))))))) :rule or :premises (t236))
 (step t238 (cl (= (= e1 (op (op e1 e1) (op e1 (op e1 e1)))) false) (= e1 (op (op e1 e1) (op e1 (op e1 e1))))) :rule resolution :premises (t236' t237'))
 (step t.end (cl) :rule resolution :premises (nt238.0 nt238.1 t238))

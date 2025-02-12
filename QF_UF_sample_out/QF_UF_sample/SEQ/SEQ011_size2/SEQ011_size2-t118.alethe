@@ -1,4 +1,4 @@
 (assume nt118.0 (not (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))))))
 (assume nt118.1 (not (= c_1 (f5 c_0))))
-(step t118 (cl (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (= c_1 (f5 c_0))) :rule and_pos)
+(step t118 (cl (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (= c_1 (f5 c_0))) :rule and_pos :args (0))
 (step t.end (cl) :rule resolution :premises (nt118.0 nt118.1 t118))

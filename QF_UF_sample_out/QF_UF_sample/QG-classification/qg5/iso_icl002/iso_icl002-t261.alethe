@@ -1,4 +1,4 @@
 (assume t260 (and (and (and (and (= (op e0 e3) (op e3 e0)) (= (op e1 e3) (op e3 e1))) (= (op e2 e3) (op e3 e2))) (= (op e3 e3) (op e3 e3))) (= (op e4 e3) (op e3 e4))))
 (assume nt261.0 (not (= (op e4 e3) (op e3 e4))))
-(step t261 (cl (= (op e4 e3) (op e3 e4))) :rule and :premises (t260))
+(step t261 (cl (= (op e4 e3) (op e3 e4))) :rule and :premises (t260) :args (1))
 (step t.end (cl) :rule resolution :premises (nt261.0 t261))

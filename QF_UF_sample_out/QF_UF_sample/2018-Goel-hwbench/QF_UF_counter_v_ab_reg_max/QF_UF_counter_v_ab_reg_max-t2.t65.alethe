@@ -1,4 +1,4 @@
 (assume t2.t64 (and y$2 y$13 y$28 y$26 y$45 y$44))
 (assume nt2.t65.0 (not y$2))
-(step t2.t65 (cl y$2) :rule and :premises (t2.t64))
+(step t2.t65 (cl y$2) :rule and :premises (t2.t64) :args (0))
 (step t.end (cl) :rule resolution :premises (nt2.t65.0 t2.t65))

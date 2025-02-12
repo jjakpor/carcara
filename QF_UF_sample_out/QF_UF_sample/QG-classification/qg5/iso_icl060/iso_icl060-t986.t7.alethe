@@ -1,4 +1,4 @@
 (assume t758 (and (and (and (and (= (op e3 (op e3 e0)) e0) (= (op e3 (op e3 e1)) e1)) (= (op e3 (op e3 e2)) e2)) (= (op e3 (op e3 e3)) e3)) (= (op e3 (op e3 e4)) e4)))
 (assume nt986.t7.0 (not (and (and (and (= (op e3 (op e3 e0)) e0) (= (op e3 (op e3 e1)) e1)) (= (op e3 (op e3 e2)) e2)) (= (op e3 (op e3 e3)) e3))))
-(step t986.t7 (cl (and (and (and (= (op e3 (op e3 e0)) e0) (= (op e3 (op e3 e1)) e1)) (= (op e3 (op e3 e2)) e2)) (= (op e3 (op e3 e3)) e3))) :rule and :premises (t758))
+(step t986.t7 (cl (and (and (and (= (op e3 (op e3 e0)) e0) (= (op e3 (op e3 e1)) e1)) (= (op e3 (op e3 e2)) e2)) (= (op e3 (op e3 e3)) e3))) :rule and :premises (t758) :args (0))
 (step t.end (cl) :rule resolution :premises (nt986.t7.0 t986.t7))

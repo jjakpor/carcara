@@ -1,4 +1,4 @@
 (assume t408 (and (and (and (not (= (op e1 e0) (op e1 e1))) (not (= (op e1 e0) (op e1 e2)))) (not (= (op e1 e0) (op e1 e3)))) (not (= (op e1 e0) (op e1 e4)))))
 (assume nt468.0 (not (and (and (not (= (op e1 e0) (op e1 e1))) (not (= (op e1 e0) (op e1 e2)))) (not (= (op e1 e0) (op e1 e3))))))
-(step t468 (cl (and (and (not (= (op e1 e0) (op e1 e1))) (not (= (op e1 e0) (op e1 e2)))) (not (= (op e1 e0) (op e1 e3))))) :rule and :premises (t408))
+(step t468 (cl (and (and (not (= (op e1 e0) (op e1 e1))) (not (= (op e1 e0) (op e1 e2)))) (not (= (op e1 e0) (op e1 e3))))) :rule and :premises (t408) :args (0))
 (step t.end (cl) :rule resolution :premises (nt468.0 t468))

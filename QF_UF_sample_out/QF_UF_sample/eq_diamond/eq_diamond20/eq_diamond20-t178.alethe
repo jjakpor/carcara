@@ -1,4 +1,4 @@
 (assume t177 (and (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16))))
 (assume nt178.0 (not (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16))))
-(step t178 (cl (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16))) :rule and :premises (t177))
+(step t178 (cl (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16))) :rule and :premises (t177) :args (1))
 (step t.end (cl) :rule resolution :premises (nt178.0 t178))

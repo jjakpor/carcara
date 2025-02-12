@@ -1,3 +1,3 @@
 (assume nt767.0 (not (= (= (op (op e4 e3) (op e4 e3)) (op e3 (op e3 e4))) (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3))))))
-(step t767 (cl (= (= (op (op e4 e3) (op e4 e3)) (op e3 (op e3 e4))) (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3))))) :rule rare_rewrite)
+(step t767 (cl (= (= (op (op e4 e3) (op e4 e3)) (op e3 (op e3 e4))) (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3))))) :rule rare_rewrite :args ("eq-symm" (op (op e4 e3) (op e4 e3)) (op e3 (op e3 e4))))
 (step t.end (cl) :rule resolution :premises (nt767.0 t767))

@@ -1,7 +1,0 @@
-(assume nt397.0 (not (not (p1 (f5 c_1) c_1))))
-(assume nt397.1 (not (not (= c_0 (f5 c_1)))))
-(assume nt397.2 (not (not (= c_0 (f7 c_1)))))
-(assume nt397.3 (not (not (not (p1 (f7 c_1) c_1)))))
-(assume nt397.4 (not false))
-(step t397 (cl (not (p1 (f5 c_1) c_1)) (not (= c_0 (f5 c_1))) (not (= c_0 (f7 c_1))) (not (not (p1 (f7 c_1) c_1))) false) :rule subproof)
-(step t.end (cl) :rule resolution :premises (nt397.0 nt397.1 nt397.2 nt397.3 nt397.4 t397))

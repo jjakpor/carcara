@@ -1,4 +1,4 @@
 (assume t621 (and (and (and (= (op e4 (op e4 e0)) e0) (= (op e4 (op e4 e1)) e1)) (= (op e4 (op e4 e2)) e2)) (= (op e4 (op e4 e3)) e3)))
 (assume nt622.0 (not (and (and (= (op e4 (op e4 e0)) e0) (= (op e4 (op e4 e1)) e1)) (= (op e4 (op e4 e2)) e2))))
-(step t622 (cl (and (and (= (op e4 (op e4 e0)) e0) (= (op e4 (op e4 e1)) e1)) (= (op e4 (op e4 e2)) e2))) :rule and :premises (t621))
+(step t622 (cl (and (and (= (op e4 (op e4 e0)) e0) (= (op e4 (op e4 e1)) e1)) (= (op e4 (op e4 e2)) e2))) :rule and :premises (t621) :args (0))
 (step t.end (cl) :rule resolution :premises (nt622.0 t622))

@@ -1,4 +1,4 @@
 (assume t824 (and (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (=> (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (= x73 x74))))
 (assume nt825.0 (not (=> (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (= x73 x74))))
-(step t825 (cl (=> (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (= x73 x74))) :rule and :premises (t824))
+(step t825 (cl (=> (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (= x73 x74))) :rule and :premises (t824) :args (1))
 (step t.end (cl) :rule resolution :premises (nt825.0 t825))

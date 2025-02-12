@@ -1,4 +1,4 @@
 (assume t84.t561 (and (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52))))
 (assume nt84.t562.0 (not (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52))))
-(step t84.t562 (cl (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52))) :rule and :premises (t84.t561))
+(step t84.t562 (cl (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52))) :rule and :premises (t84.t561) :args (1))
 (step t.end (cl) :rule resolution :premises (nt84.t562.0 t84.t562))

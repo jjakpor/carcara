@@ -1,4 +1,4 @@
 (assume t736 (and (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (=> (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (= x65 x66))))
 (assume nt737.0 (not (=> (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (= x65 x66))))
-(step t737 (cl (=> (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (= x65 x66))) :rule and :premises (t736))
+(step t737 (cl (=> (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (= x65 x66))) :rule and :premises (t736) :args (1))
 (step t.end (cl) :rule resolution :premises (nt737.0 t737))

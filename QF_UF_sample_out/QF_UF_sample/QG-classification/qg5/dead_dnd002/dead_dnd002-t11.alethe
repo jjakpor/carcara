@@ -1,4 +1,4 @@
 (assume t10 (and (and (and (and (not (= (op e0 (op e0 e0)) e0)) (not (= (op e1 (op e1 e1)) e1))) (not (= (op e2 (op e2 e2)) e2))) (not (= (op e3 (op e3 e3)) e3))) (not (= (op e4 (op e4 e4)) e4))))
 (assume nt11.0 (not (and (and (and (not (= (op e0 (op e0 e0)) e0)) (not (= (op e1 (op e1 e1)) e1))) (not (= (op e2 (op e2 e2)) e2))) (not (= (op e3 (op e3 e3)) e3)))))
-(step t11 (cl (and (and (and (not (= (op e0 (op e0 e0)) e0)) (not (= (op e1 (op e1 e1)) e1))) (not (= (op e2 (op e2 e2)) e2))) (not (= (op e3 (op e3 e3)) e3)))) :rule and :premises (t10))
+(step t11 (cl (and (and (and (not (= (op e0 (op e0 e0)) e0)) (not (= (op e1 (op e1 e1)) e1))) (not (= (op e2 (op e2 e2)) e2))) (not (= (op e3 (op e3 e3)) e3)))) :rule and :premises (t10) :args (0))
 (step t.end (cl) :rule resolution :premises (nt11.0 t11))

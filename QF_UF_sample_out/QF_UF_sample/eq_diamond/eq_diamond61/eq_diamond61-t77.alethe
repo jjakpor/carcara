@@ -1,4 +1,4 @@
 (assume t76 (and (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (=> (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (= x6 x7))))
 (assume nt77.0 (not (=> (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (= x6 x7))))
-(step t77 (cl (=> (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (= x6 x7))) :rule and :premises (t76))
+(step t77 (cl (=> (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (= x6 x7))) :rule and :premises (t76) :args (1))
 (step t.end (cl) :rule resolution :premises (nt77.0 t77))

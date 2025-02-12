@@ -1,4 +1,4 @@
 (assume nt17.0 (not (or (not prt) (not car) (not (not clk)))))
 (assume nt17.1 (not (not (not car))))
-(step t17 (cl (or (not prt) (not car) (not (not clk))) (not (not car))) :rule or_neg)
+(step t17 (cl (or (not prt) (not car) (not (not clk))) (not (not car))) :rule or_neg :args (1))
 (step t.end (cl) :rule resolution :premises (nt17.0 nt17.1 t17))

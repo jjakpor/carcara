@@ -1,4 +1,4 @@
 (assume t109 (and (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (=> (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (= x9 x10))))
 (assume nt110.0 (not (=> (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (= x9 x10))))
-(step t110 (cl (=> (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (= x9 x10))) :rule and :premises (t109))
+(step t110 (cl (=> (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (= x9 x10))) :rule and :premises (t109) :args (1))
 (step t.end (cl) :rule resolution :premises (nt110.0 t110))

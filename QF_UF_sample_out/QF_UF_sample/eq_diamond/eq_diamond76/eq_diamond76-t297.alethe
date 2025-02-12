@@ -1,4 +1,4 @@
 (assume t296 (and (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (=> (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (= x25 x26))))
 (assume nt297.0 (not (=> (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (= x25 x26))))
-(step t297 (cl (=> (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (= x25 x26))) :rule and :premises (t296))
+(step t297 (cl (=> (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (= x25 x26))) :rule and :premises (t296) :args (1))
 (step t.end (cl) :rule resolution :premises (nt297.0 t297))

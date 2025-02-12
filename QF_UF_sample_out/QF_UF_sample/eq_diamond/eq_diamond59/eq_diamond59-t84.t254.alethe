@@ -1,4 +1,4 @@
 (assume t84.t253 (and (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (=> (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (= x23 x24))))
 (assume nt84.t254.0 (not (=> (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (= x23 x24))))
-(step t84.t254 (cl (=> (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (= x23 x24))) :rule and :premises (t84.t253))
+(step t84.t254 (cl (=> (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (= x23 x24))) :rule and :premises (t84.t253) :args (1))
 (step t.end (cl) :rule resolution :premises (nt84.t254.0 t84.t254))

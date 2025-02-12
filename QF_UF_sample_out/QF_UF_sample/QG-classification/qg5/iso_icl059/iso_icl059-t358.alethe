@@ -1,4 +1,4 @@
 (assume t357 (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4))))
 (assume nt358.0 (not (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3)))))
-(step t358 (cl (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3)))) :rule and :premises (t357))
+(step t358 (cl (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3)))) :rule and :premises (t357) :args (0))
 (step t.end (cl) :rule resolution :premises (nt358.0 t358))

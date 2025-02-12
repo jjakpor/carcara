@@ -1,4 +1,4 @@
 (assume nt5.0 (not (not (and (not rd1) (not rd2)))))
 (assume nt5.1 (not (not rd2)))
-(step t5 (cl (not (and (not rd1) (not rd2))) (not rd2)) :rule and_pos)
+(step t5 (cl (not (and (not rd1) (not rd2))) (not rd2)) :rule and_pos :args (1))
 (step t.end (cl) :rule resolution :premises (nt5.0 nt5.1 t5))

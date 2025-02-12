@@ -1,4 +1,4 @@
 (assume t316 (and (and (and (not (= (op e1 e0) (op e1 e1))) (not (= (op e1 e0) (op e1 e2)))) (not (= (op e1 e0) (op e1 e3)))) (not (= (op e1 e0) (op e1 e4)))))
 (assume nt317.0 (not (and (and (not (= (op e1 e0) (op e1 e1))) (not (= (op e1 e0) (op e1 e2)))) (not (= (op e1 e0) (op e1 e3))))))
-(step t317 (cl (and (and (not (= (op e1 e0) (op e1 e1))) (not (= (op e1 e0) (op e1 e2)))) (not (= (op e1 e0) (op e1 e3))))) :rule and :premises (t316))
+(step t317 (cl (and (and (not (= (op e1 e0) (op e1 e1))) (not (= (op e1 e0) (op e1 e2)))) (not (= (op e1 e0) (op e1 e3))))) :rule and :premises (t316) :args (0))
 (step t.end (cl) :rule resolution :premises (nt317.0 t317))
