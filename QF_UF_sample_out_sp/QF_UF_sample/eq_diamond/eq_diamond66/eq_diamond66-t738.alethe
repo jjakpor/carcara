@@ -2,7 +2,7 @@
 (assume nt738.1 (not (= x0 x65)))
 (assume t736 (or (= (= x0 x65) false) (not (not (= x0 x65)))))
 (assume t737 (or (not (not (not (= x0 x65)))) (= x0 x65)))
-(step t737' (cl (not (not (not (= x0 x65)))) (= x0 x65)) :rule or :premises (t737))
 (step t736' (cl (= (= x0 x65) false) (not (not (= x0 x65)))) :rule or :premises (t736))
+(step t737' (cl (not (not (not (= x0 x65)))) (= x0 x65)) :rule or :premises (t737))
 (step t738 (cl (= (= x0 x65) false) (= x0 x65)) :rule resolution :premises (t736' t737'))
 (step t.end (cl) :rule resolution :premises (nt738.0 nt738.1 t738))

@@ -3,7 +3,7 @@
 (assume nt104.2 (not (p4 c_1)))
 (assume t91 (or (and (p4 c8) (= c8 c_1)) (not (p4 c8)) (not (= c8 c_1))))
 (assume t103 (or (not (and (p4 c8) (= c8 c_1))) (p4 c_1)))
-(step t103' (cl (not (and (p4 c8) (= c8 c_1))) (p4 c_1)) :rule or :premises (t103))
 (step t91' (cl (and (p4 c8) (= c8 c_1)) (not (p4 c8)) (not (= c8 c_1))) :rule or :premises (t91))
+(step t103' (cl (not (and (p4 c8) (= c8 c_1))) (p4 c_1)) :rule or :premises (t103))
 (step t104 (cl (not (p4 c8)) (not (= c8 c_1)) (p4 c_1)) :rule resolution :premises (t91' t103'))
 (step t.end (cl) :rule resolution :premises (nt104.0 nt104.1 nt104.2 t104))

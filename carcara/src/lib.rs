@@ -637,6 +637,36 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> (Vec<Pr
         
         // TODO: implement
         Some(ProofCommand::Subproof(sp)) => {
+            let last_command = sp.commands.last().unwrap();
+
+            let mut subproof_assumptions = Vec::new();
+            
+            for command in &sp.commands {
+                if let ProofCommand::Assume { .. } = command {
+                    subproof_assumptions.push(command.clone());
+                }
+            }
+            if let ProofCommand::Step(closing_step) =  last_command {
+                let mut new_subproof = Subproof {args: sp.args.clone(), commands: Vec::new(), context_id: sp.context_id.clone() };
+                let penult = sp.commands[sp.commands.len() - 2].clone();
+                
+                if let ProofCommand::Step(ps) = penult {
+                    let new_penult = ProofCommand::Step(ProofStep { id: ps.id.clone(), clause: ps.clause.clone(), rule: "trust".to_string(), premises: Vec::new(), args: Vec::new(), discharge: Vec::new() });
+                    for a in subproof_assumptions {
+                        new_subproof.commands.push(a);
+                    }
+                    new_subproof.commands.push(new_penult);
+                    new_subproof.commands.push(ProofCommand::Step(closing_step.clone()));
+
+                commands.push(ProofCommand::Subproof(new_subproof));
+                } else {
+                    panic!("Second to last subproof command is not step.");
+                };
+                
+
+            } else {
+                panic!("Subproof does not end in step")
+            }
             sliced_index = commands.len() - 1;
         }
 

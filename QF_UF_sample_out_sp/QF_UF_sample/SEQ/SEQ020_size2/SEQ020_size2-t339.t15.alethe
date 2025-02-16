@@ -2,7 +2,7 @@
 (assume nt339.t15.1 (not (p1 (f7 c_1) c_1)))
 (assume t339.t13 (or (= (p1 (f7 c_1) c_1) false) (not (not (p1 (f7 c_1) c_1)))))
 (assume t339.t14 (or (not (not (not (p1 (f7 c_1) c_1)))) (p1 (f7 c_1) c_1)))
-(step t339.t14' (cl (not (not (not (p1 (f7 c_1) c_1)))) (p1 (f7 c_1) c_1)) :rule or :premises (t339.t14))
 (step t339.t13' (cl (= (p1 (f7 c_1) c_1) false) (not (not (p1 (f7 c_1) c_1)))) :rule or :premises (t339.t13))
+(step t339.t14' (cl (not (not (not (p1 (f7 c_1) c_1)))) (p1 (f7 c_1) c_1)) :rule or :premises (t339.t14))
 (step t339.t15 (cl (= (p1 (f7 c_1) c_1) false) (p1 (f7 c_1) c_1)) :rule resolution :premises (t339.t13' t339.t14'))
 (step t.end (cl) :rule resolution :premises (nt339.t15.0 nt339.t15.1 t339.t15))

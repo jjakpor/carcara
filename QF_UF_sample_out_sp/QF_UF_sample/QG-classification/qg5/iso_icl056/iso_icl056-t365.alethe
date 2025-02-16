@@ -2,7 +2,7 @@
 (assume nt365.1 (not (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1))))
 (assume t363 (or (= (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)) false) (not (not (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1))))))
 (assume t364 (or (not (not (not (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1))))) (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1))))
-(step t364' (cl (not (not (not (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1))))) (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1))) :rule or :premises (t364))
 (step t363' (cl (= (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)) false) (not (not (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1))))) :rule or :premises (t363))
+(step t364' (cl (not (not (not (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1))))) (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1))) :rule or :premises (t364))
 (step t365 (cl (= (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)) false) (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1))) :rule resolution :premises (t363' t364'))
 (step t.end (cl) :rule resolution :premises (nt365.0 nt365.1 t365))

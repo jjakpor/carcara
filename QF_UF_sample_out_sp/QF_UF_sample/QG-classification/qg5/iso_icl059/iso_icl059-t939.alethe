@@ -2,7 +2,7 @@
 (assume nt939.1 (not (= (op e0 e0) (op (op e0 e0) e0))))
 (assume t937 (or (= (= (op e0 e0) (op (op e0 e0) e0)) false) (not (not (= (op e0 e0) (op (op e0 e0) e0))))))
 (assume t938 (or (not (not (not (= (op e0 e0) (op (op e0 e0) e0))))) (= (op e0 e0) (op (op e0 e0) e0))))
-(step t937' (cl (= (= (op e0 e0) (op (op e0 e0) e0)) false) (not (not (= (op e0 e0) (op (op e0 e0) e0))))) :rule or :premises (t937))
 (step t938' (cl (not (not (not (= (op e0 e0) (op (op e0 e0) e0))))) (= (op e0 e0) (op (op e0 e0) e0))) :rule or :premises (t938))
+(step t937' (cl (= (= (op e0 e0) (op (op e0 e0) e0)) false) (not (not (= (op e0 e0) (op (op e0 e0) e0))))) :rule or :premises (t937))
 (step t939 (cl (= (= (op e0 e0) (op (op e0 e0) e0)) false) (= (op e0 e0) (op (op e0 e0) e0))) :rule resolution :premises (t937' t938'))
 (step t.end (cl) :rule resolution :premises (nt939.0 nt939.1 t939))
