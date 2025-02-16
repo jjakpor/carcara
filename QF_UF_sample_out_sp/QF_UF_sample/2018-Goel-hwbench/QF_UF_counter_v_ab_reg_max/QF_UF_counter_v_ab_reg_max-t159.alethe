@@ -1,0 +1,7 @@
+(assume nt159.0 (not (= y$44 true)))
+(assume t155 (or (not (= y$44 (= y$44 true))) (not y$44) (= y$44 true)))
+(assume t157 (= y$44 (= y$44 true)))
+(assume t158 y$44)
+(step t155' (cl (not (= y$44 (= y$44 true))) (not y$44) (= y$44 true)) :rule or :premises (t155))
+(step t159 (cl (= y$44 true)) :rule resolution :premises (t155' t157 t158))
+(step t.end (cl) :rule resolution :premises (nt159.0 t159))

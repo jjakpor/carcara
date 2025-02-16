@@ -1,0 +1,7 @@
+(assume nt40.0 (not (not (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt)))))
+(assume t13 (or (not (= (not (or (and prt grn) org (and (not prt) rd1) rd2 (and grn (not prt)) (and rd1 prt))) (not (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt))))) (not (not (or (and prt grn) org (and (not prt) rd1) rd2 (and grn (not prt)) (and rd1 prt)))) (not (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt)))))
+(assume t39 (= (not (or (and prt grn) org (and (not prt) rd1) rd2 (and grn (not prt)) (and rd1 prt))) (not (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt)))))
+(assume a10 (not (or (and prt grn) org (and (not prt) rd1) rd2 (and grn (not prt)) (and rd1 prt))))
+(step t13' (cl (not (= (not (or (and prt grn) org (and (not prt) rd1) rd2 (and grn (not prt)) (and rd1 prt))) (not (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt))))) (not (not (or (and prt grn) org (and (not prt) rd1) rd2 (and grn (not prt)) (and rd1 prt)))) (not (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt)))) :rule or :premises (t13))
+(step t40 (cl (not (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt)))) :rule resolution :premises (t13' t39 a10))
+(step t.end (cl) :rule resolution :premises (nt40.0 t40))

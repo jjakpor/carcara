@@ -1,0 +1,7 @@
+(assume nt460.0 (not (p1 (f7 c_1) c_1)))
+(assume nt460.1 (not (not (= c_0 (f7 c_1)))))
+(assume nt460.2 (not (not (= c_0 (f6 c_1)))))
+(assume nt460.3 (not (not (p1 (f6 c_1) c_1))))
+(assume t459 (or (p1 (f7 c_1) c_1) (not (= c_0 (f7 c_1))) (not (= c_0 (f6 c_1))) (not (p1 (f6 c_1) c_1))))
+(step t460 (cl (p1 (f7 c_1) c_1) (not (= c_0 (f7 c_1))) (not (= c_0 (f6 c_1))) (not (p1 (f6 c_1) c_1))) :rule or :premises (t459))
+(step t.end (cl) :rule resolution :premises (nt460.0 nt460.1 nt460.2 nt460.3 t460))

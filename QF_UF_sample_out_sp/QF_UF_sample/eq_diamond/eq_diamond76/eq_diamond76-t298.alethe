@@ -1,0 +1,5 @@
+(assume nt298.0 (not (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))))))
+(assume nt298.1 (not (= x25 x26)))
+(assume t297 (=> (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (= x25 x26)))
+(step t298 (cl (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26)))) (= x25 x26)) :rule implies :premises (t297))
+(step t.end (cl) :rule resolution :premises (nt298.0 nt298.1 t298))

@@ -1,0 +1,5 @@
+(assume nt324.0 (not (= (not (= (op e0 e2) (op e1 e2))) (not (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)))))))
+(assume t321 (= (not (= (op e0 e2) (op e1 e2))) (not (= (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)) (op e1 (op e1 e1))))))
+(assume t323 (= (not (= (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)) (op e1 (op e1 e1)))) (not (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1))))))
+(step t324 (cl (= (not (= (op e0 e2) (op e1 e2))) (not (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)))))) :rule trans :premises (t321 t323))
+(step t.end (cl) :rule resolution :premises (nt324.0 t324))

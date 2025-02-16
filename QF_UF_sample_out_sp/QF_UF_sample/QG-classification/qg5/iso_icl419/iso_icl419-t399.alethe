@@ -1,0 +1,4 @@
+(assume nt399.0 (not (not (not (not (= (op (op (op e3 e3) (op e3 e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))))))
+(assume nt399.1 (not (= (op (op (op e3 e3) (op e3 e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(step t399 (cl (not (not (not (= (op (op (op e3 e3) (op e3 e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))) (= (op (op (op e3 e3) (op e3 e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nt399.0 nt399.1 t399))

@@ -1,0 +1,5 @@
+(assume nt373.0 (not (= (= e4 (op e4 (op e4 e4))) (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))))
+(assume t39 (= e4 (op (op e1 e1) (op e1 e1))))
+(assume t372 (= (op e4 (op e4 e4)) (op (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))
+(step t373 (cl (= (= e4 (op e4 (op e4 e4))) (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))) :rule cong :premises (t39 t372))
+(step t.end (cl) :rule resolution :premises (nt373.0 t373))

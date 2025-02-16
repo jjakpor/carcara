@@ -1,0 +1,5 @@
+(assume nt1070.0 (not (= (= (op (op e4 e0) e4) e0) (= (op (op e4 e3) (op e4 e3)) (op (op e4 (op (op e4 e3) (op e4 e3))) e4)))))
+(assume t1067 (= (= (op (op e4 e0) e4) e0) (= e0 (op (op e4 e0) e4))))
+(assume t1069 (= (= e0 (op (op e4 e0) e4)) (= (op (op e4 e3) (op e4 e3)) (op (op e4 (op (op e4 e3) (op e4 e3))) e4))))
+(step t1070 (cl (= (= (op (op e4 e0) e4) e0) (= (op (op e4 e3) (op e4 e3)) (op (op e4 (op (op e4 e3) (op e4 e3))) e4)))) :rule trans :premises (t1067 t1069))
+(step t.end (cl) :rule resolution :premises (nt1070.0 t1070))

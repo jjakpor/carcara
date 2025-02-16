@@ -1,0 +1,5 @@
+(assume nt116.0 (not (= (= y$58 (and y$2 y$13 y$28 y$26 y$45 y$44)) (= y$58 (and (= y$X y$n1s4) (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)) (= (not y$26) (not (= y$X$next y$n15s4))) y$26 y$45 y$44)))))
+(assume t60 (= y$58 y$58))
+(assume t115 (= (and y$2 y$13 y$28 y$26 y$45 y$44) (and (= y$X y$n1s4) (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)) (= (not y$26) (not (= y$X$next y$n15s4))) y$26 y$45 y$44)))
+(step t116 (cl (= (= y$58 (and y$2 y$13 y$28 y$26 y$45 y$44)) (= y$58 (and (= y$X y$n1s4) (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)) (= (not y$26) (not (= y$X$next y$n15s4))) y$26 y$45 y$44)))) :rule cong :premises (t60 t115))
+(step t.end (cl) :rule resolution :premises (nt116.0 t116))

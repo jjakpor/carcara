@@ -1,0 +1,5 @@
+(assume nt9.0 (not (= (= y$n0s8 y$v_B) (= y$v_A y$v_B))))
+(assume t6 (= y$n0s8 y$v_A))
+(assume t8 (= y$v_B y$v_B))
+(step t9 (cl (= (= y$n0s8 y$v_B) (= y$v_A y$v_B))) :rule cong :premises (t6 t8))
+(step t.end (cl) :rule resolution :premises (nt9.0 t9))

@@ -1,0 +1,6 @@
+(assume nt589.0 (not (= x51 x52)))
+(assume t588 (or (= x51 x52) (not (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))))))
+(assume t584 (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))))
+(step t588' (cl (= x51 x52) (not (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))))) :rule or :premises (t588))
+(step t589 (cl (= x51 x52)) :rule resolution :premises (t588' t584))
+(step t.end (cl) :rule resolution :premises (nt589.0 t589))

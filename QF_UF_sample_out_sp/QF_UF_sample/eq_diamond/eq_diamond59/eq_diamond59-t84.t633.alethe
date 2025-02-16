@@ -1,0 +1,5 @@
+(assume nt84.t633.0 (not (= (= x11 x12) (= x0 x58))))
+(assume t84.t134 (= x11 x0))
+(assume t84.t632 (= x12 x58))
+(step t84.t633 (cl (= (= x11 x12) (= x0 x58))) :rule cong :premises (t84.t134 t84.t632))
+(step t.end (cl) :rule resolution :premises (nt84.t633.0 t84.t633))

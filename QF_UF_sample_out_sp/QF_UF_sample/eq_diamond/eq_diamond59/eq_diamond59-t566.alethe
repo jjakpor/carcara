@@ -1,0 +1,5 @@
+(assume nt566.0 (not (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))))))
+(assume nt566.1 (not (= x32 x33)))
+(assume t565 (=> (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (= x32 x33)))
+(step t566 (cl (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33)))) (= x32 x33)) :rule implies :premises (t565))
+(step t.end (cl) :rule resolution :premises (nt566.0 nt566.1 t566))

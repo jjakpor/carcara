@@ -1,0 +1,5 @@
+(assume nt106.t13.0 (not (= e0 (op e2 e2))))
+(assume t106.t10 (= e0 (op e2 (op e2 e0))))
+(assume t106.t12 (= (op e2 (op e2 e0)) (op e2 e2)))
+(step t106.t13 (cl (= e0 (op e2 e2))) :rule trans :premises (t106.t10 t106.t12))
+(step t.end (cl) :rule resolution :premises (nt106.t13.0 t106.t13))

@@ -1,0 +1,5 @@
+(assume nt142.0 (not (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))))
+(assume nt142.1 (not (= x0 x1)))
+(assume t141 (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1)))
+(step t142 (cl (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (= x0 x1)) :rule implies :premises (t141))
+(step t.end (cl) :rule resolution :premises (nt142.0 nt142.1 t142))

@@ -1,0 +1,5 @@
+(assume nt515.0 (not (not (= (not (= (op e2 e0) (op e2 e4))) (not (= (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op e1 e1) (op (op e1 e1) (op e1 e1)))))))))
+(assume nt515.1 (not (not (not (= (op e2 e0) (op e2 e4))))))
+(assume nt515.2 (not (not (= (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op e1 e1) (op (op e1 e1) (op e1 e1)))))))
+(step t515 (cl (not (= (not (= (op e2 e0) (op e2 e4))) (not (= (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op e1 e1) (op (op e1 e1) (op e1 e1))))))) (not (not (= (op e2 e0) (op e2 e4)))) (not (= (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op e1 e1) (op (op e1 e1) (op e1 e1)))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt515.0 nt515.1 nt515.2 t515))

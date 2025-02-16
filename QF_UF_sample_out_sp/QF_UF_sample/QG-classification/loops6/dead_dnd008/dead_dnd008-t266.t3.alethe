@@ -1,0 +1,5 @@
+(assume nt266.t3.0 (not (= (op e5 unit) (op e5 e0))))
+(assume t266.t2 (= e5 e5))
+(assume a8 (= unit e0))
+(step t266.t3 (cl (= (op e5 unit) (op e5 e0))) :rule cong :premises (t266.t2 a8))
+(step t.end (cl) :rule resolution :premises (nt266.t3.0 t266.t3))

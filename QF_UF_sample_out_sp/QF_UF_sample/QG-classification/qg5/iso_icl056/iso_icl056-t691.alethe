@@ -1,0 +1,4 @@
+(assume nt691.0 (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1)))))
+(assume t690 (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))))
+(step t691 (cl (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1)))) :rule symm :premises (t690))
+(step t.end (cl) :rule resolution :premises (nt691.0 t691))

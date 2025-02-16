@@ -1,0 +1,5 @@
+(assume nt611.0 (not (=> (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))) (= e1 (op (op (op e1 e3) e3) (op e1 e3))))))
+(assume t610 (or (=> (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))) (= e1 (op (op (op e1 e3) e3) (op e1 e3)))) (=> (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))) (= e1 (op (op (op e1 e3) e3) (op e1 e3))))))
+(step t610' (cl (=> (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))) (= e1 (op (op (op e1 e3) e3) (op e1 e3)))) (=> (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))) (= e1 (op (op (op e1 e3) e3) (op e1 e3))))) :rule or :premises (t610))
+(step t611 (cl (=> (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))) (= e1 (op (op (op e1 e3) e3) (op e1 e3))))) :rule contraction :premises (t610'))
+(step t.end (cl) :rule resolution :premises (nt611.0 t611))

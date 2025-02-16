@@ -1,0 +1,5 @@
+(assume nt22.0 (not (not y$a_in_elevator_Person_0)))
+(assume nt22.1 (not (not y$3)))
+(assume a3 (= y$a_in_elevator_Person_0 (not y$3)))
+(step t22 (cl (not y$a_in_elevator_Person_0) (not y$3)) :rule equiv1 :premises (a3))
+(step t.end (cl) :rule resolution :premises (nt22.0 nt22.1 t22))

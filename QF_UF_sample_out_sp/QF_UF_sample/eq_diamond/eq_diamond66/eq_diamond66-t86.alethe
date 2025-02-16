@@ -1,0 +1,5 @@
+(assume nt86.0 (not (not (= (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (and (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (=> (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (= x7 x8)))))))
+(assume nt86.1 (not (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))))
+(assume nt86.2 (not (and (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (=> (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (= x7 x8)))))
+(step t86 (cl (not (= (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (and (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (=> (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (= x7 x8))))) (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8)))) (and (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (=> (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (= x7 x8)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt86.0 nt86.1 nt86.2 t86))

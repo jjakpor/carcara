@@ -1,0 +1,6 @@
+(assume nt644.0 (not (= x56 x57)))
+(assume t643 (or (= x56 x57) (not (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))))))
+(assume t639 (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))))
+(step t643' (cl (= x56 x57) (not (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))))) :rule or :premises (t643))
+(step t644 (cl (= x56 x57)) :rule resolution :premises (t643' t639))
+(step t.end (cl) :rule resolution :premises (nt644.0 t644))

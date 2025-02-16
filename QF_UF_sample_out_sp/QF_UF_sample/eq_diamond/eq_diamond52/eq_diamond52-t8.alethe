@@ -1,0 +1,7 @@
+(assume nt8.0 (not (and (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (=> (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (= x6 x7)))))
+(assume t3 (or (not (= (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (and (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (=> (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (= x6 x7))))) (not (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7)))) (and (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (=> (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (= x6 x7)))))
+(assume t7 (= (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (and (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (=> (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (= x6 x7)))))
+(assume t0 (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))))
+(step t3' (cl (not (= (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (and (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (=> (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (= x6 x7))))) (not (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7)))) (and (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (=> (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (= x6 x7)))) :rule or :premises (t3))
+(step t8 (cl (and (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (=> (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (= x6 x7)))) :rule resolution :premises (t3' t7 t0))
+(step t.end (cl) :rule resolution :premises (nt8.0 t8))

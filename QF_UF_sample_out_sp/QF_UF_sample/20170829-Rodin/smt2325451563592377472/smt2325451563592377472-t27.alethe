@@ -1,0 +1,5 @@
+(assume nt27.0 (not (not (= (or (not (not prt)) (not car) (not clk)) (or prt (not car) (not clk))))))
+(assume nt27.1 (not (not (or (not (not prt)) (not car) (not clk)))))
+(assume nt27.2 (not (or prt (not car) (not clk))))
+(step t27 (cl (not (= (or (not (not prt)) (not car) (not clk)) (or prt (not car) (not clk)))) (not (or (not (not prt)) (not car) (not clk))) (or prt (not car) (not clk))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt27.0 nt27.1 nt27.2 t27))

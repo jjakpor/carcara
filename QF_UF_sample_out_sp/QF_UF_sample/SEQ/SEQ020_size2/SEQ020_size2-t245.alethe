@@ -1,0 +1,4 @@
+(assume nt245.0 (not (=> (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0)) false)))
+(assume nt245.1 (not (not false)))
+(step t245 (cl (=> (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0)) false) (not false)) :rule implies_neg2)
+(step t.end (cl) :rule resolution :premises (nt245.0 nt245.1 t245))

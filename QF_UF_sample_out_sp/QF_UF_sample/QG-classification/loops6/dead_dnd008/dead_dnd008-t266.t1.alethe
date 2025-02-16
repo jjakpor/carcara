@@ -1,0 +1,3 @@
+(assume nt266.t1.0 (not (= (= (op e5 unit) e5) (= e5 (op e5 unit)))))
+(step t266.t1 (cl (= (= (op e5 unit) e5) (= e5 (op e5 unit)))) :rule rare_rewrite :args ("eq-symm" (op e5 unit) e5))
+(step t.end (cl) :rule resolution :premises (nt266.t1.0 t266.t1))

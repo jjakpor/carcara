@@ -1,0 +1,4 @@
+(assume nt965.0 (not (not (= (op e1 e0) (op e3 e0)))))
+(assume t253 (and (and (and (and (and (not (= (op e0 e0) (op e1 e0))) (not (= (op e0 e0) (op e2 e0)))) (not (= (op e0 e0) (op e3 e0)))) (not (= (op e0 e0) (op e4 e0)))) (not (= (op e1 e0) (op e2 e0)))) (not (= (op e1 e0) (op e3 e0)))))
+(step t965 (cl (not (= (op e1 e0) (op e3 e0)))) :rule and :premises (t253) :args (1))
+(step t.end (cl) :rule resolution :premises (nt965.0 t965))

@@ -1,0 +1,8 @@
+(assume nt349.0 (not (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)) false)))
+(assume nt349.1 (not (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)) false)))
+(assume t347 (or (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)) false) false))
+(assume t348 (or (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)) false) (not false)))
+(step t348' (cl (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)) false) (not false)) :rule or :premises (t348))
+(step t347' (cl (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)) false) false) :rule or :premises (t347))
+(step t349 (cl (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)) false) (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)) false)) :rule resolution :premises (t347' t348'))
+(step t.end (cl) :rule resolution :premises (nt349.0 nt349.1 t349))

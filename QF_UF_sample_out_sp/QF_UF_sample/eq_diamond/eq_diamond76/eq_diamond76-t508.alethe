@@ -1,0 +1,6 @@
+(assume nt508.0 (not (= x44 x45)))
+(assume nt508.1 (not (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))))))
+(assume t507 (or (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45)))) (= x44 x45)))
+(step t507' (cl (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45)))) (= x44 x45)) :rule or :premises (t507))
+(step t508 (cl (= x44 x45) (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))))) :rule reordering :premises (t507'))
+(step t.end (cl) :rule resolution :premises (nt508.0 nt508.1 t508))

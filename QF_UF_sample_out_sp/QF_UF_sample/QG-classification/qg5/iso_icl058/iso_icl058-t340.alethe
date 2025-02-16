@@ -1,0 +1,4 @@
+(assume nt340.0 (not (= (op e0 e3) (op e3 e0))))
+(assume t339 (= (op e3 e0) (op e0 e3)))
+(step t340 (cl (= (op e0 e3) (op e3 e0))) :rule symm :premises (t339))
+(step t.end (cl) :rule resolution :premises (nt340.0 t340))

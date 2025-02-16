@@ -1,0 +1,6 @@
+(assume nt47.0 (not (= x0 x1)))
+(assume nt47.1 (not (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))))
+(assume t46 (or (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (= x0 x1)))
+(step t46' (cl (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (= x0 x1)) :rule or :premises (t46))
+(step t47 (cl (= x0 x1) (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))) :rule reordering :premises (t46'))
+(step t.end (cl) :rule resolution :premises (nt47.0 nt47.1 t47))

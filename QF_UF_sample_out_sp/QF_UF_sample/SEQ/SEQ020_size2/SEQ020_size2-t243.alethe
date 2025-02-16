@@ -1,0 +1,6 @@
+(assume nt243.0 (not (not (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0)))))
+(assume nt243.1 (not false))
+(assume t242 (or (not (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0))) (not (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0))) (not (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0))) (not (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0))) false))
+(step t242' (cl (not (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0))) (not (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0))) (not (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0))) (not (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0))) false) :rule or :premises (t242))
+(step t243 (cl (not (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0))) false) :rule contraction :premises (t242'))
+(step t.end (cl) :rule resolution :premises (nt243.0 nt243.1 t243))

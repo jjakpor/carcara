@@ -1,0 +1,3 @@
+(assume nt28.0 (not (= (= (= b2 r2) (not (= b2 r2))) false)))
+(step t28 (cl (= (= (= b2 r2) (not (= b2 r2))) false)) :rule rare_rewrite :args ("bool-eq-nrefl" (= b2 r2)))
+(step t.end (cl) :rule resolution :premises (nt28.0 t28))

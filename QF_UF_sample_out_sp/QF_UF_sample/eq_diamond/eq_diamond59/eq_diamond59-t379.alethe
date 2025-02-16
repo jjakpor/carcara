@@ -1,0 +1,5 @@
+(assume nt379.0 (not (not (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))))))
+(assume nt379.1 (not (= x15 x16)))
+(assume t378 (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16)))
+(step t379 (cl (not (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16)))) (= x15 x16)) :rule implies :premises (t378))
+(step t.end (cl) :rule resolution :premises (nt379.0 nt379.1 t379))

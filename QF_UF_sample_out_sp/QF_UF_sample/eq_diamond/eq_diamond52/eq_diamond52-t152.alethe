@@ -1,0 +1,6 @@
+(assume nt152.0 (not (= x12 x13)))
+(assume t151 (or (= x12 x13) (not (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))))))
+(assume t147 (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))))
+(step t151' (cl (= x12 x13) (not (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))))) :rule or :premises (t151))
+(step t152 (cl (= x12 x13)) :rule resolution :premises (t151' t147))
+(step t.end (cl) :rule resolution :premises (nt152.0 t152))

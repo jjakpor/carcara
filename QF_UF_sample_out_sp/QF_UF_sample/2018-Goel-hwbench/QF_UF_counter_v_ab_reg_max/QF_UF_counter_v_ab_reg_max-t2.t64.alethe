@@ -1,0 +1,7 @@
+(assume nt2.t64.0 (not (and y$2 y$13 y$28 y$26 y$45 y$44)))
+(assume t2.t63 (or (not (= y$58 (and y$2 y$13 y$28 y$26 y$45 y$44))) (not y$58) (and y$2 y$13 y$28 y$26 y$45 y$44)))
+(assume a18 (= y$58 (and y$2 y$13 y$28 y$26 y$45 y$44)))
+(assume a19 y$58)
+(step t2.t63' (cl (not (= y$58 (and y$2 y$13 y$28 y$26 y$45 y$44))) (not y$58) (and y$2 y$13 y$28 y$26 y$45 y$44)) :rule or :premises (t2.t63))
+(step t2.t64 (cl (and y$2 y$13 y$28 y$26 y$45 y$44)) :rule resolution :premises (t2.t63' a18 a19))
+(step t.end (cl) :rule resolution :premises (nt2.t64.0 t2.t64))

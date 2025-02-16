@@ -1,0 +1,5 @@
+(assume nt117.0 (not (= (= y$id44_op (and y$59 y$1522)) (= y$id44_op (and y$59 (= y$n5s8 y$v_done))))))
+(assume t114 (= y$id44_op y$id44_op))
+(assume t116 (= (and y$59 y$1522) (and y$59 (= y$n5s8 y$v_done))))
+(step t117 (cl (= (= y$id44_op (and y$59 y$1522)) (= y$id44_op (and y$59 (= y$n5s8 y$v_done))))) :rule cong :premises (t114 t116))
+(step t.end (cl) :rule resolution :premises (nt117.0 t117))

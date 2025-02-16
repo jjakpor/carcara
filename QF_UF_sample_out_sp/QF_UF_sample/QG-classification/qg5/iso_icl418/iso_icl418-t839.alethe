@@ -1,0 +1,7 @@
+(assume nt839.0 (not (= e3 (op (op (op e3 e4) e3) (op e3 e4)))))
+(assume t832 (or (not (= (= (op (op e2 e3) e2) e3) (= e3 (op (op (op e3 e4) e3) (op e3 e4))))) (not (= (op (op e2 e3) e2) e3)) (= e3 (op (op (op e3 e4) e3) (op e3 e4)))))
+(assume t836 (= (= (op (op e2 e3) e2) e3) (= e3 (op (op (op e3 e4) e3) (op e3 e4)))))
+(assume t838 (= (op (op e2 e3) e2) e3))
+(step t832' (cl (not (= (= (op (op e2 e3) e2) e3) (= e3 (op (op (op e3 e4) e3) (op e3 e4))))) (not (= (op (op e2 e3) e2) e3)) (= e3 (op (op (op e3 e4) e3) (op e3 e4)))) :rule or :premises (t832))
+(step t839 (cl (= e3 (op (op (op e3 e4) e3) (op e3 e4)))) :rule resolution :premises (t832' t836 t838))
+(step t.end (cl) :rule resolution :premises (nt839.0 t839))

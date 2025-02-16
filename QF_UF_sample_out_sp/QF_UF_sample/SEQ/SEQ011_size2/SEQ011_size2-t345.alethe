@@ -1,0 +1,7 @@
+(assume nt345.0 (not (= (f6 c_1) (f5 c_1))))
+(assume nt345.1 (not (not (= c_1 (f6 c_1)))))
+(assume nt345.2 (not (not (= c_1 (f5 c_1)))))
+(assume t344 (or (not (= c_1 (f5 c_1))) (not (= c_1 (f6 c_1))) (= (f6 c_1) (f5 c_1))))
+(step t344' (cl (not (= c_1 (f5 c_1))) (not (= c_1 (f6 c_1))) (= (f6 c_1) (f5 c_1))) :rule or :premises (t344))
+(step t345 (cl (= (f6 c_1) (f5 c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))) :rule reordering :premises (t344'))
+(step t.end (cl) :rule resolution :premises (nt345.0 nt345.1 nt345.2 t345))

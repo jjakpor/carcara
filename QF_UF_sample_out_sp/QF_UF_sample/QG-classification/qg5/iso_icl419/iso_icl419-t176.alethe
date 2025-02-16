@@ -1,0 +1,4 @@
+(assume nt176.0 (not (= (not (= (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))) (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))))
+(assume t175 (= (= (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))
+(step t176 (cl (= (not (= (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))) (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))) :rule cong :premises (t175))
+(step t.end (cl) :rule resolution :premises (nt176.0 t176))

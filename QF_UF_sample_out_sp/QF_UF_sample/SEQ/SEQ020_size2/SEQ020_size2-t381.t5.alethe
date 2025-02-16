@@ -1,0 +1,4 @@
+(assume nt381.t5.0 (not (= true (p1 (f5 c_1) c_1))))
+(assume t381.t4 (= (p1 (f5 c_1) c_1) true))
+(step t381.t5 (cl (= true (p1 (f5 c_1) c_1))) :rule symm :premises (t381.t4))
+(step t.end (cl) :rule resolution :premises (nt381.t5.0 t381.t5))

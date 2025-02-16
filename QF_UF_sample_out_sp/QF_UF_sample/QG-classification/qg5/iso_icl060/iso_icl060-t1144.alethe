@@ -1,0 +1,4 @@
+(assume nt1144.0 (not (not (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))))))
+(assume nt1144.1 (not (= (op e1 e3) (op e3 (op e3 (op e1 e3))))))
+(step t1144 (cl (not (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) :rule and_pos :args (1))
+(step t.end (cl) :rule resolution :premises (nt1144.0 nt1144.1 t1144))

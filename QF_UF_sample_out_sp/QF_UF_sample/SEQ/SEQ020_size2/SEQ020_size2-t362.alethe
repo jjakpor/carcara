@@ -1,0 +1,7 @@
+(assume nt362.0 (not (p1 (f7 c_1) c_1)))
+(assume nt362.1 (not (not (= c_1 (f7 c_1)))))
+(assume nt362.2 (not (not (= c_1 (f6 c_1)))))
+(assume nt362.3 (not (not (p1 (f6 c_1) c_1))))
+(assume t361 (or (p1 (f7 c_1) c_1) (not (= c_1 (f7 c_1))) (not (= c_1 (f6 c_1))) (not (p1 (f6 c_1) c_1))))
+(step t362 (cl (p1 (f7 c_1) c_1) (not (= c_1 (f7 c_1))) (not (= c_1 (f6 c_1))) (not (p1 (f6 c_1) c_1))) :rule or :premises (t361))
+(step t.end (cl) :rule resolution :premises (nt362.0 nt362.1 nt362.2 nt362.3 t362))

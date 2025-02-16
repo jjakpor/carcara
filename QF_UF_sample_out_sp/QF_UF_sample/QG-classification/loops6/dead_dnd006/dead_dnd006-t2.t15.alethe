@@ -1,0 +1,4 @@
+(assume nt2.t15.0 (not (= e0 (op e1 (op e1 e0)))))
+(assume t2.t14 (= (op e1 (op e1 e0)) e0))
+(step t2.t15 (cl (= e0 (op e1 (op e1 e0)))) :rule symm :premises (t2.t14))
+(step t.end (cl) :rule resolution :premises (nt2.t15.0 t2.t15))

@@ -1,0 +1,8 @@
+(assume nt458.0 (not (= (= e0 (op (op e0 (op e0 e0)) e0)) false)))
+(assume nt458.1 (not (= e0 (op (op e0 (op e0 e0)) e0))))
+(assume t456 (or (= (= e0 (op (op e0 (op e0 e0)) e0)) false) (not (not (= e0 (op (op e0 (op e0 e0)) e0))))))
+(assume t457 (or (not (not (not (= e0 (op (op e0 (op e0 e0)) e0))))) (= e0 (op (op e0 (op e0 e0)) e0))))
+(step t457' (cl (not (not (not (= e0 (op (op e0 (op e0 e0)) e0))))) (= e0 (op (op e0 (op e0 e0)) e0))) :rule or :premises (t457))
+(step t456' (cl (= (= e0 (op (op e0 (op e0 e0)) e0)) false) (not (not (= e0 (op (op e0 (op e0 e0)) e0))))) :rule or :premises (t456))
+(step t458 (cl (= (= e0 (op (op e0 (op e0 e0)) e0)) false) (= e0 (op (op e0 (op e0 e0)) e0))) :rule resolution :premises (t456' t457'))
+(step t.end (cl) :rule resolution :premises (nt458.0 nt458.1 t458))

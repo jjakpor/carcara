@@ -1,0 +1,4 @@
+(assume nt285.t2.0 (not (= c_0 (f5 c_0))))
+(assume t285.t1 (= (f5 c_0) c_0))
+(step t285.t2 (cl (= c_0 (f5 c_0))) :rule symm :premises (t285.t1))
+(step t.end (cl) :rule resolution :premises (nt285.t2.0 t285.t2))

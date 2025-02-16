@@ -1,0 +1,4 @@
+(assume nt64.t3.0 (not (= c_0 (f6 c_1))))
+(assume t64.t2 (= (f6 c_1) c_0))
+(step t64.t3 (cl (= c_0 (f6 c_1))) :rule symm :premises (t64.t2))
+(step t.end (cl) :rule resolution :premises (nt64.t3.0 t64.t3))

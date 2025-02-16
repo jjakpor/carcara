@@ -1,0 +1,6 @@
+(assume nt176.0 (not (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))))))
+(assume nt176.1 (not (= e3 (op e3 (op e3 e3)))))
+(assume t175 (or (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) (= e3 (op e3 (op e3 e3)))))
+(step t175' (cl (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) (= e3 (op e3 (op e3 e3)))) :rule or :premises (t175))
+(step t176 (cl (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) (= e3 (op e3 (op e3 e3)))) :rule contraction :premises (t175'))
+(step t.end (cl) :rule resolution :premises (nt176.0 nt176.1 t176))

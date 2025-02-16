@@ -1,0 +1,4 @@
+(assume nt425.0 (not (not (= (op e1 e1) e1))))
+(assume t239 (and (not (= (op e0 e0) e0)) (not (= (op e1 e1) e1))))
+(step t425 (cl (not (= (op e1 e1) e1))) :rule and :premises (t239) :args (1))
+(step t.end (cl) :rule resolution :premises (nt425.0 t425))

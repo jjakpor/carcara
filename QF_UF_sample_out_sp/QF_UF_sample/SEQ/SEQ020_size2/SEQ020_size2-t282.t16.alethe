@@ -1,0 +1,6 @@
+(assume nt282.t16.0 (not (= (p1 (f5 c_0) c_0) true)))
+(assume t282.t15 (or (= (p1 (f5 c_0) c_0) true) (not (p1 (f5 c_0) c_0))))
+(assume t282.a0 (p1 (f5 c_0) c_0))
+(step t282.t15' (cl (= (p1 (f5 c_0) c_0) true) (not (p1 (f5 c_0) c_0))) :rule or :premises (t282.t15))
+(step t282.t16 (cl (= (p1 (f5 c_0) c_0) true)) :rule resolution :premises (t282.t15' t282.a0))
+(step t.end (cl) :rule resolution :premises (nt282.t16.0 t282.t16))

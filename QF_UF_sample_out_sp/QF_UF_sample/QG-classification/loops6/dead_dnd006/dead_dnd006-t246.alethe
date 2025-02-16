@@ -1,0 +1,5 @@
+(assume nt246.0 (not (not (= e4 (op e4 (op e4 e4))))))
+(assume nt246.1 (not (= e4 e0)))
+(assume t245 (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0)))
+(step t246 (cl (not (= e4 (op e4 (op e4 e4)))) (= e4 e0)) :rule or :premises (t245))
+(step t.end (cl) :rule resolution :premises (nt246.0 nt246.1 t246))

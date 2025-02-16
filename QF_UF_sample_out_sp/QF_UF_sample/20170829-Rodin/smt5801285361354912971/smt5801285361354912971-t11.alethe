@@ -1,0 +1,7 @@
+(assume nt11.0 (not (not (or org (and prt rd1)))))
+(assume t4 (or (not (or org (and prt rd1))) org (and prt rd1)))
+(assume t8 (not org))
+(assume t10 (not (and prt rd1)))
+(step t4' (cl (not (or org (and prt rd1))) org (and prt rd1)) :rule or :premises (t4))
+(step t11 (cl (not (or org (and prt rd1)))) :rule resolution :premises (t4' t8 t10))
+(step t.end (cl) :rule resolution :premises (nt11.0 t11))

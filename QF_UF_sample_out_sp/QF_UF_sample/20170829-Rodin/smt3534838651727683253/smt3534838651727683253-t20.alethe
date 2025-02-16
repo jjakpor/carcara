@@ -1,0 +1,5 @@
+(assume nt20.0 (not (= (= nf nf0) (= nf0 nf0))))
+(assume t11 (= nf nf0))
+(assume t17 (= nf0 nf0))
+(step t20 (cl (= (= nf nf0) (= nf0 nf0))) :rule cong :premises (t11 t17))
+(step t.end (cl) :rule resolution :premises (nt20.0 t20))

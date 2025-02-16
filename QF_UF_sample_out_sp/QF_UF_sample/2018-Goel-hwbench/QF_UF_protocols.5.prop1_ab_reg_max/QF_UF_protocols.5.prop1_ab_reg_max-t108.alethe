@@ -1,0 +1,5 @@
+(assume nt108.0 (not (not y$a_ready_Consumer)))
+(assume nt108.1 (not (not y$19)))
+(assume a11 (= y$a_ready_Consumer (not y$19)))
+(step t108 (cl (not y$a_ready_Consumer) (not y$19)) :rule equiv1 :premises (a11))
+(step t.end (cl) :rule resolution :premises (nt108.0 nt108.1 t108))

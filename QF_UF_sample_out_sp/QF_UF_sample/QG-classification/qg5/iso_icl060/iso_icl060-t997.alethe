@@ -1,0 +1,5 @@
+(assume nt997.0 (not (not (and (= (op e1 e3) (op e3 (op e3 (op e1 e3)))) (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (not (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))))))
+(assume nt997.1 (not (not (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))))
+(assume t996 (=> (and (= (op e1 e3) (op e3 (op e3 (op e1 e3)))) (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (not (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))) (not (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))))
+(step t997 (cl (not (and (= (op e1 e3) (op e3 (op e3 (op e1 e3)))) (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (not (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1)))))) (not (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))) :rule implies :premises (t996))
+(step t.end (cl) :rule resolution :premises (nt997.0 nt997.1 t997))

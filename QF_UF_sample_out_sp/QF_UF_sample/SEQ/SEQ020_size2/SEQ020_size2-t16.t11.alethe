@@ -1,0 +1,5 @@
+(assume nt16.t11.0 (not (= (p1 c_1 c_1) (p1 (f7 c_1) c_1))))
+(assume t16.t10 (= c_1 (f7 c_1)))
+(assume t16.t7 (= c_1 c_1))
+(step t16.t11 (cl (= (p1 c_1 c_1) (p1 (f7 c_1) c_1))) :rule cong :premises (t16.t10 t16.t7))
+(step t.end (cl) :rule resolution :premises (nt16.t11.0 t16.t11))

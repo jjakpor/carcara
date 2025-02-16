@@ -1,0 +1,5 @@
+(assume nt22.0 (not (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))))
+(assume nt22.1 (not (= x10 x11)))
+(assume t21 (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11)))
+(step t22 (cl (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11)))) (= x10 x11)) :rule implies :premises (t21))
+(step t.end (cl) :rule resolution :premises (nt22.0 nt22.1 t22))

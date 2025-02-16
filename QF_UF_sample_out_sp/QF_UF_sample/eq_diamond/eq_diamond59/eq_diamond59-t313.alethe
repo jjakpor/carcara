@@ -1,0 +1,5 @@
+(assume nt313.0 (not (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))))
+(assume nt313.1 (not (= x8 x9)))
+(assume t312 (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9)))
+(step t313 (cl (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9)))) (= x8 x9)) :rule implies :premises (t312))
+(step t.end (cl) :rule resolution :premises (nt313.0 nt313.1 t313))

@@ -1,0 +1,5 @@
+(assume nt209.0 (not (= (or (not (= (op e1 e0) e1)) (= (op e0 e1) e1)) (or (not (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) (op e4 e3)))))))
+(assume t206 (= (or (not (= (op e1 e0) e1)) (= (op e0 e1) e1)) (or (not (= e1 (op e1 e0))) (= e1 (op e0 e1)))))
+(assume t208 (= (or (not (= e1 (op e1 e0))) (= e1 (op e0 e1))) (or (not (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))))))
+(step t209 (cl (= (or (not (= (op e1 e0) e1)) (= (op e0 e1) e1)) (or (not (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) (op e4 e3)))))) :rule trans :premises (t206 t208))
+(step t.end (cl) :rule resolution :premises (nt209.0 t209))

@@ -1,0 +1,5 @@
+(assume nt456.0 (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op (op e3 e3) (op e3 e3)) (op e3 e3)))))
+(assume t455 (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op e3 e3)))
+(assume t394 (= (op e3 e3) (op (op (op e3 e3) (op e3 e3)) (op e3 e3))))
+(step t456 (cl (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op (op e3 e3) (op e3 e3)) (op e3 e3)))) :rule trans :premises (t455 t394))
+(step t.end (cl) :rule resolution :premises (nt456.0 t456))

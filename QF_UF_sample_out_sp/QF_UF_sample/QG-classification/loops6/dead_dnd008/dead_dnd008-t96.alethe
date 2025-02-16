@@ -1,0 +1,8 @@
+(assume nt96.0 (not (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1))))))
+(assume nt96.1 (not (= e1 (op e1 (op e1 e1)))))
+(assume t89 (or (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))) (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))))
+(assume t95 (or (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (= e1 (op e1 (op e1 e1)))))
+(step t89' (cl (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))) (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) :rule or :premises (t89))
+(step t95' (cl (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (= e1 (op e1 (op e1 e1)))) :rule or :premises (t95))
+(step t96 (cl (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))) (= e1 (op e1 (op e1 e1)))) :rule resolution :premises (t89' t95'))
+(step t.end (cl) :rule resolution :premises (nt96.0 nt96.1 t96))

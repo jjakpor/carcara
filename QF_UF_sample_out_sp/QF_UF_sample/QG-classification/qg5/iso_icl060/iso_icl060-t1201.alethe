@@ -1,0 +1,7 @@
+(assume nt1201.0 (not (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))))
+(assume t1192 (or (not (= (not (= (op e0 e0) (op e3 e0))) (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))) (not (not (= (op e0 e0) (op e3 e0)))) (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))))
+(assume t1194 (= (not (= (op e0 e0) (op e3 e0))) (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))))
+(assume t1200 (not (= (op e0 e0) (op e3 e0))))
+(step t1192' (cl (not (= (not (= (op e0 e0) (op e3 e0))) (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))) (not (not (= (op e0 e0) (op e3 e0)))) (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))) :rule or :premises (t1192))
+(step t1201 (cl (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))) :rule resolution :premises (t1192' t1194 t1200))
+(step t.end (cl) :rule resolution :premises (nt1201.0 t1201))

@@ -1,3 +1,0 @@
-(assume a0 (not (= y$X$next_rhs_op y$X$next_rhs_op)))
-(step t0 (cl (= y$X$next_rhs_op y$X$next_rhs_op)) :rule refl)
-(step t1 (cl) :rule resolution :premises (a0 t0))

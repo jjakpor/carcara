@@ -1,0 +1,4 @@
+(assume nt306.0 (not (= (not (= (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op e1 e1))) (not (= (op e1 e1) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))))
+(assume t246 (= (= (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op e1 e1)) (= (op e1 e1) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))
+(step t306 (cl (= (not (= (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op e1 e1))) (not (= (op e1 e1) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))) :rule cong :premises (t246))
+(step t.end (cl) :rule resolution :premises (nt306.0 t306))

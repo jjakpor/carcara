@@ -1,0 +1,5 @@
+(assume nt131.0 (not (= y$13 (= y$X$next (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))))
+(assume t89 (= y$13 (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X))))
+(assume t130 (= (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)) (= y$X$next (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))))
+(step t131 (cl (= y$13 (= y$X$next (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))) :rule trans :premises (t89 t130))
+(step t.end (cl) :rule resolution :premises (nt131.0 t131))

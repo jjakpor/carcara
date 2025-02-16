@@ -1,0 +1,5 @@
+(assume nt98.0 (not (= (= e0 (op e0 e1)) (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) e1)))))
+(assume t41 (= e0 (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))
+(assume t97 (= (op e0 e1) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) e1)))
+(step t98 (cl (= (= e0 (op e0 e1)) (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) e1)))) :rule cong :premises (t41 t97))
+(step t.end (cl) :rule resolution :premises (nt98.0 t98))

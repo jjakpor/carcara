@@ -1,0 +1,7 @@
+(assume nt305.0 (not (or (not (= (f6 c_0) (f5 c_0))) (not (p4 c_0)))))
+(assume t299 (or (not (= (or (not (= (f5 c_0) (f6 c_0))) (not (p4 c_0))) (or (not (= (f6 c_0) (f5 c_0))) (not (p4 c_0))))) (not (or (not (= (f5 c_0) (f6 c_0))) (not (p4 c_0)))) (or (not (= (f6 c_0) (f5 c_0))) (not (p4 c_0)))))
+(assume t303 (= (or (not (= (f5 c_0) (f6 c_0))) (not (p4 c_0))) (or (not (= (f6 c_0) (f5 c_0))) (not (p4 c_0)))))
+(assume t304 (or (not (= (f5 c_0) (f6 c_0))) (not (p4 c_0))))
+(step t299' (cl (not (= (or (not (= (f5 c_0) (f6 c_0))) (not (p4 c_0))) (or (not (= (f6 c_0) (f5 c_0))) (not (p4 c_0))))) (not (or (not (= (f5 c_0) (f6 c_0))) (not (p4 c_0)))) (or (not (= (f6 c_0) (f5 c_0))) (not (p4 c_0)))) :rule or :premises (t299))
+(step t305 (cl (or (not (= (f6 c_0) (f5 c_0))) (not (p4 c_0)))) :rule resolution :premises (t299' t303 t304))
+(step t.end (cl) :rule resolution :premises (nt305.0 t305))

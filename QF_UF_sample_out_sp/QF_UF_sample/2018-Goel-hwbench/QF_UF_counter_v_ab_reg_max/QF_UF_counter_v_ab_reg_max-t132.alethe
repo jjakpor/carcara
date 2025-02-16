@@ -1,0 +1,3 @@
+(assume nt132.0 (not (= (= y$n1s4 y$n15s4) (= y$n15s4 y$n1s4))))
+(step t132 (cl (= (= y$n1s4 y$n15s4) (= y$n15s4 y$n1s4))) :rule rare_rewrite :args ("eq-symm" y$n1s4 y$n15s4))
+(step t.end (cl) :rule resolution :premises (nt132.0 t132))

@@ -1,0 +1,5 @@
+(assume nt681.0 (not (= (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))) false)))
+(assume t680 (= (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))
+(assume t532 (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false))
+(step t681 (cl (= (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))) false)) :rule trans :premises (t680 t532))
+(step t.end (cl) :rule resolution :premises (nt681.0 t681))

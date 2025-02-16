@@ -1,0 +1,4 @@
+(assume nt998.0 (not (not (not (not (= (op (op e4 e3) e4) (op (op e3 e4) e4)))))))
+(assume nt998.1 (not (= (op (op e4 e3) e4) (op (op e3 e4) e4))))
+(step t998 (cl (not (not (not (= (op (op e4 e3) e4) (op (op e3 e4) e4))))) (= (op (op e4 e3) e4) (op (op e3 e4) e4))) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nt998.0 nt998.1 t998))

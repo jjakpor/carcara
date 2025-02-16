@@ -1,0 +1,6 @@
+(assume nt167.0 (not (= e0 (op e3 (op e3 e0)))))
+(assume nt167.1 (not (not (and (= e0 (op e3 (op e3 e0))) (not (= e0 (op e3 e0)))))))
+(assume t166 (or (not (and (= e0 (op e3 (op e3 e0))) (not (= e0 (op e3 e0))))) (= e0 (op e3 (op e3 e0)))))
+(step t166' (cl (not (and (= e0 (op e3 (op e3 e0))) (not (= e0 (op e3 e0))))) (= e0 (op e3 (op e3 e0)))) :rule or :premises (t166))
+(step t167 (cl (= e0 (op e3 (op e3 e0))) (not (and (= e0 (op e3 (op e3 e0))) (not (= e0 (op e3 e0)))))) :rule reordering :premises (t166'))
+(step t.end (cl) :rule resolution :premises (nt167.0 nt167.1 t167))

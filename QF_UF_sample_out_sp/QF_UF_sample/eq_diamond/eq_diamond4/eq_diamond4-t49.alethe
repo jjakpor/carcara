@@ -1,0 +1,6 @@
+(assume nt49.0 (not (not (and (= x1 y1) (= y1 x2)))))
+(assume t48 (or (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (not (and (= x1 y1) (= y1 x2)))))
+(assume t46 (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2)))))
+(step t48' (cl (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (not (and (= x1 y1) (= y1 x2)))) :rule or :premises (t48))
+(step t49 (cl (not (and (= x1 y1) (= y1 x2)))) :rule resolution :premises (t48' t46))
+(step t.end (cl) :rule resolution :premises (nt49.0 t49))

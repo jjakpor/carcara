@@ -1,0 +1,5 @@
+(assume nt66.0 (not (= (= y$n0s8 y$v_k_Deposit) (= y$v_k_Belt y$v_k_Deposit))))
+(assume t64 (= y$n0s8 y$v_k_Belt))
+(assume t65 (= y$v_k_Deposit y$v_k_Deposit))
+(step t66 (cl (= (= y$n0s8 y$v_k_Deposit) (= y$v_k_Belt y$v_k_Deposit))) :rule cong :premises (t64 t65))
+(step t.end (cl) :rule resolution :premises (nt66.0 t66))

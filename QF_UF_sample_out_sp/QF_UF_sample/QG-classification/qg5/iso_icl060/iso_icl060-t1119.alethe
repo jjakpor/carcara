@@ -1,0 +1,4 @@
+(assume nt1119.0 (not (not (and (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) (= e1 (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op e3 (op e1 e3)))))))
+(assume nt1119.1 (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3))))
+(step t1119 (cl (not (and (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) (= e1 (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op e3 (op e1 e3))))) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3))) :rule and_pos :args (2))
+(step t.end (cl) :rule resolution :premises (nt1119.0 nt1119.1 t1119))

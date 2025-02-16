@@ -1,0 +1,6 @@
+(assume nt2.t28.0 (not (= (ite y$en y$s$4_op y$X) (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X))))
+(assume t2.t13 (= y$en y$en))
+(assume t2.t26 (= y$s$4_op (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4))))
+(assume t2.t27 (= y$X y$X))
+(step t2.t28 (cl (= (ite y$en y$s$4_op y$X) (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X))) :rule cong :premises (t2.t13 t2.t26 t2.t27))
+(step t.end (cl) :rule resolution :premises (nt2.t28.0 t2.t28))

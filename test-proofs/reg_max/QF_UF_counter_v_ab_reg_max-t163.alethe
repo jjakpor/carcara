@@ -1,3 +1,0 @@
-(assume a0 (not (= (= y$n1s4 y$n1s4) true)))
-(step t0 (cl (= (= y$n1s4 y$n1s4) true)) :rule rare_rewrite)
-(step t1 (cl) :rule resolution :premises (a0 t0))

@@ -1,0 +1,8 @@
+(assume nt78.0 (not (p1 (f7 c_1) c_1)))
+(assume nt78.1 (not (not (p1 (f6 c_1) c_1))))
+(assume nt78.2 (not (not (= c_0 (f7 c_1)))))
+(assume nt78.3 (not (not (= c_0 (f6 c_1)))))
+(assume t77 (or (not (p1 (f6 c_1) c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f7 c_1))) (p1 (f7 c_1) c_1)))
+(step t77' (cl (not (p1 (f6 c_1) c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f7 c_1))) (p1 (f7 c_1) c_1)) :rule or :premises (t77))
+(step t78 (cl (p1 (f7 c_1) c_1) (not (p1 (f6 c_1) c_1)) (not (= c_0 (f7 c_1))) (not (= c_0 (f6 c_1)))) :rule reordering :premises (t77'))
+(step t.end (cl) :rule resolution :premises (nt78.0 nt78.1 nt78.2 nt78.3 t78))

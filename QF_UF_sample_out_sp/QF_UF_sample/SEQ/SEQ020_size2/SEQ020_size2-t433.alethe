@@ -1,0 +1,5 @@
+(assume nt433.0 (not (= c_0 (f6 c_1))))
+(assume nt433.1 (not (= c_1 (f6 c_1))))
+(assume t332 (or (= c_0 (f6 c_1)) (= c_1 (f6 c_1))))
+(step t433 (cl (= c_0 (f6 c_1)) (= c_1 (f6 c_1))) :rule or :premises (t332))
+(step t.end (cl) :rule resolution :premises (nt433.0 nt433.1 t433))

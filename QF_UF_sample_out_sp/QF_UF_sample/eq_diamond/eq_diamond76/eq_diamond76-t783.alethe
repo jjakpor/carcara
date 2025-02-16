@@ -1,0 +1,6 @@
+(assume nt783.0 (not (= x69 x70)))
+(assume nt783.1 (not (not (or (and (= x69 y69) (= y69 x70)) (and (= x69 z69) (= z69 x70))))))
+(assume t782 (or (not (or (and (= x69 y69) (= y69 x70)) (and (= x69 z69) (= z69 x70)))) (= x69 x70)))
+(step t782' (cl (not (or (and (= x69 y69) (= y69 x70)) (and (= x69 z69) (= z69 x70)))) (= x69 x70)) :rule or :premises (t782))
+(step t783 (cl (= x69 x70) (not (or (and (= x69 y69) (= y69 x70)) (and (= x69 z69) (= z69 x70))))) :rule reordering :premises (t782'))
+(step t.end (cl) :rule resolution :premises (nt783.0 nt783.1 t783))

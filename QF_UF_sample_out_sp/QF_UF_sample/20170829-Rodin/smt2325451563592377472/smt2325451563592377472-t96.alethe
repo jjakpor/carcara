@@ -1,0 +1,5 @@
+(assume nt96.0 (not (= (or (or (not car) clk) (not (not car))) (or (or (not car) clk) car))))
+(assume t95 (= (or (not car) clk) (or (not car) clk)))
+(assume t70 (= (not (not car)) car))
+(step t96 (cl (= (or (or (not car) clk) (not (not car))) (or (or (not car) clk) car))) :rule cong :premises (t95 t70))
+(step t.end (cl) :rule resolution :premises (nt96.0 t96))

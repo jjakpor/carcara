@@ -1,0 +1,5 @@
+(assume nt5.0 (not (not org)))
+(assume nt5.1 (not (and (not rd1) (not rd2))))
+(assume a1 (=> org (and (not rd1) (not rd2))))
+(step t5 (cl (not org) (and (not rd1) (not rd2))) :rule implies :premises (a1))
+(step t.end (cl) :rule resolution :premises (nt5.0 nt5.1 t5))

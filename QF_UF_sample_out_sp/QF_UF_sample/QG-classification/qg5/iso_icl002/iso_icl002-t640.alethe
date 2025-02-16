@@ -1,0 +1,5 @@
+(assume nt640.0 (not (= (= e0 (op (op (op e0 (op e0 e0)) e0) e0)) false)))
+(assume nt640.1 (not (not (not (= e0 (op (op (op e0 (op e0 e0)) e0) e0))))))
+(assume t639 (= (= (= e0 (op (op (op e0 (op e0 e0)) e0) e0)) false) (not (= e0 (op (op (op e0 (op e0 e0)) e0) e0)))))
+(step t640 (cl (= (= e0 (op (op (op e0 (op e0 e0)) e0) e0)) false) (not (not (= e0 (op (op (op e0 (op e0 e0)) e0) e0))))) :rule equiv2 :premises (t639))
+(step t.end (cl) :rule resolution :premises (nt640.0 nt640.1 t640))

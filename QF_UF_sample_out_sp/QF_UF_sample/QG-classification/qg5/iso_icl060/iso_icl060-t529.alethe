@@ -1,0 +1,3 @@
+(assume nt529.0 (not (= (= (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) false) (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))))
+(step t529 (cl (= (= (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) false) (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nt529.0 t529))

@@ -1,0 +1,4 @@
+(assume nt4.0 (not (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))))))
+(assume nt4.1 (not (= e0 (op e1 (op e1 e0)))))
+(step t4 (cl (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (= e0 (op e1 (op e1 e0)))) :rule and_pos :args (1))
+(step t.end (cl) :rule resolution :premises (nt4.0 nt4.1 t4))

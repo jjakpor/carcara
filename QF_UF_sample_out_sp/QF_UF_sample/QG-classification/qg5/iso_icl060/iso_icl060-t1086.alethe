@@ -1,0 +1,4 @@
+(assume nt1086.0 (not (or (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))) (not (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (not (= (op e1 e3) (op e3 (op (op e1 e3) e3)))))))
+(assume nt1086.1 (not (not (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))))))
+(step t1086 (cl (or (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))) (not (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (not (= (op e1 e3) (op e3 (op (op e1 e3) e3))))) (not (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))))) :rule or_neg :args (0))
+(step t.end (cl) :rule resolution :premises (nt1086.0 nt1086.1 t1086))

@@ -1,0 +1,8 @@
+(assume nt84.t637.0 (not (= (= x0 x58) false)))
+(assume nt84.t637.1 (not (= x0 x58)))
+(assume t84.t635 (or (= (= x0 x58) false) (not (not (= x0 x58)))))
+(assume t84.t636 (or (not (not (not (= x0 x58)))) (= x0 x58)))
+(step t84.t636' (cl (not (not (not (= x0 x58)))) (= x0 x58)) :rule or :premises (t84.t636))
+(step t84.t635' (cl (= (= x0 x58) false) (not (not (= x0 x58)))) :rule or :premises (t84.t635))
+(step t84.t637 (cl (= (= x0 x58) false) (= x0 x58)) :rule resolution :premises (t84.t635' t84.t636'))
+(step t.end (cl) :rule resolution :premises (nt84.t637.0 nt84.t637.1 t84.t637))

@@ -1,0 +1,6 @@
+(assume nt280.0 (not (= x23 x24)))
+(assume nt280.1 (not (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))))
+(assume t279 (or (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24)))) (= x23 x24)))
+(step t279' (cl (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24)))) (= x23 x24)) :rule or :premises (t279))
+(step t280 (cl (= x23 x24) (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))) :rule reordering :premises (t279'))
+(step t.end (cl) :rule resolution :premises (nt280.0 nt280.1 t280))

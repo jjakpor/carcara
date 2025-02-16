@@ -1,0 +1,5 @@
+(assume nt760.0 (not (= (or (or (or (or (= (op e0 e2) e0) (= (op e1 e2) e0)) (= (op e2 e2) e0)) (= (op e3 e2) e0)) (= (op e4 e2) e0)) (or (= e0 (op e4 e2)) (= e0 (op e3 e2)) (= e0 (op e2 e2)) (= e0 (op e0 e2)) (= e0 (op e1 e2))))))
+(assume t754 (= (or (or (or (or (= (op e0 e2) e0) (= (op e1 e2) e0)) (= (op e2 e2) e0)) (= (op e3 e2) e0)) (= (op e4 e2) e0)) (or (= (op e4 e2) e0) (= (op e3 e2) e0) (= (op e2 e2) e0) (= (op e0 e2) e0) (= (op e1 e2) e0))))
+(assume t759 (= (or (= (op e4 e2) e0) (= (op e3 e2) e0) (= (op e2 e2) e0) (= (op e0 e2) e0) (= (op e1 e2) e0)) (or (= e0 (op e4 e2)) (= e0 (op e3 e2)) (= e0 (op e2 e2)) (= e0 (op e0 e2)) (= e0 (op e1 e2)))))
+(step t760 (cl (= (or (or (or (or (= (op e0 e2) e0) (= (op e1 e2) e0)) (= (op e2 e2) e0)) (= (op e3 e2) e0)) (= (op e4 e2) e0)) (or (= e0 (op e4 e2)) (= e0 (op e3 e2)) (= e0 (op e2 e2)) (= e0 (op e0 e2)) (= e0 (op e1 e2))))) :rule trans :premises (t754 t759))
+(step t.end (cl) :rule resolution :premises (nt760.0 t760))

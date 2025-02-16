@@ -1,0 +1,8 @@
+(assume nt1238.0 (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))
+(assume nt1238.1 (not (not (= e1 (op (op (op e1 e3) e1) e3)))))
+(assume nt1238.2 (not (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)))))
+(assume nt1238.3 (not (not (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3))))))
+(assume nt1238.4 (not (not (= e1 (op e3 (op (op e1 e3) e3))))))
+(assume t1237 (or (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) (not (= e1 (op (op (op e1 e3) e1) e3))) (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3))) (not (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3)))) (not (= e1 (op e3 (op (op e1 e3) e3))))))
+(step t1238 (cl (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) (not (= e1 (op (op (op e1 e3) e1) e3))) (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3))) (not (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3)))) (not (= e1 (op e3 (op (op e1 e3) e3))))) :rule or :premises (t1237))
+(step t.end (cl) :rule resolution :premises (nt1238.0 nt1238.1 nt1238.2 nt1238.3 nt1238.4 t1238))

@@ -1,0 +1,5 @@
+(assume nt756.0 (not (= (= e4 (op e3 (op e3 e4))) (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))))))
+(assume t18 (= e4 (op (op e1 e3) e3)))
+(assume t755 (= (op e3 (op e3 e4)) (op e3 (op e3 (op (op e1 e3) e3)))))
+(step t756 (cl (= (= e4 (op e3 (op e3 e4))) (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))))) :rule cong :premises (t18 t755))
+(step t.end (cl) :rule resolution :premises (nt756.0 t756))

@@ -1,0 +1,4 @@
+(assume nt776.0 (not (= (not (= (op e0 e3) (op e2 e3))) (not (= (op e0 (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0)))))))
+(assume t775 (= (= (op e0 e3) (op e2 e3)) (= (op e0 (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0)))))
+(step t776 (cl (= (not (= (op e0 e3) (op e2 e3))) (not (= (op e0 (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0)))))) :rule cong :premises (t775))
+(step t.end (cl) :rule resolution :premises (nt776.0 t776))

@@ -1,0 +1,5 @@
+(assume nt1044.0 (not (= (op e0 e0) (op (op e0 e0) (op (op e0 (op e0 e0)) e0)))))
+(assume t909 (= (op e0 e0) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))
+(assume t1043 (= (op (op (op e0 (op e0 e0)) e0) (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))))
+(step t1044 (cl (= (op e0 e0) (op (op e0 e0) (op (op e0 (op e0 e0)) e0)))) :rule trans :premises (t909 t1043))
+(step t.end (cl) :rule resolution :premises (nt1044.0 t1044))

@@ -1,0 +1,5 @@
+(assume nt780.t32.0 (not (= (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) false)))
+(assume t780.t25 (= (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) (= (op e3 e1) (op e3 e3))))
+(assume t780.t31 (= (= (op e3 e1) (op e3 e3)) false))
+(step t780.t32 (cl (= (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) false)) :rule trans :premises (t780.t25 t780.t31))
+(step t.end (cl) :rule resolution :premises (nt780.t32.0 t780.t32))

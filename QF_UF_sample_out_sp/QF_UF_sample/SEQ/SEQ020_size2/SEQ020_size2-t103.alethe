@@ -1,0 +1,5 @@
+(assume nt103.0 (not (not (and (p4 c8) (= c8 c_1)))))
+(assume nt103.1 (not (p4 c_1)))
+(assume t102 (=> (and (p4 c8) (= c8 c_1)) (p4 c_1)))
+(step t103 (cl (not (and (p4 c8) (= c8 c_1))) (p4 c_1)) :rule implies :premises (t102))
+(step t.end (cl) :rule resolution :premises (nt103.0 nt103.1 t103))

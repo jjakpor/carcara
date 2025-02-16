@@ -1,0 +1,5 @@
+(assume nt17.0 (not (= (not (= nf0 nf0)) false)))
+(assume t15 (= (not (= nf0 nf0)) (not true)))
+(assume t16 (= (not true) false))
+(step t17 (cl (= (not (= nf0 nf0)) false)) :rule trans :premises (t15 t16))
+(step t.end (cl) :rule resolution :premises (nt17.0 t17))

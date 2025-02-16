@@ -1,0 +1,6 @@
+(assume nt10.0 (not (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1))))
+(assume t2 (or (not (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) true)) (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1))))
+(assume t9 (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) true))
+(step t2' (cl (not (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) true)) (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1))) :rule or :premises (t2))
+(step t10 (cl (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1))) :rule resolution :premises (t2' t9))
+(step t.end (cl) :rule resolution :premises (nt10.0 t10))

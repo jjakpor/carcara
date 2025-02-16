@@ -1,0 +1,5 @@
+(assume nt346.0 (not (= (or (not (= (op e2 e4) e2)) (= (op e4 e4) e4)) (or (not (= e2 (op e2 e4))) (= e4 (op e4 e4))))))
+(assume t344 (= (not (= (op e2 e4) e2)) (not (= e2 (op e2 e4)))))
+(assume t345 (= (= (op e4 e4) e4) (= e4 (op e4 e4))))
+(step t346 (cl (= (or (not (= (op e2 e4) e2)) (= (op e4 e4) e4)) (or (not (= e2 (op e2 e4))) (= e4 (op e4 e4))))) :rule cong :premises (t344 t345))
+(step t.end (cl) :rule resolution :premises (nt346.0 t346))

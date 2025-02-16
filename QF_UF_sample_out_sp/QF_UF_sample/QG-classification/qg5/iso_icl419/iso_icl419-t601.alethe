@@ -1,0 +1,4 @@
+(assume nt601.0 (not (= (op (op (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op e3 e3))) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3)))))
+(assume t600 (= (op (op e3 e3) (op e3 e3)) (op (op (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op e3 e3))) (op (op (op e3 e3) (op e3 e3)) e3))))
+(step t601 (cl (= (op (op (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op e3 e3))) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3)))) :rule symm :premises (t600))
+(step t.end (cl) :rule resolution :premises (nt601.0 t601))

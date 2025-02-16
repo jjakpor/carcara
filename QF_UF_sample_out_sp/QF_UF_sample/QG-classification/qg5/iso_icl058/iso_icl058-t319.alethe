@@ -1,0 +1,4 @@
+(assume nt319.0 (not (= (not (= (op e3 e0) (op e3 e4))) (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))))
+(assume t318 (= (= (op e3 e0) (op e3 e4)) (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))
+(step t319 (cl (= (not (= (op e3 e0) (op e3 e4))) (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))) :rule cong :premises (t318))
+(step t.end (cl) :rule resolution :premises (nt319.0 t319))

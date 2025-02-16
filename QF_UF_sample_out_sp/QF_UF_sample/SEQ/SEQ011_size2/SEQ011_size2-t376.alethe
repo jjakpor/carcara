@@ -1,0 +1,4 @@
+(assume nt376.0 (not (=> (and (p1 (f6 c_1) c_1) (= c_1 (f6 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false)))
+(assume nt376.1 (not (not false)))
+(step t376 (cl (=> (and (p1 (f6 c_1) c_1) (= c_1 (f6 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false) (not false)) :rule implies_neg2)
+(step t.end (cl) :rule resolution :premises (nt376.0 nt376.1 t376))

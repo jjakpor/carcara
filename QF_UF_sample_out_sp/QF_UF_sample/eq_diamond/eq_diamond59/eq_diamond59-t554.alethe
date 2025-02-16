@@ -1,0 +1,4 @@
+(assume nt554.0 (not (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32))))
+(assume t553 (and (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32))))
+(step t554 (cl (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32))) :rule and :premises (t553) :args (1))
+(step t.end (cl) :rule resolution :premises (nt554.0 t554))

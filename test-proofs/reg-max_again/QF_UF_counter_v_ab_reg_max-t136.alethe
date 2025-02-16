@@ -1,5 +1,0 @@
-(assume t68 (= y$X$next y$X$next))
-(assume t135 (= (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))
-(assume nt136.0 (not (= (= y$X$next (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)) (= y$X$next (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))))
-(step t136 (cl (= (= y$X$next (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)) (= y$X$next (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))) :rule cong :premises (t68 t135))
-(step t.end (cl) :rule resolution :premises (nt136.0 t136))

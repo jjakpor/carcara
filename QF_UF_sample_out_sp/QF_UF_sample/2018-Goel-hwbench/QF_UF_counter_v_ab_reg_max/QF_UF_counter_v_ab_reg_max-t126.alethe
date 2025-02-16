@@ -1,0 +1,5 @@
+(assume nt126.0 (not (= (= y$X y$n15s4) (= y$n1s4 y$n15s4))))
+(assume t122 (= y$X y$n1s4))
+(assume t125 (= y$n15s4 y$n15s4))
+(step t126 (cl (= (= y$X y$n15s4) (= y$n1s4 y$n15s4))) :rule cong :premises (t122 t125))
+(step t.end (cl) :rule resolution :premises (nt126.0 t126))

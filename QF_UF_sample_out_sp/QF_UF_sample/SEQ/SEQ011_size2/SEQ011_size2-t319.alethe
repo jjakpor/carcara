@@ -1,0 +1,7 @@
+(assume nt319.0 (not (p4 c_1)))
+(assume t96 (or (p4 c_1) (not (p4 c8)) (not (= c8 c_1))))
+(assume t97 (p4 c8))
+(assume t318 (= c8 c_1))
+(step t96' (cl (p4 c_1) (not (p4 c8)) (not (= c8 c_1))) :rule or :premises (t96))
+(step t319 (cl (p4 c_1)) :rule resolution :premises (t96' t97 t318))
+(step t.end (cl) :rule resolution :premises (nt319.0 t319))

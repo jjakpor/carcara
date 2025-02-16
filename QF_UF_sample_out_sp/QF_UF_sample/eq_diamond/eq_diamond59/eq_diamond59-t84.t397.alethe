@@ -1,0 +1,4 @@
+(assume nt84.t397.0 (not (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37))))
+(assume t84.t396 (and (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37))))
+(step t84.t397 (cl (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37))) :rule and :premises (t84.t396) :args (1))
+(step t.end (cl) :rule resolution :premises (nt84.t397.0 t84.t397))

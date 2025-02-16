@@ -1,0 +1,4 @@
+(assume nt2.t189.0 (not (= (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) e0))))))
+(assume t2.t188 (= (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) e0))))
+(step t2.t189 (cl (= (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) e0))))) :rule cong :premises (t2.t188))
+(step t.end (cl) :rule resolution :premises (nt2.t189.0 t2.t189))

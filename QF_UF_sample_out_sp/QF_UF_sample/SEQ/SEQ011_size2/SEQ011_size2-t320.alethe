@@ -1,0 +1,6 @@
+(assume nt320.0 (not (not (p1 (f7 c_1) c_1))))
+(assume t81 (or (not (p4 c_1)) (not (p1 (f7 c_1) c_1))))
+(assume t319 (p4 c_1))
+(step t81' (cl (not (p4 c_1)) (not (p1 (f7 c_1) c_1))) :rule or :premises (t81))
+(step t320 (cl (not (p1 (f7 c_1) c_1))) :rule resolution :premises (t81' t319))
+(step t.end (cl) :rule resolution :premises (nt320.0 t320))

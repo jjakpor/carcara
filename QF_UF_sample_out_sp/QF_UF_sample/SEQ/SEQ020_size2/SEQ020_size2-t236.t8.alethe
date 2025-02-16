@@ -1,0 +1,5 @@
+(assume nt236.t8.0 (not (= (p1 (f6 c_0) c_0) (p1 c_1 c_0))))
+(assume t236.t6 (= (f6 c_0) c_1))
+(assume t236.t7 (= c_0 c_0))
+(step t236.t8 (cl (= (p1 (f6 c_0) c_0) (p1 c_1 c_0))) :rule cong :premises (t236.t6 t236.t7))
+(step t.end (cl) :rule resolution :premises (nt236.t8.0 t236.t8))

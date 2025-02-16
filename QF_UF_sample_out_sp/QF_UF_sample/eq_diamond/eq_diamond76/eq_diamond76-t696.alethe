@@ -1,0 +1,6 @@
+(assume nt696.0 (not (= x61 x62)))
+(assume t695 (or (= x61 x62) (not (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))))))
+(assume t691 (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))))
+(step t695' (cl (= x61 x62) (not (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))))) :rule or :premises (t695))
+(step t696 (cl (= x61 x62)) :rule resolution :premises (t695' t691))
+(step t.end (cl) :rule resolution :premises (nt696.0 t696))

@@ -1,0 +1,5 @@
+(assume nt163.0 (not (= (= (op unit e0) e0) (= e0 (op e0 e0)))))
+(assume t159 (= (= (op unit e0) e0) (= e0 (op unit e0))))
+(assume t162 (= (= e0 (op unit e0)) (= e0 (op e0 e0))))
+(step t163 (cl (= (= (op unit e0) e0) (= e0 (op e0 e0)))) :rule trans :premises (t159 t162))
+(step t.end (cl) :rule resolution :premises (nt163.0 t163))

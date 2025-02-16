@@ -1,0 +1,5 @@
+(assume nt683.0 (not (not (or (and (= x60 y60) (= y60 x61)) (and (= x60 z60) (= z60 x61))))))
+(assume nt683.1 (not (= x60 x61)))
+(assume t682 (=> (or (and (= x60 y60) (= y60 x61)) (and (= x60 z60) (= z60 x61))) (= x60 x61)))
+(step t683 (cl (not (or (and (= x60 y60) (= y60 x61)) (and (= x60 z60) (= z60 x61)))) (= x60 x61)) :rule implies :premises (t682))
+(step t.end (cl) :rule resolution :premises (nt683.0 nt683.1 t683))

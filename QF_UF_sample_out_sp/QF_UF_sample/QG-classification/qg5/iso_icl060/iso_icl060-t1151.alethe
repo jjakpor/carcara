@@ -1,0 +1,5 @@
+(assume nt1151.0 (not (=> (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (= (op e1 e3) (op e3 (op (op e1 e3) e1))))))
+(assume t1150 (or (=> (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (= (op e1 e3) (op e3 (op (op e1 e3) e1)))) (=> (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (= (op e1 e3) (op e3 (op (op e1 e3) e1))))))
+(step t1150' (cl (=> (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (= (op e1 e3) (op e3 (op (op e1 e3) e1)))) (=> (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (= (op e1 e3) (op e3 (op (op e1 e3) e1))))) :rule or :premises (t1150))
+(step t1151 (cl (=> (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (= (op e1 e3) (op e3 (op (op e1 e3) e1))))) :rule contraction :premises (t1150'))
+(step t.end (cl) :rule resolution :premises (nt1151.0 t1151))

@@ -1,0 +1,5 @@
+(assume nt541.0 (not (= (= e1 (op e1 (op e1 e1))) false)))
+(assume nt541.1 (not (not (not (= e1 (op e1 (op e1 e1)))))))
+(assume t540 (= (= (= e1 (op e1 (op e1 e1))) false) (not (= e1 (op e1 (op e1 e1))))))
+(step t541 (cl (= (= e1 (op e1 (op e1 e1))) false) (not (not (= e1 (op e1 (op e1 e1)))))) :rule equiv2 :premises (t540))
+(step t.end (cl) :rule resolution :premises (nt541.0 nt541.1 t541))

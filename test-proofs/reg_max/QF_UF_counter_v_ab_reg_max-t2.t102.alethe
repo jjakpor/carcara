@@ -1,4 +1,0 @@
-(assume a0 (and y$2 y$13 y$28 y$26 y$45 y$44))
-(assume a1 (not y$44))
-(step t0 (cl y$44) :rule and :premises (a0))
-(step t1 (cl) :rule resolution :premises (a1 t0))

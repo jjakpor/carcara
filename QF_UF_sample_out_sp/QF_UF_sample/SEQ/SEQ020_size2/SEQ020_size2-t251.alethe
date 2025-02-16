@@ -1,0 +1,7 @@
+(assume nt251.0 (not (not (not (p1 (f7 c_0) c_0)))))
+(assume nt251.1 (not (not (= c_1 (f7 c_0)))))
+(assume nt251.2 (not (not (= c_1 (f6 c_0)))))
+(assume nt251.3 (not (not (p1 (f6 c_0) c_0))))
+(assume t250 (not (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0))))
+(step t251 (cl (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))) :rule not_and :premises (t250))
+(step t.end (cl) :rule resolution :premises (nt251.0 nt251.1 nt251.2 nt251.3 t251))

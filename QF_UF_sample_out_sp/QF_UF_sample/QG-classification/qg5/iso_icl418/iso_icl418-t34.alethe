@@ -1,0 +1,5 @@
+(assume nt34.0 (not (= e0 (op (op e4 e3) (op e4 e3)))))
+(assume t31 (= e0 (op e1 e1)))
+(assume t33 (= (op e1 e1) (op (op e4 e3) (op e4 e3))))
+(step t34 (cl (= e0 (op (op e4 e3) (op e4 e3)))) :rule trans :premises (t31 t33))
+(step t.end (cl) :rule resolution :premises (nt34.0 t34))

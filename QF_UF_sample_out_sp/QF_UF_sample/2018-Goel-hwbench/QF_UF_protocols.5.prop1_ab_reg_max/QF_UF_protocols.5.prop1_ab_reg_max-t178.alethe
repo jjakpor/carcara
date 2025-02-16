@@ -1,0 +1,6 @@
+(assume nt178.0 (not (not y$v3_1517448506_498_op)))
+(assume t176 (or (not y$v3_1517448506_498_op) (not y$971)))
+(assume t177 y$971)
+(step t176' (cl (not y$v3_1517448506_498_op) (not y$971)) :rule or :premises (t176))
+(step t178 (cl (not y$v3_1517448506_498_op)) :rule resolution :premises (t176' t177))
+(step t.end (cl) :rule resolution :premises (nt178.0 t178))

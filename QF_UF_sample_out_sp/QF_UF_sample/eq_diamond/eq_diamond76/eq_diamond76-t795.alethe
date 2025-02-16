@@ -1,0 +1,6 @@
+(assume nt795.0 (not (= x70 x71)))
+(assume t794 (or (= x70 x71) (not (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))))))
+(assume t790 (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))))
+(step t794' (cl (= x70 x71) (not (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))))) :rule or :premises (t794))
+(step t795 (cl (= x70 x71)) :rule resolution :premises (t794' t790))
+(step t.end (cl) :rule resolution :premises (nt795.0 t795))

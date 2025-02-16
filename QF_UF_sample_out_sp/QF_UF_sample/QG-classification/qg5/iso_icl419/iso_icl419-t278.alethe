@@ -1,0 +1,5 @@
+(assume nt278.0 (not (= (= (op (op e0 e2) e0) e2) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3))))))
+(assume t275 (= (= (op (op e0 e2) e0) e2) (= e2 (op (op e0 e2) e0))))
+(assume t277 (= (= e2 (op (op e0 e2) e0)) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)))))
+(step t278 (cl (= (= (op (op e0 e2) e0) e2) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3))))) :rule trans :premises (t275 t277))
+(step t.end (cl) :rule resolution :premises (nt278.0 t278))

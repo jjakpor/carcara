@@ -1,0 +1,5 @@
+(assume nt231.0 (not (= c_0 (f5 c_0))))
+(assume nt231.1 (not (= c_1 (f5 c_0))))
+(assume t230 (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0))))
+(step t231 (cl (= c_0 (f5 c_0)) (= c_1 (f5 c_0))) :rule or :premises (t230))
+(step t.end (cl) :rule resolution :premises (nt231.0 nt231.1 t231))

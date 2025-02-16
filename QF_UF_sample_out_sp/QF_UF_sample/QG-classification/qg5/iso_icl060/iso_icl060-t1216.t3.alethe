@@ -1,0 +1,5 @@
+(assume nt1216.t3.0 (not (= (op (op (op e1 e3) e3) e3) (op e3 (op (op e1 e3) e3)))))
+(assume t1216.t2 (= (op (op (op e1 e3) e3) e3) (op (op e1 e3) e1)))
+(assume t1216.a3 (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3))))
+(step t1216.t3 (cl (= (op (op (op e1 e3) e3) e3) (op e3 (op (op e1 e3) e3)))) :rule trans :premises (t1216.t2 t1216.a3))
+(step t.end (cl) :rule resolution :premises (nt1216.t3.0 t1216.t3))

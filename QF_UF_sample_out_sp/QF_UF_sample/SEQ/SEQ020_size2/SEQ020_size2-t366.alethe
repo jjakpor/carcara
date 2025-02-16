@@ -1,0 +1,6 @@
+(assume nt366.0 (not (not (p1 (f7 c_1) c_1))))
+(assume t365 (or (not (p4 c_1)) (not (p1 (f7 c_1) c_1))))
+(assume t325 (p4 c_1))
+(step t365' (cl (not (p4 c_1)) (not (p1 (f7 c_1) c_1))) :rule or :premises (t365))
+(step t366 (cl (not (p1 (f7 c_1) c_1))) :rule resolution :premises (t365' t325))
+(step t.end (cl) :rule resolution :premises (nt366.0 t366))

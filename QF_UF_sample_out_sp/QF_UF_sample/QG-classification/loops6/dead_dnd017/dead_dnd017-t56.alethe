@@ -1,0 +1,5 @@
+(assume nt56.0 (not (= (= unit (op e3 e0)) (= e0 (op e3 e0)))))
+(assume a11 (= unit e0))
+(assume t55 (= (op e3 e0) (op e3 e0)))
+(step t56 (cl (= (= unit (op e3 e0)) (= e0 (op e3 e0)))) :rule cong :premises (a11 t55))
+(step t.end (cl) :rule resolution :premises (nt56.0 t56))

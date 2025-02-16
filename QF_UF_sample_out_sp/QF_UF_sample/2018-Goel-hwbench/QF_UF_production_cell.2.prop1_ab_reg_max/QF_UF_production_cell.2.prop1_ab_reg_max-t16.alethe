@@ -1,0 +1,5 @@
+(assume nt16.0 (not (= (= y$n0s8 y$v_at_press) (= y$v_B y$v_at_press))))
+(assume t14 (= y$n0s8 y$v_B))
+(assume t15 (= y$v_at_press y$v_at_press))
+(step t16 (cl (= (= y$n0s8 y$v_at_press) (= y$v_B y$v_at_press))) :rule cong :premises (t14 t15))
+(step t.end (cl) :rule resolution :premises (nt16.0 t16))

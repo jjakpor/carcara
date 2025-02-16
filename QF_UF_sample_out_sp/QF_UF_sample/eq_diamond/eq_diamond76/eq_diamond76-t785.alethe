@@ -1,0 +1,5 @@
+(assume nt785.0 (not (not (= (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (and (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (=> (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (= x70 x71)))))))
+(assume nt785.1 (not (not (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))))))
+(assume nt785.2 (not (and (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (=> (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (= x70 x71)))))
+(step t785 (cl (not (= (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (and (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (=> (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (= x70 x71))))) (not (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71)))) (and (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (=> (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (= x70 x71)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt785.0 nt785.1 nt785.2 t785))

@@ -1,0 +1,6 @@
+(assume nt1071.0 (not (= (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))) false)))
+(assume t1065 (or (= (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))) false) (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))
+(assume t1070 (not (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))
+(step t1065' (cl (= (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))) false) (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))) :rule or :premises (t1065))
+(step t1071 (cl (= (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))) false)) :rule resolution :premises (t1065' t1070))
+(step t.end (cl) :rule resolution :premises (nt1071.0 t1071))

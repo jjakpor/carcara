@@ -1,0 +1,4 @@
+(assume nt602.t11.0 (not (= (op (op (op e1 e3) e3) e1) (op e1 e3))))
+(assume t602.a0 (= (op e1 e3) (op (op (op e1 e3) e3) e1)))
+(step t602.t11 (cl (= (op (op (op e1 e3) e3) e1) (op e1 e3))) :rule symm :premises (t602.a0))
+(step t.end (cl) :rule resolution :premises (nt602.t11.0 t602.t11))

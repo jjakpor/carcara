@@ -1,0 +1,5 @@
+(assume nt2.t74.0 (not (= (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)) (= y$X$next (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))))
+(assume t2.t10 (= y$X$next y$X$next))
+(assume t2.t73 (= (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X) (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))
+(step t2.t74 (cl (= (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)) (= y$X$next (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))) :rule cong :premises (t2.t10 t2.t73))
+(step t.end (cl) :rule resolution :premises (nt2.t74.0 t2.t74))

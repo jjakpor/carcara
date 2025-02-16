@@ -1,0 +1,3 @@
+(assume nt660.0 (not (= (= (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (and (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42)))) true)))
+(step t660 (cl (= (= (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (and (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nt660.0 t660))

@@ -1,0 +1,4 @@
+(assume nt2.t141.0 (not (= (not (= e2 e1)) (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))))
+(assume t2.t140 (= (= e2 e1) (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))
+(step t2.t141 (cl (= (not (= e2 e1)) (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))) :rule cong :premises (t2.t140))
+(step t.end (cl) :rule resolution :premises (nt2.t141.0 t2.t141))

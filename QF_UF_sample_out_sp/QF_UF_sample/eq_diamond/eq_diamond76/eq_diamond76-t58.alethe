@@ -1,0 +1,5 @@
+(assume nt58.0 (not (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))))
+(assume nt58.1 (not (= x7 x8)))
+(assume t57 (=> (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (= x7 x8)))
+(step t58 (cl (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8)))) (= x7 x8)) :rule implies :premises (t57))
+(step t.end (cl) :rule resolution :premises (nt58.0 nt58.1 t58))

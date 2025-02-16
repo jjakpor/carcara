@@ -1,5 +1,0 @@
-(assume a0 (not (not (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4))))))
-(assume a1 (not (not (= (= y$n15s4 y$X) y$6))))
-(assume a2 (not (= y$6 (= y$X y$n15s4))))
-(step t0 (cl (not (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4)))) (not (= (= y$n15s4 y$X) y$6)) (= y$6 (= y$X y$n15s4))) :rule equiv_pos2)
-(step t1 (cl) :rule resolution :premises (a0 a1 a2 t0))

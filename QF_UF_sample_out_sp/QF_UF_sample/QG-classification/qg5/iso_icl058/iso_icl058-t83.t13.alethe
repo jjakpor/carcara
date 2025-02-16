@@ -1,0 +1,4 @@
+(assume nt83.t13.0 (not (= (op e2 e1) (op e1 e2))))
+(assume t83.t12 (and (and (= (op e0 e1) (op e1 e0)) (= (op e1 e1) (op e1 e1))) (= (op e2 e1) (op e1 e2))))
+(step t83.t13 (cl (= (op e2 e1) (op e1 e2))) :rule and :premises (t83.t12) :args (1))
+(step t.end (cl) :rule resolution :premises (nt83.t13.0 t83.t13))

@@ -1,0 +1,5 @@
+(assume nt709.0 (not (= (= e0 (op e2 e4)) (= e0 (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))))
+(assume t30 (= e0 e0))
+(assume t73 (= (op e2 e4) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))
+(step t709 (cl (= (= e0 (op e2 e4)) (= e0 (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))) :rule cong :premises (t30 t73))
+(step t.end (cl) :rule resolution :premises (nt709.0 t709))

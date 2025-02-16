@@ -1,0 +1,6 @@
+(assume nt102.t8.0 (not (p4 c_0)))
+(assume t102.t1 (or (not (= (p4 c_0) true)) (p4 c_0)))
+(assume t102.t7 (= (p4 c_0) true))
+(step t102.t1' (cl (not (= (p4 c_0) true)) (p4 c_0)) :rule or :premises (t102.t1))
+(step t102.t8 (cl (p4 c_0)) :rule resolution :premises (t102.t1' t102.t7))
+(step t.end (cl) :rule resolution :premises (nt102.t8.0 t102.t8))

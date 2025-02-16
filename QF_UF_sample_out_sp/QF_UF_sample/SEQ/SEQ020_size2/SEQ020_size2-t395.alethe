@@ -1,0 +1,6 @@
+(assume nt395.0 (not (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)))))
+(assume t392 (=> (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)) false))
+(assume t394 (or (not (=> (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)) false)) (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)))))
+(step t394' (cl (not (=> (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)) false)) (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)))) :rule or :premises (t394))
+(step t395 (cl (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)))) :rule resolution :premises (t392 t394'))
+(step t.end (cl) :rule resolution :premises (nt395.0 t395))

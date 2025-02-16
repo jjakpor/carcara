@@ -1,0 +1,5 @@
+(assume nt84.t640.0 (not (= (= x11 x12) false)))
+(assume t84.t633 (= (= x11 x12) (= x0 x58)))
+(assume t84.t639 (= (= x0 x58) false))
+(step t84.t640 (cl (= (= x11 x12) false)) :rule trans :premises (t84.t633 t84.t639))
+(step t.end (cl) :rule resolution :premises (nt84.t640.0 t84.t640))

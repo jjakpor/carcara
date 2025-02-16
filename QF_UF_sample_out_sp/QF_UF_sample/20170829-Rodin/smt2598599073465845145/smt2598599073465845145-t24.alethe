@@ -1,0 +1,3 @@
+(assume nt24.0 (not (= (= (not (not (not (= b2 r2)))) (= b2 r2)) (= (= b2 r2) (not (not (not (= b2 r2))))))))
+(step t24 (cl (= (= (not (not (not (= b2 r2)))) (= b2 r2)) (= (= b2 r2) (not (not (not (= b2 r2))))))) :rule rare_rewrite :args ("eq-symm" (not (not (not (= b2 r2)))) (= b2 r2)))
+(step t.end (cl) :rule resolution :premises (nt24.0 t24))

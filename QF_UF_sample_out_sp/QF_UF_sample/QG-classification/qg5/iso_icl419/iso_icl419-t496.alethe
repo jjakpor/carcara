@@ -1,0 +1,6 @@
+(assume nt496.0 (not (not (= (op (op e3 e3) e3) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(assume t476 (or (not (= (= (op (op e3 e3) e3) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) false)) (not (= (op (op e3 e3) e3) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(assume t495 (= (= (op (op e3 e3) e3) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) false))
+(step t476' (cl (not (= (= (op (op e3 e3) e3) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) false)) (not (= (op (op e3 e3) e3) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule or :premises (t476))
+(step t496 (cl (not (= (op (op e3 e3) e3) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule resolution :premises (t476' t495))
+(step t.end (cl) :rule resolution :premises (nt496.0 t496))

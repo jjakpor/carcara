@@ -1,0 +1,5 @@
+(assume nt2.t91.0 (not (= (= y$X$next y$n15s4) (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) y$n15s4))))
+(assume t2.t83 (= y$X$next (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))
+(assume t2.t69 (= y$n15s4 y$n15s4))
+(step t2.t91 (cl (= (= y$X$next y$n15s4) (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) y$n15s4))) :rule cong :premises (t2.t83 t2.t69))
+(step t.end (cl) :rule resolution :premises (nt2.t91.0 t2.t91))

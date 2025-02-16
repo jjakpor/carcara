@@ -1,0 +1,5 @@
+(assume nt127.0 (not (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))))))
+(assume nt127.1 (not (= (f6 c_0) (f5 c_0))))
+(assume t126 (=> (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0))))
+(step t127 (cl (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (= (f6 c_0) (f5 c_0))) :rule implies :premises (t126))
+(step t.end (cl) :rule resolution :premises (nt127.0 nt127.1 t127))

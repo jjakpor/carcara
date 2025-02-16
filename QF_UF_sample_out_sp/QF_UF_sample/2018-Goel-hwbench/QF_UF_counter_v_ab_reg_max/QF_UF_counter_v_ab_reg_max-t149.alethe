@@ -1,0 +1,5 @@
+(assume nt149.0 (not (= (= (not y$26) (not (= y$X$next y$n15s4))) (= (not true) (not (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) y$n15s4))))))
+(assume t146 (= (not y$26) (not true)))
+(assume t148 (= (not (= y$X$next y$n15s4)) (not (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) y$n15s4))))
+(step t149 (cl (= (= (not y$26) (not (= y$X$next y$n15s4))) (= (not true) (not (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) y$n15s4))))) :rule cong :premises (t146 t148))
+(step t.end (cl) :rule resolution :premises (nt149.0 t149))

@@ -1,0 +1,5 @@
+(assume nt115.0 (not (= (= x4 x5) false)))
+(assume t108 (= (= x4 x5) (= x0 x9)))
+(assume t114 (= (= x0 x9) false))
+(step t115 (cl (= (= x4 x5) false)) :rule trans :premises (t108 t114))
+(step t.end (cl) :rule resolution :premises (nt115.0 t115))

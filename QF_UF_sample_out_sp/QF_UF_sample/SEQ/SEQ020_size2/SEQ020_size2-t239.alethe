@@ -1,0 +1,4 @@
+(assume nt239.0 (not (not (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0)))))
+(assume nt239.1 (not (= c_1 (f6 c_0))))
+(step t239 (cl (not (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0))) (= c_1 (f6 c_0))) :rule and_pos :args (2))
+(step t.end (cl) :rule resolution :premises (nt239.0 nt239.1 t239))

@@ -1,0 +1,7 @@
+(assume nt232.0 (not (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(assume t228 (or (not (= (not (= (op e0 e1) (op e0 e2))) (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))) (not (not (= (op e0 e1) (op e0 e2)))) (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(assume t230 (= (not (= (op e0 e1) (op e0 e2))) (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(assume t231 (not (= (op e0 e1) (op e0 e2))))
+(step t228' (cl (not (= (not (= (op e0 e1) (op e0 e2))) (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))) (not (not (= (op e0 e1) (op e0 e2)))) (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule or :premises (t228))
+(step t232 (cl (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule resolution :premises (t228' t230 t231))
+(step t.end (cl) :rule resolution :premises (nt232.0 t232))

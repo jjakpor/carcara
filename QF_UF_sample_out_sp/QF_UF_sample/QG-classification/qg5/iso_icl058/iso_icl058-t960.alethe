@@ -1,0 +1,6 @@
+(assume nt960.0 (not (not (= e0 (op (op e0 e0) (op (op e0 e0) e0))))))
+(assume t951 (or (not (= (= e0 (op (op e0 e0) (op (op e0 e0) e0))) false)) (not (= e0 (op (op e0 e0) (op (op e0 e0) e0))))))
+(assume t959 (= (= e0 (op (op e0 e0) (op (op e0 e0) e0))) false))
+(step t951' (cl (not (= (= e0 (op (op e0 e0) (op (op e0 e0) e0))) false)) (not (= e0 (op (op e0 e0) (op (op e0 e0) e0))))) :rule or :premises (t951))
+(step t960 (cl (not (= e0 (op (op e0 e0) (op (op e0 e0) e0))))) :rule resolution :premises (t951' t959))
+(step t.end (cl) :rule resolution :premises (nt960.0 t960))

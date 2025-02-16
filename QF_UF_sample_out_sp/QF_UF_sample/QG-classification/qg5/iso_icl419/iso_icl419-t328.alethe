@@ -1,0 +1,4 @@
+(assume nt328.0 (not (= (not (= e1 (op e1 e4))) (not (= (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))))
+(assume t304 (= (= e1 (op e1 e4)) (= (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(step t328 (cl (= (not (= e1 (op e1 e4))) (not (= (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))) :rule cong :premises (t304))
+(step t.end (cl) :rule resolution :premises (nt328.0 t328))

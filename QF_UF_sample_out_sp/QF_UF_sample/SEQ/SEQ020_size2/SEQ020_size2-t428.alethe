@@ -1,0 +1,4 @@
+(assume nt428.0 (not (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))))
+(assume nt428.1 (not (not (not (= c_1 (f5 c_1))))))
+(step t428 (cl (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))) (not (not (= c_1 (f5 c_1))))) :rule or_neg :args (2))
+(step t.end (cl) :rule resolution :premises (nt428.0 nt428.1 t428))

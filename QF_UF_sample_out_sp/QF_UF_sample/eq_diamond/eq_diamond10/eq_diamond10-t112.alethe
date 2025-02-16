@@ -1,0 +1,8 @@
+(assume nt112.0 (not (= (= x0 x9) false)))
+(assume nt112.1 (not (= x0 x9)))
+(assume t110 (or (= (= x0 x9) false) (not (not (= x0 x9)))))
+(assume t111 (or (not (not (not (= x0 x9)))) (= x0 x9)))
+(step t110' (cl (= (= x0 x9) false) (not (not (= x0 x9)))) :rule or :premises (t110))
+(step t111' (cl (not (not (not (= x0 x9)))) (= x0 x9)) :rule or :premises (t111))
+(step t112 (cl (= (= x0 x9) false) (= x0 x9)) :rule resolution :premises (t110' t111'))
+(step t.end (cl) :rule resolution :premises (nt112.0 nt112.1 t112))

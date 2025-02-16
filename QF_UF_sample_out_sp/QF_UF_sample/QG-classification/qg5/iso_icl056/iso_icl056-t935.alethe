@@ -1,0 +1,5 @@
+(assume nt935.0 (not (= (= e1 (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) (op e1 (op e1 e1))))) false)))
+(assume t934 (= (= e1 (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) (op e1 (op e1 e1))))) (= e1 (op e1 (op e1 e1)))))
+(assume t555 (= (= e1 (op e1 (op e1 e1))) false))
+(step t935 (cl (= (= e1 (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) (op e1 (op e1 e1))))) false)) :rule trans :premises (t934 t555))
+(step t.end (cl) :rule resolution :premises (nt935.0 t935))

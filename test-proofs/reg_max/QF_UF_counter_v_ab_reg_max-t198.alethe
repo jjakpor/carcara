@@ -1,4 +1,0 @@
-(assume a0 (not (= y$n1s4 y$n15s4)))
-(assume a1 (not (not (= y$n15s4 y$n1s4))))
-(step t0 (cl (not (= y$n15s4 y$n1s4))) :rule not_symm :premises (a0))
-(step t1 (cl) :rule resolution :premises (a1 t0))

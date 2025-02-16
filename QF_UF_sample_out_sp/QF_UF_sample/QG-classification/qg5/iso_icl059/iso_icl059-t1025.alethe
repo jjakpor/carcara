@@ -1,0 +1,7 @@
+(assume nt1025.0 (not (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))))
+(assume t1021 (or (not (= (not (= (op e1 e1) (op e3 e1))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)))))) (not (not (= (op e1 e1) (op e3 e1)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))))
+(assume t1023 (= (not (= (op e1 e1) (op e3 e1))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))))
+(assume t1024 (not (= (op e1 e1) (op e3 e1))))
+(step t1021' (cl (not (= (not (= (op e1 e1) (op e3 e1))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)))))) (not (not (= (op e1 e1) (op e3 e1)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))) :rule or :premises (t1021))
+(step t1025 (cl (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))) :rule resolution :premises (t1021' t1023 t1024))
+(step t.end (cl) :rule resolution :premises (nt1025.0 t1025))

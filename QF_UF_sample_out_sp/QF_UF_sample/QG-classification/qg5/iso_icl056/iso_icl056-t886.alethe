@@ -1,0 +1,4 @@
+(assume nt886.0 (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)) (op (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))))
+(assume t779 (= (op (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))))
+(step t886 (cl (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)) (op (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))) :rule symm :premises (t779))
+(step t.end (cl) :rule resolution :premises (nt886.0 t886))

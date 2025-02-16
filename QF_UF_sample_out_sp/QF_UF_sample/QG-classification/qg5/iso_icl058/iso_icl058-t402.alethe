@@ -1,0 +1,5 @@
+(assume nt402.0 (not (= (or (or (or (or (= (op e0 e0) e1) (= (op e1 e1) e1)) (= (op e2 e2) e1)) (= (op e3 e3) e1)) (= (op e4 e4) e1)) (or (= e1 (op e4 e4)) (= e1 (op e3 e3)) (= e1 (op e2 e2)) (= e1 (op e0 e0)) (= e1 (op e1 e1))))))
+(assume t396 (= (or (or (or (or (= (op e0 e0) e1) (= (op e1 e1) e1)) (= (op e2 e2) e1)) (= (op e3 e3) e1)) (= (op e4 e4) e1)) (or (= (op e4 e4) e1) (= (op e3 e3) e1) (= (op e2 e2) e1) (= (op e0 e0) e1) (= (op e1 e1) e1))))
+(assume t401 (= (or (= (op e4 e4) e1) (= (op e3 e3) e1) (= (op e2 e2) e1) (= (op e0 e0) e1) (= (op e1 e1) e1)) (or (= e1 (op e4 e4)) (= e1 (op e3 e3)) (= e1 (op e2 e2)) (= e1 (op e0 e0)) (= e1 (op e1 e1)))))
+(step t402 (cl (= (or (or (or (or (= (op e0 e0) e1) (= (op e1 e1) e1)) (= (op e2 e2) e1)) (= (op e3 e3) e1)) (= (op e4 e4) e1)) (or (= e1 (op e4 e4)) (= e1 (op e3 e3)) (= e1 (op e2 e2)) (= e1 (op e0 e0)) (= e1 (op e1 e1))))) :rule trans :premises (t396 t401))
+(step t.end (cl) :rule resolution :premises (nt402.0 t402))

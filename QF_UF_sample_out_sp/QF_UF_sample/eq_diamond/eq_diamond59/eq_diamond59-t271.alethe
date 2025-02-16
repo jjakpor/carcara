@@ -1,0 +1,6 @@
+(assume nt271.0 (not (= x4 x5)))
+(assume t270 (or (= x4 x5) (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))))
+(assume t266 (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))
+(step t270' (cl (= x4 x5) (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))) :rule or :premises (t270))
+(step t271 (cl (= x4 x5)) :rule resolution :premises (t270' t266))
+(step t.end (cl) :rule resolution :premises (nt271.0 t271))

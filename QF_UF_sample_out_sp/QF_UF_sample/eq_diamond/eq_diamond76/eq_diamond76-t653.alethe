@@ -1,0 +1,5 @@
+(assume nt653.0 (not (not (= (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (and (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (=> (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (= x58 x59)))))))
+(assume nt653.1 (not (not (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))))))
+(assume nt653.2 (not (and (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (=> (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (= x58 x59)))))
+(step t653 (cl (not (= (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (and (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (=> (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (= x58 x59))))) (not (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59)))) (and (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (=> (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (= x58 x59)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt653.0 nt653.1 nt653.2 t653))

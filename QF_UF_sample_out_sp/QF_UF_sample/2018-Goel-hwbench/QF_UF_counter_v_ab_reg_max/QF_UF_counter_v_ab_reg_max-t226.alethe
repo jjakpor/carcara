@@ -1,0 +1,5 @@
+(assume nt226.0 (not (= (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
+(assume t224 (= (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (and true (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
+(assume t225 (= (and true (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))
+(step t226 (cl (= (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))) :rule trans :premises (t224 t225))
+(step t.end (cl) :rule resolution :premises (nt226.0 t226))

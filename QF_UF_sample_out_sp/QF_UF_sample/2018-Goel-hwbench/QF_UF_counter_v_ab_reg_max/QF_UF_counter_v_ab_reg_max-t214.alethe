@@ -1,0 +1,5 @@
+(assume nt214.0 (not (= (and y$2 y$33) (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4))))))
+(assume t65 (= y$2 (= y$X y$n1s4)))
+(assume t213 (= y$33 (= y$n15s4 (Add_4_4_4 y$X y$n1s4))))
+(step t214 (cl (= (and y$2 y$33) (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4))))) :rule cong :premises (t65 t213))
+(step t.end (cl) :rule resolution :premises (nt214.0 t214))

@@ -1,0 +1,4 @@
+(assume nt1181.0 (not (= (not (= (op (op e1 e3) e1) (op e3 e1))) (not (= (op e3 e1) (op (op e1 e3) e1))))))
+(assume t1169 (= (= (op (op e1 e3) e1) (op e3 e1)) (= (op e3 e1) (op (op e1 e3) e1))))
+(step t1181 (cl (= (not (= (op (op e1 e3) e1) (op e3 e1))) (not (= (op e3 e1) (op (op e1 e3) e1))))) :rule cong :premises (t1169))
+(step t.end (cl) :rule resolution :premises (nt1181.0 t1181))

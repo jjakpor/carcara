@@ -1,3 +1,0 @@
-(assume a0 (not (= y$prop$next y$prop$next)))
-(step t0 (cl (= y$prop$next y$prop$next)) :rule refl)
-(step t1 (cl) :rule resolution :premises (a0 t0))

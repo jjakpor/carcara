@@ -1,0 +1,6 @@
+(assume nt619.0 (not (= x55 x56)))
+(assume t618 (or (= x55 x56) (not (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))))))
+(assume t614 (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))))
+(step t618' (cl (= x55 x56) (not (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))))) :rule or :premises (t618))
+(step t619 (cl (= x55 x56)) :rule resolution :premises (t618' t614))
+(step t.end (cl) :rule resolution :premises (nt619.0 t619))

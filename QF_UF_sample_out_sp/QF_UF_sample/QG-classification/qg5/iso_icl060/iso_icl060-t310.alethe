@@ -1,0 +1,3 @@
+(assume nt310.0 (not (= (op e3 e3) (op e3 e3))))
+(step t310 (cl (= (op e3 e3) (op e3 e3))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt310.0 t310))

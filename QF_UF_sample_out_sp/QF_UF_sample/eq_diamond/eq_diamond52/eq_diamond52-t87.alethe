@@ -1,0 +1,5 @@
+(assume nt87.0 (not (not (= (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (and (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (=> (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (= x7 x8)))))))
+(assume nt87.1 (not (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))))
+(assume nt87.2 (not (and (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (=> (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (= x7 x8)))))
+(step t87 (cl (not (= (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (and (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (=> (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (= x7 x8))))) (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8)))) (and (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (=> (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (= x7 x8)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt87.0 nt87.1 nt87.2 t87))

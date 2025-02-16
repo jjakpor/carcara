@@ -1,0 +1,5 @@
+(assume nt547.0 (not (not (= (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (and (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32)))))))
+(assume nt547.1 (not (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))))))
+(assume nt547.2 (not (and (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32)))))
+(step t547 (cl (not (= (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (and (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32))))) (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32)))) (and (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt547.0 nt547.1 nt547.2 t547))

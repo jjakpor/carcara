@@ -1,0 +1,5 @@
+(assume nt20.0 (not (or (not prt) (not car) (not (not clk)))))
+(assume t19 (or (or (not prt) (not car) (not (not clk))) (or (not prt) (not car) (not (not clk))) (or (not prt) (not car) (not (not clk)))))
+(step t19' (cl (or (not prt) (not car) (not (not clk))) (or (not prt) (not car) (not (not clk))) (or (not prt) (not car) (not (not clk)))) :rule or :premises (t19))
+(step t20 (cl (or (not prt) (not car) (not (not clk)))) :rule contraction :premises (t19'))
+(step t.end (cl) :rule resolution :premises (nt20.0 t20))

@@ -1,0 +1,6 @@
+(assume nt255.0 (not (= x21 x22)))
+(assume nt255.1 (not (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))))))
+(assume t254 (or (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22)))) (= x21 x22)))
+(step t254' (cl (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22)))) (= x21 x22)) :rule or :premises (t254))
+(step t255 (cl (= x21 x22) (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))))) :rule reordering :premises (t254'))
+(step t.end (cl) :rule resolution :premises (nt255.0 nt255.1 t255))

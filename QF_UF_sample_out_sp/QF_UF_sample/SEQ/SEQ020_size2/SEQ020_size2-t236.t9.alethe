@@ -1,0 +1,4 @@
+(assume nt236.t9.0 (not (= (f7 c_0) c_1)))
+(assume t236.a1 (= c_1 (f7 c_0)))
+(step t236.t9 (cl (= (f7 c_0) c_1)) :rule symm :premises (t236.a1))
+(step t.end (cl) :rule resolution :premises (nt236.t9.0 t236.t9))

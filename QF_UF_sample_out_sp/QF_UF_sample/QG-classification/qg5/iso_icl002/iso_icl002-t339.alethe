@@ -1,0 +1,4 @@
+(assume nt339.0 (not (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4)))))
+(assume t338 (and (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4))) (not (= e1 e2))))
+(step t339 (cl (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4)))) :rule and :premises (t338) :args (0))
+(step t.end (cl) :rule resolution :premises (nt339.0 t339))

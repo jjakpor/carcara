@@ -1,0 +1,7 @@
+(assume nt129.0 (not (and y$v3_1517448506_390_op y$v3_1517448506_459_op)))
+(assume t127 (or (not (= y$v3_1517448506_460_op (and y$v3_1517448506_390_op y$v3_1517448506_459_op))) (not y$v3_1517448506_460_op) (and y$v3_1517448506_390_op y$v3_1517448506_459_op)))
+(assume a549 (= y$v3_1517448506_460_op (and y$v3_1517448506_390_op y$v3_1517448506_459_op)))
+(assume t128 y$v3_1517448506_460_op)
+(step t127' (cl (not (= y$v3_1517448506_460_op (and y$v3_1517448506_390_op y$v3_1517448506_459_op))) (not y$v3_1517448506_460_op) (and y$v3_1517448506_390_op y$v3_1517448506_459_op)) :rule or :premises (t127))
+(step t129 (cl (and y$v3_1517448506_390_op y$v3_1517448506_459_op)) :rule resolution :premises (t127' a549 t128))
+(step t.end (cl) :rule resolution :premises (nt129.0 t129))

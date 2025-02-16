@@ -1,0 +1,5 @@
+(assume nt719.0 (not (not (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))))))
+(assume nt719.1 (not (= x63 x64)))
+(assume t718 (=> (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))) (= x63 x64)))
+(step t719 (cl (not (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64)))) (= x63 x64)) :rule implies :premises (t718))
+(step t.end (cl) :rule resolution :premises (nt719.0 nt719.1 t719))

@@ -1,0 +1,5 @@
+(assume nt14.0 (not (= (= y$55379 (= y$prop y$55378)) (= y$55379 (= y$55378 y$prop)))))
+(assume t12 (= y$55379 y$55379))
+(assume t13 (= (= y$prop y$55378) (= y$55378 y$prop)))
+(step t14 (cl (= (= y$55379 (= y$prop y$55378)) (= y$55379 (= y$55378 y$prop)))) :rule cong :premises (t12 t13))
+(step t.end (cl) :rule resolution :premises (nt14.0 t14))

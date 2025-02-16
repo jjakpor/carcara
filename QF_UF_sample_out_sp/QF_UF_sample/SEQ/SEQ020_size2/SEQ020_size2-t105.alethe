@@ -1,0 +1,7 @@
+(assume nt105.0 (not (p4 c_1)))
+(assume nt105.1 (not (not (p4 c8))))
+(assume nt105.2 (not (not (= c8 c_1))))
+(assume t104 (or (not (p4 c8)) (not (= c8 c_1)) (p4 c_1)))
+(step t104' (cl (not (p4 c8)) (not (= c8 c_1)) (p4 c_1)) :rule or :premises (t104))
+(step t105 (cl (p4 c_1) (not (p4 c8)) (not (= c8 c_1))) :rule reordering :premises (t104'))
+(step t.end (cl) :rule resolution :premises (nt105.0 nt105.1 nt105.2 t105))

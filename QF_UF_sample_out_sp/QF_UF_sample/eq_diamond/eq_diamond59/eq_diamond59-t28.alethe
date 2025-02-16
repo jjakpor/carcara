@@ -1,0 +1,3 @@
+(assume nt28.0 (not (= (not (= x5 x6)) (not (= x5 x6)))))
+(step t28 (cl (= (not (= x5 x6)) (not (= x5 x6)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt28.0 t28))

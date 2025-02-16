@@ -1,0 +1,5 @@
+(assume nt48.0 (not (= y$v_at_table y$v_done)))
+(assume t36 (= y$v_at_table y$v_count))
+(assume t46 (= y$v_count y$v_done))
+(step t48 (cl (= y$v_at_table y$v_done)) :rule trans :premises (t36 t46))
+(step t.end (cl) :rule resolution :premises (nt48.0 t48))

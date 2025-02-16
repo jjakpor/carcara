@@ -1,0 +1,6 @@
+(assume nt48.0 (not (= x3 x4)))
+(assume nt48.1 (not (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))))
+(assume t47 (or (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4)))) (= x3 x4)))
+(step t47' (cl (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4)))) (= x3 x4)) :rule or :premises (t47))
+(step t48 (cl (= x3 x4) (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))) :rule reordering :premises (t47'))
+(step t.end (cl) :rule resolution :premises (nt48.0 nt48.1 t48))

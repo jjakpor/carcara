@@ -1,0 +1,5 @@
+(assume nt967.0 (not (= (= e1 (op e3 e1)) false)))
+(assume t960 (= (= e1 (op e3 e1)) (= (op e1 e1) (op e3 e1))))
+(assume t966 (= (= (op e1 e1) (op e3 e1)) false))
+(step t967 (cl (= (= e1 (op e3 e1)) false)) :rule trans :premises (t960 t966))
+(step t.end (cl) :rule resolution :premises (nt967.0 t967))

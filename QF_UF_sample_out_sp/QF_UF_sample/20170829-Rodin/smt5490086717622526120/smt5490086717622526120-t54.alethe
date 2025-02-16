@@ -1,0 +1,7 @@
+(assume nt54.0 (not (or red_SR red_MR)))
+(assume t52 (or (not (= (or grn rd1) (or red_SR red_MR))) (not (or grn rd1)) (or red_SR red_MR)))
+(assume t53 (= (or grn rd1) (or red_SR red_MR)))
+(assume a7 (or grn rd1))
+(step t52' (cl (not (= (or grn rd1) (or red_SR red_MR))) (not (or grn rd1)) (or red_SR red_MR)) :rule or :premises (t52))
+(step t54 (cl (or red_SR red_MR)) :rule resolution :premises (t52' t53 a7))
+(step t.end (cl) :rule resolution :premises (nt54.0 t54))

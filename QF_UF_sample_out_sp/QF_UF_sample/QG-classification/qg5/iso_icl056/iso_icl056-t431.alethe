@@ -1,0 +1,4 @@
+(assume nt431.0 (not (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))))
+(assume t430 (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op e1 e1))))
+(step t431 (cl (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))) :rule symm :premises (t430))
+(step t.end (cl) :rule resolution :premises (nt431.0 t431))

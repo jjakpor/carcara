@@ -1,0 +1,4 @@
+(assume nt429.t1.0 (not (= (f5 c_1) c_0)))
+(assume t429.a0 (= c_0 (f5 c_1)))
+(step t429.t1 (cl (= (f5 c_1) c_0)) :rule symm :premises (t429.a0))
+(step t.end (cl) :rule resolution :premises (nt429.t1.0 t429.t1))

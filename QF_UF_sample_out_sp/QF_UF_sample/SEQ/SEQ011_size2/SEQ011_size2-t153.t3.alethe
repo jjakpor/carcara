@@ -1,0 +1,5 @@
+(assume nt153.t3.0 (not (= (p1 (f6 c_0) c_0) true)))
+(assume nt153.t3.1 (not (not (p1 (f6 c_0) c_0))))
+(assume t153.t2 (= (= (p1 (f6 c_0) c_0) true) (p1 (f6 c_0) c_0)))
+(step t153.t3 (cl (= (p1 (f6 c_0) c_0) true) (not (p1 (f6 c_0) c_0))) :rule equiv2 :premises (t153.t2))
+(step t.end (cl) :rule resolution :premises (nt153.t3.0 nt153.t3.1 t153.t3))

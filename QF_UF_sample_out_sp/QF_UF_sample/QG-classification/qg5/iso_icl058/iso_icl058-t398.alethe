@@ -1,0 +1,3 @@
+(assume nt398.0 (not (= (= (op e3 e3) e1) (= e1 (op e3 e3)))))
+(step t398 (cl (= (= (op e3 e3) e1) (= e1 (op e3 e3)))) :rule rare_rewrite :args ("eq-symm" (op e3 e3) e1))
+(step t.end (cl) :rule resolution :premises (nt398.0 t398))

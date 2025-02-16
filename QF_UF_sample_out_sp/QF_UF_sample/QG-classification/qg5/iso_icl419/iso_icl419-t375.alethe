@@ -1,0 +1,5 @@
+(assume nt375.0 (not (= (= (op (op e3 e3) (op e3 e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3)))) false)))
+(assume t353 (= (= (op (op e3 e3) (op e3 e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3)))) (= (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))
+(assume t374 (= (= (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) false))
+(step t375 (cl (= (= (op (op e3 e3) (op e3 e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3)))) false)) :rule trans :premises (t353 t374))
+(step t.end (cl) :rule resolution :premises (nt375.0 t375))

@@ -1,0 +1,6 @@
+(assume nt84.t234.0 (not (= x21 x22)))
+(assume nt84.t234.1 (not (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))))))
+(assume t84.t233 (or (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22)))) (= x21 x22)))
+(step t84.t233' (cl (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22)))) (= x21 x22)) :rule or :premises (t84.t233))
+(step t84.t234 (cl (= x21 x22) (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))))) :rule reordering :premises (t84.t233'))
+(step t.end (cl) :rule resolution :premises (nt84.t234.0 nt84.t234.1 t84.t234))

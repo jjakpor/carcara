@@ -1,0 +1,4 @@
+(assume nt253.0 (not (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0)))))
+(assume nt253.1 (not (not (not (= c_1 (f7 c_0))))))
+(step t253 (cl (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))) (not (not (= c_1 (f7 c_0))))) :rule or_neg :args (1))
+(step t.end (cl) :rule resolution :premises (nt253.0 nt253.1 t253))

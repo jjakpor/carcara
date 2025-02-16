@@ -1,0 +1,4 @@
+(assume nt84.t142.0 (not (=> (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (= x12 x13))))
+(assume t84.t141 (and (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (=> (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (= x12 x13))))
+(step t84.t142 (cl (=> (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (= x12 x13))) :rule and :premises (t84.t141) :args (1))
+(step t.end (cl) :rule resolution :premises (nt84.t142.0 t84.t142))

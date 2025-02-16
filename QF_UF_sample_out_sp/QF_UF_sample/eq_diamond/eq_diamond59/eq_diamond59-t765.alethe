@@ -1,0 +1,6 @@
+(assume nt765.0 (not (= x50 x51)))
+(assume nt765.1 (not (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))))))
+(assume t764 (or (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51)))) (= x50 x51)))
+(step t764' (cl (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51)))) (= x50 x51)) :rule or :premises (t764))
+(step t765 (cl (= x50 x51) (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))))) :rule reordering :premises (t764'))
+(step t.end (cl) :rule resolution :premises (nt765.0 nt765.1 t765))

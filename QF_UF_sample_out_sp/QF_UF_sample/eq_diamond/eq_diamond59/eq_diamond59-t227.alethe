@@ -1,0 +1,6 @@
+(assume nt227.0 (not (= x0 x1)))
+(assume t226 (or (= x0 x1) (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))))
+(assume t222 (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))
+(step t226' (cl (= x0 x1) (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))) :rule or :premises (t226))
+(step t227 (cl (= x0 x1)) :rule resolution :premises (t226' t222))
+(step t.end (cl) :rule resolution :premises (nt227.0 t227))

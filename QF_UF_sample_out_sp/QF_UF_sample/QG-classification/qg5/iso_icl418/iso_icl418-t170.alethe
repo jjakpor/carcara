@@ -1,0 +1,5 @@
+(assume nt170.0 (not (= (= (op e1 e1) (op (op e1 e1) (op e1 e1))) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))))))
+(assume t33 (= (op e1 e1) (op (op e4 e3) (op e4 e3))))
+(assume t169 (= (op (op e1 e1) (op e1 e1)) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))))
+(step t170 (cl (= (= (op e1 e1) (op (op e1 e1) (op e1 e1))) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))))) :rule cong :premises (t33 t169))
+(step t.end (cl) :rule resolution :premises (nt170.0 t170))

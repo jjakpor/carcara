@@ -1,0 +1,5 @@
+(assume nt587.0 (not (not (= (or (and (= x52 y52) (= y52 x53)) (and (= x52 z52) (= z52 x53))) (and (or (and (= x52 y52) (= y52 x53)) (and (= x52 z52) (= z52 x53))) (=> (or (and (= x52 y52) (= y52 x53)) (and (= x52 z52) (= z52 x53))) (= x52 x53)))))))
+(assume nt587.1 (not (not (or (and (= x52 y52) (= y52 x53)) (and (= x52 z52) (= z52 x53))))))
+(assume nt587.2 (not (and (or (and (= x52 y52) (= y52 x53)) (and (= x52 z52) (= z52 x53))) (=> (or (and (= x52 y52) (= y52 x53)) (and (= x52 z52) (= z52 x53))) (= x52 x53)))))
+(step t587 (cl (not (= (or (and (= x52 y52) (= y52 x53)) (and (= x52 z52) (= z52 x53))) (and (or (and (= x52 y52) (= y52 x53)) (and (= x52 z52) (= z52 x53))) (=> (or (and (= x52 y52) (= y52 x53)) (and (= x52 z52) (= z52 x53))) (= x52 x53))))) (not (or (and (= x52 y52) (= y52 x53)) (and (= x52 z52) (= z52 x53)))) (and (or (and (= x52 y52) (= y52 x53)) (and (= x52 z52) (= z52 x53))) (=> (or (and (= x52 y52) (= y52 x53)) (and (= x52 z52) (= z52 x53))) (= x52 x53)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt587.0 nt587.1 nt587.2 t587))

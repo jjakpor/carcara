@@ -1,0 +1,5 @@
+(assume nt672.0 (not (= (= x1 x2) false)))
+(assume t665 (= (= x1 x2) (= x0 x60)))
+(assume t671 (= (= x0 x60) false))
+(step t672 (cl (= (= x1 x2) false)) :rule trans :premises (t665 t671))
+(step t.end (cl) :rule resolution :premises (nt672.0 t672))

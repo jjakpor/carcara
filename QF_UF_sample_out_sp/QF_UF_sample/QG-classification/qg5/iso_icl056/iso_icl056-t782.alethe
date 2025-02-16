@@ -1,0 +1,5 @@
+(assume nt782.0 (not (= (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))) false)))
+(assume nt782.1 (not (not (not (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))))
+(assume t781 (= (= (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))) false) (not (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))))))
+(step t782 (cl (= (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))) false) (not (not (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))) :rule equiv2 :premises (t781))
+(step t.end (cl) :rule resolution :premises (nt782.0 nt782.1 t782))

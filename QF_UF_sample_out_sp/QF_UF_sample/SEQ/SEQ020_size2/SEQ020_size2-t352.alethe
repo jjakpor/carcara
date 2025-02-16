@@ -1,0 +1,5 @@
+(assume nt352.0 (not (not (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)) false))))
+(assume nt352.1 (not (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)))))
+(assume t351 (= (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)) false) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)))))
+(step t352 (cl (not (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)) false)) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)))) :rule equiv1 :premises (t351))
+(step t.end (cl) :rule resolution :premises (nt352.0 nt352.1 t352))

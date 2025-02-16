@@ -1,0 +1,4 @@
+(assume nt2.0 (not (= (not y$1517) y$id36_op)))
+(assume a38 (= y$id36_op (not y$1517)))
+(step t2 (cl (= (not y$1517) y$id36_op)) :rule symm :premises (a38))
+(step t.end (cl) :rule resolution :premises (nt2.0 t2))

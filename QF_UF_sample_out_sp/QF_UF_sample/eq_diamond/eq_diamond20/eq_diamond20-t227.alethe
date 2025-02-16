@@ -1,0 +1,4 @@
+(assume nt227.0 (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))))
+(assume nt227.1 (not (not (and (= x2 y2) (= y2 x3)))))
+(step t227 (cl (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (not (and (= x2 y2) (= y2 x3)))) :rule or_neg :args (0))
+(step t.end (cl) :rule resolution :premises (nt227.0 nt227.1 t227))

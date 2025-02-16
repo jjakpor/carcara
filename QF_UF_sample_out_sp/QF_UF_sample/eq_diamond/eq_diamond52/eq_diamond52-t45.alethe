@@ -1,0 +1,4 @@
+(assume nt45.0 (not (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4))))
+(assume t44 (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4))))
+(step t45 (cl (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4))) :rule and :premises (t44) :args (1))
+(step t.end (cl) :rule resolution :premises (nt45.0 t45))

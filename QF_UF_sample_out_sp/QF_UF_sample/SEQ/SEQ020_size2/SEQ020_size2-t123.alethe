@@ -1,0 +1,7 @@
+(assume nt123.0 (not (p4 c_0)))
+(assume nt123.1 (not (not (p4 c8))))
+(assume nt123.2 (not (not (= c8 c_0))))
+(assume t122 (or (not (p4 c8)) (not (= c8 c_0)) (p4 c_0)))
+(step t122' (cl (not (p4 c8)) (not (= c8 c_0)) (p4 c_0)) :rule or :premises (t122))
+(step t123 (cl (p4 c_0) (not (p4 c8)) (not (= c8 c_0))) :rule reordering :premises (t122'))
+(step t.end (cl) :rule resolution :premises (nt123.0 nt123.1 nt123.2 t123))

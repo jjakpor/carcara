@@ -1,0 +1,5 @@
+(assume nt246.0 (not (= (or (not (= e4 (op e4 (op e4 e4)))) (= unit e4)) (or (not (= e4 (op e4 (op e4 e4)))) (= e0 e4)))))
+(assume t244 (= (not (= e4 (op e4 (op e4 e4)))) (not (= e4 (op e4 (op e4 e4))))))
+(assume t245 (= (= unit e4) (= e0 e4)))
+(step t246 (cl (= (or (not (= e4 (op e4 (op e4 e4)))) (= unit e4)) (or (not (= e4 (op e4 (op e4 e4)))) (= e0 e4)))) :rule cong :premises (t244 t245))
+(step t.end (cl) :rule resolution :premises (nt246.0 t246))

@@ -1,0 +1,6 @@
+(assume nt458.0 (not (= x22 x23)))
+(assume t457 (or (= x22 x23) (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))))))
+(assume t453 (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))))
+(step t457' (cl (= x22 x23) (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))))) :rule or :premises (t457))
+(step t458 (cl (= x22 x23)) :rule resolution :premises (t457' t453))
+(step t.end (cl) :rule resolution :premises (nt458.0 t458))

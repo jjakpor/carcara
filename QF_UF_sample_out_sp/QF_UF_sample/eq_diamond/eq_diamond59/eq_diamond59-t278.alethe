@@ -1,0 +1,7 @@
+(assume nt278.0 (not (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6)))))
+(assume t272 (or (not (= (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6))))) (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6)))))
+(assume t276 (= (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6)))))
+(assume t277 (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))
+(step t272' (cl (not (= (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6))))) (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6)))) :rule or :premises (t272))
+(step t278 (cl (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6)))) :rule resolution :premises (t272' t276 t277))
+(step t.end (cl) :rule resolution :premises (nt278.0 t278))

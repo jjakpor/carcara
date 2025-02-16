@@ -1,0 +1,4 @@
+(assume nt144.0 (not y$26))
+(assume t120 (and y$2 y$13 y$28 y$26 y$45 y$44))
+(step t144 (cl y$26) :rule and :premises (t120) :args (3))
+(step t.end (cl) :rule resolution :premises (nt144.0 t144))

@@ -1,0 +1,6 @@
+(assume nt1015.0 (not (not (= (op e3 (op e4 e3)) (op (op e4 e3) e3)))))
+(assume t1012 (or (not (= (= (op e3 (op e4 e3)) (op (op e4 e3) e3)) false)) (not (= (op e3 (op e4 e3)) (op (op e4 e3) e3)))))
+(assume t1014 (= (= (op e3 (op e4 e3)) (op (op e4 e3) e3)) false))
+(step t1012' (cl (not (= (= (op e3 (op e4 e3)) (op (op e4 e3) e3)) false)) (not (= (op e3 (op e4 e3)) (op (op e4 e3) e3)))) :rule or :premises (t1012))
+(step t1015 (cl (not (= (op e3 (op e4 e3)) (op (op e4 e3) e3)))) :rule resolution :premises (t1012' t1014))
+(step t.end (cl) :rule resolution :premises (nt1015.0 t1015))

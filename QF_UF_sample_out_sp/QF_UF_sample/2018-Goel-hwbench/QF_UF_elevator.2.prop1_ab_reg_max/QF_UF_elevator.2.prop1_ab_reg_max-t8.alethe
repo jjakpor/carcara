@@ -1,0 +1,7 @@
+(assume nt8.0 (not (= y$1518 (= y$1517 y$prop))))
+(assume t4 (or (not (= (= y$1518 (= y$prop y$1517)) (= y$1518 (= y$1517 y$prop)))) (not (= y$1518 (= y$prop y$1517))) (= y$1518 (= y$1517 y$prop))))
+(assume t7 (= (= y$1518 (= y$prop y$1517)) (= y$1518 (= y$1517 y$prop))))
+(assume a39 (= y$1518 (= y$prop y$1517)))
+(step t4' (cl (not (= (= y$1518 (= y$prop y$1517)) (= y$1518 (= y$1517 y$prop)))) (not (= y$1518 (= y$prop y$1517))) (= y$1518 (= y$1517 y$prop))) :rule or :premises (t4))
+(step t8 (cl (= y$1518 (= y$1517 y$prop))) :rule resolution :premises (t4' t7 a39))
+(step t.end (cl) :rule resolution :premises (nt8.0 t8))

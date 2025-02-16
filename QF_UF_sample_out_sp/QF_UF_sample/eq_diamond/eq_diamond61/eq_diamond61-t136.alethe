@@ -1,0 +1,5 @@
+(assume nt136.0 (not (not (= (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (and (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (=> (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (= x12 x13)))))))
+(assume nt136.1 (not (not (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))))))
+(assume nt136.2 (not (and (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (=> (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (= x12 x13)))))
+(step t136 (cl (not (= (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (and (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (=> (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (= x12 x13))))) (not (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13)))) (and (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (=> (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (= x12 x13)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt136.0 nt136.1 nt136.2 t136))

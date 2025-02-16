@@ -1,0 +1,5 @@
+(assume nt780.t6.0 (not (= (op (op e1 e3) (op (op e1 e3) e3)) (op e3 e3))))
+(assume t780.t5 (= (op (op e1 e3) (op (op e1 e3) e3)) e3))
+(assume t303 (= e3 (op e3 e3)))
+(step t780.t6 (cl (= (op (op e1 e3) (op (op e1 e3) e3)) (op e3 e3))) :rule trans :premises (t780.t5 t303))
+(step t.end (cl) :rule resolution :premises (nt780.t6.0 t780.t6))

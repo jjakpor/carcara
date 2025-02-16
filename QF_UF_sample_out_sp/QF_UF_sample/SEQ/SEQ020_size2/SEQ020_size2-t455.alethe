@@ -1,0 +1,4 @@
+(assume nt455.0 (not (or (not (not (p1 (f7 c_1) c_1))) (not (= c_0 (f7 c_1))) (not (= c_0 (f6 c_1))) (not (p1 (f6 c_1) c_1)))))
+(assume nt455.1 (not (not (not (= c_0 (f6 c_1))))))
+(step t455 (cl (or (not (not (p1 (f7 c_1) c_1))) (not (= c_0 (f7 c_1))) (not (= c_0 (f6 c_1))) (not (p1 (f6 c_1) c_1))) (not (not (= c_0 (f6 c_1))))) :rule or_neg :args (2))
+(step t.end (cl) :rule resolution :premises (nt455.0 nt455.1 t455))

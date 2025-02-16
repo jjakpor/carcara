@@ -1,0 +1,6 @@
+(assume nt1116.t7.0 (not (not (= e1 (op e3 (op e1 e3))))))
+(assume t1116.t1 (or (not (= (= e1 (op e3 (op e1 e3))) false)) (not (= e1 (op e3 (op e1 e3))))))
+(assume t1116.t6 (= (= e1 (op e3 (op e1 e3))) false))
+(step t1116.t1' (cl (not (= (= e1 (op e3 (op e1 e3))) false)) (not (= e1 (op e3 (op e1 e3))))) :rule or :premises (t1116.t1))
+(step t1116.t7 (cl (not (= e1 (op e3 (op e1 e3))))) :rule resolution :premises (t1116.t1' t1116.t6))
+(step t.end (cl) :rule resolution :premises (nt1116.t7.0 t1116.t7))

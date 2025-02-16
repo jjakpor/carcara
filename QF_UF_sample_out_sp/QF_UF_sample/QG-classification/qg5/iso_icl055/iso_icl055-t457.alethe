@@ -1,0 +1,5 @@
+(assume nt457.0 (not (= (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op e1 e1)))))
+(assume t435 (= (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))
+(assume t456 (= (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))) (op (op (op e1 e1) (op e1 e1)) (op e1 e1))))
+(step t457 (cl (= (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op e1 e1)))) :rule trans :premises (t435 t456))
+(step t.end (cl) :rule resolution :premises (nt457.0 t457))

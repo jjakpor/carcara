@@ -1,0 +1,5 @@
+(assume nt473.0 (not (= (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op e3 e3) (op e3 e3)))) false)))
+(assume t457 (= (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op e3 e3) (op e3 e3)))) (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) (op e3 e3)))))
+(assume t472 (= (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) (op e3 e3))) false))
+(step t473 (cl (= (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op e3 e3) (op e3 e3)))) false)) :rule trans :premises (t457 t472))
+(step t.end (cl) :rule resolution :premises (nt473.0 t473))

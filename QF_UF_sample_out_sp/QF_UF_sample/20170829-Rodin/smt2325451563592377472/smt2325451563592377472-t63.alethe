@@ -1,0 +1,3 @@
+(assume nt63.0 (not (= (= (not (not car)) car) (= car (not (not car))))))
+(step t63 (cl (= (= (not (not car)) car) (= car (not (not car))))) :rule rare_rewrite :args ("eq-symm" (not (not car)) car))
+(step t.end (cl) :rule resolution :premises (nt63.0 t63))

@@ -1,0 +1,4 @@
+(assume nt780.t15.0 (not (= (op (op (op e1 e3) e3) e3) (op (op e1 e3) e1))))
+(assume t486 (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)))
+(step t780.t15 (cl (= (op (op (op e1 e3) e3) e3) (op (op e1 e3) e1))) :rule symm :premises (t486))
+(step t.end (cl) :rule resolution :premises (nt780.t15.0 t780.t15))

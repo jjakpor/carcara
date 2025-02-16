@@ -1,0 +1,5 @@
+(assume nt243.0 (not (= (= (op e0 e0) (op e2 e0)) (= (op e0 e0) (op (op e0 e0) e0)))))
+(assume t176 (= (op e0 e0) (op e0 e0)))
+(assume t32 (= (op e2 e0) (op (op e0 e0) e0)))
+(step t243 (cl (= (= (op e0 e0) (op e2 e0)) (= (op e0 e0) (op (op e0 e0) e0)))) :rule cong :premises (t176 t32))
+(step t.end (cl) :rule resolution :premises (nt243.0 t243))

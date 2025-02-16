@@ -1,0 +1,6 @@
+(assume nt50.0 (not (= x3 x0)))
+(assume t25 (= x3 x2))
+(assume t37 (= x2 x1))
+(assume t49 (= x1 x0))
+(step t50 (cl (= x3 x0)) :rule trans :premises (t25 t37 t49))
+(step t.end (cl) :rule resolution :premises (nt50.0 t50))

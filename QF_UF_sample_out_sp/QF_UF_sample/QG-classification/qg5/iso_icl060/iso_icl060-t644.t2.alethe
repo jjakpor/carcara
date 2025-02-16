@@ -1,0 +1,5 @@
+(assume nt644.t2.0 (not (not (= (= (op e0 (op e0 e4)) e4) (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))))))
+(assume nt644.t2.1 (not (not (= (op e0 (op e0 e4)) e4))))
+(assume nt644.t2.2 (not (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))))
+(step t644.t2 (cl (not (= (= (op e0 (op e0 e4)) e4) (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))) (not (= (op e0 (op e0 e4)) e4)) (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt644.t2.0 nt644.t2.1 nt644.t2.2 t644.t2))

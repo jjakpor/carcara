@@ -1,0 +1,5 @@
+(assume nt12.0 (not (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) true)))
+(assume t6 (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) (= (p1 (f7 c_1) c_1) (not (not (p1 (f7 c_1) c_1))))))
+(assume t11 (= (= (p1 (f7 c_1) c_1) (not (not (p1 (f7 c_1) c_1)))) true))
+(step t12 (cl (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) true)) :rule trans :premises (t6 t11))
+(step t.end (cl) :rule resolution :premises (nt12.0 t12))

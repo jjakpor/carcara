@@ -1,0 +1,5 @@
+(assume nt19.0 (not (not y$prop)))
+(assume nt19.1 (not (not y$642)))
+(assume a14 (= y$prop (not y$642)))
+(step t19 (cl (not y$prop) (not y$642)) :rule equiv1 :premises (a14))
+(step t.end (cl) :rule resolution :premises (nt19.0 nt19.1 t19))

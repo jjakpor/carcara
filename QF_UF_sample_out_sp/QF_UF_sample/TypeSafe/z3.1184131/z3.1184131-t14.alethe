@@ -1,0 +1,5 @@
+(assume nt14.0 (not (= (not (= (f3 f4 f5 f6 f7 (f8 f9)) (f3 f4 f5 f6 f7 (f8 f9)))) false)))
+(assume t12 (= (not (= (f3 f4 f5 f6 f7 (f8 f9)) (f3 f4 f5 f6 f7 (f8 f9)))) (not true)))
+(assume t13 (= (not true) false))
+(step t14 (cl (= (not (= (f3 f4 f5 f6 f7 (f8 f9)) (f3 f4 f5 f6 f7 (f8 f9)))) false)) :rule trans :premises (t12 t13))
+(step t.end (cl) :rule resolution :premises (nt14.0 t14))

@@ -1,0 +1,7 @@
+(assume nt65.0 (not (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6)))))
+(assume t59 (or (not (= (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6))))) (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6)))))
+(assume t63 (= (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6)))))
+(assume t64 (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))
+(step t59' (cl (not (= (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6))))) (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6)))) :rule or :premises (t59))
+(step t65 (cl (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6)))) :rule resolution :premises (t59' t63 t64))
+(step t.end (cl) :rule resolution :premises (nt65.0 t65))

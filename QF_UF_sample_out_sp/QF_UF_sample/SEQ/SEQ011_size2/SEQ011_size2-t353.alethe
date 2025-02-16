@@ -1,0 +1,5 @@
+(assume nt353.0 (not (not (= (f6 c_1) (f5 c_1)))))
+(assume nt353.1 (not (not (p4 c_1))))
+(assume t352 (or (not (= (f6 c_1) (f5 c_1))) (not (p4 c_1))))
+(step t353 (cl (not (= (f6 c_1) (f5 c_1))) (not (p4 c_1))) :rule or :premises (t352))
+(step t.end (cl) :rule resolution :premises (nt353.0 nt353.1 t353))

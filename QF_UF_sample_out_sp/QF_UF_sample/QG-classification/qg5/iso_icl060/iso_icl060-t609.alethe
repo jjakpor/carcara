@@ -1,0 +1,4 @@
+(assume nt609.0 (not (=> (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))) (= e1 (op (op (op e1 e3) e3) (op e1 e3))))))
+(assume nt609.1 (not (not (= e1 (op (op (op e1 e3) e3) (op e1 e3))))))
+(step t609 (cl (=> (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))) (= e1 (op (op (op e1 e3) e3) (op e1 e3)))) (not (= e1 (op (op (op e1 e3) e3) (op e1 e3))))) :rule implies_neg2)
+(step t.end (cl) :rule resolution :premises (nt609.0 nt609.1 t609))

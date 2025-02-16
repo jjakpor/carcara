@@ -1,0 +1,5 @@
+(assume nt216.0 (not (= (= x2 x3) (= x0 x19))))
+(assume t38 (= x2 x0))
+(assume t215 (= x3 x19))
+(step t216 (cl (= (= x2 x3) (= x0 x19))) :rule cong :premises (t38 t215))
+(step t.end (cl) :rule resolution :premises (nt216.0 t216))

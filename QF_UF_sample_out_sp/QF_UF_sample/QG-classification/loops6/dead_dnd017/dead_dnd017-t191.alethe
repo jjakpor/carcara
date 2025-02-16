@@ -1,0 +1,7 @@
+(assume nt191.0 (not (= e3 (op e3 e0))))
+(assume t183 (or (not (= (= (op e3 unit) e3) (= e3 (op e3 e0)))) (not (= (op e3 unit) e3)) (= e3 (op e3 e0))))
+(assume t188 (= (= (op e3 unit) e3) (= e3 (op e3 e0))))
+(assume t190 (= (op e3 unit) e3))
+(step t183' (cl (not (= (= (op e3 unit) e3) (= e3 (op e3 e0)))) (not (= (op e3 unit) e3)) (= e3 (op e3 e0))) :rule or :premises (t183))
+(step t191 (cl (= e3 (op e3 e0))) :rule resolution :premises (t183' t188 t190))
+(step t.end (cl) :rule resolution :premises (nt191.0 t191))

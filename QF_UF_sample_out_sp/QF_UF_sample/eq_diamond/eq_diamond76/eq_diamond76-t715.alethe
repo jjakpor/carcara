@@ -1,0 +1,4 @@
+(assume nt715.0 (not (=> (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))) (= x63 x64))))
+(assume t714 (and (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))) (=> (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))) (= x63 x64))))
+(step t715 (cl (=> (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))) (= x63 x64))) :rule and :premises (t714) :args (1))
+(step t.end (cl) :rule resolution :premises (nt715.0 t715))

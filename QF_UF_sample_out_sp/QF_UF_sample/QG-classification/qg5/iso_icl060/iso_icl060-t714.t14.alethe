@@ -1,0 +1,5 @@
+(assume nt714.t14.0 (not (= (= (op (op e1 e3) e3) (op e3 (op (op e1 e3) e1))) (= (op e3 e1) (op e3 (op (op e1 e3) e1))))))
+(assume t714.t12 (= (op (op e1 e3) e3) (op e3 e1)))
+(assume t714.t13 (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))
+(step t714.t14 (cl (= (= (op (op e1 e3) e3) (op e3 (op (op e1 e3) e1))) (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) :rule cong :premises (t714.t12 t714.t13))
+(step t.end (cl) :rule resolution :premises (nt714.t14.0 t714.t14))

@@ -1,0 +1,5 @@
+(assume nt639.0 (not (not (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))))))
+(assume nt639.1 (not (= x56 x57)))
+(assume t638 (=> (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))) (= x56 x57)))
+(step t639 (cl (not (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57)))) (= x56 x57)) :rule implies :premises (t638))
+(step t.end (cl) :rule resolution :premises (nt639.0 nt639.1 t639))

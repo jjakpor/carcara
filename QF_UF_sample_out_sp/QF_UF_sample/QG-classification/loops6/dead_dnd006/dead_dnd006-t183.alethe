@@ -1,0 +1,7 @@
+(assume nt183.0 (not (not (= e0 (op e3 (op e3 e0))))))
+(assume nt183.1 (not (= e3 (op e3 (op e3 e3)))))
+(assume nt183.2 (not (not (= e3 (op e3 e0)))))
+(assume t182 (or (not (= e3 (op e3 e0))) (not (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))))
+(step t182' (cl (not (= e3 (op e3 e0))) (not (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))) :rule or :premises (t182))
+(step t183 (cl (not (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3))) (not (= e3 (op e3 e0)))) :rule reordering :premises (t182'))
+(step t.end (cl) :rule resolution :premises (nt183.0 nt183.1 nt183.2 t183))

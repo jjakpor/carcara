@@ -1,0 +1,5 @@
+(assume nt42.0 (not (not red_SR)))
+(assume nt42.1 (not (not (not prt))))
+(assume t41 (not (and red_SR (not prt))))
+(step t42 (cl (not red_SR) (not (not prt))) :rule not_and :premises (t41))
+(step t.end (cl) :rule resolution :premises (nt42.0 nt42.1 t42))

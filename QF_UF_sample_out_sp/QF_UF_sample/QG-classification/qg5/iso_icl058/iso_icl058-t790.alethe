@@ -1,0 +1,6 @@
+(assume nt790.0 (not (not (= e0 (op e0 (op (op e0 e0) e0))))))
+(assume t754 (or (not (= (= e0 (op e0 (op (op e0 e0) e0))) false)) (not (= e0 (op e0 (op (op e0 e0) e0))))))
+(assume t789 (= (= e0 (op e0 (op (op e0 e0) e0))) false))
+(step t754' (cl (not (= (= e0 (op e0 (op (op e0 e0) e0))) false)) (not (= e0 (op e0 (op (op e0 e0) e0))))) :rule or :premises (t754))
+(step t790 (cl (not (= e0 (op e0 (op (op e0 e0) e0))))) :rule resolution :premises (t754' t789))
+(step t.end (cl) :rule resolution :premises (nt790.0 t790))

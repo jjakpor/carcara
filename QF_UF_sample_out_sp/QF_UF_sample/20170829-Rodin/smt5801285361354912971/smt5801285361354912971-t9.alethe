@@ -1,0 +1,4 @@
+(assume nt9.0 (not (not (and prt rd1))))
+(assume nt9.1 (not rd1))
+(step t9 (cl (not (and prt rd1)) rd1) :rule and_pos :args (1))
+(step t.end (cl) :rule resolution :premises (nt9.0 nt9.1 t9))

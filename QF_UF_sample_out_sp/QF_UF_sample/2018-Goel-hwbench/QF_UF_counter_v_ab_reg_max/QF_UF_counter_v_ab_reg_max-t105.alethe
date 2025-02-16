@@ -1,0 +1,3 @@
+(assume nt105.0 (not (= (= y$prop$next y$27) (= y$27 y$prop$next))))
+(step t105 (cl (= (= y$prop$next y$27) (= y$27 y$prop$next))) :rule rare_rewrite :args ("eq-symm" y$prop$next y$27))
+(step t.end (cl) :rule resolution :premises (nt105.0 t105))

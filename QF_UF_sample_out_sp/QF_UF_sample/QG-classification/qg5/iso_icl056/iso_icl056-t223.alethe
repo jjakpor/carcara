@@ -1,0 +1,3 @@
+(assume nt223.0 (not (= (= e2 e4) (= e4 e2))))
+(step t223 (cl (= (= e2 e4) (= e4 e2))) :rule rare_rewrite :args ("eq-symm" e2 e4))
+(step t.end (cl) :rule resolution :premises (nt223.0 t223))

@@ -1,0 +1,4 @@
+(assume nt256.0 (not (not (= e4 e0))))
+(assume t255 (not (= e0 e4)))
+(step t256 (cl (not (= e4 e0))) :rule not_symm :premises (t255))
+(step t.end (cl) :rule resolution :premises (nt256.0 t256))

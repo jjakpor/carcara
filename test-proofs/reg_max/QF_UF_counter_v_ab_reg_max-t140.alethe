@@ -1,5 +1,0 @@
-(assume a0 (= y$X$next (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))
-(assume a1 (= (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X) (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))
-(assume a2 (not (= (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)) (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))))
-(step t0 (cl (= (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)) (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))) :rule cong :premises (a1 a0))
-(step t1 (cl) :rule resolution :premises (a2 t0))

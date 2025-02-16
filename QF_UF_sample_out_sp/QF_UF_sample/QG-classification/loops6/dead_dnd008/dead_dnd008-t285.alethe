@@ -1,0 +1,3 @@
+(assume nt285.0 (not (= e5 e5)))
+(step t285 (cl (= e5 e5)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt285.0 t285))

@@ -1,0 +1,5 @@
+(assume nt261.0 (not (not (= (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (and (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5)))))))
+(assume nt261.1 (not (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))))
+(assume nt261.2 (not (and (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5)))))
+(step t261 (cl (not (= (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (and (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5))))) (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5)))) (and (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt261.0 nt261.1 nt261.2 t261))

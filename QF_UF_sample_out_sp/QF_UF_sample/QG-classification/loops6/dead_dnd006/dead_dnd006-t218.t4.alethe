@@ -1,0 +1,5 @@
+(assume nt218.t4.0 (not (= (= e4 (op e4 unit)) (= e4 (op e4 e0)))))
+(assume t218.t2 (= e4 e4))
+(assume t218.t3 (= (op e4 unit) (op e4 e0)))
+(step t218.t4 (cl (= (= e4 (op e4 unit)) (= e4 (op e4 e0)))) :rule cong :premises (t218.t2 t218.t3))
+(step t.end (cl) :rule resolution :premises (nt218.t4.0 t218.t4))

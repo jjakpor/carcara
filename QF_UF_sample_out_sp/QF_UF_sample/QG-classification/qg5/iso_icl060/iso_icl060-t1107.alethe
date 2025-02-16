@@ -1,0 +1,3 @@
+(assume nt1107.0 (not (= (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) true)))
+(step t1107 (cl (= (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) true)) :rule rare_rewrite :args ("eq-refl" (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))
+(step t.end (cl) :rule resolution :premises (nt1107.0 t1107))

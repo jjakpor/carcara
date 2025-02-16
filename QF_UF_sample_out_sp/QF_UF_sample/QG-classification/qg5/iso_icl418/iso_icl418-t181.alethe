@@ -1,0 +1,4 @@
+(assume nt181.0 (not (not (not (not (= (op e3 e4) (op (op e4 e3) (op e4 e3))))))))
+(assume nt181.1 (not (= (op e3 e4) (op (op e4 e3) (op e4 e3)))))
+(step t181 (cl (not (not (not (= (op e3 e4) (op (op e4 e3) (op e4 e3)))))) (= (op e3 e4) (op (op e4 e3) (op e4 e3)))) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nt181.0 nt181.1 t181))

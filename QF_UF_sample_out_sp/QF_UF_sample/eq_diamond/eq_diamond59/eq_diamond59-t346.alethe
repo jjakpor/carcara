@@ -1,0 +1,5 @@
+(assume nt346.0 (not (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))))))
+(assume nt346.1 (not (= x11 x12)))
+(assume t345 (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12)))
+(step t346 (cl (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12)))) (= x11 x12)) :rule implies :premises (t345))
+(step t.end (cl) :rule resolution :premises (nt346.0 nt346.1 t346))

@@ -1,0 +1,8 @@
+(assume nt576.0 (not (= (= x0 x51) false)))
+(assume nt576.1 (not (= x0 x51)))
+(assume t574 (or (= (= x0 x51) false) (not (not (= x0 x51)))))
+(assume t575 (or (not (not (not (= x0 x51)))) (= x0 x51)))
+(step t574' (cl (= (= x0 x51) false) (not (not (= x0 x51)))) :rule or :premises (t574))
+(step t575' (cl (not (not (not (= x0 x51)))) (= x0 x51)) :rule or :premises (t575))
+(step t576 (cl (= (= x0 x51) false) (= x0 x51)) :rule resolution :premises (t574' t575'))
+(step t.end (cl) :rule resolution :premises (nt576.0 nt576.1 t576))

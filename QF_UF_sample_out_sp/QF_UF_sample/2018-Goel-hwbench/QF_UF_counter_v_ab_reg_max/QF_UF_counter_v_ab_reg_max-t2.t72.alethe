@@ -1,0 +1,6 @@
+(assume nt2.t72.0 (not (= (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
+(assume t2.t70 (= (= y$X y$n15s4) (= y$n1s4 y$n15s4)))
+(assume t2.t23 (= y$n1s4 y$n1s4))
+(assume t2.t71 (= (Add_4_4_4 y$X y$n1s4) (Add_4_4_4 y$n1s4 y$n1s4)))
+(step t2.t72 (cl (= (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)))) :rule cong :premises (t2.t70 t2.t23 t2.t71))
+(step t.end (cl) :rule resolution :premises (nt2.t72.0 t2.t72))

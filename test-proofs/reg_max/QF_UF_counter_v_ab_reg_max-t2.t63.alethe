@@ -1,5 +1,0 @@
-(assume a0 (not (not (= y$58 (and y$2 y$13 y$28 y$26 y$45 y$44)))))
-(assume a1 (not (not y$58)))
-(assume a2 (not (and y$2 y$13 y$28 y$26 y$45 y$44)))
-(step t0 (cl (not (= y$58 (and y$2 y$13 y$28 y$26 y$45 y$44))) (not y$58) (and y$2 y$13 y$28 y$26 y$45 y$44)) :rule equiv_pos2)
-(step t1 (cl) :rule resolution :premises (a0 a1 a2 t0))

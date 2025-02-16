@@ -1,0 +1,4 @@
+(assume nt212.t2.0 (not (= c_1 (f5 c_0))))
+(assume t212.t1 (= (f5 c_0) c_1))
+(step t212.t2 (cl (= c_1 (f5 c_0))) :rule symm :premises (t212.t1))
+(step t.end (cl) :rule resolution :premises (nt212.t2.0 t212.t2))

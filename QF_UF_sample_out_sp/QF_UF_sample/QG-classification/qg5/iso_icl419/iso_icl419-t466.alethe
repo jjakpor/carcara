@@ -1,0 +1,4 @@
+(assume nt466.0 (not (= (not (= (op (op (op e3 e3) (op e3 e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))) (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) (op e3 e3)))))))
+(assume t465 (= (= (op (op (op e3 e3) (op e3 e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) (op e3 e3)))))
+(step t466 (cl (= (not (= (op (op (op e3 e3) (op e3 e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))) (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) (op e3 e3)))))) :rule cong :premises (t465))
+(step t.end (cl) :rule resolution :premises (nt466.0 t466))

@@ -1,0 +1,3 @@
+(assume nt986.t3.0 (not (= (= (op e3 (op e3 e2)) e2) (= e2 (op e3 (op e3 e2))))))
+(step t986.t3 (cl (= (= (op e3 (op e3 e2)) e2) (= e2 (op e3 (op e3 e2))))) :rule rare_rewrite :args ("eq-symm" (op e3 (op e3 e2)) e2))
+(step t.end (cl) :rule resolution :premises (nt986.t3.0 t986.t3))

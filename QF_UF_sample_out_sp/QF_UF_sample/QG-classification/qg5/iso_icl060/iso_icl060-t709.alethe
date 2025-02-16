@@ -1,0 +1,6 @@
+(assume nt709.0 (not (= (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (= (op e3 e1) (op e3 (op (op e1 e3) e1))))))
+(assume t701 (or (not (= (= (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (= (op e3 e1) (op e3 (op (op e1 e3) e1)))) true)) (= (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (= (op e3 e1) (op e3 (op (op e1 e3) e1))))))
+(assume t708 (= (= (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (= (op e3 e1) (op e3 (op (op e1 e3) e1)))) true))
+(step t701' (cl (not (= (= (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (= (op e3 e1) (op e3 (op (op e1 e3) e1)))) true)) (= (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) :rule or :premises (t701))
+(step t709 (cl (= (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) :rule resolution :premises (t701' t708))
+(step t.end (cl) :rule resolution :premises (nt709.0 t709))

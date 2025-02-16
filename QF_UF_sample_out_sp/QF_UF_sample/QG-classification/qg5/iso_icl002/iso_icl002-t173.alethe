@@ -1,0 +1,4 @@
+(assume nt173.0 (not (and (and (and (and (not (= (op e0 e0) (op e1 e0))) (not (= (op e0 e0) (op e2 e0)))) (not (= (op e0 e0) (op e3 e0)))) (not (= (op e0 e0) (op e4 e0)))) (not (= (op e1 e0) (op e2 e0))))))
+(assume t172 (and (and (and (and (and (not (= (op e0 e0) (op e1 e0))) (not (= (op e0 e0) (op e2 e0)))) (not (= (op e0 e0) (op e3 e0)))) (not (= (op e0 e0) (op e4 e0)))) (not (= (op e1 e0) (op e2 e0)))) (not (= (op e1 e0) (op e3 e0)))))
+(step t173 (cl (and (and (and (and (not (= (op e0 e0) (op e1 e0))) (not (= (op e0 e0) (op e2 e0)))) (not (= (op e0 e0) (op e3 e0)))) (not (= (op e0 e0) (op e4 e0)))) (not (= (op e1 e0) (op e2 e0))))) :rule and :premises (t172) :args (0))
+(step t.end (cl) :rule resolution :premises (nt173.0 t173))

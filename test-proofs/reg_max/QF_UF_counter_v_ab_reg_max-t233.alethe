@@ -1,5 +1,0 @@
-(assume a0 (= (= y$42 (not y$44)) (= (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (not true))))
-(assume a1 (= (= (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (not true)) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
-(assume a2 (not (= (= y$42 (not y$44)) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))))
-(step t0 (cl (= (= y$42 (not y$44)) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) :rule trans :premises (a0 a1))
-(step t1 (cl) :rule resolution :premises (a2 t0))

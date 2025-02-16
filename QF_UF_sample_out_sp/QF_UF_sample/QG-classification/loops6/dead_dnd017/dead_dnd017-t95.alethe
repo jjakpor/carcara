@@ -1,0 +1,4 @@
+(assume nt95.0 (not (and (and (and (and (= (op unit e0) e0) (= (op e0 unit) e0)) (and (= (op unit e1) e1) (= (op e1 unit) e1))) (and (= (op unit e2) e2) (= (op e2 unit) e2))) (and (= (op unit e3) e3) (= (op e3 unit) e3)))))
+(assume t94 (and (and (and (and (and (= (op unit e0) e0) (= (op e0 unit) e0)) (and (= (op unit e1) e1) (= (op e1 unit) e1))) (and (= (op unit e2) e2) (= (op e2 unit) e2))) (and (= (op unit e3) e3) (= (op e3 unit) e3))) (and (= (op unit e4) e4) (= (op e4 unit) e4))))
+(step t95 (cl (and (and (and (and (= (op unit e0) e0) (= (op e0 unit) e0)) (and (= (op unit e1) e1) (= (op e1 unit) e1))) (and (= (op unit e2) e2) (= (op e2 unit) e2))) (and (= (op unit e3) e3) (= (op e3 unit) e3)))) :rule and :premises (t94) :args (0))
+(step t.end (cl) :rule resolution :premises (nt95.0 t95))

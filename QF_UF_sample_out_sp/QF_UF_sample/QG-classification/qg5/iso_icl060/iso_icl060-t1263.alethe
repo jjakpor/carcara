@@ -1,0 +1,6 @@
+(assume nt1263.0 (not (not (= e1 (op e1 (op (op e1 e3) e3))))))
+(assume t1249 (or (not (= (= e1 (op e1 (op (op e1 e3) e3))) false)) (not (= e1 (op e1 (op (op e1 e3) e3))))))
+(assume t1262 (= (= e1 (op e1 (op (op e1 e3) e3))) false))
+(step t1249' (cl (not (= (= e1 (op e1 (op (op e1 e3) e3))) false)) (not (= e1 (op e1 (op (op e1 e3) e3))))) :rule or :premises (t1249))
+(step t1263 (cl (not (= e1 (op e1 (op (op e1 e3) e3))))) :rule resolution :premises (t1249' t1262))
+(step t.end (cl) :rule resolution :premises (nt1263.0 t1263))

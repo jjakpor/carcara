@@ -46,11 +46,11 @@ find "$input_dir" -type f -name "*.alethe" | while read -r proof_file; do
         sliced_proof_file="$sliced_file_without_extension.alethe"
         sliced_problem_file="$sliced_file_without_extension.smt2"
 
-        eval "$dev_carcara slice $proof_file $problem_file --from $step_id --small > /dev/null"
+        carcara slice $proof_file $problem_file --from $step_id --small > /dev/null
         mv "$base_name-$step_id.smt2" "$target_dir"
         mv "$base_name-$step_id.alethe" "$target_dir"
 
-        validity=$($dev_carcara check "$sliced_proof_file" "$sliced_problem_file" -i)
+        validity=$(carcara check "$sliced_proof_file" "$sliced_problem_file" -i)
         
 
         echo "$validity"

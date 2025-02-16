@@ -1,0 +1,5 @@
+(assume nt424.0 (not (not (and (not (= (f6 c_1) (f5 c_1))) (= c_1 (f6 c_1))))))
+(assume nt424.1 (not (not (= c_1 (f5 c_1)))))
+(assume t423 (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))))
+(step t424 (cl (not (and (not (= (f6 c_1) (f5 c_1))) (= c_1 (f6 c_1)))) (not (= c_1 (f5 c_1)))) :rule implies :premises (t423))
+(step t.end (cl) :rule resolution :premises (nt424.0 nt424.1 t424))

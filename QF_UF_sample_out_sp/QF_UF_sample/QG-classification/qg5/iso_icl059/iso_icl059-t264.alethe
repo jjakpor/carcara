@@ -1,0 +1,5 @@
+(assume nt264.0 (not (= (or (or (or (or (= (op e1 e0) e0) (= (op e1 e0) e1)) (= (op e1 e0) e2)) (= (op e1 e0) e3)) (= (op e1 e0) e4)) (or (= e4 (op e1 e0)) (= e3 (op e1 e0)) (= e2 (op e1 e0)) (= e0 (op e1 e0)) (= e1 (op e1 e0))))))
+(assume t258 (= (or (or (or (or (= (op e1 e0) e0) (= (op e1 e0) e1)) (= (op e1 e0) e2)) (= (op e1 e0) e3)) (= (op e1 e0) e4)) (or (= (op e1 e0) e4) (= (op e1 e0) e3) (= (op e1 e0) e2) (= (op e1 e0) e0) (= (op e1 e0) e1))))
+(assume t263 (= (or (= (op e1 e0) e4) (= (op e1 e0) e3) (= (op e1 e0) e2) (= (op e1 e0) e0) (= (op e1 e0) e1)) (or (= e4 (op e1 e0)) (= e3 (op e1 e0)) (= e2 (op e1 e0)) (= e0 (op e1 e0)) (= e1 (op e1 e0)))))
+(step t264 (cl (= (or (or (or (or (= (op e1 e0) e0) (= (op e1 e0) e1)) (= (op e1 e0) e2)) (= (op e1 e0) e3)) (= (op e1 e0) e4)) (or (= e4 (op e1 e0)) (= e3 (op e1 e0)) (= e2 (op e1 e0)) (= e0 (op e1 e0)) (= e1 (op e1 e0))))) :rule trans :premises (t258 t263))
+(step t.end (cl) :rule resolution :premises (nt264.0 t264))

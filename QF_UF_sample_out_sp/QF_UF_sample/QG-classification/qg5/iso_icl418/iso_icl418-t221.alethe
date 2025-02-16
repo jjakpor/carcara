@@ -1,0 +1,5 @@
+(assume nt221.0 (not (not (= (= (op e1 (op e1 e1)) e1) (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))))))
+(assume nt221.1 (not (not (= (op e1 (op e1 e1)) e1))))
+(assume nt221.2 (not (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))))
+(step t221 (cl (not (= (= (op e1 (op e1 e1)) e1) (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3)))))) (not (= (op e1 (op e1 e1)) e1)) (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt221.0 nt221.1 nt221.2 t221))

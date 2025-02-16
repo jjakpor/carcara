@@ -1,0 +1,8 @@
+(assume nt227.0 (not (=> (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))) (= e4 (op e4 (op e4 e4))))))
+(assume nt227.1 (not (=> (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))) (= e4 (op e4 (op e4 e4))))))
+(assume t225 (or (=> (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))) (= e4 (op e4 (op e4 e4)))) (= e4 (op e4 (op e4 e4)))))
+(assume t226 (or (=> (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))) (= e4 (op e4 (op e4 e4)))) (not (= e4 (op e4 (op e4 e4))))))
+(step t226' (cl (=> (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))) (= e4 (op e4 (op e4 e4)))) (not (= e4 (op e4 (op e4 e4))))) :rule or :premises (t226))
+(step t225' (cl (=> (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))) (= e4 (op e4 (op e4 e4)))) (= e4 (op e4 (op e4 e4)))) :rule or :premises (t225))
+(step t227 (cl (=> (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))) (= e4 (op e4 (op e4 e4)))) (=> (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))) (= e4 (op e4 (op e4 e4))))) :rule resolution :premises (t225' t226'))
+(step t.end (cl) :rule resolution :premises (nt227.0 nt227.1 t227))

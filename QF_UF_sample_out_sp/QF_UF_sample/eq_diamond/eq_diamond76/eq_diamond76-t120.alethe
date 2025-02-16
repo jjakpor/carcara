@@ -1,0 +1,6 @@
+(assume nt120.0 (not (= x2 x3)))
+(assume t119 (or (= x2 x3) (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))))
+(assume t115 (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))
+(step t119' (cl (= x2 x3) (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))) :rule or :premises (t119))
+(step t120 (cl (= x2 x3)) :rule resolution :premises (t119' t115))
+(step t.end (cl) :rule resolution :premises (nt120.0 t120))

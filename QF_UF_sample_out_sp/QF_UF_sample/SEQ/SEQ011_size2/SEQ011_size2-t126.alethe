@@ -1,0 +1,5 @@
+(assume nt126.0 (not (=> (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0)))))
+(assume t125 (or (=> (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (=> (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0)))))
+(step t125' (cl (=> (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (=> (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0)))) :rule or :premises (t125))
+(step t126 (cl (=> (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0)))) :rule contraction :premises (t125'))
+(step t.end (cl) :rule resolution :premises (nt126.0 t126))

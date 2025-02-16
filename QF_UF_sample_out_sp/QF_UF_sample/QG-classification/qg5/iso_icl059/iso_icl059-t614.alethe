@@ -1,0 +1,8 @@
+(assume nt614.0 (not (= (or (= (op e4 e1) e4) (= (op e4 e1) e3) (= (op e4 e1) e2) (= (op e4 e1) e0) (= (op e4 e1) e1)) (or (= e4 (op e4 e1)) (= e3 (op e4 e1)) (= e2 (op e4 e1)) (= e0 (op e4 e1)) (= e1 (op e4 e1))))))
+(assume t610 (= (= (op e4 e1) e4) (= e4 (op e4 e1))))
+(assume t5 (= (= (op e4 e1) e3) (= e3 (op e4 e1))))
+(assume t611 (= (= (op e4 e1) e2) (= e2 (op e4 e1))))
+(assume t612 (= (= (op e4 e1) e0) (= e0 (op e4 e1))))
+(assume t613 (= (= (op e4 e1) e1) (= e1 (op e4 e1))))
+(step t614 (cl (= (or (= (op e4 e1) e4) (= (op e4 e1) e3) (= (op e4 e1) e2) (= (op e4 e1) e0) (= (op e4 e1) e1)) (or (= e4 (op e4 e1)) (= e3 (op e4 e1)) (= e2 (op e4 e1)) (= e0 (op e4 e1)) (= e1 (op e4 e1))))) :rule cong :premises (t610 t5 t611 t612 t613))
+(step t.end (cl) :rule resolution :premises (nt614.0 t614))

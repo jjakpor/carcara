@@ -1,0 +1,3 @@
+(assume nt714.0 (not (= (= (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))) (and (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))) (=> (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))) (= x63 x64)))) true)))
+(step t714 (cl (= (= (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))) (and (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))) (=> (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))) (= x63 x64)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nt714.0 t714))

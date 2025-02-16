@@ -1,0 +1,4 @@
+(assume nt283.0 (not (= (op e0 e1) (op e1 e0))))
+(assume t282 (= (op e1 e0) (op e0 e1)))
+(step t283 (cl (= (op e0 e1) (op e1 e0))) :rule symm :premises (t282))
+(step t.end (cl) :rule resolution :premises (nt283.0 t283))

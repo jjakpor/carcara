@@ -1,0 +1,5 @@
+(assume nt169.0 (not (not (= (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (and (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16)))))))
+(assume nt169.1 (not (not (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))))))
+(assume nt169.2 (not (and (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16)))))
+(step t169 (cl (not (= (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (and (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16))))) (not (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16)))) (and (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt169.0 nt169.1 nt169.2 t169))

@@ -1,0 +1,6 @@
+(assume nt809.0 (not (= x54 x55)))
+(assume nt809.1 (not (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))))))
+(assume t808 (or (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55)))) (= x54 x55)))
+(step t808' (cl (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55)))) (= x54 x55)) :rule or :premises (t808))
+(step t809 (cl (= x54 x55) (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))))) :rule reordering :premises (t808'))
+(step t.end (cl) :rule resolution :premises (nt809.0 nt809.1 t809))

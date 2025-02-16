@@ -1,0 +1,6 @@
+(assume nt271.0 (not (not (and (p1 (f5 c_0) c_0) (= c_0 (f5 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))))))
+(assume t268 (=> (and (p1 (f5 c_0) c_0) (= c_0 (f5 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false))
+(assume t270 (or (not (=> (and (p1 (f5 c_0) c_0) (= c_0 (f5 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false)) (not (and (p1 (f5 c_0) c_0) (= c_0 (f5 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))))))
+(step t270' (cl (not (=> (and (p1 (f5 c_0) c_0) (= c_0 (f5 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false)) (not (and (p1 (f5 c_0) c_0) (= c_0 (f5 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))))) :rule or :premises (t270))
+(step t271 (cl (not (and (p1 (f5 c_0) c_0) (= c_0 (f5 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))))) :rule resolution :premises (t268 t270'))
+(step t.end (cl) :rule resolution :premises (nt271.0 t271))

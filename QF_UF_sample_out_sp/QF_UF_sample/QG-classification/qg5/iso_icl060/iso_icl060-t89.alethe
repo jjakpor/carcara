@@ -1,0 +1,5 @@
+(assume nt89.0 (not (= (op e2 e0) (op (op e1 e3) (op (op e1 e3) e1)))))
+(assume t13 (= e2 (op e1 e3)))
+(assume t27 (= e0 (op (op e1 e3) e1)))
+(step t89 (cl (= (op e2 e0) (op (op e1 e3) (op (op e1 e3) e1)))) :rule cong :premises (t13 t27))
+(step t.end (cl) :rule resolution :premises (nt89.0 t89))

@@ -1,0 +1,6 @@
+(assume nt479.0 (not (= x24 x25)))
+(assume nt479.1 (not (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))))))
+(assume t478 (or (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25)))) (= x24 x25)))
+(step t478' (cl (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25)))) (= x24 x25)) :rule or :premises (t478))
+(step t479 (cl (= x24 x25) (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))))) :rule reordering :premises (t478'))
+(step t.end (cl) :rule resolution :premises (nt479.0 nt479.1 t479))

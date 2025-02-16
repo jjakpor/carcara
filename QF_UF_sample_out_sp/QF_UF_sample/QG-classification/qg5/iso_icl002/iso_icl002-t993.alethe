@@ -1,0 +1,5 @@
+(assume nt993.0 (not (= (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0))) false)))
+(assume t992 (= (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0))) (= (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) e0)) (op (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0)))))
+(assume t633 (= (= (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) e0)) (op (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0))) false))
+(step t993 (cl (= (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0))) false)) :rule trans :premises (t992 t633))
+(step t.end (cl) :rule resolution :premises (nt993.0 t993))

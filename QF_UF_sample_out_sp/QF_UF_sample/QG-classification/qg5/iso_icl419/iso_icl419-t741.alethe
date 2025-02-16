@@ -1,0 +1,5 @@
+(assume nt741.0 (not (not (= (= (op (op e4 e0) e4) e0) (= (op e3 e3) (op (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))))
+(assume nt741.1 (not (not (= (op (op e4 e0) e4) e0))))
+(assume nt741.2 (not (= (op e3 e3) (op (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(step t741 (cl (not (= (= (op (op e4 e0) e4) e0) (= (op e3 e3) (op (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))) (not (= (op (op e4 e0) e4) e0)) (= (op e3 e3) (op (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt741.0 nt741.1 nt741.2 t741))

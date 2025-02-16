@@ -1,0 +1,5 @@
+(assume nt13.0 (not (not (= (= x4 x5) false))))
+(assume nt13.1 (not (not (= x4 x5))))
+(assume t12 (= (= (= x4 x5) false) (not (= x4 x5))))
+(step t13 (cl (not (= (= x4 x5) false)) (not (= x4 x5))) :rule equiv1 :premises (t12))
+(step t.end (cl) :rule resolution :premises (nt13.0 nt13.1 t13))

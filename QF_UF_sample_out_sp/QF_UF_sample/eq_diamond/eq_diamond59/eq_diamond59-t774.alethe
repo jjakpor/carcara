@@ -1,0 +1,4 @@
+(assume nt774.0 (not (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52))))
+(assume t773 (and (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52))))
+(step t774 (cl (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52))) :rule and :premises (t773) :args (1))
+(step t.end (cl) :rule resolution :premises (nt774.0 t774))

@@ -1,5 +1,0 @@
-(assume a9 (= y$prop$next (not y$26)))
-(assume t109 (= (not (= y$X$next y$n15s4)) (not (= y$X$next y$n15s4))))
-(assume nt110.0 (not (= (= y$prop$next (not (= y$X$next y$n15s4))) (= (not y$26) (not (= y$X$next y$n15s4))))))
-(step t110 (cl (= (= y$prop$next (not (= y$X$next y$n15s4))) (= (not y$26) (not (= y$X$next y$n15s4))))) :rule cong :premises (a9 t109))
-(step t.end (cl) :rule resolution :premises (nt110.0 t110))

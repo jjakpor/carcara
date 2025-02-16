@@ -1,0 +1,5 @@
+(assume nt333.t3.0 (not (= (f6 c_1) (f5 c_1))))
+(assume t333.t0 (= (f6 c_1) c_1))
+(assume t333.t2 (= c_1 (f5 c_1)))
+(step t333.t3 (cl (= (f6 c_1) (f5 c_1))) :rule trans :premises (t333.t0 t333.t2))
+(step t.end (cl) :rule resolution :premises (nt333.t3.0 t333.t3))

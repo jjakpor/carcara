@@ -1,0 +1,4 @@
+(assume nt927.0 (not (not (= (op e0 e0) (op e0 e2)))))
+(assume t926 (and (not (= (op e0 e0) (op e0 e1))) (not (= (op e0 e0) (op e0 e2)))))
+(step t927 (cl (not (= (op e0 e0) (op e0 e2)))) :rule and :premises (t926) :args (1))
+(step t.end (cl) :rule resolution :premises (nt927.0 t927))

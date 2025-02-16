@@ -1,0 +1,5 @@
+(assume nt298.0 (not (not (= (= (op e5 unit) e5) (= e5 (op e5 e0))))))
+(assume nt298.1 (not (not (= (op e5 unit) e5))))
+(assume nt298.2 (not (= e5 (op e5 e0))))
+(step t298 (cl (not (= (= (op e5 unit) e5) (= e5 (op e5 e0)))) (not (= (op e5 unit) e5)) (= e5 (op e5 e0))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt298.0 nt298.1 nt298.2 t298))

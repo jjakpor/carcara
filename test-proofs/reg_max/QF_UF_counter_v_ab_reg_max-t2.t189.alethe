@@ -1,4 +1,0 @@
-(assume a0 (not (not (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))))
-(assume a1 (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))
-(step t0 (cl (not (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) :rule not_not)
-(step t1 (cl) :rule resolution :premises (a0 a1 t0))

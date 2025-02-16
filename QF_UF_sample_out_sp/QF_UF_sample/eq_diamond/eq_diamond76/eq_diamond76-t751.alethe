@@ -1,0 +1,6 @@
+(assume nt751.0 (not (= x66 x67)))
+(assume t750 (or (= x66 x67) (not (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))))))
+(assume t746 (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))))
+(step t750' (cl (= x66 x67) (not (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))))) :rule or :premises (t750))
+(step t751 (cl (= x66 x67)) :rule resolution :premises (t750' t746))
+(step t.end (cl) :rule resolution :premises (nt751.0 t751))

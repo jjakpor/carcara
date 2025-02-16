@@ -1,0 +1,6 @@
+(assume nt826.0 (not (= (= (op (op e4 e3) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))) false)))
+(assume t813 (or (= (= (op (op e4 e3) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))) false) (= (op (op e4 e3) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))))))
+(assume t825 (not (= (op (op e4 e3) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))))))
+(step t813' (cl (= (= (op (op e4 e3) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))) false) (= (op (op e4 e3) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))))) :rule or :premises (t813))
+(step t826 (cl (= (= (op (op e4 e3) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))) false)) :rule resolution :premises (t813' t825))
+(step t.end (cl) :rule resolution :premises (nt826.0 t826))

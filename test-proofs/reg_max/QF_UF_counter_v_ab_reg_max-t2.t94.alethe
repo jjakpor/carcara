@@ -1,5 +1,0 @@
-(assume a0 (not (not (= y$45 (= y$45 true)))))
-(assume a1 (not (not y$45)))
-(assume a2 (not (= y$45 true)))
-(step t0 (cl (not (= y$45 (= y$45 true))) (not y$45) (= y$45 true)) :rule equiv_pos2)
-(step t1 (cl) :rule resolution :premises (a0 a1 a2 t0))

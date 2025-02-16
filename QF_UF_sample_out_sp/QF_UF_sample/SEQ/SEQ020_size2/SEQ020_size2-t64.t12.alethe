@@ -1,0 +1,6 @@
+(assume nt64.t12.0 (not (not (= c_0 (f5 c_1)))))
+(assume t64.t1 (or (not (= (= c_0 (f5 c_1)) false)) (not (= c_0 (f5 c_1)))))
+(assume t64.t11 (= (= c_0 (f5 c_1)) false))
+(step t64.t1' (cl (not (= (= c_0 (f5 c_1)) false)) (not (= c_0 (f5 c_1)))) :rule or :premises (t64.t1))
+(step t64.t12 (cl (not (= c_0 (f5 c_1)))) :rule resolution :premises (t64.t1' t64.t11))
+(step t.end (cl) :rule resolution :premises (nt64.t12.0 t64.t12))

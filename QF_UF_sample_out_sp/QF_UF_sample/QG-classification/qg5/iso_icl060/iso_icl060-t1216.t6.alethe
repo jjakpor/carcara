@@ -1,0 +1,5 @@
+(assume nt1216.t6.0 (not (= (= e1 (op e3 (op (op e1 e3) e3))) false)))
+(assume t1216.t5 (= (= e1 (op e3 (op (op e1 e3) e3))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))
+(assume t483 (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) false))
+(step t1216.t6 (cl (= (= e1 (op e3 (op (op e1 e3) e3))) false)) :rule trans :premises (t1216.t5 t483))
+(step t.end (cl) :rule resolution :premises (nt1216.t6.0 t1216.t6))

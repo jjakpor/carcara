@@ -1,0 +1,5 @@
+(assume nt877.0 (not (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 (op e1 e1)) (op e1 e1))) false)))
+(assume t863 (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 (op e1 e1)) (op e1 e1))) (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1)))))))
+(assume t876 (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1))))) false))
+(step t877 (cl (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 (op e1 e1)) (op e1 e1))) false)) :rule trans :premises (t863 t876))
+(step t.end (cl) :rule resolution :premises (nt877.0 t877))

@@ -1,0 +1,7 @@
+(assume nt548.0 (not (not (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0))))))
+(assume t543 (or (not (= (not (= (op e0 e4) (op e3 e4))) (not (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0)))))) (not (not (= (op e0 e4) (op e3 e4)))) (not (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0))))))
+(assume t545 (= (not (= (op e0 e4) (op e3 e4))) (not (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0))))))
+(assume t547 (not (= (op e0 e4) (op e3 e4))))
+(step t543' (cl (not (= (not (= (op e0 e4) (op e3 e4))) (not (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0)))))) (not (not (= (op e0 e4) (op e3 e4)))) (not (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0))))) :rule or :premises (t543))
+(step t548 (cl (not (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0))))) :rule resolution :premises (t543' t545 t547))
+(step t.end (cl) :rule resolution :premises (nt548.0 t548))

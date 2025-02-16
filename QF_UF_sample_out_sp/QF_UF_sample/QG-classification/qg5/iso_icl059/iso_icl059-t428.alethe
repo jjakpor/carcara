@@ -1,0 +1,3 @@
+(assume nt428.0 (not (= (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op e0 (op e0 e0))) (= (op e0 (op e0 e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
+(step t428 (cl (= (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op e0 (op e0 e0))) (= (op e0 (op e0 e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))) :rule rare_rewrite :args ("eq-symm" (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op e0 (op e0 e0))))
+(step t.end (cl) :rule resolution :premises (nt428.0 t428))

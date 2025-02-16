@@ -1,0 +1,3 @@
+(assume nt179.0 (not (= (= (f7 c_0) c_0) (= c_0 (f7 c_0)))))
+(step t179 (cl (= (= (f7 c_0) c_0) (= c_0 (f7 c_0)))) :rule rare_rewrite :args ("eq-symm" (f7 c_0) c_0))
+(step t.end (cl) :rule resolution :premises (nt179.0 t179))

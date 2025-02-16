@@ -1,0 +1,5 @@
+(assume nt513.0 (not (= (or (not (= (op e0 e3) e0)) (= (op e3 e3) e3)) (or (not (= e0 (op e0 (op (op (op e0 (op e0 e0)) e0) e0)))) (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) e0)))))))
+(assume t510 (= (or (not (= (op e0 e3) e0)) (= (op e3 e3) e3)) (or (not (= e0 (op e0 e3))) (= e3 (op e3 e3)))))
+(assume t512 (= (or (not (= e0 (op e0 e3))) (= e3 (op e3 e3))) (or (not (= e0 (op e0 (op (op (op e0 (op e0 e0)) e0) e0)))) (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) e0))))))
+(step t513 (cl (= (or (not (= (op e0 e3) e0)) (= (op e3 e3) e3)) (or (not (= e0 (op e0 (op (op (op e0 (op e0 e0)) e0) e0)))) (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) e0)))))) :rule trans :premises (t510 t512))
+(step t.end (cl) :rule resolution :premises (nt513.0 t513))

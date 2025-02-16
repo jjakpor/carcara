@@ -1,0 +1,6 @@
+(assume nt1276.0 (not (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) false)))
+(assume t1270 (or (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) false) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))
+(assume t1275 (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))
+(step t1270' (cl (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) false) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))) :rule or :premises (t1270))
+(step t1276 (cl (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) false)) :rule resolution :premises (t1270' t1275))
+(step t.end (cl) :rule resolution :premises (nt1276.0 t1276))

@@ -1,0 +1,4 @@
+(assume nt735.0 (not (= (not (= (op e1 e4) (op e3 e4))) (not (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))))
+(assume t734 (= (= (op e1 e4) (op e3 e4)) (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))
+(step t735 (cl (= (not (= (op e1 e4) (op e3 e4))) (not (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))) :rule cong :premises (t734))
+(step t.end (cl) :rule resolution :premises (nt735.0 t735))

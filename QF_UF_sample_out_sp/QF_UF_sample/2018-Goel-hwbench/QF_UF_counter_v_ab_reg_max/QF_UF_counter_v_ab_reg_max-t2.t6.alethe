@@ -1,0 +1,5 @@
+(assume nt2.t6.0 (not (= (= y$2 (= y$n1s4 y$X)) (= y$2 (= y$X y$n1s4)))))
+(assume t2.t4 (= y$2 y$2))
+(assume t2.t5 (= (= y$n1s4 y$X) (= y$X y$n1s4)))
+(step t2.t6 (cl (= (= y$2 (= y$n1s4 y$X)) (= y$2 (= y$X y$n1s4)))) :rule cong :premises (t2.t4 t2.t5))
+(step t.end (cl) :rule resolution :premises (nt2.t6.0 t2.t6))

@@ -1,0 +1,5 @@
+(assume nt73.0 (not (= (op e2 e1) (op (op e1 e1) e1))))
+(assume t35 (= e2 (op e1 e1)))
+(assume t38 (= e1 e1))
+(step t73 (cl (= (op e2 e1) (op (op e1 e1) e1))) :rule cong :premises (t35 t38))
+(step t.end (cl) :rule resolution :premises (nt73.0 t73))

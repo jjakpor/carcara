@@ -1,0 +1,6 @@
+(assume nt444.0 (not (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f6 c_1)) (p1 (f6 c_1) c_1)))))
+(assume nt444.1 (not false))
+(assume t443 (or (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f6 c_1)) (p1 (f6 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f6 c_1)) (p1 (f6 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f6 c_1)) (p1 (f6 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f6 c_1)) (p1 (f6 c_1) c_1))) false))
+(step t443' (cl (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f6 c_1)) (p1 (f6 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f6 c_1)) (p1 (f6 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f6 c_1)) (p1 (f6 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f6 c_1)) (p1 (f6 c_1) c_1))) false) :rule or :premises (t443))
+(step t444 (cl (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f6 c_1)) (p1 (f6 c_1) c_1))) false) :rule contraction :premises (t443'))
+(step t.end (cl) :rule resolution :premises (nt444.0 nt444.1 t444))

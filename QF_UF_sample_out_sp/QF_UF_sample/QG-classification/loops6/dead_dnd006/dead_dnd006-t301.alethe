@@ -1,0 +1,5 @@
+(assume nt301.0 (not (= (= e5 (op e5 unit)) (= e5 (op e5 e0)))))
+(assume t284 (= e5 e5))
+(assume t300 (= (op e5 unit) (op e5 e0)))
+(step t301 (cl (= (= e5 (op e5 unit)) (= e5 (op e5 e0)))) :rule cong :premises (t284 t300))
+(step t.end (cl) :rule resolution :premises (nt301.0 t301))

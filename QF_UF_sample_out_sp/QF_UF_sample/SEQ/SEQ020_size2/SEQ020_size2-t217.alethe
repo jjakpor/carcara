@@ -1,0 +1,6 @@
+(assume nt217.0 (not (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))))))
+(assume nt217.1 (not (= (f6 c_0) (f5 c_0))))
+(assume t216 (or (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (= (f6 c_0) (f5 c_0))))
+(step t216' (cl (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (= (f6 c_0) (f5 c_0))) :rule or :premises (t216))
+(step t217 (cl (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (= (f6 c_0) (f5 c_0))) :rule contraction :premises (t216'))
+(step t.end (cl) :rule resolution :premises (nt217.0 nt217.1 t217))

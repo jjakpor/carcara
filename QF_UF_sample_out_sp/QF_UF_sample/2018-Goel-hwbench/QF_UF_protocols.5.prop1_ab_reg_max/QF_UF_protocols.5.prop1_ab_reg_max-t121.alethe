@@ -1,0 +1,5 @@
+(assume nt121.0 (not y$f17))
+(assume nt121.1 (not (not (not y$288))))
+(assume a154 (= y$f17 (not y$288)))
+(step t121 (cl y$f17 (not (not y$288))) :rule equiv2 :premises (a154))
+(step t.end (cl) :rule resolution :premises (nt121.0 nt121.1 t121))

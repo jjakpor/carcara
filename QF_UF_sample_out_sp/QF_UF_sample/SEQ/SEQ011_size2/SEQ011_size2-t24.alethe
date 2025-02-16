@@ -1,0 +1,8 @@
+(assume nt24.0 (not (=> (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false)))
+(assume nt24.1 (not false))
+(assume t15 (or (=> (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false) (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))))
+(assume t23 (or (not (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) false))
+(step t23' (cl (not (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) false) :rule or :premises (t23))
+(step t15' (cl (=> (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false) (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) :rule or :premises (t15))
+(step t24 (cl (=> (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false) false) :rule resolution :premises (t15' t23'))
+(step t.end (cl) :rule resolution :premises (nt24.0 nt24.1 t24))

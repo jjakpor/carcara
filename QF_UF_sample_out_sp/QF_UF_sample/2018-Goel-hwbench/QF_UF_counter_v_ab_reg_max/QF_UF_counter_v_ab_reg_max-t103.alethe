@@ -1,0 +1,5 @@
+(assume nt103.0 (not (= (= y$28 (= y$27 y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4)))))))
+(assume t100 (= (= y$28 (= y$27 y$prop$next)) (= y$28 (= (not (= y$X$next y$n15s4)) y$prop$next))))
+(assume t102 (= (= y$28 (= (not (= y$X$next y$n15s4)) y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4))))))
+(step t103 (cl (= (= y$28 (= y$27 y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4)))))) :rule trans :premises (t100 t102))
+(step t.end (cl) :rule resolution :premises (nt103.0 t103))

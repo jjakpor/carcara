@@ -1,0 +1,6 @@
+(assume nt155.0 (not (not (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0)))))))
+(assume t87 (or (= e0 (op e1 (op e1 e0))) (not (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0)))))))
+(assume t154 (not (= e0 (op e1 (op e1 e0)))))
+(step t87' (cl (= e0 (op e1 (op e1 e0))) (not (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0)))))) :rule or :premises (t87))
+(step t155 (cl (not (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0)))))) :rule resolution :premises (t87' t154))
+(step t.end (cl) :rule resolution :premises (nt155.0 t155))

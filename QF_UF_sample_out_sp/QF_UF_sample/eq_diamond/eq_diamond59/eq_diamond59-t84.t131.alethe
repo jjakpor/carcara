@@ -1,0 +1,6 @@
+(assume nt84.t131.0 (not (= x0 x1)))
+(assume nt84.t131.1 (not (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))))
+(assume t84.t130 (or (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (= x0 x1)))
+(step t84.t130' (cl (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (= x0 x1)) :rule or :premises (t84.t130))
+(step t84.t131 (cl (= x0 x1) (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))) :rule reordering :premises (t84.t130'))
+(step t.end (cl) :rule resolution :premises (nt84.t131.0 nt84.t131.1 t84.t131))

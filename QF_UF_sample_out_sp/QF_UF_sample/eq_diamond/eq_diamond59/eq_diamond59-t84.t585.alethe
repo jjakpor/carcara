@@ -1,0 +1,5 @@
+(assume nt84.t585.0 (not (not (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))))))
+(assume nt84.t585.1 (not (= x53 x54)))
+(assume t84.t584 (=> (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))) (= x53 x54)))
+(step t84.t585 (cl (not (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54)))) (= x53 x54)) :rule implies :premises (t84.t584))
+(step t.end (cl) :rule resolution :premises (nt84.t585.0 nt84.t585.1 t84.t585))

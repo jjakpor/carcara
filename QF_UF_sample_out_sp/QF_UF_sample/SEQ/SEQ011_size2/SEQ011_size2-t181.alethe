@@ -1,0 +1,5 @@
+(assume nt181.0 (not (= (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0))))))
+(assume t179 (= (= (f7 c_0) c_0) (= c_0 (f7 c_0))))
+(assume t180 (= (= (f7 c_0) c_1) (= c_1 (f7 c_0))))
+(step t181 (cl (= (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0))))) :rule cong :premises (t179 t180))
+(step t.end (cl) :rule resolution :premises (nt181.0 t181))

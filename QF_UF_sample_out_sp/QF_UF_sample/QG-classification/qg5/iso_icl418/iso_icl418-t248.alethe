@@ -1,0 +1,6 @@
+(assume nt248.0 (not (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))))))
+(assume t203 (or (not (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))) false)) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))))))
+(assume t247 (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))) false))
+(step t203' (cl (not (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))) false)) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))))) :rule or :premises (t203))
+(step t248 (cl (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))))) :rule resolution :premises (t203' t247))
+(step t.end (cl) :rule resolution :premises (nt248.0 t248))

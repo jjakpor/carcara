@@ -1,0 +1,4 @@
+(assume nt335.0 (not (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))))))
+(assume nt335.1 (not (= c_1 (f6 c_1))))
+(step t335 (cl (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1)))) (= c_1 (f6 c_1))) :rule and_pos :args (1))
+(step t.end (cl) :rule resolution :premises (nt335.0 nt335.1 t335))

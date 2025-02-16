@@ -1,0 +1,4 @@
+(assume nt16.t7.0 (not (= false (p1 (f7 c_1) c_1))))
+(assume t16.t6 (= (p1 (f7 c_1) c_1) false))
+(step t16.t7 (cl (= false (p1 (f7 c_1) c_1))) :rule symm :premises (t16.t6))
+(step t.end (cl) :rule resolution :premises (nt16.t7.0 t16.t7))

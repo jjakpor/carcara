@@ -1,0 +1,7 @@
+(assume nt15.0 (not (= y$630 (= y$629 y$prop))))
+(assume t11 (or (not (= (= y$630 (= y$prop y$629)) (= y$630 (= y$629 y$prop)))) (not (= y$630 (= y$prop y$629))) (= y$630 (= y$629 y$prop))))
+(assume t14 (= (= y$630 (= y$prop y$629)) (= y$630 (= y$629 y$prop))))
+(assume a17 (= y$630 (= y$prop y$629)))
+(step t11' (cl (not (= (= y$630 (= y$prop y$629)) (= y$630 (= y$629 y$prop)))) (not (= y$630 (= y$prop y$629))) (= y$630 (= y$629 y$prop))) :rule or :premises (t11))
+(step t15 (cl (= y$630 (= y$629 y$prop))) :rule resolution :premises (t11' t14 a17))
+(step t.end (cl) :rule resolution :premises (nt15.0 t15))

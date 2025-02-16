@@ -1,0 +1,7 @@
+(assume nt431.0 (not (or (= (f6 c_1) (f5 c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))))
+(assume t410 (or (not (= (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))) (or (= (f6 c_1) (f5 c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))))) (not (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))) (or (= (f6 c_1) (f5 c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))))
+(assume t411 (= (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))) (or (= (f6 c_1) (f5 c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))))
+(assume t430 (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))))
+(step t410' (cl (not (= (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))) (or (= (f6 c_1) (f5 c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))))) (not (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))) (or (= (f6 c_1) (f5 c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))) :rule or :premises (t410))
+(step t431 (cl (or (= (f6 c_1) (f5 c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))) :rule resolution :premises (t410' t411 t430))
+(step t.end (cl) :rule resolution :premises (nt431.0 t431))

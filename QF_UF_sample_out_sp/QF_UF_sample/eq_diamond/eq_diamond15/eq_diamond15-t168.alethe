@@ -1,0 +1,5 @@
+(assume nt168.0 (not (= (= x2 x3) false)))
+(assume t161 (= (= x2 x3) (= x0 x14)))
+(assume t167 (= (= x0 x14) false))
+(step t168 (cl (= (= x2 x3) false)) :rule trans :premises (t161 t167))
+(step t.end (cl) :rule resolution :premises (nt168.0 t168))

@@ -1,0 +1,5 @@
+(assume nt782.0 (not (not (or (and (= x69 y69) (= y69 x70)) (and (= x69 z69) (= z69 x70))))))
+(assume nt782.1 (not (= x69 x70)))
+(assume t781 (=> (or (and (= x69 y69) (= y69 x70)) (and (= x69 z69) (= z69 x70))) (= x69 x70)))
+(step t782 (cl (not (or (and (= x69 y69) (= y69 x70)) (and (= x69 z69) (= z69 x70)))) (= x69 x70)) :rule implies :premises (t781))
+(step t.end (cl) :rule resolution :premises (nt782.0 nt782.1 t782))

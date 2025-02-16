@@ -1,0 +1,5 @@
+(assume nt204.0 (not (not (= (= (op e3 unit) e3) (= e3 (op e3 e0))))))
+(assume nt204.1 (not (not (= (op e3 unit) e3))))
+(assume nt204.2 (not (= e3 (op e3 e0))))
+(step t204 (cl (not (= (= (op e3 unit) e3) (= e3 (op e3 e0)))) (not (= (op e3 unit) e3)) (= e3 (op e3 e0))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt204.0 nt204.1 nt204.2 t204))

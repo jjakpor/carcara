@@ -1,0 +1,5 @@
+(assume nt83.0 (not (not (= (or (not (p4 c_1)) (not (= (f5 c_1) (f6 c_1)))) (or (not (p4 c_1)) (not (= (f6 c_1) (f5 c_1))))))))
+(assume nt83.1 (not (not (or (not (p4 c_1)) (not (= (f5 c_1) (f6 c_1)))))))
+(assume nt83.2 (not (or (not (p4 c_1)) (not (= (f6 c_1) (f5 c_1))))))
+(step t83 (cl (not (= (or (not (p4 c_1)) (not (= (f5 c_1) (f6 c_1)))) (or (not (p4 c_1)) (not (= (f6 c_1) (f5 c_1)))))) (not (or (not (p4 c_1)) (not (= (f5 c_1) (f6 c_1))))) (or (not (p4 c_1)) (not (= (f6 c_1) (f5 c_1))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt83.0 nt83.1 nt83.2 t83))

@@ -1,0 +1,5 @@
+(assume nt407.0 (not (not (p4 c_1))))
+(assume nt407.1 (not (p1 (f5 c_1) c_1)))
+(assume t406 (or (not (p4 c_1)) (p1 (f5 c_1) c_1)))
+(step t407 (cl (not (p4 c_1)) (p1 (f5 c_1) c_1)) :rule or :premises (t406))
+(step t.end (cl) :rule resolution :premises (nt407.0 nt407.1 t407))

@@ -1,0 +1,6 @@
+(assume nt163.0 (not (= x13 x14)))
+(assume t162 (or (= x13 x14) (not (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))))))
+(assume t158 (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))))
+(step t162' (cl (= x13 x14) (not (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))))) :rule or :premises (t162))
+(step t163 (cl (= x13 x14)) :rule resolution :premises (t162' t158))
+(step t.end (cl) :rule resolution :premises (nt163.0 t163))

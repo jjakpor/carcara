@@ -1,0 +1,3 @@
+(assume nt53.0 (not (= y$v_k_Belt y$v_k_Belt)))
+(step t53 (cl (= y$v_k_Belt y$v_k_Belt)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt53.0 t53))

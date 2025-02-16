@@ -1,0 +1,3 @@
+(assume nt9.0 (not (= (= clk clk) true)))
+(step t9 (cl (= (= clk clk) true)) :rule rare_rewrite :args ("eq-refl" clk))
+(step t.end (cl) :rule resolution :premises (nt9.0 t9))

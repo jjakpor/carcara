@@ -1,0 +1,7 @@
+(assume nt234.0 (not (= (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))) (or (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))))))
+(assume t137 (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0)))
+(assume t127 (= (not (= c_1 (f7 c_0))) (not (= c_1 (f7 c_0)))))
+(assume t233 (= (not (= c_1 (f6 c_0))) (not (= c_1 (f6 c_0)))))
+(assume t173 (= (not (p1 (f6 c_0) c_0)) (not (p1 (f6 c_0) c_0))))
+(step t234 (cl (= (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))) (or (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))))) :rule cong :premises (t137 t127 t233 t173))
+(step t.end (cl) :rule resolution :premises (nt234.0 t234))

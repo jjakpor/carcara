@@ -1,0 +1,3 @@
+(assume nt32.0 (not (= (not (not prt)) prt)))
+(step t32 (cl (= (not (not prt)) prt)) :rule rare_rewrite :args ("bool-double-not-elim" prt))
+(step t.end (cl) :rule resolution :premises (nt32.0 t32))

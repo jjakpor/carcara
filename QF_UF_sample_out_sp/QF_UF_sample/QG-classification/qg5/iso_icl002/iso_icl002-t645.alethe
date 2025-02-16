@@ -1,0 +1,4 @@
+(assume nt645.0 (not (= (not (= e0 e3)) (not (= e3 e0)))))
+(assume t644 (= (= e0 e3) (= e3 e0)))
+(step t645 (cl (= (not (= e0 e3)) (not (= e3 e0)))) :rule cong :premises (t644))
+(step t.end (cl) :rule resolution :premises (nt645.0 t645))

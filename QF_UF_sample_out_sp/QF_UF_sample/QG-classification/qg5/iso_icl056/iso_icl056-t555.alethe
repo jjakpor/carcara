@@ -1,0 +1,6 @@
+(assume nt555.0 (not (= (= e1 (op e1 (op e1 e1))) false)))
+(assume t543 (or (= (= e1 (op e1 (op e1 e1))) false) (= e1 (op e1 (op e1 e1)))))
+(assume t554 (not (= e1 (op e1 (op e1 e1)))))
+(step t543' (cl (= (= e1 (op e1 (op e1 e1))) false) (= e1 (op e1 (op e1 e1)))) :rule or :premises (t543))
+(step t555 (cl (= (= e1 (op e1 (op e1 e1))) false)) :rule resolution :premises (t543' t554))
+(step t.end (cl) :rule resolution :premises (nt555.0 t555))

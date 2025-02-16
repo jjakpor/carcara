@@ -1,0 +1,8 @@
+(assume nt689.0 (not (= (= (op e0 e0) (op (op e0 e0) e0)) false)))
+(assume nt689.1 (not (= (op e0 e0) (op (op e0 e0) e0))))
+(assume t687 (or (= (= (op e0 e0) (op (op e0 e0) e0)) false) (not (not (= (op e0 e0) (op (op e0 e0) e0))))))
+(assume t688 (or (not (not (not (= (op e0 e0) (op (op e0 e0) e0))))) (= (op e0 e0) (op (op e0 e0) e0))))
+(step t688' (cl (not (not (not (= (op e0 e0) (op (op e0 e0) e0))))) (= (op e0 e0) (op (op e0 e0) e0))) :rule or :premises (t688))
+(step t687' (cl (= (= (op e0 e0) (op (op e0 e0) e0)) false) (not (not (= (op e0 e0) (op (op e0 e0) e0))))) :rule or :premises (t687))
+(step t689 (cl (= (= (op e0 e0) (op (op e0 e0) e0)) false) (= (op e0 e0) (op (op e0 e0) e0))) :rule resolution :premises (t687' t688'))
+(step t.end (cl) :rule resolution :premises (nt689.0 nt689.1 t689))

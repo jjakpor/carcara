@@ -1,0 +1,5 @@
+(assume nt1016.0 (not (= (= e2 (op e3 (op e3 e2))) (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))))
+(assume t13 (= e2 (op e1 e3)))
+(assume t1015 (= (op e3 (op e3 e2)) (op e3 (op e3 (op e1 e3)))))
+(step t1016 (cl (= (= e2 (op e3 (op e3 e2))) (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))) :rule cong :premises (t13 t1015))
+(step t.end (cl) :rule resolution :premises (nt1016.0 t1016))

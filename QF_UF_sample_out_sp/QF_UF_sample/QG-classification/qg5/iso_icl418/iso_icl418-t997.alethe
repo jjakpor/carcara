@@ -1,0 +1,5 @@
+(assume nt997.0 (not (= (= (op (op e4 e3) e4) (op (op e3 e4) e4)) false)))
+(assume nt997.1 (not (not (not (= (op (op e4 e3) e4) (op (op e3 e4) e4))))))
+(assume t996 (= (= (= (op (op e4 e3) e4) (op (op e3 e4) e4)) false) (not (= (op (op e4 e3) e4) (op (op e3 e4) e4)))))
+(step t997 (cl (= (= (op (op e4 e3) e4) (op (op e3 e4) e4)) false) (not (not (= (op (op e4 e3) e4) (op (op e3 e4) e4))))) :rule equiv2 :premises (t996))
+(step t.end (cl) :rule resolution :premises (nt997.0 nt997.1 t997))

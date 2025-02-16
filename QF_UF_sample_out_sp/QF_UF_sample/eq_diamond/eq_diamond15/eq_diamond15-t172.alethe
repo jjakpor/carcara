@@ -1,0 +1,4 @@
+(assume nt172.0 (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))))
+(assume nt172.1 (not (not (and (= x2 y2) (= y2 x3)))))
+(step t172 (cl (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (not (and (= x2 y2) (= y2 x3)))) :rule or_neg :args (0))
+(step t.end (cl) :rule resolution :premises (nt172.0 nt172.1 t172))

@@ -1,0 +1,7 @@
+(assume nt282.t17.0 (not (= false true)))
+(assume t282.t7 (= false (p1 (f7 c_0) c_0)))
+(assume t282.t10 (= (p1 (f7 c_0) c_0) (p1 c_0 c_0)))
+(assume t282.t13 (= (p1 c_0 c_0) (p1 (f5 c_0) c_0)))
+(assume t282.t16 (= (p1 (f5 c_0) c_0) true))
+(step t282.t17 (cl (= false true)) :rule trans :premises (t282.t7 t282.t10 t282.t13 t282.t16))
+(step t.end (cl) :rule resolution :premises (nt282.t17.0 t282.t17))

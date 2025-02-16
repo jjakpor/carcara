@@ -1,0 +1,5 @@
+(assume nt233.0 (not (= (op e4 unit) (op e4 e0))))
+(assume t232 (= e4 e4))
+(assume a11 (= unit e0))
+(step t233 (cl (= (op e4 unit) (op e4 e0))) :rule cong :premises (t232 a11))
+(step t.end (cl) :rule resolution :premises (nt233.0 t233))

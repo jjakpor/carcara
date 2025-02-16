@@ -1,0 +1,7 @@
+(assume nt324.0 (not (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0))))
+(assume t309 (or (not (= (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)))) (not (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit))) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0))))
+(assume t321 (= (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0))))
+(assume t323 (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit)))
+(step t309' (cl (not (= (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)))) (not (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit))) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0))) :rule or :premises (t309))
+(step t324 (cl (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0))) :rule resolution :premises (t309' t321 t323))
+(step t.end (cl) :rule resolution :premises (nt324.0 t324))

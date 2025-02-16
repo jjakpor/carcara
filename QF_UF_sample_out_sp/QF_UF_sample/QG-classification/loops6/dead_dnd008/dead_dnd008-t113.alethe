@@ -1,0 +1,5 @@
+(assume nt113.0 (not (= (or (not (= e1 (op e1 (op e1 e1)))) (= e0 e1)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)))))
+(assume t108 (= (not (= e1 (op e1 (op e1 e1)))) (not (= e1 (op e1 (op e1 e1))))))
+(assume t112 (= (= e0 e1) (= e1 e0)))
+(step t113 (cl (= (or (not (= e1 (op e1 (op e1 e1)))) (= e0 e1)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)))) :rule cong :premises (t108 t112))
+(step t.end (cl) :rule resolution :premises (nt113.0 t113))

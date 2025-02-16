@@ -1,0 +1,6 @@
+(assume nt84.t641.0 (not (not (= x11 x12))))
+(assume t84.t1 (or (not (= (= x11 x12) false)) (not (= x11 x12))))
+(assume t84.t640 (= (= x11 x12) false))
+(step t84.t1' (cl (not (= (= x11 x12) false)) (not (= x11 x12))) :rule or :premises (t84.t1))
+(step t84.t641 (cl (not (= x11 x12))) :rule resolution :premises (t84.t1' t84.t640))
+(step t.end (cl) :rule resolution :premises (nt84.t641.0 t84.t641))

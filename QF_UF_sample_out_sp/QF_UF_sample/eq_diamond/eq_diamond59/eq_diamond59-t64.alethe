@@ -1,0 +1,3 @@
+(assume nt64.0 (not (= (not (= x27 x28)) (not (= x27 x28)))))
+(step t64 (cl (= (not (= x27 x28)) (not (= x27 x28)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt64.0 t64))

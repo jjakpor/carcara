@@ -1,0 +1,5 @@
+(assume nt116.0 (not (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2))))))
+(assume t115 (or (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2)))) (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2))))))
+(step t115' (cl (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2)))) (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2))))) :rule or :premises (t115))
+(step t116 (cl (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2))))) :rule contraction :premises (t115'))
+(step t.end (cl) :rule resolution :premises (nt116.0 t116))

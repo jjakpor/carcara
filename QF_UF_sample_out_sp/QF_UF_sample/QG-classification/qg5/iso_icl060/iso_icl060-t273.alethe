@@ -1,0 +1,7 @@
+(assume nt273.0 (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e1)))))
+(assume t266 (or (not (= (= (op e0 e0) e0) (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e1))))) (not (= (op e0 e0) e0)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e1)))))
+(assume t268 (= (= (op e0 e0) e0) (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e1)))))
+(assume t272 (= (op e0 e0) e0))
+(step t266' (cl (not (= (= (op e0 e0) e0) (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e1))))) (not (= (op e0 e0) e0)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e1)))) :rule or :premises (t266))
+(step t273 (cl (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e1)))) :rule resolution :premises (t266' t268 t272))
+(step t.end (cl) :rule resolution :premises (nt273.0 t273))

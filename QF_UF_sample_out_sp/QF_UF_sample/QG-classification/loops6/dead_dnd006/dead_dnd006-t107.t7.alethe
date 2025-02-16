@@ -1,0 +1,4 @@
+(assume nt107.t7.0 (not (= (op e2 unit) e2)))
+(assume t107.t6 (and (= (op unit e2) e2) (= (op e2 unit) e2)))
+(step t107.t7 (cl (= (op e2 unit) e2)) :rule and :premises (t107.t6) :args (1))
+(step t.end (cl) :rule resolution :premises (nt107.t7.0 t107.t7))

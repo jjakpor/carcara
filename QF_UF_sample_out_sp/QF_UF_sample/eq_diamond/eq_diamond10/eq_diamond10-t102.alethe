@@ -1,0 +1,7 @@
+(assume nt102.0 (not (and (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9)))))
+(assume t96 (or (not (= (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (and (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9))))) (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9)))) (and (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9)))))
+(assume t100 (= (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (and (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9)))))
+(assume t101 (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))
+(step t96' (cl (not (= (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (and (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9))))) (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9)))) (and (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9)))) :rule or :premises (t96))
+(step t102 (cl (and (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9)))) :rule resolution :premises (t96' t100 t101))
+(step t.end (cl) :rule resolution :premises (nt102.0 t102))

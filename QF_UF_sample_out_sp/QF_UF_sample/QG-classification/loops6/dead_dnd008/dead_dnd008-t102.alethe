@@ -1,0 +1,7 @@
+(assume nt102.0 (not (= e1 (op e1 (op e1 e1)))))
+(assume nt102.1 (not (not (= e1 (op e1 e0)))))
+(assume nt102.2 (not (not (= e0 (op e1 (op e1 e0))))))
+(assume t101 (or (not (= e1 (op e1 e0))) (not (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))))
+(step t101' (cl (not (= e1 (op e1 e0))) (not (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))) :rule or :premises (t101))
+(step t102 (cl (= e1 (op e1 (op e1 e1))) (not (= e1 (op e1 e0))) (not (= e0 (op e1 (op e1 e0))))) :rule reordering :premises (t101'))
+(step t.end (cl) :rule resolution :premises (nt102.0 nt102.1 nt102.2 t102))

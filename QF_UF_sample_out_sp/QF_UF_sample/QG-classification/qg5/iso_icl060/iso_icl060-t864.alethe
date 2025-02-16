@@ -1,0 +1,6 @@
+(assume nt864.0 (not (not (= (op e1 e3) (op (op (op e1 e3) e3) (op e1 e3))))))
+(assume t851 (or (not (= (= (op e1 e3) (op (op (op e1 e3) e3) (op e1 e3))) false)) (not (= (op e1 e3) (op (op (op e1 e3) e3) (op e1 e3))))))
+(assume t863 (= (= (op e1 e3) (op (op (op e1 e3) e3) (op e1 e3))) false))
+(step t851' (cl (not (= (= (op e1 e3) (op (op (op e1 e3) e3) (op e1 e3))) false)) (not (= (op e1 e3) (op (op (op e1 e3) e3) (op e1 e3))))) :rule or :premises (t851))
+(step t864 (cl (not (= (op e1 e3) (op (op (op e1 e3) e3) (op e1 e3))))) :rule resolution :premises (t851' t863))
+(step t.end (cl) :rule resolution :premises (nt864.0 t864))

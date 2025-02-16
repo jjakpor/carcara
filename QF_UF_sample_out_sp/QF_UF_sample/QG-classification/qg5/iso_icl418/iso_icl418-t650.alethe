@@ -1,0 +1,4 @@
+(assume nt650.0 (not (not (= (op e3 e1) (op e3 e4)))))
+(assume t597 (and (and (and (and (and (and (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e0) (op e3 e2)))) (not (= (op e3 e0) (op e3 e3)))) (not (= (op e3 e0) (op e3 e4)))) (not (= (op e3 e1) (op e3 e2)))) (not (= (op e3 e1) (op e3 e3)))) (not (= (op e3 e1) (op e3 e4)))))
+(step t650 (cl (not (= (op e3 e1) (op e3 e4)))) :rule and :premises (t597) :args (1))
+(step t.end (cl) :rule resolution :premises (nt650.0 t650))

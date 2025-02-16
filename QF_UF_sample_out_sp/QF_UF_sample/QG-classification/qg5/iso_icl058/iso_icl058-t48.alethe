@@ -1,0 +1,5 @@
+(assume nt48.0 (not (= e1 (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))
+(assume t46 (= e1 (op e3 e4)))
+(assume t47 (= (op e3 e4) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))
+(step t48 (cl (= e1 (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))) :rule trans :premises (t46 t47))
+(step t.end (cl) :rule resolution :premises (nt48.0 t48))

@@ -1,0 +1,6 @@
+(assume nt210.0 (not (not (= e3 (op e3 (op e3 e3))))))
+(assume t207 (or (= e3 e0) (not (= e3 (op e3 (op e3 e3))))))
+(assume t209 (not (= e3 e0)))
+(step t207' (cl (= e3 e0) (not (= e3 (op e3 (op e3 e3))))) :rule or :premises (t207))
+(step t210 (cl (not (= e3 (op e3 (op e3 e3))))) :rule resolution :premises (t207' t209))
+(step t.end (cl) :rule resolution :premises (nt210.0 t210))

@@ -1,0 +1,7 @@
+(assume nt122.0 (not (= y$X y$n1s4)))
+(assume t118 (or (not (= y$2 (= y$X y$n1s4))) (not y$2) (= y$X y$n1s4)))
+(assume t65 (= y$2 (= y$X y$n1s4)))
+(assume t121 y$2)
+(step t118' (cl (not (= y$2 (= y$X y$n1s4))) (not y$2) (= y$X y$n1s4)) :rule or :premises (t118))
+(step t122 (cl (= y$X y$n1s4)) :rule resolution :premises (t118' t65 t121))
+(step t.end (cl) :rule resolution :premises (nt122.0 t122))

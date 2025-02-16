@@ -1,0 +1,5 @@
+(assume nt218.0 (not (= (= x0 x19) false)))
+(assume nt218.1 (not (not (not (= x0 x19)))))
+(assume t217 (= (= (= x0 x19) false) (not (= x0 x19))))
+(step t218 (cl (= (= x0 x19) false) (not (not (= x0 x19)))) :rule equiv2 :premises (t217))
+(step t.end (cl) :rule resolution :premises (nt218.0 nt218.1 t218))

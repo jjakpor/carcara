@@ -1,0 +1,4 @@
+(assume nt282.t11.0 (not (= (f5 c_0) c_0)))
+(assume t282.a1 (= c_0 (f5 c_0)))
+(step t282.t11 (cl (= (f5 c_0) c_0)) :rule symm :premises (t282.a1))
+(step t.end (cl) :rule resolution :premises (nt282.t11.0 t282.t11))

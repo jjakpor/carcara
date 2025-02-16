@@ -1,0 +1,6 @@
+(assume nt714.t36.0 (not (= (= (op e3 e1) (op e3 (op (op e1 e3) e1))) false)))
+(assume t714.t18 (or (= (= (op e3 e1) (op e3 (op (op e1 e3) e1))) false) (= (op e3 e1) (op e3 (op (op e1 e3) e1)))))
+(assume t714.t35 (not (= (op e3 e1) (op e3 (op (op e1 e3) e1)))))
+(step t714.t18' (cl (= (= (op e3 e1) (op e3 (op (op e1 e3) e1))) false) (= (op e3 e1) (op e3 (op (op e1 e3) e1)))) :rule or :premises (t714.t18))
+(step t714.t36 (cl (= (= (op e3 e1) (op e3 (op (op e1 e3) e1))) false)) :rule resolution :premises (t714.t18' t714.t35))
+(step t.end (cl) :rule resolution :premises (nt714.t36.0 t714.t36))

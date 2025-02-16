@@ -1,0 +1,5 @@
+(assume nt28.0 (not (= (and (not (= nf0 nf0)) (= nf0 nf0)) false)))
+(assume t26 (= (and (not (= nf0 nf0)) (= nf0 nf0)) (and false true)))
+(assume t27 (= (and false true) false))
+(step t28 (cl (= (and (not (= nf0 nf0)) (= nf0 nf0)) false)) :rule trans :premises (t26 t27))
+(step t.end (cl) :rule resolution :premises (nt28.0 t28))

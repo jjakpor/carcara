@@ -1,0 +1,6 @@
+(assume nt453.0 (not (= x40 x41)))
+(assume nt453.1 (not (not (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))))))
+(assume t452 (or (not (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41)))) (= x40 x41)))
+(step t452' (cl (not (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41)))) (= x40 x41)) :rule or :premises (t452))
+(step t453 (cl (= x40 x41) (not (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))))) :rule reordering :premises (t452'))
+(step t.end (cl) :rule resolution :premises (nt453.0 nt453.1 t453))

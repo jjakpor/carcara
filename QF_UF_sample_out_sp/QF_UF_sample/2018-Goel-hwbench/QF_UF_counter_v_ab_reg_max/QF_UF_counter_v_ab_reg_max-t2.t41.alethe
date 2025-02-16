@@ -1,0 +1,7 @@
+(assume nt2.t41.0 (not (= y$27 (not (= y$X$next y$n15s4)))))
+(assume t2.t36 (or (not (= (= y$27 (not (= y$n15s4 y$X$next))) (= y$27 (not (= y$X$next y$n15s4))))) (not (= y$27 (not (= y$n15s4 y$X$next)))) (= y$27 (not (= y$X$next y$n15s4)))))
+(assume t2.t40 (= (= y$27 (not (= y$n15s4 y$X$next))) (= y$27 (not (= y$X$next y$n15s4)))))
+(assume a7 (= y$27 (not (= y$n15s4 y$X$next))))
+(step t2.t36' (cl (not (= (= y$27 (not (= y$n15s4 y$X$next))) (= y$27 (not (= y$X$next y$n15s4))))) (not (= y$27 (not (= y$n15s4 y$X$next)))) (= y$27 (not (= y$X$next y$n15s4)))) :rule or :premises (t2.t36))
+(step t2.t41 (cl (= y$27 (not (= y$X$next y$n15s4)))) :rule resolution :premises (t2.t36' t2.t40 a7))
+(step t.end (cl) :rule resolution :premises (nt2.t41.0 t2.t41))

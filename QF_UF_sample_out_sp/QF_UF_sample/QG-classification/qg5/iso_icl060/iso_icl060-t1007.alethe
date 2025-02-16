@@ -1,0 +1,8 @@
+(assume nt1007.0 (not (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1)))))
+(assume nt1007.1 (not (not (= (op (op e1 e3) e1) (op e3 (op e1 e3))))))
+(assume nt1007.2 (not (not (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))))
+(assume nt1007.3 (not (not (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))))
+(assume t1006 (or (not (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))) (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) (not (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))))
+(step t1006' (cl (not (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))) (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) (not (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))) :rule or :premises (t1006))
+(step t1007 (cl (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))) (not (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1)))) (not (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))) :rule reordering :premises (t1006'))
+(step t.end (cl) :rule resolution :premises (nt1007.0 nt1007.1 nt1007.2 nt1007.3 t1007))

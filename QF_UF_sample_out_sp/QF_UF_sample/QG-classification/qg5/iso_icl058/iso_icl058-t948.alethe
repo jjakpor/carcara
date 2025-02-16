@@ -1,0 +1,5 @@
+(assume nt948.0 (not (= (= e0 (op (op e0 e0) (op (op (op e0 e0) e0) e0))) false)))
+(assume t947 (= (= e0 (op (op e0 e0) (op (op (op e0 e0) e0) e0))) (= (op e0 (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0)))))
+(assume t788 (= (= (op e0 (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0))) false))
+(step t948 (cl (= (= e0 (op (op e0 e0) (op (op (op e0 e0) e0) e0))) false)) :rule trans :premises (t947 t788))
+(step t.end (cl) :rule resolution :premises (nt948.0 t948))

@@ -1,0 +1,5 @@
+(assume nt8.0 (not (= (= clk (not (not clk))) (= clk clk))))
+(assume t6 (= clk clk))
+(assume t7 (= (not (not clk)) clk))
+(step t8 (cl (= (= clk (not (not clk))) (= clk clk))) :rule cong :premises (t6 t7))
+(step t.end (cl) :rule resolution :premises (nt8.0 t8))

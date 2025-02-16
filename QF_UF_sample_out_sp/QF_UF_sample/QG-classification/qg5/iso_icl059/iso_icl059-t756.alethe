@@ -1,0 +1,4 @@
+(assume nt756.0 (not (= (op e0 (op e0 (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))
+(assume t755 (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op e0 (op e0 (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
+(step t756 (cl (= (op e0 (op e0 (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) :rule symm :premises (t755))
+(step t.end (cl) :rule resolution :premises (nt756.0 t756))

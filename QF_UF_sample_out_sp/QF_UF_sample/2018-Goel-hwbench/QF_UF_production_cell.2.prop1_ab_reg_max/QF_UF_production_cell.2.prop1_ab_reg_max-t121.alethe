@@ -1,0 +1,4 @@
+(assume nt121.0 (not (= y$59 (= y$59 true))))
+(assume t120 (= (= y$59 true) y$59))
+(step t121 (cl (= y$59 (= y$59 true))) :rule symm :premises (t120))
+(step t.end (cl) :rule resolution :premises (nt121.0 t121))

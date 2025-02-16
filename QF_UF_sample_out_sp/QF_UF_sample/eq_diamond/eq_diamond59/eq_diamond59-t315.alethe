@@ -1,0 +1,6 @@
+(assume nt315.0 (not (= x8 x9)))
+(assume t314 (or (= x8 x9) (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))))
+(assume t310 (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))
+(step t314' (cl (= x8 x9) (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))) :rule or :premises (t314))
+(step t315 (cl (= x8 x9)) :rule resolution :premises (t314' t310))
+(step t.end (cl) :rule resolution :premises (nt315.0 t315))

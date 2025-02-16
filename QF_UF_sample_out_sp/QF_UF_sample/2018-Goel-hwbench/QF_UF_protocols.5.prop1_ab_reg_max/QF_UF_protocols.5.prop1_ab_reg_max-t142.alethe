@@ -1,0 +1,5 @@
+(assume nt142.0 (not (not y$v3_1517448506_302_op)))
+(assume nt142.1 (not (and y$v3_1517448506_266_op y$v3_1517448506_301_op)))
+(assume a311 (= y$v3_1517448506_302_op (and y$v3_1517448506_266_op y$v3_1517448506_301_op)))
+(step t142 (cl (not y$v3_1517448506_302_op) (and y$v3_1517448506_266_op y$v3_1517448506_301_op)) :rule equiv1 :premises (a311))
+(step t.end (cl) :rule resolution :premises (nt142.0 nt142.1 t142))

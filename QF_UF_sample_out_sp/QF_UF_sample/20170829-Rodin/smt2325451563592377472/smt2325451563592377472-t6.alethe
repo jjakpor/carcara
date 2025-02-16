@@ -1,0 +1,3 @@
+(assume nt6.0 (not (= clk clk)))
+(step t6 (cl (= clk clk)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nt6.0 t6))

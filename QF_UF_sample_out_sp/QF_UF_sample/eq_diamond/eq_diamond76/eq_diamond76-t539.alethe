@@ -1,0 +1,4 @@
+(assume nt539.0 (not (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48))))
+(assume t538 (and (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48))))
+(step t539 (cl (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48))) :rule and :premises (t538) :args (1))
+(step t.end (cl) :rule resolution :premises (nt539.0 t539))

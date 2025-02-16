@@ -1,0 +1,5 @@
+(assume nt759.0 (not (= (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0) (op e0 (op (op e0 e0) e0)))))
+(assume t412 (= (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))
+(assume t758 (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op e0 (op (op e0 e0) e0))))
+(step t759 (cl (= (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0) (op e0 (op (op e0 e0) e0)))) :rule trans :premises (t412 t758))
+(step t.end (cl) :rule resolution :premises (nt759.0 t759))

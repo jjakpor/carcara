@@ -1,0 +1,4 @@
+(assume nt767.0 (not (= (not (= (op (op (op e0 (op e0 e0)) e0) (op e0 e0)) (op (op e0 e0) (op e0 e0)))) (not (= (op (op e0 e0) (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))))))
+(assume t766 (= (= (op (op (op e0 (op e0 e0)) e0) (op e0 e0)) (op (op e0 e0) (op e0 e0))) (= (op (op e0 e0) (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))))
+(step t767 (cl (= (not (= (op (op (op e0 (op e0 e0)) e0) (op e0 e0)) (op (op e0 e0) (op e0 e0)))) (not (= (op (op e0 e0) (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))))) :rule cong :premises (t766))
+(step t.end (cl) :rule resolution :premises (nt767.0 t767))

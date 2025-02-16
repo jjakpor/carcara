@@ -1,0 +1,4 @@
+(assume nt14.0 (not (not (= flash nf0))))
+(assume t10 (and (not (= flash nf0)) (= nf nf0)))
+(step t14 (cl (not (= flash nf0))) :rule and :premises (t10) :args (0))
+(step t.end (cl) :rule resolution :premises (nt14.0 t14))

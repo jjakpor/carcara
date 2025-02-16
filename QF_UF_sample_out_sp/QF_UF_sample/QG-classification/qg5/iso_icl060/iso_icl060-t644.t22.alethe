@@ -1,0 +1,7 @@
+(assume nt644.t22.0 (not (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))))))
+(assume t644.t17 (or (not (= (not (= (op e0 e0) (op e0 e2))) (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3)))))) (not (not (= (op e0 e0) (op e0 e2)))) (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))))))
+(assume t644.t19 (= (not (= (op e0 e0) (op e0 e2))) (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))))))
+(assume t644.t21 (not (= (op e0 e0) (op e0 e2))))
+(step t644.t17' (cl (not (= (not (= (op e0 e0) (op e0 e2))) (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3)))))) (not (not (= (op e0 e0) (op e0 e2)))) (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))))) :rule or :premises (t644.t17))
+(step t644.t22 (cl (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))))) :rule resolution :premises (t644.t17' t644.t19 t644.t21))
+(step t.end (cl) :rule resolution :premises (nt644.t22.0 t644.t22))

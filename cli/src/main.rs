@@ -4,7 +4,7 @@ mod logger;
 mod path_args;
 
 use carcara::{
-    ast, benchmarking::OnlineBenchmarkResults, check, check_and_elaborate, check_parallel, checker, elaborator, generate_lia_smt_instances, parser, small_slice1b, small_slice2
+    ast, benchmarking::OnlineBenchmarkResults, check, check_and_elaborate, check_parallel, checker, elaborator, generate_lia_smt_instances, parser, small_slice3
 };
 use clap::{AppSettings, ArgEnum, Args, Parser, Subcommand};
 use const_format::{formatcp, str_index};
@@ -619,7 +619,7 @@ fn slice_command(
     
     let sliced= if options.small {
         // small_slice1b(&proof, &options.from)
-        let (sliced_proof, sliced_problem_string, sliced_proof_string) = small_slice2(&problem, &proof, &options.from, &mut pool);
+        let (sliced_proof, sliced_problem_string, sliced_proof_string) = small_slice3(&problem, &proof, &options.from, &mut pool);
         let file_name_without_extension = options.input.proof_file.clone().replace(".alethe", ""); 
         let sliced_problem_file_name = format!("{}-{}.smt2", file_name_without_extension, options.from);
         let sliced_proof_file_name = format!("{}-{}.alethe", file_name_without_extension, options.from); 

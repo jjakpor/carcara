@@ -1,0 +1,6 @@
+(assume nt23.0 (not (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1)))))
+(assume nt23.1 (not false))
+(assume t22 (or (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1))) false))
+(step t22' (cl (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1))) false) :rule or :premises (t22))
+(step t23 (cl (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1))) false) :rule contraction :premises (t22'))
+(step t.end (cl) :rule resolution :premises (nt23.0 nt23.1 t23))

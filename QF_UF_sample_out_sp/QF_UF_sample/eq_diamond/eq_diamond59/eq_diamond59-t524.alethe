@@ -1,0 +1,6 @@
+(assume nt524.0 (not (= x28 x29)))
+(assume t523 (or (= x28 x29) (not (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))))))
+(assume t519 (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))))
+(step t523' (cl (= x28 x29) (not (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))))) :rule or :premises (t523))
+(step t524 (cl (= x28 x29)) :rule resolution :premises (t523' t519))
+(step t.end (cl) :rule resolution :premises (nt524.0 t524))

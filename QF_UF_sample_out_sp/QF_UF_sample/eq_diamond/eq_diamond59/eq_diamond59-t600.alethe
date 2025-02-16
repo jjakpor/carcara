@@ -1,0 +1,6 @@
+(assume nt600.0 (not (= x35 x36)))
+(assume nt600.1 (not (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))))
+(assume t599 (or (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36)))) (= x35 x36)))
+(step t599' (cl (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36)))) (= x35 x36)) :rule or :premises (t599))
+(step t600 (cl (= x35 x36) (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))) :rule reordering :premises (t599'))
+(step t.end (cl) :rule resolution :premises (nt600.0 nt600.1 t600))

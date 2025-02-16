@@ -1,0 +1,5 @@
+(assume nt286.0 (not (= (op (op (op (op e3 e3) (op e3 e3)) e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))
+(assume t273 (= (op (op (op (op e3 e3) (op e3 e3)) e3) (op e3 e3)) (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3))))
+(assume t285 (= (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))
+(step t286 (cl (= (op (op (op (op e3 e3) (op e3 e3)) e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) :rule trans :premises (t273 t285))
+(step t.end (cl) :rule resolution :premises (nt286.0 t286))

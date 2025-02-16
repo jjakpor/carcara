@@ -1,0 +1,7 @@
+(assume nt119.0 (not (not (= e0 (op e2 (op e2 e0))))))
+(assume nt119.1 (not (= e2 (op e2 (op e2 e2)))))
+(assume nt119.2 (not (not (= e2 (op e2 e0)))))
+(assume t118 (or (not (= e2 (op e2 e0))) (not (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2)))))
+(step t118' (cl (not (= e2 (op e2 e0))) (not (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2)))) :rule or :premises (t118))
+(step t119 (cl (not (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2))) (not (= e2 (op e2 e0)))) :rule reordering :premises (t118'))
+(step t.end (cl) :rule resolution :premises (nt119.0 nt119.1 nt119.2 t119))

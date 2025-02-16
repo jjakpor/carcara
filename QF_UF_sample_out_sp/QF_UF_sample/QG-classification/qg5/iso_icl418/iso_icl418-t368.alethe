@@ -1,0 +1,6 @@
+(assume nt368.0 (not (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e3)))))
+(assume t250 (or (not (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e3)) false)) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e3)))))
+(assume t367 (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e3)) false))
+(step t250' (cl (not (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e3)) false)) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e3)))) :rule or :premises (t250))
+(step t368 (cl (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e3)))) :rule resolution :premises (t250' t367))
+(step t.end (cl) :rule resolution :premises (nt368.0 t368))

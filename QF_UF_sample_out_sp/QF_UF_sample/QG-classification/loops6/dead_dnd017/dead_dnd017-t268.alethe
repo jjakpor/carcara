@@ -1,0 +1,7 @@
+(assume nt268.0 (not (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))))))
+(assume nt268.1 (not (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))))))
+(assume nt268.2 (not (= e5 (op e5 (op e5 e5)))))
+(assume t267 (or (= e5 (op e5 (op e5 e5))) (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0))))) (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))))))
+(step t267' (cl (= e5 (op e5 (op e5 e5))) (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0))))) (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))))) :rule or :premises (t267))
+(step t268 (cl (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0))))) (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0))))) (= e5 (op e5 (op e5 e5)))) :rule reordering :premises (t267'))
+(step t.end (cl) :rule resolution :premises (nt268.0 nt268.1 nt268.2 t268))

@@ -1,0 +1,7 @@
+(assume nt178.t18.0 (not false))
+(assume t178.t0 (or (not (= (= false true) false)) (not (= false true)) false))
+(assume t178.t1 (= (= false true) false))
+(assume t178.t17 (= false true))
+(step t178.t0' (cl (not (= (= false true) false)) (not (= false true)) false) :rule or :premises (t178.t0))
+(step t178.t18 (cl false) :rule resolution :premises (t178.t0' t178.t1 t178.t17))
+(step t.end (cl) :rule resolution :premises (nt178.t18.0 t178.t18))

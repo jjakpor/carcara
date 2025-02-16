@@ -1,0 +1,5 @@
+(assume nt67.0 (not (not (=> (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false))))
+(assume nt67.1 (not (not (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1))))))
+(assume t66 (= (=> (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false) (not (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1))))))
+(step t67 (cl (not (=> (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false)) (not (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1))))) :rule equiv1 :premises (t66))
+(step t.end (cl) :rule resolution :premises (nt67.0 nt67.1 t67))

@@ -1,0 +1,5 @@
+(assume nt334.0 (not (= (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)) (op (op (op e1 e3) e1) e1))))
+(assume t332 (= (op (op e1 e3) e1) (op (op e1 e3) e1)))
+(assume t333 (= (op (op (op e1 e3) e1) e3) e1))
+(step t334 (cl (= (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)) (op (op (op e1 e3) e1) e1))) :rule cong :premises (t332 t333))
+(step t.end (cl) :rule resolution :premises (nt334.0 t334))

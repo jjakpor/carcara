@@ -1,0 +1,5 @@
+(assume nt512.0 (not (= (= e0 (op e0 e4)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))))
+(assume t27 (= e0 (op (op e1 e3) e1)))
+(assume t28 (= (op e0 e4) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))
+(step t512 (cl (= (= e0 (op e0 e4)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))) :rule cong :premises (t27 t28))
+(step t.end (cl) :rule resolution :premises (nt512.0 t512))

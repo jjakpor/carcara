@@ -1,0 +1,5 @@
+(assume nt268.0 (not (not (= (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (and (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25)))))))
+(assume nt268.1 (not (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))))))
+(assume nt268.2 (not (and (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25)))))
+(step t268 (cl (not (= (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (and (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25))))) (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25)))) (and (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nt268.0 nt268.1 nt268.2 t268))

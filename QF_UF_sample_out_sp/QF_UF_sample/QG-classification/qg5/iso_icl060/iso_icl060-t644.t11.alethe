@@ -1,0 +1,6 @@
+(assume nt644.t11.0 (not (= (op (op (op e1 e3) e3) (op (op e1 e3) e3)) (op (op (op e1 e3) e1) (op e1 e3)))))
+(assume t425 (= (op (op (op e1 e3) e3) (op (op e1 e3) e3)) (op (op e1 e3) e3)))
+(assume t644.t8 (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))
+(assume t644.t10 (= (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) (op (op (op e1 e3) e1) (op e1 e3))))
+(step t644.t11 (cl (= (op (op (op e1 e3) e3) (op (op e1 e3) e3)) (op (op (op e1 e3) e1) (op e1 e3)))) :rule trans :premises (t425 t644.t8 t644.t10))
+(step t.end (cl) :rule resolution :premises (nt644.t11.0 t644.t11))

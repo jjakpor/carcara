@@ -1,0 +1,6 @@
+(assume nt84.t213.0 (not (= x19 x20)))
+(assume t84.t212 (or (= x19 x20) (not (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))))))
+(assume t84.t208 (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))))
+(step t84.t212' (cl (= x19 x20) (not (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))))) :rule or :premises (t84.t212))
+(step t84.t213 (cl (= x19 x20)) :rule resolution :premises (t84.t212' t84.t208))
+(step t.end (cl) :rule resolution :premises (nt84.t213.0 t84.t213))

@@ -1,0 +1,4 @@
+(assume nt118.0 (not (=> (and (p4 c8) (= c8 c_0)) (p4 c_0))))
+(assume nt118.1 (not (not (p4 c_0))))
+(step t118 (cl (=> (and (p4 c8) (= c8 c_0)) (p4 c_0)) (not (p4 c_0))) :rule implies_neg2)
+(step t.end (cl) :rule resolution :premises (nt118.0 nt118.1 t118))

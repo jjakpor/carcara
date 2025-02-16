@@ -1,0 +1,7 @@
+(assume nt2.t33.0 (not (= y$13 (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)))))
+(assume t2.t8 (or (not (= (= y$13 (= y$X$next y$X$next_rhs_op)) (= y$13 (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X))))) (not (= y$13 (= y$X$next y$X$next_rhs_op))) (= y$13 (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)))))
+(assume t2.t32 (= (= y$13 (= y$X$next y$X$next_rhs_op)) (= y$13 (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)))))
+(assume a6 (= y$13 (= y$X$next y$X$next_rhs_op)))
+(step t2.t8' (cl (not (= (= y$13 (= y$X$next y$X$next_rhs_op)) (= y$13 (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X))))) (not (= y$13 (= y$X$next y$X$next_rhs_op))) (= y$13 (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)))) :rule or :premises (t2.t8))
+(step t2.t33 (cl (= y$13 (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)))) :rule resolution :premises (t2.t8' t2.t32 a6))
+(step t.end (cl) :rule resolution :premises (nt2.t33.0 t2.t33))

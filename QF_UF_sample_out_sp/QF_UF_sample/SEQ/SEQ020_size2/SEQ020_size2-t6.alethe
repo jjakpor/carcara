@@ -1,0 +1,5 @@
+(assume nt6.0 (not (= (= (p1 (f7 c_1) c_1) (not (not (p1 (f7 c_1) c_1)))) (= (p1 (f7 c_1) c_1) (p1 (f7 c_1) c_1)))))
+(assume t4 (= (p1 (f7 c_1) c_1) (p1 (f7 c_1) c_1)))
+(assume t5 (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)))
+(step t6 (cl (= (= (p1 (f7 c_1) c_1) (not (not (p1 (f7 c_1) c_1)))) (= (p1 (f7 c_1) c_1) (p1 (f7 c_1) c_1)))) :rule cong :premises (t4 t5))
+(step t.end (cl) :rule resolution :premises (nt6.0 t6))

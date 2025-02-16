@@ -1,7 +1,0 @@
-(assume a0 (or (not (= (= y$42 (and y$2 y$33)) (= y$42 (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4)))))) (not (= y$42 (and y$2 y$33))) (= y$42 (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4))))))
-(assume a1 (= (= y$42 (and y$2 y$33)) (= y$42 (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4))))))
-(assume a2 (= y$42 (and y$2 y$33)))
-(assume a3 (not (= y$42 (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4))))))
-(step t0 (cl (not (= (= y$42 (and y$2 y$33)) (= y$42 (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4)))))) (not (= y$42 (and y$2 y$33))) (= y$42 (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4))))) :rule or :premises (a0))
-(step t1 (cl (= y$42 (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4))))) :rule resolution :premises (a2 t0 a1))
-(step t2 (cl) :rule resolution :premises (a3 t1))

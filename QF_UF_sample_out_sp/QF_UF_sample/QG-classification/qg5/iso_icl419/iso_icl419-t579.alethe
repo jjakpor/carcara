@@ -1,0 +1,4 @@
+(assume nt579.0 (not (= (not (= (op e2 e1) (op e2 e2))) (not (= (op (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op e3 e3))) (op (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op e3 e3)) e3)))))))
+(assume t578 (= (= (op e2 e1) (op e2 e2)) (= (op (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op e3 e3))) (op (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op e3 e3)) e3)))))
+(step t579 (cl (= (not (= (op e2 e1) (op e2 e2))) (not (= (op (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op e3 e3))) (op (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op e3 e3)) e3)))))) :rule cong :premises (t578))
+(step t.end (cl) :rule resolution :premises (nt579.0 t579))

@@ -1,0 +1,6 @@
+(assume nt743.0 (not (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))))
+(assume t11 (or (= x14 x15) (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))))
+(assume t742 (not (= x14 x15)))
+(step t11' (cl (= x14 x15) (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))) :rule or :premises (t11))
+(step t743 (cl (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))) :rule resolution :premises (t11' t742))
+(step t.end (cl) :rule resolution :premises (nt743.0 t743))

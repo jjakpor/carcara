@@ -1,0 +1,3 @@
+(assume nt41.0 (not (= (= (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (and (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12)))) true)))
+(step t41 (cl (= (= (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (and (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nt41.0 t41))

@@ -1,0 +1,6 @@
+(assume nt36.0 (not (= x9 x10)))
+(assume t35 (or (= x9 x10) (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))))
+(assume t31 (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))
+(step t35' (cl (= x9 x10) (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))) :rule or :premises (t35))
+(step t36 (cl (= x9 x10)) :rule resolution :premises (t35' t31))
+(step t.end (cl) :rule resolution :premises (nt36.0 t36))

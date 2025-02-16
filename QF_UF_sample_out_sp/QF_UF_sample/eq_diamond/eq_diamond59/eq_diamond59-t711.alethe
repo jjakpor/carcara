@@ -1,0 +1,6 @@
+(assume nt711.0 (not (= x45 x46)))
+(assume t710 (or (= x45 x46) (not (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))))))
+(assume t706 (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))))
+(step t710' (cl (= x45 x46) (not (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))))) :rule or :premises (t710))
+(step t711 (cl (= x45 x46)) :rule resolution :premises (t710' t706))
+(step t.end (cl) :rule resolution :premises (nt711.0 t711))

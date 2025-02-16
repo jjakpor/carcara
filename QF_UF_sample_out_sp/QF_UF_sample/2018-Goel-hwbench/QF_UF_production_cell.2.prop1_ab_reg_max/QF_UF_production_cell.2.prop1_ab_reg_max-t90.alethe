@@ -1,0 +1,5 @@
+(assume nt90.0 (not (= y$v_A y$v_k_Press)))
+(assume t12 (= y$v_A y$v_B))
+(assume t89 (= y$v_B y$v_k_Press))
+(step t90 (cl (= y$v_A y$v_k_Press)) :rule trans :premises (t12 t89))
+(step t.end (cl) :rule resolution :premises (nt90.0 t90))

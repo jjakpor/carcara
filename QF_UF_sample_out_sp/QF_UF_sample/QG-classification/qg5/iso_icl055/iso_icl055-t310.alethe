@@ -1,0 +1,7 @@
+(assume nt310.0 (not (not (= (op e1 e1) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))))
+(assume t301 (or (not (= (not (= e2 e3)) (not (= (op e1 e1) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))) (not (not (= e2 e3))) (not (= (op e1 e1) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))))
+(assume t308 (= (not (= e2 e3)) (not (= (op e1 e1) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))))
+(assume t309 (not (= e2 e3)))
+(step t301' (cl (not (= (not (= e2 e3)) (not (= (op e1 e1) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))) (not (not (= e2 e3))) (not (= (op e1 e1) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))) :rule or :premises (t301))
+(step t310 (cl (not (= (op e1 e1) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))) :rule resolution :premises (t301' t308 t309))
+(step t.end (cl) :rule resolution :premises (nt310.0 t310))

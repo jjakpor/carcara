@@ -1,0 +1,5 @@
+(assume nt2.t19.0 (not (= e2 (op e2 (op e2 e2)))))
+(assume t2.t12 (= e2 (op e2 e0)))
+(assume t2.t18 (= (op e2 e0) (op e2 (op e2 e2))))
+(step t2.t19 (cl (= e2 (op e2 (op e2 e2)))) :rule trans :premises (t2.t12 t2.t18))
+(step t.end (cl) :rule resolution :premises (nt2.t19.0 t2.t19))

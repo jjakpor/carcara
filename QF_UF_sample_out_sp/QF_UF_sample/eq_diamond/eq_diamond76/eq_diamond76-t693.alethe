@@ -1,0 +1,4 @@
+(assume nt693.0 (not (=> (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (= x61 x62))))
+(assume t692 (and (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (=> (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (= x61 x62))))
+(step t693 (cl (=> (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (= x61 x62))) :rule and :premises (t692) :args (1))
+(step t.end (cl) :rule resolution :premises (nt693.0 t693))

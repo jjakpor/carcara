@@ -1,0 +1,6 @@
+(assume nt61.0 (not (= (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (or (= (f6 c_1) (f5 c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))))))
+(assume t58 (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1))))
+(assume t59 (= (not (= c_0 (f6 c_1))) (not (= c_0 (f6 c_1)))))
+(assume t60 (= (not (= c_0 (f5 c_1))) (not (= c_0 (f5 c_1)))))
+(step t61 (cl (= (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (or (= (f6 c_1) (f5 c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))))) :rule cong :premises (t58 t59 t60))
+(step t.end (cl) :rule resolution :premises (nt61.0 t61))

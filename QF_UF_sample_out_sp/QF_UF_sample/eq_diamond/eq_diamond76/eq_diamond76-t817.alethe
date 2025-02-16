@@ -1,0 +1,6 @@
+(assume nt817.0 (not (= x72 x73)))
+(assume t816 (or (= x72 x73) (not (or (and (= x72 y72) (= y72 x73)) (and (= x72 z72) (= z72 x73))))))
+(assume t812 (or (and (= x72 y72) (= y72 x73)) (and (= x72 z72) (= z72 x73))))
+(step t816' (cl (= x72 x73) (not (or (and (= x72 y72) (= y72 x73)) (and (= x72 z72) (= z72 x73))))) :rule or :premises (t816))
+(step t817 (cl (= x72 x73)) :rule resolution :premises (t816' t812))
+(step t.end (cl) :rule resolution :premises (nt817.0 t817))

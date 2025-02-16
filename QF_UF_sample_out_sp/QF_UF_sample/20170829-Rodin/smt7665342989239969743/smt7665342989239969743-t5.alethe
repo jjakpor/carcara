@@ -1,0 +1,4 @@
+(assume nt5.0 (not (not rd2)))
+(assume t4 (and (not rd1) (not rd2)))
+(step t5 (cl (not rd2)) :rule and :premises (t4) :args (1))
+(step t.end (cl) :rule resolution :premises (nt5.0 t5))

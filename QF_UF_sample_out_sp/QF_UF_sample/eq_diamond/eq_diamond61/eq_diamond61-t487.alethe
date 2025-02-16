@@ -1,0 +1,6 @@
+(assume nt487.0 (not (= x43 x44)))
+(assume t486 (or (= x43 x44) (not (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))))))
+(assume t482 (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))))
+(step t486' (cl (= x43 x44) (not (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))))) :rule or :premises (t486))
+(step t487 (cl (= x43 x44)) :rule resolution :premises (t486' t482))
+(step t.end (cl) :rule resolution :premises (nt487.0 t487))

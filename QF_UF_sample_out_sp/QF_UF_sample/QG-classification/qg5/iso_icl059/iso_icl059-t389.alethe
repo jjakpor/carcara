@@ -1,0 +1,8 @@
+(assume nt389.0 (not (= (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0)) false)))
+(assume nt389.1 (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))
+(assume t387 (or (= (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0)) false) (not (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))))
+(assume t388 (or (not (not (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))) (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))
+(step t388' (cl (not (not (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))) (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0))) :rule or :premises (t388))
+(step t387' (cl (= (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0)) false) (not (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))) :rule or :premises (t387))
+(step t389 (cl (= (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0)) false) (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0))) :rule resolution :premises (t387' t388'))
+(step t.end (cl) :rule resolution :premises (nt389.0 nt389.1 t389))

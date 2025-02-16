@@ -1,0 +1,6 @@
+(assume nt11.0 (not (= x14 x15)))
+(assume nt11.1 (not (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))))
+(assume t10 (or (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15)))) (= x14 x15)))
+(step t10' (cl (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15)))) (= x14 x15)) :rule or :premises (t10))
+(step t11 (cl (= x14 x15) (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))) :rule reordering :premises (t10'))
+(step t.end (cl) :rule resolution :premises (nt11.0 nt11.1 t11))

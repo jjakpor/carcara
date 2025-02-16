@@ -1,0 +1,8 @@
+(assume nt526.0 (not (= (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)) false)))
+(assume nt526.1 (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))))
+(assume t524 (or (= (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)) false) (not (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))))))
+(assume t525 (or (not (not (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))))) (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))))
+(step t524' (cl (= (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)) false) (not (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))))) :rule or :premises (t524))
+(step t525' (cl (not (not (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))))) (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))) :rule or :premises (t525))
+(step t526 (cl (= (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)) false) (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))) :rule resolution :premises (t524' t525'))
+(step t.end (cl) :rule resolution :premises (nt526.0 nt526.1 t526))

@@ -1,0 +1,4 @@
+(assume nt176.0 (not (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15))))
+(assume t175 (and (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15))))
+(step t176 (cl (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15))) :rule and :premises (t175) :args (1))
+(step t.end (cl) :rule resolution :premises (nt176.0 t176))

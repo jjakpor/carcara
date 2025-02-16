@@ -1,0 +1,8 @@
+(assume nt765.0 (not (= (or (= e0 (op e4 e2)) (= e0 (op e3 e2)) (= e0 (op e2 e2)) (= e0 (op e0 e2)) (= e0 (op e1 e2))) (or (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4))) (= (op (op e4 e3) (op e4 e3)) (op e3 (op e3 e4))) (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e3 e4))) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))) (= (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e3 e4)))))))
+(assume t761 (= (= e0 (op e4 e2)) (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4)))))
+(assume t762 (= (= e0 (op e3 e2)) (= (op (op e4 e3) (op e4 e3)) (op e3 (op e3 e4)))))
+(assume t63 (= (= e0 (op e2 e2)) (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e3 e4)))))
+(assume t763 (= (= e0 (op e0 e2)) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op e3 e4)))))
+(assume t764 (= (= e0 (op e1 e2)) (= (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e3 e4)))))
+(step t765 (cl (= (or (= e0 (op e4 e2)) (= e0 (op e3 e2)) (= e0 (op e2 e2)) (= e0 (op e0 e2)) (= e0 (op e1 e2))) (or (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4))) (= (op (op e4 e3) (op e4 e3)) (op e3 (op e3 e4))) (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e3 e4))) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))) (= (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e3 e4)))))) :rule cong :premises (t761 t762 t63 t763 t764))
+(step t.end (cl) :rule resolution :premises (nt765.0 t765))

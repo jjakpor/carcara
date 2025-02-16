@@ -1,0 +1,8 @@
+(assume nt900.0 (not (= (and (= (op e4 e4) (op e4 e4)) (= (op e4 e3) (op e3 e4)) (= (op e4 e2) (op e2 e4)) (= (op e4 e0) (op e0 e4)) (= (op e4 e1) (op e1 e4))) (and true (= (op e3 e4) (op e4 e3)) (= (op e2 e4) (op e4 e2)) (= (op e0 e4) (op e4 e0)) (= (op e1 e4) (op e4 e1))))))
+(assume t896 (= (= (op e4 e4) (op e4 e4)) true))
+(assume t526 (= (= (op e4 e3) (op e3 e4)) (= (op e3 e4) (op e4 e3))))
+(assume t897 (= (= (op e4 e2) (op e2 e4)) (= (op e2 e4) (op e4 e2))))
+(assume t898 (= (= (op e4 e0) (op e0 e4)) (= (op e0 e4) (op e4 e0))))
+(assume t899 (= (= (op e4 e1) (op e1 e4)) (= (op e1 e4) (op e4 e1))))
+(step t900 (cl (= (and (= (op e4 e4) (op e4 e4)) (= (op e4 e3) (op e3 e4)) (= (op e4 e2) (op e2 e4)) (= (op e4 e0) (op e0 e4)) (= (op e4 e1) (op e1 e4))) (and true (= (op e3 e4) (op e4 e3)) (= (op e2 e4) (op e4 e2)) (= (op e0 e4) (op e4 e0)) (= (op e1 e4) (op e4 e1))))) :rule cong :premises (t896 t526 t897 t898 t899))
+(step t.end (cl) :rule resolution :premises (nt900.0 t900))

@@ -1,0 +1,3 @@
+(assume nt1105.0 (not (= (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))))
+(step t1105 (cl (= (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) :rule rare_rewrite :args ("bool-double-not-elim" (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))
+(step t.end (cl) :rule resolution :premises (nt1105.0 t1105))

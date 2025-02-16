@@ -1,0 +1,4 @@
+(assume nt139.0 (not (not (= e1 e0))))
+(assume t138 (not (= e0 e1)))
+(step t139 (cl (not (= e1 e0))) :rule not_symm :premises (t138))
+(step t.end (cl) :rule resolution :premises (nt139.0 t139))

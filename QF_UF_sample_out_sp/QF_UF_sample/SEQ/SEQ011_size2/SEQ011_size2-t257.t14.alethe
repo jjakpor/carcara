@@ -1,0 +1,3 @@
+(assume nt257.t14.0 (not (= (= (p1 (f5 c_0) c_0) true) (p1 (f5 c_0) c_0))))
+(step t257.t14 (cl (= (= (p1 (f5 c_0) c_0) true) (p1 (f5 c_0) c_0))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nt257.t14.0 t257.t14))

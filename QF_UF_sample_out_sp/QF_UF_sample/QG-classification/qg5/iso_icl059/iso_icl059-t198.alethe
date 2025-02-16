@@ -1,0 +1,4 @@
+(assume nt198.0 (not (and (= (op e0 (op e0 e0)) e0) (= (op e0 (op e0 e1)) e1))))
+(assume t197 (and (and (= (op e0 (op e0 e0)) e0) (= (op e0 (op e0 e1)) e1)) (= (op e0 (op e0 e2)) e2)))
+(step t198 (cl (and (= (op e0 (op e0 e0)) e0) (= (op e0 (op e0 e1)) e1))) :rule and :premises (t197) :args (0))
+(step t.end (cl) :rule resolution :premises (nt198.0 t198))

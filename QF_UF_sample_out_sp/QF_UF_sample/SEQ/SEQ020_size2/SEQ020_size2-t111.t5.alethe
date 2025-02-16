@@ -1,0 +1,5 @@
+(assume nt111.t5.0 (not (= (p4 c8) true)))
+(assume nt111.t5.1 (not (not (p4 c8))))
+(assume t111.t4 (= (= (p4 c8) true) (p4 c8)))
+(step t111.t5 (cl (= (p4 c8) true) (not (p4 c8))) :rule equiv2 :premises (t111.t4))
+(step t.end (cl) :rule resolution :premises (nt111.t5.0 nt111.t5.1 t111.t5))

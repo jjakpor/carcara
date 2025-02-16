@@ -1,0 +1,7 @@
+(assume nt31.0 (not (not (p1 (f5 c_1) c_1))))
+(assume nt31.1 (not (not (= c_1 (f5 c_1)))))
+(assume nt31.2 (not (not (= c_1 (f7 c_1)))))
+(assume nt31.3 (not (not (not (p1 (f7 c_1) c_1)))))
+(assume t30 (not (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))))
+(step t31 (cl (not (p1 (f5 c_1) c_1)) (not (= c_1 (f5 c_1))) (not (= c_1 (f7 c_1))) (not (not (p1 (f7 c_1) c_1)))) :rule not_and :premises (t30))
+(step t.end (cl) :rule resolution :premises (nt31.0 nt31.1 nt31.2 nt31.3 t31))

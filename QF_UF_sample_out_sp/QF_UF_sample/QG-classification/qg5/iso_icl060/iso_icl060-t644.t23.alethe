@@ -1,0 +1,6 @@
+(assume nt644.t23.0 (not (= (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))) false)))
+(assume t644.t16 (or (= (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))) false) (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3)))))
+(assume t644.t22 (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3)))))
+(step t644.t16' (cl (= (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))) false) (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3)))) :rule or :premises (t644.t16))
+(step t644.t23 (cl (= (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))) false)) :rule resolution :premises (t644.t16' t644.t22))
+(step t.end (cl) :rule resolution :premises (nt644.t23.0 t644.t23))

@@ -1,0 +1,4 @@
+(assume nt1216.t2.0 (not (= (op (op (op e1 e3) e3) e3) (op (op e1 e3) e1))))
+(assume t486 (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)))
+(step t1216.t2 (cl (= (op (op (op e1 e3) e3) e3) (op (op e1 e3) e1))) :rule symm :premises (t486))
+(step t.end (cl) :rule resolution :premises (nt1216.t2.0 t1216.t2))

@@ -1,0 +1,3 @@
+(assume nt37.0 (not (= (or (and prt red_SR) false (and (not prt) red_MR) false (and red_SR (not prt)) (and red_MR prt)) (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt)))))
+(step t37 (cl (= (or (and prt red_SR) false (and (not prt) red_MR) false (and red_SR (not prt)) (and red_MR prt)) (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt)))) :rule hole)
+(step t.end (cl) :rule resolution :premises (nt37.0 t37))

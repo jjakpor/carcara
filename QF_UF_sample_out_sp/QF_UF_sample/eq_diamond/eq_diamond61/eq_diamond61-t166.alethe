@@ -1,0 +1,5 @@
+(assume nt166.0 (not (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))))
+(assume nt166.1 (not (= x14 x15)))
+(assume t165 (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15)))
+(step t166 (cl (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15)))) (= x14 x15)) :rule implies :premises (t165))
+(step t.end (cl) :rule resolution :premises (nt166.0 nt166.1 t166))

@@ -1,0 +1,5 @@
+(assume nt6.0 (not (= (not (not (and (not (= nf0 flash)) (= nf0 nf)))) (and (not (= flash nf0)) (= nf nf0)))))
+(assume t1 (= (not (not (and (not (= nf0 flash)) (= nf0 nf)))) (and (not (= nf0 flash)) (= nf0 nf))))
+(assume t5 (= (and (not (= nf0 flash)) (= nf0 nf)) (and (not (= flash nf0)) (= nf nf0))))
+(step t6 (cl (= (not (not (and (not (= nf0 flash)) (= nf0 nf)))) (and (not (= flash nf0)) (= nf nf0)))) :rule trans :premises (t1 t5))
+(step t.end (cl) :rule resolution :premises (nt6.0 t6))

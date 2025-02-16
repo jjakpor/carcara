@@ -1,0 +1,4 @@
+(assume nt271.0 (not (and (= (op e0 e0) e0) (= (op e1 e1) e1))))
+(assume t270 (and (and (= (op e0 e0) e0) (= (op e1 e1) e1)) (= (op e2 e2) e2)))
+(step t271 (cl (and (= (op e0 e0) e0) (= (op e1 e1) e1))) :rule and :premises (t270) :args (0))
+(step t.end (cl) :rule resolution :premises (nt271.0 t271))

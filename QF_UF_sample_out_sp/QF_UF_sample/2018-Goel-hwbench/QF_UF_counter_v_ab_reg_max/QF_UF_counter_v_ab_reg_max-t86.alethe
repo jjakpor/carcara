@@ -1,0 +1,7 @@
+(assume nt86.0 (not (= y$X$next_rhs_op (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X))))
+(assume t69 (or (not (= (= y$X$next_rhs_op (ite y$en y$s$4_op y$X)) (= y$X$next_rhs_op (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)))) (not (= y$X$next_rhs_op (ite y$en y$s$4_op y$X))) (= y$X$next_rhs_op (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X))))
+(assume t85 (= (= y$X$next_rhs_op (ite y$en y$s$4_op y$X)) (= y$X$next_rhs_op (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X))))
+(assume a5 (= y$X$next_rhs_op (ite y$en y$s$4_op y$X)))
+(step t69' (cl (not (= (= y$X$next_rhs_op (ite y$en y$s$4_op y$X)) (= y$X$next_rhs_op (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)))) (not (= y$X$next_rhs_op (ite y$en y$s$4_op y$X))) (= y$X$next_rhs_op (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X))) :rule or :premises (t69))
+(step t86 (cl (= y$X$next_rhs_op (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X))) :rule resolution :premises (t69' t85 a5))
+(step t.end (cl) :rule resolution :premises (nt86.0 t86))

@@ -1,0 +1,3 @@
+(assume nt6.0 (not (= (= (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (and (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (=> (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (= x6 x7)))) true)))
+(step t6 (cl (= (= (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (and (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (=> (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (= x6 x7)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nt6.0 t6))

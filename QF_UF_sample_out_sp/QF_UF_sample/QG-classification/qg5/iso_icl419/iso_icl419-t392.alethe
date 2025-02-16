@@ -1,0 +1,5 @@
+(assume nt392.0 (not (not (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3)))))))
+(assume nt392.1 (not (= (op e3 e3) (op (op (op e3 e3) (op e3 e3)) (op e3 e3)))))
+(assume t391 (or (not (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3))))) (= (op e3 e3) (op (op (op e3 e3) (op e3 e3)) (op e3 e3)))))
+(step t392 (cl (not (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3))))) (= (op e3 e3) (op (op (op e3 e3) (op e3 e3)) (op e3 e3)))) :rule or :premises (t391))
+(step t.end (cl) :rule resolution :premises (nt392.0 nt392.1 t392))

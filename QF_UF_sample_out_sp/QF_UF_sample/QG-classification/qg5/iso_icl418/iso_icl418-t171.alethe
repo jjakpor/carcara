@@ -1,0 +1,5 @@
+(assume nt171.0 (not (= (= (op (op e1 e1) (op e1 e1)) (op e1 e1)) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))))))
+(assume t168 (= (= (op (op e1 e1) (op e1 e1)) (op e1 e1)) (= (op e1 e1) (op (op e1 e1) (op e1 e1)))))
+(assume t170 (= (= (op e1 e1) (op (op e1 e1) (op e1 e1))) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))))))
+(step t171 (cl (= (= (op (op e1 e1) (op e1 e1)) (op e1 e1)) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))))) :rule trans :premises (t168 t170))
+(step t.end (cl) :rule resolution :premises (nt171.0 t171))

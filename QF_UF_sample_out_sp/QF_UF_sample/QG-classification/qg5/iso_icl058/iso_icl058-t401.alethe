@@ -1,0 +1,8 @@
+(assume nt401.0 (not (= (or (= (op e4 e4) e1) (= (op e3 e3) e1) (= (op e2 e2) e1) (= (op e0 e0) e1) (= (op e1 e1) e1)) (or (= e1 (op e4 e4)) (= e1 (op e3 e3)) (= e1 (op e2 e2)) (= e1 (op e0 e0)) (= e1 (op e1 e1))))))
+(assume t397 (= (= (op e4 e4) e1) (= e1 (op e4 e4))))
+(assume t398 (= (= (op e3 e3) e1) (= e1 (op e3 e3))))
+(assume t124 (= (= (op e2 e2) e1) (= e1 (op e2 e2))))
+(assume t399 (= (= (op e0 e0) e1) (= e1 (op e0 e0))))
+(assume t400 (= (= (op e1 e1) e1) (= e1 (op e1 e1))))
+(step t401 (cl (= (or (= (op e4 e4) e1) (= (op e3 e3) e1) (= (op e2 e2) e1) (= (op e0 e0) e1) (= (op e1 e1) e1)) (or (= e1 (op e4 e4)) (= e1 (op e3 e3)) (= e1 (op e2 e2)) (= e1 (op e0 e0)) (= e1 (op e1 e1))))) :rule cong :premises (t397 t398 t124 t399 t400))
+(step t.end (cl) :rule resolution :premises (nt401.0 t401))

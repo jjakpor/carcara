@@ -1,0 +1,6 @@
+(assume nt376.0 (not (not (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)))))
+(assume t359 (or (not (= (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)) false)) (not (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)))))
+(assume t375 (= (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)) false))
+(step t359' (cl (not (= (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)) false)) (not (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)))) :rule or :premises (t359))
+(step t376 (cl (not (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)))) :rule resolution :premises (t359' t375))
+(step t.end (cl) :rule resolution :premises (nt376.0 t376))

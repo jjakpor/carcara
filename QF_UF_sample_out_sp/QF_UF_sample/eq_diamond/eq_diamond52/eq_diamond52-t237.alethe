@@ -1,0 +1,4 @@
+(assume nt237.0 (not (=> (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21))) (= x20 x21))))
+(assume t236 (and (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21))) (=> (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21))) (= x20 x21))))
+(step t237 (cl (=> (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21))) (= x20 x21))) :rule and :premises (t236) :args (1))
+(step t.end (cl) :rule resolution :premises (nt237.0 t237))

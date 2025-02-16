@@ -1,0 +1,7 @@
+(assume nt500.0 (not (not (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4)))))
+(assume t492 (or (not (= (not (= (op e0 e4) (op e1 e4))) (not (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4))))) (not (not (= (op e0 e4) (op e1 e4)))) (not (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4)))))
+(assume t497 (= (not (= (op e0 e4) (op e1 e4))) (not (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4)))))
+(assume t499 (not (= (op e0 e4) (op e1 e4))))
+(step t492' (cl (not (= (not (= (op e0 e4) (op e1 e4))) (not (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4))))) (not (not (= (op e0 e4) (op e1 e4)))) (not (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4)))) :rule or :premises (t492))
+(step t500 (cl (not (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4)))) :rule resolution :premises (t492' t497 t499))
+(step t.end (cl) :rule resolution :premises (nt500.0 t500))

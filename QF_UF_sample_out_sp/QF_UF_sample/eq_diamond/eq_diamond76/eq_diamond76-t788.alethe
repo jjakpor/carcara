@@ -1,0 +1,3 @@
+(assume nt788.0 (not (= (= (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (and (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (=> (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (= x70 x71)))) true)))
+(step t788 (cl (= (= (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (and (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (=> (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (= x70 x71)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nt788.0 t788))

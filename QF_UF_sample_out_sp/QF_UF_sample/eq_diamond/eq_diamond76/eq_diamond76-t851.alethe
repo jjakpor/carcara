@@ -1,0 +1,6 @@
+(assume nt851.0 (not (not (and (= x11 z11) (= z11 x12)))))
+(assume t2 (or (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (not (and (= x11 z11) (= z11 x12)))))
+(assume t850 (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12)))))
+(step t2' (cl (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (not (and (= x11 z11) (= z11 x12)))) :rule or :premises (t2))
+(step t851 (cl (not (and (= x11 z11) (= z11 x12)))) :rule resolution :premises (t2' t850))
+(step t.end (cl) :rule resolution :premises (nt851.0 t851))

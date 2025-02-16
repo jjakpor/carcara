@@ -1,5 +1,0 @@
-(assume a0 (= y$s$4_op y$s$4_op))
-(assume a1 (= (ite y$6 y$n1s4 y$s$1_op) (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4))))
-(assume a2 (not (= (= y$s$4_op (ite y$6 y$n1s4 y$s$1_op)) (= y$s$4_op (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4))))))
-(step t0 (cl (= (= y$s$4_op (ite y$6 y$n1s4 y$s$1_op)) (= y$s$4_op (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4))))) :rule cong :premises (a0 a1))
-(step t1 (cl) :rule resolution :premises (a2 t0))

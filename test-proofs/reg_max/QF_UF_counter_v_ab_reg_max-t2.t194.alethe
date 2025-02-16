@@ -1,5 +1,0 @@
-(assume a0 (not (not (= (= y$33 (= y$n15s4 y$s$1_op)) (= y$33 (= y$n15s4 (Add_4_4_4 y$X y$n1s4)))))))
-(assume a1 (not (not (= y$33 (= y$n15s4 y$s$1_op)))))
-(assume a2 (not (= y$33 (= y$n15s4 (Add_4_4_4 y$X y$n1s4)))))
-(step t0 (cl (not (= (= y$33 (= y$n15s4 y$s$1_op)) (= y$33 (= y$n15s4 (Add_4_4_4 y$X y$n1s4))))) (not (= y$33 (= y$n15s4 y$s$1_op))) (= y$33 (= y$n15s4 (Add_4_4_4 y$X y$n1s4)))) :rule equiv_pos2)
-(step t1 (cl) :rule resolution :premises (a0 a1 a2 t0))

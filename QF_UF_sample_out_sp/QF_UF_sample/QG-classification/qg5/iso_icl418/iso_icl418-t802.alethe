@@ -1,0 +1,6 @@
+(assume nt802.0 (not (= (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))) false)))
+(assume t795 (or (= (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))) false) (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4)))))
+(assume t801 (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4)))))
+(step t795' (cl (= (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))) false) (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4)))) :rule or :premises (t795))
+(step t802 (cl (= (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))) false)) :rule resolution :premises (t795' t801))
+(step t.end (cl) :rule resolution :premises (nt802.0 t802))

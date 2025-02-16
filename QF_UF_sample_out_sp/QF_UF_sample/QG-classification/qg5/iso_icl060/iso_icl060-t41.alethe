@@ -1,0 +1,8 @@
+(assume nt41.0 (not (= e1 (op (op (op e1 e3) e3) (op (op e1 e3) e3)))))
+(assume nt41.1 (not (= e1 (op e3 (op (op e1 e3) e3)))))
+(assume nt41.2 (not (= e1 (op (op e1 e3) (op (op e1 e3) e3)))))
+(assume nt41.3 (not (= e1 (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))
+(assume nt41.4 (not (= e1 (op e1 (op (op e1 e3) e3)))))
+(assume t40 (or (= e1 (op (op (op e1 e3) e3) (op (op e1 e3) e3))) (= e1 (op e3 (op (op e1 e3) e3))) (= e1 (op (op e1 e3) (op (op e1 e3) e3))) (= e1 (op (op (op e1 e3) e1) (op (op e1 e3) e3))) (= e1 (op e1 (op (op e1 e3) e3)))))
+(step t41 (cl (= e1 (op (op (op e1 e3) e3) (op (op e1 e3) e3))) (= e1 (op e3 (op (op e1 e3) e3))) (= e1 (op (op e1 e3) (op (op e1 e3) e3))) (= e1 (op (op (op e1 e3) e1) (op (op e1 e3) e3))) (= e1 (op e1 (op (op e1 e3) e3)))) :rule or :premises (t40))
+(step t.end (cl) :rule resolution :premises (nt41.0 nt41.1 nt41.2 nt41.3 nt41.4 t41))

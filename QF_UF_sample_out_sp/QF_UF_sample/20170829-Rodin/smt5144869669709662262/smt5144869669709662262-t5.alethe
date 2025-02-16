@@ -1,0 +1,6 @@
+(assume nt5.0 (not (= flash nf)))
+(assume t3 (or (= flash nf0) (= flash nf)))
+(assume t4 (not (= flash nf0)))
+(step t3' (cl (= flash nf0) (= flash nf)) :rule or :premises (t3))
+(step t5 (cl (= flash nf)) :rule resolution :premises (t3' t4))
+(step t.end (cl) :rule resolution :premises (nt5.0 t5))

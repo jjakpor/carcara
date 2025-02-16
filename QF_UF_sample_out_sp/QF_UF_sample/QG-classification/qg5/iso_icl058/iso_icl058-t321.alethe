@@ -1,0 +1,4 @@
+(assume nt321.0 (not (= (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) e0))))))
+(assume t320 (= (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) e0))))
+(step t321 (cl (= (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) e0))))) :rule cong :premises (t320))
+(step t.end (cl) :rule resolution :premises (nt321.0 t321))

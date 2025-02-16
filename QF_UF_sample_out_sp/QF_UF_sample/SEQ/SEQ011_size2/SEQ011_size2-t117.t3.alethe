@@ -1,0 +1,5 @@
+(assume nt117.t3.0 (not (= (f6 c_0) (f5 c_0))))
+(assume t117.t0 (= (f6 c_0) c_1))
+(assume t117.t2 (= c_1 (f5 c_0)))
+(step t117.t3 (cl (= (f6 c_0) (f5 c_0))) :rule trans :premises (t117.t0 t117.t2))
+(step t.end (cl) :rule resolution :premises (nt117.t3.0 t117.t3))

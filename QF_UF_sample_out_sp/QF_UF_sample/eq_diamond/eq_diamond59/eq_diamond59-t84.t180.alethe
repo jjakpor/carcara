@@ -1,0 +1,6 @@
+(assume nt84.t180.0 (not (= x16 x17)))
+(assume t84.t179 (or (= x16 x17) (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))))))
+(assume t84.t175 (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))))
+(step t84.t179' (cl (= x16 x17) (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))))) :rule or :premises (t84.t179))
+(step t84.t180 (cl (= x16 x17)) :rule resolution :premises (t84.t179' t84.t175))
+(step t.end (cl) :rule resolution :premises (nt84.t180.0 t84.t180))

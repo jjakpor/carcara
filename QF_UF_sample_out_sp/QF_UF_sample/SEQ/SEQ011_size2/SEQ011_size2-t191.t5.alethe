@@ -1,0 +1,8 @@
+(assume nt191.t5.0 (not (= (p1 (f7 c_0) c_0) false)))
+(assume nt191.t5.1 (not (p1 (f7 c_0) c_0)))
+(assume t191.t3 (or (= (p1 (f7 c_0) c_0) false) (not (not (p1 (f7 c_0) c_0)))))
+(assume t191.t4 (or (not (not (not (p1 (f7 c_0) c_0)))) (p1 (f7 c_0) c_0)))
+(step t191.t4' (cl (not (not (not (p1 (f7 c_0) c_0)))) (p1 (f7 c_0) c_0)) :rule or :premises (t191.t4))
+(step t191.t3' (cl (= (p1 (f7 c_0) c_0) false) (not (not (p1 (f7 c_0) c_0)))) :rule or :premises (t191.t3))
+(step t191.t5 (cl (= (p1 (f7 c_0) c_0) false) (p1 (f7 c_0) c_0)) :rule resolution :premises (t191.t3' t191.t4'))
+(step t.end (cl) :rule resolution :premises (nt191.t5.0 nt191.t5.1 t191.t5))

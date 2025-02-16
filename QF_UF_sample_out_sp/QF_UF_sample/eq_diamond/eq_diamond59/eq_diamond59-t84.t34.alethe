@@ -1,0 +1,5 @@
+(assume nt84.t34.0 (not (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))))
+(assume nt84.t34.1 (not (= x8 x9)))
+(assume t84.t33 (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9)))
+(step t84.t34 (cl (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9)))) (= x8 x9)) :rule implies :premises (t84.t33))
+(step t.end (cl) :rule resolution :premises (nt84.t34.0 nt84.t34.1 t84.t34))
