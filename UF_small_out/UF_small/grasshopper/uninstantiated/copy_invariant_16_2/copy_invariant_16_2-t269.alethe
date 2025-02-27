@@ -1,0 +1,5 @@
+(assume nst269.0 (not (not (and (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0)))))
+(assume nst269.1 (not (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))))
+(assume t268 (=> (and (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))))
+(step st269 (cl (not (and (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) :rule implies :premises (t268))
+(step t.end (cl) :rule resolution :premises (nst269.0 nst269.1 st269))

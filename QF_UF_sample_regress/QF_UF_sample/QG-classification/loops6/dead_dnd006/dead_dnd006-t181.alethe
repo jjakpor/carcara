@@ -1,0 +1,5 @@
+(assume nst181.0 (not (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))))))
+(assume nst181.1 (not (= e3 (op e3 (op e3 e3)))))
+(assume t180 (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))))
+(step st181 (cl (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) (= e3 (op e3 (op e3 e3)))) :rule implies :premises (t180))
+(step t.end (cl) :rule resolution :premises (nst181.0 nst181.1 st181))

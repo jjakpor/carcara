@@ -1,0 +1,7 @@
+(assume nst515.0 (not (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
+(assume t508 (or (not (= (not (= e1 e4)) (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))) (not (not (= e1 e4))) (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
+(assume t513 (= (not (= e1 e4)) (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
+(assume t514 (not (= e1 e4)))
+(step t508' (cl (not (= (not (= e1 e4)) (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))) (not (not (= e1 e4))) (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))) :rule or :premises (t508))
+(step st515 (cl (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))) :rule resolution :premises (t508' t513 t514))
+(step t.end (cl) :rule resolution :premises (nst515.0 st515))

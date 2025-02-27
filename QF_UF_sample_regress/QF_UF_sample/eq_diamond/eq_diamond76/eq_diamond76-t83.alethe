@@ -1,0 +1,6 @@
+(assume nst83.0 (not (= x5 x6)))
+(assume nst83.1 (not (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))))
+(assume t82 (or (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (= x5 x6)))
+(step t82' (cl (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (= x5 x6)) :rule or :premises (t82))
+(step st83 (cl (= x5 x6) (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))) :rule reordering :premises (t82'))
+(step t.end (cl) :rule resolution :premises (nst83.0 nst83.1 st83))

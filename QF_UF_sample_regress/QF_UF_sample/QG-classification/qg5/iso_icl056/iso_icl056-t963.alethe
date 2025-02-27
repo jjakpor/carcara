@@ -1,0 +1,6 @@
+(assume nst963.0 (not (not (= (op e1 e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))))))
+(assume t960 (or (not (= (= (op e1 e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) false)) (not (= (op e1 e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))))))
+(assume t962 (= (= (op e1 e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) false))
+(step t960' (cl (not (= (= (op e1 e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) false)) (not (= (op e1 e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))))) :rule or :premises (t960))
+(step st963 (cl (not (= (op e1 e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))))) :rule resolution :premises (t960' t962))
+(step t.end (cl) :rule resolution :premises (nst963.0 st963))

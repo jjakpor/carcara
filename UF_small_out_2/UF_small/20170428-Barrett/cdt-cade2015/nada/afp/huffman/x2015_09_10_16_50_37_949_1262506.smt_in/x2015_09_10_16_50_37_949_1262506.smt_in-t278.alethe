@@ -1,0 +1,8 @@
+(assume nst278.0 (not (=> (and (= b$ c$) (not (= c$ d$))) (not (= b$ d$)))))
+(assume nst278.1 (not (not (= b$ d$))))
+(assume t271 (or (=> (and (= b$ c$) (not (= c$ d$))) (not (= b$ d$))) (and (= b$ c$) (not (= c$ d$)))))
+(assume t277 (or (not (and (= b$ c$) (not (= c$ d$)))) (not (= b$ d$))))
+(step t277' (cl (not (and (= b$ c$) (not (= c$ d$)))) (not (= b$ d$))) :rule or :premises (t277))
+(step t271' (cl (=> (and (= b$ c$) (not (= c$ d$))) (not (= b$ d$))) (and (= b$ c$) (not (= c$ d$)))) :rule or :premises (t271))
+(step st278 (cl (=> (and (= b$ c$) (not (= c$ d$))) (not (= b$ d$))) (not (= b$ d$))) :rule resolution :premises (t271' t277'))
+(step t.end (cl) :rule resolution :premises (nst278.0 nst278.1 st278))

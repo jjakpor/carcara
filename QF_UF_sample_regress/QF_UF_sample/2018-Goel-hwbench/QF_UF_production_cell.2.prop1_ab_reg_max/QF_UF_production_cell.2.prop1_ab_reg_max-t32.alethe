@@ -1,0 +1,3 @@
+(assume nst32.0 (not (= y$v_count y$v_count)))
+(step st32 (cl (= y$v_count y$v_count)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst32.0 st32))

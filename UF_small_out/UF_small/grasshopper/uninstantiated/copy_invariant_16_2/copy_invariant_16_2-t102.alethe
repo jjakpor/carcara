@@ -1,0 +1,3 @@
+(assume nst102.0 (not (= (not (= cp_2$0 sk_?e$0)) (not (= cp_2$0 sk_?e$0)))))
+(step st102 (cl (= (not (= cp_2$0 sk_?e$0)) (not (= cp_2$0 sk_?e$0)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst102.0 st102))

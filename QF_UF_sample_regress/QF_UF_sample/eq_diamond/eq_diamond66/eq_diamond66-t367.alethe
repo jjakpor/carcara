@@ -1,0 +1,5 @@
+(assume nst367.0 (not (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))))))
+(assume nst367.1 (not (= x31 x32)))
+(assume t366 (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32)))
+(step st367 (cl (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32)))) (= x31 x32)) :rule implies :premises (t366))
+(step t.end (cl) :rule resolution :premises (nst367.0 nst367.1 st367))

@@ -1,0 +1,5 @@
+(assume nst733.0 (not (not (= (not (= (op e1 e4) (op e3 e4))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0))))))))
+(assume nst733.1 (not (not (not (= (op e1 e4) (op e3 e4))))))
+(assume nst733.2 (not (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0))))))
+(step st733 (cl (not (= (not (= (op e1 e4) (op e3 e4))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0)))))) (not (not (= (op e1 e4) (op e3 e4)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst733.0 nst733.1 nst733.2 st733))

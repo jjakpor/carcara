@@ -1,0 +1,3 @@
+(assume nst7.0 (not (= (not (not clk)) clk)))
+(step st7 (cl (= (not (not clk)) clk)) :rule rare_rewrite :args ("bool-double-not-elim" clk))
+(step t.end (cl) :rule resolution :premises (nst7.0 st7))

@@ -1,0 +1,3 @@
+(assume nst29.0 (not (= (= (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (and (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2)))) true)))
+(step st29 (cl (= (= (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (and (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst29.0 st29))

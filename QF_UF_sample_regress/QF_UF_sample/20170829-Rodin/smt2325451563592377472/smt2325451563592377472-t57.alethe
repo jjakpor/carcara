@@ -1,0 +1,7 @@
+(assume nst57.0 (not (or (or (not car) (not clk)) clk)))
+(assume t49 (or (not (= (or (or (not car) (not clk)) (not (not clk))) (or (or (not car) (not clk)) clk))) (not (or (or (not car) (not clk)) (not (not clk)))) (or (or (not car) (not clk)) clk)))
+(assume t51 (= (or (or (not car) (not clk)) (not (not clk))) (or (or (not car) (not clk)) clk)))
+(assume t56 (or (or (not car) (not clk)) (not (not clk))))
+(step t49' (cl (not (= (or (or (not car) (not clk)) (not (not clk))) (or (or (not car) (not clk)) clk))) (not (or (or (not car) (not clk)) (not (not clk)))) (or (or (not car) (not clk)) clk)) :rule or :premises (t49))
+(step st57 (cl (or (or (not car) (not clk)) clk)) :rule resolution :premises (t49' t51 t56))
+(step t.end (cl) :rule resolution :premises (nst57.0 st57))

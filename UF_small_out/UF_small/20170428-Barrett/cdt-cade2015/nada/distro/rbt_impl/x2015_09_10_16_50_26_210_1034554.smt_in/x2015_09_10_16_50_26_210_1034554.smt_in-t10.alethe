@@ -1,0 +1,6 @@
+(assume nst10.0 (not (not (and (fun_app$f (rbt_less$ less$ k$) t1$) (fun_app$f (rbt_greater$ less$ k$) t2$) (fun_app$f (rbt_sorted$ less$) t1$) (fun_app$f (rbt_sorted$ less$) t2$)))))
+(assume a8 (not (fun_app$f (rbt_greater$ less$ k$) t2$)))
+(assume t9 (or (fun_app$f (rbt_greater$ less$ k$) t2$) (not (and (fun_app$f (rbt_less$ less$ k$) t1$) (fun_app$f (rbt_greater$ less$ k$) t2$) (fun_app$f (rbt_sorted$ less$) t1$) (fun_app$f (rbt_sorted$ less$) t2$)))))
+(step t9' (cl (fun_app$f (rbt_greater$ less$ k$) t2$) (not (and (fun_app$f (rbt_less$ less$ k$) t1$) (fun_app$f (rbt_greater$ less$ k$) t2$) (fun_app$f (rbt_sorted$ less$) t1$) (fun_app$f (rbt_sorted$ less$) t2$)))) :rule or :premises (t9))
+(step st10 (cl (not (and (fun_app$f (rbt_less$ less$ k$) t1$) (fun_app$f (rbt_greater$ less$ k$) t2$) (fun_app$f (rbt_sorted$ less$) t1$) (fun_app$f (rbt_sorted$ less$) t2$)))) :rule resolution :premises (t9' a8))
+(step t.end (cl) :rule resolution :premises (nst10.0 st10))

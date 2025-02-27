@@ -1,0 +1,6 @@
+(assume nst307.0 (not (not (p4 c_0))))
+(assume nst307.1 (not (not (= (f6 c_0) (f5 c_0)))))
+(assume t306 (or (not (= (f6 c_0) (f5 c_0))) (not (p4 c_0))))
+(step t306' (cl (not (= (f6 c_0) (f5 c_0))) (not (p4 c_0))) :rule or :premises (t306))
+(step st307 (cl (not (p4 c_0)) (not (= (f6 c_0) (f5 c_0)))) :rule reordering :premises (t306'))
+(step t.end (cl) :rule resolution :premises (nst307.0 nst307.1 st307))

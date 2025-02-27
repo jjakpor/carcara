@@ -1,0 +1,5 @@
+(assume nst22.0 (not (not (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))))))
+(assume nst22.1 (not (= x13 x14)))
+(assume t21 (=> (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))) (= x13 x14)))
+(step st22 (cl (not (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14)))) (= x13 x14)) :rule implies :premises (t21))
+(step t.end (cl) :rule resolution :premises (nst22.0 nst22.1 st22))

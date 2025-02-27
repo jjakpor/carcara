@@ -1,0 +1,5 @@
+(assume nst52.0 (not (= (in$0 sk_?e$0 sk_FP$0) (in$0 sk_?e$0 (union$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)) (lseg_domain$0 next$0 cp_2$0 cp_2$0))))))
+(assume t9 (= sk_?e$0 sk_?e$0))
+(assume t51 (= sk_FP$0 (union$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)) (lseg_domain$0 next$0 cp_2$0 cp_2$0))))
+(step st52 (cl (= (in$0 sk_?e$0 sk_FP$0) (in$0 sk_?e$0 (union$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)) (lseg_domain$0 next$0 cp_2$0 cp_2$0))))) :rule cong :premises (t9 t51))
+(step t.end (cl) :rule resolution :premises (nst52.0 st52))

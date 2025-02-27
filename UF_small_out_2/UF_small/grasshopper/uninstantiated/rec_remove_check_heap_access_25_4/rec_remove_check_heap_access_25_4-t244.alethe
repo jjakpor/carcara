@@ -1,0 +1,5 @@
+(assume a56 (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x)))
+(assume t6 (or (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x))) (Btwn$0 next$0 lst$0 lst$0 lst$0)))
+(assume t243 (not (Btwn$0 next$0 lst$0 lst$0 lst$0)))
+(step t6' (cl (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x))) (Btwn$0 next$0 lst$0 lst$0 lst$0)) :rule or :premises (t6))
+(step st244 (cl) :rule resolution :premises (t6' t243 a56))

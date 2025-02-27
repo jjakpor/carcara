@@ -1,0 +1,5 @@
+(assume nst1249.0 (not (not (= (= e1 (op e1 (op (op e1 e3) e3))) false))))
+(assume nst1249.1 (not (not (= e1 (op e1 (op (op e1 e3) e3))))))
+(assume t1248 (= (= (= e1 (op e1 (op (op e1 e3) e3))) false) (not (= e1 (op e1 (op (op e1 e3) e3))))))
+(step st1249 (cl (not (= (= e1 (op e1 (op (op e1 e3) e3))) false)) (not (= e1 (op e1 (op (op e1 e3) e3))))) :rule equiv1 :premises (t1248))
+(step t.end (cl) :rule resolution :premises (nst1249.0 nst1249.1 st1249))

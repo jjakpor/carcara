@@ -1,0 +1,4 @@
+(assume nst85.0 (not (or (not (not prt)) (not (or (not car) (not clk))))))
+(assume nst85.1 (not (not (not (not prt)))))
+(step st85 (cl (or (not (not prt)) (not (or (not car) (not clk)))) (not (not (not prt)))) :rule or_neg :args (0))
+(step t.end (cl) :rule resolution :premises (nst85.0 nst85.1 st85))

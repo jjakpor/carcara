@@ -1,0 +1,5 @@
+(assume nst91.0 (not (= (or (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0))) (= (read$0 next$0 lst$0) lst$0)) (or (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0))) (= lst$0 (read$0 next$0 lst$0))))))
+(assume t89 (= (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0))) (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0)))))
+(assume t90 (= (= (read$0 next$0 lst$0) lst$0) (= lst$0 (read$0 next$0 lst$0))))
+(step st91 (cl (= (or (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0))) (= (read$0 next$0 lst$0) lst$0)) (or (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0))) (= lst$0 (read$0 next$0 lst$0))))) :rule cong :premises (t89 t90))
+(step t.end (cl) :rule resolution :premises (nst91.0 st91))

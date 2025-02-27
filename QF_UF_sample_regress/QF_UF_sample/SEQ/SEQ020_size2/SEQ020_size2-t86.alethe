@@ -1,0 +1,4 @@
+(assume nst86.0 (not (= (not (= (f5 c_1) (f6 c_1))) (not (= (f6 c_1) (f5 c_1))))))
+(assume t85 (= (= (f5 c_1) (f6 c_1)) (= (f6 c_1) (f5 c_1))))
+(step st86 (cl (= (not (= (f5 c_1) (f6 c_1))) (not (= (f6 c_1) (f5 c_1))))) :rule cong :premises (t85))
+(step t.end (cl) :rule resolution :premises (nst86.0 st86))

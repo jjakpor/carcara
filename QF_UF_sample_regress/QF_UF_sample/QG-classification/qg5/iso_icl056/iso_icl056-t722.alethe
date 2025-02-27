@@ -1,0 +1,5 @@
+(assume nst722.0 (not (= (= e2 (op e3 e2)) (= (op e1 e1) (op (op e1 (op e1 e1)) (op e1 e1))))))
+(assume t35 (= e2 (op e1 e1)))
+(assume t62 (= (op e3 e2) (op (op e1 (op e1 e1)) (op e1 e1))))
+(step st722 (cl (= (= e2 (op e3 e2)) (= (op e1 e1) (op (op e1 (op e1 e1)) (op e1 e1))))) :rule cong :premises (t35 t62))
+(step t.end (cl) :rule resolution :premises (nst722.0 st722))

@@ -1,0 +1,7 @@
+(assume nst60.0 (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))
+(assume t48 (or (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))) (not (= (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))))))))
+(assume t56 (not (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))))))
+(assume t59 (= (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))))))
+(step t48' (cl (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))) (not (= (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))))))) :rule or :premises (t48))
+(step st60 (cl (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) :rule resolution :premises (t48' t56 t59))
+(step t.end (cl) :rule resolution :premises (nst60.0 st60))

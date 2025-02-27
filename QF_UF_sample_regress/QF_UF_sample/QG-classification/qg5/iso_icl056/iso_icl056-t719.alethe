@@ -1,0 +1,8 @@
+(assume nst719.0 (not (= (or (= (op e3 e4) e2) (= (op e3 e3) e2) (= (op e3 e2) e2) (= (op e3 e0) e2) (= (op e3 e1) e2)) (or (= e2 (op e3 e4)) (= e2 (op e3 e3)) (= e2 (op e3 e2)) (= e2 (op e3 e0)) (= e2 (op e3 e1))))))
+(assume t11 (= (= (op e3 e0) e2) (= e2 (op e3 e0))))
+(assume t564 (= (= (op e3 e4) e2) (= e2 (op e3 e4))))
+(assume t716 (= (= (op e3 e3) e2) (= e2 (op e3 e3))))
+(assume t717 (= (= (op e3 e2) e2) (= e2 (op e3 e2))))
+(assume t718 (= (= (op e3 e1) e2) (= e2 (op e3 e1))))
+(step st719 (cl (= (or (= (op e3 e4) e2) (= (op e3 e3) e2) (= (op e3 e2) e2) (= (op e3 e0) e2) (= (op e3 e1) e2)) (or (= e2 (op e3 e4)) (= e2 (op e3 e3)) (= e2 (op e3 e2)) (= e2 (op e3 e0)) (= e2 (op e3 e1))))) :rule cong :premises (t564 t716 t717 t11 t718))
+(step t.end (cl) :rule resolution :premises (nst719.0 st719))

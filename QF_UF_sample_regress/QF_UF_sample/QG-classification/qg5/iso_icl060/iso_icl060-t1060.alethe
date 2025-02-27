@@ -1,0 +1,5 @@
+(assume nst1060.0 (not (not (= (= (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))) true))))
+(assume nst1060.1 (not (= (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))))
+(assume t1059 (= (= (= (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))) true) (= (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))))
+(step st1060 (cl (not (= (= (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))) true)) (= (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) :rule equiv1 :premises (t1059))
+(step t.end (cl) :rule resolution :premises (nst1060.0 nst1060.1 st1060))

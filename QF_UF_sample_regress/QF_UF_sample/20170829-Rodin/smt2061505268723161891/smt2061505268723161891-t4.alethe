@@ -1,0 +1,5 @@
+(assume nst4.0 (not (not (or org (and prt rd1)))))
+(assume nst4.1 (not org))
+(assume nst4.2 (not (and prt rd1)))
+(step st4 (cl (not (or org (and prt rd1))) org (and prt rd1)) :rule or_pos)
+(step t.end (cl) :rule resolution :premises (nst4.0 nst4.1 nst4.2 st4))

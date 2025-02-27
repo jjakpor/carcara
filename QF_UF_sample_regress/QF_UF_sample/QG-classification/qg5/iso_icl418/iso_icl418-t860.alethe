@@ -1,0 +1,8 @@
+(assume nst860.0 (not (= (or (= (op e3 e0) e4) (= (op e3 e0) e3) (= (op e3 e0) e2) (= (op e3 e0) e0) (= (op e3 e0) e1)) (or (= e4 (op e3 e0)) (= e3 (op e3 e0)) (= e2 (op e3 e0)) (= e0 (op e3 e0)) (= e1 (op e3 e0))))))
+(assume t11 (= (= (op e3 e0) e3) (= e3 (op e3 e0))))
+(assume t575 (= (= (op e3 e0) e2) (= e2 (op e3 e0))))
+(assume t667 (= (= (op e3 e0) e1) (= e1 (op e3 e0))))
+(assume t858 (= (= (op e3 e0) e4) (= e4 (op e3 e0))))
+(assume t859 (= (= (op e3 e0) e0) (= e0 (op e3 e0))))
+(step st860 (cl (= (or (= (op e3 e0) e4) (= (op e3 e0) e3) (= (op e3 e0) e2) (= (op e3 e0) e0) (= (op e3 e0) e1)) (or (= e4 (op e3 e0)) (= e3 (op e3 e0)) (= e2 (op e3 e0)) (= e0 (op e3 e0)) (= e1 (op e3 e0))))) :rule cong :premises (t858 t11 t575 t859 t667))
+(step t.end (cl) :rule resolution :premises (nst860.0 st860))

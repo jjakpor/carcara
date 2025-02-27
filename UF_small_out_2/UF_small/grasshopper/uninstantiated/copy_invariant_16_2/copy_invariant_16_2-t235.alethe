@@ -1,0 +1,3 @@
+(assume nst235.0 (not (or (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y)))) (or (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0)) (= lst$0 sk_?e$0)))))
+(step st235 (cl (or (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y)))) (or (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0)) (= lst$0 sk_?e$0)))) :rule forall_inst :args (next$0 lst$0 sk_?e$0))
+(step t.end (cl) :rule resolution :premises (nst235.0 st235))

@@ -1,0 +1,6 @@
+(assume nst11.0 (not (= (not (not prt)) prt)))
+(assume t3 (or (not (= (= (not (not prt)) prt) true)) (= (not (not prt)) prt)))
+(assume t10 (= (= (not (not prt)) prt) true))
+(step t3' (cl (not (= (= (not (not prt)) prt) true)) (= (not (not prt)) prt)) :rule or :premises (t3))
+(step st11 (cl (= (not (not prt)) prt)) :rule resolution :premises (t3' t10))
+(step t.end (cl) :rule resolution :premises (nst11.0 st11))

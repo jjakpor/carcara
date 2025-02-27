@@ -1,0 +1,6 @@
+(assume nt21.0 (not (= (forall ((?v0 S5) (?v2 S9) (?v3 S10)) (or (not (= ?v0 ?v0)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0)))) (forall ((?v0 S5) (?v2 S9) (?v3 S10)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0))))))
+(anchor :step t21 :args ((?v0 S5) (?v2 S9) (?v3 S10) (:= (?v0 S5) ?v0) (:= (?v2 S9) ?v2) (:= (?v3 S10) ?v3)))
+(step st21.t6 (cl (= (or false (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0))) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0)))) :rule hole)
+(step t21.t7 (cl (= (or (not (= ?v0 ?v0)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0))) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0)))) :rule trust)
+(step t21 (cl (= (forall ((?v0 S5) (?v2 S9) (?v3 S10)) (or (not (= ?v0 ?v0)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0)))) (forall ((?v0 S5) (?v2 S9) (?v3 S10)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0))))) :rule bind)
+(step t.end (cl) :rule resolution :premises (nt21.0 t21))

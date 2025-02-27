@@ -1,0 +1,3 @@
+(assume nst7.0 (not (= (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))))
+(step st7 (cl (= (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst7.0 st7))

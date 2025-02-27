@@ -1,0 +1,5 @@
+(assume nst38.0 (not (= y$v_at_press y$v_count)))
+(assume t27 (= y$v_at_press y$v_at_table))
+(assume t36 (= y$v_at_table y$v_count))
+(step st38 (cl (= y$v_at_press y$v_count)) :rule trans :premises (t27 t36))
+(step t.end (cl) :rule resolution :premises (nst38.0 st38))

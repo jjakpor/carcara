@@ -1,0 +1,4 @@
+(assume nst33.0 (not (= null$0 (read$0 next$0 root_x$0))))
+(assume a14 (= (read$0 next$0 root_x$0) null$0))
+(step st33 (cl (= null$0 (read$0 next$0 root_x$0))) :rule symm :premises (a14))
+(step t.end (cl) :rule resolution :premises (nst33.0 st33))

@@ -1,0 +1,5 @@
+(assume nst349.0 (not (not (= (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (and (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (=> (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (= x12 x13)))))))
+(assume nst349.1 (not (not (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))))))
+(assume nst349.2 (not (and (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (=> (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (= x12 x13)))))
+(step st349 (cl (not (= (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (and (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (=> (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (= x12 x13))))) (not (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13)))) (and (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (=> (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (= x12 x13)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst349.0 nst349.1 nst349.2 st349))

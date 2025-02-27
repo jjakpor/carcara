@@ -1,0 +1,6 @@
+(assume nst401.0 (not (= x34 x35)))
+(assume nst401.1 (not (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))))
+(assume t400 (or (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35)))) (= x34 x35)))
+(step t400' (cl (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35)))) (= x34 x35)) :rule or :premises (t400))
+(step st401 (cl (= x34 x35) (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))) :rule reordering :premises (t400'))
+(step t.end (cl) :rule resolution :premises (nst401.0 nst401.1 st401))

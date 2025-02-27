@@ -1,0 +1,6 @@
+(assume nst338.0 (not (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))))))
+(assume nst338.1 (not (= (f6 c_1) (f5 c_1))))
+(assume t337 (or (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1)))) (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1)))) (= (f6 c_1) (f5 c_1))))
+(step t337' (cl (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1)))) (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1)))) (= (f6 c_1) (f5 c_1))) :rule or :premises (t337))
+(step st338 (cl (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1)))) (= (f6 c_1) (f5 c_1))) :rule contraction :premises (t337'))
+(step t.end (cl) :rule resolution :premises (nst338.0 nst338.1 st338))

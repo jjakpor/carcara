@@ -1,0 +1,5 @@
+(assume nst319.0 (not (= (= e3 (op (op (op e1 e3) e1) e3)) false)))
+(assume t304 (= (= e3 (op (op (op e1 e3) e1) e3)) (= (op e3 e3) (op (op (op e1 e3) e1) e3))))
+(assume t318 (= (= (op e3 e3) (op (op (op e1 e3) e1) e3)) false))
+(step st319 (cl (= (= e3 (op (op (op e1 e3) e1) e3)) false)) :rule trans :premises (t304 t318))
+(step t.end (cl) :rule resolution :premises (nst319.0 st319))

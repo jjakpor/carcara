@@ -1,0 +1,6 @@
+(assume nst34.0 (not (and (= null$0 (read$0 next$0 end1$0)) (= null$0 (read$0 prev$0 start1$0)) (in$0 end1$0 sk_?X_10$0))))
+(assume t30 (or (and (= null$0 end1$0) (= null$0 start1$0)) (and (= null$0 (read$0 next$0 end1$0)) (= null$0 (read$0 prev$0 start1$0)) (in$0 end1$0 sk_?X_10$0))))
+(assume t33 (not (and (= null$0 end1$0) (= null$0 start1$0))))
+(step t30' (cl (and (= null$0 end1$0) (= null$0 start1$0)) (and (= null$0 (read$0 next$0 end1$0)) (= null$0 (read$0 prev$0 start1$0)) (in$0 end1$0 sk_?X_10$0))) :rule or :premises (t30))
+(step st34 (cl (and (= null$0 (read$0 next$0 end1$0)) (= null$0 (read$0 prev$0 start1$0)) (in$0 end1$0 sk_?X_10$0))) :rule resolution :premises (t30' t33))
+(step t.end (cl) :rule resolution :premises (nst34.0 st34))

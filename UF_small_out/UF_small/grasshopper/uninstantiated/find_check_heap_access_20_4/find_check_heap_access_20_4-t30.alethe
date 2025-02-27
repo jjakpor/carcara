@@ -1,0 +1,7 @@
+(assume nst30.0 (not (not (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)))))
+(assume nst30.1 (not (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))))
+(assume nst30.2 (not (not (= root_x$0 x$0))))
+(assume t29 (or (not (= root_x$0 x$0)) (not (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))))
+(step t29' (cl (not (= root_x$0 x$0)) (not (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) :rule or :premises (t29))
+(step st30 (cl (not (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)) (not (= root_x$0 x$0))) :rule reordering :premises (t29'))
+(step t.end (cl) :rule resolution :premises (nst30.0 nst30.1 nst30.2 st30))

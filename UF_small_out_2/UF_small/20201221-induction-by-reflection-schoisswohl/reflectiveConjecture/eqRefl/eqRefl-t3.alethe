@@ -1,0 +1,4 @@
+(define-fun @quantifiers_skolemize_3 () alpha (choice ((x alpha)) (not (models (push_alpha empty v0_alpha x) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha))))))
+(assume nst3.0 (not (= (= (eval_alpha (push_alpha empty v0_alpha @quantifiers_skolemize_3) (inj_alpha v0_alpha)) (eval_alpha (push_alpha empty v0_alpha @quantifiers_skolemize_3) (inj_alpha v0_alpha))) true)))
+(step st3 (cl (= (= (eval_alpha (push_alpha empty v0_alpha @quantifiers_skolemize_3) (inj_alpha v0_alpha)) (eval_alpha (push_alpha empty v0_alpha @quantifiers_skolemize_3) (inj_alpha v0_alpha))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst3.0 st3))

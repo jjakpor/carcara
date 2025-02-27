@@ -1,0 +1,6 @@
+(assume nst320.0 (not (not (= e3 (op (op (op e1 e3) e1) e3)))))
+(assume t301 (or (not (= (= e3 (op (op (op e1 e3) e1) e3)) false)) (not (= e3 (op (op (op e1 e3) e1) e3)))))
+(assume t319 (= (= e3 (op (op (op e1 e3) e1) e3)) false))
+(step t301' (cl (not (= (= e3 (op (op (op e1 e3) e1) e3)) false)) (not (= e3 (op (op (op e1 e3) e1) e3)))) :rule or :premises (t301))
+(step st320 (cl (not (= e3 (op (op (op e1 e3) e1) e3)))) :rule resolution :premises (t301' t319))
+(step t.end (cl) :rule resolution :premises (nst320.0 st320))

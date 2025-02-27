@@ -1,0 +1,4 @@
+(assume nst317.0 (not (= (op (op e1 e1) e1) (op e1 (op e1 e1)))))
+(assume t316 (= (op e1 (op e1 e1)) (op (op e1 e1) e1)))
+(step st317 (cl (= (op (op e1 e1) e1) (op e1 (op e1 e1)))) :rule symm :premises (t316))
+(step t.end (cl) :rule resolution :premises (nst317.0 st317))

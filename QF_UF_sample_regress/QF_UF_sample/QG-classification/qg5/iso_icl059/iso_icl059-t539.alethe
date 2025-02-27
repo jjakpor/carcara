@@ -1,0 +1,4 @@
+(assume nst539.0 (not (= (not (= (op e1 e4) (op e4 e4))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))))
+(assume t538 (= (= (op e1 e4) (op e4 e4)) (= (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
+(step st539 (cl (= (not (= (op e1 e4) (op e4 e4))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))) :rule cong :premises (t538))
+(step t.end (cl) :rule resolution :premises (nst539.0 st539))

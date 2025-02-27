@@ -1,0 +1,7 @@
+(assume nst66.0 (not (= (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0))))
+(assume a8 (= sk_?X$0 (lseg_domain$0 next$0 lst$0 null$0)))
+(assume t15 (= lst$0 lst$0))
+(assume t64 (= next$0 next$0))
+(assume t65 (= null$0 null$0))
+(step st66 (cl (= (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0))) :rule cong :premises (a8 t64 t15 t65))
+(step t.end (cl) :rule resolution :premises (nst66.0 st66))

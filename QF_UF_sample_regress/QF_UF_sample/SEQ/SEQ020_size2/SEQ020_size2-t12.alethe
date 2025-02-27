@@ -1,0 +1,3 @@
+(assume nst12.0 (not (= (not (= c_1 (f5 c_1))) (not (= c_1 (f5 c_1))))))
+(step st12 (cl (= (not (= c_1 (f5 c_1))) (not (= c_1 (f5 c_1))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst12.0 st12))

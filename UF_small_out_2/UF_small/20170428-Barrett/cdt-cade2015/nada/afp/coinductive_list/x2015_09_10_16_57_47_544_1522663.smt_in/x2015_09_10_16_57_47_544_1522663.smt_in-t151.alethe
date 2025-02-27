@@ -1,0 +1,5 @@
+(assume nst151.0 (not (not (= (=> (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (= (fun_app$e uu$ (lhd$ xs$)) (ldropn$ n$))) (=> (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$))))))))
+(assume nst151.1 (not (not (=> (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (= (fun_app$e uu$ (lhd$ xs$)) (ldropn$ n$))))))
+(assume nst151.2 (not (=> (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$))))))
+(step st151 (cl (not (= (=> (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (= (fun_app$e uu$ (lhd$ xs$)) (ldropn$ n$))) (=> (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$)))))) (not (=> (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (= (fun_app$e uu$ (lhd$ xs$)) (ldropn$ n$)))) (=> (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst151.0 nst151.1 nst151.2 st151))

@@ -1,0 +1,5 @@
+(assume nst0.0 (not (and y$1085 y$1086)))
+(assume nst0.1 (not (not y$1085)))
+(assume nst0.2 (not (not y$1086)))
+(step st0 (cl (and y$1085 y$1086) (not y$1085) (not y$1086)) :rule and_neg)
+(step t.end (cl) :rule resolution :premises (nst0.0 nst0.1 nst0.2 st0))

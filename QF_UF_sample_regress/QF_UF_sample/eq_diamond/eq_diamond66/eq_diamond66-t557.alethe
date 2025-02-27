@@ -1,0 +1,5 @@
+(assume nst557.0 (not (not (= (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (and (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (=> (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (= x49 x50)))))))
+(assume nst557.1 (not (not (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))))))
+(assume nst557.2 (not (and (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (=> (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (= x49 x50)))))
+(step st557 (cl (not (= (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (and (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (=> (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (= x49 x50))))) (not (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50)))) (and (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (=> (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (= x49 x50)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst557.0 nst557.1 nst557.2 st557))

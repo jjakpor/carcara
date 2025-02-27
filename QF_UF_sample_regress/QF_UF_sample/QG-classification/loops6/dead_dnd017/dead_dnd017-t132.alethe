@@ -1,0 +1,5 @@
+(assume nst132.0 (not (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= unit e2)))))
+(assume t130 (= (not (= (op e2 (op e2 e2)) e2)) (not (= e2 (op e2 (op e2 e2))))))
+(assume t131 (= (= e2 unit) (= unit e2)))
+(step st132 (cl (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= unit e2)))) :rule cong :premises (t130 t131))
+(step t.end (cl) :rule resolution :premises (nst132.0 st132))

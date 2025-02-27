@@ -1,0 +1,7 @@
+(define-fun @quantifiers_skolemize_10 () S2 (choice ((?v6 S2)) (not (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v6))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f3 f4 ?v6)))))))
+(assume nst160.0 (not (forall ((?v6 S2)) (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v6))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f3 f4 ?v6)))))))
+(assume t92 (or (forall ((?v6 S2)) (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v6))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f3 f4 ?v6))))) (not (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 @quantifiers_skolemize_10))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f3 f4 @quantifiers_skolemize_10)))))))
+(assume t159 (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 @quantifiers_skolemize_10))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f3 f4 @quantifiers_skolemize_10)))))
+(step t92' (cl (forall ((?v6 S2)) (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v6))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f3 f4 ?v6))))) (not (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 @quantifiers_skolemize_10))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f3 f4 @quantifiers_skolemize_10)))))) :rule or :premises (t92))
+(step st160 (cl (forall ((?v6 S2)) (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v6))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f3 f4 ?v6)))))) :rule resolution :premises (t92' t159))
+(step t.end (cl) :rule resolution :premises (nst160.0 st160))

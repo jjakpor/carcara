@@ -1,0 +1,5 @@
+(assume nst509.0 (not (= (= (op (op e2 e4) e2) e4) (= e4 (op (op (op e3 e4) e4) (op e3 e4))))))
+(assume t506 (= (= (op (op e2 e4) e2) e4) (= e4 (op (op e2 e4) e2))))
+(assume t508 (= (= e4 (op (op e2 e4) e2)) (= e4 (op (op (op e3 e4) e4) (op e3 e4)))))
+(step st509 (cl (= (= (op (op e2 e4) e2) e4) (= e4 (op (op (op e3 e4) e4) (op e3 e4))))) :rule trans :premises (t506 t508))
+(step t.end (cl) :rule resolution :premises (nst509.0 st509))

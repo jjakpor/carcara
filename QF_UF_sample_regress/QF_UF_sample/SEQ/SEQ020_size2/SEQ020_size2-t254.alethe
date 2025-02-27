@@ -1,0 +1,4 @@
+(assume nst254.0 (not (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0)))))
+(assume nst254.1 (not (not (not (= c_1 (f6 c_0))))))
+(step st254 (cl (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))) (not (not (= c_1 (f6 c_0))))) :rule or_neg :args (2))
+(step t.end (cl) :rule resolution :premises (nst254.0 nst254.1 st254))

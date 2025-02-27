@@ -1,0 +1,4 @@
+(assume nst359.0 (not (not (not (not (in$0 (read$0 next$0 d_init$0) Alloc$0))))))
+(assume nst359.1 (not (in$0 (read$0 next$0 d_init$0) Alloc$0)))
+(step st359 (cl (not (not (not (in$0 (read$0 next$0 d_init$0) Alloc$0)))) (in$0 (read$0 next$0 d_init$0) Alloc$0)) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nst359.0 nst359.1 st359))

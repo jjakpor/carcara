@@ -1,0 +1,5 @@
+(assume nst236.0 (not (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))))))
+(assume nst236.1 (not (or (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0)) (= lst$0 sk_?e$0))))
+(assume t235 (or (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y)))) (or (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0)) (= lst$0 sk_?e$0))))
+(step st236 (cl (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y)))) (or (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0)) (= lst$0 sk_?e$0))) :rule or :premises (t235))
+(step t.end (cl) :rule resolution :premises (nst236.0 nst236.1 st236))

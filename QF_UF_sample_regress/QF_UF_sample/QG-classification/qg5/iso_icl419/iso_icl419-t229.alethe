@@ -1,0 +1,5 @@
+(assume nst229.0 (not (= (= (op e0 e1) (op e0 e2)) (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(assume t94 (= (op e0 e2) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))
+(assume t97 (= (op e0 e1) (op (op e3 e3) (op (op e3 e3) (op e3 e3)))))
+(step st229 (cl (= (= (op e0 e1) (op e0 e2)) (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule cong :premises (t97 t94))
+(step t.end (cl) :rule resolution :premises (nst229.0 st229))

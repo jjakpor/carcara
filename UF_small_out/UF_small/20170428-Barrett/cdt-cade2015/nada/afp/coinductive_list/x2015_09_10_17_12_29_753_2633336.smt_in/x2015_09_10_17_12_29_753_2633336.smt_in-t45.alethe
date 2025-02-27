@@ -1,0 +1,7 @@
+(assume nst45.0 (not (= thesis$ false)))
+(assume a1 (not thesis$))
+(assume t42 (or (not (= (not thesis$) (= thesis$ false))) (not (not thesis$)) (= thesis$ false)))
+(assume t44 (= (not thesis$) (= thesis$ false)))
+(step t42' (cl (not (= (not thesis$) (= thesis$ false))) (not (not thesis$)) (= thesis$ false)) :rule or :premises (t42))
+(step st45 (cl (= thesis$ false)) :rule resolution :premises (t42' t44 a1))
+(step t.end (cl) :rule resolution :premises (nst45.0 st45))

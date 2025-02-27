@@ -1,0 +1,5 @@
+(assume nst186.0 (not (not (= (not (= e0 e1)) (not (= e1 (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))))
+(assume nst186.1 (not (not (not (= e0 e1)))))
+(assume nst186.2 (not (not (= e1 (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))
+(step st186 (cl (not (= (not (= e0 e1)) (not (= e1 (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))) (not (not (= e0 e1))) (not (= e1 (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst186.0 nst186.1 nst186.2 st186))

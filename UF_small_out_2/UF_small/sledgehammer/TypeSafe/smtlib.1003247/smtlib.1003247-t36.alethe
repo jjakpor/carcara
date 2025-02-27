@@ -1,0 +1,5 @@
+(assume nt36.0 (not (= (forall ((?v0 S52) (?v1 S51)) (= (f64 f65 f66 f67 f72 f78) (f75 ?v0 ?v1 ?v1))) (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78))))))
+(anchor :step t36 :args ((?v0 S52) (?v1 S51) (:= (?v0 S52) ?v0) (:= (?v1 S51) ?v1)))
+(step t36.t0 (cl (= (= (f64 f65 f66 f67 f72 f78) (f75 ?v0 ?v1 ?v1)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78)))) :rule trust)
+(step t36 (cl (= (forall ((?v0 S52) (?v1 S51)) (= (f64 f65 f66 f67 f72 f78) (f75 ?v0 ?v1 ?v1))) (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78))))) :rule bind)
+(step t.end (cl) :rule resolution :premises (nt36.0 t36))

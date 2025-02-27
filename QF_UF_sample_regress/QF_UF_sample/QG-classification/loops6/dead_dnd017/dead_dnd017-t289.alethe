@@ -1,0 +1,3 @@
+(assume nst289.0 (not (= (= e5 unit) (= unit e5))))
+(step st289 (cl (= (= e5 unit) (= unit e5))) :rule rare_rewrite :args ("eq-symm" e5 unit))
+(step t.end (cl) :rule resolution :premises (nst289.0 st289))

@@ -1,0 +1,5 @@
+(assume nst170.0 (not y$a_consume1$next))
+(assume nst170.1 (not (not (not y$1086))))
+(assume a668 (= y$a_consume1$next (not y$1086)))
+(step st170 (cl y$a_consume1$next (not (not y$1086))) :rule equiv2 :premises (a668))
+(step t.end (cl) :rule resolution :premises (nst170.0 nst170.1 st170))

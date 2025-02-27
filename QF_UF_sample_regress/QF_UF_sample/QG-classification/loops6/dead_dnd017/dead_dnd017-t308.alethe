@@ -1,0 +1,6 @@
+(assume nst308.0 (not (= e0 (op e1 (op e1 e0)))))
+(assume t15 (or (= e0 (op e1 (op e1 e0))) (not (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0)))))))
+(assume t307 (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0)))))
+(step t15' (cl (= e0 (op e1 (op e1 e0))) (not (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0)))))) :rule or :premises (t15))
+(step st308 (cl (= e0 (op e1 (op e1 e0)))) :rule resolution :premises (t15' t307))
+(step t.end (cl) :rule resolution :premises (nst308.0 st308))

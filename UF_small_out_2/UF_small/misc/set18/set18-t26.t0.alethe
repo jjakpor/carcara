@@ -1,0 +1,7 @@
+(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (difference b a))) (member ?x (difference b d))))))
+(assume nt26.0 (not (= (forall ((?x Elem)) (or (not (member ?x (difference b a))) (member ?x (difference b d)))) (or (not (member @quantifiers_skolemize_3 (difference b a))) (member @quantifiers_skolemize_3 (difference b d))))))
+(anchor :step t26 :args ((:= (?x Elem) @quantifiers_skolemize_3)))
+(step st26.t0 (cl (= (or (not (member ?x (difference b a))) (member ?x (difference b d))) (or (not (member @quantifiers_skolemize_3 (difference b a))) (member @quantifiers_skolemize_3 (difference b d))))) :rule refl)
+(step t26.t0 (cl (= (or (not (member ?x (difference b a))) (member ?x (difference b d))) (or (not (member @quantifiers_skolemize_3 (difference b a))) (member @quantifiers_skolemize_3 (difference b d))))) :rule trust)
+(step t26 (cl (= (forall ((?x Elem)) (or (not (member ?x (difference b a))) (member ?x (difference b d)))) (or (not (member @quantifiers_skolemize_3 (difference b a))) (member @quantifiers_skolemize_3 (difference b d))))) :rule sko_forall)
+(step t.end (cl) :rule resolution :premises (nt26.0 t26))

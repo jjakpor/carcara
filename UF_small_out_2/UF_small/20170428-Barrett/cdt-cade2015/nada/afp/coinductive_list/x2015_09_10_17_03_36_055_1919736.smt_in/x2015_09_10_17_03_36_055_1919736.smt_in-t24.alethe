@@ -1,0 +1,5 @@
+(assume nst24.0 (not (= (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)) true)))
+(assume nst24.1 (not (not (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)))))
+(assume t23 (= (= (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)) true) (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$))))
+(step st24 (cl (= (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)) true) (not (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)))) :rule equiv2 :premises (t23))
+(step t.end (cl) :rule resolution :premises (nst24.0 nst24.1 st24))

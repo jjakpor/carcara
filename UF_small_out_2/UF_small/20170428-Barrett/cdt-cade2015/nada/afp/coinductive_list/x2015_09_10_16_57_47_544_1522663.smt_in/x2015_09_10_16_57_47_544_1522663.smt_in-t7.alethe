@@ -1,0 +1,3 @@
+(assume nst7.0 (not (= (not (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$)))) (not (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$)))))))
+(step st7 (cl (= (not (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$)))) (not (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$)))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst7.0 st7))

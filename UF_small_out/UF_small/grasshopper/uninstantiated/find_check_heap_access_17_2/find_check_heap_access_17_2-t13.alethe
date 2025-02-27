@@ -1,0 +1,6 @@
+(assume nst13.0 (not (= (or (not (not (in$0 x$0 (setenum$0 root_x$0)))) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0)))) (or (in$0 x$0 (setenum$0 root_x$0)) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0)))))))
+(assume t10 (= (not (not (in$0 x$0 (setenum$0 root_x$0)))) (in$0 x$0 (setenum$0 root_x$0))))
+(assume t11 (= (not (= root_x$0 x$0)) (not (= root_x$0 x$0))))
+(assume t12 (= (not (in$0 root_x$0 (setenum$0 root_x$0))) (not (in$0 root_x$0 (setenum$0 root_x$0)))))
+(step st13 (cl (= (or (not (not (in$0 x$0 (setenum$0 root_x$0)))) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0)))) (or (in$0 x$0 (setenum$0 root_x$0)) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0)))))) :rule cong :premises (t10 t11 t12))
+(step t.end (cl) :rule resolution :premises (nst13.0 st13))

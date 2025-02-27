@@ -1,0 +1,4 @@
+(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (difference b a))) (member ?x (difference b d))))))
+(assume nst15.0 (not (= (not (not (member @quantifiers_skolemize_3 (difference b a)))) (member @quantifiers_skolemize_3 (difference b a)))))
+(step st15 (cl (= (not (not (member @quantifiers_skolemize_3 (difference b a)))) (member @quantifiers_skolemize_3 (difference b a)))) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst15.0 st15))

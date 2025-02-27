@@ -1,0 +1,5 @@
+(assume nst73.0 (not (= (read$0 next$0 prv_init$0) (read$0 next$0 (read$0 prev$0 prv_5$0)))))
+(assume t60 (= next$0 next$0))
+(assume t69 (= prv_init$0 (read$0 prev$0 prv_5$0)))
+(step st73 (cl (= (read$0 next$0 prv_init$0) (read$0 next$0 (read$0 prev$0 prv_5$0)))) :rule cong :premises (t60 t69))
+(step t.end (cl) :rule resolution :premises (nst73.0 st73))

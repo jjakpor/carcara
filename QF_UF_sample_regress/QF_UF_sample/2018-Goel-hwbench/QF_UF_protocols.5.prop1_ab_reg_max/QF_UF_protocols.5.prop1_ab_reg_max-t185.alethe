@@ -1,0 +1,5 @@
+(assume nst185.0 (not (not (= y$956 (not y$965)))))
+(assume nst185.1 (not (not y$956)))
+(assume nst185.2 (not (not y$965)))
+(step st185 (cl (not (= y$956 (not y$965))) (not y$956) (not y$965)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst185.0 nst185.1 nst185.2 st185))

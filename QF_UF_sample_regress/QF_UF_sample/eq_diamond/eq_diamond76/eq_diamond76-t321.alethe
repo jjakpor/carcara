@@ -1,0 +1,6 @@
+(assume nst321.0 (not (= x27 x28)))
+(assume nst321.1 (not (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))))
+(assume t320 (or (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28)))) (= x27 x28)))
+(step t320' (cl (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28)))) (= x27 x28)) :rule or :premises (t320))
+(step st321 (cl (= x27 x28) (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))) :rule reordering :premises (t320'))
+(step t.end (cl) :rule resolution :premises (nst321.0 nst321.1 st321))

@@ -1,0 +1,7 @@
+(assume nst140.0 (not (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4)))))
+(assume t134 (or (not (= (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4))))) (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4)))) (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4)))))
+(assume t138 (= (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4)))))
+(assume t139 (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))
+(step t134' (cl (not (= (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4))))) (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4)))) (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4)))) :rule or :premises (t134))
+(step st140 (cl (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4)))) :rule resolution :premises (t134' t138 t139))
+(step t.end (cl) :rule resolution :premises (nst140.0 st140))

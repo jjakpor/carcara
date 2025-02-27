@@ -1,0 +1,4 @@
+(assume nst1219.0 (not (not (and (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) (= e1 (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3)))))))
+(assume nst1219.1 (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3))))
+(step st1219 (cl (not (and (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) (= e1 (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3))))) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3))) :rule and_pos :args (2))
+(step t.end (cl) :rule resolution :premises (nst1219.0 nst1219.1 st1219))

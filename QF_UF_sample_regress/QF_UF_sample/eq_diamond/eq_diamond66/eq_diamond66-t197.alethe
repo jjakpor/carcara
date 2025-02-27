@@ -1,0 +1,3 @@
+(assume nst197.0 (not (= (= (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (and (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (=> (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (= x16 x17)))) true)))
+(step st197 (cl (= (= (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (and (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (=> (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (= x16 x17)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst197.0 st197))

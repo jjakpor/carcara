@@ -1,0 +1,6 @@
+(assume nst123.0 (not (not (and (Btwn$0 next$0 x$0 x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 x$0)))))
+(assume t6 (or (Btwn$0 next$0 x$0 x$0 root_x$0) (not (and (Btwn$0 next$0 x$0 x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 x$0)))))
+(assume t122 (not (Btwn$0 next$0 x$0 x$0 root_x$0)))
+(step t6' (cl (Btwn$0 next$0 x$0 x$0 root_x$0) (not (and (Btwn$0 next$0 x$0 x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 x$0)))) :rule or :premises (t6))
+(step st123 (cl (not (and (Btwn$0 next$0 x$0 x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 x$0)))) :rule resolution :premises (t6' t122))
+(step t.end (cl) :rule resolution :premises (nst123.0 st123))

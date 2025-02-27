@@ -1,0 +1,7 @@
+(assume nst16.0 (not (= flash nf0)))
+(assume t7 (or (not (= (= flash nf) (= flash nf0))) (not (= flash nf)) (= flash nf0)))
+(assume t12 (= (= flash nf) (= flash nf0)))
+(assume t15 (= flash nf))
+(step t7' (cl (not (= (= flash nf) (= flash nf0))) (not (= flash nf)) (= flash nf0)) :rule or :premises (t7))
+(step st16 (cl (= flash nf0)) :rule resolution :premises (t7' t12 t15))
+(step t.end (cl) :rule resolution :premises (nst16.0 st16))

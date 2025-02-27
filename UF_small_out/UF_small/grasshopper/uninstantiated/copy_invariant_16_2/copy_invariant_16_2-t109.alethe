@@ -1,0 +1,4 @@
+(assume nst109.0 (not (not (and (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (= cp_2$0 sk_?e$0) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))))
+(assume nst109.1 (not (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))
+(step st109 (cl (not (and (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (= cp_2$0 sk_?e$0) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) :rule and_pos :args (2))
+(step t.end (cl) :rule resolution :premises (nst109.0 nst109.1 st109))

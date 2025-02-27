@@ -1,0 +1,5 @@
+(assume nt12.t5.0 (not (= (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)) (fun_app$h ?v1 ?v2))) (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)))))))
+(anchor :step t12.t5 :args ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$) (:= (?v0 A_llist$) ?v0) (:= (?v1 Nat_a_llist_fun$) ?v1) (:= (?v2 Nat$) ?v2)))
+(step t12.t5.t0 (cl (= (= (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)) (fun_app$h ?v1 ?v2)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2))))) :rule trust)
+(step t12.t5 (cl (= (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)) (fun_app$h ?v1 ?v2))) (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)))))) :rule bind)
+(step t.end (cl) :rule resolution :premises (nt12.t5.0 t12.t5))

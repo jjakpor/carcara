@@ -1,0 +1,7 @@
+(assume nst354.0 (not (not (not (p1 (f7 c_1) c_1)))))
+(assume nst354.1 (not (not (= c_1 (f7 c_1)))))
+(assume nst354.2 (not (not (= c_1 (f6 c_1)))))
+(assume nst354.3 (not (not (p1 (f6 c_1) c_1))))
+(assume t353 (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1))))
+(step st354 (cl (not (not (p1 (f7 c_1) c_1))) (not (= c_1 (f7 c_1))) (not (= c_1 (f6 c_1))) (not (p1 (f6 c_1) c_1))) :rule not_and :premises (t353))
+(step t.end (cl) :rule resolution :premises (nst354.0 nst354.1 nst354.2 nst354.3 st354))

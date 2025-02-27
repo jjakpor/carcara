@@ -1,0 +1,5 @@
+(assume nst463.0 (not (= (= (op e0 e1) (op e0 e4)) (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)))))
+(assume t77 (= (op e0 e4) (op (op (op e4 e3) (op e4 e3)) e4)))
+(assume t85 (= (op e0 e1) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))))
+(step st463 (cl (= (= (op e0 e1) (op e0 e4)) (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)))) :rule cong :premises (t85 t77))
+(step t.end (cl) :rule resolution :premises (nst463.0 st463))

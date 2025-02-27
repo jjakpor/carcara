@@ -1,0 +1,3 @@
+(assume nst95.0 (not (= (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$) (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$))))
+(step st95 (cl (= (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$) (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst95.0 st95))

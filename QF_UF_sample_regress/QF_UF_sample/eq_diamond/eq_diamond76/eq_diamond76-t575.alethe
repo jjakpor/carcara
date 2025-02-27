@@ -1,0 +1,6 @@
+(assume nst575.0 (not (= x50 x51)))
+(assume t570 (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))))
+(assume t574 (or (= x50 x51) (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))))))
+(step t574' (cl (= x50 x51) (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))))) :rule or :premises (t574))
+(step st575 (cl (= x50 x51)) :rule resolution :premises (t574' t570))
+(step t.end (cl) :rule resolution :premises (nst575.0 st575))

@@ -1,0 +1,5 @@
+(assume nst253.0 (not (or (not (not (= a$ d$))) (not (not (= b$ c$))))))
+(assume t252 (or (or (not (not (= a$ d$))) (not (not (= b$ c$)))) (or (not (not (= a$ d$))) (not (not (= b$ c$))))))
+(step t252' (cl (or (not (not (= a$ d$))) (not (not (= b$ c$)))) (or (not (not (= a$ d$))) (not (not (= b$ c$))))) :rule or :premises (t252))
+(step st253 (cl (or (not (not (= a$ d$))) (not (not (= b$ c$))))) :rule contraction :premises (t252'))
+(step t.end (cl) :rule resolution :premises (nst253.0 st253))

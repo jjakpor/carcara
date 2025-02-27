@@ -1,0 +1,5 @@
+(assume nst97.0 (not (= y$v_k_Deposit y$v_k_Table)))
+(assume t82 (= y$v_k_Deposit y$v_k_Press))
+(assume t96 (= y$v_k_Press y$v_k_Table))
+(step st97 (cl (= y$v_k_Deposit y$v_k_Table)) :rule trans :premises (t82 t96))
+(step t.end (cl) :rule resolution :premises (nst97.0 st97))

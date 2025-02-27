@@ -1,0 +1,5 @@
+(assume nst304.0 (not (= (or (not (= curr_init$0 curr_init$0)) (and (or (= curr_init$0 curr_init$0) (not (Btwn$0 next$0 c_init$0 curr_init$0 curr_init$0))) (not (in$0 curr_init$0 (dlseg_domain$0 next$0 prev$0 c_init$0 null$0 curr_init$0 prv_init$0))))) (or false (not (in$0 curr_init$0 (dlseg_domain$0 next$0 prev$0 c_init$0 null$0 curr_init$0 prv_init$0)))))))
+(assume t295 (= (not (= curr_init$0 curr_init$0)) false))
+(assume t303 (= (and (or (= curr_init$0 curr_init$0) (not (Btwn$0 next$0 c_init$0 curr_init$0 curr_init$0))) (not (in$0 curr_init$0 (dlseg_domain$0 next$0 prev$0 c_init$0 null$0 curr_init$0 prv_init$0)))) (not (in$0 curr_init$0 (dlseg_domain$0 next$0 prev$0 c_init$0 null$0 curr_init$0 prv_init$0)))))
+(step st304 (cl (= (or (not (= curr_init$0 curr_init$0)) (and (or (= curr_init$0 curr_init$0) (not (Btwn$0 next$0 c_init$0 curr_init$0 curr_init$0))) (not (in$0 curr_init$0 (dlseg_domain$0 next$0 prev$0 c_init$0 null$0 curr_init$0 prv_init$0))))) (or false (not (in$0 curr_init$0 (dlseg_domain$0 next$0 prev$0 c_init$0 null$0 curr_init$0 prv_init$0)))))) :rule cong :premises (t295 t303))
+(step t.end (cl) :rule resolution :premises (nst304.0 st304))

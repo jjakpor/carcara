@@ -1,0 +1,4 @@
+(assume nst999.0 (not (= (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op e1 e1))) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1)))))))
+(assume t998 (= (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op e1 e1)))))
+(step st999 (cl (= (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op e1 e1))) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1)))))) :rule symm :premises (t998))
+(step t.end (cl) :rule resolution :premises (nst999.0 st999))

@@ -1,0 +1,5 @@
+(assume nst20.0 (not (not y$v3_1517448508_35_op)))
+(assume nst20.1 (not (and y$a_Cross_Train_1 y$a_Cross_Train_2)))
+(assume a35 (= y$v3_1517448508_35_op (and y$a_Cross_Train_1 y$a_Cross_Train_2)))
+(step st20 (cl (not y$v3_1517448508_35_op) (and y$a_Cross_Train_1 y$a_Cross_Train_2)) :rule equiv1 :premises (a35))
+(step t.end (cl) :rule resolution :premises (nst20.0 nst20.1 st20))

@@ -1,0 +1,4 @@
+(assume nst136.0 (not y$548))
+(assume t135 (and y$v3_1517448506_300_op y$548))
+(step st136 (cl y$548) :rule and :premises (t135) :args (1))
+(step t.end (cl) :rule resolution :premises (nst136.0 st136))

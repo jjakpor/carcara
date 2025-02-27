@@ -1,0 +1,3 @@
+(assume nst325.0 (not (= (= (f6 c_1) c_0) (= c_0 (f6 c_1)))))
+(step st325 (cl (= (= (f6 c_1) c_0) (= c_0 (f6 c_1)))) :rule rare_rewrite :args ("eq-symm" (f6 c_1) c_0))
+(step t.end (cl) :rule resolution :premises (nst325.0 st325))

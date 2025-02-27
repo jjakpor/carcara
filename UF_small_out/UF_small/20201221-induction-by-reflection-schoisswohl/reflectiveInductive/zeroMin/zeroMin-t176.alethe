@@ -1,0 +1,6 @@
+(define-fun @quantifiers_skolemize_1 () nat (choice ((x nat)) (not (leq zero x))))
+(define-fun @quantifiers_skolemize_15 () nat (choice ((x0 nat)) (not (or (not (models (push_nat empty v0_nat x0) (leqR zeroR (inj_nat v0_nat)))) (models (push_nat empty v0_nat (s x0)) (leqR zeroR (inj_nat v0_nat)))))))
+(assume nst176.0 (not (or (not (models (push_nat empty v0_nat @quantifiers_skolemize_15) (leqR zeroR (inj_nat v0_nat)))) (models (push_nat empty v0_nat (s @quantifiers_skolemize_15)) (leqR zeroR (inj_nat v0_nat))))))
+(assume nst176.1 (not (not (models (push_nat empty v0_nat (s @quantifiers_skolemize_15)) (leqR zeroR (inj_nat v0_nat))))))
+(step st176 (cl (or (not (models (push_nat empty v0_nat @quantifiers_skolemize_15) (leqR zeroR (inj_nat v0_nat)))) (models (push_nat empty v0_nat (s @quantifiers_skolemize_15)) (leqR zeroR (inj_nat v0_nat)))) (not (models (push_nat empty v0_nat (s @quantifiers_skolemize_15)) (leqR zeroR (inj_nat v0_nat))))) :rule or_neg :args (1))
+(step t.end (cl) :rule resolution :premises (nst176.0 nst176.1 st176))

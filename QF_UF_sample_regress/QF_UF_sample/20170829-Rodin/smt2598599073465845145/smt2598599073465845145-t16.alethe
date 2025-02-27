@@ -1,0 +1,4 @@
+(assume nst16.0 (not (= (not (= r2 b2)) (not (= b2 r2)))))
+(assume t2 (= (= r2 b2) (= b2 r2)))
+(step st16 (cl (= (not (= r2 b2)) (not (= b2 r2)))) :rule cong :premises (t2))
+(step t.end (cl) :rule resolution :premises (nst16.0 st16))

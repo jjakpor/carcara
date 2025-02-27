@@ -1,0 +1,4 @@
+(assume nst187.0 (not (=> (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (= x16 x17))))
+(assume t186 (and (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (=> (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (= x16 x17))))
+(step st187 (cl (=> (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (= x16 x17))) :rule and :premises (t186) :args (1))
+(step t.end (cl) :rule resolution :premises (nst187.0 st187))

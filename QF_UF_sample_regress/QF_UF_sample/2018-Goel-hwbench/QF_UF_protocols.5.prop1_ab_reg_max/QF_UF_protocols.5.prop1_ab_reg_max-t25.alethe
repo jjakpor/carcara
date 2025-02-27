@@ -1,0 +1,5 @@
+(assume nst25.0 (not (not (= y$v3_1517448506_519_op (and y$v3_1517448506_516_op y$1017)))))
+(assume nst25.1 (not (not y$v3_1517448506_519_op)))
+(assume nst25.2 (not (and y$v3_1517448506_516_op y$1017)))
+(step st25 (cl (not (= y$v3_1517448506_519_op (and y$v3_1517448506_516_op y$1017))) (not y$v3_1517448506_519_op) (and y$v3_1517448506_516_op y$1017)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst25.0 nst25.1 nst25.2 st25))

@@ -1,0 +1,4 @@
+(assume nst649.0 (not (=> (or (and (= x57 y57) (= y57 x58)) (and (= x57 z57) (= z57 x58))) (= x57 x58))))
+(assume t648 (and (or (and (= x57 y57) (= y57 x58)) (and (= x57 z57) (= z57 x58))) (=> (or (and (= x57 y57) (= y57 x58)) (and (= x57 z57) (= z57 x58))) (= x57 x58))))
+(step st649 (cl (=> (or (and (= x57 y57) (= y57 x58)) (and (= x57 z57) (= z57 x58))) (= x57 x58))) :rule and :premises (t648) :args (1))
+(step t.end (cl) :rule resolution :premises (nst649.0 st649))

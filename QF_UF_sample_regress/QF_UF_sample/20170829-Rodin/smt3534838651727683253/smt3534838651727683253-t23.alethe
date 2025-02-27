@@ -1,0 +1,4 @@
+(assume nst23.0 (not (= (not (= nf0 nf0)) (not true))))
+(assume t22 (= (= nf0 nf0) true))
+(step st23 (cl (= (not (= nf0 nf0)) (not true))) :rule cong :premises (t22))
+(step t.end (cl) :rule resolution :premises (nst23.0 st23))

@@ -1,0 +1,4 @@
+(assume nst25.0 (not (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1)) false)))
+(assume nst25.1 (not (not false)))
+(step st25 (cl (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1)) false) (not false)) :rule implies_neg2)
+(step t.end (cl) :rule resolution :premises (nst25.0 nst25.1 st25))

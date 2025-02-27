@@ -1,0 +1,8 @@
+(assume nst391.0 (not (p1 (f7 c_1) c_1)))
+(assume nst391.1 (not (not (p1 (f6 c_1) c_1))))
+(assume nst391.2 (not (not (= c_1 (f7 c_1)))))
+(assume nst391.3 (not (not (= c_1 (f6 c_1)))))
+(assume t390 (or (not (p1 (f6 c_1) c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f7 c_1))) (p1 (f7 c_1) c_1)))
+(step t390' (cl (not (p1 (f6 c_1) c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f7 c_1))) (p1 (f7 c_1) c_1)) :rule or :premises (t390))
+(step st391 (cl (p1 (f7 c_1) c_1) (not (p1 (f6 c_1) c_1)) (not (= c_1 (f7 c_1))) (not (= c_1 (f6 c_1)))) :rule reordering :premises (t390'))
+(step t.end (cl) :rule resolution :premises (nst391.0 nst391.1 nst391.2 nst391.3 st391))

@@ -1,0 +1,6 @@
+(assume nst348.0 (not (not (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))))
+(assume t338 (or (not (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))) (not (and (or (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (not (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))))))
+(assume t347 (and (or (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (not (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))))
+(step t338' (cl (not (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))) (not (and (or (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (not (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))))) :rule or :premises (t338))
+(step st348 (cl (not (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))) :rule resolution :premises (t338' t347))
+(step t.end (cl) :rule resolution :premises (nst348.0 st348))

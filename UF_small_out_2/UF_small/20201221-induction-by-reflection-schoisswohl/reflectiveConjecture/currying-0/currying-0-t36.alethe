@@ -1,0 +1,5 @@
+(assume nst36.0 (not (not (or (models empty (notR (pR aR))) (models empty (orR (notR (qR bR)) (rR cR)))))))
+(assume nst36.1 (not (models empty (notR (pR aR)))))
+(assume nst36.2 (not (models empty (orR (notR (qR bR)) (rR cR)))))
+(step st36 (cl (not (or (models empty (notR (pR aR))) (models empty (orR (notR (qR bR)) (rR cR))))) (models empty (notR (pR aR))) (models empty (orR (notR (qR bR)) (rR cR)))) :rule or_pos)
+(step t.end (cl) :rule resolution :premises (nst36.0 nst36.1 nst36.2 st36))

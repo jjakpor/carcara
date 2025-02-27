@@ -1,0 +1,7 @@
+(assume nst20.0 (not (= i2 (not (not (= b2 r2))))))
+(assume t4 (or (not (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2)))))) (not (not (= i2 (not (= b2 r2))))) (= i2 (not (not (= b2 r2))))))
+(assume t14 (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2))))))
+(assume t19 (not (= i2 (not (= b2 r2)))))
+(step t4' (cl (not (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2)))))) (not (not (= i2 (not (= b2 r2))))) (= i2 (not (not (= b2 r2))))) :rule or :premises (t4))
+(step st20 (cl (= i2 (not (not (= b2 r2))))) :rule resolution :premises (t4' t14 t19))
+(step t.end (cl) :rule resolution :premises (nst20.0 st20))

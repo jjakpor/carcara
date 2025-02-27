@@ -1,0 +1,3 @@
+(assume nst75.0 (not (= (not (= x16 x17)) (not (= x16 x17)))))
+(step st75 (cl (= (not (= x16 x17)) (not (= x16 x17)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst75.0 st75))

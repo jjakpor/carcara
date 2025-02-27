@@ -1,0 +1,5 @@
+(assume nst234.0 (not (= (= (op e3 e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) false)))
+(assume t223 (= (= (op e3 e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))
+(assume t233 (= (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) false))
+(step st234 (cl (= (= (op e3 e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) false)) :rule trans :premises (t223 t233))
+(step t.end (cl) :rule resolution :premises (nst234.0 st234))

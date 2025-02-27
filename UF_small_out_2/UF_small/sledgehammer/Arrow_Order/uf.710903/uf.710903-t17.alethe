@@ -1,0 +1,6 @@
+(define-fun @quantifiers_skolemize_10 () S2 (choice ((?v6 S2)) (not (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v6))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f3 f4 ?v6)))))))
+(assume nst17.0 (not (= (and (not (= f20 f10)) (and (not (= f20 f9)) (not (= f10 f9)))) (and (not (= f10 f20)) (not (= f9 f20)) (not (= f9 f10))))))
+(assume t9 (= (and (not (= f20 f10)) (and (not (= f20 f9)) (not (= f10 f9)))) (and (not (= f20 f10)) (not (= f20 f9)) (not (= f10 f9)))))
+(assume t16 (= (and (not (= f20 f10)) (not (= f20 f9)) (not (= f10 f9))) (and (not (= f10 f20)) (not (= f9 f20)) (not (= f9 f10)))))
+(step st17 (cl (= (and (not (= f20 f10)) (and (not (= f20 f9)) (not (= f10 f9)))) (and (not (= f10 f20)) (not (= f9 f20)) (not (= f9 f10))))) :rule trans :premises (t9 t16))
+(step t.end (cl) :rule resolution :premises (nst17.0 st17))

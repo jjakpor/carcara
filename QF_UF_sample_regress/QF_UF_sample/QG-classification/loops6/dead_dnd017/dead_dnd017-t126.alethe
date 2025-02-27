@@ -1,0 +1,4 @@
+(assume nst126.0 (not (= (op e2 unit) e2)))
+(assume t125 (and (= (op unit e2) e2) (= (op e2 unit) e2)))
+(step st126 (cl (= (op e2 unit) e2)) :rule and :premises (t125) :args (1))
+(step t.end (cl) :rule resolution :premises (nst126.0 st126))

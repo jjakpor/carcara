@@ -1,0 +1,5 @@
+(assume nst92.0 (not (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))))
+(assume nst92.1 (not (= x7 x8)))
+(assume t91 (=> (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (= x7 x8)))
+(step st92 (cl (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8)))) (= x7 x8)) :rule implies :premises (t91))
+(step t.end (cl) :rule resolution :premises (nst92.0 nst92.1 st92))

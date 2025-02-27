@@ -1,0 +1,7 @@
+(assume t40 (or (p1 (f7 c_1) c_1) (not (p1 (f5 c_1) c_1)) (not (= c_1 (f7 c_1))) (not (= c_1 (f5 c_1)))))
+(assume t320 (not (p1 (f7 c_1) c_1)))
+(assume t425 (p1 (f5 c_1) c_1))
+(assume t443 (= c_1 (f5 c_1)))
+(assume t447 (= c_1 (f7 c_1)))
+(step t40' (cl (p1 (f7 c_1) c_1) (not (p1 (f5 c_1) c_1)) (not (= c_1 (f7 c_1))) (not (= c_1 (f5 c_1)))) :rule or :premises (t40))
+(step st448 (cl) :rule resolution :premises (t40' t447 t443 t425 t320))

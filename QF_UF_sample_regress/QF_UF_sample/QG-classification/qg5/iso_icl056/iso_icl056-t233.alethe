@@ -1,0 +1,4 @@
+(assume nst233.0 (not (= (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))) (op (op e1 e1) (op e1 (op e1 e1))))))
+(assume t232 (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))
+(step st233 (cl (= (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))) (op (op e1 e1) (op e1 (op e1 e1))))) :rule symm :premises (t232))
+(step t.end (cl) :rule resolution :premises (nst233.0 st233))

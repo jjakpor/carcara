@@ -1,0 +1,5 @@
+(assume nst150.0 (not (= (= e4 (op e3 e3)) (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
+(assume t35 (= e4 (op (op e0 e0) e0)))
+(assume t149 (= (op e3 e3) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))
+(step st150 (cl (= (= e4 (op e3 e3)) (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))) :rule cong :premises (t35 t149))
+(step t.end (cl) :rule resolution :premises (nst150.0 st150))

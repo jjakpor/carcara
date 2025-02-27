@@ -1,0 +1,6 @@
+(assume nst59.0 (not (not (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 null$0 lst$0)))))
+(assume t6 (or (Btwn$0 next$0 lst$0 lst$0 null$0) (not (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 null$0 lst$0)))))
+(assume t58 (not (Btwn$0 next$0 lst$0 lst$0 null$0)))
+(step t6' (cl (Btwn$0 next$0 lst$0 lst$0 null$0) (not (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 null$0 lst$0)))) :rule or :premises (t6))
+(step st59 (cl (not (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 null$0 lst$0)))) :rule resolution :premises (t6' t58))
+(step t.end (cl) :rule resolution :premises (nst59.0 st59))

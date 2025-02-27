@@ -1,0 +1,5 @@
+(assume nst516.0 (not (not (= (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))) (and (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))) (=> (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))) (= x46 x47)))))))
+(assume nst516.1 (not (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))))))
+(assume nst516.2 (not (and (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))) (=> (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))) (= x46 x47)))))
+(step st516 (cl (not (= (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))) (and (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))) (=> (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))) (= x46 x47))))) (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47)))) (and (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))) (=> (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))) (= x46 x47)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst516.0 nst516.1 nst516.2 st516))

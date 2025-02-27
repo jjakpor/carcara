@@ -1,0 +1,8 @@
+(assume nst232.0 (not (= (= x0 x20) false)))
+(assume nst232.1 (not (= x0 x20)))
+(assume t230 (or (= (= x0 x20) false) (not (not (= x0 x20)))))
+(assume t231 (or (not (not (not (= x0 x20)))) (= x0 x20)))
+(step t230' (cl (= (= x0 x20) false) (not (not (= x0 x20)))) :rule or :premises (t230))
+(step t231' (cl (not (not (not (= x0 x20)))) (= x0 x20)) :rule or :premises (t231))
+(step st232 (cl (= (= x0 x20) false) (= x0 x20)) :rule resolution :premises (t230' t231'))
+(step t.end (cl) :rule resolution :premises (nst232.0 nst232.1 st232))

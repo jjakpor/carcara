@@ -1,0 +1,7 @@
+(assume nst78.0 (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0))))
+(assume a19 (lseg_set_struct$0 sk_?X_23$0 next$0 x$0 root_x$0 X$0))
+(assume t72 (= (lseg_set_struct$0 sk_?X_23$0 next$0 x$0 root_x$0 X$0) (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0))))
+(assume t77 (or (not (= (lseg_set_struct$0 sk_?X_23$0 next$0 x$0 root_x$0 X$0) (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))) (not (lseg_set_struct$0 sk_?X_23$0 next$0 x$0 root_x$0 X$0)) (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0))))
+(step t77' (cl (not (= (lseg_set_struct$0 sk_?X_23$0 next$0 x$0 root_x$0 X$0) (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))) (not (lseg_set_struct$0 sk_?X_23$0 next$0 x$0 root_x$0 X$0)) (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0))) :rule or :premises (t77))
+(step st78 (cl (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0))) :rule resolution :premises (t77' t72 a19))
+(step t.end (cl) :rule resolution :premises (nst78.0 st78))

@@ -1,0 +1,7 @@
+(define-fun @quantifiers_skolemize_3 () alpha (choice ((x alpha)) (not (models (push_alpha empty v0_alpha x) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha))))))
+(assume nt17.0 (not (= (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha)))) (models (push_alpha empty v0_alpha @quantifiers_skolemize_3) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha))))))
+(anchor :step t17 :args ((:= (x alpha) @quantifiers_skolemize_3)))
+(step st17.t0 (cl (= (models (push_alpha empty v0_alpha x) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha))) (models (push_alpha empty v0_alpha @quantifiers_skolemize_3) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha))))) :rule refl)
+(step t17.t0 (cl (= (models (push_alpha empty v0_alpha x) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha))) (models (push_alpha empty v0_alpha @quantifiers_skolemize_3) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha))))) :rule trust)
+(step t17 (cl (= (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha)))) (models (push_alpha empty v0_alpha @quantifiers_skolemize_3) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha))))) :rule sko_forall)
+(step t.end (cl) :rule resolution :premises (nt17.0 t17))

@@ -1,0 +1,6 @@
+(assume nst229.0 (not (= x19 x20)))
+(assume t224 (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))))
+(assume t228 (or (= x19 x20) (not (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))))))
+(step t228' (cl (= x19 x20) (not (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))))) :rule or :premises (t228))
+(step st229 (cl (= x19 x20)) :rule resolution :premises (t228' t224))
+(step t.end (cl) :rule resolution :premises (nst229.0 st229))

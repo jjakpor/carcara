@@ -1,0 +1,6 @@
+(assume nst281.0 (not (= x23 x24)))
+(assume t276 (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))
+(assume t280 (or (= x23 x24) (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))))
+(step t280' (cl (= x23 x24) (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))) :rule or :premises (t280))
+(step st281 (cl (= x23 x24)) :rule resolution :premises (t280' t276))
+(step t.end (cl) :rule resolution :premises (nst281.0 st281))

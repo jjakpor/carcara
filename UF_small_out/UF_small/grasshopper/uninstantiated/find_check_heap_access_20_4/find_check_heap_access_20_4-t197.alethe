@@ -1,0 +1,4 @@
+(assume nst197.0 (not (not (and (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))) (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)))))))
+(assume nst197.1 (not (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)))))
+(step st197 (cl (not (and (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))) (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))))) (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)))) :rule and_pos :args (1))
+(step t.end (cl) :rule resolution :premises (nst197.0 nst197.1 st197))

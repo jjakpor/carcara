@@ -1,0 +1,6 @@
+(assume nst11.0 (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0))))
+(assume a55 (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x (read$0 ?f ?x) (read$0 ?f ?x))))
+(assume t10 (or (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x (read$0 ?f ?x) (read$0 ?f ?x)))) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0))))
+(step t10' (cl (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x (read$0 ?f ?x) (read$0 ?f ?x)))) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0))) :rule or :premises (t10))
+(step st11 (cl (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0))) :rule resolution :premises (t10' a55))
+(step t.end (cl) :rule resolution :premises (nst11.0 st11))

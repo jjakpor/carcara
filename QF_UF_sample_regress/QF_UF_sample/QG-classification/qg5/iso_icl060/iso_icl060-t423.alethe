@@ -1,0 +1,4 @@
+(assume nst423.0 (not (= (op e4 e4) e4)))
+(assume a7 (and (and (and (and (= (op e0 e0) e0) (= (op e1 e1) e1)) (= (op e2 e2) e2)) (= (op e3 e3) e3)) (= (op e4 e4) e4)))
+(step st423 (cl (= (op e4 e4) e4)) :rule and :premises (a7) :args (1))
+(step t.end (cl) :rule resolution :premises (nst423.0 st423))

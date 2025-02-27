@@ -1,0 +1,7 @@
+(assume nst39.0 (not (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78)))))
+(assume a15 (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) f1)))
+(assume t33 (or (not (= (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) f1)) (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78))))) (not (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) f1))) (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78)))))
+(assume t38 (= (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) f1)) (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78)))))
+(step t33' (cl (not (= (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) f1)) (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78))))) (not (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) f1))) (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78)))) :rule or :premises (t33))
+(step st39 (cl (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78)))) :rule resolution :premises (t33' t38 a15))
+(step t.end (cl) :rule resolution :premises (nst39.0 st39))

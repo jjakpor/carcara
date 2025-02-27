@@ -1,0 +1,5 @@
+(assume nst204.0 (not (= (or (= curr_2$0 curr_2$0) (not (Btwn$0 next$0 lst$0 curr_2$0 curr_2$0))) (or true (not (Btwn$0 next$0 lst$0 curr_2$0 curr_2$0))))))
+(assume t200 (= (= curr_2$0 curr_2$0) true))
+(assume t203 (= (not (Btwn$0 next$0 lst$0 curr_2$0 curr_2$0)) (not (Btwn$0 next$0 lst$0 curr_2$0 curr_2$0))))
+(step st204 (cl (= (or (= curr_2$0 curr_2$0) (not (Btwn$0 next$0 lst$0 curr_2$0 curr_2$0))) (or true (not (Btwn$0 next$0 lst$0 curr_2$0 curr_2$0))))) :rule cong :premises (t200 t203))
+(step t.end (cl) :rule resolution :premises (nst204.0 st204))

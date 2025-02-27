@@ -1,0 +1,5 @@
+(assume nst5.0 (not (and (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)))) (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$))))))
+(assume nst5.1 (not (not (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)))))))
+(assume nst5.2 (not (not (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$))))))
+(step st5 (cl (and (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)))) (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))) (not (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$))))) (not (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$))))) :rule and_neg)
+(step t.end (cl) :rule resolution :premises (nst5.0 nst5.1 nst5.2 st5))

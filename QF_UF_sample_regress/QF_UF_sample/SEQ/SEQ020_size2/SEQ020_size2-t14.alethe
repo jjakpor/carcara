@@ -1,0 +1,7 @@
+(assume nst14.0 (not (= (or (not (not (p1 (f7 c_1) c_1))) (not (= c_1 (f7 c_1))) (not (= c_1 (f5 c_1))) (not (p1 (f5 c_1) c_1))) (or (p1 (f7 c_1) c_1) (not (= c_1 (f7 c_1))) (not (= c_1 (f5 c_1))) (not (p1 (f5 c_1) c_1))))))
+(assume t10 (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)))
+(assume t11 (= (not (= c_1 (f7 c_1))) (not (= c_1 (f7 c_1)))))
+(assume t12 (= (not (= c_1 (f5 c_1))) (not (= c_1 (f5 c_1)))))
+(assume t13 (= (not (p1 (f5 c_1) c_1)) (not (p1 (f5 c_1) c_1))))
+(step st14 (cl (= (or (not (not (p1 (f7 c_1) c_1))) (not (= c_1 (f7 c_1))) (not (= c_1 (f5 c_1))) (not (p1 (f5 c_1) c_1))) (or (p1 (f7 c_1) c_1) (not (= c_1 (f7 c_1))) (not (= c_1 (f5 c_1))) (not (p1 (f5 c_1) c_1))))) :rule cong :premises (t10 t11 t12 t13))
+(step t.end (cl) :rule resolution :premises (nst14.0 st14))

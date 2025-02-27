@@ -1,0 +1,4 @@
+(assume nst15.0 (not (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1)) false)))
+(assume nst15.1 (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1))))
+(step st15 (cl (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1)) false) (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1))) :rule implies_neg1)
+(step t.end (cl) :rule resolution :premises (nst15.0 nst15.1 st15))

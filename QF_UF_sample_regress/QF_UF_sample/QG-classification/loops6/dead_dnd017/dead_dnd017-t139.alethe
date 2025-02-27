@@ -1,0 +1,5 @@
+(assume nst139.0 (not (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))))
+(assume t132 (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= unit e2))))
+(assume t138 (= (or (not (= e2 (op e2 (op e2 e2)))) (= unit e2)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))))
+(step st139 (cl (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))) :rule trans :premises (t132 t138))
+(step t.end (cl) :rule resolution :premises (nst139.0 st139))

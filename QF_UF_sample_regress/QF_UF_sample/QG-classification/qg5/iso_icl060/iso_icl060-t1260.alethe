@@ -1,0 +1,7 @@
+(assume nst1260.0 (not (not (= (op e1 e1) (op e1 (op (op e1 e3) e3))))))
+(assume t1256 (or (not (= (not (= (op e1 e1) (op e1 e4))) (not (= (op e1 e1) (op e1 (op (op e1 e3) e3)))))) (not (not (= (op e1 e1) (op e1 e4)))) (not (= (op e1 e1) (op e1 (op (op e1 e3) e3))))))
+(assume t1258 (= (not (= (op e1 e1) (op e1 e4))) (not (= (op e1 e1) (op e1 (op (op e1 e3) e3))))))
+(assume t1259 (not (= (op e1 e1) (op e1 e4))))
+(step t1256' (cl (not (= (not (= (op e1 e1) (op e1 e4))) (not (= (op e1 e1) (op e1 (op (op e1 e3) e3)))))) (not (not (= (op e1 e1) (op e1 e4)))) (not (= (op e1 e1) (op e1 (op (op e1 e3) e3))))) :rule or :premises (t1256))
+(step st1260 (cl (not (= (op e1 e1) (op e1 (op (op e1 e3) e3))))) :rule resolution :premises (t1256' t1258 t1259))
+(step t.end (cl) :rule resolution :premises (nst1260.0 st1260))

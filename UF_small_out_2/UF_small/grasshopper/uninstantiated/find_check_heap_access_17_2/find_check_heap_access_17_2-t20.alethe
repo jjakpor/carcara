@@ -1,0 +1,8 @@
+(assume nst20.0 (not (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))))))
+(assume nst20.1 (not (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))))))
+(assume nst20.2 (not (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))))))
+(assume nst20.3 (not false))
+(assume t19 (or false (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0)))) (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0)))) (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))))))
+(step t19' (cl false (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0)))) (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0)))) (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))))) :rule or :premises (t19))
+(step st20 (cl (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0)))) (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0)))) (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0)))) false) :rule reordering :premises (t19'))
+(step t.end (cl) :rule resolution :premises (nst20.0 nst20.1 nst20.2 nst20.3 st20))

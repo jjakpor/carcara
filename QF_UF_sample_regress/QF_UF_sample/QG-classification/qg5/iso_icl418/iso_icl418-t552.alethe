@@ -1,0 +1,7 @@
+(assume nst552.0 (not (or (not (= (op e4 e3) (op (op e4 e3) e4))) (= (op e4 e3) (op e4 (op e4 e3))))))
+(assume t543 (or (not (= (or (not (= (op e1 e4) e1)) (= (op e4 e1) e1)) (or (not (= (op e4 e3) (op (op e4 e3) e4))) (= (op e4 e3) (op e4 (op e4 e3)))))) (not (or (not (= (op e1 e4) e1)) (= (op e4 e1) e1))) (or (not (= (op e4 e3) (op (op e4 e3) e4))) (= (op e4 e3) (op e4 (op e4 e3))))))
+(assume t550 (= (or (not (= (op e1 e4) e1)) (= (op e4 e1) e1)) (or (not (= (op e4 e3) (op (op e4 e3) e4))) (= (op e4 e3) (op e4 (op e4 e3))))))
+(assume t551 (or (not (= (op e1 e4) e1)) (= (op e4 e1) e1)))
+(step t543' (cl (not (= (or (not (= (op e1 e4) e1)) (= (op e4 e1) e1)) (or (not (= (op e4 e3) (op (op e4 e3) e4))) (= (op e4 e3) (op e4 (op e4 e3)))))) (not (or (not (= (op e1 e4) e1)) (= (op e4 e1) e1))) (or (not (= (op e4 e3) (op (op e4 e3) e4))) (= (op e4 e3) (op e4 (op e4 e3))))) :rule or :premises (t543))
+(step st552 (cl (or (not (= (op e4 e3) (op (op e4 e3) e4))) (= (op e4 e3) (op e4 (op e4 e3))))) :rule resolution :premises (t543' t550 t551))
+(step t.end (cl) :rule resolution :premises (nst552.0 st552))

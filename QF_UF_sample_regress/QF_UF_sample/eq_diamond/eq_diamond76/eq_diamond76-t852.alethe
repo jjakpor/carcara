@@ -1,0 +1,4 @@
+(assume nst852.0 (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12)))))
+(assume nst852.1 (not (not (and (= x11 y11) (= y11 x12)))))
+(step st852 (cl (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (not (and (= x11 y11) (= y11 x12)))) :rule or_neg :args (0))
+(step t.end (cl) :rule resolution :premises (nst852.0 nst852.1 st852))

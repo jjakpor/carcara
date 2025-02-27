@@ -1,0 +1,4 @@
+(assume nst21.0 (not (= (less_eq$ (llength$a xs$)) (less_eq$ (llength$ us$)))))
+(assume t20 (= (llength$a xs$) (llength$ us$)))
+(step st21 (cl (= (less_eq$ (llength$a xs$)) (less_eq$ (llength$ us$)))) :rule cong :premises (t20))
+(step t.end (cl) :rule resolution :premises (nst21.0 st21))

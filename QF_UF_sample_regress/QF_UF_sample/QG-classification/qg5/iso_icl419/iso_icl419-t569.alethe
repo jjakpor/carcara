@@ -1,0 +1,4 @@
+(assume nst569.0 (not (= (op (op e1 e3) e1) e3)))
+(assume t348 (and (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2)) (= (op (op e1 e3) e1) e3)))
+(step st569 (cl (= (op (op e1 e3) e1) e3)) :rule and :premises (t348) :args (1))
+(step t.end (cl) :rule resolution :premises (nst569.0 st569))

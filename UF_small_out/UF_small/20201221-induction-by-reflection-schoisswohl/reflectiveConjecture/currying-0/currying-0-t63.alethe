@@ -1,0 +1,4 @@
+(assume nst63.0 (not (or (not (= (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR)))))))) (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (not (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))))))))
+(assume nst63.1 (not (not (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))))))
+(step st63 (cl (or (not (= (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR)))))))) (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (not (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR)))))))) (not (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))))) :rule or_neg :args (1))
+(step t.end (cl) :rule resolution :premises (nst63.0 nst63.1 st63))

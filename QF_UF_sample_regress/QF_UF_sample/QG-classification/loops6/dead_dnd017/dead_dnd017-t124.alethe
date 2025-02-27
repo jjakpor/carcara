@@ -1,0 +1,5 @@
+(assume nst124.0 (not (= (= (op e2 unit) e2) (= e2 (op e2 e0)))))
+(assume t120 (= (= (op e2 unit) e2) (= e2 (op e2 unit))))
+(assume t123 (= (= e2 (op e2 unit)) (= e2 (op e2 e0))))
+(step st124 (cl (= (= (op e2 unit) e2) (= e2 (op e2 e0)))) :rule trans :premises (t120 t123))
+(step t.end (cl) :rule resolution :premises (nst124.0 st124))

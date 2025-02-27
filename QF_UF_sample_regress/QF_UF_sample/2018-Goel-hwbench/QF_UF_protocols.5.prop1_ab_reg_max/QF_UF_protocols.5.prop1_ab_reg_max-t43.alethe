@@ -1,0 +1,5 @@
+(assume nst43.0 (not (not (= (not y$1092) y$id34$next_op))))
+(assume nst43.1 (not (not (not y$1092))))
+(assume nst43.2 (not y$id34$next_op))
+(step st43 (cl (not (= (not y$1092) y$id34$next_op)) (not (not y$1092)) y$id34$next_op) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst43.0 nst43.1 nst43.2 st43))

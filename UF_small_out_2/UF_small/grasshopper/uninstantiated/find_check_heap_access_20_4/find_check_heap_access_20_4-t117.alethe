@@ -1,0 +1,3 @@
+(assume nst117.0 (not (= X_27$0 X_27$0)))
+(step st117 (cl (= X_27$0 X_27$0)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst117.0 st117))

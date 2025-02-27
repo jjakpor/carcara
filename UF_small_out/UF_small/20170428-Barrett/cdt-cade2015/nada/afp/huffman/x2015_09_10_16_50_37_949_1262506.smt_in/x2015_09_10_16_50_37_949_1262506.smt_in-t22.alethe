@@ -1,0 +1,3 @@
+(assume nst22.0 (not (or (not (forall ((?v0 A_tree$) (?v1 A$)) (fun_app$b (less_eq$ (depth$ ?v0 ?v1)) (height$ ?v0)))) (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$)))))
+(step st22 (cl (or (not (forall ((?v0 A_tree$) (?v1 A$)) (fun_app$b (less_eq$ (depth$ ?v0 ?v1)) (height$ ?v0)))) (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$)))) :rule forall_inst :args (t$ a$))
+(step t.end (cl) :rule resolution :premises (nst22.0 st22))

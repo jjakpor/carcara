@@ -1,0 +1,5 @@
+(assume nst80.0 (not (not (p1 (f7 c_1) c_1))))
+(assume nst80.1 (not (not (p4 c_1))))
+(assume t79 (or (not (p1 (f7 c_1) c_1)) (not (p4 c_1))))
+(step st80 (cl (not (p1 (f7 c_1) c_1)) (not (p4 c_1))) :rule or :premises (t79))
+(step t.end (cl) :rule resolution :premises (nst80.0 nst80.1 st80))

@@ -1,0 +1,5 @@
+(assume nst34.0 (not (= (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)))) (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))))
+(assume t17 (= (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$)))) (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))
+(assume t33 (= (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)))) (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$))))))
+(step st34 (cl (= (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)))) (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))) :rule trans :premises (t33 t17))
+(step t.end (cl) :rule resolution :premises (nst34.0 st34))

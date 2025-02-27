@@ -1,0 +1,6 @@
+(assume nst671.0 (not (= (= x0 x60) false)))
+(assume t669 (or (= (= x0 x60) false) (= x0 x60)))
+(assume t670 (not (= x0 x60)))
+(step t669' (cl (= (= x0 x60) false) (= x0 x60)) :rule or :premises (t669))
+(step st671 (cl (= (= x0 x60) false)) :rule resolution :premises (t669' t670))
+(step t.end (cl) :rule resolution :premises (nst671.0 st671))

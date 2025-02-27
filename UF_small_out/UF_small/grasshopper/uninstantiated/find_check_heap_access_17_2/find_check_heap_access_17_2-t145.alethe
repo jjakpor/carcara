@@ -1,0 +1,7 @@
+(assume t1 (or (not (Btwn$0 next$0 x$0 x$0 x$0)) (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (and (Btwn$0 next$0 x$0 x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 x$0)) (not (or (not (Btwn$0 next$0 x$0 x$0 x$0)) (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (and (Btwn$0 next$0 x$0 x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 x$0))))))
+(assume t4 (or (not (Btwn$0 next$0 x$0 x$0 x$0)) (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (and (Btwn$0 next$0 x$0 x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 x$0))))
+(assume t123 (not (and (Btwn$0 next$0 x$0 x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 x$0))))
+(assume t140 (Btwn$0 next$0 x$0 x$0 x$0))
+(assume t144 (Btwn$0 next$0 x$0 root_x$0 x$0))
+(step t1' (cl (not (Btwn$0 next$0 x$0 x$0 x$0)) (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (and (Btwn$0 next$0 x$0 x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 x$0)) (not (or (not (Btwn$0 next$0 x$0 x$0 x$0)) (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (and (Btwn$0 next$0 x$0 x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 x$0))))) :rule or :premises (t1))
+(step st145 (cl) :rule resolution :premises (t1' t4 t123 t144 t140))

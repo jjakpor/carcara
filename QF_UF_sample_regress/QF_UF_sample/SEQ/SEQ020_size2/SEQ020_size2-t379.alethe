@@ -1,0 +1,7 @@
+(assume nst379.0 (not (= (or (not (not (p1 (f7 c_1) c_1))) (not (= c_0 (f7 c_1))) (not (= c_0 (f5 c_1))) (not (p1 (f5 c_1) c_1))) (or (p1 (f7 c_1) c_1) (not (= c_0 (f7 c_1))) (not (= c_0 (f5 c_1))) (not (p1 (f5 c_1) c_1))))))
+(assume t10 (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)))
+(assume t13 (= (not (p1 (f5 c_1) c_1)) (not (p1 (f5 c_1) c_1))))
+(assume t60 (= (not (= c_0 (f5 c_1))) (not (= c_0 (f5 c_1)))))
+(assume t378 (= (not (= c_0 (f7 c_1))) (not (= c_0 (f7 c_1)))))
+(step st379 (cl (= (or (not (not (p1 (f7 c_1) c_1))) (not (= c_0 (f7 c_1))) (not (= c_0 (f5 c_1))) (not (p1 (f5 c_1) c_1))) (or (p1 (f7 c_1) c_1) (not (= c_0 (f7 c_1))) (not (= c_0 (f5 c_1))) (not (p1 (f5 c_1) c_1))))) :rule cong :premises (t10 t378 t60 t13))
+(step t.end (cl) :rule resolution :premises (nst379.0 st379))

@@ -1,0 +1,6 @@
+(assume nt337.0 (not (= (forall ((?v0 S3) (?v1 S3) (?v2 S3)) (=> (= (f3 (f15 f16 ?v0) ?v1) f1) (=> (= (f3 (f15 f16 ?v1) ?v2) f1) (= (f3 (f15 f16 ?v0) ?v2) f1)))) (forall ((?v0 S3) (?v1 S3) (?v2 S3)) (=> (= f1 (f3 (f15 f16 ?v0) ?v1)) (=> (= f1 (f3 (f15 f16 ?v1) ?v2)) (= f1 (f3 (f15 f16 ?v0) ?v2))))))))
+(anchor :step t337 :args ((?v0 S3) (?v1 S3) (?v2 S3) (:= (?v0 S3) ?v0) (:= (?v1 S3) ?v1) (:= (?v2 S3) ?v2)))
+(step st337.t1 (cl (= (= (f3 (f15 f16 ?v1) ?v2) f1) (= f1 (f3 (f15 f16 ?v1) ?v2)))) :rule hole)
+(step t337.t4 (cl (= (=> (= (f3 (f15 f16 ?v0) ?v1) f1) (=> (= (f3 (f15 f16 ?v1) ?v2) f1) (= (f3 (f15 f16 ?v0) ?v2) f1))) (=> (= f1 (f3 (f15 f16 ?v0) ?v1)) (=> (= f1 (f3 (f15 f16 ?v1) ?v2)) (= f1 (f3 (f15 f16 ?v0) ?v2)))))) :rule trust)
+(step t337 (cl (= (forall ((?v0 S3) (?v1 S3) (?v2 S3)) (=> (= (f3 (f15 f16 ?v0) ?v1) f1) (=> (= (f3 (f15 f16 ?v1) ?v2) f1) (= (f3 (f15 f16 ?v0) ?v2) f1)))) (forall ((?v0 S3) (?v1 S3) (?v2 S3)) (=> (= f1 (f3 (f15 f16 ?v0) ?v1)) (=> (= f1 (f3 (f15 f16 ?v1) ?v2)) (= f1 (f3 (f15 f16 ?v0) ?v2))))))) :rule bind)
+(step t.end (cl) :rule resolution :premises (nt337.0 t337))

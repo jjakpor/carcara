@@ -1,0 +1,4 @@
+(assume nst897.0 (not (= (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))
+(assume t896 (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)) (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op e1 e1)))))
+(step st897 (cl (= (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))) :rule symm :premises (t896))
+(step t.end (cl) :rule resolution :premises (nst897.0 st897))

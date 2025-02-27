@@ -1,0 +1,5 @@
+(assume nst499.0 (not (not (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))))))
+(assume nst499.1 (not (= x43 x44)))
+(assume t498 (=> (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (= x43 x44)))
+(step st499 (cl (not (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44)))) (= x43 x44)) :rule implies :premises (t498))
+(step t.end (cl) :rule resolution :premises (nst499.0 nst499.1 st499))

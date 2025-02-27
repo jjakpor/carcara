@@ -1,0 +1,5 @@
+(assume nst127.0 (not (= (Add_4_4_4 y$X y$n1s4) (Add_4_4_4 y$n1s4 y$n1s4))))
+(assume t47 (= y$n1s4 y$n1s4))
+(assume t122 (= y$X y$n1s4))
+(step st127 (cl (= (Add_4_4_4 y$X y$n1s4) (Add_4_4_4 y$n1s4 y$n1s4))) :rule cong :premises (t122 t47))
+(step t.end (cl) :rule resolution :premises (nst127.0 st127))

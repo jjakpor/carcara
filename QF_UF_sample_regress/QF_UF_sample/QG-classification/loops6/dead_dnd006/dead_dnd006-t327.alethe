@@ -1,0 +1,6 @@
+(assume nst327.0 (not (= e1 e0)))
+(assume nst327.1 (not (not (= e1 (op e1 (op e1 e1))))))
+(assume t326 (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)))
+(step t326' (cl (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)) :rule or :premises (t326))
+(step st327 (cl (= e1 e0) (not (= e1 (op e1 (op e1 e1))))) :rule reordering :premises (t326'))
+(step t.end (cl) :rule resolution :premises (nst327.0 nst327.1 st327))

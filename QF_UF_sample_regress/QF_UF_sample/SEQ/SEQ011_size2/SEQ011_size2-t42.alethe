@@ -1,0 +1,3 @@
+(assume nst42.0 (not (= (= (f7 c_1) c_0) (= c_0 (f7 c_1)))))
+(step st42 (cl (= (= (f7 c_1) c_0) (= c_0 (f7 c_1)))) :rule rare_rewrite :args ("eq-symm" (f7 c_1) c_0))
+(step t.end (cl) :rule resolution :premises (nst42.0 st42))

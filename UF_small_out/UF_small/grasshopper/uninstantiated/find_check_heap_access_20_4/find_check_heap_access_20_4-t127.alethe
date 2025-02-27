@@ -1,0 +1,5 @@
+(assume nst127.0 (not (not (= (= sk_?X_15$0 (setenum$0 root_x$0)) (= sk_?X_16$0 (setenum$0 root_x$0))))))
+(assume nst127.1 (not (not (= sk_?X_15$0 (setenum$0 root_x$0)))))
+(assume nst127.2 (not (= sk_?X_16$0 (setenum$0 root_x$0))))
+(step st127 (cl (not (= (= sk_?X_15$0 (setenum$0 root_x$0)) (= sk_?X_16$0 (setenum$0 root_x$0)))) (not (= sk_?X_15$0 (setenum$0 root_x$0))) (= sk_?X_16$0 (setenum$0 root_x$0))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst127.0 nst127.1 nst127.2 st127))

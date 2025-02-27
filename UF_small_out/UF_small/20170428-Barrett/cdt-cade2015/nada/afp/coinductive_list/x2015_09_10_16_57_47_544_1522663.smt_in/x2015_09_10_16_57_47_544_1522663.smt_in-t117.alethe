@@ -1,0 +1,3 @@
+(assume nst117.0 (not (= (fun_app$q lnull$d xs$) (fun_app$q lnull$d xs$))))
+(step st117 (cl (= (fun_app$q lnull$d xs$) (fun_app$q lnull$d xs$))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst117.0 st117))

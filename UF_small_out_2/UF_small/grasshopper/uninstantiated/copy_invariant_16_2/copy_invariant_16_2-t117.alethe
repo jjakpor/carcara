@@ -1,0 +1,3 @@
+(assume nst117.0 (not (= (=> (and (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (= cp_2$0 sk_?e$0) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) false) (not (and (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (= cp_2$0 sk_?e$0) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))))))
+(step st117 (cl (= (=> (and (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (= cp_2$0 sk_?e$0) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) false) (not (and (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (= cp_2$0 sk_?e$0) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))))) :rule implies_simplify)
+(step t.end (cl) :rule resolution :premises (nst117.0 st117))

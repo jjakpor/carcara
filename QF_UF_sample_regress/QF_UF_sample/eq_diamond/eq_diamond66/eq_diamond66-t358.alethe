@@ -1,0 +1,6 @@
+(assume nst358.0 (not (= x30 x31)))
+(assume t353 (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))))
+(assume t357 (or (= x30 x31) (not (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))))))
+(step t357' (cl (= x30 x31) (not (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))))) :rule or :premises (t357))
+(step st358 (cl (= x30 x31)) :rule resolution :premises (t357' t353))
+(step t.end (cl) :rule resolution :premises (nst358.0 st358))

@@ -1,0 +1,6 @@
+(assume nst846.0 (not (= (= (op e0 (op e0 e0)) (op (op e0 e0) (op e0 e0))) false)))
+(assume t236 (not (= (op e0 (op e0 e0)) (op (op e0 e0) (op e0 e0)))))
+(assume t845 (or (= (= (op e0 (op e0 e0)) (op (op e0 e0) (op e0 e0))) false) (= (op e0 (op e0 e0)) (op (op e0 e0) (op e0 e0)))))
+(step t845' (cl (= (= (op e0 (op e0 e0)) (op (op e0 e0) (op e0 e0))) false) (= (op e0 (op e0 e0)) (op (op e0 e0) (op e0 e0)))) :rule or :premises (t845))
+(step st846 (cl (= (= (op e0 (op e0 e0)) (op (op e0 e0) (op e0 e0))) false)) :rule resolution :premises (t845' t236))
+(step t.end (cl) :rule resolution :premises (nst846.0 st846))

@@ -1,0 +1,5 @@
+(assume nst34.0 (not (= sk_?X_3$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))))
+(assume t26 (= sk_?X_3$0 (union$0 sk_?X_5$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))
+(assume t33 (= (union$0 sk_?X_5$0 (lseg_domain$0 next$0 lst$0 cp_2$0)) (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))
+(step st34 (cl (= sk_?X_3$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))) :rule trans :premises (t26 t33))
+(step t.end (cl) :rule resolution :premises (nst34.0 st34))

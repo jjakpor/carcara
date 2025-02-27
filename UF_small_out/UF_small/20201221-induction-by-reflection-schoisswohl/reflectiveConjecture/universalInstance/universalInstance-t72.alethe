@@ -1,0 +1,5 @@
+(assume nst72.0 (not (not (= (forall ((env env) (v var_alpha)) (= (eval_alpha env (inj_alpha v)) (evalV_alpha env v))) (forall ((env env) (v var_alpha)) (= (evalV_alpha env v) (eval_alpha env (inj_alpha v))))))))
+(assume nst72.1 (not (not (forall ((env env) (v var_alpha)) (= (eval_alpha env (inj_alpha v)) (evalV_alpha env v))))))
+(assume nst72.2 (not (forall ((env env) (v var_alpha)) (= (evalV_alpha env v) (eval_alpha env (inj_alpha v))))))
+(step st72 (cl (not (= (forall ((env env) (v var_alpha)) (= (eval_alpha env (inj_alpha v)) (evalV_alpha env v))) (forall ((env env) (v var_alpha)) (= (evalV_alpha env v) (eval_alpha env (inj_alpha v)))))) (not (forall ((env env) (v var_alpha)) (= (eval_alpha env (inj_alpha v)) (evalV_alpha env v)))) (forall ((env env) (v var_alpha)) (= (evalV_alpha env v) (eval_alpha env (inj_alpha v))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst72.0 nst72.1 nst72.2 st72))

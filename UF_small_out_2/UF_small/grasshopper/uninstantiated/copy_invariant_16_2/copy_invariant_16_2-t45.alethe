@@ -1,0 +1,4 @@
+(assume nst45.0 (not (= sk_?X_1$0 sk_FP$0)))
+(assume a14 (= sk_FP$0 sk_?X_1$0))
+(step st45 (cl (= sk_?X_1$0 sk_FP$0)) :rule symm :premises (a14))
+(step t.end (cl) :rule resolution :premises (nst45.0 st45))

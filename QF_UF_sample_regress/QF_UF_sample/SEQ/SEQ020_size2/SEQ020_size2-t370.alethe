@@ -1,0 +1,5 @@
+(assume nst370.0 (not (not (= (or (= (f7 c_1) c_0) (= (f7 c_1) c_1)) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1)))))))
+(assume nst370.1 (not (not (or (= (f7 c_1) c_0) (= (f7 c_1) c_1)))))
+(assume nst370.2 (not (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1)))))
+(step st370 (cl (not (= (or (= (f7 c_1) c_0) (= (f7 c_1) c_1)) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1))))) (not (or (= (f7 c_1) c_0) (= (f7 c_1) c_1))) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst370.0 nst370.1 nst370.2 st370))

@@ -1,0 +1,4 @@
+(assume nst10.0 (not (not (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4)))))))))
+(assume nst10.1 (not (= (shd$ as$) (lab$ tr$))))
+(step st10 (cl (not (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4))))))) (= (shd$ as$) (lab$ tr$))) :rule and_pos :args (0))
+(step t.end (cl) :rule resolution :premises (nst10.0 nst10.1 st10))

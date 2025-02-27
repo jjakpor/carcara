@@ -1,0 +1,6 @@
+(assume nst67.0 (not (not (or (not (= lst$0 (read$0 next$0 lst$0))) (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0)))))
+(assume nst67.1 (not (not (= lst$0 (read$0 next$0 lst$0)))))
+(assume nst67.2 (not (not (Btwn$0 next$0 lst$0 null$0 null$0))))
+(assume nst67.3 (not (= null$0 lst$0)))
+(step st67 (cl (not (or (not (= lst$0 (read$0 next$0 lst$0))) (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0))) (not (= lst$0 (read$0 next$0 lst$0))) (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0)) :rule or_pos)
+(step t.end (cl) :rule resolution :premises (nst67.0 nst67.1 nst67.2 nst67.3 st67))

@@ -1,0 +1,6 @@
+(assume nst9.0 (not (= nf nf0)))
+(assume t6 (or (not (not (not (= nf nf0)))) (= nf nf0)))
+(assume t8 (not (not (= nf nf0))))
+(step t6' (cl (not (not (not (= nf nf0)))) (= nf nf0)) :rule or :premises (t6))
+(step st9 (cl (= nf nf0)) :rule resolution :premises (t6' t8))
+(step t.end (cl) :rule resolution :premises (nst9.0 st9))

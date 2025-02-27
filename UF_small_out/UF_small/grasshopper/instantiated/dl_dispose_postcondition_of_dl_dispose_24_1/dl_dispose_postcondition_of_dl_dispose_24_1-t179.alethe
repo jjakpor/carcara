@@ -1,0 +1,5 @@
+(assume nst179.0 (not (not (= (not (in$0 null$0 Alloc_1$0)) (not (in$0 prv_2$0 Alloc_1$0))))))
+(assume nst179.1 (not (not (not (in$0 null$0 Alloc_1$0)))))
+(assume nst179.2 (not (not (in$0 prv_2$0 Alloc_1$0))))
+(step st179 (cl (not (= (not (in$0 null$0 Alloc_1$0)) (not (in$0 prv_2$0 Alloc_1$0)))) (not (not (in$0 null$0 Alloc_1$0))) (not (in$0 prv_2$0 Alloc_1$0))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst179.0 nst179.1 nst179.2 st179))

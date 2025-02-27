@@ -1,0 +1,4 @@
+(assume nst524.0 (not (= (op e0 e4) (op e4 e0))))
+(assume t523 (= (op e4 e0) (op e0 e4)))
+(step st524 (cl (= (op e0 e4) (op e4 e0))) :rule symm :premises (t523))
+(step t.end (cl) :rule resolution :premises (nst524.0 st524))

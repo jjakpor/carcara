@@ -1,0 +1,7 @@
+(assume nst198.0 (not (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))))))
+(assume t15 (or (not (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR))))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR)))))) (not (= (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))))))))
+(assume t72 (= (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))))))
+(assume t197 (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))))
+(step t15' (cl (not (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR))))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR)))))) (not (= (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))))))) :rule or :premises (t15))
+(step st198 (cl (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))))) :rule resolution :premises (t15' t197 t72))
+(step t.end (cl) :rule resolution :premises (nst198.0 st198))

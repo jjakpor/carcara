@@ -1,0 +1,8 @@
+(assume nst318.0 (not (= (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1))) false)))
+(assume nst318.1 (not (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)))))
+(assume t316 (or (= (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1))) false) (not (not (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)))))))
+(assume t317 (or (not (not (not (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)))))) (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)))))
+(step t316' (cl (= (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1))) false) (not (not (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)))))) :rule or :premises (t316))
+(step t317' (cl (not (not (not (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)))))) (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)))) :rule or :premises (t317))
+(step st318 (cl (= (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1))) false) (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)))) :rule resolution :premises (t316' t317'))
+(step t.end (cl) :rule resolution :premises (nst318.0 nst318.1 st318))

@@ -1,0 +1,4 @@
+(assume nst3.0 (not (= (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 f72 f78))) (not true))))
+(assume t2 (= (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 f72 f78)) true))
+(step st3 (cl (= (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 f72 f78))) (not true))) :rule cong :premises (t2))
+(step t.end (cl) :rule resolution :premises (nst3.0 st3))

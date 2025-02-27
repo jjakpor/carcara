@@ -1,0 +1,5 @@
+(assume nst133.0 (not (= (and (= null$0 prv_init$0) (= c_init$0 curr_init$0)) (and (= (read$0 next$0 d_init$0) (read$0 prev$0 prv_5$0)) (= c_init$0 prv_5$0)))))
+(assume t131 (= (= null$0 prv_init$0) (= (read$0 next$0 d_init$0) (read$0 prev$0 prv_5$0))))
+(assume t132 (= (= c_init$0 curr_init$0) (= c_init$0 prv_5$0)))
+(step st133 (cl (= (and (= null$0 prv_init$0) (= c_init$0 curr_init$0)) (and (= (read$0 next$0 d_init$0) (read$0 prev$0 prv_5$0)) (= c_init$0 prv_5$0)))) :rule cong :premises (t131 t132))
+(step t.end (cl) :rule resolution :premises (nst133.0 st133))

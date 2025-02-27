@@ -1,0 +1,3 @@
+(assume nst393.0 (not (= (=> (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)) false) (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1))))))
+(step st393 (cl (= (=> (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)) false) (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1))))) :rule implies_simplify)
+(step t.end (cl) :rule resolution :premises (nst393.0 st393))

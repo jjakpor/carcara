@@ -1,0 +1,5 @@
+(assume nst169.0 (not (= (= e1 (op e1 e0)) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))))
+(assume t48 (= e1 (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))
+(assume t168 (= (op e1 e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))
+(step st169 (cl (= (= e1 (op e1 e0)) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))) :rule cong :premises (t48 t168))
+(step t.end (cl) :rule resolution :premises (nst169.0 st169))

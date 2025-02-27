@@ -1,0 +1,4 @@
+(assume nst364.0 (not (= (not (in$0 null$0 Alloc$0)) (not (in$0 (read$0 next$0 d_init$0) Alloc$0)))))
+(assume t363 (= (in$0 null$0 Alloc$0) (in$0 (read$0 next$0 d_init$0) Alloc$0)))
+(step st364 (cl (= (not (in$0 null$0 Alloc$0)) (not (in$0 (read$0 next$0 d_init$0) Alloc$0)))) :rule cong :premises (t363))
+(step t.end (cl) :rule resolution :premises (nst364.0 st364))

@@ -1,0 +1,4 @@
+(assume nst72.0 (not (or (not car) (not clk))))
+(assume nst72.1 (not (not (not car))))
+(step st72 (cl (or (not car) (not clk)) (not (not car))) :rule or_neg :args (0))
+(step t.end (cl) :rule resolution :premises (nst72.0 nst72.1 st72))

@@ -1,0 +1,4 @@
+(assume nst1081.0 (not (=> (and (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))) (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (not (= (op e1 e3) (op e3 (op (op e1 e3) e3)))))))
+(assume nst1081.1 (not (not (not (= (op e1 e3) (op e3 (op (op e1 e3) e3)))))))
+(step st1081 (cl (=> (and (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))) (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (not (= (op e1 e3) (op e3 (op (op e1 e3) e3))))) (not (not (= (op e1 e3) (op e3 (op (op e1 e3) e3)))))) :rule implies_neg2)
+(step t.end (cl) :rule resolution :premises (nst1081.0 nst1081.1 st1081))

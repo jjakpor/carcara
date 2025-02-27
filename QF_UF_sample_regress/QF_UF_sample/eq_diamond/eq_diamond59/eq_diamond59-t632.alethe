@@ -1,0 +1,5 @@
+(assume nst632.0 (not (not (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))))))
+(assume nst632.1 (not (= x38 x39)))
+(assume t631 (=> (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (= x38 x39)))
+(step st632 (cl (not (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39)))) (= x38 x39)) :rule implies :premises (t631))
+(step t.end (cl) :rule resolution :premises (nst632.0 nst632.1 st632))

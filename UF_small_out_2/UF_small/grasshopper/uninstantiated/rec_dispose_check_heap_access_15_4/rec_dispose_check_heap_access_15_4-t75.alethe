@@ -1,0 +1,5 @@
+(assume nst75.0 (not (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x)))))
+(assume nst75.1 (not (Btwn$0 next$0 lst$0 lst$0 lst$0)))
+(assume t74 (or (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x))) (Btwn$0 next$0 lst$0 lst$0 lst$0)))
+(step st75 (cl (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x))) (Btwn$0 next$0 lst$0 lst$0 lst$0)) :rule or :premises (t74))
+(step t.end (cl) :rule resolution :premises (nst75.0 nst75.1 st75))

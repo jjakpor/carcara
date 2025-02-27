@@ -1,0 +1,5 @@
+(assume nst903.0 (not (= (op e0 e0) (op (op (op e0 e0) e0) (op e0 e0)))))
+(assume t791 (= (op e0 e0) (op (op e0 e0) (op (op e0 e0) e0))))
+(assume t902 (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op e0 e0))))
+(step st903 (cl (= (op e0 e0) (op (op (op e0 e0) e0) (op e0 e0)))) :rule trans :premises (t791 t902))
+(step t.end (cl) :rule resolution :premises (nst903.0 st903))

@@ -1,0 +1,7 @@
+(assume nst317.0 (not (not (= c8 c_0))))
+(assume t97 (p4 c8))
+(assume t114 (or (p4 c_0) (not (p4 c8)) (not (= c8 c_0))))
+(assume t316 (not (p4 c_0)))
+(step t114' (cl (p4 c_0) (not (p4 c8)) (not (= c8 c_0))) :rule or :premises (t114))
+(step st317 (cl (not (= c8 c_0))) :rule resolution :premises (t114' t316 t97))
+(step t.end (cl) :rule resolution :premises (nst317.0 st317))

@@ -1,0 +1,7 @@
+(assume nst1146.0 (not (not (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))))))
+(assume nst1146.1 (not (not (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))))))
+(assume nst1146.2 (not (= (op e1 e3) (op e3 (op (op e1 e3) e1)))))
+(assume t1145 (or (= (op e1 e3) (op e3 (op (op e1 e3) e1))) (not (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))) (not (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))))))
+(step t1145' (cl (= (op e1 e3) (op e3 (op (op e1 e3) e1))) (not (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))) (not (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))))) :rule or :premises (t1145))
+(step st1146 (cl (not (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))) (not (and (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))) (= (op e1 e3) (op e3 (op (op e1 e3) e1)))) :rule reordering :premises (t1145'))
+(step t.end (cl) :rule resolution :premises (nst1146.0 nst1146.1 nst1146.2 st1146))

@@ -1,0 +1,6 @@
+(assume nst678.0 (not (= x42 x43)))
+(assume t673 (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))))
+(assume t677 (or (= x42 x43) (not (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))))))
+(step t677' (cl (= x42 x43) (not (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))))) :rule or :premises (t677))
+(step st678 (cl (= x42 x43)) :rule resolution :premises (t677' t673))
+(step t.end (cl) :rule resolution :premises (nst678.0 st678))

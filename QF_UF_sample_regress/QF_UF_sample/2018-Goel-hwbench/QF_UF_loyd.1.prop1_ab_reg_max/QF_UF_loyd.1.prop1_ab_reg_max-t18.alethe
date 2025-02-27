@@ -1,0 +1,5 @@
+(assume nst18.0 (not (not y$629)))
+(assume nst18.1 (not y$prop))
+(assume t17 (= y$629 y$prop))
+(step st18 (cl (not y$629) y$prop) :rule equiv1 :premises (t17))
+(step t.end (cl) :rule resolution :premises (nst18.0 nst18.1 st18))

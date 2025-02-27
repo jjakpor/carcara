@@ -1,0 +1,5 @@
+(assume nst201.0 (not (= (union$0 sk_?X_77$0 sk_?X_76$0) (union$0 sk_?X_78$0 sk_?X_76$0))))
+(assume a15 (= sk_?X_77$0 sk_?X_78$0))
+(assume t133 (= sk_?X_76$0 sk_?X_76$0))
+(step st201 (cl (= (union$0 sk_?X_77$0 sk_?X_76$0) (union$0 sk_?X_78$0 sk_?X_76$0))) :rule cong :premises (a15 t133))
+(step t.end (cl) :rule resolution :premises (nst201.0 st201))

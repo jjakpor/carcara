@@ -1,0 +1,4 @@
+(assume nst345.0 (not (not (not (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0))))))
+(assume nst345.1 (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0)))
+(step st345 (cl (not (not (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0)))) (in$0 (read$0 next$0 d_init$0) FP_Caller$0)) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nst345.0 nst345.1 st345))

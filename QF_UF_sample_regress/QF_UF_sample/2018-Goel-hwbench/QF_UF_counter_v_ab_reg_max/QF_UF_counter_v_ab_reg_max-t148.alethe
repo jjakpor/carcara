@@ -1,0 +1,4 @@
+(assume nst148.0 (not (= (not (= y$X$next y$n15s4)) (not (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) y$n15s4)))))
+(assume t147 (= (= y$X$next y$n15s4) (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) y$n15s4)))
+(step st148 (cl (= (not (= y$X$next y$n15s4)) (not (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) y$n15s4)))) :rule cong :premises (t147))
+(step t.end (cl) :rule resolution :premises (nst148.0 st148))

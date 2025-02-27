@@ -1,0 +1,6 @@
+(assume nst107.0 (not (= x3 x4)))
+(assume nst107.1 (not (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))))
+(assume t106 (or (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4)))) (= x3 x4)))
+(step t106' (cl (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4)))) (= x3 x4)) :rule or :premises (t106))
+(step st107 (cl (= x3 x4) (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))) :rule reordering :premises (t106'))
+(step t.end (cl) :rule resolution :premises (nst107.0 nst107.1 st107))

@@ -1,0 +1,6 @@
+(assume nst399.0 (not (= x34 x35)))
+(assume t394 (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))
+(assume t398 (or (= x34 x35) (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))))
+(step t398' (cl (= x34 x35) (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))) :rule or :premises (t398))
+(step st399 (cl (= x34 x35)) :rule resolution :premises (t398' t394))
+(step t.end (cl) :rule resolution :premises (nst399.0 st399))

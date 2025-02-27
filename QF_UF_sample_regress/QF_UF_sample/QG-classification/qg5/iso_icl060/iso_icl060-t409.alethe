@@ -1,0 +1,8 @@
+(assume nst409.0 (not (= (= (op e3 e3) (op (op (op e1 e3) e3) e3)) false)))
+(assume nst409.1 (not (= (op e3 e3) (op (op (op e1 e3) e3) e3))))
+(assume t407 (or (= (= (op e3 e3) (op (op (op e1 e3) e3) e3)) false) (not (not (= (op e3 e3) (op (op (op e1 e3) e3) e3))))))
+(assume t408 (or (not (not (not (= (op e3 e3) (op (op (op e1 e3) e3) e3))))) (= (op e3 e3) (op (op (op e1 e3) e3) e3))))
+(step t407' (cl (= (= (op e3 e3) (op (op (op e1 e3) e3) e3)) false) (not (not (= (op e3 e3) (op (op (op e1 e3) e3) e3))))) :rule or :premises (t407))
+(step t408' (cl (not (not (not (= (op e3 e3) (op (op (op e1 e3) e3) e3))))) (= (op e3 e3) (op (op (op e1 e3) e3) e3))) :rule or :premises (t408))
+(step st409 (cl (= (= (op e3 e3) (op (op (op e1 e3) e3) e3)) false) (= (op e3 e3) (op (op (op e1 e3) e3) e3))) :rule resolution :premises (t407' t408'))
+(step t.end (cl) :rule resolution :premises (nst409.0 nst409.1 st409))

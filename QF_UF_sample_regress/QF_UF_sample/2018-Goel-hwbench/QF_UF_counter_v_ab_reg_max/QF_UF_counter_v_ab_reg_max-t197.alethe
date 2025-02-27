@@ -1,0 +1,5 @@
+(assume nst197.0 (not (= y$n15s4 y$n1s4)))
+(assume nst197.1 (not (= (Add_4_4_4 y$n1s4 y$n1s4) (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
+(assume t196 (ite (= y$n15s4 y$n1s4) (= y$n1s4 (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4))) (= (Add_4_4_4 y$n1s4 y$n1s4) (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
+(step st197 (cl (= y$n15s4 y$n1s4) (= (Add_4_4_4 y$n1s4 y$n1s4) (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)))) :rule ite1 :premises (t196))
+(step t.end (cl) :rule resolution :premises (nst197.0 nst197.1 st197))

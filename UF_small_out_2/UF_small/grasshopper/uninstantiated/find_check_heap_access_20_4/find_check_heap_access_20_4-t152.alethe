@@ -1,0 +1,5 @@
+(assume nst152.0 (not (= (= sk_?X_19$0 (union$0 (intersection$0 Alloc$0 FP_2$0) (setminus$0 Alloc$0 Alloc$0))) (= (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0)) (union$0 (intersection$0 Alloc$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))) (setminus$0 Alloc$0 Alloc$0))))))
+(assume t134 (= sk_?X_19$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))
+(assume t151 (= (union$0 (intersection$0 Alloc$0 FP_2$0) (setminus$0 Alloc$0 Alloc$0)) (union$0 (intersection$0 Alloc$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))) (setminus$0 Alloc$0 Alloc$0))))
+(step st152 (cl (= (= sk_?X_19$0 (union$0 (intersection$0 Alloc$0 FP_2$0) (setminus$0 Alloc$0 Alloc$0))) (= (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0)) (union$0 (intersection$0 Alloc$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))) (setminus$0 Alloc$0 Alloc$0))))) :rule cong :premises (t134 t151))
+(step t.end (cl) :rule resolution :premises (nst152.0 st152))

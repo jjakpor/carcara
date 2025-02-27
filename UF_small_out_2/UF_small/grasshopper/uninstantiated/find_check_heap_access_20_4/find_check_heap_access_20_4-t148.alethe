@@ -1,0 +1,5 @@
+(assume nst148.0 (not (= FP_2$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0)))))
+(assume t136 (= FP_2$0 sk_?X_24$0))
+(assume t147 (= sk_?X_24$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))
+(step st148 (cl (= FP_2$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0)))) :rule trans :premises (t136 t147))
+(step t.end (cl) :rule resolution :premises (nst148.0 st148))

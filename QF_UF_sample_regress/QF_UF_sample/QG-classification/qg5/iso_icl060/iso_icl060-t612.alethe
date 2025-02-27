@@ -1,0 +1,5 @@
+(assume nst612.0 (not (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))))))
+(assume nst612.1 (not (= e1 (op (op (op e1 e3) e3) (op e1 e3)))))
+(assume t611 (=> (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))) (= e1 (op (op (op e1 e3) e3) (op e1 e3)))))
+(step st612 (cl (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))) (= e1 (op (op (op e1 e3) e3) (op e1 e3)))) :rule implies :premises (t611))
+(step t.end (cl) :rule resolution :premises (nst612.0 nst612.1 st612))

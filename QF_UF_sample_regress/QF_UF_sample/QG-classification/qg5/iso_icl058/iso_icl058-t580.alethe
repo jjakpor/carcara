@@ -1,0 +1,5 @@
+(assume nst580.0 (not (= (or (or (or (or (= (op e0 e3) e3) (= (op e1 e3) e3)) (= (op e2 e3) e3)) (= (op e3 e3) e3)) (= (op e4 e3) e3)) (or (= e3 (op e4 e3)) (= e3 (op e3 e3)) (= e3 (op e2 e3)) (= e3 (op e0 e3)) (= e3 (op e1 e3))))))
+(assume t575 (= (or (or (or (or (= (op e0 e3) e3) (= (op e1 e3) e3)) (= (op e2 e3) e3)) (= (op e3 e3) e3)) (= (op e4 e3) e3)) (or (= (op e4 e3) e3) (= (op e3 e3) e3) (= (op e2 e3) e3) (= (op e0 e3) e3) (= (op e1 e3) e3))))
+(assume t579 (= (or (= (op e4 e3) e3) (= (op e3 e3) e3) (= (op e2 e3) e3) (= (op e0 e3) e3) (= (op e1 e3) e3)) (or (= e3 (op e4 e3)) (= e3 (op e3 e3)) (= e3 (op e2 e3)) (= e3 (op e0 e3)) (= e3 (op e1 e3)))))
+(step st580 (cl (= (or (or (or (or (= (op e0 e3) e3) (= (op e1 e3) e3)) (= (op e2 e3) e3)) (= (op e3 e3) e3)) (= (op e4 e3) e3)) (or (= e3 (op e4 e3)) (= e3 (op e3 e3)) (= e3 (op e2 e3)) (= e3 (op e0 e3)) (= e3 (op e1 e3))))) :rule trans :premises (t575 t579))
+(step t.end (cl) :rule resolution :premises (nst580.0 st580))

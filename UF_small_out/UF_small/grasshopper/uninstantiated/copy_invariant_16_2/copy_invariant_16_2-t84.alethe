@@ -1,0 +1,7 @@
+(assume nst84.0 (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0)))
+(assume a11 (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0))
+(assume t82 (or (not (= (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0))) (not (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0)) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0)))
+(assume t83 (= (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0)))
+(step t82' (cl (not (= (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0))) (not (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0)) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0)) :rule or :premises (t82))
+(step st84 (cl (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0)) :rule resolution :premises (t82' t83 a11))
+(step t.end (cl) :rule resolution :premises (nst84.0 st84))

@@ -1,0 +1,3 @@
+(assume nst144.0 (not (= (not (in$0 null$0 (lseg_domain$0 next$0 cp_2$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 cp_2$0 null$0))))))
+(step st144 (cl (= (not (in$0 null$0 (lseg_domain$0 next$0 cp_2$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 cp_2$0 null$0))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst144.0 st144))

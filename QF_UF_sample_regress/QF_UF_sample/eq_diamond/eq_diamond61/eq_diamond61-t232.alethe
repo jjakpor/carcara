@@ -1,0 +1,5 @@
+(assume nst232.0 (not (not (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21))))))
+(assume nst232.1 (not (= x20 x21)))
+(assume t231 (=> (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21))) (= x20 x21)))
+(step st232 (cl (not (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21)))) (= x20 x21)) :rule implies :premises (t231))
+(step t.end (cl) :rule resolution :premises (nst232.0 nst232.1 st232))

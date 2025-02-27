@@ -1,0 +1,5 @@
+(assume nst472.0 (not (not (= (= e1 (op (op (op e1 e3) e3) e3)) false))))
+(assume nst472.1 (not (not (= e1 (op (op (op e1 e3) e3) e3)))))
+(assume t471 (= (= (= e1 (op (op (op e1 e3) e3) e3)) false) (not (= e1 (op (op (op e1 e3) e3) e3)))))
+(step st472 (cl (not (= (= e1 (op (op (op e1 e3) e3) e3)) false)) (not (= e1 (op (op (op e1 e3) e3) e3)))) :rule equiv1 :premises (t471))
+(step t.end (cl) :rule resolution :premises (nst472.0 nst472.1 st472))

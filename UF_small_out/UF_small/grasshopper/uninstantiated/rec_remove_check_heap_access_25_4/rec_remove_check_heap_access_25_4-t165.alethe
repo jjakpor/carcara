@@ -1,0 +1,4 @@
+(assume nst165.0 (not (= FP_1$0 sk_?X_10$0)))
+(assume a17 (= sk_?X_10$0 FP_1$0))
+(step st165 (cl (= FP_1$0 sk_?X_10$0)) :rule symm :premises (a17))
+(step t.end (cl) :rule resolution :premises (nst165.0 st165))

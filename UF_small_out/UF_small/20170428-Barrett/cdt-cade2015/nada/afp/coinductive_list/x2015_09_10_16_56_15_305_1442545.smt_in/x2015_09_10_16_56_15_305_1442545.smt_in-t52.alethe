@@ -1,0 +1,5 @@
+(assume nst52.0 (not (= zero$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))
+(assume t49 (= zero$ (fun_app$n llength$b lNil$)))
+(assume t51 (= (fun_app$n llength$b lNil$) (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))
+(step st52 (cl (= zero$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) :rule trans :premises (t49 t51))
+(step t.end (cl) :rule resolution :premises (nst52.0 st52))

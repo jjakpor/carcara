@@ -1,0 +1,8 @@
+(assume nst47.0 (not (=> (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (= (read$0 next$0 x$0) (read$0 next$0 root_x$0)))))
+(assume nst47.1 (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))))
+(assume t39 (or (=> (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))) (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))))
+(assume t46 (or (not (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))) (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))))
+(step t39' (cl (=> (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))) (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))) :rule or :premises (t39))
+(step t46' (cl (not (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))) (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))) :rule or :premises (t46))
+(step st47 (cl (=> (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))) (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))) :rule resolution :premises (t39' t46'))
+(step t.end (cl) :rule resolution :premises (nst47.0 nst47.1 st47))

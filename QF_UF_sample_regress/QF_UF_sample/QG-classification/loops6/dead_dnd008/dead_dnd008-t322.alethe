@@ -1,0 +1,5 @@
+(assume nst322.0 (not (= (or (not (= e2 (op e2 (op e2 e2)))) (= unit e2)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))))
+(assume t319 (= (or (not (= e2 (op e2 (op e2 e2)))) (= unit e2)) (or (not (= e2 (op e2 (op e2 e2)))) (= e0 e2))))
+(assume t321 (= (or (not (= e2 (op e2 (op e2 e2)))) (= e0 e2)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))))
+(step st322 (cl (= (or (not (= e2 (op e2 (op e2 e2)))) (= unit e2)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))) :rule trans :premises (t319 t321))
+(step t.end (cl) :rule resolution :premises (nst322.0 st322))

@@ -1,0 +1,5 @@
+(assume nst462.0 (not (not (= (not (= (op e0 e1) (op e0 e4))) (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)))))))
+(assume nst462.1 (not (not (not (= (op e0 e1) (op e0 e4))))))
+(assume nst462.2 (not (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)))))
+(step st462 (cl (not (= (not (= (op e0 e1) (op e0 e4))) (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4))))) (not (not (= (op e0 e1) (op e0 e4)))) (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst462.0 nst462.1 nst462.2 st462))

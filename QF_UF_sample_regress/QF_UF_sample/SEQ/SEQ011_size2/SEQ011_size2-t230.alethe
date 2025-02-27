@@ -1,0 +1,4 @@
+(assume nst230.0 (not (not (and (p1 (f6 c_0) c_0) (= c_1 (f6 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0))))))
+(assume nst230.1 (not (= c_1 (f7 c_0))))
+(step st230 (cl (not (and (p1 (f6 c_0) c_0) (= c_1 (f6 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0)))) (= c_1 (f7 c_0))) :rule and_pos :args (2))
+(step t.end (cl) :rule resolution :premises (nst230.0 nst230.1 st230))

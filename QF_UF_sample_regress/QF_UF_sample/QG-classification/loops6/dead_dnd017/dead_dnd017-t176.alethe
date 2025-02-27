@@ -1,0 +1,8 @@
+(assume nst176.0 (not (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3))))))
+(assume nst176.1 (not (= e3 (op e3 (op e3 e3)))))
+(assume t169 (or (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))) (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))))
+(assume t175 (or (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) (= e3 (op e3 (op e3 e3)))))
+(step t175' (cl (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) (= e3 (op e3 (op e3 e3)))) :rule or :premises (t175))
+(step t169' (cl (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))) (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) :rule or :premises (t169))
+(step st176 (cl (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))) (= e3 (op e3 (op e3 e3)))) :rule resolution :premises (t169' t175'))
+(step t.end (cl) :rule resolution :premises (nst176.0 nst176.1 st176))

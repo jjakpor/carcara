@@ -1,0 +1,5 @@
+(assume a69 (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))))
+(assume t13 (or (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y)))) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0))))
+(assume t350 (not (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0))))
+(step t13' (cl (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y)))) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0))) :rule or :premises (t13))
+(step st351 (cl) :rule resolution :premises (t13' t350 a69))

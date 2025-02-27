@@ -1,0 +1,5 @@
+(assume nst73.0 (not (= (in$0 d_init$0 sk_?X_92$0) (in$0 d_init$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 (read$0 prev$0 prv_5$0) (read$0 next$0 d_init$0) d_init$0)))))
+(assume t70 (= d_init$0 d_init$0))
+(assume t72 (= sk_?X_92$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 (read$0 prev$0 prv_5$0) (read$0 next$0 d_init$0) d_init$0)))
+(step st73 (cl (= (in$0 d_init$0 sk_?X_92$0) (in$0 d_init$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 (read$0 prev$0 prv_5$0) (read$0 next$0 d_init$0) d_init$0)))) :rule cong :premises (t70 t72))
+(step t.end (cl) :rule resolution :premises (nst73.0 st73))

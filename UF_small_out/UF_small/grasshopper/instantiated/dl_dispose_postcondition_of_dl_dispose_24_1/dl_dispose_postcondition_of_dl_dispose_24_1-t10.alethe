@@ -1,0 +1,3 @@
+(assume nst10.0 (not (= (= (in$0 sk_?e$0 (dlseg_domain$0 next$0 prev$0 prv_2$0 prv_3$0 prv_2$0 b_1$0)) true) (in$0 sk_?e$0 (dlseg_domain$0 next$0 prev$0 prv_2$0 prv_3$0 prv_2$0 b_1$0)))))
+(step st10 (cl (= (= (in$0 sk_?e$0 (dlseg_domain$0 next$0 prev$0 prv_2$0 prv_3$0 prv_2$0 b_1$0)) true) (in$0 sk_?e$0 (dlseg_domain$0 next$0 prev$0 prv_2$0 prv_3$0 prv_2$0 b_1$0)))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nst10.0 st10))

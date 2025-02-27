@@ -1,0 +1,4 @@
+(assume nst3.0 (not (=> (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x)) (Btwn$0 next$0 lst$0 lst$0 lst$0))))
+(assume nst3.1 (not (not (Btwn$0 next$0 lst$0 lst$0 lst$0))))
+(step st3 (cl (=> (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x)) (Btwn$0 next$0 lst$0 lst$0 lst$0)) (not (Btwn$0 next$0 lst$0 lst$0 lst$0))) :rule implies_neg2)
+(step t.end (cl) :rule resolution :premises (nst3.0 nst3.1 st3))

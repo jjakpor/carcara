@@ -1,0 +1,3 @@
+(assume nst53.0 (not (= (in$0 prv_init$0 sk_?X_78$0) (in$0 prv_init$0 sk_?X_78$0))))
+(step st53 (cl (= (in$0 prv_init$0 sk_?X_78$0) (in$0 prv_init$0 sk_?X_78$0))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst53.0 st53))

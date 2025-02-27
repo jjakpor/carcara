@@ -1,0 +1,6 @@
+(assume nst213.0 (not (not (and (= e0 (op e3 (op e3 e0))) (not (= e0 (op e3 e0)))))))
+(assume t168 (or (= e0 (op e3 (op e3 e0))) (not (and (= e0 (op e3 (op e3 e0))) (not (= e0 (op e3 e0)))))))
+(assume t212 (not (= e0 (op e3 (op e3 e0)))))
+(step t168' (cl (= e0 (op e3 (op e3 e0))) (not (and (= e0 (op e3 (op e3 e0))) (not (= e0 (op e3 e0)))))) :rule or :premises (t168))
+(step st213 (cl (not (and (= e0 (op e3 (op e3 e0))) (not (= e0 (op e3 e0)))))) :rule resolution :premises (t168' t212))
+(step t.end (cl) :rule resolution :premises (nst213.0 st213))

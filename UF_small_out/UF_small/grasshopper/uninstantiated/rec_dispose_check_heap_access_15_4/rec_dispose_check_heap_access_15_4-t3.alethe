@@ -1,0 +1,5 @@
+(assume nst3.0 (not (not (forall ((?f FldLoc) (?u Loc) (?x Loc) (?y Loc) (?z Loc)) (or (not (Btwn$0 ?f ?x ?y ?z)) (not (Btwn$0 ?f ?y ?u ?z)) (and (Btwn$0 ?f ?x ?y ?u) (Btwn$0 ?f ?x ?u ?z)))))))
+(assume nst3.1 (not (or (not (Btwn$0 next$0 lst$0 lst$0 lst$0)) (not (Btwn$0 next$0 lst$0 null$0 lst$0)) (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 null$0 lst$0)))))
+(assume t2 (or (not (forall ((?f FldLoc) (?u Loc) (?x Loc) (?y Loc) (?z Loc)) (or (not (Btwn$0 ?f ?x ?y ?z)) (not (Btwn$0 ?f ?y ?u ?z)) (and (Btwn$0 ?f ?x ?y ?u) (Btwn$0 ?f ?x ?u ?z))))) (or (not (Btwn$0 next$0 lst$0 lst$0 lst$0)) (not (Btwn$0 next$0 lst$0 null$0 lst$0)) (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 null$0 lst$0)))))
+(step st3 (cl (not (forall ((?f FldLoc) (?u Loc) (?x Loc) (?y Loc) (?z Loc)) (or (not (Btwn$0 ?f ?x ?y ?z)) (not (Btwn$0 ?f ?y ?u ?z)) (and (Btwn$0 ?f ?x ?y ?u) (Btwn$0 ?f ?x ?u ?z))))) (or (not (Btwn$0 next$0 lst$0 lst$0 lst$0)) (not (Btwn$0 next$0 lst$0 null$0 lst$0)) (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 null$0 lst$0)))) :rule or :premises (t2))
+(step t.end (cl) :rule resolution :premises (nst3.0 nst3.1 st3))

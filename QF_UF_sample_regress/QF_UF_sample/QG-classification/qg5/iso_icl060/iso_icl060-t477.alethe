@@ -1,0 +1,8 @@
+(assume nst477.0 (not (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) false)))
+(assume nst477.1 (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))
+(assume t475 (or (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) false) (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))))
+(assume t476 (or (not (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))
+(step t475' (cl (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) false) (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))) :rule or :premises (t475))
+(step t476' (cl (not (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) :rule or :premises (t476))
+(step st477 (cl (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) false) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) :rule resolution :premises (t475' t476'))
+(step t.end (cl) :rule resolution :premises (nst477.0 nst477.1 st477))

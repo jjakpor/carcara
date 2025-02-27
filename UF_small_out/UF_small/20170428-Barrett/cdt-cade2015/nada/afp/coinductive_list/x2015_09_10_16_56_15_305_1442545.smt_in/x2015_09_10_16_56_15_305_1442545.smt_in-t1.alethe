@@ -1,0 +1,7 @@
+(assume nst1.0 (not (fun_app$h lnull$ xs$)))
+(assume nst1.1 (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))
+(assume nst1.2 (not (not (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))))
+(assume t0 (or (not (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))) (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))
+(step t0' (cl (not (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))) (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) :rule or :premises (t0))
+(step st1 (cl (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)) (not (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))) :rule reordering :premises (t0'))
+(step t.end (cl) :rule resolution :premises (nst1.0 nst1.1 nst1.2 st1))

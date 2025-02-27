@@ -1,0 +1,5 @@
+(assume nst224.0 (not (not (and (= a$ d$) (= a$ c$)))))
+(assume nst224.1 (not (= c$ d$)))
+(assume t223 (=> (and (= a$ d$) (= a$ c$)) (= c$ d$)))
+(step st224 (cl (not (and (= a$ d$) (= a$ c$))) (= c$ d$)) :rule implies :premises (t223))
+(step t.end (cl) :rule resolution :premises (nst224.0 nst224.1 st224))

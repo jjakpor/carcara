@@ -1,0 +1,4 @@
+(assume nst181.0 (not (or (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))) (models empty (notR (notR (qR bR)))) (not (not (models empty (notR (qR bR))))))))
+(assume nst181.1 (not (not (models empty (notR (notR (qR bR)))))))
+(step st181 (cl (or (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))) (models empty (notR (notR (qR bR)))) (not (not (models empty (notR (qR bR)))))) (not (models empty (notR (notR (qR bR)))))) :rule or_neg :args (1))
+(step t.end (cl) :rule resolution :premises (nst181.0 nst181.1 st181))

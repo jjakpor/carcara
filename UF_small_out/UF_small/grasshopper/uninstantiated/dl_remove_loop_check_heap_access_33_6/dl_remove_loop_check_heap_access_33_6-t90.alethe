@@ -1,0 +1,4 @@
+(assume nst90.0 (not (= Axiom_39$0 (= Axiom_39$0 true))))
+(assume t89 (= (= Axiom_39$0 true) Axiom_39$0))
+(step st90 (cl (= Axiom_39$0 (= Axiom_39$0 true))) :rule symm :premises (t89))
+(step t.end (cl) :rule resolution :premises (nst90.0 st90))

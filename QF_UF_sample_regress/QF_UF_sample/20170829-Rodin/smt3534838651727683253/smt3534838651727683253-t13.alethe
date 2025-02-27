@@ -1,0 +1,5 @@
+(assume nst13.0 (not (= flash nf0)))
+(assume nst13.1 (not (= flash nf)))
+(assume a1 (or (= flash nf0) (= flash nf)))
+(step st13 (cl (= flash nf0) (= flash nf)) :rule or :premises (a1))
+(step t.end (cl) :rule resolution :premises (nst13.0 nst13.1 st13))

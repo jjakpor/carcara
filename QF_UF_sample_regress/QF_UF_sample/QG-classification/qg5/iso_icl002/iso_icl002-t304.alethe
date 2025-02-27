@@ -1,0 +1,7 @@
+(assume nst304.0 (not (not (= (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) (op e0 e0))))))
+(assume t293 (or (not (= (not (= (op e1 e0) (op e1 e4))) (not (= (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) (op e0 e0)))))) (not (not (= (op e1 e0) (op e1 e4)))) (not (= (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) (op e0 e0))))))
+(assume t295 (= (not (= (op e1 e0) (op e1 e4))) (not (= (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) (op e0 e0))))))
+(assume t303 (not (= (op e1 e0) (op e1 e4))))
+(step t293' (cl (not (= (not (= (op e1 e0) (op e1 e4))) (not (= (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) (op e0 e0)))))) (not (not (= (op e1 e0) (op e1 e4)))) (not (= (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) (op e0 e0))))) :rule or :premises (t293))
+(step st304 (cl (not (= (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) (op e0 e0))))) :rule resolution :premises (t293' t295 t303))
+(step t.end (cl) :rule resolution :premises (nst304.0 st304))

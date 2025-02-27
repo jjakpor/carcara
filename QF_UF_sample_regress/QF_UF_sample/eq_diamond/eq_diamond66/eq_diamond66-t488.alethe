@@ -1,0 +1,5 @@
+(assume nst488.0 (not (not (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))))))
+(assume nst488.1 (not (= x42 x43)))
+(assume t487 (=> (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))) (= x42 x43)))
+(step st488 (cl (not (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43)))) (= x42 x43)) :rule implies :premises (t487))
+(step t.end (cl) :rule resolution :premises (nst488.0 nst488.1 st488))

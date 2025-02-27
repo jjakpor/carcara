@@ -1,0 +1,5 @@
+(assume nst155.0 (not (not (= (models empty (orR (notR (pR aR)) (qR bR))) (or (models empty (notR (pR aR))) (models empty (qR bR)))))))
+(assume nst155.1 (not (not (models empty (orR (notR (pR aR)) (qR bR))))))
+(assume nst155.2 (not (or (models empty (notR (pR aR))) (models empty (qR bR)))))
+(step st155 (cl (not (= (models empty (orR (notR (pR aR)) (qR bR))) (or (models empty (notR (pR aR))) (models empty (qR bR))))) (not (models empty (orR (notR (pR aR)) (qR bR)))) (or (models empty (notR (pR aR))) (models empty (qR bR)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst155.0 nst155.1 nst155.2 st155))

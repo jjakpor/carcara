@@ -1,0 +1,6 @@
+(assume nst471.0 (not (= x41 x42)))
+(assume t466 (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))))
+(assume t470 (or (= x41 x42) (not (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))))))
+(step t470' (cl (= x41 x42) (not (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))))) :rule or :premises (t470))
+(step st471 (cl (= x41 x42)) :rule resolution :premises (t470' t466))
+(step t.end (cl) :rule resolution :premises (nst471.0 st471))

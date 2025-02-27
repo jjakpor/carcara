@@ -1,0 +1,7 @@
+(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (union (difference c a) (difference c b)))) (member ?x (difference c (intersection a b)))))))
+(define-fun @quantifiers_skolemize_4 () Elem (choice ((?x Elem)) (not (or (not (member ?x (difference c (intersection a b)))) (member ?x (union (difference c a) (difference c b)))))))
+(assume nst264.0 (not (not (= (member @quantifiers_skolemize_4 (intersection a b)) (and (member @quantifiers_skolemize_4 a) (member @quantifiers_skolemize_4 b))))))
+(assume nst264.1 (not (member @quantifiers_skolemize_4 (intersection a b))))
+(assume nst264.2 (not (not (and (member @quantifiers_skolemize_4 a) (member @quantifiers_skolemize_4 b)))))
+(step st264 (cl (not (= (member @quantifiers_skolemize_4 (intersection a b)) (and (member @quantifiers_skolemize_4 a) (member @quantifiers_skolemize_4 b)))) (member @quantifiers_skolemize_4 (intersection a b)) (not (and (member @quantifiers_skolemize_4 a) (member @quantifiers_skolemize_4 b)))) :rule equiv_pos1)
+(step t.end (cl) :rule resolution :premises (nst264.0 nst264.1 nst264.2 st264))

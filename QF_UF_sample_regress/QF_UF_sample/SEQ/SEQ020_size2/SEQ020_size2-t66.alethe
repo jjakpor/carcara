@@ -1,0 +1,4 @@
+(assume nst66.0 (not (not (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))))))
+(assume nst66.1 (not (= c_0 (f6 c_1))))
+(step st66 (cl (not (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1)))) (= c_0 (f6 c_1))) :rule and_pos :args (1))
+(step t.end (cl) :rule resolution :premises (nst66.0 nst66.1 st66))

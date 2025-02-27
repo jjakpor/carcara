@@ -1,0 +1,5 @@
+(assume nst42.0 (not (= (intersection$0 sk_?X_5$0 sk_?X_4$0) (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))))
+(assume t23 (= sk_?X_4$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))
+(assume t31 (= sk_?X_5$0 (lseg_domain$0 next$0 lst$0 lst$0)))
+(step st42 (cl (= (intersection$0 sk_?X_5$0 sk_?X_4$0) (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))) :rule cong :premises (t31 t23))
+(step t.end (cl) :rule resolution :premises (nst42.0 st42))

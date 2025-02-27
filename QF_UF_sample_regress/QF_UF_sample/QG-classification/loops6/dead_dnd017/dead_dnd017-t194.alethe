@@ -1,0 +1,4 @@
+(assume nst194.0 (not (= (not (= (op e3 (op e3 e3)) e3)) (not (= e3 (op e3 (op e3 e3)))))))
+(assume t193 (= (= (op e3 (op e3 e3)) e3) (= e3 (op e3 (op e3 e3)))))
+(step st194 (cl (= (not (= (op e3 (op e3 e3)) e3)) (not (= e3 (op e3 (op e3 e3)))))) :rule cong :premises (t193))
+(step t.end (cl) :rule resolution :premises (nst194.0 st194))

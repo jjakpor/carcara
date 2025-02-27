@@ -1,0 +1,7 @@
+(assume nst141.0 (not (= sk_?X_27$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))))
+(assume a49 (= sk_?X_27$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0)))
+(assume t137 (or (not (= (= sk_?X_27$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0)) (= sk_?X_27$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)))) (not (= sk_?X_27$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0))) (= sk_?X_27$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))))
+(assume t140 (= (= sk_?X_27$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0)) (= sk_?X_27$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))))
+(step t137' (cl (not (= (= sk_?X_27$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0)) (= sk_?X_27$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)))) (not (= sk_?X_27$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0))) (= sk_?X_27$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))) :rule or :premises (t137))
+(step st141 (cl (= sk_?X_27$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))) :rule resolution :premises (t137' t140 a49))
+(step t.end (cl) :rule resolution :premises (nst141.0 st141))

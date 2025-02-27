@@ -1,0 +1,5 @@
+(assume nst58.0 (not (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))))))
+(assume nst58.1 (not (= (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))))
+(assume t57 (or (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))))
+(step st58 (cl (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))) :rule or :premises (t57))
+(step t.end (cl) :rule resolution :premises (nst58.0 nst58.1 st58))

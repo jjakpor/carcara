@@ -1,0 +1,7 @@
+(assume nst168.0 (not (not (not (p1 (f7 c_0) c_0)))))
+(assume nst168.1 (not (not (= c_0 (f7 c_0)))))
+(assume nst168.2 (not (not (= c_0 (f6 c_0)))))
+(assume nst168.3 (not (not (p1 (f6 c_0) c_0))))
+(assume t167 (not (and (not (p1 (f7 c_0) c_0)) (= c_0 (f7 c_0)) (= c_0 (f6 c_0)) (p1 (f6 c_0) c_0))))
+(step st168 (cl (not (not (p1 (f7 c_0) c_0))) (not (= c_0 (f7 c_0))) (not (= c_0 (f6 c_0))) (not (p1 (f6 c_0) c_0))) :rule not_and :premises (t167))
+(step t.end (cl) :rule resolution :premises (nst168.0 nst168.1 nst168.2 nst168.3 st168))

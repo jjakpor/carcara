@@ -1,0 +1,4 @@
+(assume nst31.0 (not (and (= e0 (op e4 e4)) (= e2 (op e1 e1)))))
+(assume t30 (and (and (= e0 (op e4 e4)) (= e2 (op e1 e1))) (= e3 (op e2 e0))))
+(step st31 (cl (and (= e0 (op e4 e4)) (= e2 (op e1 e1)))) :rule and :premises (t30) :args (0))
+(step t.end (cl) :rule resolution :premises (nst31.0 st31))

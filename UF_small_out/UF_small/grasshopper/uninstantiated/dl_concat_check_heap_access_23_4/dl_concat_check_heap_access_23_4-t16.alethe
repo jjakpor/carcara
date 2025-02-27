@@ -1,0 +1,5 @@
+(assume nst16.0 (not (= (and (= null$0 end1$0) (= start1$0 null$0)) (and (= null$0 end1$0) (= null$0 start1$0)))))
+(assume t11 (= (= start1$0 null$0) (= null$0 start1$0)))
+(assume t15 (= (= null$0 end1$0) (= null$0 end1$0)))
+(step st16 (cl (= (and (= null$0 end1$0) (= start1$0 null$0)) (and (= null$0 end1$0) (= null$0 start1$0)))) :rule cong :premises (t15 t11))
+(step t.end (cl) :rule resolution :premises (nst16.0 st16))

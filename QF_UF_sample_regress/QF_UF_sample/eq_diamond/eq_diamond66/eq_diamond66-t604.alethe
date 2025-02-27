@@ -1,0 +1,3 @@
+(assume nst604.0 (not (= (= (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))) (and (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))) (=> (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))) (= x53 x54)))) true)))
+(step st604 (cl (= (= (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))) (and (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))) (=> (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))) (= x53 x54)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst604.0 st604))

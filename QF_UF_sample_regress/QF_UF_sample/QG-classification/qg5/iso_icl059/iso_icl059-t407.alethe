@@ -1,0 +1,6 @@
+(assume nst407.0 (not (= (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0))) false)))
+(assume t398 (or (= (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0))) false) (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0)))))
+(assume t406 (not (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0)))))
+(step t398' (cl (= (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0))) false) (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0)))) :rule or :premises (t398))
+(step st407 (cl (= (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op e0 e0) e0))) false)) :rule resolution :premises (t398' t406))
+(step t.end (cl) :rule resolution :premises (nst407.0 st407))

@@ -1,0 +1,4 @@
+(assume nst346.0 (not (= (not (= e0 e2)) (not (= e2 e0)))))
+(assume t345 (= (= e0 e2) (= e2 e0)))
+(step st346 (cl (= (not (= e0 e2)) (not (= e2 e0)))) :rule cong :premises (t345))
+(step t.end (cl) :rule resolution :premises (nst346.0 st346))

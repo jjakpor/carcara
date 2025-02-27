@@ -1,0 +1,5 @@
+(assume nst225.0 (not (not (= (or (= (f5 c_0) c_0) (= (f5 c_0) c_1)) (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0)))))))
+(assume nst225.1 (not (not (or (= (f5 c_0) c_0) (= (f5 c_0) c_1)))))
+(assume nst225.2 (not (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0)))))
+(step st225 (cl (not (= (or (= (f5 c_0) c_0) (= (f5 c_0) c_1)) (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0))))) (not (or (= (f5 c_0) c_0) (= (f5 c_0) c_1))) (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst225.0 nst225.1 nst225.2 st225))

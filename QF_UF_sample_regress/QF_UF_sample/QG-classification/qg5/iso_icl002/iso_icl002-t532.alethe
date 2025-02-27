@@ -1,0 +1,6 @@
+(assume nst532.0 (not (= (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)) false)))
+(assume t526 (or (= (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)) false) (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))))
+(assume t531 (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))))
+(step t526' (cl (= (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)) false) (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))) :rule or :premises (t526))
+(step st532 (cl (= (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)) false)) :rule resolution :premises (t526' t531))
+(step t.end (cl) :rule resolution :premises (nst532.0 st532))

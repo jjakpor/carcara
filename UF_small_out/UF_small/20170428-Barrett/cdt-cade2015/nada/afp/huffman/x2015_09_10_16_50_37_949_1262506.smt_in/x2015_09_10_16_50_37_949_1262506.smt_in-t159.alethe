@@ -1,0 +1,6 @@
+(assume nst159.0 (not (= (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$)) true)))
+(assume t155 (or (= (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$)) true) (not (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$)))))
+(assume t158 (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$)))
+(step t155' (cl (= (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$)) true) (not (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$)))) :rule or :premises (t155))
+(step st159 (cl (= (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$)) true)) :rule resolution :premises (t155' t158))
+(step t.end (cl) :rule resolution :premises (nst159.0 st159))

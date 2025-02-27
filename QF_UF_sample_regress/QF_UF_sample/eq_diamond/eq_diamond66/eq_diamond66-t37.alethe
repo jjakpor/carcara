@@ -1,0 +1,4 @@
+(assume nst37.0 (not (= x13 x12)))
+(assume t36 (= x12 x13))
+(step st37 (cl (= x13 x12)) :rule symm :premises (t36))
+(step t.end (cl) :rule resolution :premises (nst37.0 st37))

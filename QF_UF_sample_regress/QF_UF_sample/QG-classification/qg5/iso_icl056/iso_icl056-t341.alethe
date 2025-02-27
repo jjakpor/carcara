@@ -1,0 +1,4 @@
+(assume nst341.0 (not (= (not (= (op e1 e2) (op e4 e2))) (not (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))))
+(assume t340 (= (= (op e1 e2) (op e4 e2)) (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))
+(step st341 (cl (= (not (= (op e1 e2) (op e4 e2))) (not (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))) :rule cong :premises (t340))
+(step t.end (cl) :rule resolution :premises (nst341.0 st341))

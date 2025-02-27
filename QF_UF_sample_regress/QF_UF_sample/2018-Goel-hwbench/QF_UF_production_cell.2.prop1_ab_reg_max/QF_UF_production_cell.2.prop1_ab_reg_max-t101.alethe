@@ -1,0 +1,5 @@
+(assume nst101.0 (not (= y$v_at_table y$v_k_Table)))
+(assume t36 (= y$v_at_table y$v_count))
+(assume t100 (= y$v_count y$v_k_Table))
+(step st101 (cl (= y$v_at_table y$v_k_Table)) :rule trans :premises (t36 t100))
+(step t.end (cl) :rule resolution :premises (nst101.0 st101))

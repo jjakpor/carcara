@@ -1,0 +1,7 @@
+(assume nst433.0 (not (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))))))
+(assume nst433.1 (not (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))))))
+(assume nst433.2 (not (= (f6 c_1) (f5 c_1))))
+(assume t432 (or (= (f6 c_1) (f5 c_1)) (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1)))) (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))))))
+(step t432' (cl (= (f6 c_1) (f5 c_1)) (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1)))) (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))))) :rule or :premises (t432))
+(step st433 (cl (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1)))) (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1)))) (= (f6 c_1) (f5 c_1))) :rule reordering :premises (t432'))
+(step t.end (cl) :rule resolution :premises (nst433.0 nst433.1 nst433.2 st433))

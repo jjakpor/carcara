@@ -1,0 +1,4 @@
+(assume nst44.0 (not (= f1 (f3 f5 f176))))
+(assume a27 (= (f3 f5 f176) f1))
+(step st44 (cl (= f1 (f3 f5 f176))) :rule symm :premises (a27))
+(step t.end (cl) :rule resolution :premises (nst44.0 st44))

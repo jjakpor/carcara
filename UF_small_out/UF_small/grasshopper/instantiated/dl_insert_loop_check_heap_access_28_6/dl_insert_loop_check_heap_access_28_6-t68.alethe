@@ -1,0 +1,7 @@
+(assume nst68.0 (not (= prv_init$0 (read$0 prev$0 prv_5$0))))
+(assume t62 (or (not (= (= prv_init$0 (read$0 prev$0 curr_init$0)) (= prv_init$0 (read$0 prev$0 prv_5$0)))) (not (= prv_init$0 (read$0 prev$0 curr_init$0))) (= prv_init$0 (read$0 prev$0 prv_5$0))))
+(assume t66 (= (= prv_init$0 (read$0 prev$0 curr_init$0)) (= prv_init$0 (read$0 prev$0 prv_5$0))))
+(assume t67 (= prv_init$0 (read$0 prev$0 curr_init$0)))
+(step t62' (cl (not (= (= prv_init$0 (read$0 prev$0 curr_init$0)) (= prv_init$0 (read$0 prev$0 prv_5$0)))) (not (= prv_init$0 (read$0 prev$0 curr_init$0))) (= prv_init$0 (read$0 prev$0 prv_5$0))) :rule or :premises (t62))
+(step st68 (cl (= prv_init$0 (read$0 prev$0 prv_5$0))) :rule resolution :premises (t62' t66 t67))
+(step t.end (cl) :rule resolution :premises (nst68.0 st68))

@@ -1,0 +1,6 @@
+(assume nt364.0 (not (= (forall ((?v0 S3) (?v1 S3)) (=> (= (f3 (f15 f16 ?v0) ?v1) f1) (=> (= (f3 (f15 f16 ?v1) ?v0) f1) (= ?v0 ?v1)))) (forall ((?v0 S3) (?v1 S3)) (=> (= f1 (f3 (f15 f16 ?v0) ?v1)) (=> (= f1 (f3 (f15 f16 ?v1) ?v0)) (= ?v0 ?v1)))))))
+(anchor :step t364 :args ((?v0 S3) (?v1 S3) (:= (?v0 S3) ?v0) (:= (?v1 S3) ?v1)))
+(step st364.t2 (cl (= (= ?v0 ?v1) (= ?v0 ?v1))) :rule refl)
+(step t364.t4 (cl (= (=> (= (f3 (f15 f16 ?v0) ?v1) f1) (=> (= (f3 (f15 f16 ?v1) ?v0) f1) (= ?v0 ?v1))) (=> (= f1 (f3 (f15 f16 ?v0) ?v1)) (=> (= f1 (f3 (f15 f16 ?v1) ?v0)) (= ?v0 ?v1))))) :rule trust)
+(step t364 (cl (= (forall ((?v0 S3) (?v1 S3)) (=> (= (f3 (f15 f16 ?v0) ?v1) f1) (=> (= (f3 (f15 f16 ?v1) ?v0) f1) (= ?v0 ?v1)))) (forall ((?v0 S3) (?v1 S3)) (=> (= f1 (f3 (f15 f16 ?v0) ?v1)) (=> (= f1 (f3 (f15 f16 ?v1) ?v0)) (= ?v0 ?v1)))))) :rule bind)
+(step t.end (cl) :rule resolution :premises (nt364.0 t364))

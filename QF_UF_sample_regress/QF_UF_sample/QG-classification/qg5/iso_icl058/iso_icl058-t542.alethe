@@ -1,0 +1,8 @@
+(assume nst542.0 (not (= (or (= (op e4 e3) e2) (= (op e3 e3) e2) (= (op e2 e3) e2) (= (op e0 e3) e2) (= (op e1 e3) e2)) (or (= e2 (op e4 e3)) (= e2 (op e3 e3)) (= e2 (op e2 e3)) (= e2 (op e0 e3)) (= e2 (op e1 e3))))))
+(assume t127 (= (= (op e1 e3) e2) (= e2 (op e1 e3))))
+(assume t538 (= (= (op e4 e3) e2) (= e2 (op e4 e3))))
+(assume t539 (= (= (op e3 e3) e2) (= e2 (op e3 e3))))
+(assume t540 (= (= (op e2 e3) e2) (= e2 (op e2 e3))))
+(assume t541 (= (= (op e0 e3) e2) (= e2 (op e0 e3))))
+(step st542 (cl (= (or (= (op e4 e3) e2) (= (op e3 e3) e2) (= (op e2 e3) e2) (= (op e0 e3) e2) (= (op e1 e3) e2)) (or (= e2 (op e4 e3)) (= e2 (op e3 e3)) (= e2 (op e2 e3)) (= e2 (op e0 e3)) (= e2 (op e1 e3))))) :rule cong :premises (t538 t539 t540 t541 t127))
+(step t.end (cl) :rule resolution :premises (nst542.0 st542))

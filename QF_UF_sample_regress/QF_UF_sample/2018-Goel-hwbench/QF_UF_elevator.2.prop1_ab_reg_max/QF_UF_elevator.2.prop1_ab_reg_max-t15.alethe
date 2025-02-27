@@ -1,0 +1,4 @@
+(assume nst15.0 (not y$1557))
+(assume t10 (and y$1 y$3 y$5 y$7 y$9 y$11 y$13 y$15 y$17 y$19 y$21 y$23 y$25 y$28 y$30 y$32 y$34 y$36 y$38 y$40 y$42 y$44 y$46 y$48 y$50 y$52 y$54 y$56 y$58 y$60 y$62 y$64 y$66 y$1557 y$1518))
+(step st15 (cl y$1557) :rule and :premises (t10) :args (33))
+(step t.end (cl) :rule resolution :premises (nst15.0 st15))

@@ -1,0 +1,7 @@
+(assume nst23.0 (not (= a_1$0 prv_2$0)))
+(assume t18 (or (not (= (= null$0 prv_2$0) (= a_1$0 prv_2$0))) (not (= null$0 prv_2$0)) (= a_1$0 prv_2$0)))
+(assume t21 (= (= null$0 prv_2$0) (= a_1$0 prv_2$0)))
+(assume t22 (= null$0 prv_2$0))
+(step t18' (cl (not (= (= null$0 prv_2$0) (= a_1$0 prv_2$0))) (not (= null$0 prv_2$0)) (= a_1$0 prv_2$0)) :rule or :premises (t18))
+(step st23 (cl (= a_1$0 prv_2$0)) :rule resolution :premises (t18' t21 t22))
+(step t.end (cl) :rule resolution :premises (nst23.0 st23))

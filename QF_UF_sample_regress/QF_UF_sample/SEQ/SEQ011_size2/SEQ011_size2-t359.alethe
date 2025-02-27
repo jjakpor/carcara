@@ -1,0 +1,5 @@
+(assume nst359.0 (not (= (or (= (f5 c_1) c_0) (= (f5 c_1) c_1)) (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1))))))
+(assume t357 (= (= (f5 c_1) c_0) (= c_0 (f5 c_1))))
+(assume t358 (= (= (f5 c_1) c_1) (= c_1 (f5 c_1))))
+(step st359 (cl (= (or (= (f5 c_1) c_0) (= (f5 c_1) c_1)) (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1))))) :rule cong :premises (t357 t358))
+(step t.end (cl) :rule resolution :premises (nst359.0 st359))

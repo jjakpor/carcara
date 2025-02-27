@@ -1,0 +1,4 @@
+(assume nst153.0 (not (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3))))
+(assume t152 (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3))))
+(step st153 (cl (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3))) :rule and :premises (t152) :args (1))
+(step t.end (cl) :rule resolution :premises (nst153.0 st153))

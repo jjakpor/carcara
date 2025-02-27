@@ -1,0 +1,6 @@
+(assume nst742.0 (not (not (= x14 x15))))
+(assume t13 (or (not (= (= x14 x15) false)) (not (= x14 x15))))
+(assume t741 (= (= x14 x15) false))
+(step t13' (cl (not (= (= x14 x15) false)) (not (= x14 x15))) :rule or :premises (t13))
+(step st742 (cl (not (= x14 x15))) :rule resolution :premises (t13' t741))
+(step t.end (cl) :rule resolution :premises (nst742.0 st742))

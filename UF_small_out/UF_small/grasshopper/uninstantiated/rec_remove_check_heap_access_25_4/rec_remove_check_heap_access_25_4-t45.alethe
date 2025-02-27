@@ -1,0 +1,6 @@
+(assume nst45.0 (not (or (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0))))
+(assume a53 (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y) (Btwn$0 ?f ?x (read$0 ?f ?x) ?y))))
+(assume t44 (or (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y) (Btwn$0 ?f ?x (read$0 ?f ?x) ?y)))) (or (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0))))
+(step t44' (cl (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y) (Btwn$0 ?f ?x (read$0 ?f ?x) ?y)))) (or (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0))) :rule or :premises (t44))
+(step st45 (cl (or (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0))) :rule resolution :premises (t44' a53))
+(step t.end (cl) :rule resolution :premises (nst45.0 st45))

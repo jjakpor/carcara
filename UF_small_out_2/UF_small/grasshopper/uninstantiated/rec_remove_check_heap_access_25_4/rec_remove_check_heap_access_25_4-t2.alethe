@@ -1,0 +1,8 @@
+(assume nst2.0 (not (=> (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x)) (Btwn$0 next$0 lst$0 lst$0 lst$0))))
+(assume nst2.1 (not (Btwn$0 next$0 lst$0 lst$0 lst$0)))
+(assume t0 (or (=> (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x)) (Btwn$0 next$0 lst$0 lst$0 lst$0)) (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x))))
+(assume t1 (or (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x))) (Btwn$0 next$0 lst$0 lst$0 lst$0)))
+(step t1' (cl (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x))) (Btwn$0 next$0 lst$0 lst$0 lst$0)) :rule or :premises (t1))
+(step t0' (cl (=> (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x)) (Btwn$0 next$0 lst$0 lst$0 lst$0)) (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x))) :rule or :premises (t0))
+(step st2 (cl (=> (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x)) (Btwn$0 next$0 lst$0 lst$0 lst$0)) (Btwn$0 next$0 lst$0 lst$0 lst$0)) :rule resolution :premises (t0' t1'))
+(step t.end (cl) :rule resolution :premises (nst2.0 nst2.1 st2))

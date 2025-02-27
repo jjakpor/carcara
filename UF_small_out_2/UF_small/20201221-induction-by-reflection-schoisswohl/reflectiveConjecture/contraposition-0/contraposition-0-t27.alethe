@@ -1,0 +1,3 @@
+(assume nst27.0 (not (= (models empty (notR (qR bR))) (models empty (notR (qR bR))))))
+(step st27 (cl (= (models empty (notR (qR bR))) (models empty (notR (qR bR))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst27.0 st27))

@@ -1,0 +1,6 @@
+(assume nst167.0 (not (= (= x0 x14) false)))
+(assume t165 (or (= (= x0 x14) false) (= x0 x14)))
+(assume t166 (not (= x0 x14)))
+(step t165' (cl (= (= x0 x14) false) (= x0 x14)) :rule or :premises (t165))
+(step st167 (cl (= (= x0 x14) false)) :rule resolution :premises (t165' t166))
+(step t.end (cl) :rule resolution :premises (nst167.0 st167))

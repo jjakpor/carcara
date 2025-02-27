@@ -1,0 +1,6 @@
+(assume nst441.0 (not (not (= e3 (op (op (op e1 e3) e3) (op (op e1 e3) e3))))))
+(assume t419 (or (not (= (= e3 (op (op (op e1 e3) e3) (op (op e1 e3) e3))) false)) (not (= e3 (op (op (op e1 e3) e3) (op (op e1 e3) e3))))))
+(assume t440 (= (= e3 (op (op (op e1 e3) e3) (op (op e1 e3) e3))) false))
+(step t419' (cl (not (= (= e3 (op (op (op e1 e3) e3) (op (op e1 e3) e3))) false)) (not (= e3 (op (op (op e1 e3) e3) (op (op e1 e3) e3))))) :rule or :premises (t419))
+(step st441 (cl (not (= e3 (op (op (op e1 e3) e3) (op (op e1 e3) e3))))) :rule resolution :premises (t419' t440))
+(step t.end (cl) :rule resolution :premises (nst441.0 st441))

@@ -1,0 +1,3 @@
+(assume nst12.0 (not (= (= (not (= i2 (not (= b2 r2)))) (= i2 (= b2 r2))) true)))
+(step st12 (cl (= (= (not (= i2 (not (= b2 r2)))) (= i2 (= b2 r2))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst12.0 st12))

@@ -1,0 +1,4 @@
+(assume nst517.0 (not (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46))))
+(assume t516 (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46))))
+(step st517 (cl (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46))) :rule and :premises (t516) :args (1))
+(step t.end (cl) :rule resolution :premises (nst517.0 st517))

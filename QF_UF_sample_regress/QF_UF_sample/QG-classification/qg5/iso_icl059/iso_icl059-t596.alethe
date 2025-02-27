@@ -1,0 +1,4 @@
+(assume nst596.0 (not (not (not (not (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)))))))
+(assume nst596.1 (not (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))
+(step st596 (cl (not (not (not (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))) (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nst596.0 nst596.1 st596))

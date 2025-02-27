@@ -1,0 +1,3 @@
+(assume nst31.0 (not (= (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y) (Btwn$0 ?f ?x (read$0 ?f ?x) ?y))) (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y) (Btwn$0 ?f ?x (read$0 ?f ?x) ?y))))))
+(step st31 (cl (= (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y) (Btwn$0 ?f ?x (read$0 ?f ?x) ?y))) (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y) (Btwn$0 ?f ?x (read$0 ?f ?x) ?y))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst31.0 st31))

@@ -1,0 +1,6 @@
+(assume nst618.0 (not (= x55 x56)))
+(assume nst618.1 (not (not (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))))))
+(assume t617 (or (not (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56)))) (= x55 x56)))
+(step t617' (cl (not (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56)))) (= x55 x56)) :rule or :premises (t617))
+(step st618 (cl (= x55 x56) (not (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))))) :rule reordering :premises (t617'))
+(step t.end (cl) :rule resolution :premises (nst618.0 nst618.1 st618))

@@ -1,0 +1,4 @@
+(assume nst31.0 (not (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))))
+(assume nst31.1 (not (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))))
+(step st31 (cl (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))) :rule or_neg :args (1))
+(step t.end (cl) :rule resolution :premises (nst31.0 nst31.1 st31))

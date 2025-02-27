@@ -1,0 +1,5 @@
+(assume nst257.0 (not (not (= (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (and (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (=> (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (= x23 x24)))))))
+(assume nst257.1 (not (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))))
+(assume nst257.2 (not (and (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (=> (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (= x23 x24)))))
+(step st257 (cl (not (= (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (and (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (=> (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (= x23 x24))))) (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24)))) (and (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (=> (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (= x23 x24)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst257.0 nst257.1 nst257.2 st257))

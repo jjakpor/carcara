@@ -1,0 +1,4 @@
+(assume nst14.0 (not (not (and prt car (not clk)))))
+(assume a1 (not (or (and (not prt) car clk) (and prt (or (not car) clk)) (and (not prt) (or (not car) (not clk))) (and prt car (not clk)))))
+(step st14 (cl (not (and prt car (not clk)))) :rule not_or :premises (a1) :args (3))
+(step t.end (cl) :rule resolution :premises (nst14.0 st14))

@@ -1,0 +1,5 @@
+(assume nst277.0 (not (= c_0 (f7 c_0))))
+(assume nst277.1 (not (= c_1 (f7 c_0))))
+(assume t170 (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0))))
+(step st277 (cl (= c_0 (f7 c_0)) (= c_1 (f7 c_0))) :rule or :premises (t170))
+(step t.end (cl) :rule resolution :premises (nst277.0 nst277.1 st277))

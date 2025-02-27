@@ -1,0 +1,5 @@
+(assume nst153.0 (not (not (=> (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false))))
+(assume nst153.1 (not (not (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0))))))
+(assume t152 (= (=> (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false) (not (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0))))))
+(step st153 (cl (not (=> (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false)) (not (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0))))) :rule equiv1 :premises (t152))
+(step t.end (cl) :rule resolution :premises (nst153.0 nst153.1 st153))

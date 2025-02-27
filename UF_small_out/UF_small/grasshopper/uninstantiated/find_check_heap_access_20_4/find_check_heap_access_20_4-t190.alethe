@@ -1,0 +1,6 @@
+(assume nst190.0 (not (not (in$0 x$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))))
+(assume t109 (or (not (= (in$0 x$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))) false)) (not (in$0 x$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))))
+(assume t189 (= (in$0 x$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))) false))
+(step t109' (cl (not (= (in$0 x$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))) false)) (not (in$0 x$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))) :rule or :premises (t109))
+(step st190 (cl (not (in$0 x$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))) :rule resolution :premises (t109' t189))
+(step t.end (cl) :rule resolution :premises (nst190.0 st190))

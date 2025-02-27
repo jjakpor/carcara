@@ -1,0 +1,4 @@
+(assume nst153.0 (not y$45))
+(assume t120 (and y$2 y$13 y$28 y$26 y$45 y$44))
+(step st153 (cl y$45) :rule and :premises (t120) :args (4))
+(step t.end (cl) :rule resolution :premises (nst153.0 st153))

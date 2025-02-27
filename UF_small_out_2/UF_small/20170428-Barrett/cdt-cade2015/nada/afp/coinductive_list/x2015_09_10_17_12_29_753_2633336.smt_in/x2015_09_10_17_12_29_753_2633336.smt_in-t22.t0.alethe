@@ -1,0 +1,8 @@
+(assume nt22.0 (not (not (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0)))))))))
+(assume nt22.1 (not (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$))))))))
+(anchor :step t22)
+(assume t22.a0 (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0)))))))
+(step st22.t0 (cl (or (not (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0))))))) (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$)))))))) :rule forall_inst :args ((lconcat$ xssa$)))
+(step t22.t5 (cl (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$))))))) :rule trust)
+(step t22 (cl (not (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0))))))) (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$))))))) :rule subproof :discharge (t22.a0))
+(step t.end (cl) :rule resolution :premises (nt22.0 nt22.1 t22))

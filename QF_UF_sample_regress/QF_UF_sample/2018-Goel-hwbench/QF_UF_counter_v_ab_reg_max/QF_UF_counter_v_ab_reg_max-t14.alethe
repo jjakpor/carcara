@@ -1,0 +1,7 @@
+(assume nst14.0 (not (= y$n15s4 y$n1s4)))
+(assume nst14.1 (not (not (= y$n1s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))))
+(assume nst14.2 (not (not (= y$n15s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))))
+(assume t13 (or (not (= y$n1s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))) (not (= y$n15s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))) (= y$n15s4 y$n1s4)))
+(step t13' (cl (not (= y$n1s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))) (not (= y$n15s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))) (= y$n15s4 y$n1s4)) :rule or :premises (t13))
+(step st14 (cl (= y$n15s4 y$n1s4) (not (= y$n1s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))) (not (= y$n15s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))) :rule reordering :premises (t13'))
+(step t.end (cl) :rule resolution :premises (nst14.0 nst14.1 nst14.2 st14))

@@ -1,0 +1,3 @@
+(assume nst70.0 (not (= y$X$next_rhs_op y$X$next_rhs_op)))
+(step st70 (cl (= y$X$next_rhs_op y$X$next_rhs_op)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst70.0 st70))

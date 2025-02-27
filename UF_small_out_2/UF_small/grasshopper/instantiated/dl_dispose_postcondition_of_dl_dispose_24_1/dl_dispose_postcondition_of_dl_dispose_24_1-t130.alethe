@@ -1,0 +1,5 @@
+(assume nst130.0 (not (=> (forall ((?x Loc) (?y Loc)) (or (not (Btwn$0 next$0 ?x ?y ?x)) (= ?y ?x))) (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= sk_?e$0 prv_2$0)))))
+(assume t129 (or (=> (forall ((?x Loc) (?y Loc)) (or (not (Btwn$0 next$0 ?x ?y ?x)) (= ?y ?x))) (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= sk_?e$0 prv_2$0))) (=> (forall ((?x Loc) (?y Loc)) (or (not (Btwn$0 next$0 ?x ?y ?x)) (= ?y ?x))) (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= sk_?e$0 prv_2$0)))))
+(step t129' (cl (=> (forall ((?x Loc) (?y Loc)) (or (not (Btwn$0 next$0 ?x ?y ?x)) (= ?y ?x))) (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= sk_?e$0 prv_2$0))) (=> (forall ((?x Loc) (?y Loc)) (or (not (Btwn$0 next$0 ?x ?y ?x)) (= ?y ?x))) (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= sk_?e$0 prv_2$0)))) :rule or :premises (t129))
+(step st130 (cl (=> (forall ((?x Loc) (?y Loc)) (or (not (Btwn$0 next$0 ?x ?y ?x)) (= ?y ?x))) (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= sk_?e$0 prv_2$0)))) :rule contraction :premises (t129'))
+(step t.end (cl) :rule resolution :premises (nst130.0 st130))

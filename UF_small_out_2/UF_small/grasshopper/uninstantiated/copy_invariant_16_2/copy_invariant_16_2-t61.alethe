@@ -1,0 +1,4 @@
+(assume nst61.0 (not (= FP$0 sk_?X$0)))
+(assume a24 (= sk_?X$0 FP$0))
+(step st61 (cl (= FP$0 sk_?X$0)) :rule symm :premises (a24))
+(step t.end (cl) :rule resolution :premises (nst61.0 st61))

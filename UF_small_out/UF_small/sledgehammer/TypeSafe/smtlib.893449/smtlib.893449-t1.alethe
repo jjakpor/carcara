@@ -1,0 +1,4 @@
+(assume nst1.0 (not (not (= f1 (f47 (f48 f49 (f50 (f51 f52 (f88 (f89 f90 f110) (f107 (f108 f109 f111) f112))) (f88 (f89 f90 f113) (f107 (f108 f109 f114) f115)))) (f116 f117 f118))))))
+(assume a12 (not (= (f47 (f48 f49 (f50 (f51 f52 (f88 (f89 f90 f110) (f107 (f108 f109 f111) f112))) (f88 (f89 f90 f113) (f107 (f108 f109 f114) f115)))) (f116 f117 f118)) f1)))
+(step st1 (cl (not (= f1 (f47 (f48 f49 (f50 (f51 f52 (f88 (f89 f90 f110) (f107 (f108 f109 f111) f112))) (f88 (f89 f90 f113) (f107 (f108 f109 f114) f115)))) (f116 f117 f118))))) :rule not_symm :premises (a12))
+(step t.end (cl) :rule resolution :premises (nst1.0 st1))

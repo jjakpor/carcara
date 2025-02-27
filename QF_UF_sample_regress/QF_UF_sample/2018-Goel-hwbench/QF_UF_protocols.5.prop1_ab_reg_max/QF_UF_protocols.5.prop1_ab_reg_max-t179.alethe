@@ -1,0 +1,6 @@
+(assume nst179.0 (not (not (and y$a_consume1$next_rhs_op y$968))))
+(assume t175 (or y$v3_1517448506_498_op (not (and y$a_consume1$next_rhs_op y$968))))
+(assume t178 (not y$v3_1517448506_498_op))
+(step t175' (cl y$v3_1517448506_498_op (not (and y$a_consume1$next_rhs_op y$968))) :rule or :premises (t175))
+(step st179 (cl (not (and y$a_consume1$next_rhs_op y$968))) :rule resolution :premises (t175' t178))
+(step t.end (cl) :rule resolution :premises (nst179.0 st179))

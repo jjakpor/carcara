@@ -1,0 +1,8 @@
+(assume nst796.0 (not (= (or (= (op e3 e4) e2) (= (op e3 e3) e2) (= (op e3 e2) e2) (= (op e3 e0) e2) (= (op e3 e1) e2)) (or (= e2 (op e3 e4)) (= e2 (op e3 e3)) (= e2 (op e3 e2)) (= e2 (op e3 e0)) (= e2 (op e3 e1))))))
+(assume t120 (= (= (op e3 e1) e2) (= e2 (op e3 e1))))
+(assume t289 (= (= (op e3 e0) e2) (= e2 (op e3 e0))))
+(assume t539 (= (= (op e3 e3) e2) (= e2 (op e3 e3))))
+(assume t794 (= (= (op e3 e4) e2) (= e2 (op e3 e4))))
+(assume t795 (= (= (op e3 e2) e2) (= e2 (op e3 e2))))
+(step st796 (cl (= (or (= (op e3 e4) e2) (= (op e3 e3) e2) (= (op e3 e2) e2) (= (op e3 e0) e2) (= (op e3 e1) e2)) (or (= e2 (op e3 e4)) (= e2 (op e3 e3)) (= e2 (op e3 e2)) (= e2 (op e3 e0)) (= e2 (op e3 e1))))) :rule cong :premises (t794 t539 t795 t289 t120))
+(step t.end (cl) :rule resolution :premises (nst796.0 st796))

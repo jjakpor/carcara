@@ -1,0 +1,4 @@
+(assume nst49.0 (not (= x9 x8)))
+(assume t48 (= x8 x9))
+(step st49 (cl (= x9 x8)) :rule symm :premises (t48))
+(step t.end (cl) :rule resolution :premises (nst49.0 st49))

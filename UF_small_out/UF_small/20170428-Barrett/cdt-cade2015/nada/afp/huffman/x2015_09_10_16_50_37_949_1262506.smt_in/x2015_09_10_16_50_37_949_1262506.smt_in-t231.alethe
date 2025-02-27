@@ -1,0 +1,3 @@
+(assume nst231.0 (not (= (= b$ c$) (= b$ c$))))
+(step st231 (cl (= (= b$ c$) (= b$ c$))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst231.0 st231))

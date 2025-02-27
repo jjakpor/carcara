@@ -1,0 +1,4 @@
+(assume nst279.0 (not (=> (and (= b$ c$) (not (= c$ d$))) (not (= b$ d$)))))
+(assume nst279.1 (not (not (not (= b$ d$)))))
+(step st279 (cl (=> (and (= b$ c$) (not (= c$ d$))) (not (= b$ d$))) (not (not (= b$ d$)))) :rule implies_neg2)
+(step t.end (cl) :rule resolution :premises (nst279.0 nst279.1 st279))

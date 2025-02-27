@@ -1,0 +1,5 @@
+(assume nst225.0 (not (= (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) false)))
+(assume nst225.1 (not (not (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))))
+(assume t224 (= (= (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) false) (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(step st225 (cl (= (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) false) (not (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))) :rule equiv2 :premises (t224))
+(step t.end (cl) :rule resolution :premises (nst225.0 nst225.1 st225))

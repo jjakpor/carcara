@@ -1,0 +1,5 @@
+(assume nst0.0 (not (not (= (fun_app$f (rbt_sorted$ less$) (branch$ c$ t1$ k$ v$ t2$)) (and (fun_app$f (rbt_less$ less$ k$) t1$) (fun_app$f (rbt_greater$ less$ k$) t2$) (fun_app$f (rbt_sorted$ less$) t1$) (fun_app$f (rbt_sorted$ less$) t2$))))))
+(assume nst0.1 (not (not (fun_app$f (rbt_sorted$ less$) (branch$ c$ t1$ k$ v$ t2$)))))
+(assume nst0.2 (not (and (fun_app$f (rbt_less$ less$ k$) t1$) (fun_app$f (rbt_greater$ less$ k$) t2$) (fun_app$f (rbt_sorted$ less$) t1$) (fun_app$f (rbt_sorted$ less$) t2$))))
+(step st0 (cl (not (= (fun_app$f (rbt_sorted$ less$) (branch$ c$ t1$ k$ v$ t2$)) (and (fun_app$f (rbt_less$ less$ k$) t1$) (fun_app$f (rbt_greater$ less$ k$) t2$) (fun_app$f (rbt_sorted$ less$) t1$) (fun_app$f (rbt_sorted$ less$) t2$)))) (not (fun_app$f (rbt_sorted$ less$) (branch$ c$ t1$ k$ v$ t2$))) (and (fun_app$f (rbt_less$ less$ k$) t1$) (fun_app$f (rbt_greater$ less$ k$) t2$) (fun_app$f (rbt_sorted$ less$) t1$) (fun_app$f (rbt_sorted$ less$) t2$))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst0.0 nst0.1 nst0.2 st0))

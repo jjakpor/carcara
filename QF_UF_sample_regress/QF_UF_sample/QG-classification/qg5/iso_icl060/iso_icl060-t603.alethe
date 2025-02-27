@@ -1,0 +1,4 @@
+(assume nst603.0 (not (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))))))
+(assume nst603.1 (not (= (op e1 e3) (op (op (op e1 e3) e3) e1))))
+(step st603 (cl (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))) (= (op e1 e3) (op (op (op e1 e3) e3) e1))) :rule and_pos :args (0))
+(step t.end (cl) :rule resolution :premises (nst603.0 nst603.1 st603))

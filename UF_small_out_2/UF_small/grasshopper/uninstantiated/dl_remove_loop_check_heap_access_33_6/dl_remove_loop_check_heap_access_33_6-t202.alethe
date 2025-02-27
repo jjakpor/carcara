@@ -1,0 +1,5 @@
+(assume nst202.0 (not (= (= sk_?X_75$0 (union$0 sk_?X_77$0 sk_?X_76$0)) (= sk_?X_75$0 (union$0 sk_?X_78$0 sk_?X_76$0)))))
+(assume t200 (= sk_?X_75$0 sk_?X_75$0))
+(assume t201 (= (union$0 sk_?X_77$0 sk_?X_76$0) (union$0 sk_?X_78$0 sk_?X_76$0)))
+(step st202 (cl (= (= sk_?X_75$0 (union$0 sk_?X_77$0 sk_?X_76$0)) (= sk_?X_75$0 (union$0 sk_?X_78$0 sk_?X_76$0)))) :rule cong :premises (t200 t201))
+(step t.end (cl) :rule resolution :premises (nst202.0 st202))

@@ -1,0 +1,5 @@
+(assume nst679.0 (not (= (= e4 (op e0 (op e0 e4))) (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))))
+(assume t18 (= e4 (op (op e1 e3) e3)))
+(assume t678 (= (op e0 (op e0 e4)) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))
+(step st679 (cl (= (= e4 (op e0 (op e0 e4))) (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))) :rule cong :premises (t18 t678))
+(step t.end (cl) :rule resolution :premises (nst679.0 st679))

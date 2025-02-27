@@ -1,0 +1,5 @@
+(assume nst120.0 (not (not (= (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (and (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11)))))))
+(assume nst120.1 (not (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))))
+(assume nst120.2 (not (and (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11)))))
+(step st120 (cl (not (= (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (and (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11))))) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11)))) (and (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst120.0 nst120.1 nst120.2 st120))

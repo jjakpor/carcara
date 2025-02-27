@@ -1,0 +1,5 @@
+(assume nst42.0 (not (not (= (= curr_4$0 prv_5$0) (= curr_init$0 prv_5$0)))))
+(assume nst42.1 (not (not (= curr_4$0 prv_5$0))))
+(assume nst42.2 (not (= curr_init$0 prv_5$0)))
+(step st42 (cl (not (= (= curr_4$0 prv_5$0) (= curr_init$0 prv_5$0))) (not (= curr_4$0 prv_5$0)) (= curr_init$0 prv_5$0)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst42.0 nst42.1 nst42.2 st42))

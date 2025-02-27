@@ -1,0 +1,5 @@
+(assume nst686.0 (not (= (= (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))) false)))
+(assume t627 (= (= (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))) false))
+(assume t685 (= (= (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))) (= (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))))
+(step st686 (cl (= (= (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))) false)) :rule trans :premises (t685 t627))
+(step t.end (cl) :rule resolution :premises (nst686.0 st686))

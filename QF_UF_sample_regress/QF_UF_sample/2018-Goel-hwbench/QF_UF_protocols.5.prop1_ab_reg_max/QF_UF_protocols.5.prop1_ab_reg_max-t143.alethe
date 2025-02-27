@@ -1,0 +1,4 @@
+(assume nst143.0 (not (not (and y$v3_1517448506_266_op y$v3_1517448506_301_op))))
+(assume nst143.1 (not y$v3_1517448506_301_op))
+(step st143 (cl (not (and y$v3_1517448506_266_op y$v3_1517448506_301_op)) y$v3_1517448506_301_op) :rule and_pos :args (1))
+(step t.end (cl) :rule resolution :premises (nst143.0 nst143.1 st143))

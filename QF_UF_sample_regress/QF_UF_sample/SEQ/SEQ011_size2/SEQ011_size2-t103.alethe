@@ -1,0 +1,4 @@
+(assume nst103.0 (not (not (and (p4 c8) (= c8 c_0)))))
+(assume nst103.1 (not (p4 c8)))
+(step st103 (cl (not (and (p4 c8) (= c8 c_0))) (p4 c8)) :rule and_pos :args (0))
+(step t.end (cl) :rule resolution :premises (nst103.0 nst103.1 st103))

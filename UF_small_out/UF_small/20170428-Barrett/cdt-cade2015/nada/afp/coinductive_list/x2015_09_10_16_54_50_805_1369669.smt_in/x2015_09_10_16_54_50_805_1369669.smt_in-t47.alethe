@@ -1,0 +1,4 @@
+(define-fun @quantifiers_skolemize_10 () A_list$ (choice ((?v3 A_list$)) (not (or (not (member$c ?v3 (collect$a top$b))) (not (= xs$ (fun_app$g llist_of$ ?v3)))))))
+(assume nst47.0 (not (= (= thesis$ false) (not thesis$))))
+(step st47 (cl (= (= thesis$ false) (not thesis$))) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst47.0 st47))

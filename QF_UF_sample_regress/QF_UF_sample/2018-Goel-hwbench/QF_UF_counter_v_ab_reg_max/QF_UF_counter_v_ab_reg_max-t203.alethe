@@ -1,0 +1,5 @@
+(assume nst203.0 (not (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false)))
+(assume nst203.1 (not (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))))
+(assume t202 (= (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
+(step st203 (cl (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false) (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) :rule equiv2 :premises (t202))
+(step t.end (cl) :rule resolution :premises (nst203.0 nst203.1 st203))

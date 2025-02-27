@@ -1,0 +1,7 @@
+(assume nst28.0 (not (p (eval_alpha empty aR))))
+(assume nst28.1 (not (not (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha)))))
+(assume nst28.2 (not (not (= (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha) (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha))))))
+(assume nst28.3 (not (not (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha))))))
+(assume t27 (or (p (eval_alpha empty aR)) (not (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha))) (not (= (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha) (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))) (not (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha))))))
+(step st28 (cl (p (eval_alpha empty aR)) (not (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha))) (not (= (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha) (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))) (not (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha))))) :rule or :premises (t27))
+(step t.end (cl) :rule resolution :premises (nst28.0 nst28.1 nst28.2 nst28.3 st28))

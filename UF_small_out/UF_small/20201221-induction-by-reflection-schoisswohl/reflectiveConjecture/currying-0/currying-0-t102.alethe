@@ -1,0 +1,5 @@
+(assume nst102.0 (not (not (or (models empty (notR (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR))))) (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))))))
+(assume nst102.1 (not (models empty (notR (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR)))))))
+(assume nst102.2 (not (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))))
+(step st102 (cl (not (or (models empty (notR (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR))))) (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))) (models empty (notR (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR))))) (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) :rule or_pos)
+(step t.end (cl) :rule resolution :premises (nst102.0 nst102.1 nst102.2 st102))

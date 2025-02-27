@@ -1,0 +1,3 @@
+(assume nst35.0 (not (= (= y$dve_invalid$next y$1047) (= y$1047 y$dve_invalid$next))))
+(step st35 (cl (= (= y$dve_invalid$next y$1047) (= y$1047 y$dve_invalid$next))) :rule rare_rewrite :args ("eq-symm" y$dve_invalid$next y$1047))
+(step t.end (cl) :rule resolution :premises (nst35.0 st35))

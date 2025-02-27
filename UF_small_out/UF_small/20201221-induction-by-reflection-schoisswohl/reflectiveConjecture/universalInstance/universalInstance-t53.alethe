@@ -1,0 +1,5 @@
+(assume nst53.0 (not (not (forall ((env env) (phi form) (psi form)) (= (models env (orR phi psi)) (or (models env phi) (models env psi)))))))
+(assume nst53.1 (not (= (models empty (orR (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))) (pR aR))) (or (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (pR aR))))))
+(assume t52 (or (not (forall ((env env) (phi form) (psi form)) (= (models env (orR phi psi)) (or (models env phi) (models env psi))))) (= (models empty (orR (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))) (pR aR))) (or (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (pR aR))))))
+(step st53 (cl (not (forall ((env env) (phi form) (psi form)) (= (models env (orR phi psi)) (or (models env phi) (models env psi))))) (= (models empty (orR (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))) (pR aR))) (or (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (pR aR))))) :rule or :premises (t52))
+(step t.end (cl) :rule resolution :premises (nst53.0 nst53.1 st53))

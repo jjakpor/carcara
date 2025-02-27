@@ -1,0 +1,5 @@
+(assume nst226.0 (not (= (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 n_5$0 root_x$0 root_x$0))) true)))
+(assume t224 (= (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 n_5$0 root_x$0 root_x$0))) (or true (not (Btwn$0 next$0 n_5$0 root_x$0 root_x$0)))))
+(assume t225 (= (or true (not (Btwn$0 next$0 n_5$0 root_x$0 root_x$0))) true))
+(step st226 (cl (= (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 n_5$0 root_x$0 root_x$0))) true)) :rule trans :premises (t224 t225))
+(step t.end (cl) :rule resolution :premises (nst226.0 st226))

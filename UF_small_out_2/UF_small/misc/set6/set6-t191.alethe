@@ -1,0 +1,8 @@
+(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (union (difference c a) (difference c b)))) (member ?x (difference c (intersection a b)))))))
+(define-fun @quantifiers_skolemize_4 () Elem (choice ((?x Elem)) (not (or (not (member ?x (difference c (intersection a b)))) (member ?x (union (difference c a) (difference c b)))))))
+(assume nst191.0 (not (not (or (not (member @quantifiers_skolemize_4 (difference c (intersection a b)))) (member @quantifiers_skolemize_4 (union (difference c a) (difference c b)))))))
+(assume t48 (or (forall ((?x Elem)) (or (not (member ?x (difference c (intersection a b)))) (member ?x (union (difference c a) (difference c b))))) (not (or (not (member @quantifiers_skolemize_4 (difference c (intersection a b)))) (member @quantifiers_skolemize_4 (union (difference c a) (difference c b)))))))
+(assume t190 (not (forall ((?x Elem)) (or (not (member ?x (difference c (intersection a b)))) (member ?x (union (difference c a) (difference c b)))))))
+(step t48' (cl (forall ((?x Elem)) (or (not (member ?x (difference c (intersection a b)))) (member ?x (union (difference c a) (difference c b))))) (not (or (not (member @quantifiers_skolemize_4 (difference c (intersection a b)))) (member @quantifiers_skolemize_4 (union (difference c a) (difference c b)))))) :rule or :premises (t48))
+(step st191 (cl (not (or (not (member @quantifiers_skolemize_4 (difference c (intersection a b)))) (member @quantifiers_skolemize_4 (union (difference c a) (difference c b)))))) :rule resolution :premises (t48' t190))
+(step t.end (cl) :rule resolution :premises (nst191.0 st191))

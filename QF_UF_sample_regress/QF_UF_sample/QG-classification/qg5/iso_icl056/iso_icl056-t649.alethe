@@ -1,0 +1,5 @@
+(assume nst649.0 (not (not (= (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))) false))))
+(assume nst649.1 (not (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))))))
+(assume t648 (= (= (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))) false) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))))))
+(step st649 (cl (not (= (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))) false)) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))))) :rule equiv1 :premises (t648))
+(step t.end (cl) :rule resolution :premises (nst649.0 nst649.1 st649))

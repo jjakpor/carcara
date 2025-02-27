@@ -1,0 +1,4 @@
+(assume nst74.0 (not (not (and (not (= (fun_app$c (ldropn$ (suc$ n$)) xs$) (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$))) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$)) (= (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))))))))
+(assume nst74.1 (not (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$))))
+(step st74 (cl (not (and (not (= (fun_app$c (ldropn$ (suc$ n$)) xs$) (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$))) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$)) (= (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)))))) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$))) :rule and_pos :args (1))
+(step t.end (cl) :rule resolution :premises (nst74.0 nst74.1 st74))

@@ -1,0 +1,3 @@
+(assume nst54.0 (not (= (= (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (and (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5)))) true)))
+(step st54 (cl (= (= (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (and (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst54.0 st54))

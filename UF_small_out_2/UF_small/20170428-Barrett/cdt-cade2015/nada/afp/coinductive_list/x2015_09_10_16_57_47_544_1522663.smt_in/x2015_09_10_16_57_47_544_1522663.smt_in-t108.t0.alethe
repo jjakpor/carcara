@@ -1,0 +1,8 @@
+(assume nt108.0 (not (not (forall ((?v0 A_llist$) (?v1 A_a_llist_a_llist_fun_fun$) (?v2 A_llist$)) (= (fun_app$c (fun_app$bc (case_llist$ ?v0) ?v1) ?v2) (ite (fun_app$q lnull$d ?v2) ?v0 (fun_app$c (fun_app$e ?v1 (lhd$ ?v2)) (ltl$ ?v2))))))))
+(assume nt108.1 (not (= (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))))))
+(anchor :step t108)
+(assume t108.a0 (forall ((?v0 A_llist$) (?v1 A_a_llist_a_llist_fun_fun$) (?v2 A_llist$)) (= (fun_app$c (fun_app$bc (case_llist$ ?v0) ?v1) ?v2) (ite (fun_app$q lnull$d ?v2) ?v0 (fun_app$c (fun_app$e ?v1 (lhd$ ?v2)) (ltl$ ?v2))))))
+(step st108.t0 (cl (or (not (forall ((?v0 A_llist$) (?v1 A_a_llist_a_llist_fun_fun$) (?v2 A_llist$)) (= (fun_app$c (fun_app$bc (case_llist$ ?v0) ?v1) ?v2) (ite (fun_app$q lnull$d ?v2) ?v0 (fun_app$c (fun_app$e ?v1 (lhd$ ?v2)) (ltl$ ?v2)))))) (= (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)))))) :rule forall_inst :args (lNil$ uu$ xs$))
+(step t108.t2 (cl (= (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))))) :rule trust)
+(step t108 (cl (not (forall ((?v0 A_llist$) (?v1 A_a_llist_a_llist_fun_fun$) (?v2 A_llist$)) (= (fun_app$c (fun_app$bc (case_llist$ ?v0) ?v1) ?v2) (ite (fun_app$q lnull$d ?v2) ?v0 (fun_app$c (fun_app$e ?v1 (lhd$ ?v2)) (ltl$ ?v2)))))) (= (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))))) :rule subproof :discharge (t108.a0))
+(step t.end (cl) :rule resolution :premises (nt108.0 nt108.1 t108))

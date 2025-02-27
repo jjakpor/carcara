@@ -1,0 +1,5 @@
+(assume nst393.0 (not (not (= (or (not (p1 (f5 c_1) c_1)) (not (= c_0 (f5 c_1))) (not (= c_0 (f7 c_1))) (not (not (p1 (f7 c_1) c_1)))) (or (not (p1 (f5 c_1) c_1)) (not (= c_0 (f5 c_1))) (not (= c_0 (f7 c_1))) (p1 (f7 c_1) c_1))))))
+(assume nst393.1 (not (not (or (not (p1 (f5 c_1) c_1)) (not (= c_0 (f5 c_1))) (not (= c_0 (f7 c_1))) (not (not (p1 (f7 c_1) c_1)))))))
+(assume nst393.2 (not (or (not (p1 (f5 c_1) c_1)) (not (= c_0 (f5 c_1))) (not (= c_0 (f7 c_1))) (p1 (f7 c_1) c_1))))
+(step st393 (cl (not (= (or (not (p1 (f5 c_1) c_1)) (not (= c_0 (f5 c_1))) (not (= c_0 (f7 c_1))) (not (not (p1 (f7 c_1) c_1)))) (or (not (p1 (f5 c_1) c_1)) (not (= c_0 (f5 c_1))) (not (= c_0 (f7 c_1))) (p1 (f7 c_1) c_1)))) (not (or (not (p1 (f5 c_1) c_1)) (not (= c_0 (f5 c_1))) (not (= c_0 (f7 c_1))) (not (not (p1 (f7 c_1) c_1))))) (or (not (p1 (f5 c_1) c_1)) (not (= c_0 (f5 c_1))) (not (= c_0 (f7 c_1))) (p1 (f7 c_1) c_1))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst393.0 nst393.1 nst393.2 st393))

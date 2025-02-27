@@ -1,0 +1,7 @@
+(assume nst196.0 (not (not (= e1 (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))
+(assume t186 (or (not (= (not (= e0 e1)) (not (= e1 (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))) (not (not (= e0 e1))) (not (= e1 (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))
+(assume t191 (= (not (= e0 e1)) (not (= e1 (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))
+(assume t195 (not (= e0 e1)))
+(step t186' (cl (not (= (not (= e0 e1)) (not (= e1 (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))) (not (not (= e0 e1))) (not (= e1 (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))) :rule or :premises (t186))
+(step st196 (cl (not (= e1 (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))) :rule resolution :premises (t186' t191 t195))
+(step t.end (cl) :rule resolution :premises (nst196.0 st196))

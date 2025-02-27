@@ -1,0 +1,5 @@
+(assume nst318.0 (not (= (or (not (= e1 (op e1 (op e1 e1)))) (= unit e1)) (or (not (= e1 (op e1 (op e1 e1)))) (= e0 e1)))))
+(assume t315 (= (not (= e1 (op e1 (op e1 e1)))) (not (= e1 (op e1 (op e1 e1))))))
+(assume t317 (= (= unit e1) (= e0 e1)))
+(step st318 (cl (= (or (not (= e1 (op e1 (op e1 e1)))) (= unit e1)) (or (not (= e1 (op e1 (op e1 e1)))) (= e0 e1)))) :rule cong :premises (t315 t317))
+(step t.end (cl) :rule resolution :premises (nst318.0 st318))

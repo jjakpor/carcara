@@ -1,0 +1,3 @@
+(assume nst568.0 (not (= (= (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (and (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (=> (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (= x50 x51)))) true)))
+(step st568 (cl (= (= (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (and (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (=> (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (= x50 x51)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst568.0 st568))

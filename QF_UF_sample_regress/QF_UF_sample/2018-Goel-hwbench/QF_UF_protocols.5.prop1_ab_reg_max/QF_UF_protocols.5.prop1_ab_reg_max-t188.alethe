@@ -1,0 +1,6 @@
+(assume nst188.0 (not (not y$v3_1517448506_497_op)))
+(assume t183 (or (not y$v3_1517448506_497_op) (and y$964 y$965)))
+(assume t187 (not (and y$964 y$965)))
+(step t183' (cl (not y$v3_1517448506_497_op) (and y$964 y$965)) :rule or :premises (t183))
+(step st188 (cl (not y$v3_1517448506_497_op)) :rule resolution :premises (t183' t187))
+(step t.end (cl) :rule resolution :premises (nst188.0 st188))

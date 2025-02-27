@@ -1,0 +1,5 @@
+(assume nst72.0 (not (= (and (= null$0 prv_init$0) (= c_init$0 curr_init$0)) (and (= (read$0 next$0 d_init$0) (read$0 prev$0 prv_5$0)) (= c_init$0 prv_5$0)))))
+(assume t70 (= (= null$0 prv_init$0) (= (read$0 next$0 d_init$0) (read$0 prev$0 prv_5$0))))
+(assume t71 (= (= c_init$0 curr_init$0) (= c_init$0 prv_5$0)))
+(step st72 (cl (= (and (= null$0 prv_init$0) (= c_init$0 curr_init$0)) (and (= (read$0 next$0 d_init$0) (read$0 prev$0 prv_5$0)) (= c_init$0 prv_5$0)))) :rule cong :premises (t70 t71))
+(step t.end (cl) :rule resolution :premises (nst72.0 st72))

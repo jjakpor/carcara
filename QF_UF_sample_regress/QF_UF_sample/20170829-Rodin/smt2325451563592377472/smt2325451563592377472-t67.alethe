@@ -1,0 +1,3 @@
+(assume nst67.0 (not (= (= car car) true)))
+(step st67 (cl (= (= car car) true)) :rule rare_rewrite :args ("eq-refl" car))
+(step t.end (cl) :rule resolution :premises (nst67.0 st67))

@@ -1,0 +1,4 @@
+(assume nst19.0 (not (= FP$0 sk_?X$0)))
+(assume a15 (= sk_?X$0 FP$0))
+(step st19 (cl (= FP$0 sk_?X$0)) :rule symm :premises (a15))
+(step t.end (cl) :rule resolution :premises (nst19.0 st19))

@@ -1,0 +1,5 @@
+(assume nst13.0 (not (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))))))
+(assume nst13.1 (not (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0))))
+(assume t12 (=> (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0))))
+(step st13 (cl (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y)))) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0))) :rule implies :premises (t12))
+(step t.end (cl) :rule resolution :premises (nst13.0 nst13.1 st13))

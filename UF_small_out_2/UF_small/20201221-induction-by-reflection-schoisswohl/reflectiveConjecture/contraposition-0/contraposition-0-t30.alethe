@@ -1,0 +1,4 @@
+(assume nst30.0 (not (or (not (= (not (models empty (qR bR))) (models empty (notR (qR bR))))) (not (not (models empty (qR bR)))) (models empty (notR (qR bR))))))
+(assume nst30.1 (not (not (not (= (not (models empty (qR bR))) (models empty (notR (qR bR))))))))
+(step st30 (cl (or (not (= (not (models empty (qR bR))) (models empty (notR (qR bR))))) (not (not (models empty (qR bR)))) (models empty (notR (qR bR)))) (not (not (= (not (models empty (qR bR))) (models empty (notR (qR bR))))))) :rule or_neg :args (0))
+(step t.end (cl) :rule resolution :premises (nst30.0 nst30.1 st30))

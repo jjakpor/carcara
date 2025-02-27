@@ -1,0 +1,5 @@
+(assume nst58.0 (not (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))))
+(assume nst58.1 (not (= x4 x5)))
+(assume t57 (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5)))
+(step st58 (cl (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5)))) (= x4 x5)) :rule implies :premises (t57))
+(step t.end (cl) :rule resolution :premises (nst58.0 nst58.1 st58))

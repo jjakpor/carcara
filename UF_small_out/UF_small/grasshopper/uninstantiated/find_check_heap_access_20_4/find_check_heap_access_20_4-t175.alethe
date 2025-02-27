@@ -1,0 +1,5 @@
+(assume nst175.0 (not (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)))))
+(assume t172 (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_22$0)))
+(assume t174 (= (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_22$0) (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))))
+(step st175 (cl (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)))) :rule trans :premises (t172 t174))
+(step t.end (cl) :rule resolution :premises (nst175.0 st175))

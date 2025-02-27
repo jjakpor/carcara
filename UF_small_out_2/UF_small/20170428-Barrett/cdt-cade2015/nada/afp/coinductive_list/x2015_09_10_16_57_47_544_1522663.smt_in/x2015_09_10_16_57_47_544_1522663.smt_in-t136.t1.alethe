@@ -1,0 +1,6 @@
+(assume nt136.0 (not (= (forall ((?v0 A_llist$) (?v1 Nat$)) (=> (fun_app$q lnull$d ?v0) (= (fun_app$c (ldropn$ ?v1) ?v0) lNil$))) (forall ((?v0 A_llist$) (?v1 Nat$)) (=> (fun_app$q lnull$d ?v0) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0)))))))
+(anchor :step t136 :args ((?v0 A_llist$) (?v1 Nat$) (:= (?v0 A_llist$) ?v0) (:= (?v1 Nat$) ?v1)))
+(step st136.t1 (cl (= (= (fun_app$c (ldropn$ ?v1) ?v0) lNil$) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0)))) :rule hole)
+(step t136.t2 (cl (= (=> (fun_app$q lnull$d ?v0) (= (fun_app$c (ldropn$ ?v1) ?v0) lNil$)) (=> (fun_app$q lnull$d ?v0) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0))))) :rule trust)
+(step t136 (cl (= (forall ((?v0 A_llist$) (?v1 Nat$)) (=> (fun_app$q lnull$d ?v0) (= (fun_app$c (ldropn$ ?v1) ?v0) lNil$))) (forall ((?v0 A_llist$) (?v1 Nat$)) (=> (fun_app$q lnull$d ?v0) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0)))))) :rule bind)
+(step t.end (cl) :rule resolution :premises (nt136.0 t136))

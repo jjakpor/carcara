@@ -1,0 +1,6 @@
+(assume nst463.0 (not (= c_1 (f7 c_1))))
+(assume t376 (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1))))
+(assume t462 (not (= c_0 (f7 c_1))))
+(step t376' (cl (= c_0 (f7 c_1)) (= c_1 (f7 c_1))) :rule or :premises (t376))
+(step st463 (cl (= c_1 (f7 c_1))) :rule resolution :premises (t376' t462))
+(step t.end (cl) :rule resolution :premises (nst463.0 st463))

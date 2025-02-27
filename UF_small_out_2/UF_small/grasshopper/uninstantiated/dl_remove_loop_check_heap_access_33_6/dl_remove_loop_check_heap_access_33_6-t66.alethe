@@ -1,0 +1,5 @@
+(assume nst66.0 (not (= (read$0 prev$0 curr_init$0) (read$0 prev$0 prv_5$0))))
+(assume t36 (= curr_init$0 prv_5$0))
+(assume t65 (= prev$0 prev$0))
+(step st66 (cl (= (read$0 prev$0 curr_init$0) (read$0 prev$0 prv_5$0))) :rule cong :premises (t65 t36))
+(step t.end (cl) :rule resolution :premises (nst66.0 st66))

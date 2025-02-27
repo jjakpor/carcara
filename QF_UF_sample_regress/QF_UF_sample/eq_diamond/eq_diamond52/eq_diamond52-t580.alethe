@@ -1,0 +1,6 @@
+(assume nst580.0 (not (not (= x6 x7))))
+(assume t13 (or (not (= (= x6 x7) false)) (not (= x6 x7))))
+(assume t579 (= (= x6 x7) false))
+(step t13' (cl (not (= (= x6 x7) false)) (not (= x6 x7))) :rule or :premises (t13))
+(step st580 (cl (not (= x6 x7))) :rule resolution :premises (t13' t579))
+(step t.end (cl) :rule resolution :premises (nst580.0 st580))

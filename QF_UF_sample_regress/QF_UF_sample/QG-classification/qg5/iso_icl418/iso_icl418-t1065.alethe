@@ -1,0 +1,5 @@
+(assume nst1065.0 (not (= (op e4 e4) (op (op e4 (op (op e4 e3) (op e4 e3))) e4))))
+(assume t40 (= e4 e4))
+(assume t1051 (= e4 (op e4 (op (op e4 e3) (op e4 e3)))))
+(step st1065 (cl (= (op e4 e4) (op (op e4 (op (op e4 e3) (op e4 e3))) e4))) :rule cong :premises (t1051 t40))
+(step t.end (cl) :rule resolution :premises (nst1065.0 st1065))

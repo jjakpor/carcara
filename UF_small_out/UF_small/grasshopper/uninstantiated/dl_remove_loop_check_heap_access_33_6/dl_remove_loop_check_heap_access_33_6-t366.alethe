@@ -1,0 +1,6 @@
+(assume nst366.0 (not (= (in$0 (read$0 next$0 d_init$0) Alloc$0) false)))
+(assume t360 (or (= (in$0 (read$0 next$0 d_init$0) Alloc$0) false) (in$0 (read$0 next$0 d_init$0) Alloc$0)))
+(assume t365 (not (in$0 (read$0 next$0 d_init$0) Alloc$0)))
+(step t360' (cl (= (in$0 (read$0 next$0 d_init$0) Alloc$0) false) (in$0 (read$0 next$0 d_init$0) Alloc$0)) :rule or :premises (t360))
+(step st366 (cl (= (in$0 (read$0 next$0 d_init$0) Alloc$0) false)) :rule resolution :premises (t360' t365))
+(step t.end (cl) :rule resolution :premises (nst366.0 st366))

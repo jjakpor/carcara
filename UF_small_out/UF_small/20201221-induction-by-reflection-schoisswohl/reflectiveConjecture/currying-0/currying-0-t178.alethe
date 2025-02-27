@@ -1,0 +1,6 @@
+(assume nst178.0 (not (not (models empty (rR cR)))))
+(assume t19 (or (not (models empty (rR cR))) (or (models empty (notR (qR bR))) (models empty (rR cR)))))
+(assume t177 (not (or (models empty (notR (qR bR))) (models empty (rR cR)))))
+(step t19' (cl (not (models empty (rR cR))) (or (models empty (notR (qR bR))) (models empty (rR cR)))) :rule or :premises (t19))
+(step st178 (cl (not (models empty (rR cR)))) :rule resolution :premises (t19' t177))
+(step t.end (cl) :rule resolution :premises (nst178.0 st178))

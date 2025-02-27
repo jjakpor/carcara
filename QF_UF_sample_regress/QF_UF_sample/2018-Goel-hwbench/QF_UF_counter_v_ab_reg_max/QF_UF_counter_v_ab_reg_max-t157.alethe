@@ -1,0 +1,4 @@
+(assume nst157.0 (not (= y$44 (= y$44 true))))
+(assume t156 (= (= y$44 true) y$44))
+(step st157 (cl (= y$44 (= y$44 true))) :rule symm :premises (t156))
+(step t.end (cl) :rule resolution :premises (nst157.0 st157))

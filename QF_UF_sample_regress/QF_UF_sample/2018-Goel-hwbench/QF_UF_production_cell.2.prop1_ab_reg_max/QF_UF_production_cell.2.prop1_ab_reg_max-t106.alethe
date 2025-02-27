@@ -1,0 +1,3 @@
+(assume nst106.0 (not (= y$n1s8 y$n1s8)))
+(step st106 (cl (= y$n1s8 y$n1s8)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst106.0 st106))

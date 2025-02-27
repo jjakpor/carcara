@@ -1,0 +1,4 @@
+(assume nst963.0 (not (not (not (not (= (op e1 e1) (op e3 e1)))))))
+(assume nst963.1 (not (= (op e1 e1) (op e3 e1))))
+(step st963 (cl (not (not (not (= (op e1 e1) (op e3 e1))))) (= (op e1 e1) (op e3 e1))) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nst963.0 nst963.1 st963))

@@ -1,0 +1,6 @@
+(assume nst366.0 (not (= x31 x32)))
+(assume t361 (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))))
+(assume t365 (or (= x31 x32) (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))))))
+(step t365' (cl (= x31 x32) (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))))) :rule or :premises (t365))
+(step st366 (cl (= x31 x32)) :rule resolution :premises (t365' t361))
+(step t.end (cl) :rule resolution :premises (nst366.0 st366))

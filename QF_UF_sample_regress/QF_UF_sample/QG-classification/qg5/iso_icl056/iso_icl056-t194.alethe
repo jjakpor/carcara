@@ -1,0 +1,5 @@
+(assume nst194.0 (not (not (= (not (= (op e2 e2) (op e2 e3))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1))))))))
+(assume nst194.1 (not (not (not (= (op e2 e2) (op e2 e3))))))
+(assume nst194.2 (not (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1))))))
+(step st194 (cl (not (= (not (= (op e2 e2) (op e2 e3))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1)))))) (not (not (= (op e2 e2) (op e2 e3)))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst194.0 nst194.1 nst194.2 st194))

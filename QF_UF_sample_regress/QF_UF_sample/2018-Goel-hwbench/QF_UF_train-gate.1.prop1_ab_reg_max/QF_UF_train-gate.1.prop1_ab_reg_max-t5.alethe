@@ -1,0 +1,3 @@
+(assume nst5.0 (not (= y$1407 y$1407)))
+(step st5 (cl (= y$1407 y$1407)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst5.0 st5))

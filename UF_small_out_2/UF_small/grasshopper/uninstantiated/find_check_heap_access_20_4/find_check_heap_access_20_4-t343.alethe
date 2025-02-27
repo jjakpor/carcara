@@ -1,0 +1,3 @@
+(assume nst343.0 (not (or (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x))) (Btwn$0 next$0 x$0 x$0 x$0))))
+(step st343 (cl (or (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x))) (Btwn$0 next$0 x$0 x$0 x$0))) :rule forall_inst :args (next$0 x$0))
+(step t.end (cl) :rule resolution :premises (nst343.0 st343))

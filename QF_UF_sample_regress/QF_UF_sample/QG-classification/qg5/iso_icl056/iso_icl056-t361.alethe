@@ -1,0 +1,5 @@
+(assume nst361.0 (not (= (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)) (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)))))
+(assume t316 (= (op e1 (op e1 e1)) (op (op e1 e1) e1)))
+(assume t360 (= (op (op (op e1 e1) (op e1 (op e1 e1))) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)))
+(step st361 (cl (= (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)) (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)))) :rule cong :premises (t316 t360))
+(step t.end (cl) :rule resolution :premises (nst361.0 st361))

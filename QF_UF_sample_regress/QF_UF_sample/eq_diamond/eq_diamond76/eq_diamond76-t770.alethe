@@ -1,0 +1,4 @@
+(assume nst770.0 (not (=> (or (and (= x68 y68) (= y68 x69)) (and (= x68 z68) (= z68 x69))) (= x68 x69))))
+(assume t769 (and (or (and (= x68 y68) (= y68 x69)) (and (= x68 z68) (= z68 x69))) (=> (or (and (= x68 y68) (= y68 x69)) (and (= x68 z68) (= z68 x69))) (= x68 x69))))
+(step st770 (cl (=> (or (and (= x68 y68) (= y68 x69)) (and (= x68 z68) (= z68 x69))) (= x68 x69))) :rule and :premises (t769) :args (1))
+(step t.end (cl) :rule resolution :premises (nst770.0 st770))

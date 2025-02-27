@@ -1,0 +1,6 @@
+(assume nst633.0 (not (= x38 x39)))
+(assume nst633.1 (not (not (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))))))
+(assume t632 (or (not (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39)))) (= x38 x39)))
+(step t632' (cl (not (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39)))) (= x38 x39)) :rule or :premises (t632))
+(step st633 (cl (= x38 x39) (not (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))))) :rule reordering :premises (t632'))
+(step t.end (cl) :rule resolution :premises (nst633.0 nst633.1 st633))

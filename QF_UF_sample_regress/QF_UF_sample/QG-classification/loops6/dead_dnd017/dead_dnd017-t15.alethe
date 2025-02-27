@@ -1,0 +1,6 @@
+(assume nst15.0 (not (= e0 (op e1 (op e1 e0)))))
+(assume nst15.1 (not (not (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0)))))))
+(assume t14 (or (not (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0))))) (= e0 (op e1 (op e1 e0)))))
+(step t14' (cl (not (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0))))) (= e0 (op e1 (op e1 e0)))) :rule or :premises (t14))
+(step st15 (cl (= e0 (op e1 (op e1 e0))) (not (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0)))))) :rule reordering :premises (t14'))
+(step t.end (cl) :rule resolution :premises (nst15.0 nst15.1 st15))

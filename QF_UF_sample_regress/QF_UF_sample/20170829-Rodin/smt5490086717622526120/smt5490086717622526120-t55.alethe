@@ -1,0 +1,5 @@
+(assume nst55.0 (not red_SR))
+(assume nst55.1 (not red_MR))
+(assume t54 (or red_SR red_MR))
+(step st55 (cl red_SR red_MR) :rule or :premises (t54))
+(step t.end (cl) :rule resolution :premises (nst55.0 nst55.1 st55))

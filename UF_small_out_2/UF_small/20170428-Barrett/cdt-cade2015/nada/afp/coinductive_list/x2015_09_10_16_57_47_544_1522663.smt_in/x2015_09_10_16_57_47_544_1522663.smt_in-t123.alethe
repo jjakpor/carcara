@@ -1,0 +1,5 @@
+(assume nst123.0 (not (= (= (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))) lNil$) (= (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))) lNil$))))
+(assume t104 (= (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)))))
+(assume t122 (= lNil$ lNil$))
+(step st123 (cl (= (= (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))) lNil$) (= (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))) lNil$))) :rule cong :premises (t104 t122))
+(step t.end (cl) :rule resolution :premises (nst123.0 st123))

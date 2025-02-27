@@ -1,0 +1,5 @@
+(assume nst52.0 (not (= (= (not (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))) (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))) true)))
+(assume t46 (= (= (not (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))) (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))) (= (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))) (not (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))))))
+(assume t51 (= (= (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))) (not (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))) true))
+(step st52 (cl (= (= (not (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))) (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))) true)) :rule trans :premises (t46 t51))
+(step t.end (cl) :rule resolution :premises (nst52.0 st52))

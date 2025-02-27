@@ -1,0 +1,8 @@
+(assume nst579.0 (not (= (or (= (op e4 e4) e3) (= (op e3 e4) e3) (= (op e2 e4) e3) (= (op e0 e4) e3) (= (op e1 e4) e3)) (or (= e3 (op e4 e4)) (= e3 (op e3 e4)) (= e3 (op e2 e4)) (= e3 (op e0 e4)) (= e3 (op e1 e4))))))
+(assume t17 (= (= (op e1 e4) e3) (= e3 (op e1 e4))))
+(assume t575 (= (= (op e4 e4) e3) (= e3 (op e4 e4))))
+(assume t576 (= (= (op e3 e4) e3) (= e3 (op e3 e4))))
+(assume t577 (= (= (op e2 e4) e3) (= e3 (op e2 e4))))
+(assume t578 (= (= (op e0 e4) e3) (= e3 (op e0 e4))))
+(step st579 (cl (= (or (= (op e4 e4) e3) (= (op e3 e4) e3) (= (op e2 e4) e3) (= (op e0 e4) e3) (= (op e1 e4) e3)) (or (= e3 (op e4 e4)) (= e3 (op e3 e4)) (= e3 (op e2 e4)) (= e3 (op e0 e4)) (= e3 (op e1 e4))))) :rule cong :premises (t575 t576 t577 t578 t17))
+(step t.end (cl) :rule resolution :premises (nst579.0 st579))

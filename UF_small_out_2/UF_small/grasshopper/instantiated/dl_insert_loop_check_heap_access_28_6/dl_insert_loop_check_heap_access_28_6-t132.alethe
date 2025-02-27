@@ -1,0 +1,5 @@
+(assume nst132.0 (not (= (= c_init$0 curr_init$0) (= c_init$0 prv_5$0))))
+(assume t46 (= curr_init$0 prv_5$0))
+(assume t129 (= c_init$0 c_init$0))
+(step st132 (cl (= (= c_init$0 curr_init$0) (= c_init$0 prv_5$0))) :rule cong :premises (t129 t46))
+(step t.end (cl) :rule resolution :premises (nst132.0 st132))

@@ -1,0 +1,6 @@
+(assume nst618.0 (not (not (= e3 (op e3 (op (op (op e3 e3) (op e3 e3)) e3))))))
+(assume t592 (or (not (= (= e3 (op e3 (op (op (op e3 e3) (op e3 e3)) e3))) false)) (not (= e3 (op e3 (op (op (op e3 e3) (op e3 e3)) e3))))))
+(assume t617 (= (= e3 (op e3 (op (op (op e3 e3) (op e3 e3)) e3))) false))
+(step t592' (cl (not (= (= e3 (op e3 (op (op (op e3 e3) (op e3 e3)) e3))) false)) (not (= e3 (op e3 (op (op (op e3 e3) (op e3 e3)) e3))))) :rule or :premises (t592))
+(step st618 (cl (not (= e3 (op e3 (op (op (op e3 e3) (op e3 e3)) e3))))) :rule resolution :premises (t592' t617))
+(step t.end (cl) :rule resolution :premises (nst618.0 st618))

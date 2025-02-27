@@ -1,0 +1,5 @@
+(assume nst721.0 (not (not (= (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false))))
+(assume nst721.1 (not (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))))
+(assume t720 (= (= (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false) (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))))
+(step st721 (cl (not (= (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false)) (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) :rule equiv1 :premises (t720))
+(step t.end (cl) :rule resolution :premises (nst721.0 nst721.1 st721))

@@ -1,0 +1,4 @@
+(assume nst737.0 (not (not (not (not (= (op (op (op e0 e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))))))
+(assume nst737.1 (not (= (op (op (op e0 e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
+(step st737 (cl (not (not (not (= (op (op (op e0 e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))) (= (op (op (op e0 e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nst737.0 nst737.1 st737))

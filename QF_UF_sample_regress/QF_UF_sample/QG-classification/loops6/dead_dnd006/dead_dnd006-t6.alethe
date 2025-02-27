@@ -1,0 +1,7 @@
+(assume nst6.0 (not (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))))))
+(assume nst6.1 (not (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))))))
+(assume nst6.2 (not (= e1 (op e1 (op e1 e1)))))
+(assume t5 (or (= e1 (op e1 (op e1 e1))) (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))))))
+(step t5' (cl (= e1 (op e1 (op e1 e1))) (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))))) :rule or :premises (t5))
+(step st6 (cl (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (= e1 (op e1 (op e1 e1)))) :rule reordering :premises (t5'))
+(step t.end (cl) :rule resolution :premises (nst6.0 nst6.1 nst6.2 st6))

@@ -1,0 +1,7 @@
+(assume nst153.0 (not (not (or (models empty (notR (notR (qR bR)))) (models empty (notR (pR aR)))))))
+(assume t7 (or (models empty (orR (notR (notR (qR bR))) (notR (pR aR)))) (not (or (models empty (notR (notR (qR bR)))) (models empty (notR (pR aR))))) (not (= (models empty (orR (notR (notR (qR bR))) (notR (pR aR)))) (or (models empty (notR (notR (qR bR)))) (models empty (notR (pR aR))))))))
+(assume t23 (= (models empty (orR (notR (notR (qR bR))) (notR (pR aR)))) (or (models empty (notR (notR (qR bR)))) (models empty (notR (pR aR))))))
+(assume t152 (not (models empty (orR (notR (notR (qR bR))) (notR (pR aR))))))
+(step t7' (cl (models empty (orR (notR (notR (qR bR))) (notR (pR aR)))) (not (or (models empty (notR (notR (qR bR)))) (models empty (notR (pR aR))))) (not (= (models empty (orR (notR (notR (qR bR))) (notR (pR aR)))) (or (models empty (notR (notR (qR bR)))) (models empty (notR (pR aR))))))) :rule or :premises (t7))
+(step st153 (cl (not (or (models empty (notR (notR (qR bR)))) (models empty (notR (pR aR)))))) :rule resolution :premises (t7' t152 t23))
+(step t.end (cl) :rule resolution :premises (nst153.0 st153))

@@ -1,0 +1,5 @@
+(assume nst467.0 (not (= (not (= e0 e2)) (not (= e0 (op (op e0 (op e0 e0)) e0))))))
+(assume t461 (= (not (= e0 e2)) (not (= e2 e0))))
+(assume t466 (= (not (= e2 e0)) (not (= e0 (op (op e0 (op e0 e0)) e0)))))
+(step st467 (cl (= (not (= e0 e2)) (not (= e0 (op (op e0 (op e0 e0)) e0))))) :rule trans :premises (t461 t466))
+(step t.end (cl) :rule resolution :premises (nst467.0 st467))

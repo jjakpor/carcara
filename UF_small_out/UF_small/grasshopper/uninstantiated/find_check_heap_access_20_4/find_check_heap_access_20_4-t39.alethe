@@ -1,0 +1,4 @@
+(assume nst39.0 (not (=> (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (= (read$0 next$0 x$0) (read$0 next$0 root_x$0)))))
+(assume nst39.1 (not (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))))
+(step st39 (cl (=> (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))) (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))) :rule implies_neg1)
+(step t.end (cl) :rule resolution :premises (nst39.0 nst39.1 st39))

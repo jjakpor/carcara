@@ -1,0 +1,8 @@
+(assume nst41.0 (not (= (= x0 x3) false)))
+(assume nst41.1 (not (= x0 x3)))
+(assume t39 (or (= (= x0 x3) false) (not (not (= x0 x3)))))
+(assume t40 (or (not (not (not (= x0 x3)))) (= x0 x3)))
+(step t40' (cl (not (not (not (= x0 x3)))) (= x0 x3)) :rule or :premises (t40))
+(step t39' (cl (= (= x0 x3) false) (not (not (= x0 x3)))) :rule or :premises (t39))
+(step st41 (cl (= (= x0 x3) false) (= x0 x3)) :rule resolution :premises (t39' t40'))
+(step t.end (cl) :rule resolution :premises (nst41.0 nst41.1 st41))

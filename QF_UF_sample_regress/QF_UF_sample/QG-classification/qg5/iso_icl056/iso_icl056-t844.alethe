@@ -1,0 +1,5 @@
+(assume nst844.0 (not (= (not (= (op e4 e2) (op e4 e4))) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))))
+(assume t841 (= (not (= (op e4 e2) (op e4 e4))) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))))
+(assume t843 (= (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))))))
+(step st844 (cl (= (not (= (op e4 e2) (op e4 e4))) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))) :rule trans :premises (t841 t843))
+(step t.end (cl) :rule resolution :premises (nst844.0 st844))

@@ -1,0 +1,4 @@
+(assume nst16.0 (not (not (= null$0 lst$0))))
+(assume a21 (not (= lst$0 null$0)))
+(step st16 (cl (not (= null$0 lst$0))) :rule not_symm :premises (a21))
+(step t.end (cl) :rule resolution :premises (nst16.0 st16))

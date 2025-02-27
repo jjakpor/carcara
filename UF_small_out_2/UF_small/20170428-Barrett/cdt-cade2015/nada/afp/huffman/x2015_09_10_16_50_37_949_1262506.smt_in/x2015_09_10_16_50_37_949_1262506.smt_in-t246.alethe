@@ -1,0 +1,3 @@
+(assume nst246.0 (not (= (not (not (= a$ d$))) (= a$ d$))))
+(step st246 (cl (= (not (not (= a$ d$))) (= a$ d$))) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst246.0 st246))

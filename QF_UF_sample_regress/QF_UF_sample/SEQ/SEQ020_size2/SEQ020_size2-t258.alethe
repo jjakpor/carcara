@@ -1,0 +1,7 @@
+(assume nst258.0 (not (or (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0)))))
+(assume t232 (or (not (= (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))) (or (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))))) (not (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0)))) (or (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0)))))
+(assume t234 (= (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))) (or (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0)))))
+(assume t257 (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))))
+(step t232' (cl (not (= (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))) (or (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))))) (not (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0)))) (or (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0)))) :rule or :premises (t232))
+(step st258 (cl (or (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0)))) :rule resolution :premises (t232' t234 t257))
+(step t.end (cl) :rule resolution :premises (nst258.0 st258))

@@ -1,0 +1,5 @@
+(assume nst94.0 (not (= (or (= null$0 null$0) (not (Btwn$0 next$0 a_1$0 null$0 null$0))) (or true (not (Btwn$0 next$0 a_1$0 null$0 null$0))))))
+(assume t89 (= (= null$0 null$0) true))
+(assume t93 (= (not (Btwn$0 next$0 a_1$0 null$0 null$0)) (not (Btwn$0 next$0 a_1$0 null$0 null$0))))
+(step st94 (cl (= (or (= null$0 null$0) (not (Btwn$0 next$0 a_1$0 null$0 null$0))) (or true (not (Btwn$0 next$0 a_1$0 null$0 null$0))))) :rule cong :premises (t89 t93))
+(step t.end (cl) :rule resolution :premises (nst94.0 st94))

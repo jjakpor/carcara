@@ -1,0 +1,5 @@
+(assume nst11.0 (not (=> (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= x$0 root_x$0)))))
+(assume t10 (or (=> (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= x$0 root_x$0))) (=> (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= x$0 root_x$0)))))
+(step t10' (cl (=> (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= x$0 root_x$0))) (=> (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= x$0 root_x$0)))) :rule or :premises (t10))
+(step st11 (cl (=> (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= x$0 root_x$0)))) :rule contraction :premises (t10'))
+(step t.end (cl) :rule resolution :premises (nst11.0 st11))

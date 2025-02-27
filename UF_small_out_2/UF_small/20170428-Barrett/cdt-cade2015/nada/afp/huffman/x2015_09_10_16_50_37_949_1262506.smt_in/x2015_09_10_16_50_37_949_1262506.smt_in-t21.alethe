@@ -1,0 +1,5 @@
+(assume nst21.0 (not (= (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$)) true)))
+(assume nst21.1 (not (not (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$)))))
+(assume t20 (= (= (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$)) true) (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$))))
+(step st21 (cl (= (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$)) true) (not (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$)))) :rule equiv2 :premises (t20))
+(step t.end (cl) :rule resolution :premises (nst21.0 nst21.1 st21))

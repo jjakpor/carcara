@@ -1,0 +1,3 @@
+(assume nst143.0 (not (or (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR))))) (not (models empty (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR)))))))))
+(step st143 (cl (or (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR))))) (not (models empty (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR)))))))) :rule forall_inst :args (empty (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR)))))
+(step t.end (cl) :rule resolution :premises (nst143.0 st143))

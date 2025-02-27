@@ -1,0 +1,5 @@
+(assume nst44.0 (not (= (or (= (f5 c_1) c_0) (= (f5 c_1) c_1)) (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1))))))
+(assume t42 (= (= (f5 c_1) c_0) (= c_0 (f5 c_1))))
+(assume t43 (= (= (f5 c_1) c_1) (= c_1 (f5 c_1))))
+(step st44 (cl (= (or (= (f5 c_1) c_0) (= (f5 c_1) c_1)) (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1))))) :rule cong :premises (t42 t43))
+(step t.end (cl) :rule resolution :premises (nst44.0 st44))

@@ -1,0 +1,6 @@
+(assume nst16.0 (not (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))))
+(assume nst16.1 (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))))
+(assume nst16.2 (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))
+(assume t15 (or (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))
+(step st16 (cl (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))) :rule or :premises (t15))
+(step t.end (cl) :rule resolution :premises (nst16.0 nst16.1 nst16.2 st16))

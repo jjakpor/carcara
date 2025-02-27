@@ -1,0 +1,6 @@
+(assume nst295.0 (not (= x25 x26)))
+(assume t290 (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))))
+(assume t294 (or (= x25 x26) (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))))))
+(step t294' (cl (= x25 x26) (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))))) :rule or :premises (t294))
+(step st295 (cl (= x25 x26)) :rule resolution :premises (t294' t290))
+(step t.end (cl) :rule resolution :premises (nst295.0 st295))

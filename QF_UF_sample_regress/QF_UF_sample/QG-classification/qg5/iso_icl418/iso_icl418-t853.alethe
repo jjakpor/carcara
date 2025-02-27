@@ -1,0 +1,5 @@
+(assume nst853.0 (not (= (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4))) false)))
+(assume t842 (= (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4))) (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3)))))
+(assume t852 (= (= (op (op e4 e3) (op e4 e3)) (op (op e3 e4) (op e4 e3))) false))
+(step st853 (cl (= (= (op (op e4 e3) (op e4 e3)) (op e4 (op e3 e4))) false)) :rule trans :premises (t842 t852))
+(step t.end (cl) :rule resolution :premises (nst853.0 st853))

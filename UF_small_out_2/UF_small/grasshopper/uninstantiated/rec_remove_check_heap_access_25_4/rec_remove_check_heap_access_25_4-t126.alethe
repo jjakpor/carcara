@@ -1,0 +1,5 @@
+(assume nst126.0 (not (= (and (or (= null$0 null$0) (not (Btwn$0 next$0 n1_2$0 null$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 n1_2$0 null$0)))) (and true (not (in$0 null$0 (lseg_domain$0 next$0 n1_2$0 null$0)))))))
+(assume t124 (= (or (= null$0 null$0) (not (Btwn$0 next$0 n1_2$0 null$0 null$0))) true))
+(assume t125 (= (not (in$0 null$0 (lseg_domain$0 next$0 n1_2$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 n1_2$0 null$0)))))
+(step st126 (cl (= (and (or (= null$0 null$0) (not (Btwn$0 next$0 n1_2$0 null$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 n1_2$0 null$0)))) (and true (not (in$0 null$0 (lseg_domain$0 next$0 n1_2$0 null$0)))))) :rule cong :premises (t124 t125))
+(step t.end (cl) :rule resolution :premises (nst126.0 st126))

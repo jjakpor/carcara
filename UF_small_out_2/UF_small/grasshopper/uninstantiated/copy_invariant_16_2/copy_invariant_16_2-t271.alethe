@@ -1,0 +1,4 @@
+(assume nst271.0 (not (or (not (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (not (= lst$0 sk_?e$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))))
+(assume nst271.1 (not (not (not (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))))))
+(step st271 (cl (or (not (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (not (= lst$0 sk_?e$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (not (not (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))))) :rule or_neg :args (0))
+(step t.end (cl) :rule resolution :premises (nst271.0 nst271.1 st271))

@@ -1,0 +1,4 @@
+(assume nst155.0 (not (=> (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (= (fun_app$e uu$ (lhd$ xs$)) (ldropn$ n$)))))
+(assume nst155.1 (not (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$)))))
+(step st155 (cl (=> (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (= (fun_app$e uu$ (lhd$ xs$)) (ldropn$ n$))) (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$)))) :rule implies_neg1)
+(step t.end (cl) :rule resolution :premises (nst155.0 nst155.1 st155))

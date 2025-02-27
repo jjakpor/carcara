@@ -1,0 +1,5 @@
+(assume nst46.0 (not (not (= (= FP$0 sk_?X_2$0) (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_4$0))))))
+(assume nst46.1 (not (not (= FP$0 sk_?X_2$0))))
+(assume nst46.2 (not (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_4$0))))
+(step st46 (cl (not (= (= FP$0 sk_?X_2$0) (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_4$0)))) (not (= FP$0 sk_?X_2$0)) (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_4$0))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst46.0 nst46.1 nst46.2 st46))

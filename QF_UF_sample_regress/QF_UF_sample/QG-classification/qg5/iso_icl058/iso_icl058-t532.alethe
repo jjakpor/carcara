@@ -1,0 +1,6 @@
+(assume nst532.0 (not (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false)))
+(assume t264 (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))
+(assume t531 (or (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))
+(step t531' (cl (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) :rule or :premises (t531))
+(step st532 (cl (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false)) :rule resolution :premises (t531' t264))
+(step t.end (cl) :rule resolution :premises (nst532.0 st532))

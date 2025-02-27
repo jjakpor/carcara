@@ -1,0 +1,4 @@
+(assume nst292.0 (not (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0)))))
+(assume nst292.1 (not (not (= (f6 c_0) (f5 c_0)))))
+(step st292 (cl (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (not (= (f6 c_0) (f5 c_0)))) :rule implies_neg2)
+(step t.end (cl) :rule resolution :premises (nst292.0 nst292.1 st292))

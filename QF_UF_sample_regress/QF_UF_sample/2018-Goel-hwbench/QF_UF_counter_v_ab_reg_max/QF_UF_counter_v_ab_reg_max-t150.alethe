@@ -1,0 +1,5 @@
+(assume nst150.0 (not (not (= y$45 (= y$45 true)))))
+(assume nst150.1 (not (not y$45)))
+(assume nst150.2 (not (= y$45 true)))
+(step st150 (cl (not (= y$45 (= y$45 true))) (not y$45) (= y$45 true)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst150.0 nst150.1 nst150.2 st150))

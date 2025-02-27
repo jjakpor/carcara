@@ -1,0 +1,5 @@
+(assume nst890.0 (not (= (= (op e2 e4) (op e4 e2)) (= (op (op e0 e0) (op (op e0 (op e0 e0)) e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))))
+(assume t888 (= (= (op e2 e4) (op e4 e2)) (= (op (op (op e0 (op e0 e0)) e0) (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0)))))
+(assume t889 (= (= (op (op (op e0 (op e0 e0)) e0) (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))) (= (op (op e0 e0) (op (op e0 (op e0 e0)) e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))))
+(step st890 (cl (= (= (op e2 e4) (op e4 e2)) (= (op (op e0 e0) (op (op e0 (op e0 e0)) e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))) :rule trans :premises (t888 t889))
+(step t.end (cl) :rule resolution :premises (nst890.0 st890))

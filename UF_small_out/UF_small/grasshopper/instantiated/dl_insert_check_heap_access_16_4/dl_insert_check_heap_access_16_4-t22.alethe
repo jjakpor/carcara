@@ -1,0 +1,5 @@
+(assume nst22.0 (not (= sk_?X$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0))))
+(assume a24 (= sk_?X$0 (union$0 sk_?X_3$0 sk_?X_1$0)))
+(assume t21 (= (union$0 sk_?X_3$0 sk_?X_1$0) (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0)))
+(step st22 (cl (= sk_?X$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0))) :rule trans :premises (a24 t21))
+(step t.end (cl) :rule resolution :premises (nst22.0 st22))

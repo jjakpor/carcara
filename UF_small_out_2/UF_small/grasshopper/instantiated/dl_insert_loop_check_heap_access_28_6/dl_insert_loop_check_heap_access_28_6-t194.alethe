@@ -1,0 +1,5 @@
+(assume nst194.0 (not (= (= FP$0 sk_?X_91$0) (= FP$0 (union$0 sk_?X_93$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0))))))
+(assume t187 (= FP$0 FP$0))
+(assume t193 (= sk_?X_91$0 (union$0 sk_?X_93$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0))))
+(step st194 (cl (= (= FP$0 sk_?X_91$0) (= FP$0 (union$0 sk_?X_93$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0))))) :rule cong :premises (t187 t193))
+(step t.end (cl) :rule resolution :premises (nst194.0 st194))

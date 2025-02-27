@@ -1,0 +1,8 @@
+(assume nst346.0 (not (= (in$0 (read$0 next$0 d_init$0) FP_Caller$0) false)))
+(assume nst346.1 (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0)))
+(assume t344 (or (= (in$0 (read$0 next$0 d_init$0) FP_Caller$0) false) (not (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0)))))
+(assume t345 (or (not (not (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0)))) (in$0 (read$0 next$0 d_init$0) FP_Caller$0)))
+(step t344' (cl (= (in$0 (read$0 next$0 d_init$0) FP_Caller$0) false) (not (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0)))) :rule or :premises (t344))
+(step t345' (cl (not (not (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0)))) (in$0 (read$0 next$0 d_init$0) FP_Caller$0)) :rule or :premises (t345))
+(step st346 (cl (= (in$0 (read$0 next$0 d_init$0) FP_Caller$0) false) (in$0 (read$0 next$0 d_init$0) FP_Caller$0)) :rule resolution :premises (t344' t345'))
+(step t.end (cl) :rule resolution :premises (nst346.0 nst346.1 st346))

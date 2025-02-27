@@ -1,0 +1,5 @@
+(assume nst16.0 (not (= (= e4 (op e2 e3)) (= e4 (op (op e1 e3) e3)))))
+(assume t11 (= e4 e4))
+(assume t15 (= (op e2 e3) (op (op e1 e3) e3)))
+(step st16 (cl (= (= e4 (op e2 e3)) (= e4 (op (op e1 e3) e3)))) :rule cong :premises (t11 t15))
+(step t.end (cl) :rule resolution :premises (nst16.0 st16))

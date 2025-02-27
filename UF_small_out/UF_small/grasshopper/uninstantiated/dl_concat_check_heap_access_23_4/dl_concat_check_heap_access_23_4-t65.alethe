@@ -1,0 +1,4 @@
+(assume nst65.0 (not (= Axiom_6$0 (= Axiom_6$0 true))))
+(assume t64 (= (= Axiom_6$0 true) Axiom_6$0))
+(step st65 (cl (= Axiom_6$0 (= Axiom_6$0 true))) :rule symm :premises (t64))
+(step t.end (cl) :rule resolution :premises (nst65.0 st65))

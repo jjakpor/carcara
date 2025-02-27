@@ -1,0 +1,5 @@
+(assume nst379.0 (not (= (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op e1 e1)))))
+(assume t369 (= (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op e1 e1))) (op (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))
+(assume t378 (= (op (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op e1 e1) (op e1 e1))))
+(step st379 (cl (= (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op e1 e1)))) :rule trans :premises (t369 t378))
+(step t.end (cl) :rule resolution :premises (nst379.0 st379))

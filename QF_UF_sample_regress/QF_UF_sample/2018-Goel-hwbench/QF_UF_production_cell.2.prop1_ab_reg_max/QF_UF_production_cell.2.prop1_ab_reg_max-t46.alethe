@@ -1,0 +1,7 @@
+(assume nst46.0 (not (= y$v_count y$v_done)))
+(assume t37 (or (not (= y$72 (= y$v_count y$v_done))) (not y$72) (= y$v_count y$v_done)))
+(assume t44 (= y$72 (= y$v_count y$v_done)))
+(assume t45 y$72)
+(step t37' (cl (not (= y$72 (= y$v_count y$v_done))) (not y$72) (= y$v_count y$v_done)) :rule or :premises (t37))
+(step st46 (cl (= y$v_count y$v_done)) :rule resolution :premises (t37' t44 t45))
+(step t.end (cl) :rule resolution :premises (nst46.0 st46))

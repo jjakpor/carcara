@@ -1,0 +1,5 @@
+(assume nst609.0 (not (not (= (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0))) false))))
+(assume nst609.1 (not (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0))))))
+(assume t608 (= (= (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0))) false) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0))))))
+(step st609 (cl (not (= (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0))) false)) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0))))) :rule equiv1 :premises (t608))
+(step t.end (cl) :rule resolution :premises (nst609.0 nst609.1 st609))

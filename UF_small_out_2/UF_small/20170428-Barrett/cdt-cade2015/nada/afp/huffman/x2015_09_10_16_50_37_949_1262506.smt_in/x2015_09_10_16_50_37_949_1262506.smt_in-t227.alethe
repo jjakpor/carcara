@@ -1,0 +1,5 @@
+(assume nst227.0 (not (not (= a$ d$))))
+(assume nst227.1 (not (= (fun_app$f (swapSyms$ t$ b$) c$) (ite (= a$ d$) (fun_app$f (swapSyms$ t$ b$) c$) (ite (= b$ c$) (fun_app$f (swapSyms$ t$ a$) d$) (fun_app$f (swapSyms$ (fun_app$f (swapSyms$ t$ a$) c$) b$) d$))))))
+(assume t111 (ite (= a$ d$) (= (fun_app$f (swapSyms$ t$ b$) c$) (ite (= a$ d$) (fun_app$f (swapSyms$ t$ b$) c$) (ite (= b$ c$) (fun_app$f (swapSyms$ t$ a$) d$) (fun_app$f (swapSyms$ (fun_app$f (swapSyms$ t$ a$) c$) b$) d$)))) (= (ite (= a$ d$) (fun_app$f (swapSyms$ t$ b$) c$) (ite (= b$ c$) (fun_app$f (swapSyms$ t$ a$) d$) (fun_app$f (swapSyms$ (fun_app$f (swapSyms$ t$ a$) c$) b$) d$))) (ite (= b$ c$) (fun_app$f (swapSyms$ t$ a$) d$) (fun_app$f (swapSyms$ (fun_app$f (swapSyms$ t$ a$) c$) b$) d$)))))
+(step st227 (cl (not (= a$ d$)) (= (fun_app$f (swapSyms$ t$ b$) c$) (ite (= a$ d$) (fun_app$f (swapSyms$ t$ b$) c$) (ite (= b$ c$) (fun_app$f (swapSyms$ t$ a$) d$) (fun_app$f (swapSyms$ (fun_app$f (swapSyms$ t$ a$) c$) b$) d$))))) :rule ite2 :premises (t111))
+(step t.end (cl) :rule resolution :premises (nst227.0 nst227.1 st227))

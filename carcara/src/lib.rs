@@ -51,6 +51,7 @@ use parser::{ParserError, Position};
 use core::{panic, slice};
 use std::collections::{HashMap, HashSet};
 use std::io;
+use std::ops::Sub;
 use std::time::{Duration, Instant};
 use thiserror::Error;
 
@@ -550,11 +551,11 @@ fn negation_conjuncts(clause: &[Rc<Term>], pool: &mut PrimitivePool) -> Vec<Rc<T
 Decide what to prove. An individual step or a subproof?
 */
 pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> (Vec<ProofCommand>, usize) {
+    #[derive(Debug)]
     struct Premise {
-        termified: Rc<Term>,
+        termified: Option<Rc<Term>>,
         singleton: bool, // Cases considered are single and multiple, not empty,
         
-        // For the indices, the depth will always be zero for now.
         // i is with respect to the indexing of this list of commands, i.e., the negated goal assumptions are not considered and must be added later
         assumption_index: Option<(usize, usize)>,
         premise_index: Option<(usize, usize)>
@@ -564,45 +565,99 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> (Vec<Pr
     let mut commands: Vec<ProofCommand> = Vec::new();
     let mut iter = proof.iter();
     let mut the_step: Option<&ProofCommand> = None;
+    let mut subproof_stack = Vec::new(); 
 
-    // TODO: revisit this loop and give it a subproof stack
     while let Some(command) = iter.next() {
+        if let ProofCommand::Subproof(sp) = command {
+            subproof_stack.push(sp);
+        }
+
+        if iter.is_end_step() {
+            subproof_stack.pop();
+        }
+
         if command.id() == id {
             the_step = Some(command);
             break;
         }
     }
 
+    let mut new_subproofs : Vec<Subproof> = Vec::new();
+    println!("First subproof loop");
+    for sp in &subproof_stack { 
+       
+        println!("{:?}", sp.commands.last().unwrap().id());
+        new_subproofs.push(Subproof { commands: Vec::new(), args: sp.args.clone(), context_id: sp.context_id });
+        let current_subproof = new_subproofs.last_mut().unwrap();
+        // Add assumes and second to last step
+        for command in &sp.commands {
+            if command.is_assume() {
+                current_subproof.commands.push(command.clone());
+            } else {
+                break;
+            }
+        }
+        let len = sp.commands.len();
+        
+        /* When I was doing branching on bindlike, these couldn't be added as is-we'd need an index change. i decided to discard it for now for faster uf support, though explicitly nonminimal */
+        let penult = &sp.commands[len - 2];
+        let penult_step = extract_step(Some(penult));
+        let new_penult_step = ProofStep {id: penult_step.id.clone(), clause: penult_step.clause.clone(), rule:"trust".to_string(), premises:Vec::new(), args:penult_step.args.clone(), discharge: Vec::new()};
+        
+        let ult = &sp.commands[len - 1];
+        let ult_step = extract_step(Some(ult));
+        let new_ult_step = ProofStep {id: ult_step.id.clone(), clause: ult_step.clause.clone(), rule:ult_step.rule.clone(), premises:Vec::new(), args:ult_step.args.clone(), discharge: ult_step.discharge.clone()};
+
+        current_subproof.commands.push(ProofCommand::Step(new_penult_step)); // I anticipate a problem when slicing second to last step of subproof. Naming conflict. Lowkey might just append .sliced to step id for emphasis or prepend s
+        current_subproof.commands.push(ProofCommand::Step(new_ult_step));  
+    }
+
     let sliced_index : usize;
 
+    // With either step or subproof we want to add this into our new subproof structure in case context has been added
     match the_step {
         // TODO: Add bind support (would mostly be this case I think)
         Some(ProofCommand::Step(step)) => {
 
-            let last_clause = step.clause.clone();
+            let last_clause = if subproof_stack.is_empty() {
+                step.clause.clone()
+            } else {
+                subproof_stack.first().unwrap().commands.last().unwrap().clause().to_vec() // Wait, should it be the first maybe? // Before was last
+            };
             let negation_length = negation_conjuncts(&last_clause, pool).len();
             let mut premise_map: HashMap<(usize, usize), Premise> = HashMap::new();
 
+            let mut sorted_premises = step.premises.clone();
+            sorted_premises.sort_unstable();
+
             // Construct premise map
-            for  premise in &step.premises {
-                let premise_clause = iter.get_premise(*premise).clause();
-                let termified = termify_clause(premise_clause, pool);
-                premise_map.insert(*premise, Premise {termified: termified, singleton: premise_clause.len() == 1, assumption_index: None, premise_index: None});
+            for  premise in &sorted_premises { 
+                if premise.0 == 0 {
+                    let premise_command = iter.get_premise(*premise);
+                    let premise_clause = premise_command.clause();
+                    let termified = termify_clause(premise_clause, pool);
+                    premise_map.insert(*premise, Premise {termified: Some(termified), singleton: premise_clause.len() == 1, assumption_index: None, premise_index: None});
+                    
+                } else {
+                    break;
+                }
+                
             }
 
             // Add termified assumes and update map for location of assumption
             let mut processed_premises: HashSet<(usize, usize)> = HashSet::new();
-            for premise in &step.premises {
-                if processed_premises.insert(*premise) {
-        
+            for premise in &sorted_premises {
+                if premise.0 == 0 && processed_premises.insert(*premise) {
                     let entry_opt = premise_map.get_mut(premise);
                     let entry = entry_opt.unwrap();
                     let premise_command = iter.get_premise(*premise);
-                    commands.push(ProofCommand::Assume { id: premise_command.id().to_string(), term: entry.termified.clone()});
+                    commands.push(ProofCommand::Assume { id: premise_command.id().to_string(), term: entry.termified.as_ref().unwrap().clone()});
                     entry.assumption_index = Some((0, negation_length + commands.len() - 1));
                     if entry.singleton {
                         entry.premise_index = entry.assumption_index;
                     }
+                } else {
+                    break;
                 }
             }
 
@@ -623,13 +678,87 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> (Vec<Pr
                 }
             }
 
+            // Now need to add to subproofs and add to premise map from there
+            for premise in &sorted_premises {
+                
+                if premise.0 == 0 {
+                    continue;
+                }
+                let stack_depth = premise.0 - 1; // If depth 1 then index 0 in subproof stack
+
+                if processed_premises.insert(*premise) {
+                    // Find premise id in current subproof
+                    // If it is present, make premise index its location
+                    // If it is absent, then add as trust step, and premise_index should be wherever we add this
+                    let premise_command = iter.get_premise(*premise);
+                    let premise_pos = new_subproofs[stack_depth].commands.iter().position(|c| c.id() == premise_command.id());
+                    if let Some(i) = premise_pos {
+                        let entry = Premise {termified: None, singleton: true, assumption_index: None, premise_index: Some((premise.0, i))};
+                        premise_map.insert(*premise, entry);
+                    } else {
+                        let step = ProofStep {id: premise_command.id().to_string(), clause: premise_command.clause().to_vec(), rule: "trust".to_string(), premises: Vec::new(), args: extract_step(Some(premise_command)).args.clone(), discharge: Vec::new()};
+                        // Add as trust step
+                        let len = new_subproofs[stack_depth].commands.len();
+                        new_subproofs[stack_depth].commands.insert(len - 2, ProofCommand::Step(step));
+                        let entry = Premise {termified: None, singleton: false, assumption_index: None, premise_index: Some((premise.0, new_subproofs[stack_depth].commands.len() - 3))}; // -1 then -2 because of last two steps
+                        premise_map.insert(*premise, entry);
+                    }
+                }
+            }
+            
+            // Now need to make thing to add loop
+
             let mut new_premises: Vec<(usize, usize)> = Vec::new();
             for premise in &step.premises {
                 new_premises.push(premise_map.get(premise).unwrap().premise_index.unwrap()); 
             }
              
-            let goal_step = ProofStep {id: step.id.clone(), clause: step.clause.clone(), rule: step.rule.clone(), premises: new_premises, args: step.args.clone(), discharge: Vec::new()};
-            commands.push(ProofCommand::Step(goal_step));
+            let goal_step = ProofStep {id: format!("s{}", step.id), clause: step.clause.clone(), rule: step.rule.clone(), premises: new_premises, args: step.args.clone(), discharge: Vec::new()};
+            if new_subproofs.is_empty() {
+                commands.push(ProofCommand::Step(goal_step));
+            } else {
+                let last_commands = &mut new_subproofs.last_mut().unwrap().commands;
+                let len = last_commands.len();
+                last_commands.insert(len - 2, ProofCommand::Step(goal_step));
+                
+                let mut iter = new_subproofs.into_iter().rev();
+                let mut outer = iter.next();
+                // println!("Outer: {:?}", outer.as_ref().unwrap().commands.last().unwrap().id());
+                for mut subproof in iter {
+                    // println!("Subproof {:?}\n", subproof);
+                    let len = subproof.commands.len();
+                    subproof.commands.insert(len - 2, ProofCommand::Subproof(outer.unwrap()));
+                    outer = Some(subproof);
+                }
+
+                commands.push(ProofCommand::Subproof(outer.unwrap()));
+                // println!("Outer: {:?}", outer.as_ref().unwrap().commands.last().unwrap().id());
+
+                /*
+                last_commands.insert(len - 2, ProofCommand::Step(goal_step));
+                println!("{:?}", new_subproofs.first().unwrap().commands.last().unwrap().id());
+                let mut iter = new_subproofs.into_iter().rev();
+                let mut nested = iter.next();
+            
+                for mut subproof in iter {
+                    println!("In loop {}", subproof.commands.last().unwrap().id());
+                    subproof.commands.push(ProofCommand::Subproof(nested.unwrap()));
+                    nested = Some(subproof);
+                }
+                println!("Nested: {:?}", nested.as_ref().unwrap().commands.last().unwrap().id());
+                commands.push(ProofCommand::Subproof(nested.unwrap()));
+                */
+                
+                /* 
+                new_subproofs.reverse();
+                let inner = new_subproofs.pop();
+                while let Some(sp) = &inner {
+                    if let Some(mut outer) = new_subproofs.pop() {
+                        outer.commands.push(ProofCommand::Subproof(sp.clone()));
+                    }
+                }
+                */
+            }
             sliced_index = commands.len() - 1; // Yes, this is technically the same as the subproof case but will change with our hole construction
 
 
@@ -694,28 +823,7 @@ pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
         resolution_premises.push((0, i));
     }
 
-    /* 
-    // Specifically, need to change premise indices of last step. Return mutable reference to last in sliced_step_commands? Which is not variable last, btw. Actually, maybe just index in list
-    let iter_mut = match &mut sliced_step_commands[sliced_index] {
 
-        ProofCommand::Step(s) => s.premises.iter_mut(),
-        ProofCommand::Subproof(sp) => {
-            let len = sp.commands.len();
-            let s = &mut sp.commands[len];
-            if let ProofCommand::Step(s_step) = s {
-                s_step.discharge.iter_mut()
-            }
-            else {
-                panic!();
-            }
-        }
-        _ => panic!()
-    };
-    
-    for (_, i) in iter_mut {
-        *i = *i + negation_commands.len();
-    }
-    */
     
     let mut new_proof : Proof = Proof { constant_definitions: proof.constant_definitions.clone(), commands: negation_commands};
     for c in &sliced_step_commands {
@@ -729,7 +837,7 @@ pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
         new_proof.commands.push(ProofCommand::Step(resolution_step));
 
     }
-    
+
 
 
     let proof_string = proof_to_string(pool, &problem.prelude, &new_proof, false);

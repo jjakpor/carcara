@@ -1,0 +1,5 @@
+(assume nst100.0 (not (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))))))
+(assume nst100.1 (not (or (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0))) (= lst$0 (read$0 next$0 lst$0)))))
+(assume t99 (=> (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))) (or (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0))) (= lst$0 (read$0 next$0 lst$0)))))
+(step st100 (cl (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y)))) (or (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0))) (= lst$0 (read$0 next$0 lst$0)))) :rule implies :premises (t99))
+(step t.end (cl) :rule resolution :premises (nst100.0 nst100.1 st100))

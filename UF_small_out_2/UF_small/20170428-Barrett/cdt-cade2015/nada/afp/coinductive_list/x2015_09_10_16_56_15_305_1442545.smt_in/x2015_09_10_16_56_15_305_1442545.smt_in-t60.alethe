@@ -1,0 +1,7 @@
+(assume nst60.0 (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))
+(assume t17 (or (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))) (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))))
+(assume t44 (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))
+(assume t59 (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))))
+(step t17' (cl (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))) (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))) :rule or :premises (t17))
+(step st60 (cl (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))) :rule resolution :premises (t17' t59 t44))
+(step t.end (cl) :rule resolution :premises (nst60.0 st60))

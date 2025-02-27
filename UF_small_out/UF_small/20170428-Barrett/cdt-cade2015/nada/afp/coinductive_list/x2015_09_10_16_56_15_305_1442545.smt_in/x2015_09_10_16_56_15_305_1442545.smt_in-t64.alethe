@@ -1,0 +1,6 @@
+(assume nst64.0 (not (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))))
+(assume t60 (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))
+(assume t63 (or (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))))
+(step t63' (cl (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) :rule or :premises (t63))
+(step st64 (cl (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))) :rule resolution :premises (t63' t60))
+(step t.end (cl) :rule resolution :premises (nst64.0 st64))

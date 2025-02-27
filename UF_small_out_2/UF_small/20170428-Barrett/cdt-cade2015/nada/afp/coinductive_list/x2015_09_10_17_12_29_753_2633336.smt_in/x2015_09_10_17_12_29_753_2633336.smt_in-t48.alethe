@@ -1,0 +1,3 @@
+(assume nst48.0 (not (= (or false (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$))))) (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)))))))
+(step st48 (cl (= (or false (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$))))) (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)))))) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst48.0 st48))

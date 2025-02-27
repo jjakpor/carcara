@@ -1,0 +1,3 @@
+(assume nst122.0 (not (= lNil$ lNil$)))
+(step st122 (cl (= lNil$ lNil$)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst122.0 st122))

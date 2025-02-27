@@ -1,0 +1,5 @@
+(assume nst30.0 (not (= (= sk_?X_5$0 (lseg_domain$0 next$0 lst$0 curr_2$0)) (= sk_?X_5$0 (lseg_domain$0 next$0 lst$0 lst$0)))))
+(assume t12 (= sk_?X_5$0 sk_?X_5$0))
+(assume t29 (= (lseg_domain$0 next$0 lst$0 curr_2$0) (lseg_domain$0 next$0 lst$0 lst$0)))
+(step st30 (cl (= (= sk_?X_5$0 (lseg_domain$0 next$0 lst$0 curr_2$0)) (= sk_?X_5$0 (lseg_domain$0 next$0 lst$0 lst$0)))) :rule cong :premises (t12 t29))
+(step t.end (cl) :rule resolution :premises (nst30.0 st30))

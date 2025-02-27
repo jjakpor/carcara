@@ -1,0 +1,7 @@
+(assume nst278.0 (not (= e5 (op e5 (op e5 e5)))))
+(assume nst278.1 (not (not (= e5 (op e5 e0)))))
+(assume nst278.2 (not (not (= e0 (op e5 (op e5 e0))))))
+(assume t277 (or (not (= e5 (op e5 e0))) (not (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5)))))
+(step t277' (cl (not (= e5 (op e5 e0))) (not (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5)))) :rule or :premises (t277))
+(step st278 (cl (= e5 (op e5 (op e5 e5))) (not (= e5 (op e5 e0))) (not (= e0 (op e5 (op e5 e0))))) :rule reordering :premises (t277'))
+(step t.end (cl) :rule resolution :premises (nst278.0 nst278.1 nst278.2 st278))

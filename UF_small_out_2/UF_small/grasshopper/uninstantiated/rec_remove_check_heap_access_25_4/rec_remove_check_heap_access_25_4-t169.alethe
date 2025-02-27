@@ -1,0 +1,3 @@
+(assume nst169.0 (not (= (setminus$0 Alloc_1$0 Alloc$0) (setminus$0 Alloc_1$0 Alloc$0))))
+(step st169 (cl (= (setminus$0 Alloc_1$0 Alloc$0) (setminus$0 Alloc_1$0 Alloc$0))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst169.0 st169))

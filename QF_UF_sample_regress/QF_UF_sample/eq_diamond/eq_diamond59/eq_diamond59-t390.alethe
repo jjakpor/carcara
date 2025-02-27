@@ -1,0 +1,5 @@
+(assume nst390.0 (not (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))))))
+(assume nst390.1 (not (= x16 x17)))
+(assume t389 (=> (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (= x16 x17)))
+(step st390 (cl (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17)))) (= x16 x17)) :rule implies :premises (t389))
+(step t.end (cl) :rule resolution :premises (nst390.0 nst390.1 st390))

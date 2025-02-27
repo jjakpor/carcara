@@ -1,0 +1,5 @@
+(assume nst3.0 (not (not y$a_q_error_customer_0)))
+(assume nst3.1 (not (not y$37)))
+(assume a19 (= y$a_q_error_customer_0 (not y$37)))
+(step st3 (cl (not y$a_q_error_customer_0) (not y$37)) :rule equiv1 :premises (a19))
+(step t.end (cl) :rule resolution :premises (nst3.0 nst3.1 st3))

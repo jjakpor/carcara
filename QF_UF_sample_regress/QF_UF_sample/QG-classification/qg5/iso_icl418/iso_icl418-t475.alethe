@@ -1,0 +1,4 @@
+(assume nst475.0 (not (not (not (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) e4)))))))
+(assume nst475.1 (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) e4))))
+(step st475 (cl (not (not (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) e4))))) (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) e4))) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nst475.0 nst475.1 st475))

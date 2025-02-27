@@ -1,0 +1,6 @@
+(assume nst846.0 (not (not (and (= x14 z14) (= z14 x15)))))
+(assume t2 (or (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (not (and (= x14 z14) (= z14 x15)))))
+(assume t845 (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15)))))
+(step t2' (cl (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (not (and (= x14 z14) (= z14 x15)))) :rule or :premises (t2))
+(step st846 (cl (not (and (= x14 z14) (= z14 x15)))) :rule resolution :premises (t2' t845))
+(step t.end (cl) :rule resolution :premises (nst846.0 st846))

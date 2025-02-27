@@ -1,0 +1,5 @@
+(assume nst942.0 (not (= (and (= (op e1 e4) (op e4 e1)) (= (op e1 e3) (op e3 e1)) (= (op e1 e2) (op e2 e1)) (= (op e1 e0) (op e0 e1)) (= (op e1 e1) (op e1 e1))) (and (= (op e1 e4) (op e4 e1)) (= (op e1 e3) (op e3 e1)) (= (op e1 e2) (op e2 e1)) (= (op e0 e1) (op e1 e0))))))
+(assume t940 (= (and (= (op e1 e4) (op e4 e1)) (= (op e1 e3) (op e3 e1)) (= (op e1 e2) (op e2 e1)) (= (op e1 e0) (op e0 e1)) (= (op e1 e1) (op e1 e1))) (and (= (op e1 e4) (op e4 e1)) (= (op e1 e3) (op e3 e1)) (= (op e1 e2) (op e2 e1)) (= (op e0 e1) (op e1 e0)) true)))
+(assume t941 (= (and (= (op e1 e4) (op e4 e1)) (= (op e1 e3) (op e3 e1)) (= (op e1 e2) (op e2 e1)) (= (op e0 e1) (op e1 e0)) true) (and (= (op e1 e4) (op e4 e1)) (= (op e1 e3) (op e3 e1)) (= (op e1 e2) (op e2 e1)) (= (op e0 e1) (op e1 e0)))))
+(step st942 (cl (= (and (= (op e1 e4) (op e4 e1)) (= (op e1 e3) (op e3 e1)) (= (op e1 e2) (op e2 e1)) (= (op e1 e0) (op e0 e1)) (= (op e1 e1) (op e1 e1))) (and (= (op e1 e4) (op e4 e1)) (= (op e1 e3) (op e3 e1)) (= (op e1 e2) (op e2 e1)) (= (op e0 e1) (op e1 e0))))) :rule trans :premises (t940 t941))
+(step t.end (cl) :rule resolution :premises (nst942.0 st942))

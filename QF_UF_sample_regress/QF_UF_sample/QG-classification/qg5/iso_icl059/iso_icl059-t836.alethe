@@ -1,0 +1,4 @@
+(assume nst836.0 (not (= (not (= (op e3 e1) (op e4 e1))) (not (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0)))))))
+(assume t835 (= (= (op e3 e1) (op e4 e1)) (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0)))))
+(step st836 (cl (= (not (= (op e3 e1) (op e4 e1))) (not (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0)))))) :rule cong :premises (t835))
+(step t.end (cl) :rule resolution :premises (nst836.0 st836))

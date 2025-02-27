@@ -1,0 +1,3 @@
+(assume nst317.0 (not (= e2 e2)))
+(step st317 (cl (= e2 e2)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst317.0 st317))

@@ -1,0 +1,7 @@
+(assume nst118.0 (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)))
+(assume t76 (or (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0) (and (or (= prv_2$0 sk_?e$0) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0))) (not (in$0 sk_?e$0 (dlseg_domain$0 next$0 prev$0 prv_2$0 prv_3$0 prv_2$0 b_1$0)))) (not (or (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0) (and (or (= prv_2$0 sk_?e$0) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0))) (not (in$0 sk_?e$0 (dlseg_domain$0 next$0 prev$0 prv_2$0 prv_3$0 prv_2$0 b_1$0))))))))
+(assume t79 (not (and (or (= prv_2$0 sk_?e$0) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0))) (not (in$0 sk_?e$0 (dlseg_domain$0 next$0 prev$0 prv_2$0 prv_3$0 prv_2$0 b_1$0))))))
+(assume t117 (or (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0) (and (or (= prv_2$0 sk_?e$0) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0))) (not (in$0 sk_?e$0 (dlseg_domain$0 next$0 prev$0 prv_2$0 prv_3$0 prv_2$0 b_1$0))))))
+(step t76' (cl (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0) (and (or (= prv_2$0 sk_?e$0) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0))) (not (in$0 sk_?e$0 (dlseg_domain$0 next$0 prev$0 prv_2$0 prv_3$0 prv_2$0 b_1$0)))) (not (or (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0) (and (or (= prv_2$0 sk_?e$0) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0))) (not (in$0 sk_?e$0 (dlseg_domain$0 next$0 prev$0 prv_2$0 prv_3$0 prv_2$0 b_1$0))))))) :rule or :premises (t76))
+(step st118 (cl (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) :rule resolution :premises (t76' t79 t117))
+(step t.end (cl) :rule resolution :premises (nst118.0 st118))

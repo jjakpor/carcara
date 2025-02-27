@@ -1,0 +1,5 @@
+(assume nst52.0 (not (= (and (= null$0 end1$0) (= null$0 start1$0)) (and (= (read$0 next$0 end1$0) end1$0) (= (read$0 next$0 end1$0) start1$0)))))
+(assume t37 (= (= null$0 start1$0) (= (read$0 next$0 end1$0) start1$0)))
+(assume t51 (= (= null$0 end1$0) (= (read$0 next$0 end1$0) end1$0)))
+(step st52 (cl (= (and (= null$0 end1$0) (= null$0 start1$0)) (and (= (read$0 next$0 end1$0) end1$0) (= (read$0 next$0 end1$0) start1$0)))) :rule cong :premises (t51 t37))
+(step t.end (cl) :rule resolution :premises (nst52.0 st52))

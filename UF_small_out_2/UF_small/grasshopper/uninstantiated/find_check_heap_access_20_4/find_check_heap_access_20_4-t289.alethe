@@ -1,0 +1,6 @@
+(assume nst289.0 (not (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))))
+(assume t95 (or (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0)))) (not (and (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))) (not (in$0 x$0 (setenum$0 root_x$0))) (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))))))
+(assume t288 (and (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))) (not (in$0 x$0 (setenum$0 root_x$0))) (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))))
+(step t95' (cl (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0)))) (not (and (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))) (not (in$0 x$0 (setenum$0 root_x$0))) (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))))) :rule or :premises (t95))
+(step st289 (cl (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))) :rule resolution :premises (t95' t288))
+(step t.end (cl) :rule resolution :premises (nst289.0 st289))

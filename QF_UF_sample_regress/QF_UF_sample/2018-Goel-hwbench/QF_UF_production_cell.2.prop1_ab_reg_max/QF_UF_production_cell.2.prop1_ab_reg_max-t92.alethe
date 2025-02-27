@@ -1,0 +1,3 @@
+(assume nst92.0 (not (= y$v_k_Table y$v_k_Table)))
+(step st92 (cl (= y$v_k_Table y$v_k_Table)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst92.0 st92))

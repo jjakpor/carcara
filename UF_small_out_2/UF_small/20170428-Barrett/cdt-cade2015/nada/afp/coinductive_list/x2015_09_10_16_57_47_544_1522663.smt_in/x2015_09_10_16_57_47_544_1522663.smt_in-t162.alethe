@@ -1,0 +1,5 @@
+(assume nst162.0 (not (not (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))))))
+(assume nst162.1 (not (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$)))))
+(assume t161 (=> (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$)))))
+(step st162 (cl (not (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$)))) (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$)))) :rule implies :premises (t161))
+(step t.end (cl) :rule resolution :premises (nst162.0 nst162.1 st162))

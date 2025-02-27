@@ -1,0 +1,4 @@
+(assume nst658.0 (not (= (not (= (op e2 e3) (op e4 e3))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))))
+(assume t657 (= (= (op e2 e3) (op e4 e3)) (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))
+(step st658 (cl (= (not (= (op e2 e3) (op e4 e3))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))) :rule cong :premises (t657))
+(step t.end (cl) :rule resolution :premises (nst658.0 st658))

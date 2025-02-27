@@ -1,0 +1,5 @@
+(assume nst21.0 (not (= (in$0 lst$0 FP$0) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))
+(assume t15 (= lst$0 lst$0))
+(assume t20 (= FP$0 (lseg_domain$0 next$0 lst$0 null$0)))
+(step st21 (cl (= (in$0 lst$0 FP$0) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))) :rule cong :premises (t15 t20))
+(step t.end (cl) :rule resolution :premises (nst21.0 st21))

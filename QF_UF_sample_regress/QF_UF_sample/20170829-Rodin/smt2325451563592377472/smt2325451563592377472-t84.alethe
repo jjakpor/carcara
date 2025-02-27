@@ -1,0 +1,5 @@
+(assume nst84.0 (not (not (not prt))))
+(assume nst84.1 (not (not (or (not car) (not clk)))))
+(assume t83 (not (and (not prt) (or (not car) (not clk)))))
+(step st84 (cl (not (not prt)) (not (or (not car) (not clk)))) :rule not_and :premises (t83))
+(step t.end (cl) :rule resolution :premises (nst84.0 nst84.1 st84))

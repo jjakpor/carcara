@@ -1,0 +1,4 @@
+(assume nst367.0 (not (=> (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))) (= x13 x14))))
+(assume t366 (and (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))) (=> (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))) (= x13 x14))))
+(step st367 (cl (=> (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))) (= x13 x14))) :rule and :premises (t366) :args (1))
+(step t.end (cl) :rule resolution :premises (nst367.0 st367))

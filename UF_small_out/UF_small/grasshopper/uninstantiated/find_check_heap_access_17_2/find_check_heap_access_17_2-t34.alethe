@@ -1,0 +1,5 @@
+(assume nst34.0 (not (or (not (not (in$0 x$0 (setenum$0 root_x$0)))) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0))))))
+(assume t33 (or (or (not (not (in$0 x$0 (setenum$0 root_x$0)))) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0)))) (or (not (not (in$0 x$0 (setenum$0 root_x$0)))) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0)))) (or (not (not (in$0 x$0 (setenum$0 root_x$0)))) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0))))))
+(step t33' (cl (or (not (not (in$0 x$0 (setenum$0 root_x$0)))) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0)))) (or (not (not (in$0 x$0 (setenum$0 root_x$0)))) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0)))) (or (not (not (in$0 x$0 (setenum$0 root_x$0)))) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0))))) :rule or :premises (t33))
+(step st34 (cl (or (not (not (in$0 x$0 (setenum$0 root_x$0)))) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0))))) :rule contraction :premises (t33'))
+(step t.end (cl) :rule resolution :premises (nst34.0 st34))

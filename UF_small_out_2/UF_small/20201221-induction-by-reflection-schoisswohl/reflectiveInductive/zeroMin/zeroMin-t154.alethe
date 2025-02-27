@@ -1,0 +1,8 @@
+(define-fun @quantifiers_skolemize_1 () nat (choice ((x nat)) (not (leq zero x))))
+(define-fun @quantifiers_skolemize_15 () nat (choice ((x0 nat)) (not (or (not (models (push_nat empty v0_nat x0) (leqR zeroR (inj_nat v0_nat)))) (models (push_nat empty v0_nat (s x0)) (leqR zeroR (inj_nat v0_nat)))))))
+(assume nst154.0 (not (= (s @quantifiers_skolemize_15) (evalV_nat (push_nat empty v0_nat (s @quantifiers_skolemize_15)) v0_nat))))
+(assume t64 (forall ((env env) (v var_nat) (x nat)) (= x (evalV_nat (push_nat env v x) v))))
+(assume t153 (or (not (forall ((env env) (v var_nat) (x nat)) (= x (evalV_nat (push_nat env v x) v)))) (= (s @quantifiers_skolemize_15) (evalV_nat (push_nat empty v0_nat (s @quantifiers_skolemize_15)) v0_nat))))
+(step t153' (cl (not (forall ((env env) (v var_nat) (x nat)) (= x (evalV_nat (push_nat env v x) v)))) (= (s @quantifiers_skolemize_15) (evalV_nat (push_nat empty v0_nat (s @quantifiers_skolemize_15)) v0_nat))) :rule or :premises (t153))
+(step st154 (cl (= (s @quantifiers_skolemize_15) (evalV_nat (push_nat empty v0_nat (s @quantifiers_skolemize_15)) v0_nat))) :rule resolution :premises (t153' t64))
+(step t.end (cl) :rule resolution :premises (nst154.0 st154))

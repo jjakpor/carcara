@@ -1,0 +1,8 @@
+(assume nst1086.0 (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))
+(assume nst1086.1 (not (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))
+(assume nst1086.2 (not (= (op e1 e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))
+(assume nst1086.3 (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))
+(assume nst1086.4 (not (= e1 (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))
+(assume t1085 (or (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) (= (op e1 e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) (= e1 (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))
+(step st1086 (cl (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) (= (op e1 e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) (= e1 (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))) :rule or :premises (t1085))
+(step t.end (cl) :rule resolution :premises (nst1086.0 nst1086.1 nst1086.2 nst1086.3 nst1086.4 st1086))

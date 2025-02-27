@@ -1,0 +1,5 @@
+(assume nst32.0 (not (not (forall ((env env) (phi form) (psi form)) (= (models env (orR phi psi)) (or (models env phi) (models env psi)))))))
+(assume nst32.1 (not (= (models empty (orR (notR (qR bR)) (rR cR))) (or (models empty (notR (qR bR))) (models empty (rR cR))))))
+(assume t31 (or (not (forall ((env env) (phi form) (psi form)) (= (models env (orR phi psi)) (or (models env phi) (models env psi))))) (= (models empty (orR (notR (qR bR)) (rR cR))) (or (models empty (notR (qR bR))) (models empty (rR cR))))))
+(step st32 (cl (not (forall ((env env) (phi form) (psi form)) (= (models env (orR phi psi)) (or (models env phi) (models env psi))))) (= (models empty (orR (notR (qR bR)) (rR cR))) (or (models empty (notR (qR bR))) (models empty (rR cR))))) :rule or :premises (t31))
+(step t.end (cl) :rule resolution :premises (nst32.0 nst32.1 st32))

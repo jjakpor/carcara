@@ -1,0 +1,5 @@
+(assume nst34.0 (not (= (and rd1 prt) (and red_MR prt))))
+(assume t5 (= prt prt))
+(assume t26 (= rd1 red_MR))
+(step st34 (cl (= (and rd1 prt) (and red_MR prt))) :rule cong :premises (t26 t5))
+(step t.end (cl) :rule resolution :premises (nst34.0 st34))

@@ -1,0 +1,5 @@
+(assume nst132.0 (not (= (or (Btwn$0 next$0 x$0 root_x$0 root_x$0) (not (lseg_set_struct$0 sk_?X_5$0 next$0 x$0 root_x$0 X$0))) (or (Btwn$0 next$0 x$0 root_x$0 root_x$0) (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))))))
+(assume t127 (= (Btwn$0 next$0 x$0 root_x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 root_x$0)))
+(assume t131 (= (not (lseg_set_struct$0 sk_?X_5$0 next$0 x$0 root_x$0 X$0)) (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))))
+(step st132 (cl (= (or (Btwn$0 next$0 x$0 root_x$0 root_x$0) (not (lseg_set_struct$0 sk_?X_5$0 next$0 x$0 root_x$0 X$0))) (or (Btwn$0 next$0 x$0 root_x$0 root_x$0) (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))))) :rule cong :premises (t127 t131))
+(step t.end (cl) :rule resolution :premises (nst132.0 st132))

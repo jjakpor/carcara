@@ -1,0 +1,6 @@
+(assume nst181.0 (not (not (or (not (Btwn$0 next$0 c_init$0 prv_5$0 (read$0 next$0 d_init$0))) (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (and (Btwn$0 next$0 c_init$0 prv_5$0 (read$0 next$0 d_init$0)) (Btwn$0 next$0 prv_5$0 prv_5$0 (read$0 next$0 d_init$0)))))))
+(assume nst181.1 (not (not (Btwn$0 next$0 c_init$0 prv_5$0 (read$0 next$0 d_init$0)))))
+(assume nst181.2 (not (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0))))
+(assume nst181.3 (not (and (Btwn$0 next$0 c_init$0 prv_5$0 (read$0 next$0 d_init$0)) (Btwn$0 next$0 prv_5$0 prv_5$0 (read$0 next$0 d_init$0)))))
+(step st181 (cl (not (or (not (Btwn$0 next$0 c_init$0 prv_5$0 (read$0 next$0 d_init$0))) (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (and (Btwn$0 next$0 c_init$0 prv_5$0 (read$0 next$0 d_init$0)) (Btwn$0 next$0 prv_5$0 prv_5$0 (read$0 next$0 d_init$0))))) (not (Btwn$0 next$0 c_init$0 prv_5$0 (read$0 next$0 d_init$0))) (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (and (Btwn$0 next$0 c_init$0 prv_5$0 (read$0 next$0 d_init$0)) (Btwn$0 next$0 prv_5$0 prv_5$0 (read$0 next$0 d_init$0)))) :rule or_pos)
+(step t.end (cl) :rule resolution :premises (nst181.0 nst181.1 nst181.2 nst181.3 st181))

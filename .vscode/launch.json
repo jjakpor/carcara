@@ -10,7 +10,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "/Users/jibianajakpor/carcara/target/debug/carcara",
-            "args": ["slice", "--small", "--from", "t462", "/Users/jibianajakpor/carcara/QF_UF_sample/SEQ/SEQ020_size2.alethe", "/Users/jibianajakpor/carcara/QF_UF_sample/SEQ/SEQ020_size2.smt2"],
+            "args": ["slice", "--small", "--from", "t2.t104", "/Users/jibianajakpor/carcara/test-proofs/QF_UF_counter_v_ab_reg_max.alethe", "/Users/jibianajakpor/carcara/test-proofs/QF_UF_counter_v_ab_reg_max.smt2"],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],

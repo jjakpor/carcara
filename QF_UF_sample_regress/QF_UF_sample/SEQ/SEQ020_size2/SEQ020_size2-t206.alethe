@@ -1,0 +1,5 @@
+(assume nst206.0 (not (= (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0))))))
+(assume t204 (= (= (f6 c_0) c_0) (= c_0 (f6 c_0))))
+(assume t205 (= (= (f6 c_0) c_1) (= c_1 (f6 c_0))))
+(step st206 (cl (= (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0))))) :rule cong :premises (t204 t205))
+(step t.end (cl) :rule resolution :premises (nst206.0 st206))

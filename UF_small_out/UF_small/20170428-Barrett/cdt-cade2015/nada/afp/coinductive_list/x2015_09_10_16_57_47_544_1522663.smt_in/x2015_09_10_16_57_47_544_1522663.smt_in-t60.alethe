@@ -1,0 +1,6 @@
+(assume nst60.0 (not (= (fun_app$h (fun_app$o (case_nat$ (lCons$ (lhd$ xs$) (ltl$ xs$))) (uvn$ (ltl$ xs$))) (suc$ n$)) (fun_app$h (uvn$ (ltl$ xs$)) n$))))
+(assume t56 (or (not (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2))))) (= (fun_app$h (fun_app$o (case_nat$ (lCons$ (lhd$ xs$) (ltl$ xs$))) (uvn$ (ltl$ xs$))) (suc$ n$)) (fun_app$h (uvn$ (ltl$ xs$)) n$))))
+(assume t59 (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)))))
+(step t56' (cl (not (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2))))) (= (fun_app$h (fun_app$o (case_nat$ (lCons$ (lhd$ xs$) (ltl$ xs$))) (uvn$ (ltl$ xs$))) (suc$ n$)) (fun_app$h (uvn$ (ltl$ xs$)) n$))) :rule or :premises (t56))
+(step st60 (cl (= (fun_app$h (fun_app$o (case_nat$ (lCons$ (lhd$ xs$) (ltl$ xs$))) (uvn$ (ltl$ xs$))) (suc$ n$)) (fun_app$h (uvn$ (ltl$ xs$)) n$))) :rule resolution :premises (t56' t59))
+(step t.end (cl) :rule resolution :premises (nst60.0 st60))

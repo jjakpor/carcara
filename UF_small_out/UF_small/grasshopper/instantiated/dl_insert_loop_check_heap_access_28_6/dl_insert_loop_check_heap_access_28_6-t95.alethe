@@ -1,0 +1,3 @@
+(assume nst95.0 (not (= (= d_init$0 (read$0 prev$0 prv_5$0)) (= d_init$0 (read$0 prev$0 prv_5$0)))))
+(step st95 (cl (= (= d_init$0 (read$0 prev$0 prv_5$0)) (= d_init$0 (read$0 prev$0 prv_5$0)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst95.0 st95))

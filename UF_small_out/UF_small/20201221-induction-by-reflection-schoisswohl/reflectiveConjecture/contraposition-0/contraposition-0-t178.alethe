@@ -1,0 +1,6 @@
+(assume nst178.0 (not (= (or (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))) (models empty (notR (notR (qR bR)))) (not (not (models empty (notR (qR bR)))))) (or (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))) (models empty (notR (notR (qR bR)))) (models empty (notR (qR bR)))))))
+(assume t175 (= (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))) (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR))))))))
+(assume t176 (= (models empty (notR (notR (qR bR)))) (models empty (notR (notR (qR bR))))))
+(assume t177 (= (not (not (models empty (notR (qR bR))))) (models empty (notR (qR bR)))))
+(step st178 (cl (= (or (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))) (models empty (notR (notR (qR bR)))) (not (not (models empty (notR (qR bR)))))) (or (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))) (models empty (notR (notR (qR bR)))) (models empty (notR (qR bR)))))) :rule cong :premises (t175 t176 t177))
+(step t.end (cl) :rule resolution :premises (nst178.0 st178))

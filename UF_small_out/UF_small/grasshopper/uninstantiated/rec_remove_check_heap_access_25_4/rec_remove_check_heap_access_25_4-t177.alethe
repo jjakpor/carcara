@@ -1,0 +1,7 @@
+(assume nst177.0 (not (= sk_?X_10$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0))))
+(assume a34 (= sk_?X_10$0 (lseg_domain$0 next$0 n1_2$0 null$0)))
+(assume t174 (or (not (= (= sk_?X_10$0 (lseg_domain$0 next$0 n1_2$0 null$0)) (= sk_?X_10$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)))) (not (= sk_?X_10$0 (lseg_domain$0 next$0 n1_2$0 null$0))) (= sk_?X_10$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0))))
+(assume t176 (= (= sk_?X_10$0 (lseg_domain$0 next$0 n1_2$0 null$0)) (= sk_?X_10$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0))))
+(step t174' (cl (not (= (= sk_?X_10$0 (lseg_domain$0 next$0 n1_2$0 null$0)) (= sk_?X_10$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)))) (not (= sk_?X_10$0 (lseg_domain$0 next$0 n1_2$0 null$0))) (= sk_?X_10$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0))) :rule or :premises (t174))
+(step st177 (cl (= sk_?X_10$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0))) :rule resolution :premises (t174' t176 a34))
+(step t.end (cl) :rule resolution :premises (nst177.0 st177))

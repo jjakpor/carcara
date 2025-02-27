@@ -1,0 +1,5 @@
+(assume nst29.0 (not (= (= (= b2 r2) (not (not (not (= b2 r2))))) false)))
+(assume t27 (= (= (= b2 r2) (not (not (not (= b2 r2))))) (= (= b2 r2) (not (= b2 r2)))))
+(assume t28 (= (= (= b2 r2) (not (= b2 r2))) false))
+(step st29 (cl (= (= (= b2 r2) (not (not (not (= b2 r2))))) false)) :rule trans :premises (t27 t28))
+(step t.end (cl) :rule resolution :premises (nst29.0 st29))

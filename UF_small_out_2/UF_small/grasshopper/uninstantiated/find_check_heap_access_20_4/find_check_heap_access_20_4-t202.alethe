@@ -1,0 +1,7 @@
+(assume nst202.0 (not (= root_x$0 x$0)))
+(assume nst202.1 (not (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))))
+(assume nst202.2 (not (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))))))
+(assume t201 (or (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0)))) (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))))
+(step t201' (cl (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0)))) (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))) :rule or :premises (t201))
+(step st202 (cl (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0)) (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))))) :rule reordering :premises (t201'))
+(step t.end (cl) :rule resolution :premises (nst202.0 nst202.1 nst202.2 st202))

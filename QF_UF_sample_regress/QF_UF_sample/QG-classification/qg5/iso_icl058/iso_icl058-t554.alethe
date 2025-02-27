@@ -1,0 +1,4 @@
+(assume nst554.0 (not (or (or (or (or (= (op e0 e3) e2) (= (op e1 e3) e2)) (= (op e2 e3) e2)) (= (op e3 e3) e2)) (= (op e4 e3) e2))))
+(assume t553 (and (or (or (or (or (= (op e3 e0) e2) (= (op e3 e1) e2)) (= (op e3 e2) e2)) (= (op e3 e3) e2)) (= (op e3 e4) e2)) (or (or (or (or (= (op e0 e3) e2) (= (op e1 e3) e2)) (= (op e2 e3) e2)) (= (op e3 e3) e2)) (= (op e4 e3) e2))))
+(step st554 (cl (or (or (or (or (= (op e0 e3) e2) (= (op e1 e3) e2)) (= (op e2 e3) e2)) (= (op e3 e3) e2)) (= (op e4 e3) e2))) :rule and :premises (t553) :args (1))
+(step t.end (cl) :rule resolution :premises (nst554.0 st554))

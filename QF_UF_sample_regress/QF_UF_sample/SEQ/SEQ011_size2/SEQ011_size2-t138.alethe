@@ -1,0 +1,3 @@
+(assume nst138.0 (not (= (= (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0)) true) (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0)))))
+(step st138 (cl (= (= (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0)) true) (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0)))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nst138.0 st138))

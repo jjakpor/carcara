@@ -1,0 +1,6 @@
+(assume nst588.0 (not (= x51 x52)))
+(assume nst588.1 (not (not (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))))))
+(assume t587 (or (not (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52)))) (= x51 x52)))
+(step t587' (cl (not (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52)))) (= x51 x52)) :rule or :premises (t587))
+(step st588 (cl (= x51 x52) (not (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))))) :rule reordering :premises (t587'))
+(step t.end (cl) :rule resolution :premises (nst588.0 nst588.1 st588))

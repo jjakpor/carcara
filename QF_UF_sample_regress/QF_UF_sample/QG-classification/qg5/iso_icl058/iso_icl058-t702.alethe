@@ -1,0 +1,4 @@
+(assume nst702.0 (not (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0))))
+(assume t701 (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))
+(step st702 (cl (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0))) :rule symm :premises (t701))
+(step t.end (cl) :rule resolution :premises (nst702.0 st702))

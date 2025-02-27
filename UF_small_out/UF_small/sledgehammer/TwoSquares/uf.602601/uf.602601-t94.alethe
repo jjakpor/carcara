@@ -1,0 +1,6 @@
+(assume nst94.0 (not (not (= (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25)))) (f3 (f15 f16 (f5 f11 f25)) f25)))))
+(assume t46 (or (not (= (= (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25)))) (f3 (f15 f16 (f5 f11 f25)) f25)) false)) (not (= (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25)))) (f3 (f15 f16 (f5 f11 f25)) f25)))))
+(assume t93 (= (= (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25)))) (f3 (f15 f16 (f5 f11 f25)) f25)) false))
+(step t46' (cl (not (= (= (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25)))) (f3 (f15 f16 (f5 f11 f25)) f25)) false)) (not (= (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25)))) (f3 (f15 f16 (f5 f11 f25)) f25)))) :rule or :premises (t46))
+(step st94 (cl (not (= (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25)))) (f3 (f15 f16 (f5 f11 f25)) f25)))) :rule resolution :premises (t46' t93))
+(step t.end (cl) :rule resolution :premises (nst94.0 st94))

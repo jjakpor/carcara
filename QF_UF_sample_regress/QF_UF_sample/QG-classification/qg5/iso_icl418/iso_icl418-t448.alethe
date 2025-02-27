@@ -1,0 +1,8 @@
+(assume nst448.0 (not (= (or (= e4 (op e0 e4)) (= e3 (op e0 e4)) (= e2 (op e0 e4)) (= e0 (op e0 e4)) (= e1 (op e0 e4))) (or (= e4 (op (op (op e4 e3) (op e4 e3)) e4)) (= e3 (op (op (op e4 e3) (op e4 e3)) e4)) (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4)) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4))))))
+(assume t78 (= (= e4 (op e0 e4)) (= e4 (op (op (op e4 e3) (op e4 e3)) e4))))
+(assume t131 (= (= e2 (op e0 e4)) (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4))))
+(assume t445 (= (= e3 (op e0 e4)) (= e3 (op (op (op e4 e3) (op e4 e3)) e4))))
+(assume t446 (= (= e0 (op e0 e4)) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4))))
+(assume t447 (= (= e1 (op e0 e4)) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4))))
+(step st448 (cl (= (or (= e4 (op e0 e4)) (= e3 (op e0 e4)) (= e2 (op e0 e4)) (= e0 (op e0 e4)) (= e1 (op e0 e4))) (or (= e4 (op (op (op e4 e3) (op e4 e3)) e4)) (= e3 (op (op (op e4 e3) (op e4 e3)) e4)) (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4)) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4))))) :rule cong :premises (t78 t445 t131 t446 t447))
+(step t.end (cl) :rule resolution :premises (nst448.0 st448))

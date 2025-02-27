@@ -1,0 +1,5 @@
+(assume nst164.0 (not (not (= (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (and (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15)))))))
+(assume nst164.1 (not (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))))
+(assume nst164.2 (not (and (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15)))))
+(step st164 (cl (not (= (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (and (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15))))) (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15)))) (and (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst164.0 nst164.1 nst164.2 st164))

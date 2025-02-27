@@ -1,0 +1,3 @@
+(assume nst6.0 (not (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) (= (p1 (f7 c_1) c_1) (not (not (p1 (f7 c_1) c_1)))))))
+(step st6 (cl (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) (= (p1 (f7 c_1) c_1) (not (not (p1 (f7 c_1) c_1)))))) :rule rare_rewrite :args ("eq-symm" (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)))
+(step t.end (cl) :rule resolution :premises (nst6.0 st6))

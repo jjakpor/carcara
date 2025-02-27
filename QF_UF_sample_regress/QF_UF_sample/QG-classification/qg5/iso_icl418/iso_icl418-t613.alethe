@@ -1,0 +1,5 @@
+(assume nst613.0 (not (= (op (op e1 e4) e1) (op (op (op e4 e3) e4) (op e4 e3)))))
+(assume t32 (= e1 (op e4 e3)))
+(assume t68 (= (op e1 e4) (op (op e4 e3) e4)))
+(step st613 (cl (= (op (op e1 e4) e1) (op (op (op e4 e3) e4) (op e4 e3)))) :rule cong :premises (t68 t32))
+(step t.end (cl) :rule resolution :premises (nst613.0 st613))

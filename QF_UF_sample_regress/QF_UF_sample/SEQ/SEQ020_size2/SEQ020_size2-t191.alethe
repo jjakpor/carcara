@@ -1,0 +1,5 @@
+(assume nst191.0 (not (not (=> (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false))))
+(assume nst191.1 (not (not (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))))))
+(assume t190 (= (=> (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false) (not (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))))))
+(step st191 (cl (not (=> (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false)) (not (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))))) :rule equiv1 :premises (t190))
+(step t.end (cl) :rule resolution :premises (nst191.0 nst191.1 st191))

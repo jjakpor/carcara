@@ -1,0 +1,5 @@
+(assume nst393.0 (not (= (not (= (op e0 e3) (op e4 e3))) (not (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e3))))))
+(assume t390 (= (not (= (op e0 e3) (op e4 e3))) (not (= (op (op (op e4 e3) (op e4 e3)) e3) (op e4 e3)))))
+(assume t392 (= (not (= (op (op (op e4 e3) (op e4 e3)) e3) (op e4 e3))) (not (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e3)))))
+(step st393 (cl (= (not (= (op e0 e3) (op e4 e3))) (not (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e3))))) :rule trans :premises (t390 t392))
+(step t.end (cl) :rule resolution :premises (nst393.0 st393))

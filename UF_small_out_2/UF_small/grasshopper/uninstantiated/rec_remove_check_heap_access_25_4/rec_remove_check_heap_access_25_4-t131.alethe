@@ -1,0 +1,5 @@
+(assume nst131.0 (not (= (or (not (= null$0 null$0)) (and (or (= null$0 null$0) (not (Btwn$0 next$0 n1_2$0 null$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 n1_2$0 null$0))))) (not (in$0 null$0 (lseg_domain$0 next$0 n1_2$0 null$0))))))
+(assume t129 (= (or (not (= null$0 null$0)) (and (or (= null$0 null$0) (not (Btwn$0 next$0 n1_2$0 null$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 n1_2$0 null$0))))) (or false (not (in$0 null$0 (lseg_domain$0 next$0 n1_2$0 null$0))))))
+(assume t130 (= (or false (not (in$0 null$0 (lseg_domain$0 next$0 n1_2$0 null$0)))) (not (in$0 null$0 (lseg_domain$0 next$0 n1_2$0 null$0)))))
+(step st131 (cl (= (or (not (= null$0 null$0)) (and (or (= null$0 null$0) (not (Btwn$0 next$0 n1_2$0 null$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 n1_2$0 null$0))))) (not (in$0 null$0 (lseg_domain$0 next$0 n1_2$0 null$0))))) :rule trans :premises (t129 t130))
+(step t.end (cl) :rule resolution :premises (nst131.0 st131))

@@ -1,0 +1,4 @@
+(assume nst586.0 (not (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52))))
+(assume t585 (and (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52))))
+(step st586 (cl (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52))) :rule and :premises (t585) :args (1))
+(step t.end (cl) :rule resolution :premises (nst586.0 st586))

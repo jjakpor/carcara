@@ -1,0 +1,6 @@
+(assume nst45.0 (not (= (models empty (orR (notR (pR aR)) (notR (qR bR)))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR)))))))
+(assume a12 (forall ((env env) (phi form) (psi form)) (= (models env (orR phi psi)) (or (models env phi) (models env psi)))))
+(assume t44 (or (not (forall ((env env) (phi form) (psi form)) (= (models env (orR phi psi)) (or (models env phi) (models env psi))))) (= (models empty (orR (notR (pR aR)) (notR (qR bR)))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR)))))))
+(step t44' (cl (not (forall ((env env) (phi form) (psi form)) (= (models env (orR phi psi)) (or (models env phi) (models env psi))))) (= (models empty (orR (notR (pR aR)) (notR (qR bR)))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR)))))) :rule or :premises (t44))
+(step st45 (cl (= (models empty (orR (notR (pR aR)) (notR (qR bR)))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR)))))) :rule resolution :premises (t44' a12))
+(step t.end (cl) :rule resolution :premises (nst45.0 st45))

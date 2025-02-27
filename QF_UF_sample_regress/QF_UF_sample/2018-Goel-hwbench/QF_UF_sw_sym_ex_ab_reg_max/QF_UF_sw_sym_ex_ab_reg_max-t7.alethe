@@ -1,0 +1,5 @@
+(assume nst7.0 (not (not y$prop)))
+(assume nst7.1 (not (not y$215)))
+(assume a10 (= y$prop (not y$215)))
+(step st7 (cl (not y$prop) (not y$215)) :rule equiv1 :premises (a10))
+(step t.end (cl) :rule resolution :premises (nst7.0 nst7.1 st7))

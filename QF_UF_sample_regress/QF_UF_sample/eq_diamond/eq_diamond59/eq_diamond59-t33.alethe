@@ -1,0 +1,3 @@
+(assume nst33.0 (not (= (not (= x10 x11)) (not (= x10 x11)))))
+(step st33 (cl (= (not (= x10 x11)) (not (= x10 x11)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst33.0 st33))

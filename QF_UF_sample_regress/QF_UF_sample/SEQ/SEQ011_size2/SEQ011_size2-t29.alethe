@@ -1,0 +1,5 @@
+(assume nst29.0 (not (not (=> (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false))))
+(assume nst29.1 (not (not (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))))))
+(assume t28 (= (=> (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false) (not (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))))))
+(step st29 (cl (not (=> (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false)) (not (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))))) :rule equiv1 :premises (t28))
+(step t.end (cl) :rule resolution :premises (nst29.0 nst29.1 st29))

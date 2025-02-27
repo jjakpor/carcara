@@ -1,0 +1,4 @@
+(assume nst276.0 (not (= (not (= (op e1 e3) (op e4 e3))) (not (= (op (op e4 e3) e3) (op e4 e3))))))
+(assume t275 (= (= (op e1 e3) (op e4 e3)) (= (op (op e4 e3) e3) (op e4 e3))))
+(step st276 (cl (= (not (= (op e1 e3) (op e4 e3))) (not (= (op (op e4 e3) e3) (op e4 e3))))) :rule cong :premises (t275))
+(step t.end (cl) :rule resolution :premises (nst276.0 st276))

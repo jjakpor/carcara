@@ -1,0 +1,7 @@
+(assume nst48.0 (not (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))))))
+(assume nst48.1 (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))
+(assume nst48.2 (not (not (= (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))))))))
+(assume t47 (or (not (= (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))) (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))
+(step t47' (cl (not (= (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))) (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) :rule or :premises (t47))
+(step st48 (cl (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))) (not (= (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))))))) :rule reordering :premises (t47'))
+(step t.end (cl) :rule resolution :premises (nst48.0 nst48.1 nst48.2 st48))

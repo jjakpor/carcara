@@ -1,0 +1,4 @@
+(assume nst300.0 (not (=> (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (= x25 x26))))
+(assume t299 (and (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (=> (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (= x25 x26))))
+(step st300 (cl (=> (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (= x25 x26))) :rule and :premises (t299) :args (1))
+(step t.end (cl) :rule resolution :premises (nst300.0 st300))

@@ -1,0 +1,5 @@
+(assume nst3.0 (not (= (= (not i2) (= r2 b2)) (= (not i2) (= b2 r2)))))
+(assume t1 (= (not i2) (not i2)))
+(assume t2 (= (= r2 b2) (= b2 r2)))
+(step st3 (cl (= (= (not i2) (= r2 b2)) (= (not i2) (= b2 r2)))) :rule cong :premises (t1 t2))
+(step t.end (cl) :rule resolution :premises (nst3.0 st3))

@@ -1,0 +1,4 @@
+(assume nst431.0 (not (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))))))
+(assume nst431.1 (not (= c_0 (f6 c_1))))
+(step st431 (cl (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1)))) (= c_0 (f6 c_1))) :rule and_pos :args (1))
+(step t.end (cl) :rule resolution :premises (nst431.0 nst431.1 st431))

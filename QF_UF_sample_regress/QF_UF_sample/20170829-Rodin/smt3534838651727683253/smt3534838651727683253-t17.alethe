@@ -1,0 +1,3 @@
+(assume nst17.0 (not (= nf0 nf0)))
+(step st17 (cl (= nf0 nf0)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst17.0 st17))

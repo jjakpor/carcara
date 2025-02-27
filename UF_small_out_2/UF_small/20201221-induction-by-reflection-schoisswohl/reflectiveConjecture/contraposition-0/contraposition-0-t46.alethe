@@ -1,0 +1,8 @@
+(assume nst46.0 (not (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (qR bR))) (not (models empty (qR bR)))))))
+(assume nst46.1 (not (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (qR bR))) (not (models empty (qR bR)))))))
+(assume t44 (or (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (qR bR))) (not (models empty (qR bR))))) (= (models empty (notR (qR bR))) (not (models empty (qR bR))))))
+(assume t45 (or (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (qR bR))) (not (models empty (qR bR))))) (not (= (models empty (notR (qR bR))) (not (models empty (qR bR)))))))
+(step t45' (cl (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (qR bR))) (not (models empty (qR bR))))) (not (= (models empty (notR (qR bR))) (not (models empty (qR bR)))))) :rule or :premises (t45))
+(step t44' (cl (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (qR bR))) (not (models empty (qR bR))))) (= (models empty (notR (qR bR))) (not (models empty (qR bR))))) :rule or :premises (t44))
+(step st46 (cl (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (qR bR))) (not (models empty (qR bR))))) (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (qR bR))) (not (models empty (qR bR)))))) :rule resolution :premises (t44' t45'))
+(step t.end (cl) :rule resolution :premises (nst46.0 nst46.1 st46))

@@ -1,0 +1,4 @@
+(assume nst145.0 (not (= Axiom_32$0 (= Axiom_32$0 true))))
+(assume t144 (= (= Axiom_32$0 true) Axiom_32$0))
+(step st145 (cl (= Axiom_32$0 (= Axiom_32$0 true))) :rule symm :premises (t144))
+(step t.end (cl) :rule resolution :premises (nst145.0 st145))

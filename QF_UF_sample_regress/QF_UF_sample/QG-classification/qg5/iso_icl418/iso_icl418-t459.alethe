@@ -1,0 +1,5 @@
+(assume nst459.0 (not (= (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)) false)))
+(assume nst459.1 (not (not (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4))))))
+(assume t458 (= (= (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)) false) (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)))))
+(step st459 (cl (= (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)) false) (not (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4))))) :rule equiv2 :premises (t458))
+(step t.end (cl) :rule resolution :premises (nst459.0 nst459.1 st459))

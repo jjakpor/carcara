@@ -1,0 +1,6 @@
+(assume nst30.0 (not (not (models empty (notR (pR aR))))))
+(assume t27 (not (or (models empty (pR aR)) (models empty (notR (pR aR))))))
+(assume t29 (or (or (models empty (pR aR)) (models empty (notR (pR aR)))) (not (models empty (notR (pR aR))))))
+(step t29' (cl (or (models empty (pR aR)) (models empty (notR (pR aR)))) (not (models empty (notR (pR aR))))) :rule or :premises (t29))
+(step st30 (cl (not (models empty (notR (pR aR))))) :rule resolution :premises (t29' t27))
+(step t.end (cl) :rule resolution :premises (nst30.0 st30))

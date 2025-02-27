@@ -1,0 +1,6 @@
+(assume nst57.0 (not (= (lseg_domain$0 next$0 lst$0 null$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))
+(assume t15 (= next$0 next$0))
+(assume t17 (= null$0 cp_2$0))
+(assume t28 (= lst$0 lst$0))
+(step st57 (cl (= (lseg_domain$0 next$0 lst$0 null$0) (lseg_domain$0 next$0 lst$0 cp_2$0))) :rule cong :premises (t15 t28 t17))
+(step t.end (cl) :rule resolution :premises (nst57.0 st57))

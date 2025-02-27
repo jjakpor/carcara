@@ -1,0 +1,5 @@
+(assume nst302.0 (not (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))))
+(assume nst302.1 (not (= x7 x8)))
+(assume t301 (=> (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (= x7 x8)))
+(step st302 (cl (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8)))) (= x7 x8)) :rule implies :premises (t301))
+(step t.end (cl) :rule resolution :premises (nst302.0 nst302.1 st302))

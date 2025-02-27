@@ -1,0 +1,5 @@
+(assume nst58.0 (not (not (= y$76 (= y$v_k_Belt y$v_k_Deposit)))))
+(assume nst58.1 (not (not y$76)))
+(assume nst58.2 (not (= y$v_k_Belt y$v_k_Deposit)))
+(step st58 (cl (not (= y$76 (= y$v_k_Belt y$v_k_Deposit))) (not y$76) (= y$v_k_Belt y$v_k_Deposit)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst58.0 nst58.1 nst58.2 st58))

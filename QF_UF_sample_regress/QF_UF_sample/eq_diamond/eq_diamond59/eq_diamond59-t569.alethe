@@ -1,0 +1,5 @@
+(assume nst569.0 (not (not (= (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34)))))))
+(assume nst569.1 (not (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))))
+(assume nst569.2 (not (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34)))))
+(step st569 (cl (not (= (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34))))) (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34)))) (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst569.0 nst569.1 nst569.2 st569))

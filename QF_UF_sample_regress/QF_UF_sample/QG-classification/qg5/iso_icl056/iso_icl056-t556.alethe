@@ -1,0 +1,5 @@
+(assume nst556.0 (not (= (= e1 (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))) false)))
+(assume t539 (= (= e1 (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))) (= e1 (op e1 (op e1 e1)))))
+(assume t555 (= (= e1 (op e1 (op e1 e1))) false))
+(step st556 (cl (= (= e1 (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))) false)) :rule trans :premises (t539 t555))
+(step t.end (cl) :rule resolution :premises (nst556.0 st556))

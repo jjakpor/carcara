@@ -1,0 +1,4 @@
+(assume nst66.0 (not (= (not (= e0 e4)) (not (= e4 e0)))))
+(assume t65 (= (= e0 e4) (= e4 e0)))
+(step st66 (cl (= (not (= e0 e4)) (not (= e4 e0)))) :rule cong :premises (t65))
+(step t.end (cl) :rule resolution :premises (nst66.0 st66))

@@ -1,0 +1,6 @@
+(assume nst39.0 (not (= (or (not (not prt)) (not car) (not clk)) (or prt (not car) (not clk)))))
+(assume t2 (= (not car) (not car)))
+(assume t37 (= (not (not prt)) prt))
+(assume t38 (= (not clk) (not clk)))
+(step st39 (cl (= (or (not (not prt)) (not car) (not clk)) (or prt (not car) (not clk)))) :rule cong :premises (t37 t2 t38))
+(step t.end (cl) :rule resolution :premises (nst39.0 st39))

@@ -1,0 +1,5 @@
+(assume nst88.0 (not (= y$v_at_press y$v_k_Press)))
+(assume t27 (= y$v_at_press y$v_at_table))
+(assume t87 (= y$v_at_table y$v_k_Press))
+(step st88 (cl (= y$v_at_press y$v_k_Press)) :rule trans :premises (t27 t87))
+(step t.end (cl) :rule resolution :premises (nst88.0 st88))

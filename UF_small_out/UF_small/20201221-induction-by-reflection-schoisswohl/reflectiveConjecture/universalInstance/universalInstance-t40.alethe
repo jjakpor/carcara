@@ -1,0 +1,5 @@
+(assume nst40.0 (not (not (= (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))))))))
+(assume nst40.1 (not (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))))))
+(assume nst40.2 (not (not (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))))
+(step st40 (cl (not (= (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))) (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (not (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))) :rule equiv_pos1)
+(step t.end (cl) :rule resolution :premises (nst40.0 nst40.1 nst40.2 st40))

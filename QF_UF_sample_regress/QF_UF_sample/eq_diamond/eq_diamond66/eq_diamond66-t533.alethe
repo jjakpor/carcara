@@ -1,0 +1,6 @@
+(assume nst533.0 (not (= x46 x47)))
+(assume nst533.1 (not (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))))))
+(assume t532 (or (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47)))) (= x46 x47)))
+(step t532' (cl (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47)))) (= x46 x47)) :rule or :premises (t532))
+(step st533 (cl (= x46 x47) (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))))) :rule reordering :premises (t532'))
+(step t.end (cl) :rule resolution :premises (nst533.0 nst533.1 st533))

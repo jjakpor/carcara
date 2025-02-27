@@ -1,0 +1,5 @@
+(assume nst274.0 (not (not (= (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (and (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25)))))))
+(assume nst274.1 (not (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))))))
+(assume nst274.2 (not (and (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25)))))
+(step st274 (cl (not (= (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (and (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25))))) (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25)))) (and (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst274.0 nst274.1 nst274.2 st274))

@@ -1,0 +1,7 @@
+(assume nst279.0 (not (not (or (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) prv_5$0)) (= prv_5$0 (read$0 next$0 d_init$0))))))
+(assume t15 (or (= prv_5$0 (read$0 next$0 d_init$0)) (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) prv_5$0)) (not (or (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) prv_5$0)) (= prv_5$0 (read$0 next$0 d_init$0))))))
+(assume t52 (not (= prv_5$0 (read$0 next$0 d_init$0))))
+(assume t278 (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) prv_5$0))
+(step t15' (cl (= prv_5$0 (read$0 next$0 d_init$0)) (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) prv_5$0)) (not (or (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) prv_5$0)) (= prv_5$0 (read$0 next$0 d_init$0))))) :rule or :premises (t15))
+(step st279 (cl (not (or (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) prv_5$0)) (= prv_5$0 (read$0 next$0 d_init$0))))) :rule resolution :premises (t15' t52 t278))
+(step t.end (cl) :rule resolution :premises (nst279.0 st279))

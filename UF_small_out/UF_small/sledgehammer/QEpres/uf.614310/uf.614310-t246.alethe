@@ -1,0 +1,7 @@
+(define-fun @quantifiers_skolemize_5 () S6 (choice ((?v2 S6)) (not (not (= (f11 (f12 f14 f15) (f11 (f12 f14 f10) (f16 (f17 f18 f19) f9))) (f11 (f12 f34 f20) ?v2))))))
+(define-fun @quantifiers_skolemize_6 () S6 (choice ((?v2 S6)) (not (not (= (f11 (f12 f14 f15) (f11 (f12 f14 f8) (f16 (f17 f18 f19) f9))) (f11 (f12 f34 f20) ?v2))))))
+(assume nst246.0 (not (not (= (not (= (= (f3 f4 (f5 (f6 f7 f8) f9)) f1) (= (f3 f4 (f5 (f6 f7 f10) f9)) f1))) (not (= (= f1 (f3 (f21 f20 f15 (f5 (f6 f7 f23) f19)) (f5 (f6 f7 f10) f9))) (= f1 (f3 (f21 f20 f15 (f5 (f6 f7 f23) f19)) (f5 (f6 f7 f8) f9)))))))))
+(assume nst246.1 (not (not (not (= (= (f3 f4 (f5 (f6 f7 f8) f9)) f1) (= (f3 f4 (f5 (f6 f7 f10) f9)) f1))))))
+(assume nst246.2 (not (not (= (= f1 (f3 (f21 f20 f15 (f5 (f6 f7 f23) f19)) (f5 (f6 f7 f10) f9))) (= f1 (f3 (f21 f20 f15 (f5 (f6 f7 f23) f19)) (f5 (f6 f7 f8) f9)))))))
+(step st246 (cl (not (= (not (= (= (f3 f4 (f5 (f6 f7 f8) f9)) f1) (= (f3 f4 (f5 (f6 f7 f10) f9)) f1))) (not (= (= f1 (f3 (f21 f20 f15 (f5 (f6 f7 f23) f19)) (f5 (f6 f7 f10) f9))) (= f1 (f3 (f21 f20 f15 (f5 (f6 f7 f23) f19)) (f5 (f6 f7 f8) f9))))))) (not (not (= (= (f3 f4 (f5 (f6 f7 f8) f9)) f1) (= (f3 f4 (f5 (f6 f7 f10) f9)) f1)))) (not (= (= f1 (f3 (f21 f20 f15 (f5 (f6 f7 f23) f19)) (f5 (f6 f7 f10) f9))) (= f1 (f3 (f21 f20 f15 (f5 (f6 f7 f23) f19)) (f5 (f6 f7 f8) f9)))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst246.0 nst246.1 nst246.2 st246))

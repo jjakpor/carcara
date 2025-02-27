@@ -1,0 +1,6 @@
+(assume nst224.0 (not (not (= x2 x3))))
+(assume t13 (or (not (= (= x2 x3) false)) (not (= x2 x3))))
+(assume t223 (= (= x2 x3) false))
+(step t13' (cl (not (= (= x2 x3) false)) (not (= x2 x3))) :rule or :premises (t13))
+(step st224 (cl (not (= x2 x3))) :rule resolution :premises (t13' t223))
+(step t.end (cl) :rule resolution :premises (nst224.0 st224))

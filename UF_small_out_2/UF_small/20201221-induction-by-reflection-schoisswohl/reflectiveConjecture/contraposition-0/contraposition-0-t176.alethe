@@ -1,0 +1,3 @@
+(assume nst176.0 (not (= (models empty (notR (notR (qR bR)))) (models empty (notR (notR (qR bR)))))))
+(step st176 (cl (= (models empty (notR (notR (qR bR)))) (models empty (notR (notR (qR bR)))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst176.0 st176))

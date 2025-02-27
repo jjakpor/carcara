@@ -1,0 +1,4 @@
+(assume nst211.0 (not (=> (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0)))))
+(assume nst211.1 (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))))
+(step st211 (cl (=> (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) :rule implies_neg1)
+(step t.end (cl) :rule resolution :premises (nst211.0 nst211.1 st211))

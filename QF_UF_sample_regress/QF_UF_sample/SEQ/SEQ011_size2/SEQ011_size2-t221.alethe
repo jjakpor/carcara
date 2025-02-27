@@ -1,0 +1,7 @@
+(assume nst221.0 (not (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0)))))
+(assume t216 (or (not (= (or (= (f5 c_0) c_0) (= (f5 c_0) c_1)) (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0))))) (not (or (= (f5 c_0) c_0) (= (f5 c_0) c_1))) (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0)))))
+(assume t219 (= (or (= (f5 c_0) c_0) (= (f5 c_0) c_1)) (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0)))))
+(assume t220 (or (= (f5 c_0) c_0) (= (f5 c_0) c_1)))
+(step t216' (cl (not (= (or (= (f5 c_0) c_0) (= (f5 c_0) c_1)) (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0))))) (not (or (= (f5 c_0) c_0) (= (f5 c_0) c_1))) (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0)))) :rule or :premises (t216))
+(step st221 (cl (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0)))) :rule resolution :premises (t216' t219 t220))
+(step t.end (cl) :rule resolution :premises (nst221.0 st221))

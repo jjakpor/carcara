@@ -1,0 +1,5 @@
+(assume nst628.0 (not (not (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))))))
+(assume nst628.1 (not (= x55 x56)))
+(assume t627 (=> (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (= x55 x56)))
+(step st628 (cl (not (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56)))) (= x55 x56)) :rule implies :premises (t627))
+(step t.end (cl) :rule resolution :premises (nst628.0 nst628.1 st628))

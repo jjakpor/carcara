@@ -1,0 +1,5 @@
+(assume nst223.0 (not (=> (and (= a$ d$) (= a$ c$)) (= c$ d$))))
+(assume t222 (or (=> (and (= a$ d$) (= a$ c$)) (= c$ d$)) (=> (and (= a$ d$) (= a$ c$)) (= c$ d$))))
+(step t222' (cl (=> (and (= a$ d$) (= a$ c$)) (= c$ d$)) (=> (and (= a$ d$) (= a$ c$)) (= c$ d$))) :rule or :premises (t222))
+(step st223 (cl (=> (and (= a$ d$) (= a$ c$)) (= c$ d$))) :rule contraction :premises (t222'))
+(step t.end (cl) :rule resolution :premises (nst223.0 st223))

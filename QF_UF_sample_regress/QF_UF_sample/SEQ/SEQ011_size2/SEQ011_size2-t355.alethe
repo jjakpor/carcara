@@ -1,0 +1,6 @@
+(assume nst355.0 (not (not (= (f6 c_1) (f5 c_1)))))
+(assume t319 (p4 c_1))
+(assume t354 (or (not (p4 c_1)) (not (= (f6 c_1) (f5 c_1)))))
+(step t354' (cl (not (p4 c_1)) (not (= (f6 c_1) (f5 c_1)))) :rule or :premises (t354))
+(step st355 (cl (not (= (f6 c_1) (f5 c_1)))) :rule resolution :premises (t354' t319))
+(step t.end (cl) :rule resolution :premises (nst355.0 st355))

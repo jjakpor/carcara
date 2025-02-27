@@ -1,0 +1,6 @@
+(assume nst158.0 (not (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$))))
+(assume a22 (forall ((?v0 A_tree$) (?v1 A$)) (fun_app$b (less_eq$ (depth$ ?v0 ?v1)) (height$ ?v0))))
+(assume t157 (or (not (forall ((?v0 A_tree$) (?v1 A$)) (fun_app$b (less_eq$ (depth$ ?v0 ?v1)) (height$ ?v0)))) (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$))))
+(step t157' (cl (not (forall ((?v0 A_tree$) (?v1 A$)) (fun_app$b (less_eq$ (depth$ ?v0 ?v1)) (height$ ?v0)))) (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$))) :rule or :premises (t157))
+(step st158 (cl (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$))) :rule resolution :premises (t157' a22))
+(step t.end (cl) :rule resolution :premises (nst158.0 st158))

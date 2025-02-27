@@ -1,0 +1,6 @@
+(assume nst676.0 (not (= (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op e0 e0))) false)))
+(assume t669 (or (= (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op e0 e0))) false) (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op e0 e0)))))
+(assume t675 (not (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op e0 e0)))))
+(step t669' (cl (= (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op e0 e0))) false) (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op e0 e0)))) :rule or :premises (t669))
+(step st676 (cl (= (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op e0 e0))) false)) :rule resolution :premises (t669' t675))
+(step t.end (cl) :rule resolution :premises (nst676.0 st676))

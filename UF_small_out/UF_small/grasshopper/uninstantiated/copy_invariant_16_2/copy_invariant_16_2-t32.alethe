@@ -1,0 +1,3 @@
+(assume nst32.0 (not (= (lseg_domain$0 next$0 lst$0 cp_2$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))
+(step st32 (cl (= (lseg_domain$0 next$0 lst$0 cp_2$0) (lseg_domain$0 next$0 lst$0 cp_2$0))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst32.0 st32))

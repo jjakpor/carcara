@@ -1,0 +1,6 @@
+(assume nst25.0 (not (= (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)) true)))
+(assume a4 (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)))
+(assume t24 (or (= (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)) true) (not (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)))))
+(step t24' (cl (= (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)) true) (not (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)))) :rule or :premises (t24))
+(step st25 (cl (= (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)) true)) :rule resolution :premises (t24' a4))
+(step t.end (cl) :rule resolution :premises (nst25.0 st25))

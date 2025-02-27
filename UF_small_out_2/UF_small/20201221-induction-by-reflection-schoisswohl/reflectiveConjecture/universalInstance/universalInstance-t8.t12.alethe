@@ -1,0 +1,5 @@
+(assume nt8.t12.0 (not (= (forall ((env env) (v var_alpha) (x alpha)) (= (evalV_alpha (push_alpha env v x) v) x)) (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v))))))
+(anchor :step t8.t12 :args ((env env) (v var_alpha) (x alpha) (:= (env env) env) (:= (v var_alpha) v) (:= (x alpha) x)))
+(step t8.t12.t0 (cl (= (= (evalV_alpha (push_alpha env v x) v) x) (= x (evalV_alpha (push_alpha env v x) v)))) :rule trust)
+(step t8.t12 (cl (= (forall ((env env) (v var_alpha) (x alpha)) (= (evalV_alpha (push_alpha env v x) v) x)) (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v))))) :rule bind)
+(step t.end (cl) :rule resolution :premises (nt8.t12.0 t8.t12))

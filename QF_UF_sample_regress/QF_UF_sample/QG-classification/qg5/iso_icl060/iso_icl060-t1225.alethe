@@ -1,0 +1,4 @@
+(assume nst1225.0 (not (=> (and (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) (= e1 (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3)))) (not (= e1 (op e3 (op (op e1 e3) e3)))))))
+(assume nst1225.1 (not (not (not (= e1 (op e3 (op (op e1 e3) e3)))))))
+(step st1225 (cl (=> (and (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) (= e1 (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3)))) (not (= e1 (op e3 (op (op e1 e3) e3))))) (not (not (= e1 (op e3 (op (op e1 e3) e3)))))) :rule implies_neg2)
+(step t.end (cl) :rule resolution :premises (nst1225.0 nst1225.1 st1225))

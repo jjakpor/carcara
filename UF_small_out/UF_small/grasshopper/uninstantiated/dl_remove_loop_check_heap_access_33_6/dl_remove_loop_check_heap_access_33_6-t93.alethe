@@ -1,0 +1,5 @@
+(assume nst93.0 (not (and (Btwn$0 next$0 c_init$0 curr_init$0 curr_init$0) (or (and (= null$0 prv_init$0) (= c_init$0 curr_init$0)) (and (= curr_init$0 (read$0 next$0 prv_init$0)) (= null$0 (read$0 prev$0 c_init$0)) (in$0 prv_init$0 sk_?X_78$0))) Axiom_39$0)))
+(assume nst93.1 (not (not (dlseg_struct$0 sk_?X_78$0 next$0 prev$0 c_init$0 null$0 curr_init$0 prv_init$0))))
+(assume t92 (or (and (Btwn$0 next$0 c_init$0 curr_init$0 curr_init$0) (or (and (= null$0 prv_init$0) (= c_init$0 curr_init$0)) (and (= curr_init$0 (read$0 next$0 prv_init$0)) (= null$0 (read$0 prev$0 c_init$0)) (in$0 prv_init$0 sk_?X_78$0))) Axiom_39$0) (not (dlseg_struct$0 sk_?X_78$0 next$0 prev$0 c_init$0 null$0 curr_init$0 prv_init$0))))
+(step st93 (cl (and (Btwn$0 next$0 c_init$0 curr_init$0 curr_init$0) (or (and (= null$0 prv_init$0) (= c_init$0 curr_init$0)) (and (= curr_init$0 (read$0 next$0 prv_init$0)) (= null$0 (read$0 prev$0 c_init$0)) (in$0 prv_init$0 sk_?X_78$0))) Axiom_39$0) (not (dlseg_struct$0 sk_?X_78$0 next$0 prev$0 c_init$0 null$0 curr_init$0 prv_init$0))) :rule or :premises (t92))
+(step t.end (cl) :rule resolution :premises (nst93.0 nst93.1 st93))

@@ -1,0 +1,5 @@
+(assume nst98.0 (not (= (= e0 (op e0 e1)) (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3)))))))
+(assume t32 (= e0 (op e3 e3)))
+(assume t97 (= (op e0 e1) (op (op e3 e3) (op (op e3 e3) (op e3 e3)))))
+(step st98 (cl (= (= e0 (op e0 e1)) (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3)))))) :rule cong :premises (t32 t97))
+(step t.end (cl) :rule resolution :premises (nst98.0 st98))

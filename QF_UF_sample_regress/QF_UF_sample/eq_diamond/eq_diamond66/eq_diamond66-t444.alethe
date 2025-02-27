@@ -1,0 +1,5 @@
+(assume nst444.0 (not (not (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))))))
+(assume nst444.1 (not (= x38 x39)))
+(assume t443 (=> (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (= x38 x39)))
+(step st444 (cl (not (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39)))) (= x38 x39)) :rule implies :premises (t443))
+(step t.end (cl) :rule resolution :premises (nst444.0 nst444.1 st444))

@@ -1,0 +1,6 @@
+(assume nst372.0 (not (= x32 x33)))
+(assume t367 (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))))
+(assume t371 (or (= x32 x33) (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))))))
+(step t371' (cl (= x32 x33) (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))))) :rule or :premises (t371))
+(step st372 (cl (= x32 x33)) :rule resolution :premises (t371' t367))
+(step t.end (cl) :rule resolution :premises (nst372.0 st372))

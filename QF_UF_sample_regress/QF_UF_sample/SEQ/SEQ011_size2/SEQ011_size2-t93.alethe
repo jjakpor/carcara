@@ -1,0 +1,5 @@
+(assume nst93.0 (not (=> (and (p4 c8) (= c8 c_1)) (p4 c_1))))
+(assume t92 (or (=> (and (p4 c8) (= c8 c_1)) (p4 c_1)) (=> (and (p4 c8) (= c8 c_1)) (p4 c_1))))
+(step t92' (cl (=> (and (p4 c8) (= c8 c_1)) (p4 c_1)) (=> (and (p4 c8) (= c8 c_1)) (p4 c_1))) :rule or :premises (t92))
+(step st93 (cl (=> (and (p4 c8) (= c8 c_1)) (p4 c_1))) :rule contraction :premises (t92'))
+(step t.end (cl) :rule resolution :premises (nst93.0 st93))

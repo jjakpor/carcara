@@ -1,0 +1,6 @@
+(assume nst504.0 (not (= x44 x45)))
+(assume t499 (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))))
+(assume t503 (or (= x44 x45) (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))))))
+(step t503' (cl (= x44 x45) (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))))) :rule or :premises (t503))
+(step st504 (cl (= x44 x45)) :rule resolution :premises (t503' t499))
+(step t.end (cl) :rule resolution :premises (nst504.0 st504))

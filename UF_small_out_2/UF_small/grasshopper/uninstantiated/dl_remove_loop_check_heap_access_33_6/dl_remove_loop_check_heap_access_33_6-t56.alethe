@@ -1,0 +1,3 @@
+(assume nst56.0 (not (= Axiom_39$0 Axiom_39$0)))
+(step st56 (cl (= Axiom_39$0 Axiom_39$0)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst56.0 st56))

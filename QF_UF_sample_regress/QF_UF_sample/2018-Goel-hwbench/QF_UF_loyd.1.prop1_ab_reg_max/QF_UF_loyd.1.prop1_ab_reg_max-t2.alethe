@@ -1,0 +1,4 @@
+(assume nst2.0 (not (not (and y$a_done y$7))))
+(assume nst2.1 (not y$a_done))
+(step st2 (cl (not (and y$a_done y$7)) y$a_done) :rule and_pos :args (0))
+(step t.end (cl) :rule resolution :premises (nst2.0 nst2.1 st2))

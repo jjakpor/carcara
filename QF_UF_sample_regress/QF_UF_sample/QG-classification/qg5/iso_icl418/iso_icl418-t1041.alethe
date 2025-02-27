@@ -1,0 +1,8 @@
+(assume nst1041.0 (not (= (op e3 e4) (op (op e4 e3) (op e4 e3)))))
+(assume nst1041.1 (not (= (op e3 e3) (op (op e4 e3) (op e4 e3)))))
+(assume nst1041.2 (not (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3)))))
+(assume nst1041.3 (not (= (op (op e4 e3) (op e4 e3)) (op e3 (op (op e4 e3) (op e4 e3))))))
+(assume nst1041.4 (not (= (op (op e4 e3) (op e4 e3)) (op e3 (op e4 e3)))))
+(assume t1040 (or (= (op e3 e4) (op (op e4 e3) (op e4 e3))) (= (op e3 e3) (op (op e4 e3) (op e4 e3))) (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3))) (= (op (op e4 e3) (op e4 e3)) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op (op e4 e3) (op e4 e3)) (op e3 (op e4 e3)))))
+(step st1041 (cl (= (op e3 e4) (op (op e4 e3) (op e4 e3))) (= (op e3 e3) (op (op e4 e3) (op e4 e3))) (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3))) (= (op (op e4 e3) (op e4 e3)) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op (op e4 e3) (op e4 e3)) (op e3 (op e4 e3)))) :rule or :premises (t1040))
+(step t.end (cl) :rule resolution :premises (nst1041.0 nst1041.1 nst1041.2 nst1041.3 nst1041.4 st1041))

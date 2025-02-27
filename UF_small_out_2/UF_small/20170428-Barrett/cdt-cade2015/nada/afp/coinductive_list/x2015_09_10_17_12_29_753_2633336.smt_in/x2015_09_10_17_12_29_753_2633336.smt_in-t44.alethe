@@ -1,0 +1,4 @@
+(assume nst44.0 (not (= (not thesis$) (= thesis$ false))))
+(assume t43 (= (= thesis$ false) (not thesis$)))
+(step st44 (cl (= (not thesis$) (= thesis$ false))) :rule symm :premises (t43))
+(step t.end (cl) :rule resolution :premises (nst44.0 st44))

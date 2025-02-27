@@ -1,0 +1,5 @@
+(assume nst420.0 (not (not (= (= e4 (op (op (op e4 e3) (op e4 e3)) e3)) false))))
+(assume nst420.1 (not (not (= e4 (op (op (op e4 e3) (op e4 e3)) e3)))))
+(assume t419 (= (= (= e4 (op (op (op e4 e3) (op e4 e3)) e3)) false) (not (= e4 (op (op (op e4 e3) (op e4 e3)) e3)))))
+(step st420 (cl (not (= (= e4 (op (op (op e4 e3) (op e4 e3)) e3)) false)) (not (= e4 (op (op (op e4 e3) (op e4 e3)) e3)))) :rule equiv1 :premises (t419))
+(step t.end (cl) :rule resolution :premises (nst420.0 nst420.1 st420))

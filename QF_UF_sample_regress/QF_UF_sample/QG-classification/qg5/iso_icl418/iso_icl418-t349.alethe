@@ -1,0 +1,3 @@
+(assume nst349.0 (not (= (op (op (op e4 e3) (op e4 e3)) e3) (op (op (op e4 e3) (op e4 e3)) e3))))
+(step st349 (cl (= (op (op (op e4 e3) (op e4 e3)) e3) (op (op (op e4 e3) (op e4 e3)) e3))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst349.0 st349))

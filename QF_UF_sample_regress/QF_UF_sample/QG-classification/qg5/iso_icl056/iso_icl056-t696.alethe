@@ -1,0 +1,5 @@
+(assume nst696.0 (not (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))) false)))
+(assume nst696.1 (not (not (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1)))))))))
+(assume t695 (= (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))) false) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))))))
+(step st696 (cl (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))) false) (not (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1)))))))) :rule equiv2 :premises (t695))
+(step t.end (cl) :rule resolution :premises (nst696.0 nst696.1 st696))

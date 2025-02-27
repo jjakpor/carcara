@@ -1,0 +1,6 @@
+(assume nst828.0 (not (not (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3))))))
+(assume t806 (or (not (= (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3))) false)) (not (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3))))))
+(assume t827 (= (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3))) false))
+(step t806' (cl (not (= (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3))) false)) (not (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3))))) :rule or :premises (t806))
+(step st828 (cl (not (= (op e3 (op e3 e4)) (op (op e4 e3) (op e4 e3))))) :rule resolution :premises (t806' t827))
+(step t.end (cl) :rule resolution :premises (nst828.0 st828))

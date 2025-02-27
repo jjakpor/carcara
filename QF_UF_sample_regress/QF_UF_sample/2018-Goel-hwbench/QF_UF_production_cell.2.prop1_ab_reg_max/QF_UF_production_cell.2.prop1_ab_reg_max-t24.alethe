@@ -1,0 +1,5 @@
+(assume nst24.0 (not (= (= y$n0s8 y$v_at_table) (= y$v_at_press y$v_at_table))))
+(assume t22 (= y$n0s8 y$v_at_press))
+(assume t23 (= y$v_at_table y$v_at_table))
+(step st24 (cl (= (= y$n0s8 y$v_at_table) (= y$v_at_press y$v_at_table))) :rule cong :premises (t22 t23))
+(step t.end (cl) :rule resolution :premises (nst24.0 st24))

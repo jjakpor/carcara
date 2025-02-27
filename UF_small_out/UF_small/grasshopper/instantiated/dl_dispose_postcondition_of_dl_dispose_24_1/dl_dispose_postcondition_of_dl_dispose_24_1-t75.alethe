@@ -1,0 +1,5 @@
+(assume nst75.0 (not (not (or (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0) (and (or (= prv_2$0 sk_?e$0) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0))) (not (in$0 sk_?e$0 (dlseg_domain$0 next$0 prev$0 prv_2$0 prv_3$0 prv_2$0 b_1$0))))))))
+(assume nst75.1 (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)))
+(assume nst75.2 (not (and (or (= prv_2$0 sk_?e$0) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0))) (not (in$0 sk_?e$0 (dlseg_domain$0 next$0 prev$0 prv_2$0 prv_3$0 prv_2$0 b_1$0))))))
+(step st75 (cl (not (or (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0) (and (or (= prv_2$0 sk_?e$0) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0))) (not (in$0 sk_?e$0 (dlseg_domain$0 next$0 prev$0 prv_2$0 prv_3$0 prv_2$0 b_1$0)))))) (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0) (and (or (= prv_2$0 sk_?e$0) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0))) (not (in$0 sk_?e$0 (dlseg_domain$0 next$0 prev$0 prv_2$0 prv_3$0 prv_2$0 b_1$0))))) :rule or_pos)
+(step t.end (cl) :rule resolution :premises (nst75.0 nst75.1 nst75.2 st75))

@@ -1,0 +1,5 @@
+(assume nst26.0 (not (not (= (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (and (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1)))))))
+(assume nst26.1 (not (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))))
+(assume nst26.2 (not (and (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1)))))
+(step st26 (cl (not (= (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (and (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1))))) (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (and (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst26.0 nst26.1 nst26.2 st26))

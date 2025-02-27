@@ -1,0 +1,5 @@
+(assume nst544.0 (not (not (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))))))
+(assume nst544.1 (not (= x30 x31)))
+(assume t543 (=> (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (= x30 x31)))
+(step st544 (cl (not (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31)))) (= x30 x31)) :rule implies :premises (t543))
+(step t.end (cl) :rule resolution :premises (nst544.0 nst544.1 st544))

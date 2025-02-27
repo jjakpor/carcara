@@ -1,0 +1,5 @@
+(assume nst145.0 (not (= (and (or (= null$0 null$0) (not (Btwn$0 next$0 cp_2$0 null$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 cp_2$0 null$0)))) (and true (not (in$0 null$0 (lseg_domain$0 next$0 cp_2$0 null$0)))))))
+(assume t143 (= (or (= null$0 null$0) (not (Btwn$0 next$0 cp_2$0 null$0 null$0))) true))
+(assume t144 (= (not (in$0 null$0 (lseg_domain$0 next$0 cp_2$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 cp_2$0 null$0)))))
+(step st145 (cl (= (and (or (= null$0 null$0) (not (Btwn$0 next$0 cp_2$0 null$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 cp_2$0 null$0)))) (and true (not (in$0 null$0 (lseg_domain$0 next$0 cp_2$0 null$0)))))) :rule cong :premises (t143 t144))
+(step t.end (cl) :rule resolution :premises (nst145.0 st145))

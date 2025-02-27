@@ -1,0 +1,7 @@
+(assume nst48.0 (not (= sk_FP$0 (union$0 sk_?X_3$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))
+(assume a26 (= sk_?X_1$0 (union$0 sk_?X_3$0 sk_?X_2$0)))
+(assume t44 (or (not (= (= sk_?X_1$0 (union$0 sk_?X_3$0 sk_?X_2$0)) (= sk_FP$0 (union$0 sk_?X_3$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))) (not (= sk_?X_1$0 (union$0 sk_?X_3$0 sk_?X_2$0))) (= sk_FP$0 (union$0 sk_?X_3$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))
+(assume t47 (= (= sk_?X_1$0 (union$0 sk_?X_3$0 sk_?X_2$0)) (= sk_FP$0 (union$0 sk_?X_3$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))
+(step t44' (cl (not (= (= sk_?X_1$0 (union$0 sk_?X_3$0 sk_?X_2$0)) (= sk_FP$0 (union$0 sk_?X_3$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))) (not (= sk_?X_1$0 (union$0 sk_?X_3$0 sk_?X_2$0))) (= sk_FP$0 (union$0 sk_?X_3$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) :rule or :premises (t44))
+(step st48 (cl (= sk_FP$0 (union$0 sk_?X_3$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) :rule resolution :premises (t44' t47 a26))
+(step t.end (cl) :rule resolution :premises (nst48.0 st48))

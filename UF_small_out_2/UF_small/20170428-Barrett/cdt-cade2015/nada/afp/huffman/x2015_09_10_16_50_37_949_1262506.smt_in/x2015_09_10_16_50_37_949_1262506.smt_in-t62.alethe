@@ -1,0 +1,3 @@
+(assume nst62.0 (not (= (swapFourSyms$ t$ a$ b$ c$ d$) (swapFourSyms$ t$ a$ b$ c$ d$))))
+(step st62 (cl (= (swapFourSyms$ t$ a$ b$ c$ d$) (swapFourSyms$ t$ a$ b$ c$ d$))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst62.0 st62))

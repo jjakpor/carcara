@@ -1,0 +1,7 @@
+(assume nst89.0 (not (or (not (p4 c_1)) (not (= (f6 c_1) (f5 c_1))))))
+(assume t83 (or (not (= (or (not (p4 c_1)) (not (= (f5 c_1) (f6 c_1)))) (or (not (p4 c_1)) (not (= (f6 c_1) (f5 c_1)))))) (not (or (not (p4 c_1)) (not (= (f5 c_1) (f6 c_1))))) (or (not (p4 c_1)) (not (= (f6 c_1) (f5 c_1))))))
+(assume t87 (= (or (not (p4 c_1)) (not (= (f5 c_1) (f6 c_1)))) (or (not (p4 c_1)) (not (= (f6 c_1) (f5 c_1))))))
+(assume t88 (or (not (p4 c_1)) (not (= (f5 c_1) (f6 c_1)))))
+(step t83' (cl (not (= (or (not (p4 c_1)) (not (= (f5 c_1) (f6 c_1)))) (or (not (p4 c_1)) (not (= (f6 c_1) (f5 c_1)))))) (not (or (not (p4 c_1)) (not (= (f5 c_1) (f6 c_1))))) (or (not (p4 c_1)) (not (= (f6 c_1) (f5 c_1))))) :rule or :premises (t83))
+(step st89 (cl (or (not (p4 c_1)) (not (= (f6 c_1) (f5 c_1))))) :rule resolution :premises (t83' t87 t88))
+(step t.end (cl) :rule resolution :premises (nst89.0 st89))

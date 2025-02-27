@@ -1,0 +1,3 @@
+(assume nst40.0 (not (= e4 e4)))
+(step st40 (cl (= e4 e4)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst40.0 st40))

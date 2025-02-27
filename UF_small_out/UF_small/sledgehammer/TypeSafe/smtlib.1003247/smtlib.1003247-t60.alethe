@@ -1,0 +1,5 @@
+(assume nst60.0 (not (= (exists ((?v0 S51)) (and (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0)) (= f1 (f75 f65 ?v0 f76)))) (not (forall ((?v0 S51)) (or (not (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0))) (not (= f1 (f75 f65 ?v0 f76)))))))))
+(assume t57 (= (exists ((?v0 S51)) (and (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0)) (= f1 (f75 f65 ?v0 f76)))) (not (forall ((?v0 S51)) (not (and (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0)) (= f1 (f75 f65 ?v0 f76))))))))
+(assume t59 (= (not (forall ((?v0 S51)) (not (and (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0)) (= f1 (f75 f65 ?v0 f76)))))) (not (forall ((?v0 S51)) (or (not (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0))) (not (= f1 (f75 f65 ?v0 f76))))))))
+(step st60 (cl (= (exists ((?v0 S51)) (and (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0)) (= f1 (f75 f65 ?v0 f76)))) (not (forall ((?v0 S51)) (or (not (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0))) (not (= f1 (f75 f65 ?v0 f76)))))))) :rule trans :premises (t57 t59))
+(step t.end (cl) :rule resolution :premises (nst60.0 st60))

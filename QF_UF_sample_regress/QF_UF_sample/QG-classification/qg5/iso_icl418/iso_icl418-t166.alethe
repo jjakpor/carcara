@@ -1,0 +1,5 @@
+(assume nst166.0 (not (not (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))) false))))
+(assume nst166.1 (not (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))))))
+(assume t165 (= (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))) false) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))))))
+(step st166 (cl (not (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))) false)) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))))) :rule equiv1 :premises (t165))
+(step t.end (cl) :rule resolution :premises (nst166.0 nst166.1 st166))

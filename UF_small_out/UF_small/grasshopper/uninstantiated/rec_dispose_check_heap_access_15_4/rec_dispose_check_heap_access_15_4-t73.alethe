@@ -1,0 +1,6 @@
+(assume nst73.0 (not (Btwn$0 next$0 lst$0 null$0 null$0)))
+(assume t70 (or (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0))))
+(assume t72 (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0))
+(step t70' (cl (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0))) :rule or :premises (t70))
+(step st73 (cl (Btwn$0 next$0 lst$0 null$0 null$0)) :rule resolution :premises (t70' t72))
+(step t.end (cl) :rule resolution :premises (nst73.0 st73))

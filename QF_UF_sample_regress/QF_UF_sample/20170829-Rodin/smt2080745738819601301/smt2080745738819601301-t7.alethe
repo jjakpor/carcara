@@ -1,0 +1,3 @@
+(assume t4 (and (not rd1) (not rd2)))
+(assume t6 (not (and (not rd1) (not rd2))))
+(step st7 (cl) :rule resolution :premises (t4 t6))

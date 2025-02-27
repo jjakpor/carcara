@@ -1,0 +1,4 @@
+(assume nst40.0 (not (= (not (= (read$0 next$0 end1$0) start1$0)) (not (= start1$0 (read$0 next$0 end1$0))))))
+(assume t39 (= (= (read$0 next$0 end1$0) start1$0) (= start1$0 (read$0 next$0 end1$0))))
+(step st40 (cl (= (not (= (read$0 next$0 end1$0) start1$0)) (not (= start1$0 (read$0 next$0 end1$0))))) :rule cong :premises (t39))
+(step t.end (cl) :rule resolution :premises (nst40.0 st40))

@@ -1,0 +1,5 @@
+(assume nst231.0 (not (not (= (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit)) (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0))))))
+(assume nst231.1 (not (not (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit)))))
+(assume nst231.2 (not (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0))))
+(step st231 (cl (not (= (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit)) (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0)))) (not (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit))) (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst231.0 nst231.1 nst231.2 st231))

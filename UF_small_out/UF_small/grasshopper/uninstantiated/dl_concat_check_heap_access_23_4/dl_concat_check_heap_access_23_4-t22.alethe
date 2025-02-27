@@ -1,0 +1,3 @@
+(assume nst22.0 (not (= Axiom_6$0 Axiom_6$0)))
+(step st22 (cl (= Axiom_6$0 Axiom_6$0)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst22.0 st22))

@@ -1,0 +1,4 @@
+(assume nst728.0 (not (= (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) e3)) e3)))
+(assume t619 (= e3 (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) e3))))
+(step st728 (cl (= (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) e3)) e3)) :rule symm :premises (t619))
+(step t.end (cl) :rule resolution :premises (nst728.0 st728))

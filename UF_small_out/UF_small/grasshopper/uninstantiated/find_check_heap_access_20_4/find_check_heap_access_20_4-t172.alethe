@@ -1,0 +1,7 @@
+(assume nst172.0 (not (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_22$0))))
+(assume t166 (or (not (= (= FP$0 sk_?X_20$0) (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_22$0)))) (not (= FP$0 sk_?X_20$0)) (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_22$0))))
+(assume t170 (= (= FP$0 sk_?X_20$0) (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_22$0))))
+(assume t171 (= FP$0 sk_?X_20$0))
+(step t166' (cl (not (= (= FP$0 sk_?X_20$0) (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_22$0)))) (not (= FP$0 sk_?X_20$0)) (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_22$0))) :rule or :premises (t166))
+(step st172 (cl (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_22$0))) :rule resolution :premises (t166' t170 t171))
+(step t.end (cl) :rule resolution :premises (nst172.0 st172))

@@ -1,0 +1,7 @@
+(assume nst96.0 (not (= Axiom_39$0 true)))
+(assume t88 (or (not (= Axiom_39$0 (= Axiom_39$0 true))) (not Axiom_39$0) (= Axiom_39$0 true)))
+(assume t90 (= Axiom_39$0 (= Axiom_39$0 true)))
+(assume t95 Axiom_39$0)
+(step t88' (cl (not (= Axiom_39$0 (= Axiom_39$0 true))) (not Axiom_39$0) (= Axiom_39$0 true)) :rule or :premises (t88))
+(step st96 (cl (= Axiom_39$0 true)) :rule resolution :premises (t88' t90 t95))
+(step t.end (cl) :rule resolution :premises (nst96.0 st96))

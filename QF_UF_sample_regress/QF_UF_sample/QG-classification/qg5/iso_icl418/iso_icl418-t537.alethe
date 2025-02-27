@@ -1,0 +1,4 @@
+(assume nst537.0 (not (or (or (or (or (= (op e0 e4) e1) (= (op e1 e4) e1)) (= (op e2 e4) e1)) (= (op e3 e4) e1)) (= (op e4 e4) e1))))
+(assume t536 (and (or (or (or (or (= (op e4 e0) e1) (= (op e4 e1) e1)) (= (op e4 e2) e1)) (= (op e4 e3) e1)) (= (op e4 e4) e1)) (or (or (or (or (= (op e0 e4) e1) (= (op e1 e4) e1)) (= (op e2 e4) e1)) (= (op e3 e4) e1)) (= (op e4 e4) e1))))
+(step st537 (cl (or (or (or (or (= (op e0 e4) e1) (= (op e1 e4) e1)) (= (op e2 e4) e1)) (= (op e3 e4) e1)) (= (op e4 e4) e1))) :rule and :premises (t536) :args (1))
+(step t.end (cl) :rule resolution :premises (nst537.0 st537))

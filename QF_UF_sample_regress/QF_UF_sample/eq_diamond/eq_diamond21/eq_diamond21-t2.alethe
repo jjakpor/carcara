@@ -1,0 +1,4 @@
+(assume nst2.0 (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4)))))
+(assume nst2.1 (not (not (and (= x3 z3) (= z3 x4)))))
+(step st2 (cl (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (not (and (= x3 z3) (= z3 x4)))) :rule or_neg :args (1))
+(step t.end (cl) :rule resolution :premises (nst2.0 nst2.1 st2))

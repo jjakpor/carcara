@@ -1,0 +1,4 @@
+(assume nst231.0 (not (not (not (not (= x0 x20))))))
+(assume nst231.1 (not (= x0 x20)))
+(step st231 (cl (not (not (not (= x0 x20)))) (= x0 x20)) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nst231.0 nst231.1 st231))

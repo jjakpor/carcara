@@ -1,0 +1,5 @@
+(assume nst61.0 (not (= (= null$0 (read$0 next$0 d_init$0)) (= (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)))))
+(assume t41 (= null$0 (read$0 next$0 d_init$0)))
+(assume t60 (= (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)))
+(step st61 (cl (= (= null$0 (read$0 next$0 d_init$0)) (= (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)))) :rule cong :premises (t41 t60))
+(step t.end (cl) :rule resolution :premises (nst61.0 st61))

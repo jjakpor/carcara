@@ -1,0 +1,5 @@
+(assume nst476.0 (not (= (or (or (or (or (= (op e0 e4) e4) (= (op e1 e4) e4)) (= (op e2 e4) e4)) (= (op e3 e4) e4)) (= (op e4 e4) e4)) (or (= e4 (op e4 e4)) (= e4 (op e3 e4)) (= e4 (op e2 e4)) (= e4 (op e0 e4)) (= e4 (op e1 e4))))))
+(assume t470 (= (or (or (or (or (= (op e0 e4) e4) (= (op e1 e4) e4)) (= (op e2 e4) e4)) (= (op e3 e4) e4)) (= (op e4 e4) e4)) (or (= (op e4 e4) e4) (= (op e3 e4) e4) (= (op e2 e4) e4) (= (op e0 e4) e4) (= (op e1 e4) e4))))
+(assume t475 (= (or (= (op e4 e4) e4) (= (op e3 e4) e4) (= (op e2 e4) e4) (= (op e0 e4) e4) (= (op e1 e4) e4)) (or (= e4 (op e4 e4)) (= e4 (op e3 e4)) (= e4 (op e2 e4)) (= e4 (op e0 e4)) (= e4 (op e1 e4)))))
+(step st476 (cl (= (or (or (or (or (= (op e0 e4) e4) (= (op e1 e4) e4)) (= (op e2 e4) e4)) (= (op e3 e4) e4)) (= (op e4 e4) e4)) (or (= e4 (op e4 e4)) (= e4 (op e3 e4)) (= e4 (op e2 e4)) (= e4 (op e0 e4)) (= e4 (op e1 e4))))) :rule trans :premises (t470 t475))
+(step t.end (cl) :rule resolution :premises (nst476.0 st476))

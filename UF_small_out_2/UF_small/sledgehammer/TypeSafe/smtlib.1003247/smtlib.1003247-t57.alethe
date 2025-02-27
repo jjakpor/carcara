@@ -1,0 +1,3 @@
+(assume nst57.0 (not (= (exists ((?v0 S51)) (and (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0)) (= f1 (f75 f65 ?v0 f76)))) (not (forall ((?v0 S51)) (not (and (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0)) (= f1 (f75 f65 ?v0 f76)))))))))
+(step st57 (cl (= (exists ((?v0 S51)) (and (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0)) (= f1 (f75 f65 ?v0 f76)))) (not (forall ((?v0 S51)) (not (and (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0)) (= f1 (f75 f65 ?v0 f76)))))))) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst57.0 st57))

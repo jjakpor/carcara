@@ -1,0 +1,5 @@
+(assume nst0.0 (not (not (= (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8) false))))
+(assume nst0.1 (not (not (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8))))
+(assume nst0.2 (not false))
+(step st0 (cl (not (= (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8) false)) (not (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8)) false) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst0.0 nst0.1 nst0.2 st0))

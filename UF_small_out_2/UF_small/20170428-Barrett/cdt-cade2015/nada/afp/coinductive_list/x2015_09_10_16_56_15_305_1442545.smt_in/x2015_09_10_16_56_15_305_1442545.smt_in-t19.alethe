@@ -1,0 +1,3 @@
+(assume nst19.0 (not (= (not (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))))
+(step st19 (cl (= (not (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst19.0 st19))

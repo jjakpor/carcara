@@ -1,0 +1,6 @@
+(assume nst156.0 (not (= x12 x13)))
+(assume nst156.1 (not (not (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))))))
+(assume t155 (or (not (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13)))) (= x12 x13)))
+(step t155' (cl (not (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13)))) (= x12 x13)) :rule or :premises (t155))
+(step st156 (cl (= x12 x13) (not (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))))) :rule reordering :premises (t155'))
+(step t.end (cl) :rule resolution :premises (nst156.0 nst156.1 st156))

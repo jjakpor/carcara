@@ -1,0 +1,5 @@
+(assume nst829.0 (not (not (= (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (and (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (=> (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (= x74 x75)))))))
+(assume nst829.1 (not (not (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))))))
+(assume nst829.2 (not (and (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (=> (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (= x74 x75)))))
+(step st829 (cl (not (= (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (and (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (=> (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (= x74 x75))))) (not (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75)))) (and (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (=> (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (= x74 x75)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst829.0 nst829.1 nst829.2 st829))

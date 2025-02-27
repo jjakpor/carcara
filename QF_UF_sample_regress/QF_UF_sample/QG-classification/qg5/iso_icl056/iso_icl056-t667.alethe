@@ -1,0 +1,5 @@
+(assume nst667.0 (not (= (= e1 (op e1 (op (op e1 e1) (op e1 (op e1 e1))))) false)))
+(assume t250 (= (= e1 (op (op e1 e1) (op e1 (op e1 e1)))) false))
+(assume t666 (= (= e1 (op e1 (op (op e1 e1) (op e1 (op e1 e1))))) (= e1 (op (op e1 e1) (op e1 (op e1 e1))))))
+(step st667 (cl (= (= e1 (op e1 (op (op e1 e1) (op e1 (op e1 e1))))) false)) :rule trans :premises (t666 t250))
+(step t.end (cl) :rule resolution :premises (nst667.0 st667))

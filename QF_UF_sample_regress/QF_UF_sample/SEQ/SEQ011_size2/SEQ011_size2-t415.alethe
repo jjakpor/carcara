@@ -1,0 +1,4 @@
+(assume nst415.0 (not (or (not (p1 (f5 c_1) c_1)) (not (= c_0 (f5 c_1))) (not (= c_0 (f7 c_1))) (not (not (p1 (f7 c_1) c_1))))))
+(assume nst415.1 (not (not (not (= c_0 (f7 c_1))))))
+(step st415 (cl (or (not (p1 (f5 c_1) c_1)) (not (= c_0 (f5 c_1))) (not (= c_0 (f7 c_1))) (not (not (p1 (f7 c_1) c_1)))) (not (not (= c_0 (f7 c_1))))) :rule or_neg :args (2))
+(step t.end (cl) :rule resolution :premises (nst415.0 nst415.1 st415))

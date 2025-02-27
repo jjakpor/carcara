@@ -1,0 +1,5 @@
+(assume nst168.0 (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))))
+(assume nst168.1 (not (not (= e3 (op e3 e0)))))
+(assume nst168.2 (not (not (= e0 (op e3 (op e3 e0))))))
+(step st168 (cl (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (not (= e3 (op e3 e0))) (not (= e0 (op e3 (op e3 e0))))) :rule and_neg)
+(step t.end (cl) :rule resolution :premises (nst168.0 nst168.1 nst168.2 st168))

@@ -1,0 +1,5 @@
+(assume nst7.0 (not (= f1 (f3 f4 f5 f6 f7 (f8 f9)))))
+(assume t1 (= f1 (f3 f4 f5 f6 f7 f10)))
+(assume t6 (= (f3 f4 f5 f6 f7 f10) (f3 f4 f5 f6 f7 (f8 f9))))
+(step st7 (cl (= f1 (f3 f4 f5 f6 f7 (f8 f9)))) :rule trans :premises (t1 t6))
+(step t.end (cl) :rule resolution :premises (nst7.0 st7))

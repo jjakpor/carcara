@@ -1,0 +1,5 @@
+(assume nst70.0 (not (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))))
+(assume nst70.1 (not (= x9 x10)))
+(assume t69 (=> (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (= x9 x10)))
+(step st70 (cl (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10)))) (= x9 x10)) :rule implies :premises (t69))
+(step t.end (cl) :rule resolution :premises (nst70.0 nst70.1 st70))

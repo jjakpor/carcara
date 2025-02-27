@@ -1,0 +1,5 @@
+(assume nst863.0 (not (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 (op e1 e1)) (op e1 e1))) (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1))))))))
+(assume t296 (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))
+(assume t862 (= (op (op e1 (op e1 e1)) (op e1 e1)) (op e1 (op (op e1 e1) (op e1 (op e1 e1))))))
+(step st863 (cl (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 (op e1 e1)) (op e1 e1))) (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1))))))) :rule cong :premises (t296 t862))
+(step t.end (cl) :rule resolution :premises (nst863.0 st863))

@@ -1,0 +1,5 @@
+(assume nst1010.0 (not (= (= e1 (op e1 e2)) (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0))))))
+(assume t58 (= e1 (op e0 (op e0 e0))))
+(assume t87 (= (op e1 e2) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0))))
+(step st1010 (cl (= (= e1 (op e1 e2)) (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0))))) :rule cong :premises (t58 t87))
+(step t.end (cl) :rule resolution :premises (nst1010.0 st1010))

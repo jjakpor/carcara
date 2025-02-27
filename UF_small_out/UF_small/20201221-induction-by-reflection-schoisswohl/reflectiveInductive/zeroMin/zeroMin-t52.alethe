@@ -1,0 +1,7 @@
+(define-fun @quantifiers_skolemize_1 () nat (choice ((x nat)) (not (leq zero x))))
+(define-fun @quantifiers_skolemize_15 () nat (choice ((x0 nat)) (not (or (not (models (push_nat empty v0_nat x0) (leqR zeroR (inj_nat v0_nat)))) (models (push_nat empty v0_nat (s x0)) (leqR zeroR (inj_nat v0_nat)))))))
+(assume nt52.0 (not (= (forall ((env env)) (= (eval_nat env zeroR) zero)) (forall ((env env)) (= zero (eval_nat env zeroR))))))
+(anchor :step t52 :args ((env env) (:= (env env) env)))
+(step t52.t0 (cl (= (= (eval_nat env zeroR) zero) (= zero (eval_nat env zeroR)))) :rule trust)
+(step t52 (cl (= (forall ((env env)) (= (eval_nat env zeroR) zero)) (forall ((env env)) (= zero (eval_nat env zeroR))))) :rule bind)
+(step t.end (cl) :rule resolution :premises (nt52.0 t52))
