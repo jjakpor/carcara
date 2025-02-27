@@ -1,0 +1,3 @@
+(assume nst188.0 (not (= sk_?X_93$0 sk_?X_93$0)))
+(step st188 (cl (= sk_?X_93$0 sk_?X_93$0)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst188.0 st188))

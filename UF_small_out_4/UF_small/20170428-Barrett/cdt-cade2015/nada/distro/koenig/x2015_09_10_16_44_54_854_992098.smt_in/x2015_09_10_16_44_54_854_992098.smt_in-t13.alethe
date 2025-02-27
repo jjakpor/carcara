@@ -1,0 +1,6 @@
+(assume a10 (fun_app$a (properPath$ as$) tr$))
+(assume t1 (or (not (fun_app$a (properPath$ as$) tr$)) (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4)))))) (not (= (fun_app$a (properPath$ as$) tr$) (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4))))))))))
+(assume t9 (= (fun_app$a (properPath$ as$) tr$) (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4))))))))
+(assume t12 (not (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4))))))))
+(step t1' (cl (not (fun_app$a (properPath$ as$) tr$)) (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4)))))) (not (= (fun_app$a (properPath$ as$) tr$) (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4))))))))) :rule or :premises (t1))
+(step st13 (cl) :rule resolution :premises (t1' t9 t12 a10))

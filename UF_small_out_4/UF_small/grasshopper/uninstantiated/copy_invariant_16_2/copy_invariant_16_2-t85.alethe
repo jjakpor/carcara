@@ -1,0 +1,6 @@
+(assume nst85.0 (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)))
+(assume t81 (or (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0))))
+(assume t84 (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0))
+(step t81' (cl (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0))) :rule or :premises (t81))
+(step st85 (cl (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) :rule resolution :premises (t81' t84))
+(step t.end (cl) :rule resolution :premises (nst85.0 st85))

@@ -1,0 +1,4 @@
+(assume nst7.0 (not (or (not (= (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))) (not (models empty (orR (notR (pR aR)) (notR (qR bR))))))) (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))) (not (not (models empty (orR (notR (pR aR)) (notR (qR bR)))))))))
+(assume nst7.1 (not (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))))))
+(step st7 (cl (or (not (= (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))) (not (models empty (orR (notR (pR aR)) (notR (qR bR))))))) (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))) (not (not (models empty (orR (notR (pR aR)) (notR (qR bR))))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))))) :rule or_neg :args (1))
+(step t.end (cl) :rule resolution :premises (nst7.0 nst7.1 st7))

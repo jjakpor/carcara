@@ -1,0 +1,5 @@
+(assume nst51.0 (not (not (= (forall ((?v0 S3)) (= (f5 f9 ?v0) ?v0)) (forall ((?v0 S3)) (= ?v0 (f5 f9 ?v0)))))))
+(assume nst51.1 (not (not (forall ((?v0 S3)) (= (f5 f9 ?v0) ?v0)))))
+(assume nst51.2 (not (forall ((?v0 S3)) (= ?v0 (f5 f9 ?v0)))))
+(step st51 (cl (not (= (forall ((?v0 S3)) (= (f5 f9 ?v0) ?v0)) (forall ((?v0 S3)) (= ?v0 (f5 f9 ?v0))))) (not (forall ((?v0 S3)) (= (f5 f9 ?v0) ?v0))) (forall ((?v0 S3)) (= ?v0 (f5 f9 ?v0)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst51.0 nst51.1 nst51.2 st51))

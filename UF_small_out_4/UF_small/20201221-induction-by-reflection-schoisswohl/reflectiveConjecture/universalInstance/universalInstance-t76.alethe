@@ -1,0 +1,3 @@
+(assume nst76.0 (not (or (not (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v)))) (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha)))))
+(step st76 (cl (or (not (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v)))) (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha)))) :rule forall_inst :args (empty v0_alpha (eval_alpha empty aR)))
+(step t.end (cl) :rule resolution :premises (nst76.0 st76))

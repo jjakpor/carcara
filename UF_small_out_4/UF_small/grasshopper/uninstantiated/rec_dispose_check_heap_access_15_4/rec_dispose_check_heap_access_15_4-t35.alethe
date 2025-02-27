@@ -1,0 +1,3 @@
+(assume nst35.0 (not (= (not true) false)))
+(step st35 (cl (= (not true) false)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst35.0 st35))

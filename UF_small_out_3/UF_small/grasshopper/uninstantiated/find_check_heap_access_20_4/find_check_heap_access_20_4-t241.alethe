@@ -1,0 +1,5 @@
+(assume nst241.0 (not (= (in$0 root_x$0 (lseg_set_X$0 next$0 n_5$0 root_x$0)) (in$0 root_x$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0)))))
+(assume t71 (= root_x$0 root_x$0))
+(assume t118 (= (lseg_set_X$0 next$0 n_5$0 root_x$0) (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0)))
+(step st241 (cl (= (in$0 root_x$0 (lseg_set_X$0 next$0 n_5$0 root_x$0)) (in$0 root_x$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0)))) :rule cong :premises (t71 t118))
+(step t.end (cl) :rule resolution :premises (nst241.0 st241))

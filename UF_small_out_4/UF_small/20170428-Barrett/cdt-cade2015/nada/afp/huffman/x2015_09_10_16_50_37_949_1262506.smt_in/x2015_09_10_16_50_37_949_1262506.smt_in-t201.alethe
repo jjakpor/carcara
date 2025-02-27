@@ -1,0 +1,6 @@
+(assume nst201.0 (not (or (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$)))))
+(assume t195 (or (not (forall ((?v0 A_tree$) (?v1 A$)) (or (not (consistent$ ?v0)) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1))))) (or (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$)))))
+(assume t200 (forall ((?v0 A_tree$) (?v1 A$)) (or (not (consistent$ ?v0)) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1)))))
+(step t195' (cl (not (forall ((?v0 A_tree$) (?v1 A$)) (or (not (consistent$ ?v0)) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1))))) (or (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$)))) :rule or :premises (t195))
+(step st201 (cl (or (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$)))) :rule resolution :premises (t195' t200))
+(step t.end (cl) :rule resolution :premises (nst201.0 st201))

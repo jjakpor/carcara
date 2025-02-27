@@ -1,0 +1,5 @@
+(assume nst161.0 (not (= (= f1 (f3 (f15 f16 f25) (f5 f9 (f5 f10 (f5 f11 f12))))) (= (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25)))) (f3 (f15 f16 f25) (f5 f9 (f5 f10 (f5 f11 f25))))))))
+(assume t85 (= f1 (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25))))))
+(assume t160 (= (f3 (f15 f16 f25) (f5 f9 (f5 f10 (f5 f11 f12)))) (f3 (f15 f16 f25) (f5 f9 (f5 f10 (f5 f11 f25))))))
+(step st161 (cl (= (= f1 (f3 (f15 f16 f25) (f5 f9 (f5 f10 (f5 f11 f12))))) (= (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25)))) (f3 (f15 f16 f25) (f5 f9 (f5 f10 (f5 f11 f25))))))) :rule cong :premises (t85 t160))
+(step t.end (cl) :rule resolution :premises (nst161.0 st161))

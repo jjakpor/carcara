@@ -1,0 +1,4 @@
+(assume nst47.0 (not (not (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)))))
+(assume nst47.1 (not (Btwn$0 next$0 lst$0 lst$0 null$0)))
+(step st47 (cl (not (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0))) (Btwn$0 next$0 lst$0 lst$0 null$0)) :rule and_pos :args (0))
+(step t.end (cl) :rule resolution :premises (nst47.0 nst47.1 st47))

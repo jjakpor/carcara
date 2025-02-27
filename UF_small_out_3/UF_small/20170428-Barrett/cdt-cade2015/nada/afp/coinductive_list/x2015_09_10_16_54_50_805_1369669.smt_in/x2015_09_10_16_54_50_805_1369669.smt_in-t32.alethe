@@ -1,0 +1,8 @@
+(define-fun @quantifiers_skolemize_10 () A_list$ (choice ((?v3 A_list$)) (not (or (not (member$c ?v3 (collect$a top$b))) (not (= xs$ (fun_app$g llist_of$ ?v3)))))))
+(assume nst32.0 (not (member$ xs$ (image$ llist_of$ (collect$a top$b)))))
+(assume a9 (lfinite$ xs$))
+(assume t25 (or (not (lfinite$ xs$)) (member$ xs$ (image$ llist_of$ (collect$a top$b))) (not (= (lfinite$ xs$) (member$ xs$ (image$ llist_of$ (collect$a top$b)))))))
+(assume t31 (= (lfinite$ xs$) (member$ xs$ (image$ llist_of$ (collect$a top$b)))))
+(step t25' (cl (not (lfinite$ xs$)) (member$ xs$ (image$ llist_of$ (collect$a top$b))) (not (= (lfinite$ xs$) (member$ xs$ (image$ llist_of$ (collect$a top$b)))))) :rule or :premises (t25))
+(step st32 (cl (member$ xs$ (image$ llist_of$ (collect$a top$b)))) :rule resolution :premises (t25' a9 t31))
+(step t.end (cl) :rule resolution :premises (nst32.0 st32))

@@ -1,0 +1,4 @@
+(assume nst125.0 (not (= X_27$0 sk_?X_14$0)))
+(assume a27 (= sk_?X_14$0 X_27$0))
+(step st125 (cl (= X_27$0 sk_?X_14$0)) :rule symm :premises (a27))
+(step t.end (cl) :rule resolution :premises (nst125.0 st125))

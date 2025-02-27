@@ -1,0 +1,6 @@
+(assume nst40.0 (not (= (f3 f5 f176) (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22)))))
+(assume t28 (or (not (forall ((?v0 S4) (?v1 S6)) (= (f3 f5 f176) (f6 (f7 (f8 f9 ?v0) (f15 f175 ?v1)) (f177 ?v0 ?v1))))) (= (f3 f5 f176) (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22)))))
+(assume t39 (forall ((?v0 S4) (?v1 S6)) (= (f3 f5 f176) (f6 (f7 (f8 f9 ?v0) (f15 f175 ?v1)) (f177 ?v0 ?v1)))))
+(step t28' (cl (not (forall ((?v0 S4) (?v1 S6)) (= (f3 f5 f176) (f6 (f7 (f8 f9 ?v0) (f15 f175 ?v1)) (f177 ?v0 ?v1))))) (= (f3 f5 f176) (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22)))) :rule or :premises (t28))
+(step st40 (cl (= (f3 f5 f176) (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22)))) :rule resolution :premises (t28' t39))
+(step t.end (cl) :rule resolution :premises (nst40.0 st40))

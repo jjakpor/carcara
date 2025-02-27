@@ -1,0 +1,7 @@
+(assume nst36.0 (not (forall ((?v0 S7)) (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 ?v0))))))
+(assume a27 (forall ((?v0 S7)) (= (f3 f5 (f9 f10 ?v0)) f1)))
+(assume t32 (or (not (= (forall ((?v0 S7)) (= (f3 f5 (f9 f10 ?v0)) f1)) (forall ((?v0 S7)) (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 ?v0)))))) (not (forall ((?v0 S7)) (= (f3 f5 (f9 f10 ?v0)) f1))) (forall ((?v0 S7)) (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 ?v0))))))
+(assume t35 (= (forall ((?v0 S7)) (= (f3 f5 (f9 f10 ?v0)) f1)) (forall ((?v0 S7)) (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 ?v0))))))
+(step t32' (cl (not (= (forall ((?v0 S7)) (= (f3 f5 (f9 f10 ?v0)) f1)) (forall ((?v0 S7)) (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 ?v0)))))) (not (forall ((?v0 S7)) (= (f3 f5 (f9 f10 ?v0)) f1))) (forall ((?v0 S7)) (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 ?v0))))) :rule or :premises (t32))
+(step st36 (cl (forall ((?v0 S7)) (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 ?v0))))) :rule resolution :premises (t32' t35 a27))
+(step t.end (cl) :rule resolution :premises (nst36.0 st36))

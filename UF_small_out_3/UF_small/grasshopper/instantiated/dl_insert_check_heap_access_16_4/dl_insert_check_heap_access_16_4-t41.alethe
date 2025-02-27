@@ -1,0 +1,5 @@
+(assume nst41.0 (not (not (forall ((BOUND_VARIABLE_631 Loc)) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631))))))
+(assume nst41.1 (not (in$0 elt$0 (setenum$0 elt$0))))
+(assume t40 (or (not (forall ((BOUND_VARIABLE_631 Loc)) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631)))) (in$0 elt$0 (setenum$0 elt$0))))
+(step st41 (cl (not (forall ((BOUND_VARIABLE_631 Loc)) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631)))) (in$0 elt$0 (setenum$0 elt$0))) :rule or :premises (t40))
+(step t.end (cl) :rule resolution :premises (nst41.0 nst41.1 st41))

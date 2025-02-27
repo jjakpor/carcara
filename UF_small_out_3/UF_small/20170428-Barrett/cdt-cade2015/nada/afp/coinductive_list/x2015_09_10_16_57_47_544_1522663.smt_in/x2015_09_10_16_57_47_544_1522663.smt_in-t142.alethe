@@ -1,0 +1,3 @@
+(assume nst142.0 (not (or (not (forall ((?v0 A_llist$)) (or (fun_app$q lnull$d ?v0) (= ?v0 (lCons$ (lhd$ ?v0) (ltl$ ?v0)))))) (or (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$)))))))
+(step st142 (cl (or (not (forall ((?v0 A_llist$)) (or (fun_app$q lnull$d ?v0) (= ?v0 (lCons$ (lhd$ ?v0) (ltl$ ?v0)))))) (or (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$)))))) :rule forall_inst :args (xs$))
+(step t.end (cl) :rule resolution :premises (nst142.0 st142))

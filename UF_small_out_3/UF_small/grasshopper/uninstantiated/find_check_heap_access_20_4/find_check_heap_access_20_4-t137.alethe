@@ -1,0 +1,5 @@
+(assume nst137.0 (not (not (= (= sk_?X_27$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0)) (= sk_?X_27$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))))))
+(assume nst137.1 (not (not (= sk_?X_27$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0)))))
+(assume nst137.2 (not (= sk_?X_27$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))))
+(step st137 (cl (not (= (= sk_?X_27$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0)) (= sk_?X_27$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)))) (not (= sk_?X_27$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0))) (= sk_?X_27$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst137.0 nst137.1 nst137.2 st137))

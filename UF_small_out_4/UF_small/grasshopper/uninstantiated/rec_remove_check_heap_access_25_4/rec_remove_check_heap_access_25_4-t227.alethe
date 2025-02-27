@@ -1,0 +1,6 @@
+(assume nst227.0 (not (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0)))))
+(assume t52 (or (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))))
+(assume t226 (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))
+(step t52' (cl (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))) :rule or :premises (t52))
+(step st227 (cl (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0)))) :rule resolution :premises (t52' t226))
+(step t.end (cl) :rule resolution :premises (nst227.0 st227))

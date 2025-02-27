@@ -1,0 +1,3 @@
+(assume nst10.0 (not (= next$0 next$0)))
+(step st10 (cl (= next$0 next$0)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst10.0 st10))

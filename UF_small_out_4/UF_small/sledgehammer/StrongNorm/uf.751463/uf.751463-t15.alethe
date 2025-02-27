@@ -1,0 +1,3 @@
+(assume nst15.0 (not (or (not (forall ((?v0 S5) (?v2 S9) (?v3 S10)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0)))) (= (f180 (f181 (f182 f183 f184) f185) f186) (f189 (f17 (f18 (f19 f20 f23) f27) (f180 (f181 (f182 f183 f184) f185) f186)) f27)))))
+(step st15 (cl (or (not (forall ((?v0 S5) (?v2 S9) (?v3 S10)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0)))) (= (f180 (f181 (f182 f183 f184) f185) f186) (f189 (f17 (f18 (f19 f20 f23) f27) (f180 (f181 (f182 f183 f184) f185) f186)) f27)))) :rule forall_inst :args (f27 f23 (f180 (f181 (f182 f183 f184) f185) f186)))
+(step t.end (cl) :rule resolution :premises (nst15.0 st15))

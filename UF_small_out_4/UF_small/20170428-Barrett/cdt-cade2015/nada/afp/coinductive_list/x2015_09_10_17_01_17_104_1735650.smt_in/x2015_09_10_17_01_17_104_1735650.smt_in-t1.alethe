@@ -1,0 +1,3 @@
+(assume nst1.0 (not (= (not (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$))))) (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$))))))
+(step st1 (cl (= (not (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$))))) (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$))))) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst1.0 st1))

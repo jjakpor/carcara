@@ -1,0 +1,6 @@
+(assume nst85.0 (not (or (not (= lst$0 (read$0 next$0 lst$0))) (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0))))
+(assume t81 (or (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (= ?x (read$0 ?f ?x))) (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y)))) (or (not (= lst$0 (read$0 next$0 lst$0))) (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0))))
+(assume t84 (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (= ?x (read$0 ?f ?x))) (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y))))
+(step t81' (cl (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (= ?x (read$0 ?f ?x))) (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y)))) (or (not (= lst$0 (read$0 next$0 lst$0))) (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0))) :rule or :premises (t81))
+(step st85 (cl (or (not (= lst$0 (read$0 next$0 lst$0))) (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0))) :rule resolution :premises (t81' t84))
+(step t.end (cl) :rule resolution :premises (nst85.0 st85))

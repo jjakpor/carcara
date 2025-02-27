@@ -1,0 +1,7 @@
+(assume nst30.0 (not (not (models empty (orR (notR (qR bR)) (rR cR))))))
+(assume nst30.1 (not (or (models empty (notR (qR bR))) (models empty (rR cR)))))
+(assume nst30.2 (not (not (= (models empty (orR (notR (qR bR)) (rR cR))) (or (models empty (notR (qR bR))) (models empty (rR cR)))))))
+(assume t29 (or (not (= (models empty (orR (notR (qR bR)) (rR cR))) (or (models empty (notR (qR bR))) (models empty (rR cR))))) (not (models empty (orR (notR (qR bR)) (rR cR)))) (or (models empty (notR (qR bR))) (models empty (rR cR)))))
+(step t29' (cl (not (= (models empty (orR (notR (qR bR)) (rR cR))) (or (models empty (notR (qR bR))) (models empty (rR cR))))) (not (models empty (orR (notR (qR bR)) (rR cR)))) (or (models empty (notR (qR bR))) (models empty (rR cR)))) :rule or :premises (t29))
+(step st30 (cl (not (models empty (orR (notR (qR bR)) (rR cR)))) (or (models empty (notR (qR bR))) (models empty (rR cR))) (not (= (models empty (orR (notR (qR bR)) (rR cR))) (or (models empty (notR (qR bR))) (models empty (rR cR)))))) :rule reordering :premises (t29'))
+(step t.end (cl) :rule resolution :premises (nst30.0 nst30.1 nst30.2 st30))

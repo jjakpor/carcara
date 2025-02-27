@@ -1,0 +1,3 @@
+(assume nst362.0 (not (= Alloc$0 Alloc$0)))
+(step st362 (cl (= Alloc$0 Alloc$0)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst362.0 st362))

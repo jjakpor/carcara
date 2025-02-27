@@ -1,0 +1,7 @@
+(assume nst23.0 (not (models empty (orR (pR aR) (notR (pR aR))))))
+(assume nst23.1 (not (not (or (models empty (pR aR)) (models empty (notR (pR aR)))))))
+(assume nst23.2 (not (not (= (models empty (orR (pR aR) (notR (pR aR)))) (or (models empty (pR aR)) (models empty (notR (pR aR))))))))
+(assume t22 (or (not (= (models empty (orR (pR aR) (notR (pR aR)))) (or (models empty (pR aR)) (models empty (notR (pR aR)))))) (models empty (orR (pR aR) (notR (pR aR)))) (not (or (models empty (pR aR)) (models empty (notR (pR aR)))))))
+(step t22' (cl (not (= (models empty (orR (pR aR) (notR (pR aR)))) (or (models empty (pR aR)) (models empty (notR (pR aR)))))) (models empty (orR (pR aR) (notR (pR aR)))) (not (or (models empty (pR aR)) (models empty (notR (pR aR)))))) :rule or :premises (t22))
+(step st23 (cl (models empty (orR (pR aR) (notR (pR aR)))) (not (or (models empty (pR aR)) (models empty (notR (pR aR))))) (not (= (models empty (orR (pR aR) (notR (pR aR)))) (or (models empty (pR aR)) (models empty (notR (pR aR))))))) :rule reordering :premises (t22'))
+(step t.end (cl) :rule resolution :premises (nst23.0 nst23.1 nst23.2 st23))

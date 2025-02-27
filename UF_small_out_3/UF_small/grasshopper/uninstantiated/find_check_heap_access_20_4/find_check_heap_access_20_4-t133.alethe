@@ -1,0 +1,5 @@
+(assume nst133.0 (not (= (= sk_?X_17$0 (union$0 sk_?X_14$0 sk_?X_16$0)) (= sk_?X_19$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))))
+(assume t114 (= sk_?X_17$0 sk_?X_19$0))
+(assume t132 (= (union$0 sk_?X_14$0 sk_?X_16$0) (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))
+(step st133 (cl (= (= sk_?X_17$0 (union$0 sk_?X_14$0 sk_?X_16$0)) (= sk_?X_19$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))) :rule cong :premises (t114 t132))
+(step t.end (cl) :rule resolution :premises (nst133.0 st133))

@@ -1,0 +1,5 @@
+(assume nst49.0 (not (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))))))
+(assume nst49.1 (not (= (not (models empty (qR bR))) (models empty (notR (qR bR))))))
+(assume t48 (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (not (models empty (qR bR))) (models empty (notR (qR bR))))))
+(step st49 (cl (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (not (models empty (qR bR))) (models empty (notR (qR bR))))) :rule implies :premises (t48))
+(step t.end (cl) :rule resolution :premises (nst49.0 nst49.1 st49))

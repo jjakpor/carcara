@@ -550,7 +550,7 @@ fn negation_conjuncts(clause: &[Rc<Term>], pool: &mut PrimitivePool) -> Vec<Rc<T
 /* 
 Decide what to prove. An individual step or a subproof?
 */
-pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> (Vec<ProofCommand>, usize) {
+pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<ProofCommand> {
     #[derive(Debug)]
     struct Premise {
         termified: Option<Rc<Term>>,
@@ -583,10 +583,15 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> (Vec<Pr
     }
 
     let mut new_subproofs : Vec<Subproof> = Vec::new();
-    println!("First subproof loop");
+    
+    // Avoid spurious subproof copy
+    if let ProofCommand::Subproof(sp) = the_step.unwrap() {
+        subproof_stack.pop();
+    }
+
     for sp in &subproof_stack { 
        
-        println!("{:?}", sp.commands.last().unwrap().id());
+
         new_subproofs.push(Subproof { commands: Vec::new(), args: sp.args.clone(), context_id: sp.context_id });
         let current_subproof = new_subproofs.last_mut().unwrap();
         // Add assumes and second to last step
@@ -615,7 +620,7 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> (Vec<Pr
     let sliced_index : usize;
 
     // With either step or subproof we want to add this into our new subproof structure in case context has been added
-    match the_step {
+    let goal_command = match the_step {
         // TODO: Add bind support (would mostly be this case I think)
         Some(ProofCommand::Step(step)) => {
 
@@ -714,65 +719,24 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> (Vec<Pr
             }
              
             let goal_step = ProofStep {id: format!("s{}", step.id), clause: step.clause.clone(), rule: step.rule.clone(), premises: new_premises, args: step.args.clone(), discharge: Vec::new()};
-            if new_subproofs.is_empty() {
-                commands.push(ProofCommand::Step(goal_step));
-            } else {
-                let last_commands = &mut new_subproofs.last_mut().unwrap().commands;
-                let len = last_commands.len();
-                last_commands.insert(len - 2, ProofCommand::Step(goal_step));
-                
-                let mut iter = new_subproofs.into_iter().rev();
-                let mut outer = iter.next();
-                // println!("Outer: {:?}", outer.as_ref().unwrap().commands.last().unwrap().id());
-                for mut subproof in iter {
-                    // println!("Subproof {:?}\n", subproof);
-                    let len = subproof.commands.len();
-                    subproof.commands.insert(len - 2, ProofCommand::Subproof(outer.unwrap()));
-                    outer = Some(subproof);
-                }
-
-                commands.push(ProofCommand::Subproof(outer.unwrap()));
-                // println!("Outer: {:?}", outer.as_ref().unwrap().commands.last().unwrap().id());
-
-                /*
-                last_commands.insert(len - 2, ProofCommand::Step(goal_step));
-                println!("{:?}", new_subproofs.first().unwrap().commands.last().unwrap().id());
-                let mut iter = new_subproofs.into_iter().rev();
-                let mut nested = iter.next();
-            
-                for mut subproof in iter {
-                    println!("In loop {}", subproof.commands.last().unwrap().id());
-                    subproof.commands.push(ProofCommand::Subproof(nested.unwrap()));
-                    nested = Some(subproof);
-                }
-                println!("Nested: {:?}", nested.as_ref().unwrap().commands.last().unwrap().id());
-                commands.push(ProofCommand::Subproof(nested.unwrap()));
-                */
-                
-                /* 
-                new_subproofs.reverse();
-                let inner = new_subproofs.pop();
-                while let Some(sp) = &inner {
-                    if let Some(mut outer) = new_subproofs.pop() {
-                        outer.commands.push(ProofCommand::Subproof(sp.clone()));
-                    }
-                }
-                */
-            }
-            sliced_index = commands.len() - 1; // Yes, this is technically the same as the subproof case but will change with our hole construction
-
+        
+            ProofCommand::Step(goal_step)
 
         }
         
         // TODO: implement
         Some(ProofCommand::Subproof(sp)) => {
+            
             let last_command = sp.commands.last().unwrap();
+            let mut goal_command : Option<ProofCommand> = None;
 
             let mut subproof_assumptions = Vec::new();
             
             for command in &sp.commands {
                 if let ProofCommand::Assume { .. } = command {
                     subproof_assumptions.push(command.clone());
+                } else {
+                    break;
                 }
             }
             if let ProofCommand::Step(closing_step) =  last_command {
@@ -780,29 +744,50 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> (Vec<Pr
                 let penult = sp.commands[sp.commands.len() - 2].clone();
                 
                 if let ProofCommand::Step(ps) = penult {
-                    let new_penult = ProofCommand::Step(ProofStep { id: ps.id.clone(), clause: ps.clause.clone(), rule: "trust".to_string(), premises: Vec::new(), args: Vec::new(), discharge: Vec::new() });
+                    let new_penult = ProofCommand::Step(ProofStep { id: ps.id.clone(), clause: ps.clause.clone(), rule: "trust".to_string(), premises: Vec::new(), args: ps.args.clone(), discharge: Vec::new() });
                     for a in subproof_assumptions {
                         new_subproof.commands.push(a);
                     }
                     new_subproof.commands.push(new_penult);
                     new_subproof.commands.push(ProofCommand::Step(closing_step.clone()));
 
-                commands.push(ProofCommand::Subproof(new_subproof));
+                goal_command = Some(ProofCommand::Subproof(new_subproof));
+                println!("{:?}", goal_command);
+                 // goal_command
                 } else {
                     panic!("Second to last subproof command is not step.");
                 };
-                
 
             } else {
                 panic!("Subproof does not end in step")
             }
-            sliced_index = commands.len() - 1;
+            // sliced_index = commands.len() - 1;
+            goal_command.expect("Goal command never got set")
         }
 
         _ => panic!("Slice command is not step or subproof") // TODO: replace with Carcara error
-    }
+    };
 
-    (commands, sliced_index)
+    if new_subproofs.is_empty() {
+        commands.push(goal_command);
+    } else {
+        let last_commands = &mut new_subproofs.last_mut().unwrap().commands;
+        let len = last_commands.len();
+        last_commands.insert(len - 2, goal_command);
+        
+        let mut iter = new_subproofs.into_iter().rev();
+        let mut outer = iter.next();
+        // println!("Outer: {:?}", outer.as_ref().unwrap().commands.last().unwrap().id());
+        for mut subproof in iter {
+            // println!("Subproof {:?}\n", subproof);
+            let len = subproof.commands.len();
+            subproof.commands.insert(len - 2, ProofCommand::Subproof(outer.unwrap()));
+            outer = Some(subproof);
+        }
+
+        commands.push(ProofCommand::Subproof(outer.unwrap()));
+    }
+    commands
 
 
 }
@@ -811,7 +796,7 @@ pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     use std::fmt::Write;
 
 
-    let (mut sliced_step_commands, sliced_index) = sliced_step(proof, id, pool);
+    let mut sliced_step_commands = sliced_step(proof, id, pool);
     let last =sliced_step_commands.last().unwrap();
     let empty = last.clause().is_empty();
 

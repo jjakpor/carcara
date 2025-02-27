@@ -1,0 +1,5 @@
+(assume nst246.0 (not (= (not (= null$0 null$0)) false)))
+(assume t244 (= (not (= null$0 null$0)) (not true)))
+(assume t245 (= (not true) false))
+(step st246 (cl (= (not (= null$0 null$0)) false)) :rule trans :premises (t244 t245))
+(step t.end (cl) :rule resolution :premises (nst246.0 st246))

@@ -1,0 +1,8 @@
+(assume nst26.0 (not (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))))
+(assume nst26.1 (not (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))))
+(assume t24 (or (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))))
+(assume t25 (or (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (not (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))))
+(step t25' (cl (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (not (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))) :rule or :premises (t25))
+(step t24' (cl (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) :rule or :premises (t24))
+(step st26 (cl (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))) :rule resolution :premises (t24' t25'))
+(step t.end (cl) :rule resolution :premises (nst26.0 nst26.1 st26))

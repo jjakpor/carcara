@@ -1,0 +1,5 @@
+(assume nst85.0 (not (= f1 (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25)))))))
+(assume t66 (= f1 (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f12))))) f13)) f14))))
+(assume t84 (= (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f12))))) f13)) f14)) (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25))))))
+(step st85 (cl (= f1 (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25)))))) :rule trans :premises (t66 t84))
+(step t.end (cl) :rule resolution :premises (nst85.0 st85))

@@ -1,0 +1,3 @@
+(assume nst154.0 (not (= (= (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$)) true) (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$)))))
+(step st154 (cl (= (= (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$)) true) (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$)))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nst154.0 st154))

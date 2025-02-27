@@ -1,0 +1,6 @@
+(assume nst302.0 (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0))))
+(assume nst302.1 (not (not (and (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)) (in$0 sk_?e$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))))))
+(assume t301 (or (not (and (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)) (in$0 sk_?e$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))) (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0))))
+(step t301' (cl (not (and (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)) (in$0 sk_?e$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))) (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0))) :rule or :premises (t301))
+(step st302 (cl (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0)) (not (and (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)) (in$0 sk_?e$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))))) :rule reordering :premises (t301'))
+(step t.end (cl) :rule resolution :premises (nst302.0 nst302.1 st302))

@@ -1,0 +1,5 @@
+(assume nst75.0 (not (= (and (= (read$0 next$0 end1$0) end1$0) (= (read$0 next$0 end1$0) start1$0)) (and (= end1$0 (read$0 next$0 end1$0)) (= start1$0 (read$0 next$0 end1$0))))))
+(assume t39 (= (= (read$0 next$0 end1$0) start1$0) (= start1$0 (read$0 next$0 end1$0))))
+(assume t74 (= (= (read$0 next$0 end1$0) end1$0) (= end1$0 (read$0 next$0 end1$0))))
+(step st75 (cl (= (and (= (read$0 next$0 end1$0) end1$0) (= (read$0 next$0 end1$0) start1$0)) (and (= end1$0 (read$0 next$0 end1$0)) (= start1$0 (read$0 next$0 end1$0))))) :rule cong :premises (t74 t39))
+(step t.end (cl) :rule resolution :premises (nst75.0 st75))

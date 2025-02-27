@@ -1,0 +1,7 @@
+(assume nst150.0 (not (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$)))))
+(assume t65 (or (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$))) (not (or (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$)))))))
+(assume t141 (not (fun_app$q lnull$d xs$)))
+(assume t149 (or (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$)))))
+(step t65' (cl (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$))) (not (or (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$)))))) :rule or :premises (t65))
+(step st150 (cl (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$)))) :rule resolution :premises (t65' t141 t149))
+(step t.end (cl) :rule resolution :premises (nst150.0 st150))

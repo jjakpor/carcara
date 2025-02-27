@@ -1,0 +1,7 @@
+(assume nst21.0 (not (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))))
+(assume nst21.1 (not (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11))))))
+(assume nst21.2 (not (not (or (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))))))
+(assume t20 (or (not (or (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39))))) (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))))
+(step t20' (cl (not (or (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39))))) (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))) :rule or :premises (t20))
+(step st21 (cl (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39))) (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (or (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))))) :rule reordering :premises (t20'))
+(step t.end (cl) :rule resolution :premises (nst21.0 nst21.1 nst21.2 st21))

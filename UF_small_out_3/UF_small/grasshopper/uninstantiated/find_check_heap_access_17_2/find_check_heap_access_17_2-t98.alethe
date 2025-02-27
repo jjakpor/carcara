@@ -1,0 +1,4 @@
+(assume nst98.0 (not (= (not (= root_x$0 root_x$0)) (not true))))
+(assume t97 (= (= root_x$0 root_x$0) true))
+(step st98 (cl (= (not (= root_x$0 root_x$0)) (not true))) :rule cong :premises (t97))
+(step t.end (cl) :rule resolution :premises (nst98.0 st98))

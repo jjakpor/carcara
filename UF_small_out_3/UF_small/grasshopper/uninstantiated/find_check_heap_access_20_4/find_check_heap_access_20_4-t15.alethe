@@ -1,0 +1,7 @@
+(assume nst15.0 (not (= root_x$0 x$0)))
+(assume nst15.1 (not (not (Btwn$0 next$0 x$0 root_x$0 x$0))))
+(assume nst15.2 (not (not (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0)))))
+(assume t14 (or (not (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0))) (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0)))
+(step t14' (cl (not (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0))) (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0)) :rule or :premises (t14))
+(step st15 (cl (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (not (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0)))) :rule reordering :premises (t14'))
+(step t.end (cl) :rule resolution :premises (nst15.0 nst15.1 nst15.2 st15))

@@ -1,0 +1,3 @@
+(assume nst357.0 (not (= (= (in$0 (read$0 next$0 d_init$0) Alloc$0) false) (not (in$0 (read$0 next$0 d_init$0) Alloc$0)))))
+(step st357 (cl (= (= (in$0 (read$0 next$0 d_init$0) Alloc$0) false) (not (in$0 (read$0 next$0 d_init$0) Alloc$0)))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nst357.0 st357))

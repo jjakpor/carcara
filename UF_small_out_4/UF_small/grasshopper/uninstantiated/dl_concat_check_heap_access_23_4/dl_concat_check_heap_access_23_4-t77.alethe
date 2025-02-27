@@ -1,0 +1,3 @@
+(assume nst77.0 (not (= (= (read$0 next$0 end1$0) (read$0 prev$0 start1$0)) (= (read$0 next$0 end1$0) (read$0 prev$0 start1$0)))))
+(step st77 (cl (= (= (read$0 next$0 end1$0) (read$0 prev$0 start1$0)) (= (read$0 next$0 end1$0) (read$0 prev$0 start1$0)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst77.0 st77))

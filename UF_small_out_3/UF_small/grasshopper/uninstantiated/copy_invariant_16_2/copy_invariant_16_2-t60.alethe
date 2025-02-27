@@ -1,0 +1,5 @@
+(assume nst60.0 (not (= (= FP$0 sk_?X$0) (= FP$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))))
+(assume t54 (= FP$0 FP$0))
+(assume t59 (= sk_?X$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))
+(step st60 (cl (= (= FP$0 sk_?X$0) (= FP$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) :rule cong :premises (t54 t59))
+(step t.end (cl) :rule resolution :premises (nst60.0 st60))

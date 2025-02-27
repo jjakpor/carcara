@@ -1,0 +1,5 @@
+(assume nst23.0 (not (= sk_?X_4$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))
+(assume t20 (= sk_?X_4$0 (lseg_domain$0 next$0 curr_2$0 cp_2$0)))
+(assume t22 (= (lseg_domain$0 next$0 curr_2$0 cp_2$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))
+(step st23 (cl (= sk_?X_4$0 (lseg_domain$0 next$0 lst$0 cp_2$0))) :rule trans :premises (t20 t22))
+(step t.end (cl) :rule resolution :premises (nst23.0 st23))

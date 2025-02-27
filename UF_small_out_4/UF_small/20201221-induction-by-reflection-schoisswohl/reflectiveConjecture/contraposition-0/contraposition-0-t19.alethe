@@ -1,0 +1,5 @@
+(assume nst19.0 (not (not (= (models empty (orR (notR (notR (qR bR))) (notR (pR aR)))) (or (models empty (notR (notR (qR bR)))) (models empty (notR (pR aR))))))))
+(assume nst19.1 (not (not (models empty (orR (notR (notR (qR bR))) (notR (pR aR)))))))
+(assume nst19.2 (not (or (models empty (notR (notR (qR bR)))) (models empty (notR (pR aR))))))
+(step st19 (cl (not (= (models empty (orR (notR (notR (qR bR))) (notR (pR aR)))) (or (models empty (notR (notR (qR bR)))) (models empty (notR (pR aR)))))) (not (models empty (orR (notR (notR (qR bR))) (notR (pR aR))))) (or (models empty (notR (notR (qR bR)))) (models empty (notR (pR aR))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst19.0 nst19.1 nst19.2 st19))

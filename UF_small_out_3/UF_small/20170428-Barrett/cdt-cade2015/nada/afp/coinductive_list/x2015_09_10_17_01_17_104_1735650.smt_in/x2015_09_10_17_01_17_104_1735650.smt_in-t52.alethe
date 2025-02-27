@@ -1,0 +1,3 @@
+(assume nst52.0 (not (= x$ x$)))
+(step st52 (cl (= x$ x$)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst52.0 st52))

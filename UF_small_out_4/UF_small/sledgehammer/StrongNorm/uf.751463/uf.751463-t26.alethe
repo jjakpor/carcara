@@ -1,0 +1,6 @@
+(assume nst26.0 (not (= (f180 (f181 (f182 f183 f184) f185) f186) (f189 (f17 (f18 (f19 f20 f23) f27) (f180 (f181 (f182 f183 f184) f185) f186)) f27))))
+(assume t16 (or (not (forall ((?v0 S5) (?v2 S9) (?v3 S10)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0)))) (= (f180 (f181 (f182 f183 f184) f185) f186) (f189 (f17 (f18 (f19 f20 f23) f27) (f180 (f181 (f182 f183 f184) f185) f186)) f27))))
+(assume t25 (forall ((?v0 S5) (?v2 S9) (?v3 S10)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0))))
+(step t16' (cl (not (forall ((?v0 S5) (?v2 S9) (?v3 S10)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0)))) (= (f180 (f181 (f182 f183 f184) f185) f186) (f189 (f17 (f18 (f19 f20 f23) f27) (f180 (f181 (f182 f183 f184) f185) f186)) f27))) :rule or :premises (t16))
+(step st26 (cl (= (f180 (f181 (f182 f183 f184) f185) f186) (f189 (f17 (f18 (f19 f20 f23) f27) (f180 (f181 (f182 f183 f184) f185) f186)) f27))) :rule resolution :premises (t16' t25))
+(step t.end (cl) :rule resolution :premises (nst26.0 st26))

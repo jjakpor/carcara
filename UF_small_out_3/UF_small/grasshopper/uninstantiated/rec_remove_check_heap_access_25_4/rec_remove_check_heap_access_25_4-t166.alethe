@@ -1,0 +1,5 @@
+(assume nst166.0 (not (= (setminus$0 FP$0 FP_1$0) (setminus$0 sk_?X_11$0 sk_?X_10$0))))
+(assume t164 (= FP$0 sk_?X_11$0))
+(assume t165 (= FP_1$0 sk_?X_10$0))
+(step st166 (cl (= (setminus$0 FP$0 FP_1$0) (setminus$0 sk_?X_11$0 sk_?X_10$0))) :rule cong :premises (t164 t165))
+(step t.end (cl) :rule resolution :premises (nst166.0 st166))

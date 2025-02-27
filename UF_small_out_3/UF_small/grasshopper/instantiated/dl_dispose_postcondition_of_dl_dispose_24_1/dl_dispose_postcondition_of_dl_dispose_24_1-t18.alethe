@@ -1,0 +1,5 @@
+(assume nst18.0 (not (not (= (= null$0 prv_2$0) (= a_1$0 prv_2$0)))))
+(assume nst18.1 (not (not (= null$0 prv_2$0))))
+(assume nst18.2 (not (= a_1$0 prv_2$0)))
+(step st18 (cl (not (= (= null$0 prv_2$0) (= a_1$0 prv_2$0))) (not (= null$0 prv_2$0)) (= a_1$0 prv_2$0)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst18.0 nst18.1 nst18.2 st18))

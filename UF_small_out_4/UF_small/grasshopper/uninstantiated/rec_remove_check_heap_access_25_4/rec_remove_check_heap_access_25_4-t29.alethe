@@ -1,0 +1,6 @@
+(assume nst29.0 (not (Btwn$0 next$0 lst$0 null$0 null$0)))
+(assume t26 (or (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0))))
+(assume t28 (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0))
+(step t26' (cl (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0))) :rule or :premises (t26))
+(step st29 (cl (Btwn$0 next$0 lst$0 null$0 null$0)) :rule resolution :premises (t26' t28))
+(step t.end (cl) :rule resolution :premises (nst29.0 st29))

@@ -1,0 +1,5 @@
+(assume nst191.0 (not (= sk_?X_92$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0))))
+(assume a52 (= sk_?X_92$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)))
+(assume t190 (= (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0) (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0)))
+(step st191 (cl (= sk_?X_92$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0))) :rule trans :premises (a52 t190))
+(step t.end (cl) :rule resolution :premises (nst191.0 st191))

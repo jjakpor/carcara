@@ -1,0 +1,6 @@
+(assume nst120.0 (not (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))
+(assume nst120.1 (not (not (= cp_2$0 sk_?e$0))))
+(assume nst120.2 (not (not (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))))
+(assume t119 (not (and (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (= cp_2$0 sk_?e$0) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))))
+(step st120 (cl (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))) (not (= cp_2$0 sk_?e$0)) (not (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))) :rule not_and :premises (t119))
+(step t.end (cl) :rule resolution :premises (nst120.0 nst120.1 nst120.2 st120))

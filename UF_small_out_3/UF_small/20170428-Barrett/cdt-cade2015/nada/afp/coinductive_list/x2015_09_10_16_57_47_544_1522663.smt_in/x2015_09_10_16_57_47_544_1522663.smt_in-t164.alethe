@@ -1,0 +1,5 @@
+(assume nst164.0 (not (fun_app$q lnull$d xs$)))
+(assume nst164.1 (not (= (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))))))
+(assume t129 (ite (fun_app$q lnull$d xs$) (= lNil$ (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)))) (= (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))))))
+(step st164 (cl (fun_app$q lnull$d xs$) (= (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))))) :rule ite1 :premises (t129))
+(step t.end (cl) :rule resolution :premises (nst164.0 nst164.1 st164))

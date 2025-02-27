@@ -1,0 +1,7 @@
+(assume nst17.0 (not (= a$0 (read$0 next$0 elt$0))))
+(assume t12 (or (not (= (= null$0 (read$0 next$0 elt$0)) (= a$0 (read$0 next$0 elt$0)))) (not (= null$0 (read$0 next$0 elt$0))) (= a$0 (read$0 next$0 elt$0))))
+(assume t15 (= (= null$0 (read$0 next$0 elt$0)) (= a$0 (read$0 next$0 elt$0))))
+(assume t16 (= null$0 (read$0 next$0 elt$0)))
+(step t12' (cl (not (= (= null$0 (read$0 next$0 elt$0)) (= a$0 (read$0 next$0 elt$0)))) (not (= null$0 (read$0 next$0 elt$0))) (= a$0 (read$0 next$0 elt$0))) :rule or :premises (t12))
+(step st17 (cl (= a$0 (read$0 next$0 elt$0))) :rule resolution :premises (t12' t15 t16))
+(step t.end (cl) :rule resolution :premises (nst17.0 st17))

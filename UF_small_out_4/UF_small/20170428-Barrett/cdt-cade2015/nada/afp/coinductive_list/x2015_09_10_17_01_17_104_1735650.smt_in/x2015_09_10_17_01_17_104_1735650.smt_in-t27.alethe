@@ -1,0 +1,5 @@
+(assume nst27.0 (not (not (forall ((?v0 Nat$) (?v1 A_llist$)) (= (fun_app$ (ldrop$ (enat$ ?v0)) ?v1) (fun_app$ (ldropn$ ?v0) ?v1))))))
+(assume nst27.1 (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))))
+(assume t26 (or (not (forall ((?v0 Nat$) (?v1 A_llist$)) (= (fun_app$ (ldrop$ (enat$ ?v0)) ?v1) (fun_app$ (ldropn$ ?v0) ?v1)))) (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))))
+(step st27 (cl (not (forall ((?v0 Nat$) (?v1 A_llist$)) (= (fun_app$ (ldrop$ (enat$ ?v0)) ?v1) (fun_app$ (ldropn$ ?v0) ?v1)))) (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))) :rule or :premises (t26))
+(step t.end (cl) :rule resolution :premises (nst27.0 nst27.1 st27))

@@ -1,0 +1,3 @@
+(assume nst120.0 (not (= (= (read$0 next$0 prv_init$0) curr_init$0) (= curr_init$0 (read$0 next$0 prv_init$0)))))
+(step st120 (cl (= (= (read$0 next$0 prv_init$0) curr_init$0) (= curr_init$0 (read$0 next$0 prv_init$0)))) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst120.0 st120))

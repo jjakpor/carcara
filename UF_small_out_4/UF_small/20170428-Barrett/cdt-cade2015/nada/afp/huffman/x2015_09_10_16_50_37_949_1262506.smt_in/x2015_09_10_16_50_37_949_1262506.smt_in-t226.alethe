@@ -1,0 +1,7 @@
+(assume nst226.0 (not (= c$ d$)))
+(assume nst226.1 (not (not (= a$ d$))))
+(assume nst226.2 (not (not (= a$ c$))))
+(assume t225 (or (not (= a$ d$)) (not (= a$ c$)) (= c$ d$)))
+(step t225' (cl (not (= a$ d$)) (not (= a$ c$)) (= c$ d$)) :rule or :premises (t225))
+(step st226 (cl (= c$ d$) (not (= a$ d$)) (not (= a$ c$))) :rule reordering :premises (t225'))
+(step t.end (cl) :rule resolution :premises (nst226.0 nst226.1 nst226.2 st226))

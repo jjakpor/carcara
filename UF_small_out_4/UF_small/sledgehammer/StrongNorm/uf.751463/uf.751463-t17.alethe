@@ -1,0 +1,5 @@
+(assume nst17.0 (not (not (= (forall ((?v0 S5) (?v1 S5) (?v2 S9) (?v3 S10)) (=> (= ?v0 ?v1) (= (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v1) ?v3))) (forall ((?v0 S5) (?v2 S9) (?v3 S10)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0)))))))
+(assume nst17.1 (not (not (forall ((?v0 S5) (?v1 S5) (?v2 S9) (?v3 S10)) (=> (= ?v0 ?v1) (= (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v1) ?v3))))))
+(assume nst17.2 (not (forall ((?v0 S5) (?v2 S9) (?v3 S10)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0)))))
+(step st17 (cl (not (= (forall ((?v0 S5) (?v1 S5) (?v2 S9) (?v3 S10)) (=> (= ?v0 ?v1) (= (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v1) ?v3))) (forall ((?v0 S5) (?v2 S9) (?v3 S10)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0))))) (not (forall ((?v0 S5) (?v1 S5) (?v2 S9) (?v3 S10)) (=> (= ?v0 ?v1) (= (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v1) ?v3)))) (forall ((?v0 S5) (?v2 S9) (?v3 S10)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v0)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst17.0 nst17.1 nst17.2 st17))

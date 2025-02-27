@@ -1,0 +1,5 @@
+(assume nst16.0 (not (not (or (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (models empty (rR cR))))))
+(assume nst16.1 (not (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR))))))))
+(assume nst16.2 (not (models empty (rR cR))))
+(step st16 (cl (not (or (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (models empty (rR cR)))) (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (models empty (rR cR))) :rule or_pos)
+(step t.end (cl) :rule resolution :premises (nst16.0 nst16.1 nst16.2 st16))

@@ -1,0 +1,7 @@
+(assume nst22.0 (not (= (lseg_struct$0 sk_?X_11$0 next$0 lst$0 null$0) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0))))
+(assume a36 (= sk_?X_11$0 (lseg_domain$0 next$0 lst$0 null$0)))
+(assume t19 (= next$0 next$0))
+(assume t20 (= lst$0 lst$0))
+(assume t21 (= null$0 null$0))
+(step st22 (cl (= (lseg_struct$0 sk_?X_11$0 next$0 lst$0 null$0) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0))) :rule cong :premises (a36 t19 t20 t21))
+(step t.end (cl) :rule resolution :premises (nst22.0 st22))

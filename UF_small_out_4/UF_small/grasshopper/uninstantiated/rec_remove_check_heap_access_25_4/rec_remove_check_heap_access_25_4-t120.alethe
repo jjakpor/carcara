@@ -1,0 +1,5 @@
+(assume nst120.0 (not (= (not (= null$0 null$0)) false)))
+(assume t118 (= (not (= null$0 null$0)) (not true)))
+(assume t119 (= (not true) false))
+(step st120 (cl (= (not (= null$0 null$0)) false)) :rule trans :premises (t118 t119))
+(step t.end (cl) :rule resolution :premises (nst120.0 st120))

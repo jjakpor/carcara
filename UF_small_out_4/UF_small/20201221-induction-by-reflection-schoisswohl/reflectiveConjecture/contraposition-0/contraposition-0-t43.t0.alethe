@@ -1,0 +1,8 @@
+(assume nt43.0 (not (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))))))
+(assume nt43.1 (not (= (models empty (notR (qR bR))) (not (models empty (qR bR))))))
+(anchor :step t43)
+(assume t43.a0 (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))))
+(step st43.t0 (cl (or (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (qR bR))) (not (models empty (qR bR)))))) :rule forall_inst :args (empty (qR bR)))
+(step t43.t2 (cl (= (models empty (notR (qR bR))) (not (models empty (qR bR))))) :rule trust)
+(step t43 (cl (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (qR bR))) (not (models empty (qR bR))))) :rule subproof :discharge (t43.a0))
+(step t.end (cl) :rule resolution :premises (nt43.0 nt43.1 t43))

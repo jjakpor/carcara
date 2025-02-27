@@ -1,0 +1,6 @@
+(assume nst206.0 (not (not (models empty (notR (qR bR))))))
+(assume nst206.1 (not (or (models empty (notR (qR bR))) (models empty (rR cR)))))
+(assume t205 (or (or (models empty (notR (qR bR))) (models empty (rR cR))) (not (models empty (notR (qR bR))))))
+(step t205' (cl (or (models empty (notR (qR bR))) (models empty (rR cR))) (not (models empty (notR (qR bR))))) :rule or :premises (t205))
+(step st206 (cl (not (models empty (notR (qR bR)))) (or (models empty (notR (qR bR))) (models empty (rR cR)))) :rule reordering :premises (t205'))
+(step t.end (cl) :rule resolution :premises (nst206.0 nst206.1 st206))

@@ -1,0 +1,5 @@
+(assume nst88.0 (not (not (= Axiom_39$0 (= Axiom_39$0 true)))))
+(assume nst88.1 (not (not Axiom_39$0)))
+(assume nst88.2 (not (= Axiom_39$0 true)))
+(step st88 (cl (not (= Axiom_39$0 (= Axiom_39$0 true))) (not Axiom_39$0) (= Axiom_39$0 true)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst88.0 nst88.1 nst88.2 st88))

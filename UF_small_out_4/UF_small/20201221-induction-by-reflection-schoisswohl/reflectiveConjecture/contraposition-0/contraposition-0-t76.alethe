@@ -1,0 +1,7 @@
+(assume nst76.0 (not (models empty (orR (notR (pR aR)) (qR bR)))))
+(assume nst76.1 (not (not (or (models empty (notR (pR aR))) (models empty (qR bR))))))
+(assume nst76.2 (not (not (= (models empty (orR (notR (pR aR)) (qR bR))) (or (models empty (notR (pR aR))) (models empty (qR bR)))))))
+(assume t75 (or (not (= (models empty (orR (notR (pR aR)) (qR bR))) (or (models empty (notR (pR aR))) (models empty (qR bR))))) (models empty (orR (notR (pR aR)) (qR bR))) (not (or (models empty (notR (pR aR))) (models empty (qR bR))))))
+(step t75' (cl (not (= (models empty (orR (notR (pR aR)) (qR bR))) (or (models empty (notR (pR aR))) (models empty (qR bR))))) (models empty (orR (notR (pR aR)) (qR bR))) (not (or (models empty (notR (pR aR))) (models empty (qR bR))))) :rule or :premises (t75))
+(step st76 (cl (models empty (orR (notR (pR aR)) (qR bR))) (not (or (models empty (notR (pR aR))) (models empty (qR bR)))) (not (= (models empty (orR (notR (pR aR)) (qR bR))) (or (models empty (notR (pR aR))) (models empty (qR bR)))))) :rule reordering :premises (t75'))
+(step t.end (cl) :rule resolution :premises (nst76.0 nst76.1 nst76.2 st76))

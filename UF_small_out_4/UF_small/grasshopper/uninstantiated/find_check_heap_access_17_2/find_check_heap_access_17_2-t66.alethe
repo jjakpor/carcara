@@ -1,0 +1,5 @@
+(assume nst66.0 (not (not (forall ((BOUND_VARIABLE_557 Loc)) (in$0 BOUND_VARIABLE_557 (setenum$0 BOUND_VARIABLE_557))))))
+(assume nst66.1 (not (in$0 root_x$0 (setenum$0 root_x$0))))
+(assume t65 (or (not (forall ((BOUND_VARIABLE_557 Loc)) (in$0 BOUND_VARIABLE_557 (setenum$0 BOUND_VARIABLE_557)))) (in$0 root_x$0 (setenum$0 root_x$0))))
+(step st66 (cl (not (forall ((BOUND_VARIABLE_557 Loc)) (in$0 BOUND_VARIABLE_557 (setenum$0 BOUND_VARIABLE_557)))) (in$0 root_x$0 (setenum$0 root_x$0))) :rule or :premises (t65))
+(step t.end (cl) :rule resolution :premises (nst66.0 nst66.1 st66))

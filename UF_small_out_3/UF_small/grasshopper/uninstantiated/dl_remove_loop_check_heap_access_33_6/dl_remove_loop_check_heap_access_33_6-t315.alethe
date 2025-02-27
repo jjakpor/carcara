@@ -1,0 +1,5 @@
+(assume nst315.0 (not (= (in$0 curr_init$0 (dlseg_domain$0 next$0 prev$0 c_init$0 null$0 curr_init$0 prv_init$0)) (in$0 prv_5$0 (dlseg_domain$0 next$0 prev$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0 (read$0 prev$0 prv_5$0))))))
+(assume t36 (= curr_init$0 prv_5$0))
+(assume t314 (= (dlseg_domain$0 next$0 prev$0 c_init$0 null$0 curr_init$0 prv_init$0) (dlseg_domain$0 next$0 prev$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0 (read$0 prev$0 prv_5$0))))
+(step st315 (cl (= (in$0 curr_init$0 (dlseg_domain$0 next$0 prev$0 c_init$0 null$0 curr_init$0 prv_init$0)) (in$0 prv_5$0 (dlseg_domain$0 next$0 prev$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0 (read$0 prev$0 prv_5$0))))) :rule cong :premises (t36 t314))
+(step t.end (cl) :rule resolution :premises (nst315.0 st315))

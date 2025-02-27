@@ -1,0 +1,7 @@
+(assume nst156.0 (not (not (models empty (orR (notR (pR aR)) (qR bR))))))
+(assume nst156.1 (not (or (models empty (notR (pR aR))) (models empty (qR bR)))))
+(assume nst156.2 (not (not (= (models empty (orR (notR (pR aR)) (qR bR))) (or (models empty (notR (pR aR))) (models empty (qR bR)))))))
+(assume t155 (or (not (= (models empty (orR (notR (pR aR)) (qR bR))) (or (models empty (notR (pR aR))) (models empty (qR bR))))) (not (models empty (orR (notR (pR aR)) (qR bR)))) (or (models empty (notR (pR aR))) (models empty (qR bR)))))
+(step t155' (cl (not (= (models empty (orR (notR (pR aR)) (qR bR))) (or (models empty (notR (pR aR))) (models empty (qR bR))))) (not (models empty (orR (notR (pR aR)) (qR bR)))) (or (models empty (notR (pR aR))) (models empty (qR bR)))) :rule or :premises (t155))
+(step st156 (cl (not (models empty (orR (notR (pR aR)) (qR bR)))) (or (models empty (notR (pR aR))) (models empty (qR bR))) (not (= (models empty (orR (notR (pR aR)) (qR bR))) (or (models empty (notR (pR aR))) (models empty (qR bR)))))) :rule reordering :premises (t155'))
+(step t.end (cl) :rule resolution :premises (nst156.0 nst156.1 nst156.2 st156))

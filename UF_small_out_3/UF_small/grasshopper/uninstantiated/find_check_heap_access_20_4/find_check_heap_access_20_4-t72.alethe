@@ -1,0 +1,8 @@
+(assume nst72.0 (not (= (lseg_set_struct$0 sk_?X_23$0 next$0 x$0 root_x$0 X$0) (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))))
+(assume a18 (= sk_?X_23$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))
+(assume a42 (= X$0 (lseg_set_X$0 next$0 x$0 root_x$0)))
+(assume t69 (= next$0 next$0))
+(assume t70 (= x$0 x$0))
+(assume t71 (= root_x$0 root_x$0))
+(step st72 (cl (= (lseg_set_struct$0 sk_?X_23$0 next$0 x$0 root_x$0 X$0) (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))) :rule cong :premises (a18 t69 t70 t71 a42))
+(step t.end (cl) :rule resolution :premises (nst72.0 st72))

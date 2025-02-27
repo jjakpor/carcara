@@ -1,0 +1,7 @@
+(assume nst365.0 (not (not (in$0 (read$0 next$0 d_init$0) Alloc$0))))
+(assume a35 (not (in$0 null$0 Alloc$0)))
+(assume t361 (or (not (= (not (in$0 null$0 Alloc$0)) (not (in$0 (read$0 next$0 d_init$0) Alloc$0)))) (not (not (in$0 null$0 Alloc$0))) (not (in$0 (read$0 next$0 d_init$0) Alloc$0))))
+(assume t364 (= (not (in$0 null$0 Alloc$0)) (not (in$0 (read$0 next$0 d_init$0) Alloc$0))))
+(step t361' (cl (not (= (not (in$0 null$0 Alloc$0)) (not (in$0 (read$0 next$0 d_init$0) Alloc$0)))) (not (not (in$0 null$0 Alloc$0))) (not (in$0 (read$0 next$0 d_init$0) Alloc$0))) :rule or :premises (t361))
+(step st365 (cl (not (in$0 (read$0 next$0 d_init$0) Alloc$0))) :rule resolution :premises (t361' t364 a35))
+(step t.end (cl) :rule resolution :premises (nst365.0 st365))

@@ -1,0 +1,5 @@
+(assume nst16.0 (not (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)))))
+(assume nst16.1 (not (not (= root_x$0 x$0))))
+(assume nst16.2 (not (not (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)))))
+(step st16 (cl (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (not (= root_x$0 x$0)) (not (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)))) :rule and_neg)
+(step t.end (cl) :rule resolution :premises (nst16.0 nst16.1 nst16.2 st16))

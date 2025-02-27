@@ -1,0 +1,7 @@
+(assume nst126.0 (not (= sk_?X_14$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0))))
+(assume t115 (or (not (= (= X_27$0 sk_?X_14$0) (= sk_?X_14$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0)))) (not (= X_27$0 sk_?X_14$0)) (= sk_?X_14$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0))))
+(assume t124 (= (= X_27$0 sk_?X_14$0) (= sk_?X_14$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0))))
+(assume t125 (= X_27$0 sk_?X_14$0))
+(step t115' (cl (not (= (= X_27$0 sk_?X_14$0) (= sk_?X_14$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0)))) (not (= X_27$0 sk_?X_14$0)) (= sk_?X_14$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0))) :rule or :premises (t115))
+(step st126 (cl (= sk_?X_14$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0))) :rule resolution :premises (t115' t124 t125))
+(step t.end (cl) :rule resolution :premises (nst126.0 st126))

@@ -1,0 +1,5 @@
+(assume nst24.0 (not (= (or (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 sk_?X_11$0 next$0 lst$0 null$0))) (or (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0))))))
+(assume t18 (= (Btwn$0 next$0 lst$0 null$0 null$0) (Btwn$0 next$0 lst$0 null$0 null$0)))
+(assume t23 (= (not (lseg_struct$0 sk_?X_11$0 next$0 lst$0 null$0)) (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0))))
+(step st24 (cl (= (or (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 sk_?X_11$0 next$0 lst$0 null$0))) (or (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0))))) :rule cong :premises (t18 t23))
+(step t.end (cl) :rule resolution :premises (nst24.0 st24))

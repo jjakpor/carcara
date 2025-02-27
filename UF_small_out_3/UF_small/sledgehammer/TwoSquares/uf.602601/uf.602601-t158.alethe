@@ -1,0 +1,3 @@
+(assume nst158.0 (not (= (f15 f16 f25) (f15 f16 f25))))
+(step st158 (cl (= (f15 f16 f25) (f15 f16 f25))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst158.0 st158))

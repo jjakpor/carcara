@@ -1,0 +1,5 @@
+(assume nst180.0 (not (= (in$0 null$0 Alloc_1$0) (in$0 prv_2$0 Alloc_1$0))))
+(assume t22 (= null$0 prv_2$0))
+(assume t29 (= Alloc_1$0 Alloc_1$0))
+(step st180 (cl (= (in$0 null$0 Alloc_1$0) (in$0 prv_2$0 Alloc_1$0))) :rule cong :premises (t22 t29))
+(step t.end (cl) :rule resolution :premises (nst180.0 st180))

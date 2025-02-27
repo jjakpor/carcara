@@ -1,0 +1,8 @@
+(define-fun @quantifiers_skolemize_1 () nat (choice ((x nat)) (not (equal x x x))))
+(define-fun @quantifiers_skolemize_7 () nat (choice ((x0 nat)) (not (or (not (models (push_nat empty v0_nat x0) (equalR (inj_nat v0_nat) (inj_nat v0_nat) (inj_nat v0_nat)))) (models (push_nat empty v0_nat (s x0)) (equalR (inj_nat v0_nat) (inj_nat v0_nat) (inj_nat v0_nat)))))))
+(assume nt199.0 (not (= (forall ((x nat)) (equal x x x)) (equal @quantifiers_skolemize_1 @quantifiers_skolemize_1 @quantifiers_skolemize_1))))
+(anchor :step t199 :args ((:= (x nat) @quantifiers_skolemize_1)))
+(step st199.t0 (cl (= (equal x x x) (equal @quantifiers_skolemize_1 @quantifiers_skolemize_1 @quantifiers_skolemize_1))) :rule refl)
+(step t199.t0 (cl (= (equal x x x) (equal @quantifiers_skolemize_1 @quantifiers_skolemize_1 @quantifiers_skolemize_1))) :rule trust)
+(step t199 (cl (= (forall ((x nat)) (equal x x x)) (equal @quantifiers_skolemize_1 @quantifiers_skolemize_1 @quantifiers_skolemize_1))) :rule sko_forall)
+(step t.end (cl) :rule resolution :premises (nt199.0 t199))

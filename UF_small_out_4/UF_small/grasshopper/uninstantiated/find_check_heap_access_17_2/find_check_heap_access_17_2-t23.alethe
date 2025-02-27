@@ -1,0 +1,4 @@
+(assume nst23.0 (not (=> (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))) false)))
+(assume nst23.1 (not (not false)))
+(step st23 (cl (=> (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))) false) (not false)) :rule implies_neg2)
+(step t.end (cl) :rule resolution :premises (nst23.0 nst23.1 st23))

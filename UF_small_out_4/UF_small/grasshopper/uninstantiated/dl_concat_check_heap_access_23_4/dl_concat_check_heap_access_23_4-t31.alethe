@@ -1,0 +1,4 @@
+(assume nst31.0 (not (not (and (= null$0 end1$0) (= null$0 start1$0)))))
+(assume nst31.1 (not (= null$0 start1$0)))
+(step st31 (cl (not (and (= null$0 end1$0) (= null$0 start1$0))) (= null$0 start1$0)) :rule and_pos :args (1))
+(step t.end (cl) :rule resolution :premises (nst31.0 nst31.1 st31))

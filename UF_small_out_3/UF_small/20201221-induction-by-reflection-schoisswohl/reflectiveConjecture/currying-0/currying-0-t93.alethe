@@ -1,0 +1,7 @@
+(assume nst93.0 (not (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))))
+(assume nst93.1 (not (not (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))))
+(assume nst93.2 (not (not (= (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))))))
+(assume t92 (or (not (= (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))) (not (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))))
+(step t92' (cl (not (= (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))) (not (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) :rule or :premises (t92))
+(step st93 (cl (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) (not (= (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))))) :rule reordering :premises (t92'))
+(step t.end (cl) :rule resolution :premises (nst93.0 nst93.1 nst93.2 st93))

@@ -1,0 +1,6 @@
+(assume nst52.0 (not (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0)))))
+(assume nst52.1 (not (not (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))))
+(assume t51 (or (not (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))) (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0)))))
+(step t51' (cl (not (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))) (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0)))) :rule or :premises (t51))
+(step st52 (cl (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))) :rule reordering :premises (t51'))
+(step t.end (cl) :rule resolution :premises (nst52.0 nst52.1 st52))

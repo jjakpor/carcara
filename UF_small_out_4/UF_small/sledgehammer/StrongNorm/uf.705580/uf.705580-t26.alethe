@@ -1,0 +1,6 @@
+(assume nst26.0 (not (= f174 (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))))
+(assume t16 (or (not (forall ((?v0 S6) (?v2 S4) (?v3 S5)) (= ?v3 (f177 (f10 (f11 (f12 f13 ?v2) ?v0) ?v3) ?v0)))) (= f174 (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))))
+(assume t25 (forall ((?v0 S6) (?v2 S4) (?v3 S5)) (= ?v3 (f177 (f10 (f11 (f12 f13 ?v2) ?v0) ?v3) ?v0))))
+(step t16' (cl (not (forall ((?v0 S6) (?v2 S4) (?v3 S5)) (= ?v3 (f177 (f10 (f11 (f12 f13 ?v2) ?v0) ?v3) ?v0)))) (= f174 (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))) :rule or :premises (t16))
+(step st26 (cl (= f174 (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))) :rule resolution :premises (t16' t25))
+(step t.end (cl) :rule resolution :premises (nst26.0 st26))

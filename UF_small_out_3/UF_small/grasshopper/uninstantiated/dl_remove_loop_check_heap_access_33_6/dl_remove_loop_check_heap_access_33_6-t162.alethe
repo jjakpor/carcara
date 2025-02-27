@@ -1,0 +1,5 @@
+(assume nst162.0 (not (= (and (= (read$0 next$0 d_init$0) prv_5$0) (= d_init$0 (read$0 prev$0 prv_5$0))) (and (= prv_5$0 (read$0 next$0 d_init$0)) (= d_init$0 (read$0 prev$0 prv_5$0))))))
+(assume t39 (= (= (read$0 next$0 d_init$0) prv_5$0) (= prv_5$0 (read$0 next$0 d_init$0))))
+(assume t161 (= (= d_init$0 (read$0 prev$0 prv_5$0)) (= d_init$0 (read$0 prev$0 prv_5$0))))
+(step st162 (cl (= (and (= (read$0 next$0 d_init$0) prv_5$0) (= d_init$0 (read$0 prev$0 prv_5$0))) (and (= prv_5$0 (read$0 next$0 d_init$0)) (= d_init$0 (read$0 prev$0 prv_5$0))))) :rule cong :premises (t39 t161))
+(step t.end (cl) :rule resolution :premises (nst162.0 st162))

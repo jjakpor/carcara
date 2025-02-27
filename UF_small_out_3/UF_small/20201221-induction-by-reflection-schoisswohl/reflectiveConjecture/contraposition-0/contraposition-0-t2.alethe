@@ -1,0 +1,5 @@
+(assume nst2.0 (not (not (or (models empty (notR (pR aR))) (models empty (qR bR))))))
+(assume nst2.1 (not (models empty (notR (pR aR)))))
+(assume nst2.2 (not (models empty (qR bR))))
+(step st2 (cl (not (or (models empty (notR (pR aR))) (models empty (qR bR)))) (models empty (notR (pR aR))) (models empty (qR bR))) :rule or_pos)
+(step t.end (cl) :rule resolution :premises (nst2.0 nst2.1 nst2.2 st2))

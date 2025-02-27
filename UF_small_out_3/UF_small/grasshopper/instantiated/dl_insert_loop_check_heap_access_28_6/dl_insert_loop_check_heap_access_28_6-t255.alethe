@@ -1,0 +1,5 @@
+(assume nst255.0 (not (= (or (not (= null$0 null$0)) (and (or (= null$0 null$0) (not (Btwn$0 next$0 curr_init$0 null$0 null$0))) (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0))))) (or false (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)))))))
+(assume t246 (= (not (= null$0 null$0)) false))
+(assume t254 (= (and (or (= null$0 null$0) (not (Btwn$0 next$0 curr_init$0 null$0 null$0))) (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)))) (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)))))
+(step st255 (cl (= (or (not (= null$0 null$0)) (and (or (= null$0 null$0) (not (Btwn$0 next$0 curr_init$0 null$0 null$0))) (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0))))) (or false (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)))))) :rule cong :premises (t246 t254))
+(step t.end (cl) :rule resolution :premises (nst255.0 st255))

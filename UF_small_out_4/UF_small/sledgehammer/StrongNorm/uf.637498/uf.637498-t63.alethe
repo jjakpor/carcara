@@ -1,0 +1,5 @@
+(assume nst63.0 (not (= (not (= f1 (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39)))) (not (= (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39)) (f115 (f133 f134 f5) f135))))))
+(assume t60 (= (not (= f1 (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39))))))
+(assume t62 (= (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39)))) (not (= (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39)) (f115 (f133 f134 f5) f135)))))
+(step st63 (cl (= (not (= f1 (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39)))) (not (= (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39)) (f115 (f133 f134 f5) f135))))) :rule trans :premises (t60 t62))
+(step t.end (cl) :rule resolution :premises (nst63.0 st63))

@@ -1,0 +1,4 @@
+(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (difference b a))) (member ?x (difference b d))))))
+(assume nst30.0 (not (or (not (forall ((?s1 Set) (?s2 Set)) (or (subset ?s1 ?s2) (not (forall ((?x Elem)) (or (not (member ?x ?s1)) (member ?x ?s2))))))) (or (subset (difference b a) (difference b d)) (not (forall ((?x Elem)) (or (not (member ?x (difference b a))) (member ?x (difference b d)))))))))
+(step st30 (cl (or (not (forall ((?s1 Set) (?s2 Set)) (or (subset ?s1 ?s2) (not (forall ((?x Elem)) (or (not (member ?x ?s1)) (member ?x ?s2))))))) (or (subset (difference b a) (difference b d)) (not (forall ((?x Elem)) (or (not (member ?x (difference b a))) (member ?x (difference b d)))))))) :rule forall_inst :args ((difference b a) (difference b d)))
+(step t.end (cl) :rule resolution :premises (nst30.0 st30))

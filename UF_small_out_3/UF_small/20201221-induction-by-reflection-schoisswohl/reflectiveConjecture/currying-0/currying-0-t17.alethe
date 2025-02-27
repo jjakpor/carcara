@@ -1,0 +1,7 @@
+(assume nst17.0 (not (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR))))))))
+(assume nst17.1 (not (models empty (rR cR))))
+(assume nst17.2 (not (not (or (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (models empty (rR cR))))))
+(assume t16 (or (not (or (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (models empty (rR cR)))) (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (models empty (rR cR))))
+(step t16' (cl (not (or (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (models empty (rR cR)))) (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (models empty (rR cR))) :rule or :premises (t16))
+(step st17 (cl (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (models empty (rR cR)) (not (or (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (models empty (rR cR))))) :rule reordering :premises (t16'))
+(step t.end (cl) :rule resolution :premises (nst17.0 nst17.1 nst17.2 st17))

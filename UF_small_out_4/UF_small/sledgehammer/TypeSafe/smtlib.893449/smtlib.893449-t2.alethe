@@ -1,0 +1,3 @@
+(assume t0 (= f1 (f47 (f48 f49 (f50 (f51 f52 (f88 (f89 f90 f110) (f107 (f108 f109 f111) f112))) (f88 (f89 f90 f113) (f107 (f108 f109 f114) f115)))) (f116 f117 f118))))
+(assume t1 (not (= f1 (f47 (f48 f49 (f50 (f51 f52 (f88 (f89 f90 f110) (f107 (f108 f109 f111) f112))) (f88 (f89 f90 f113) (f107 (f108 f109 f114) f115)))) (f116 f117 f118)))))
+(step st2 (cl) :rule resolution :premises (t0 t1))

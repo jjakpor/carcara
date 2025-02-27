@@ -1,0 +1,3 @@
+(assume nst9.0 (not (or (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x (read$0 ?f ?x) (read$0 ?f ?x)))) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0)))))
+(step st9 (cl (or (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x (read$0 ?f ?x) (read$0 ?f ?x)))) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0)))) :rule forall_inst :args (next$0 lst$0))
+(step t.end (cl) :rule resolution :premises (nst9.0 st9))

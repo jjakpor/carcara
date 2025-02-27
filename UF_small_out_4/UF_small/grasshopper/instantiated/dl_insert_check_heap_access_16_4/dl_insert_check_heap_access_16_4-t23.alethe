@@ -1,0 +1,5 @@
+(assume nst23.0 (not (= (= FP$0 sk_?X$0) (= FP$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0)))))
+(assume t9 (= FP$0 FP$0))
+(assume t22 (= sk_?X$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0)))
+(step st23 (cl (= (= FP$0 sk_?X$0) (= FP$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0)))) :rule cong :premises (t9 t22))
+(step t.end (cl) :rule resolution :premises (nst23.0 st23))

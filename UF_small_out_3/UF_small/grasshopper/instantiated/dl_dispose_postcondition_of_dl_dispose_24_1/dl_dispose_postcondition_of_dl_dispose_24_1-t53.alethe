@@ -1,0 +1,7 @@
+(assume nst53.0 (not (= sk_?X_4$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0))))
+(assume a70 (= sk_?X_4$0 (dlseg_domain$0 next$0 prev$0 a$0 null$0 null$0 b$0)))
+(assume t49 (or (not (= (= sk_?X_4$0 (dlseg_domain$0 next$0 prev$0 a$0 null$0 null$0 b$0)) (= sk_?X_4$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0)))) (not (= sk_?X_4$0 (dlseg_domain$0 next$0 prev$0 a$0 null$0 null$0 b$0))) (= sk_?X_4$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0))))
+(assume t52 (= (= sk_?X_4$0 (dlseg_domain$0 next$0 prev$0 a$0 null$0 null$0 b$0)) (= sk_?X_4$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0))))
+(step t49' (cl (not (= (= sk_?X_4$0 (dlseg_domain$0 next$0 prev$0 a$0 null$0 null$0 b$0)) (= sk_?X_4$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0)))) (not (= sk_?X_4$0 (dlseg_domain$0 next$0 prev$0 a$0 null$0 null$0 b$0))) (= sk_?X_4$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0))) :rule or :premises (t49))
+(step st53 (cl (= sk_?X_4$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0))) :rule resolution :premises (t49' t52 a70))
+(step t.end (cl) :rule resolution :premises (nst53.0 st53))

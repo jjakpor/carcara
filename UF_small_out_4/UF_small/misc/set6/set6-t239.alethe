@@ -1,0 +1,6 @@
+(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (union (difference c a) (difference c b)))) (member ?x (difference c (intersection a b)))))))
+(define-fun @quantifiers_skolemize_4 () Elem (choice ((?x Elem)) (not (or (not (member ?x (difference c (intersection a b)))) (member ?x (union (difference c a) (difference c b)))))))
+(assume nst239.0 (not (or (and (member @quantifiers_skolemize_4 c) (not (member @quantifiers_skolemize_4 b))) (not (member @quantifiers_skolemize_4 c)) (not (not (member @quantifiers_skolemize_4 b))))))
+(assume nst239.1 (not (not (not (member @quantifiers_skolemize_4 c)))))
+(step st239 (cl (or (and (member @quantifiers_skolemize_4 c) (not (member @quantifiers_skolemize_4 b))) (not (member @quantifiers_skolemize_4 c)) (not (not (member @quantifiers_skolemize_4 b)))) (not (not (member @quantifiers_skolemize_4 c)))) :rule or_neg :args (1))
+(step t.end (cl) :rule resolution :premises (nst239.0 nst239.1 st239))

@@ -1,0 +1,5 @@
+(assume nst15.0 (not (= (= null$0 (read$0 next$0 elt$0)) (= a$0 (read$0 next$0 elt$0)))))
+(assume t13 (= null$0 a$0))
+(assume t14 (= (read$0 next$0 elt$0) (read$0 next$0 elt$0)))
+(step st15 (cl (= (= null$0 (read$0 next$0 elt$0)) (= a$0 (read$0 next$0 elt$0)))) :rule cong :premises (t13 t14))
+(step t.end (cl) :rule resolution :premises (nst15.0 st15))

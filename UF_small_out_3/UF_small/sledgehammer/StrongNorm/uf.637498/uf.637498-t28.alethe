@@ -1,0 +1,7 @@
+(assume nst28.0 (not (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39)))))
+(assume a28 (forall ((?v0 S3)) (= (f115 (f133 f134 ?v0) f39) f1)))
+(assume t24 (or (not (= (forall ((?v0 S3)) (= (f115 (f133 f134 ?v0) f39) f1)) (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39))))) (not (forall ((?v0 S3)) (= (f115 (f133 f134 ?v0) f39) f1))) (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39)))))
+(assume t27 (= (forall ((?v0 S3)) (= (f115 (f133 f134 ?v0) f39) f1)) (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39)))))
+(step t24' (cl (not (= (forall ((?v0 S3)) (= (f115 (f133 f134 ?v0) f39) f1)) (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39))))) (not (forall ((?v0 S3)) (= (f115 (f133 f134 ?v0) f39) f1))) (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39)))) :rule or :premises (t24))
+(step st28 (cl (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39)))) :rule resolution :premises (t24' t27 a28))
+(step t.end (cl) :rule resolution :premises (nst28.0 st28))

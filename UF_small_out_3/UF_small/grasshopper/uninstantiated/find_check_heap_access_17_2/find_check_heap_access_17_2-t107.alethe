@@ -1,0 +1,3 @@
+(assume nst107.0 (not (= (and true (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))))))
+(step st107 (cl (= (and true (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))))) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst107.0 st107))

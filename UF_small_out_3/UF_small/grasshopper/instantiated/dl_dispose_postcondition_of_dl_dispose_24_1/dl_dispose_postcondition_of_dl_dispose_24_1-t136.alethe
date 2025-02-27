@@ -1,0 +1,6 @@
+(assume nst136.0 (not (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= prv_2$0 sk_?e$0))))
+(assume t132 (or (not (forall ((?x Loc) (?y Loc)) (or (not (Btwn$0 next$0 ?x ?y ?x)) (= ?y ?x)))) (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= prv_2$0 sk_?e$0))))
+(assume t135 (forall ((?x Loc) (?y Loc)) (or (not (Btwn$0 next$0 ?x ?y ?x)) (= ?y ?x))))
+(step t132' (cl (not (forall ((?x Loc) (?y Loc)) (or (not (Btwn$0 next$0 ?x ?y ?x)) (= ?y ?x)))) (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= prv_2$0 sk_?e$0))) :rule or :premises (t132))
+(step st136 (cl (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= prv_2$0 sk_?e$0))) :rule resolution :premises (t132' t135))
+(step t.end (cl) :rule resolution :premises (nst136.0 st136))

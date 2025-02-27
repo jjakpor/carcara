@@ -1,0 +1,5 @@
+(assume nst42.0 (not (= (not (= start1$0 null$0)) (not (= start1$0 (read$0 next$0 end1$0))))))
+(assume t12 (= (not (= start1$0 null$0)) (not (= null$0 start1$0))))
+(assume t41 (= (not (= null$0 start1$0)) (not (= start1$0 (read$0 next$0 end1$0)))))
+(step st42 (cl (= (not (= start1$0 null$0)) (not (= start1$0 (read$0 next$0 end1$0))))) :rule trans :premises (t12 t41))
+(step t.end (cl) :rule resolution :premises (nst42.0 st42))

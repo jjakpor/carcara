@@ -1,0 +1,7 @@
+(assume nst43.0 (not (not (= prv_5$0 (read$0 next$0 d_init$0)))))
+(assume a34 (not (= curr_init$0 null$0)))
+(assume t6 (or (not (= (not (= curr_init$0 null$0)) (not (= prv_5$0 (read$0 next$0 d_init$0))))) (not (not (= curr_init$0 null$0))) (not (= prv_5$0 (read$0 next$0 d_init$0)))))
+(assume t42 (= (not (= curr_init$0 null$0)) (not (= prv_5$0 (read$0 next$0 d_init$0)))))
+(step t6' (cl (not (= (not (= curr_init$0 null$0)) (not (= prv_5$0 (read$0 next$0 d_init$0))))) (not (not (= curr_init$0 null$0))) (not (= prv_5$0 (read$0 next$0 d_init$0)))) :rule or :premises (t6))
+(step st43 (cl (not (= prv_5$0 (read$0 next$0 d_init$0)))) :rule resolution :premises (t6' t42 a34))
+(step t.end (cl) :rule resolution :premises (nst43.0 st43))

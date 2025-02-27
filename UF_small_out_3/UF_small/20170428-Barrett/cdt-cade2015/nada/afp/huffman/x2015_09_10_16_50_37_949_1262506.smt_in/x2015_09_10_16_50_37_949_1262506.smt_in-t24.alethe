@@ -1,0 +1,6 @@
+(assume nst24.0 (not (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$))))
+(assume a22 (forall ((?v0 A_tree$) (?v1 A$)) (fun_app$b (less_eq$ (depth$ ?v0 ?v1)) (height$ ?v0))))
+(assume t23 (or (not (forall ((?v0 A_tree$) (?v1 A$)) (fun_app$b (less_eq$ (depth$ ?v0 ?v1)) (height$ ?v0)))) (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$))))
+(step t23' (cl (not (forall ((?v0 A_tree$) (?v1 A$)) (fun_app$b (less_eq$ (depth$ ?v0 ?v1)) (height$ ?v0)))) (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$))) :rule or :premises (t23))
+(step st24 (cl (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$))) :rule resolution :premises (t23' a22))
+(step t.end (cl) :rule resolution :premises (nst24.0 st24))

@@ -1,0 +1,7 @@
+(assume nst200.0 (not (not (models empty (orR (notR (pR aR)) (notR (qR bR)))))))
+(assume nst200.1 (not (or (models empty (notR (pR aR))) (models empty (notR (qR bR))))))
+(assume nst200.2 (not (not (= (models empty (orR (notR (pR aR)) (notR (qR bR)))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR))))))))
+(assume t199 (or (not (= (models empty (orR (notR (pR aR)) (notR (qR bR)))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR)))))) (not (models empty (orR (notR (pR aR)) (notR (qR bR))))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR))))))
+(step t199' (cl (not (= (models empty (orR (notR (pR aR)) (notR (qR bR)))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR)))))) (not (models empty (orR (notR (pR aR)) (notR (qR bR))))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR))))) :rule or :premises (t199))
+(step st200 (cl (not (models empty (orR (notR (pR aR)) (notR (qR bR))))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR)))) (not (= (models empty (orR (notR (pR aR)) (notR (qR bR)))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR))))))) :rule reordering :premises (t199'))
+(step t.end (cl) :rule resolution :premises (nst200.0 nst200.1 nst200.2 st200))

@@ -1,0 +1,4 @@
+(assume nst7.0 (not (or (not (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))) (not (not (lnull$ (lconcat$ xssa$)))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))))
+(assume nst7.1 (not (not (not (not (lnull$ (lconcat$ xssa$)))))))
+(step st7 (cl (or (not (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))) (not (not (lnull$ (lconcat$ xssa$)))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))) (not (not (not (lnull$ (lconcat$ xssa$)))))) :rule or_neg :args (1))
+(step t.end (cl) :rule resolution :premises (nst7.0 nst7.1 st7))

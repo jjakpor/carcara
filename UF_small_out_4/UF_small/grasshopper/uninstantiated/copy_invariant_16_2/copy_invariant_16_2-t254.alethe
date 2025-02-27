@@ -1,0 +1,3 @@
+(assume nst254.0 (not (= (not (= lst$0 sk_?e$0)) (not (= lst$0 sk_?e$0)))))
+(step st254 (cl (= (not (= lst$0 sk_?e$0)) (not (= lst$0 sk_?e$0)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst254.0 st254))

@@ -1,0 +1,5 @@
+(assume nst169.0 (not (not (or (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0) (and (or (= cp_2$0 sk_?e$0) (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))))))
+(assume nst169.1 (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0)))
+(assume nst169.2 (not (and (or (= cp_2$0 sk_?e$0) (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))))
+(step st169 (cl (not (or (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0) (and (or (= cp_2$0 sk_?e$0) (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))) (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0) (and (or (= cp_2$0 sk_?e$0) (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))) :rule or_pos)
+(step t.end (cl) :rule resolution :premises (nst169.0 nst169.1 nst169.2 st169))

@@ -1,0 +1,5 @@
+(assume nst141.0 (not (not (= (models empty (notR (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR))))) (not (models empty (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR)))))))))
+(assume nst141.1 (not (not (models empty (notR (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR))))))))
+(assume nst141.2 (not (not (models empty (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR)))))))
+(step st141 (cl (not (= (models empty (notR (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR))))) (not (models empty (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR))))))) (not (models empty (notR (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR)))))) (not (models empty (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR)))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst141.0 nst141.1 nst141.2 st141))

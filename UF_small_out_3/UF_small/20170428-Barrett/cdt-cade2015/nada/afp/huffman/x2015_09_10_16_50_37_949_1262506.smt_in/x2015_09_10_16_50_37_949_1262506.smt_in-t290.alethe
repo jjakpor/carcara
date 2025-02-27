@@ -1,0 +1,6 @@
+(assume nst290.0 (not (not (= b$ c$))))
+(assume nst290.1 (not (= c$ d$)))
+(assume nst290.2 (not (not (= b$ d$))))
+(assume t289 (or (not (= b$ c$)) (= c$ d$) (not (= b$ d$))))
+(step st290 (cl (not (= b$ c$)) (= c$ d$) (not (= b$ d$))) :rule or :premises (t289))
+(step t.end (cl) :rule resolution :premises (nst290.0 nst290.1 nst290.2 st290))

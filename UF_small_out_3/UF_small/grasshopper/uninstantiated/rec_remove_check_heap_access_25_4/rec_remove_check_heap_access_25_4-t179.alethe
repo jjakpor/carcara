@@ -1,0 +1,5 @@
+(assume nst179.0 (not (= (intersection$0 Alloc_1$0 sk_?X_10$0) (intersection$0 Alloc_1$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)))))
+(assume t167 (= Alloc_1$0 Alloc_1$0))
+(assume t177 (= sk_?X_10$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)))
+(step st179 (cl (= (intersection$0 Alloc_1$0 sk_?X_10$0) (intersection$0 Alloc_1$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)))) :rule cong :premises (t167 t177))
+(step t.end (cl) :rule resolution :premises (nst179.0 st179))

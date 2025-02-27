@@ -1,0 +1,3 @@
+(assume nst189.0 (not (= null$0 null$0)))
+(step st189 (cl (= null$0 null$0)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst189.0 st189))

@@ -1,0 +1,6 @@
+(assume nst29.0 (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39))))
+(assume t23 (or (not (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39)))) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39))))
+(assume t28 (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39))))
+(step t23' (cl (not (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39)))) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39))) :rule or :premises (t23))
+(step st29 (cl (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39))) :rule resolution :premises (t23' t28))
+(step t.end (cl) :rule resolution :premises (nst29.0 st29))

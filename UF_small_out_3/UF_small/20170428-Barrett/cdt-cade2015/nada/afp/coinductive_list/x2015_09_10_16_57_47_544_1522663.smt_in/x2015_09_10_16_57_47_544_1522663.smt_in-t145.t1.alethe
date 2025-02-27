@@ -1,0 +1,6 @@
+(assume nt145.0 (not (= (forall ((?v0 A_llist$)) (=> (not (fun_app$q lnull$d ?v0)) (= (lCons$ (lhd$ ?v0) (ltl$ ?v0)) ?v0))) (forall ((?v0 A_llist$)) (=> (not (fun_app$q lnull$d ?v0)) (= ?v0 (lCons$ (lhd$ ?v0) (ltl$ ?v0))))))))
+(anchor :step t145 :args ((?v0 A_llist$) (:= (?v0 A_llist$) ?v0)))
+(step st145.t1 (cl (= (= (lCons$ (lhd$ ?v0) (ltl$ ?v0)) ?v0) (= ?v0 (lCons$ (lhd$ ?v0) (ltl$ ?v0))))) :rule hole)
+(step t145.t2 (cl (= (=> (not (fun_app$q lnull$d ?v0)) (= (lCons$ (lhd$ ?v0) (ltl$ ?v0)) ?v0)) (=> (not (fun_app$q lnull$d ?v0)) (= ?v0 (lCons$ (lhd$ ?v0) (ltl$ ?v0)))))) :rule trust)
+(step t145 (cl (= (forall ((?v0 A_llist$)) (=> (not (fun_app$q lnull$d ?v0)) (= (lCons$ (lhd$ ?v0) (ltl$ ?v0)) ?v0))) (forall ((?v0 A_llist$)) (=> (not (fun_app$q lnull$d ?v0)) (= ?v0 (lCons$ (lhd$ ?v0) (ltl$ ?v0))))))) :rule bind)
+(step t.end (cl) :rule resolution :premises (nt145.0 t145))

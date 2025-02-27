@@ -1,0 +1,4 @@
+(assume nst337.0 (not (not (and (or (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (not (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))))))
+(assume nst337.1 (not (not (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))))
+(step st337 (cl (not (and (or (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (not (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))))) (not (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))) :rule and_pos :args (1))
+(step t.end (cl) :rule resolution :premises (nst337.0 nst337.1 st337))

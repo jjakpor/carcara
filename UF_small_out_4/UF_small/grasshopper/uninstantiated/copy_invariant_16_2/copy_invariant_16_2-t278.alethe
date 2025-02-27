@@ -1,0 +1,5 @@
+(assume nst278.0 (not (and (in$0 sk_?e$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0))))
+(assume nst278.1 (not (not (in$0 sk_?e$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))))
+(assume nst278.2 (not (not (= lst$0 sk_?e$0))))
+(step st278 (cl (and (in$0 sk_?e$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0)) (not (in$0 sk_?e$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))) (not (= lst$0 sk_?e$0))) :rule and_neg)
+(step t.end (cl) :rule resolution :premises (nst278.0 nst278.1 nst278.2 st278))

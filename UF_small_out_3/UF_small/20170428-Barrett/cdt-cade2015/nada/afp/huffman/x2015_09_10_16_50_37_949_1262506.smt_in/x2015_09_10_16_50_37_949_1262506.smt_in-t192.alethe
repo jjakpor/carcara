@@ -1,0 +1,5 @@
+(assume nst192.0 (not (not (or (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$))))))
+(assume nst192.1 (not (not (consistent$ t$))))
+(assume nst192.2 (not (= t$ (fun_app$f (swapSyms$ t$ b$) b$))))
+(step st192 (cl (not (or (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$)))) (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$))) :rule or_pos)
+(step t.end (cl) :rule resolution :premises (nst192.0 nst192.1 nst192.2 st192))

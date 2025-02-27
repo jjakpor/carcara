@@ -1,0 +1,4 @@
+(assume nst250.0 (not (or (not (not (= a$ d$))) (not (not (= b$ c$))))))
+(assume nst250.1 (not (not (not (not (= a$ d$))))))
+(step st250 (cl (or (not (not (= a$ d$))) (not (not (= b$ c$)))) (not (not (not (= a$ d$))))) :rule or_neg :args (0))
+(step t.end (cl) :rule resolution :premises (nst250.0 nst250.1 st250))

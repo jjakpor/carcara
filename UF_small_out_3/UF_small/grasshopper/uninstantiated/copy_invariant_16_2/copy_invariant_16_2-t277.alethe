@@ -1,0 +1,6 @@
+(assume nst277.0 (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))
+(assume nst277.1 (not (not (= lst$0 sk_?e$0))))
+(assume nst277.2 (not (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))))
+(assume t276 (or (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)) (not (= lst$0 sk_?e$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))))
+(step st277 (cl (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)) (not (= lst$0 sk_?e$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) :rule or :premises (t276))
+(step t.end (cl) :rule resolution :premises (nst277.0 nst277.1 nst277.2 st277))

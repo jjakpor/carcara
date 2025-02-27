@@ -1,0 +1,7 @@
+(assume nst37.0 (not (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))))
+(assume a25 (= (read$0 next_2$0 root_x$0) null$0))
+(assume t31 (or (not (= (= (read$0 next_2$0 root_x$0) null$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)))) (not (= (read$0 next_2$0 root_x$0) null$0)) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))))
+(assume t36 (= (= (read$0 next_2$0 root_x$0) null$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))))
+(step t31' (cl (not (= (= (read$0 next_2$0 root_x$0) null$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)))) (not (= (read$0 next_2$0 root_x$0) null$0)) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) :rule or :premises (t31))
+(step st37 (cl (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) :rule resolution :premises (t31' t36 a25))
+(step t.end (cl) :rule resolution :premises (nst37.0 st37))

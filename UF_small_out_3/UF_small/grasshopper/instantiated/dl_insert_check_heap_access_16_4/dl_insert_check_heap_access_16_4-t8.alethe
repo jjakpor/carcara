@@ -1,0 +1,5 @@
+(assume nst8.0 (not (not (= (= FP$0 sk_?X$0) (= FP$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0))))))
+(assume nst8.1 (not (not (= FP$0 sk_?X$0))))
+(assume nst8.2 (not (= FP$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0))))
+(step st8 (cl (not (= (= FP$0 sk_?X$0) (= FP$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0)))) (not (= FP$0 sk_?X$0)) (= FP$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst8.0 nst8.1 nst8.2 st8))

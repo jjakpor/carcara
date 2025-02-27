@@ -1,0 +1,5 @@
+(assume nst222.0 (not (= (not (= root_x$0 root_x$0)) false)))
+(assume t220 (= (not (= root_x$0 root_x$0)) (not true)))
+(assume t221 (= (not true) false))
+(step st222 (cl (= (not (= root_x$0 root_x$0)) false)) :rule trans :premises (t220 t221))
+(step t.end (cl) :rule resolution :premises (nst222.0 st222))

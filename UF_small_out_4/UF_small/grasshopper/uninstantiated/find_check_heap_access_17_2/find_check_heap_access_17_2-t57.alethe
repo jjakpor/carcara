@@ -1,0 +1,4 @@
+(assume nst57.0 (not (= (not (in$0 x$0 FP$0)) (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)))))))
+(assume t56 (= (in$0 x$0 FP$0) (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)))))
+(step st57 (cl (= (not (in$0 x$0 FP$0)) (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)))))) :rule cong :premises (t56))
+(step t.end (cl) :rule resolution :premises (nst57.0 st57))

@@ -1,0 +1,5 @@
+(assume nst50.0 (not (not (= (models empty (orR (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))) (pR aR))) (or (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (pR aR)))))))
+(assume nst50.1 (not (models empty (orR (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))) (pR aR)))))
+(assume nst50.2 (not (not (or (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (pR aR))))))
+(step st50 (cl (not (= (models empty (orR (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))) (pR aR))) (or (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (pR aR))))) (models empty (orR (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))) (pR aR))) (not (or (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (pR aR))))) :rule equiv_pos1)
+(step t.end (cl) :rule resolution :premises (nst50.0 nst50.1 nst50.2 st50))

@@ -1,0 +1,3 @@
+(assume nst119.0 (not (= (= (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))) (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))) (= (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)))))))
+(step st119 (cl (= (= (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))) (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))) (= (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)))))) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst119.0 st119))

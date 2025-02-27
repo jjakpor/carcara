@@ -1,0 +1,5 @@
+(assume nt17.0 (not (= (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$)))) (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))))
+(anchor :step t17 :args ((?v1 A$) (?v2 A_llist$) (:= (?v1 A$) ?v1) (:= (?v2 A_llist$) ?v2)))
+(step t17.t1 (cl (= (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$))) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))) :rule trust)
+(step t17 (cl (= (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$)))) (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))) :rule bind)
+(step t.end (cl) :rule resolution :premises (nt17.0 t17))

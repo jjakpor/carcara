@@ -1,0 +1,6 @@
+(assume nst44.0 (not (not (and (= end1$0 (read$0 next$0 end1$0)) (= start1$0 (read$0 next$0 end1$0))))))
+(assume t9 (or (= start1$0 (read$0 next$0 end1$0)) (not (and (= end1$0 (read$0 next$0 end1$0)) (= start1$0 (read$0 next$0 end1$0))))))
+(assume t43 (not (= start1$0 (read$0 next$0 end1$0))))
+(step t9' (cl (= start1$0 (read$0 next$0 end1$0)) (not (and (= end1$0 (read$0 next$0 end1$0)) (= start1$0 (read$0 next$0 end1$0))))) :rule or :premises (t9))
+(step st44 (cl (not (and (= end1$0 (read$0 next$0 end1$0)) (= start1$0 (read$0 next$0 end1$0))))) :rule resolution :premises (t9' t43))
+(step t.end (cl) :rule resolution :premises (nst44.0 st44))

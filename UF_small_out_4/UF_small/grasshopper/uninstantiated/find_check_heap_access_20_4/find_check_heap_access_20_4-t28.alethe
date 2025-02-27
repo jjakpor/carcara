@@ -1,0 +1,5 @@
+(assume nst28.0 (not (not (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))))))
+(assume nst28.1 (not (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))))
+(assume t27 (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))))
+(step st28 (cl (not (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) :rule implies :premises (t27))
+(step t.end (cl) :rule resolution :premises (nst28.0 nst28.1 st28))

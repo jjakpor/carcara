@@ -1,0 +1,5 @@
+(assume nst17.0 (not (not (= (or (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 sk_?X_11$0 next$0 lst$0 null$0))) (or (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0)))))))
+(assume nst17.1 (not (not (or (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 sk_?X_11$0 next$0 lst$0 null$0))))))
+(assume nst17.2 (not (or (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0)))))
+(step st17 (cl (not (= (or (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 sk_?X_11$0 next$0 lst$0 null$0))) (or (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0))))) (not (or (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 sk_?X_11$0 next$0 lst$0 null$0)))) (or (Btwn$0 next$0 lst$0 null$0 null$0) (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst17.0 nst17.1 nst17.2 st17))

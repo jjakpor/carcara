@@ -1,0 +1,6 @@
+(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (union (difference c a) (difference c b)))) (member ?x (difference c (intersection a b)))))))
+(define-fun @quantifiers_skolemize_4 () Elem (choice ((?x Elem)) (not (or (not (member ?x (difference c (intersection a b)))) (member ?x (union (difference c a) (difference c b)))))))
+(assume nst253.0 (not (=> (forall ((?x Elem) (?s1 Set) (?s2 Set)) (= (and (member ?x ?s1) (not (member ?x ?s2))) (member ?x (difference ?s1 ?s2)))) (= (and (member @quantifiers_skolemize_4 c) (not (member @quantifiers_skolemize_4 b))) (member @quantifiers_skolemize_4 (difference c b))))))
+(assume nst253.1 (not (forall ((?x Elem) (?s1 Set) (?s2 Set)) (= (and (member ?x ?s1) (not (member ?x ?s2))) (member ?x (difference ?s1 ?s2))))))
+(step st253 (cl (=> (forall ((?x Elem) (?s1 Set) (?s2 Set)) (= (and (member ?x ?s1) (not (member ?x ?s2))) (member ?x (difference ?s1 ?s2)))) (= (and (member @quantifiers_skolemize_4 c) (not (member @quantifiers_skolemize_4 b))) (member @quantifiers_skolemize_4 (difference c b)))) (forall ((?x Elem) (?s1 Set) (?s2 Set)) (= (and (member ?x ?s1) (not (member ?x ?s2))) (member ?x (difference ?s1 ?s2))))) :rule implies_neg1)
+(step t.end (cl) :rule resolution :premises (nst253.0 nst253.1 st253))

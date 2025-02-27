@@ -1,0 +1,5 @@
+(assume nst6.0 (not (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))))))
+(assume nst6.1 (not (= (models empty (notR (pR aR))) (not (models empty (pR aR))))))
+(assume t5 (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (pR aR))) (not (models empty (pR aR))))))
+(step st6 (cl (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (pR aR))) (not (models empty (pR aR))))) :rule implies :premises (t5))
+(step t.end (cl) :rule resolution :premises (nst6.0 nst6.1 st6))

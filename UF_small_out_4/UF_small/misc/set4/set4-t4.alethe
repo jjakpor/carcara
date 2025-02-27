@@ -1,0 +1,3 @@
+(assume a6 (not (member x s2)))
+(assume t3 (member x s2))
+(step st4 (cl) :rule resolution :premises (a6 t3))

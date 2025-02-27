@@ -1,0 +1,5 @@
+(assume nst55.0 (not (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)))))
+(assume t52 (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_4$0)))
+(assume t54 (= (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_4$0) (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))))
+(step st55 (cl (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)))) :rule trans :premises (t52 t54))
+(step t.end (cl) :rule resolution :premises (nst55.0 st55))

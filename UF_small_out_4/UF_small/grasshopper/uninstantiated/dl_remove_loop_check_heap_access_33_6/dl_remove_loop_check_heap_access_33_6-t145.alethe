@@ -1,0 +1,3 @@
+(assume nst145.0 (not (= (= Axiom_40$0 true) Axiom_40$0)))
+(step st145 (cl (= (= Axiom_40$0 true) Axiom_40$0)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst145.0 st145))

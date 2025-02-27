@@ -1,0 +1,8 @@
+(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (union a b))) (member ?x c)))))
+(assume nst23.0 (not (not (forall ((?x Elem)) (or (not (member ?x (union a b))) (member ?x c))))))
+(assume a10 (not (subset (union a b) c)))
+(assume t14 (or (subset (union a b) c) (not (forall ((?x Elem)) (or (not (member ?x (union a b))) (member ?x c)))) (not (or (subset (union a b) c) (not (forall ((?x Elem)) (or (not (member ?x (union a b))) (member ?x c))))))))
+(assume t22 (or (subset (union a b) c) (not (forall ((?x Elem)) (or (not (member ?x (union a b))) (member ?x c))))))
+(step t14' (cl (subset (union a b) c) (not (forall ((?x Elem)) (or (not (member ?x (union a b))) (member ?x c)))) (not (or (subset (union a b) c) (not (forall ((?x Elem)) (or (not (member ?x (union a b))) (member ?x c))))))) :rule or :premises (t14))
+(step st23 (cl (not (forall ((?x Elem)) (or (not (member ?x (union a b))) (member ?x c))))) :rule resolution :premises (t14' a10 t22))
+(step t.end (cl) :rule resolution :premises (nst23.0 st23))

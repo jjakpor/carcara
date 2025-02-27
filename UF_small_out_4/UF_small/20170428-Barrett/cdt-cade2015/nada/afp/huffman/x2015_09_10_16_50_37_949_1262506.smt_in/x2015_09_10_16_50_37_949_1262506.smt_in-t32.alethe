@@ -1,0 +1,3 @@
+(assume nst32.0 (not (= (not (= (fun_app$f (swapSyms$ t$ a$) d$) (ite (= b$ c$) (fun_app$f (swapSyms$ t$ a$) d$) (fun_app$f (swapSyms$ (fun_app$f (swapSyms$ t$ a$) c$) b$) d$)))) (not (= (fun_app$f (swapSyms$ t$ a$) d$) (ite (= b$ c$) (fun_app$f (swapSyms$ t$ a$) d$) (fun_app$f (swapSyms$ (fun_app$f (swapSyms$ t$ a$) c$) b$) d$)))))))
+(step st32 (cl (= (not (= (fun_app$f (swapSyms$ t$ a$) d$) (ite (= b$ c$) (fun_app$f (swapSyms$ t$ a$) d$) (fun_app$f (swapSyms$ (fun_app$f (swapSyms$ t$ a$) c$) b$) d$)))) (not (= (fun_app$f (swapSyms$ t$ a$) d$) (ite (= b$ c$) (fun_app$f (swapSyms$ t$ a$) d$) (fun_app$f (swapSyms$ (fun_app$f (swapSyms$ t$ a$) c$) b$) d$)))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst32.0 st32))

@@ -1,0 +1,7 @@
+(assume nst131.0 (not (= sk_?X_16$0 (setenum$0 root_x$0))))
+(assume a52 (= sk_?X_15$0 (setenum$0 root_x$0)))
+(assume t127 (or (not (= (= sk_?X_15$0 (setenum$0 root_x$0)) (= sk_?X_16$0 (setenum$0 root_x$0)))) (not (= sk_?X_15$0 (setenum$0 root_x$0))) (= sk_?X_16$0 (setenum$0 root_x$0))))
+(assume t130 (= (= sk_?X_15$0 (setenum$0 root_x$0)) (= sk_?X_16$0 (setenum$0 root_x$0))))
+(step t127' (cl (not (= (= sk_?X_15$0 (setenum$0 root_x$0)) (= sk_?X_16$0 (setenum$0 root_x$0)))) (not (= sk_?X_15$0 (setenum$0 root_x$0))) (= sk_?X_16$0 (setenum$0 root_x$0))) :rule or :premises (t127))
+(step st131 (cl (= sk_?X_16$0 (setenum$0 root_x$0))) :rule resolution :premises (t127' t130 a52))
+(step t.end (cl) :rule resolution :premises (nst131.0 st131))

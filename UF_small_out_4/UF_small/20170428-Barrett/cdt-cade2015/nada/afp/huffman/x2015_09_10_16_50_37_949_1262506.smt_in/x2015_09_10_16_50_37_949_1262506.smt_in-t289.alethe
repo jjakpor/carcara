@@ -1,0 +1,7 @@
+(assume nst289.0 (not (or (not (= b$ c$)) (= c$ d$) (not (= b$ d$)))))
+(assume t265 (or (not (= (or (not (= b$ c$)) (not (not (= c$ d$))) (not (= b$ d$))) (or (not (= b$ c$)) (= c$ d$) (not (= b$ d$))))) (not (or (not (= b$ c$)) (not (not (= c$ d$))) (not (= b$ d$)))) (or (not (= b$ c$)) (= c$ d$) (not (= b$ d$)))))
+(assume t269 (= (or (not (= b$ c$)) (not (not (= c$ d$))) (not (= b$ d$))) (or (not (= b$ c$)) (= c$ d$) (not (= b$ d$)))))
+(assume t288 (or (not (= b$ c$)) (not (not (= c$ d$))) (not (= b$ d$))))
+(step t265' (cl (not (= (or (not (= b$ c$)) (not (not (= c$ d$))) (not (= b$ d$))) (or (not (= b$ c$)) (= c$ d$) (not (= b$ d$))))) (not (or (not (= b$ c$)) (not (not (= c$ d$))) (not (= b$ d$)))) (or (not (= b$ c$)) (= c$ d$) (not (= b$ d$)))) :rule or :premises (t265))
+(step st289 (cl (or (not (= b$ c$)) (= c$ d$) (not (= b$ d$)))) :rule resolution :premises (t265' t269 t288))
+(step t.end (cl) :rule resolution :premises (nst289.0 st289))

@@ -1,0 +1,4 @@
+(assume nst8.0 (not (not (and (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)))) (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))))))
+(assume nst8.1 (not (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$))))))
+(step st8 (cl (not (and (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)))) (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$))))) (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$))))) :rule and_pos :args (0))
+(step t.end (cl) :rule resolution :premises (nst8.0 nst8.1 st8))

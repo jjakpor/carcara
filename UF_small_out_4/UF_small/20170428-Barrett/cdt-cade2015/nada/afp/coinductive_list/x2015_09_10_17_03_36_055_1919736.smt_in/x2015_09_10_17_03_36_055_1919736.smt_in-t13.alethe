@@ -1,0 +1,4 @@
+(assume nst13.0 (not (= infinity$ (llength$a xs$))))
+(assume a1 (= (llength$a xs$) infinity$))
+(step st13 (cl (= infinity$ (llength$a xs$))) :rule symm :premises (a1))
+(step t.end (cl) :rule resolution :premises (nst13.0 st13))

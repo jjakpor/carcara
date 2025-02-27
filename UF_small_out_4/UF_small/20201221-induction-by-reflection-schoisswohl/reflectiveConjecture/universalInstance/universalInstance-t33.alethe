@@ -1,0 +1,5 @@
+(assume nst33.0 (not (not (= (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))) (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha))))))))
+(assume nst33.1 (not (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))))))
+(assume nst33.2 (not (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha))))))
+(step st33 (cl (not (= (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))) (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha)))))) (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst33.0 nst33.1 nst33.2 st33))

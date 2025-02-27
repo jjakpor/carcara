@@ -1,0 +1,5 @@
+(assume nst159.0 (not (= (setminus$0 FP$0 FP_1$0) (setminus$0 sk_?X_4$0 sk_?X_3$0))))
+(assume t30 (= FP_1$0 sk_?X_3$0))
+(assume t48 (= FP$0 sk_?X_4$0))
+(step st159 (cl (= (setminus$0 FP$0 FP_1$0) (setminus$0 sk_?X_4$0 sk_?X_3$0))) :rule cong :premises (t48 t30))
+(step t.end (cl) :rule resolution :premises (nst159.0 st159))

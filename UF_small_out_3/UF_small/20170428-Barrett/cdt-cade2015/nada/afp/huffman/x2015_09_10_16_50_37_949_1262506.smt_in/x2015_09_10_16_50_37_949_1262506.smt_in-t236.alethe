@@ -1,0 +1,3 @@
+(assume nst236.0 (not (= (fun_app$f (swapSyms$ t$ a$) d$) (fun_app$f (swapSyms$ t$ a$) d$))))
+(step st236 (cl (= (fun_app$f (swapSyms$ t$ a$) d$) (fun_app$f (swapSyms$ t$ a$) d$))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst236.0 st236))

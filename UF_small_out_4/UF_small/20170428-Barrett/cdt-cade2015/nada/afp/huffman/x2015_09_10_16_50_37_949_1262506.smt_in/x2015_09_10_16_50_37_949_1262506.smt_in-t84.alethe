@@ -1,0 +1,3 @@
+(assume nst84.0 (not (= (= a$ d$) (= a$ d$))))
+(step st84 (cl (= (= a$ d$) (= a$ d$))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst84.0 st84))

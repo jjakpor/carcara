@@ -1,0 +1,8 @@
+(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (intersection a (intersection b c)))) (member ?x (intersection (intersection a b) c))))))
+(define-fun @quantifiers_skolemize_4 () Elem (choice ((?x Elem)) (not (or (not (member ?x (intersection (intersection a b) c))) (member ?x (intersection a (intersection b c)))))))
+(assume nst22.0 (not (member @quantifiers_skolemize_4 (intersection (intersection a b) c))))
+(assume nst22.1 (not (or (not (member @quantifiers_skolemize_4 (intersection (intersection a b) c))) (member @quantifiers_skolemize_4 (intersection a (intersection b c))))))
+(assume t21 (or (or (not (member @quantifiers_skolemize_4 (intersection (intersection a b) c))) (member @quantifiers_skolemize_4 (intersection a (intersection b c)))) (member @quantifiers_skolemize_4 (intersection (intersection a b) c))))
+(step t21' (cl (or (not (member @quantifiers_skolemize_4 (intersection (intersection a b) c))) (member @quantifiers_skolemize_4 (intersection a (intersection b c)))) (member @quantifiers_skolemize_4 (intersection (intersection a b) c))) :rule or :premises (t21))
+(step st22 (cl (member @quantifiers_skolemize_4 (intersection (intersection a b) c)) (or (not (member @quantifiers_skolemize_4 (intersection (intersection a b) c))) (member @quantifiers_skolemize_4 (intersection a (intersection b c))))) :rule reordering :premises (t21'))
+(step t.end (cl) :rule resolution :premises (nst22.0 nst22.1 st22))

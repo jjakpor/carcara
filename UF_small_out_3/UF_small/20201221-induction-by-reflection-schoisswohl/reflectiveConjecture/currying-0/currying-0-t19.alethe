@@ -1,0 +1,6 @@
+(assume nst19.0 (not (not (models empty (rR cR)))))
+(assume nst19.1 (not (or (models empty (notR (qR bR))) (models empty (rR cR)))))
+(assume t18 (or (or (models empty (notR (qR bR))) (models empty (rR cR))) (not (models empty (rR cR)))))
+(step t18' (cl (or (models empty (notR (qR bR))) (models empty (rR cR))) (not (models empty (rR cR)))) :rule or :premises (t18))
+(step st19 (cl (not (models empty (rR cR))) (or (models empty (notR (qR bR))) (models empty (rR cR)))) :rule reordering :premises (t18'))
+(step t.end (cl) :rule resolution :premises (nst19.0 nst19.1 st19))

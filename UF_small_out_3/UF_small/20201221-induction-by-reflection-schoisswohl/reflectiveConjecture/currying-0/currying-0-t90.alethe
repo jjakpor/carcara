@@ -1,0 +1,4 @@
+(assume nst90.0 (not (or (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (models empty (rR cR)))))
+(assume nst90.1 (not (not (models empty (rR cR)))))
+(step st90 (cl (or (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (models empty (rR cR))) (not (models empty (rR cR)))) :rule or_neg :args (1))
+(step t.end (cl) :rule resolution :premises (nst90.0 nst90.1 st90))

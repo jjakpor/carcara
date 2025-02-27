@@ -1,0 +1,8 @@
+(assume nst27.0 (not (=> (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78))) (= (f75 f65 f76 f76) (f64 f65 f66 f67 f72 f78)))))
+(assume nst27.1 (not (= (f75 f65 f76 f76) (f64 f65 f66 f67 f72 f78))))
+(assume t25 (or (=> (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78))) (= (f75 f65 f76 f76) (f64 f65 f66 f67 f72 f78))) (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78)))))
+(assume t26 (or (not (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78)))) (= (f75 f65 f76 f76) (f64 f65 f66 f67 f72 f78))))
+(step t25' (cl (=> (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78))) (= (f75 f65 f76 f76) (f64 f65 f66 f67 f72 f78))) (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78)))) :rule or :premises (t25))
+(step t26' (cl (not (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78)))) (= (f75 f65 f76 f76) (f64 f65 f66 f67 f72 f78))) :rule or :premises (t26))
+(step st27 (cl (=> (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78))) (= (f75 f65 f76 f76) (f64 f65 f66 f67 f72 f78))) (= (f75 f65 f76 f76) (f64 f65 f66 f67 f72 f78))) :rule resolution :premises (t25' t26'))
+(step t.end (cl) :rule resolution :premises (nst27.0 nst27.1 st27))

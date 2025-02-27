@@ -1,0 +1,5 @@
+(assume nst247.0 (not (= (or (= null$0 null$0) (not (Btwn$0 next$0 curr_init$0 null$0 null$0))) true)))
+(assume t245 (= (or (= null$0 null$0) (not (Btwn$0 next$0 curr_init$0 null$0 null$0))) (or true (not (Btwn$0 next$0 curr_init$0 null$0 null$0)))))
+(assume t246 (= (or true (not (Btwn$0 next$0 curr_init$0 null$0 null$0))) true))
+(step st247 (cl (= (or (= null$0 null$0) (not (Btwn$0 next$0 curr_init$0 null$0 null$0))) true)) :rule trans :premises (t245 t246))
+(step t.end (cl) :rule resolution :premises (nst247.0 st247))

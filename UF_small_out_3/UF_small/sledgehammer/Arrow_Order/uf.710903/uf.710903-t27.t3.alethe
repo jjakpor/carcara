@@ -1,0 +1,7 @@
+(define-fun @quantifiers_skolemize_10 () S2 (choice ((?v6 S2)) (not (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v6))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f3 f4 ?v6)))))))
+(assume nt27.0 (not (= (forall ((?v0 S2)) (= (= f1 (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v0))) (= f1 (f14 (f17 (f18 f19 f20) f9) (f5 (f6 (f7 (f3 f8 ?v0)) f9) f10))))) (forall ((?v0 S2)) (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v0))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f5 (f6 (f7 (f3 f8 ?v0)) f9) f10))))))))
+(anchor :step t27 :args ((?v0 S2) (:= (?v0 S2) ?v0)))
+(step st27.t3 (cl (= (f14 (f17 (f18 f19 f20) f9) (f5 (f6 (f7 (f3 f8 ?v0)) f9) f10)) (f14 (f17 (f18 f19 f20) f9) (f5 (f6 (f7 (f3 f8 ?v0)) f9) f10)))) :rule refl)
+(step t27.t5 (cl (= (= (= f1 (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v0))) (= f1 (f14 (f17 (f18 f19 f20) f9) (f5 (f6 (f7 (f3 f8 ?v0)) f9) f10)))) (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v0))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f5 (f6 (f7 (f3 f8 ?v0)) f9) f10)))))) :rule trust)
+(step t27 (cl (= (forall ((?v0 S2)) (= (= f1 (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v0))) (= f1 (f14 (f17 (f18 f19 f20) f9) (f5 (f6 (f7 (f3 f8 ?v0)) f9) f10))))) (forall ((?v0 S2)) (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v0))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f5 (f6 (f7 (f3 f8 ?v0)) f9) f10))))))) :rule bind)
+(step t.end (cl) :rule resolution :premises (nt27.0 t27))

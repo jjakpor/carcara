@@ -1,0 +1,5 @@
+(assume nst176.0 (not (= (setminus$0 FP$0 FP_2$0) (setminus$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)) (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))))
+(assume t148 (= FP_2$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))
+(assume t175 (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))))
+(step st176 (cl (= (setminus$0 FP$0 FP_2$0) (setminus$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)) (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))) :rule cong :premises (t175 t148))
+(step t.end (cl) :rule resolution :premises (nst176.0 st176))

@@ -1,0 +1,5 @@
+(assume nst82.0 (not (not (= (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0)))))
+(assume nst82.1 (not (not (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0))))
+(assume nst82.2 (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0)))
+(step st82 (cl (not (= (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0))) (not (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0)) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst82.0 nst82.1 nst82.2 st82))

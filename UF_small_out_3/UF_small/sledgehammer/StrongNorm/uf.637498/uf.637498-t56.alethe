@@ -1,0 +1,4 @@
+(assume nst56.0 (not (= (f115 (f133 f134 f5) f135) f1)))
+(assume a26 (and (= (f115 (f133 f134 f5) f135) f1) (= (f115 (f133 f134 f4) f135) f1)))
+(step st56 (cl (= (f115 (f133 f134 f5) f135) f1)) :rule and :premises (a26) :args (0))
+(step t.end (cl) :rule resolution :premises (nst56.0 st56))

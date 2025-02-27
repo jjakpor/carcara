@@ -1,0 +1,4 @@
+(assume nst240.0 (not (not (and (in$0 lst$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))) (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))))))
+(assume nst240.1 (not (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))))
+(step st240 (cl (not (and (in$0 lst$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))) (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))) (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) :rule and_pos :args (1))
+(step t.end (cl) :rule resolution :premises (nst240.0 nst240.1 st240))

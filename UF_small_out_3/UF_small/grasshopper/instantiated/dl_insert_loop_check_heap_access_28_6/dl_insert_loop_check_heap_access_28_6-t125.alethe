@@ -1,0 +1,3 @@
+(assume nst125.0 (not (= Axiom_32$0 Axiom_32$0)))
+(step st125 (cl (= Axiom_32$0 Axiom_32$0)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst125.0 st125))

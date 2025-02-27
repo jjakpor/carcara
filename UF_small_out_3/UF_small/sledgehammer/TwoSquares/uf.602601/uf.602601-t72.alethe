@@ -1,0 +1,3 @@
+(assume nst72.0 (not (= f11 f11)))
+(step st72 (cl (= f11 f11)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst72.0 st72))

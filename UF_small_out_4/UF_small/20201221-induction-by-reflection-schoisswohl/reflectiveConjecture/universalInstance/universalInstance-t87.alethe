@@ -1,0 +1,5 @@
+(assume nst87.0 (not (not (forall ((env env) (t0 term_alpha)) (= (models env (pR t0)) (p (eval_alpha env t0)))))))
+(assume nst87.1 (not (= (models empty (pR aR)) (p (eval_alpha empty aR)))))
+(assume t86 (or (not (forall ((env env) (t0 term_alpha)) (= (models env (pR t0)) (p (eval_alpha env t0))))) (= (models empty (pR aR)) (p (eval_alpha empty aR)))))
+(step st87 (cl (not (forall ((env env) (t0 term_alpha)) (= (models env (pR t0)) (p (eval_alpha env t0))))) (= (models empty (pR aR)) (p (eval_alpha empty aR)))) :rule or :premises (t86))
+(step t.end (cl) :rule resolution :premises (nst87.0 nst87.1 st87))

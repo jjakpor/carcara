@@ -1,0 +1,5 @@
+(assume nst40.0 (not (= (forall ((?v0 A$) (?v1 A_llist$)) (=> (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)) thesis$)) (or thesis$ (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$))))))))
+(assume t38 (= (forall ((?v0 A$) (?v1 A_llist$)) (=> (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)) thesis$)) (forall ((?v0 A$) (?v1 A_llist$)) (or (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$))) thesis$))))
+(assume t39 (= (forall ((?v0 A$) (?v1 A_llist$)) (or (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$))) thesis$)) (or thesis$ (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)))))))
+(step st40 (cl (= (forall ((?v0 A$) (?v1 A_llist$)) (=> (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)) thesis$)) (or thesis$ (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$))))))) :rule trans :premises (t38 t39))
+(step t.end (cl) :rule resolution :premises (nst40.0 st40))

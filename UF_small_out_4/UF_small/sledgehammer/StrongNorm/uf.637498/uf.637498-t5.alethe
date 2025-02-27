@@ -1,0 +1,5 @@
+(assume nst5.0 (not (= (not (= (f33 (f34 f38 (f9 f10 f11)) f39) (f33 (f34 f38 (f9 f10 f11)) f39))) false)))
+(assume t3 (= (not (= (f33 (f34 f38 (f9 f10 f11)) f39) (f33 (f34 f38 (f9 f10 f11)) f39))) (not true)))
+(assume t4 (= (not true) false))
+(step st5 (cl (= (not (= (f33 (f34 f38 (f9 f10 f11)) f39) (f33 (f34 f38 (f9 f10 f11)) f39))) false)) :rule trans :premises (t3 t4))
+(step t.end (cl) :rule resolution :premises (nst5.0 st5))

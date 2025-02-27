@@ -1,0 +1,7 @@
+(assume nst34.0 (not (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)))))
+(assume nst34.1 (not (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))))
+(assume nst34.2 (not (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))))
+(assume t33 (or (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))))
+(step t33' (cl (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) :rule or :premises (t33))
+(step st34 (cl (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))) (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))) :rule reordering :premises (t33'))
+(step t.end (cl) :rule resolution :premises (nst34.0 nst34.1 nst34.2 st34))

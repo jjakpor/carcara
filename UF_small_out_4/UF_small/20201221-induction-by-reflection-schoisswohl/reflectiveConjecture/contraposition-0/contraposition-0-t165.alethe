@@ -1,0 +1,4 @@
+(assume nst165.0 (not (or (not (= (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (models empty (orR (notR (pR aR)) (qR bR)))))) (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (not (models empty (orR (notR (pR aR)) (qR bR))))))))
+(assume nst165.1 (not (not (not (not (models empty (orR (notR (pR aR)) (qR bR))))))))
+(step st165 (cl (or (not (= (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (models empty (orR (notR (pR aR)) (qR bR)))))) (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (not (models empty (orR (notR (pR aR)) (qR bR)))))) (not (not (not (models empty (orR (notR (pR aR)) (qR bR))))))) :rule or_neg :args (2))
+(step t.end (cl) :rule resolution :premises (nst165.0 nst165.1 st165))

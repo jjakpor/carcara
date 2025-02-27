@@ -1,0 +1,5 @@
+(assume nst122.0 (not (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))))))
+(assume nst122.1 (not (= (models empty (notR (notR (orR (notR (pR aR)) (qR bR))))) (not (models empty (notR (orR (notR (pR aR)) (qR bR))))))))
+(assume t121 (or (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (notR (orR (notR (pR aR)) (qR bR))))) (not (models empty (notR (orR (notR (pR aR)) (qR bR))))))))
+(step st122 (cl (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (notR (orR (notR (pR aR)) (qR bR))))) (not (models empty (notR (orR (notR (pR aR)) (qR bR))))))) :rule or :premises (t121))
+(step t.end (cl) :rule resolution :premises (nst122.0 nst122.1 st122))

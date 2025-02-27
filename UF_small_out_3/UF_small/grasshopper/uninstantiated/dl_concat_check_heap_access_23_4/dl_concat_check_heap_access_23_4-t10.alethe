@@ -1,0 +1,5 @@
+(assume nst10.0 (not (not (= (not (= start1$0 null$0)) (not (= start1$0 (read$0 next$0 end1$0)))))))
+(assume nst10.1 (not (not (not (= start1$0 null$0)))))
+(assume nst10.2 (not (not (= start1$0 (read$0 next$0 end1$0)))))
+(step st10 (cl (not (= (not (= start1$0 null$0)) (not (= start1$0 (read$0 next$0 end1$0))))) (not (not (= start1$0 null$0))) (not (= start1$0 (read$0 next$0 end1$0)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst10.0 nst10.1 nst10.2 st10))

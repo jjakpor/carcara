@@ -1,0 +1,3 @@
+(assume nst135.0 (not (= Alloc$0 Alloc$0)))
+(step st135 (cl (= Alloc$0 Alloc$0)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst135.0 st135))

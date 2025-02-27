@@ -1,0 +1,5 @@
+(assume nst45.0 (not (= (or (not (= null$0 null$0)) (and (or (= null$0 null$0) (not (Btwn$0 next$0 lst$0 null$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 lst$0 null$0))))) (or false (not (in$0 null$0 (lseg_domain$0 next$0 lst$0 null$0)))))))
+(assume t36 (= (not (= null$0 null$0)) false))
+(assume t44 (= (and (or (= null$0 null$0) (not (Btwn$0 next$0 lst$0 null$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 lst$0 null$0)))) (not (in$0 null$0 (lseg_domain$0 next$0 lst$0 null$0)))))
+(step st45 (cl (= (or (not (= null$0 null$0)) (and (or (= null$0 null$0) (not (Btwn$0 next$0 lst$0 null$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 lst$0 null$0))))) (or false (not (in$0 null$0 (lseg_domain$0 next$0 lst$0 null$0)))))) :rule cong :premises (t36 t44))
+(step t.end (cl) :rule resolution :premises (nst45.0 st45))

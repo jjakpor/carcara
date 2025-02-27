@@ -1,0 +1,4 @@
+(assume nst3.0 (not (=> (forall ((?v0 A_llist$) (?v1 Enat$)) (or (not (fun_app$ (less_eq$ (llength$a ?v0)) ?v1)) (= ?v0 (ltake$ ?v1 ?v0)))) (or (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))) (= xs$ (ltake$ (llength$ us$) xs$))))))
+(assume nst3.1 (not (not (or (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))) (= xs$ (ltake$ (llength$ us$) xs$))))))
+(step st3 (cl (=> (forall ((?v0 A_llist$) (?v1 Enat$)) (or (not (fun_app$ (less_eq$ (llength$a ?v0)) ?v1)) (= ?v0 (ltake$ ?v1 ?v0)))) (or (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))) (= xs$ (ltake$ (llength$ us$) xs$)))) (not (or (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))) (= xs$ (ltake$ (llength$ us$) xs$))))) :rule implies_neg2)
+(step t.end (cl) :rule resolution :premises (nst3.0 nst3.1 st3))

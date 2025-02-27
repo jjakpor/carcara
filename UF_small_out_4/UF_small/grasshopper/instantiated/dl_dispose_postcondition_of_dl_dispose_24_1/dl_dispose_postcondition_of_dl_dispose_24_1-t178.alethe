@@ -1,0 +1,8 @@
+(assume nst178.0 (not (= (in$0 prv_2$0 Alloc_1$0) false)))
+(assume nst178.1 (not (in$0 prv_2$0 Alloc_1$0)))
+(assume t176 (or (= (in$0 prv_2$0 Alloc_1$0) false) (not (not (in$0 prv_2$0 Alloc_1$0)))))
+(assume t177 (or (not (not (not (in$0 prv_2$0 Alloc_1$0)))) (in$0 prv_2$0 Alloc_1$0)))
+(step t176' (cl (= (in$0 prv_2$0 Alloc_1$0) false) (not (not (in$0 prv_2$0 Alloc_1$0)))) :rule or :premises (t176))
+(step t177' (cl (not (not (not (in$0 prv_2$0 Alloc_1$0)))) (in$0 prv_2$0 Alloc_1$0)) :rule or :premises (t177))
+(step st178 (cl (= (in$0 prv_2$0 Alloc_1$0) false) (in$0 prv_2$0 Alloc_1$0)) :rule resolution :premises (t176' t177'))
+(step t.end (cl) :rule resolution :premises (nst178.0 nst178.1 st178))

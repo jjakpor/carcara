@@ -1,0 +1,3 @@
+(assume nst105.0 (not (= (fun_app$f (swapSyms$ t$ b$) c$) (fun_app$f (swapSyms$ t$ b$) c$))))
+(step st105 (cl (= (fun_app$f (swapSyms$ t$ b$) c$) (fun_app$f (swapSyms$ t$ b$) c$))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst105.0 st105))

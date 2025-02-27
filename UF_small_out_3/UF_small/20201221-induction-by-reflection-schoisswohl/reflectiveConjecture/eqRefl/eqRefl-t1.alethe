@@ -1,0 +1,4 @@
+(define-fun @quantifiers_skolemize_3 () alpha (choice ((x alpha)) (not (models (push_alpha empty v0_alpha x) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha))))))
+(assume nst1.0 (not (= (forall ((env env) (x term_alpha) (y term_alpha)) (= (models env (eq_alpha x y)) (= (eval_alpha env x) (eval_alpha env y)))) (forall ((env env) (x term_alpha) (y term_alpha)) (= (models env (eq_alpha x y)) (= (eval_alpha env x) (eval_alpha env y)))))))
+(step st1 (cl (= (forall ((env env) (x term_alpha) (y term_alpha)) (= (models env (eq_alpha x y)) (= (eval_alpha env x) (eval_alpha env y)))) (forall ((env env) (x term_alpha) (y term_alpha)) (= (models env (eq_alpha x y)) (= (eval_alpha env x) (eval_alpha env y)))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst1.0 st1))

@@ -1,0 +1,8 @@
+(assume nt1.0 (not (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x)))))
+(assume nt1.1 (not (Btwn$0 next$0 lst$0 lst$0 lst$0)))
+(anchor :step t1)
+(assume t1.a0 (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x)))
+(step st1.t0 (cl (or (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x))) (Btwn$0 next$0 lst$0 lst$0 lst$0))) :rule forall_inst :args (next$0 lst$0))
+(step t1.t2 (cl (Btwn$0 next$0 lst$0 lst$0 lst$0)) :rule trust)
+(step t1 (cl (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x))) (Btwn$0 next$0 lst$0 lst$0 lst$0)) :rule subproof :discharge (t1.a0))
+(step t.end (cl) :rule resolution :premises (nt1.0 nt1.1 t1))

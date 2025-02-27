@@ -1,0 +1,7 @@
+(assume nst148.0 (not (= Axiom_40$0 true)))
+(assume t144 (or (not (= Axiom_40$0 (= Axiom_40$0 true))) (not Axiom_40$0) (= Axiom_40$0 true)))
+(assume t146 (= Axiom_40$0 (= Axiom_40$0 true)))
+(assume t147 Axiom_40$0)
+(step t144' (cl (not (= Axiom_40$0 (= Axiom_40$0 true))) (not Axiom_40$0) (= Axiom_40$0 true)) :rule or :premises (t144))
+(step st148 (cl (= Axiom_40$0 true)) :rule resolution :premises (t144' t146 t147))
+(step t.end (cl) :rule resolution :premises (nst148.0 st148))

@@ -1,0 +1,3 @@
+(assume nst36.0 (not (= sk_?X_2$0 sk_?X_2$0)))
+(step st36 (cl (= sk_?X_2$0 sk_?X_2$0)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst36.0 st36))

@@ -1,0 +1,3 @@
+(assume nst124.0 (not (= (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)) (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)))))
+(step st124 (cl (= (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)) (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst124.0 st124))
