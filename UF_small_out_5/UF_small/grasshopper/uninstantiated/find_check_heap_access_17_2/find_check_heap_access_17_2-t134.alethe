@@ -1,0 +1,5 @@
+(assume nst134.0 (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)))
+(assume nst134.1 (not (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))))
+(assume t133 (or (Btwn$0 next$0 x$0 root_x$0 root_x$0) (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))))
+(step st134 (cl (Btwn$0 next$0 x$0 root_x$0 root_x$0) (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))) :rule or :premises (t133))
+(step t.end (cl) :rule resolution :premises (nst134.0 nst134.1 st134))

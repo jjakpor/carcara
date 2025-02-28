@@ -1,0 +1,4 @@
+(assume nst2.0 (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15)))))
+(assume nst2.1 (not (not (and (= x14 z14) (= z14 x15)))))
+(step st2 (cl (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (not (and (= x14 z14) (= z14 x15)))) :rule or_neg :args (1))
+(step t.end (cl) :rule resolution :premises (nst2.0 nst2.1 st2))

@@ -1,0 +1,7 @@
+(assume nst43.0 (not (not (= start1$0 (read$0 next$0 end1$0)))))
+(assume a25 (not (= start1$0 null$0)))
+(assume t10 (or (not (= (not (= start1$0 null$0)) (not (= start1$0 (read$0 next$0 end1$0))))) (not (not (= start1$0 null$0))) (not (= start1$0 (read$0 next$0 end1$0)))))
+(assume t42 (= (not (= start1$0 null$0)) (not (= start1$0 (read$0 next$0 end1$0)))))
+(step t10' (cl (not (= (not (= start1$0 null$0)) (not (= start1$0 (read$0 next$0 end1$0))))) (not (not (= start1$0 null$0))) (not (= start1$0 (read$0 next$0 end1$0)))) :rule or :premises (t10))
+(step st43 (cl (not (= start1$0 (read$0 next$0 end1$0)))) :rule resolution :premises (t10' t42 a25))
+(step t.end (cl) :rule resolution :premises (nst43.0 st43))

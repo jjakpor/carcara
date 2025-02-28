@@ -1,0 +1,5 @@
+(assume nst110.0 (not (= (= x0 x9) false)))
+(assume nst110.1 (not (not (not (= x0 x9)))))
+(assume t109 (= (= (= x0 x9) false) (not (= x0 x9))))
+(step st110 (cl (= (= x0 x9) false) (not (not (= x0 x9)))) :rule equiv2 :premises (t109))
+(step t.end (cl) :rule resolution :premises (nst110.0 nst110.1 st110))

@@ -1,0 +1,4 @@
+(assume nst648.0 (not (not (= (op e0 e4) (op e3 e4)))))
+(assume t647 (and (and (not (= (op e0 e4) (op e1 e4))) (not (= (op e0 e4) (op e2 e4)))) (not (= (op e0 e4) (op e3 e4)))))
+(step st648 (cl (not (= (op e0 e4) (op e3 e4)))) :rule and :premises (t647) :args (1))
+(step t.end (cl) :rule resolution :premises (nst648.0 st648))

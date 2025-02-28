@@ -1,0 +1,3 @@
+(assume nst133.0 (not (= (Add_4_4_4 y$n1s4 y$n1s4) (Add_4_4_4 y$n1s4 y$n1s4))))
+(step st133 (cl (= (Add_4_4_4 y$n1s4 y$n1s4) (Add_4_4_4 y$n1s4 y$n1s4))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst133.0 st133))

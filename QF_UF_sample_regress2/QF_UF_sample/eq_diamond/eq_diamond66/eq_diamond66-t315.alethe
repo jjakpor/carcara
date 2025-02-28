@@ -1,0 +1,5 @@
+(assume nst315.0 (not (not (= (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (and (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (=> (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (= x27 x28)))))))
+(assume nst315.1 (not (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))))
+(assume nst315.2 (not (and (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (=> (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (= x27 x28)))))
+(step st315 (cl (not (= (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (and (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (=> (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (= x27 x28))))) (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28)))) (and (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (=> (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (= x27 x28)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst315.0 nst315.1 nst315.2 st315))

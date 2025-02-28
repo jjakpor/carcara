@@ -1,0 +1,5 @@
+(assume nst180.0 (not (= (union$0 (intersection$0 Alloc_1$0 sk_?X_10$0) (setminus$0 Alloc_1$0 Alloc$0)) (union$0 (intersection$0 Alloc_1$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (setminus$0 Alloc_1$0 Alloc$0)))))
+(assume t169 (= (setminus$0 Alloc_1$0 Alloc$0) (setminus$0 Alloc_1$0 Alloc$0)))
+(assume t179 (= (intersection$0 Alloc_1$0 sk_?X_10$0) (intersection$0 Alloc_1$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0))))
+(step st180 (cl (= (union$0 (intersection$0 Alloc_1$0 sk_?X_10$0) (setminus$0 Alloc_1$0 Alloc$0)) (union$0 (intersection$0 Alloc_1$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (setminus$0 Alloc_1$0 Alloc$0)))) :rule cong :premises (t179 t169))
+(step t.end (cl) :rule resolution :premises (nst180.0 st180))

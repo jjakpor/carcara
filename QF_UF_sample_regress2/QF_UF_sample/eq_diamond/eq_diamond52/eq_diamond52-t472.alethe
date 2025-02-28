@@ -1,0 +1,5 @@
+(assume nst472.0 (not (not (= (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))) (and (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))) (=> (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))) (= x42 x43)))))))
+(assume nst472.1 (not (not (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))))))
+(assume nst472.2 (not (and (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))) (=> (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))) (= x42 x43)))))
+(step st472 (cl (not (= (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))) (and (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))) (=> (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))) (= x42 x43))))) (not (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43)))) (and (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))) (=> (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))) (= x42 x43)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst472.0 nst472.1 nst472.2 st472))

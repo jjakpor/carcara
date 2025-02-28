@@ -1,0 +1,7 @@
+(assume nst80.0 (not (not (= root_x$0 x$0))))
+(assume t37 (or (in$0 x$0 (setenum$0 root_x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0))) (not (= root_x$0 x$0))))
+(assume t64 (not (in$0 x$0 (setenum$0 root_x$0))))
+(assume t79 (in$0 root_x$0 (setenum$0 root_x$0)))
+(step t37' (cl (in$0 x$0 (setenum$0 root_x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0))) (not (= root_x$0 x$0))) :rule or :premises (t37))
+(step st80 (cl (not (= root_x$0 x$0))) :rule resolution :premises (t37' t64 t79))
+(step t.end (cl) :rule resolution :premises (nst80.0 st80))

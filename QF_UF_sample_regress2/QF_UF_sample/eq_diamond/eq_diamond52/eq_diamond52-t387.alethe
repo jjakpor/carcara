@@ -1,0 +1,3 @@
+(assume nst387.0 (not (= (= (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))) (and (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))) (=> (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))) (= x34 x35)))) true)))
+(step st387 (cl (= (= (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))) (and (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))) (=> (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))) (= x34 x35)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst387.0 st387))

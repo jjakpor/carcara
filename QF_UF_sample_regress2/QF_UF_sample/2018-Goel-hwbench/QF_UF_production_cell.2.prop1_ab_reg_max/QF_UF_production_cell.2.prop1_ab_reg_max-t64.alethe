@@ -1,0 +1,5 @@
+(assume nst64.0 (not (= y$n0s8 y$v_k_Belt)))
+(assume t6 (= y$n0s8 y$v_A))
+(assume t63 (= y$v_A y$v_k_Belt))
+(step st64 (cl (= y$n0s8 y$v_k_Belt)) :rule trans :premises (t6 t63))
+(step t.end (cl) :rule resolution :premises (nst64.0 st64))

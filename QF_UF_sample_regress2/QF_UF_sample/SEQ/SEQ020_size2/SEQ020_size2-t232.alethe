@@ -1,0 +1,5 @@
+(assume nst232.0 (not (not (= (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))) (or (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0)))))))
+(assume nst232.1 (not (not (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))))))
+(assume nst232.2 (not (or (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0)))))
+(step st232 (cl (not (= (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))) (or (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))))) (not (or (not (not (p1 (f7 c_0) c_0))) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0)))) (or (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst232.0 nst232.1 nst232.2 st232))

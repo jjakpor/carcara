@@ -1,0 +1,5 @@
+(assume nst36.0 (not (not (= (forall ((?v0 A$) (?v1 A_llist$)) (=> (= (lconcat$ xssa$) (lCons$ ?v0 ?v1)) thesis$)) (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$))))))))
+(assume nst36.1 (not (not (forall ((?v0 A$) (?v1 A_llist$)) (=> (= (lconcat$ xssa$) (lCons$ ?v0 ?v1)) thesis$)))))
+(assume nst36.2 (not (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$))))))
+(step st36 (cl (not (= (forall ((?v0 A$) (?v1 A_llist$)) (=> (= (lconcat$ xssa$) (lCons$ ?v0 ?v1)) thesis$)) (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)))))) (not (forall ((?v0 A$) (?v1 A_llist$)) (=> (= (lconcat$ xssa$) (lCons$ ?v0 ?v1)) thesis$))) (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst36.0 nst36.1 nst36.2 st36))

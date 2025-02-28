@@ -1,0 +1,6 @@
+(assume nst59.0 (not (not prt)))
+(assume nst59.1 (not (not red_MR)))
+(assume t58 (or (not red_MR) (not prt)))
+(step t58' (cl (not red_MR) (not prt)) :rule or :premises (t58))
+(step st59 (cl (not prt) (not red_MR)) :rule reordering :premises (t58'))
+(step t.end (cl) :rule resolution :premises (nst59.0 nst59.1 st59))

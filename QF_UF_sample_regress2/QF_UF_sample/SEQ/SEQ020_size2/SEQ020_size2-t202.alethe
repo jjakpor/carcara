@@ -1,0 +1,8 @@
+(assume nst202.0 (not (p1 (f7 c_0) c_0)))
+(assume nst202.1 (not (not (p1 (f6 c_0) c_0))))
+(assume nst202.2 (not (not (= c_0 (f6 c_0)))))
+(assume nst202.3 (not (not (= c_0 (f7 c_0)))))
+(assume t201 (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (p1 (f7 c_0) c_0)))
+(step t201' (cl (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (p1 (f7 c_0) c_0)) :rule or :premises (t201))
+(step st202 (cl (p1 (f7 c_0) c_0) (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0)))) :rule reordering :premises (t201'))
+(step t.end (cl) :rule resolution :premises (nst202.0 nst202.1 nst202.2 nst202.3 st202))

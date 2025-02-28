@@ -1,0 +1,3 @@
+(assume nst4.0 (not (= (not (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))) (not (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))))))
+(step st4 (cl (= (not (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))) (not (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst4.0 st4))

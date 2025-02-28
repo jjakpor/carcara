@@ -1,0 +1,3 @@
+(assume nst17.0 (not (= (not (not (= x0 x58))) (= x0 x58))))
+(step st17 (cl (= (not (not (= x0 x58))) (= x0 x58))) :rule rare_rewrite :args ("bool-double-not-elim" (= x0 x58)))
+(step t.end (cl) :rule resolution :premises (nst17.0 st17))

@@ -1,0 +1,4 @@
+(assume nst746.0 (not (= (op (op e4 e0) e4) e0)))
+(assume t640 (and (= (op (op e4 e0) e4) e0) (= (op (op e4 e1) e4) e1)))
+(step st746 (cl (= (op (op e4 e0) e4) e0)) :rule and :premises (t640) :args (0))
+(step t.end (cl) :rule resolution :premises (nst746.0 st746))

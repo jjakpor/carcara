@@ -1,0 +1,5 @@
+(assume nst179.0 (not (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR))))))))
+(assume nst179.1 (not (models empty (notR (notR (qR bR))))))
+(assume nst179.2 (not (not (not (models empty (notR (qR bR)))))))
+(step st179 (cl (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))) (models empty (notR (notR (qR bR)))) (not (not (models empty (notR (qR bR)))))) :rule equiv_pos1)
+(step t.end (cl) :rule resolution :premises (nst179.0 nst179.1 nst179.2 st179))

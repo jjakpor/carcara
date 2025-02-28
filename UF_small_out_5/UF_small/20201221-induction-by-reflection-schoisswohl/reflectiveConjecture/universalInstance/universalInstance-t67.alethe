@@ -1,0 +1,5 @@
+(assume nst67.0 (not (not (forall ((env env) (t0 term_alpha)) (= (models env (pR t0)) (p (eval_alpha env t0)))))))
+(assume nst67.1 (not (= (models (push_alpha empty v0_alpha (eval_alpha empty aR)) (pR (inj_alpha v0_alpha))) (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha))))))
+(assume t66 (or (not (forall ((env env) (t0 term_alpha)) (= (models env (pR t0)) (p (eval_alpha env t0))))) (= (models (push_alpha empty v0_alpha (eval_alpha empty aR)) (pR (inj_alpha v0_alpha))) (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha))))))
+(step st67 (cl (not (forall ((env env) (t0 term_alpha)) (= (models env (pR t0)) (p (eval_alpha env t0))))) (= (models (push_alpha empty v0_alpha (eval_alpha empty aR)) (pR (inj_alpha v0_alpha))) (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha))))) :rule or :premises (t66))
+(step t.end (cl) :rule resolution :premises (nst67.0 nst67.1 st67))

@@ -1,0 +1,5 @@
+(assume nst250.0 (not (= (not (= e4 e3)) (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))))
+(assume t247 (= (not (= e4 e3)) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) e0)))))
+(assume t249 (= (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) e0))) (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
+(step st250 (cl (= (not (= e4 e3)) (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) :rule trans :premises (t247 t249))
+(step t.end (cl) :rule resolution :premises (nst250.0 st250))

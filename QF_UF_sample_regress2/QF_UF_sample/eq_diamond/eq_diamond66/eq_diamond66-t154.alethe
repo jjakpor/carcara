@@ -1,0 +1,5 @@
+(assume nst154.0 (not (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))))
+(assume nst154.1 (not (= x2 x3)))
+(assume t153 (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3)))
+(step st154 (cl (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))) (= x2 x3)) :rule implies :premises (t153))
+(step t.end (cl) :rule resolution :premises (nst154.0 nst154.1 st154))

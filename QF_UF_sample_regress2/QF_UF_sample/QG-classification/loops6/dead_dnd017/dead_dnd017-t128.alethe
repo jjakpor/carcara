@@ -1,0 +1,5 @@
+(assume nst128.0 (not (not (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))))))
+(assume nst128.1 (not (not (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)))))
+(assume nst128.2 (not (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))))
+(step st128 (cl (not (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))) (not (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit))) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst128.0 nst128.1 nst128.2 st128))

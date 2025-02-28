@@ -1,0 +1,4 @@
+(assume nst418.0 (not (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37))))
+(assume t417 (and (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37))))
+(step st418 (cl (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37))) :rule and :premises (t417) :args (1))
+(step t.end (cl) :rule resolution :premises (nst418.0 st418))

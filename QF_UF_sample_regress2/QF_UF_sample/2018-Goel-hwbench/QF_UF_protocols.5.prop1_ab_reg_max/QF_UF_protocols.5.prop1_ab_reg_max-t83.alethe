@@ -1,0 +1,4 @@
+(assume nst83.0 (not y$963))
+(assume t82 (and y$963 y$971))
+(step st83 (cl y$963) :rule and :premises (t82) :args (0))
+(step t.end (cl) :rule resolution :premises (nst83.0 st83))

@@ -1,0 +1,5 @@
+(assume nst752.0 (not (not (= (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (and (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (=> (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (= x67 x68)))))))
+(assume nst752.1 (not (not (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))))))
+(assume nst752.2 (not (and (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (=> (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (= x67 x68)))))
+(step st752 (cl (not (= (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (and (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (=> (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (= x67 x68))))) (not (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68)))) (and (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (=> (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (= x67 x68)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst752.0 nst752.1 nst752.2 st752))

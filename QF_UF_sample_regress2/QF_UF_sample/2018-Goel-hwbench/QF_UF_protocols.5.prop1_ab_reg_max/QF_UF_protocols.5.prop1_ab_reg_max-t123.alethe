@@ -1,0 +1,5 @@
+(assume nst123.0 (not (not y$v3_1517448506_304_op)))
+(assume nst123.1 (not (not y$548)))
+(assume a314 (= y$v3_1517448506_304_op (not y$548)))
+(step st123 (cl (not y$v3_1517448506_304_op) (not y$548)) :rule equiv1 :premises (a314))
+(step t.end (cl) :rule resolution :premises (nst123.0 nst123.1 st123))

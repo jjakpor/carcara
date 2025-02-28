@@ -1,0 +1,5 @@
+(assume nst137.0 (not (= (or (not (= e2 (op e2 (op e2 e2)))) (= e0 e2)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))))
+(assume t133 (= (not (= e2 (op e2 (op e2 e2)))) (not (= e2 (op e2 (op e2 e2))))))
+(assume t136 (= (= e0 e2) (= e2 e0)))
+(step st137 (cl (= (or (not (= e2 (op e2 (op e2 e2)))) (= e0 e2)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))) :rule cong :premises (t133 t136))
+(step t.end (cl) :rule resolution :premises (nst137.0 st137))

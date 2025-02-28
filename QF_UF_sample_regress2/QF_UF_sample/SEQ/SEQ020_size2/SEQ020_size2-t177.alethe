@@ -1,0 +1,4 @@
+(assume nst177.0 (not (=> (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false)))
+(assume nst177.1 (not (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0)))))
+(step st177 (cl (=> (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false) (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0)))) :rule implies_neg1)
+(step t.end (cl) :rule resolution :premises (nst177.0 nst177.1 st177))

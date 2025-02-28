@@ -1,0 +1,7 @@
+(assume nst79.0 (not (= y$6 (= y$X y$n15s4))))
+(assume a2 (= (= y$n15s4 y$X) y$6))
+(assume t73 (or (not (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4)))) (not (= (= y$n15s4 y$X) y$6)) (= y$6 (= y$X y$n15s4))))
+(assume t78 (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4))))
+(step t73' (cl (not (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4)))) (not (= (= y$n15s4 y$X) y$6)) (= y$6 (= y$X y$n15s4))) :rule or :premises (t73))
+(step st79 (cl (= y$6 (= y$X y$n15s4))) :rule resolution :premises (t73' t78 a2))
+(step t.end (cl) :rule resolution :premises (nst79.0 st79))

@@ -1,0 +1,6 @@
+(assume nst458.0 (not (= (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)) false)))
+(assume t452 (or (= (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)) false) (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))
+(assume t457 (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))
+(step t452' (cl (= (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)) false) (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))) :rule or :premises (t452))
+(step st458 (cl (= (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)) false)) :rule resolution :premises (t452' t457))
+(step t.end (cl) :rule resolution :premises (nst458.0 st458))

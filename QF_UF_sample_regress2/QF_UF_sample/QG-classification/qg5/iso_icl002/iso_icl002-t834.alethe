@@ -1,0 +1,4 @@
+(assume nst834.0 (not (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) e0)))
+(assume t436 (= e0 (op e0 (op (op (op e0 (op e0 e0)) e0) e0))))
+(step st834 (cl (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) e0)) :rule symm :premises (t436))
+(step t.end (cl) :rule resolution :premises (nst834.0 st834))

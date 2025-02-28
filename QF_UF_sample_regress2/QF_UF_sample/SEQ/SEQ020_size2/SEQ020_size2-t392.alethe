@@ -1,0 +1,5 @@
+(assume nst392.0 (not (=> (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)) false)))
+(assume t391 (or (=> (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)) false) (=> (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)) false)))
+(step t391' (cl (=> (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)) false) (=> (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)) false)) :rule or :premises (t391))
+(step st392 (cl (=> (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)) false)) :rule contraction :premises (t391'))
+(step t.end (cl) :rule resolution :premises (nst392.0 st392))

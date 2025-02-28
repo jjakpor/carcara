@@ -1,0 +1,5 @@
+(assume nst78.0 (not (= (= e1 (op e1 e4)) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))))
+(assume t44 (= e1 (op (op (op e0 e0) e0) e0)))
+(assume t77 (= (op e1 e4) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))
+(step st78 (cl (= (= e1 (op e1 e4)) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) :rule cong :premises (t44 t77))
+(step t.end (cl) :rule resolution :premises (nst78.0 st78))

@@ -1,0 +1,4 @@
+(assume nst113.0 (not (= sk_?X_18$0 sk_?X_19$0)))
+(assume a30 (= sk_?X_19$0 sk_?X_18$0))
+(step st113 (cl (= sk_?X_18$0 sk_?X_19$0)) :rule symm :premises (a30))
+(step t.end (cl) :rule resolution :premises (nst113.0 st113))

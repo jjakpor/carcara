@@ -1,0 +1,3 @@
+(assume nst222.0 (not (= (= (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))) (and (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))) (=> (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))) (= x19 x20)))) true)))
+(step st222 (cl (= (= (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))) (and (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))) (=> (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))) (= x19 x20)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst222.0 st222))

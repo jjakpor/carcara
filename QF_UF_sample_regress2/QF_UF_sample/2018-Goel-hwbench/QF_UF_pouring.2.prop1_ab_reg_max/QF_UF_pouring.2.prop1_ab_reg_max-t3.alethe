@@ -1,0 +1,5 @@
+(assume nst3.0 (not (not y$a_q4_Bottle_1)))
+(assume nst3.1 (not (not y$53)))
+(assume a26 (= y$a_q4_Bottle_1 (not y$53)))
+(step st3 (cl (not y$a_q4_Bottle_1) (not y$53)) :rule equiv1 :premises (a26))
+(step t.end (cl) :rule resolution :premises (nst3.0 nst3.1 st3))

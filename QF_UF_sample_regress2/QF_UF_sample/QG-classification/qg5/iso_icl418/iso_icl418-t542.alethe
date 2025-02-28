@@ -1,0 +1,4 @@
+(assume nst542.0 (not (not (= (op e4 e3) (op e4 e4)))))
+(assume t541 (and (and (and (and (and (and (and (and (and (not (= (op e4 e0) (op e4 e1))) (not (= (op e4 e0) (op e4 e2)))) (not (= (op e4 e0) (op e4 e3)))) (not (= (op e4 e0) (op e4 e4)))) (not (= (op e4 e1) (op e4 e2)))) (not (= (op e4 e1) (op e4 e3)))) (not (= (op e4 e1) (op e4 e4)))) (not (= (op e4 e2) (op e4 e3)))) (not (= (op e4 e2) (op e4 e4)))) (not (= (op e4 e3) (op e4 e4)))))
+(step st542 (cl (not (= (op e4 e3) (op e4 e4)))) :rule and :premises (t541) :args (1))
+(step t.end (cl) :rule resolution :premises (nst542.0 st542))

@@ -1,0 +1,6 @@
+(assume nt30.0 (not (= (forall ((?v0 A_llist$) (?v1 Enat$)) (=> (fun_app$ (less_eq$ (llength$a ?v0)) ?v1) (= (ltake$ ?v1 ?v0) ?v0))) (forall ((?v0 A_llist$) (?v1 Enat$)) (=> (fun_app$ (less_eq$ (llength$a ?v0)) ?v1) (= ?v0 (ltake$ ?v1 ?v0)))))))
+(anchor :step t30 :args ((?v0 A_llist$) (?v1 Enat$) (:= (?v0 A_llist$) ?v0) (:= (?v1 Enat$) ?v1)))
+(step st30.t1 (cl (= (= (ltake$ ?v1 ?v0) ?v0) (= ?v0 (ltake$ ?v1 ?v0)))) :rule hole)
+(step t30.t2 (cl (= (=> (fun_app$ (less_eq$ (llength$a ?v0)) ?v1) (= (ltake$ ?v1 ?v0) ?v0)) (=> (fun_app$ (less_eq$ (llength$a ?v0)) ?v1) (= ?v0 (ltake$ ?v1 ?v0))))) :rule trust)
+(step t30 (cl (= (forall ((?v0 A_llist$) (?v1 Enat$)) (=> (fun_app$ (less_eq$ (llength$a ?v0)) ?v1) (= (ltake$ ?v1 ?v0) ?v0))) (forall ((?v0 A_llist$) (?v1 Enat$)) (=> (fun_app$ (less_eq$ (llength$a ?v0)) ?v1) (= ?v0 (ltake$ ?v1 ?v0)))))) :rule bind)
+(step t.end (cl) :rule resolution :premises (nt30.0 t30))

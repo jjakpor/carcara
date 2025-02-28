@@ -1,0 +1,6 @@
+(assume nst186.0 (not (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0)))))
+(assume nst186.1 (not (not (and (or (= lst$0 sk_?e$0) (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0)))))))
+(assume t185 (or (not (and (or (= lst$0 sk_?e$0) (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0))))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0)))))
+(step t185' (cl (not (and (or (= lst$0 sk_?e$0) (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0))))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0)))) :rule or :premises (t185))
+(step st186 (cl (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0))) (not (and (or (= lst$0 sk_?e$0) (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0)))))) :rule reordering :premises (t185'))
+(step t.end (cl) :rule resolution :premises (nst186.0 nst186.1 st186))

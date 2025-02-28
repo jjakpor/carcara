@@ -1,0 +1,6 @@
+(assume nst27.0 (not (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$))))
+(assume t17 (or (not (= (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$)) true)) (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$))))
+(assume t26 (= (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$)) true))
+(step t17' (cl (not (= (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$)) true)) (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$))) :rule or :premises (t17))
+(step st27 (cl (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$))) :rule resolution :premises (t17' t26))
+(step t.end (cl) :rule resolution :premises (nst27.0 st27))

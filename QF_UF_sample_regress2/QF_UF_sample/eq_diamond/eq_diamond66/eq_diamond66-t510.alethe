@@ -1,0 +1,5 @@
+(assume nst510.0 (not (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))))))
+(assume nst510.1 (not (= x44 x45)))
+(assume t509 (=> (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (= x44 x45)))
+(step st510 (cl (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45)))) (= x44 x45)) :rule implies :premises (t509))
+(step t.end (cl) :rule resolution :premises (nst510.0 nst510.1 st510))

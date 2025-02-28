@@ -1,0 +1,7 @@
+(assume nst164.0 (not (= e2 (op e2 e0))))
+(assume t157 (or (not (= (= (op e2 unit) e2) (= e2 (op e2 e0)))) (not (= (op e2 unit) e2)) (= e2 (op e2 e0))))
+(assume t161 (= (= (op e2 unit) e2) (= e2 (op e2 e0))))
+(assume t163 (= (op e2 unit) e2))
+(step t157' (cl (not (= (= (op e2 unit) e2) (= e2 (op e2 e0)))) (not (= (op e2 unit) e2)) (= e2 (op e2 e0))) :rule or :premises (t157))
+(step st164 (cl (= e2 (op e2 e0))) :rule resolution :premises (t157' t161 t163))
+(step t.end (cl) :rule resolution :premises (nst164.0 st164))

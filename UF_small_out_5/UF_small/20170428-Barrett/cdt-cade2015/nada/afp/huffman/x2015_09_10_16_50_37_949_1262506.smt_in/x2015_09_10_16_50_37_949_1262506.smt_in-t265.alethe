@@ -1,0 +1,5 @@
+(assume nst265.0 (not (not (= (or (not (= b$ c$)) (not (not (= c$ d$))) (not (= b$ d$))) (or (not (= b$ c$)) (= c$ d$) (not (= b$ d$)))))))
+(assume nst265.1 (not (not (or (not (= b$ c$)) (not (not (= c$ d$))) (not (= b$ d$))))))
+(assume nst265.2 (not (or (not (= b$ c$)) (= c$ d$) (not (= b$ d$)))))
+(step st265 (cl (not (= (or (not (= b$ c$)) (not (not (= c$ d$))) (not (= b$ d$))) (or (not (= b$ c$)) (= c$ d$) (not (= b$ d$))))) (not (or (not (= b$ c$)) (not (not (= c$ d$))) (not (= b$ d$)))) (or (not (= b$ c$)) (= c$ d$) (not (= b$ d$)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst265.0 nst265.1 nst265.2 st265))

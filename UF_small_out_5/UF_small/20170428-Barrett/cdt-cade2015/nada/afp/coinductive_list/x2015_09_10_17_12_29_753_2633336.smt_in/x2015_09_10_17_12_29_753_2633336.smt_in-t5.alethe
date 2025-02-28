@@ -1,0 +1,5 @@
+(assume nst5.0 (not (not (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))))))
+(assume nst5.1 (not (not (not (lnull$ (lconcat$ xssa$))))))
+(assume nst5.2 (not (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))))
+(step st5 (cl (not (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))) (not (not (lnull$ (lconcat$ xssa$)))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst5.0 nst5.1 nst5.2 st5))

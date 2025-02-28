@@ -1,0 +1,5 @@
+(assume nst667.0 (not (not (= (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))) (and (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))) (=> (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))) (= x59 x60)))))))
+(assume nst667.1 (not (not (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))))))
+(assume nst667.2 (not (and (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))) (=> (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))) (= x59 x60)))))
+(step st667 (cl (not (= (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))) (and (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))) (=> (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))) (= x59 x60))))) (not (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60)))) (and (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))) (=> (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))) (= x59 x60)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst667.0 nst667.1 nst667.2 st667))

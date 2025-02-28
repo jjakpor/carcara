@@ -1,0 +1,4 @@
+(assume nst891.0 (not (= (op e4 e2) (op e2 e4))))
+(assume t877 (and (and (and (and (= (op e0 e2) (op e2 e0)) (= (op e1 e2) (op e2 e1))) (= (op e2 e2) (op e2 e2))) (= (op e3 e2) (op e2 e3))) (= (op e4 e2) (op e2 e4))))
+(step st891 (cl (= (op e4 e2) (op e2 e4))) :rule and :premises (t877) :args (1))
+(step t.end (cl) :rule resolution :premises (nst891.0 st891))

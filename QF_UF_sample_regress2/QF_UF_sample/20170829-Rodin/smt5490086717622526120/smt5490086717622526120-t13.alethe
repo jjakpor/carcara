@@ -1,0 +1,5 @@
+(assume nst13.0 (not (not (= (not (or (and prt grn) org (and (not prt) rd1) rd2 (and grn (not prt)) (and rd1 prt))) (not (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt)))))))
+(assume nst13.1 (not (not (not (or (and prt grn) org (and (not prt) rd1) rd2 (and grn (not prt)) (and rd1 prt))))))
+(assume nst13.2 (not (not (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt)))))
+(step st13 (cl (not (= (not (or (and prt grn) org (and (not prt) rd1) rd2 (and grn (not prt)) (and rd1 prt))) (not (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt))))) (not (not (or (and prt grn) org (and (not prt) rd1) rd2 (and grn (not prt)) (and rd1 prt)))) (not (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst13.0 nst13.1 nst13.2 st13))

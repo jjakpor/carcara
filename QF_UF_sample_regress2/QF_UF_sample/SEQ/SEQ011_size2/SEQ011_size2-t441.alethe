@@ -1,0 +1,7 @@
+(assume nst441.0 (not (= (f6 c_1) (f5 c_1))))
+(assume nst441.1 (not (not (= c_0 (f6 c_1)))))
+(assume nst441.2 (not (not (= c_0 (f5 c_1)))))
+(assume t440 (or (not (= c_0 (f5 c_1))) (not (= c_0 (f6 c_1))) (= (f6 c_1) (f5 c_1))))
+(step t440' (cl (not (= c_0 (f5 c_1))) (not (= c_0 (f6 c_1))) (= (f6 c_1) (f5 c_1))) :rule or :premises (t440))
+(step st441 (cl (= (f6 c_1) (f5 c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) :rule reordering :premises (t440'))
+(step t.end (cl) :rule resolution :premises (nst441.0 nst441.1 nst441.2 st441))

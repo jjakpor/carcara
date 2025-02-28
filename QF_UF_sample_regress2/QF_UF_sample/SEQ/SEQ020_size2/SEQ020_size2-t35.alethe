@@ -1,0 +1,4 @@
+(assume nst35.0 (not (or (not (not (p1 (f7 c_1) c_1))) (not (= c_1 (f7 c_1))) (not (= c_1 (f5 c_1))) (not (p1 (f5 c_1) c_1)))))
+(assume nst35.1 (not (not (not (p1 (f5 c_1) c_1)))))
+(step st35 (cl (or (not (not (p1 (f7 c_1) c_1))) (not (= c_1 (f7 c_1))) (not (= c_1 (f5 c_1))) (not (p1 (f5 c_1) c_1))) (not (not (p1 (f5 c_1) c_1)))) :rule or_neg :args (3))
+(step t.end (cl) :rule resolution :premises (nst35.0 nst35.1 st35))

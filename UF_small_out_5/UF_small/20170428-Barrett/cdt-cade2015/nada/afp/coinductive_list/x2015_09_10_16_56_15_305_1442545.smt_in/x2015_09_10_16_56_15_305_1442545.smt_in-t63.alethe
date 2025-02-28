@@ -1,0 +1,6 @@
+(assume nst63.0 (not (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))))
+(assume nst63.1 (not (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))))
+(assume t62 (or (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))) (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))))
+(step t62' (cl (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))) (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))) :rule or :premises (t62))
+(step st63 (cl (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) :rule reordering :premises (t62'))
+(step t.end (cl) :rule resolution :premises (nst63.0 nst63.1 st63))

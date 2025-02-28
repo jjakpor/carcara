@@ -1,0 +1,6 @@
+(assume nst306.0 (not (not (and (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))) (or (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)) (in$0 x$0 (setenum$0 root_x$0)))))))
+(assume t91 (or (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))) (not (and (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))) (or (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)) (in$0 x$0 (setenum$0 root_x$0)))))))
+(assume t305 (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)))))
+(step t91' (cl (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))) (not (and (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))) (or (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)) (in$0 x$0 (setenum$0 root_x$0)))))) :rule or :premises (t91))
+(step st306 (cl (not (and (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))) (or (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)) (in$0 x$0 (setenum$0 root_x$0)))))) :rule resolution :premises (t91' t305))
+(step t.end (cl) :rule resolution :premises (nst306.0 st306))

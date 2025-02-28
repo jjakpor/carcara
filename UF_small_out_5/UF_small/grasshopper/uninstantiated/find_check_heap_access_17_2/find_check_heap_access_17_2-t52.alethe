@@ -1,0 +1,7 @@
+(assume nst52.0 (not (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_4$0))))
+(assume t46 (or (not (= (= FP$0 sk_?X_2$0) (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_4$0)))) (not (= FP$0 sk_?X_2$0)) (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_4$0))))
+(assume t50 (= (= FP$0 sk_?X_2$0) (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_4$0))))
+(assume t51 (= FP$0 sk_?X_2$0))
+(step t46' (cl (not (= (= FP$0 sk_?X_2$0) (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_4$0)))) (not (= FP$0 sk_?X_2$0)) (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_4$0))) :rule or :premises (t46))
+(step st52 (cl (= FP$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_4$0))) :rule resolution :premises (t46' t50 t51))
+(step t.end (cl) :rule resolution :premises (nst52.0 st52))

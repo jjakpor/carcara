@@ -1,0 +1,6 @@
+(define-fun @quantifiers_skolemize_10 () A_list$ (choice ((?v3 A_list$)) (not (or (not (member$c ?v3 (collect$a top$b))) (not (= xs$ (fun_app$g llist_of$ ?v3)))))))
+(assume t6 (or (not (forall ((?v0 A_list$)) (not (= xs$ (fun_app$g llist_of$ ?v0))))) (not (= xs$ (fun_app$g llist_of$ @quantifiers_skolemize_10)))))
+(assume t41 (= xs$ (fun_app$g llist_of$ @quantifiers_skolemize_10)))
+(assume t55 (forall ((?v0 A_list$)) (not (= xs$ (fun_app$g llist_of$ ?v0)))))
+(step t6' (cl (not (forall ((?v0 A_list$)) (not (= xs$ (fun_app$g llist_of$ ?v0))))) (not (= xs$ (fun_app$g llist_of$ @quantifiers_skolemize_10)))) :rule or :premises (t6))
+(step st56 (cl) :rule resolution :premises (t6' t41 t55))

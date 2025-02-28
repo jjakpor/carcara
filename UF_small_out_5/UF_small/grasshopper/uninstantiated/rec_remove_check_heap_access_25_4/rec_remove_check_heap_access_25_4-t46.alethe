@@ -1,0 +1,8 @@
+(assume nst46.0 (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)))
+(assume t15 (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 null$0 null$0)) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0) (not (or (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)))))
+(assume t16 (not (= null$0 lst$0)))
+(assume t29 (Btwn$0 next$0 lst$0 null$0 null$0))
+(assume t45 (or (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)))
+(step t15' (cl (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 null$0 null$0)) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0) (not (or (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)))) :rule or :premises (t15))
+(step st46 (cl (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)) :rule resolution :premises (t15' t16 t29 t45))
+(step t.end (cl) :rule resolution :premises (nst46.0 st46))

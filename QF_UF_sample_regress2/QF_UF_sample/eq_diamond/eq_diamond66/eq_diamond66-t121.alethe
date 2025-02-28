@@ -1,0 +1,4 @@
+(assume nst121.0 (not (= x6 x5)))
+(assume t120 (= x5 x6))
+(step st121 (cl (= x6 x5)) :rule symm :premises (t120))
+(step t.end (cl) :rule resolution :premises (nst121.0 st121))

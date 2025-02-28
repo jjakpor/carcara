@@ -1,0 +1,5 @@
+(assume nst3.0 (not (not (= (= (not (not prt)) prt) true))))
+(assume nst3.1 (not (= (not (not prt)) prt)))
+(assume t2 (= (= (= (not (not prt)) prt) true) (= (not (not prt)) prt)))
+(step st3 (cl (not (= (= (not (not prt)) prt) true)) (= (not (not prt)) prt)) :rule equiv1 :premises (t2))
+(step t.end (cl) :rule resolution :premises (nst3.0 nst3.1 st3))

@@ -1,0 +1,3 @@
+(assume nst318.0 (not (= (= e0 e1) (= e1 e0))))
+(step st318 (cl (= (= e0 e1) (= e1 e0))) :rule rare_rewrite :args ("eq-symm" e0 e1))
+(step t.end (cl) :rule resolution :premises (nst318.0 st318))

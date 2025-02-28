@@ -1,0 +1,3 @@
+(assume nst32.0 (not (= (not (= x9 x10)) (not (= x9 x10)))))
+(step st32 (cl (= (not (= x9 x10)) (not (= x9 x10)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst32.0 st32))

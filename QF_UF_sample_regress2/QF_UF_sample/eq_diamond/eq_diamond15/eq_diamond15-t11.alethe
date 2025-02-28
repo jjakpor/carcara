@@ -1,0 +1,6 @@
+(assume nst11.0 (not (= x2 x3)))
+(assume nst11.1 (not (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))))
+(assume t10 (or (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))) (= x2 x3)))
+(step t10' (cl (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))) (= x2 x3)) :rule or :premises (t10))
+(step st11 (cl (= x2 x3) (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))) :rule reordering :premises (t10'))
+(step t.end (cl) :rule resolution :premises (nst11.0 nst11.1 st11))

@@ -1,0 +1,3 @@
+(assume nst69.0 (not (= next$0 next$0)))
+(step st69 (cl (= next$0 next$0)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst69.0 st69))

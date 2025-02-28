@@ -1,0 +1,4 @@
+(assume nst347.0 (not (=> (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (= x30 x31))))
+(assume t346 (and (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (=> (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (= x30 x31))))
+(step st347 (cl (=> (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (= x30 x31))) :rule and :premises (t346) :args (1))
+(step t.end (cl) :rule resolution :premises (nst347.0 st347))

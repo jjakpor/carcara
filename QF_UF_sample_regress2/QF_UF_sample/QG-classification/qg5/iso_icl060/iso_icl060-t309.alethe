@@ -1,0 +1,5 @@
+(assume nst309.0 (not (not (= (not (= (op e0 e3) (op e3 e3))) (not (= (op e3 e3) (op (op (op e1 e3) e1) e3)))))))
+(assume nst309.1 (not (not (not (= (op e0 e3) (op e3 e3))))))
+(assume nst309.2 (not (not (= (op e3 e3) (op (op (op e1 e3) e1) e3)))))
+(step st309 (cl (not (= (not (= (op e0 e3) (op e3 e3))) (not (= (op e3 e3) (op (op (op e1 e3) e1) e3))))) (not (not (= (op e0 e3) (op e3 e3)))) (not (= (op e3 e3) (op (op (op e1 e3) e1) e3)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst309.0 nst309.1 nst309.2 st309))

@@ -1,0 +1,6 @@
+(assume nst11.0 (not (= (shd$ as$) (lab$ tr$))))
+(assume nst11.1 (not (not (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4)))))))))
+(assume t10 (or (not (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4))))))) (= (shd$ as$) (lab$ tr$))))
+(step t10' (cl (not (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4))))))) (= (shd$ as$) (lab$ tr$))) :rule or :premises (t10))
+(step st11 (cl (= (shd$ as$) (lab$ tr$)) (not (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4)))))))) :rule reordering :premises (t10'))
+(step t.end (cl) :rule resolution :premises (nst11.0 nst11.1 st11))

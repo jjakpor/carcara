@@ -1,0 +1,4 @@
+(assume nst86.0 (not (not (and (p4 c8) (= c8 c_1)))))
+(assume nst86.1 (not (= c8 c_1)))
+(step st86 (cl (not (and (p4 c8) (= c8 c_1))) (= c8 c_1)) :rule and_pos :args (1))
+(step t.end (cl) :rule resolution :premises (nst86.0 nst86.1 st86))

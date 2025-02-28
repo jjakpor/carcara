@@ -1,0 +1,5 @@
+(assume nst189.0 (not (not (or (Btwn$0 next$0 lst$0 sk_?e$0 lst$0) (and (or (= lst$0 sk_?e$0) (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0))))))))
+(assume nst189.1 (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0)))
+(assume nst189.2 (not (and (or (= lst$0 sk_?e$0) (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0))))))
+(step st189 (cl (not (or (Btwn$0 next$0 lst$0 sk_?e$0 lst$0) (and (or (= lst$0 sk_?e$0) (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0)))))) (Btwn$0 next$0 lst$0 sk_?e$0 lst$0) (and (or (= lst$0 sk_?e$0) (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 lst$0))))) :rule or_pos)
+(step t.end (cl) :rule resolution :premises (nst189.0 nst189.1 nst189.2 st189))

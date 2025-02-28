@@ -1,0 +1,4 @@
+(assume nst9.0 (not (not (and (not (p (eval_alpha empty aR))) (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha)) (= (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha) (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))))))
+(assume nst9.1 (not (not (p (eval_alpha empty aR)))))
+(step st9 (cl (not (and (not (p (eval_alpha empty aR))) (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha)) (= (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha) (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha))))) (not (p (eval_alpha empty aR)))) :rule and_pos :args (0))
+(step t.end (cl) :rule resolution :premises (nst9.0 nst9.1 st9))

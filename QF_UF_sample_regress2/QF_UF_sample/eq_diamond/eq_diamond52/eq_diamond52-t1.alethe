@@ -1,0 +1,5 @@
+(assume nst1.0 (not (and (= x6 y6) (= y6 x7))))
+(assume nst1.1 (not (and (= x6 z6) (= z6 x7))))
+(assume t0 (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))))
+(step st1 (cl (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) :rule or :premises (t0))
+(step t.end (cl) :rule resolution :premises (nst1.0 nst1.1 st1))

@@ -1,0 +1,6 @@
+(assume nst81.0 (not (not (p4 c_1))))
+(assume nst81.1 (not (not (p1 (f7 c_1) c_1))))
+(assume t80 (or (not (p1 (f7 c_1) c_1)) (not (p4 c_1))))
+(step t80' (cl (not (p1 (f7 c_1) c_1)) (not (p4 c_1))) :rule or :premises (t80))
+(step st81 (cl (not (p4 c_1)) (not (p1 (f7 c_1) c_1))) :rule reordering :premises (t80'))
+(step t.end (cl) :rule resolution :premises (nst81.0 nst81.1 st81))

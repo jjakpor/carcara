@@ -1,0 +1,4 @@
+(assume nst476.0 (not (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42))))
+(assume t475 (and (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42))))
+(step st476 (cl (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42))) :rule and :premises (t475) :args (1))
+(step t.end (cl) :rule resolution :premises (nst476.0 st476))

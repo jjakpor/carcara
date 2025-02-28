@@ -1,0 +1,4 @@
+(assume nst213.0 (not (=> (and (= a$ d$) (= a$ c$)) (= c$ d$))))
+(assume nst213.1 (not (and (= a$ d$) (= a$ c$))))
+(step st213 (cl (=> (and (= a$ d$) (= a$ c$)) (= c$ d$)) (and (= a$ d$) (= a$ c$))) :rule implies_neg1)
+(step t.end (cl) :rule resolution :premises (nst213.0 nst213.1 st213))

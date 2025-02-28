@@ -1,0 +1,5 @@
+(assume nst522.0 (not (not (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))))))
+(assume nst522.1 (not (= x28 x29)))
+(assume t521 (=> (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (= x28 x29)))
+(step st522 (cl (not (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29)))) (= x28 x29)) :rule implies :premises (t521))
+(step t.end (cl) :rule resolution :premises (nst522.0 nst522.1 st522))

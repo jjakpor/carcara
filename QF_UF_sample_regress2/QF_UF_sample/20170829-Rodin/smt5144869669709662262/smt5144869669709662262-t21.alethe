@@ -1,0 +1,3 @@
+(assume nst21.0 (not (not false)))
+(step st21 (cl (not false)) :rule false)
+(step t.end (cl) :rule resolution :premises (nst21.0 st21))

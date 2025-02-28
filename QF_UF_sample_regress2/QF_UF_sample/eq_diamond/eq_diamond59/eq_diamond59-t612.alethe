@@ -1,0 +1,6 @@
+(assume nst612.0 (not (= x36 x37)))
+(assume t607 (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))))
+(assume t611 (or (= x36 x37) (not (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))))))
+(step t611' (cl (= x36 x37) (not (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))))) :rule or :premises (t611))
+(step st612 (cl (= x36 x37)) :rule resolution :premises (t611' t607))
+(step t.end (cl) :rule resolution :premises (nst612.0 st612))

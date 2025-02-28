@@ -1,0 +1,5 @@
+(assume nst150.0 (not (= (= y$n1s8 y$n5s8) (= y$n1s8 y$v_k_Table))))
+(assume t106 (= y$n1s8 y$n1s8))
+(assume t146 (= y$n5s8 y$v_k_Table))
+(step st150 (cl (= (= y$n1s8 y$n5s8) (= y$n1s8 y$v_k_Table))) :rule cong :premises (t106 t146))
+(step t.end (cl) :rule resolution :premises (nst150.0 st150))

@@ -1,0 +1,4 @@
+(assume nst153.0 (not (= (not (= y$n255s8 y$n5s8)) (not (= y$n255s8 y$v_k_Table)))))
+(assume t152 (= (= y$n255s8 y$n5s8) (= y$n255s8 y$v_k_Table)))
+(step st153 (cl (= (not (= y$n255s8 y$n5s8)) (not (= y$n255s8 y$v_k_Table)))) :rule cong :premises (t152))
+(step t.end (cl) :rule resolution :premises (nst153.0 st153))

@@ -1,0 +1,7 @@
+(assume nst801.0 (not (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))))))
+(assume t796 (or (not (= (not (= (op e0 e0) (op e0 e2))) (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4)))))) (not (not (= (op e0 e0) (op e0 e2)))) (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))))))
+(assume t798 (= (not (= (op e0 e0) (op e0 e2))) (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))))))
+(assume t800 (not (= (op e0 e0) (op e0 e2))))
+(step t796' (cl (not (= (not (= (op e0 e0) (op e0 e2))) (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4)))))) (not (not (= (op e0 e0) (op e0 e2)))) (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))))) :rule or :premises (t796))
+(step st801 (cl (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))))) :rule resolution :premises (t796' t798 t800))
+(step t.end (cl) :rule resolution :premises (nst801.0 st801))

@@ -1,0 +1,5 @@
+(assume nst309.0 (not (p1 (f5 c_0) c_0)))
+(assume nst309.1 (not (not (p4 c_0))))
+(assume t308 (or (p1 (f5 c_0) c_0) (not (p4 c_0))))
+(step st309 (cl (p1 (f5 c_0) c_0) (not (p4 c_0))) :rule or :premises (t308))
+(step t.end (cl) :rule resolution :premises (nst309.0 nst309.1 st309))

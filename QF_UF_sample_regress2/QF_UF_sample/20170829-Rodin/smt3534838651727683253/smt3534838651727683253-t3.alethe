@@ -1,0 +1,4 @@
+(assume nst3.0 (not (= (not (= nf0 flash)) (not (= flash nf0)))))
+(assume t2 (= (= nf0 flash) (= flash nf0)))
+(step st3 (cl (= (not (= nf0 flash)) (not (= flash nf0)))) :rule cong :premises (t2))
+(step t.end (cl) :rule resolution :premises (nst3.0 st3))

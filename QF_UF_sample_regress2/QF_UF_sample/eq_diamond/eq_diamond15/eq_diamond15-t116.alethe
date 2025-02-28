@@ -1,0 +1,5 @@
+(assume nst116.0 (not (not (= (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (and (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11)))))))
+(assume nst116.1 (not (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))))
+(assume nst116.2 (not (and (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11)))))
+(step st116 (cl (not (= (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (and (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11))))) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11)))) (and (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst116.0 nst116.1 nst116.2 st116))

@@ -1,0 +1,5 @@
+(assume nst393.0 (not (not (= (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (and (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18)))))))
+(assume nst393.1 (not (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))))))
+(assume nst393.2 (not (and (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18)))))
+(step st393 (cl (not (= (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (and (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18))))) (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18)))) (and (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst393.0 nst393.1 nst393.2 st393))

@@ -1,0 +1,6 @@
+(assume nst806.0 (not (= x71 x72)))
+(assume t801 (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))))
+(assume t805 (or (= x71 x72) (not (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))))))
+(step t805' (cl (= x71 x72) (not (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))))) :rule or :premises (t805))
+(step st806 (cl (= x71 x72)) :rule resolution :premises (t805' t801))
+(step t.end (cl) :rule resolution :premises (nst806.0 st806))

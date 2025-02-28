@@ -1,0 +1,5 @@
+(assume nst265.0 (not (not (= (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)) false))))
+(assume nst265.1 (not (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)))))
+(assume t264 (= (= (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)) false) (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)))))
+(step st265 (cl (not (= (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)) false)) (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)))) :rule equiv1 :premises (t264))
+(step t.end (cl) :rule resolution :premises (nst265.0 nst265.1 st265))

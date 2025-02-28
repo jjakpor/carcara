@@ -1,0 +1,4 @@
+(assume nst197.0 (not (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 e0) (op e0 e0))))))
+(assume t196 (= (op (op e0 e0) (op (op e0 e0) (op e0 e0))) (op e0 (op e0 e0))))
+(step st197 (cl (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 e0) (op e0 e0))))) :rule symm :premises (t196))
+(step t.end (cl) :rule resolution :premises (nst197.0 st197))

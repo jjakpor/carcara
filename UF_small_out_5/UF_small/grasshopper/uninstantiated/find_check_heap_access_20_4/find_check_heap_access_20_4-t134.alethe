@@ -1,0 +1,7 @@
+(assume nst134.0 (not (= sk_?X_19$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0)))))
+(assume a53 (= sk_?X_17$0 (union$0 sk_?X_14$0 sk_?X_16$0)))
+(assume t111 (or (not (= (= sk_?X_17$0 (union$0 sk_?X_14$0 sk_?X_16$0)) (= sk_?X_19$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))) (not (= sk_?X_17$0 (union$0 sk_?X_14$0 sk_?X_16$0))) (= sk_?X_19$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0)))))
+(assume t133 (= (= sk_?X_17$0 (union$0 sk_?X_14$0 sk_?X_16$0)) (= sk_?X_19$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0)))))
+(step t111' (cl (not (= (= sk_?X_17$0 (union$0 sk_?X_14$0 sk_?X_16$0)) (= sk_?X_19$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))) (not (= sk_?X_17$0 (union$0 sk_?X_14$0 sk_?X_16$0))) (= sk_?X_19$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0)))) :rule or :premises (t111))
+(step st134 (cl (= sk_?X_19$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0)))) :rule resolution :premises (t111' t133 a53))
+(step t.end (cl) :rule resolution :premises (nst134.0 st134))

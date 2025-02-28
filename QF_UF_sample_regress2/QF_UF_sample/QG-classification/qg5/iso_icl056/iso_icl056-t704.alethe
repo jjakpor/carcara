@@ -1,0 +1,5 @@
+(assume nst704.0 (not (= (= e1 (op (op e1 e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))) (= e1 (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))))
+(assume t38 (= e1 e1))
+(assume t703 (= (op (op e1 e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))
+(step st704 (cl (= (= e1 (op (op e1 e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))) (= e1 (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))) :rule cong :premises (t38 t703))
+(step t.end (cl) :rule resolution :premises (nst704.0 st704))

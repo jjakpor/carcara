@@ -1,0 +1,4 @@
+(assume nst6.0 (not (not (and (not rd1) (not rd2)))))
+(assume nst6.1 (not (not rd2)))
+(step st6 (cl (not (and (not rd1) (not rd2))) (not rd2)) :rule and_pos :args (1))
+(step t.end (cl) :rule resolution :premises (nst6.0 nst6.1 st6))

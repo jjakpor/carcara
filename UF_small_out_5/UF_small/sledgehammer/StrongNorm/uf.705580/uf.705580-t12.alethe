@@ -1,0 +1,5 @@
+(assume nst12.0 (not (not (and (= (f3 f5 f176) (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))) (= f174 (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))))))
+(assume nst12.1 (not (= (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) f174) (f3 f5 f176))))
+(assume t11 (=> (and (= (f3 f5 f176) (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))) (= f174 (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))) (= (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) f174) (f3 f5 f176))))
+(step st12 (cl (not (and (= (f3 f5 f176) (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))) (= f174 (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22)))) (= (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) f174) (f3 f5 f176))) :rule implies :premises (t11))
+(step t.end (cl) :rule resolution :premises (nst12.0 nst12.1 st12))

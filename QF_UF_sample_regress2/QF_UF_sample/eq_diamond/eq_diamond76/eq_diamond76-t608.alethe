@@ -1,0 +1,6 @@
+(assume nst608.0 (not (= x53 x54)))
+(assume t603 (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))))
+(assume t607 (or (= x53 x54) (not (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))))))
+(step t607' (cl (= x53 x54) (not (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))))) :rule or :premises (t607))
+(step st608 (cl (= x53 x54)) :rule resolution :premises (t607' t603))
+(step t.end (cl) :rule resolution :premises (nst608.0 st608))

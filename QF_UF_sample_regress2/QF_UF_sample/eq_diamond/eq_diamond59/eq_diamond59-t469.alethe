@@ -1,0 +1,6 @@
+(assume nst469.0 (not (= x23 x24)))
+(assume t464 (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))
+(assume t468 (or (= x23 x24) (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))))
+(step t468' (cl (= x23 x24) (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))) :rule or :premises (t468))
+(step st469 (cl (= x23 x24)) :rule resolution :premises (t468' t464))
+(step t.end (cl) :rule resolution :premises (nst469.0 st469))

@@ -1,0 +1,7 @@
+(assume nst193.0 (not (not (consistent$ t$))))
+(assume nst193.1 (not (= t$ (fun_app$f (swapSyms$ t$ b$) b$))))
+(assume nst193.2 (not (not (or (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$))))))
+(assume t192 (or (not (or (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$)))) (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$))))
+(step t192' (cl (not (or (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$)))) (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$))) :rule or :premises (t192))
+(step st193 (cl (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$)) (not (or (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$))))) :rule reordering :premises (t192'))
+(step t.end (cl) :rule resolution :premises (nst193.0 nst193.1 nst193.2 st193))

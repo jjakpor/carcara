@@ -1,0 +1,4 @@
+(assume nst137.0 (not (and (not (= e0 e1)) (not (= e0 e2)))))
+(assume t136 (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))))
+(step st137 (cl (and (not (= e0 e1)) (not (= e0 e2)))) :rule and :premises (t136) :args (0))
+(step t.end (cl) :rule resolution :premises (nst137.0 st137))

@@ -1,0 +1,7 @@
+(assume nst361.0 (not (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1)))))
+(assume t356 (or (not (= (or (= (f5 c_1) c_0) (= (f5 c_1) c_1)) (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1))))) (not (or (= (f5 c_1) c_0) (= (f5 c_1) c_1))) (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1)))))
+(assume t359 (= (or (= (f5 c_1) c_0) (= (f5 c_1) c_1)) (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1)))))
+(assume t360 (or (= (f5 c_1) c_0) (= (f5 c_1) c_1)))
+(step t356' (cl (not (= (or (= (f5 c_1) c_0) (= (f5 c_1) c_1)) (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1))))) (not (or (= (f5 c_1) c_0) (= (f5 c_1) c_1))) (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1)))) :rule or :premises (t356))
+(step st361 (cl (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1)))) :rule resolution :premises (t356' t359 t360))
+(step t.end (cl) :rule resolution :premises (nst361.0 st361))

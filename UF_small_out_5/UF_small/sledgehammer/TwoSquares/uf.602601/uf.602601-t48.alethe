@@ -1,0 +1,3 @@
+(assume nst48.0 (not (= f16 f16)))
+(step st48 (cl (= f16 f16)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst48.0 st48))

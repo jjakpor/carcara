@@ -1,0 +1,5 @@
+(assume nst7.0 (not (= (= y$9177 (= y$prop y$9176)) (= y$9177 (= y$9176 y$prop)))))
+(assume t5 (= y$9177 y$9177))
+(assume t6 (= (= y$prop y$9176) (= y$9176 y$prop)))
+(step st7 (cl (= (= y$9177 (= y$prop y$9176)) (= y$9177 (= y$9176 y$prop)))) :rule cong :premises (t5 t6))
+(step t.end (cl) :rule resolution :premises (nst7.0 st7))

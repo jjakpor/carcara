@@ -1,0 +1,6 @@
+(define-fun @quantifiers_skolemize_3 () alpha (choice ((x alpha)) (not (models (push_alpha empty v0_alpha x) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha))))))
+(assume nst19.0 (not (not (= (models empty (forallR_alpha v0_alpha (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha)))) (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha))))))))
+(assume nst19.1 (not (models empty (forallR_alpha v0_alpha (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha))))))
+(assume nst19.2 (not (not (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha)))))))
+(step st19 (cl (not (= (models empty (forallR_alpha v0_alpha (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha)))) (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha)))))) (models empty (forallR_alpha v0_alpha (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha)))) (not (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (eq_alpha (inj_alpha v0_alpha) (inj_alpha v0_alpha)))))) :rule equiv_pos1)
+(step t.end (cl) :rule resolution :premises (nst19.0 nst19.1 nst19.2 st19))

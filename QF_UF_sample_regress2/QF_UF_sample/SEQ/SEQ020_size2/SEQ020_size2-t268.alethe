@@ -1,0 +1,7 @@
+(assume nst268.0 (not (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))))))
+(assume nst268.1 (not (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))))))
+(assume nst268.2 (not (= (f6 c_0) (f5 c_0))))
+(assume t267 (or (= (f6 c_0) (f5 c_0)) (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))))))
+(step t267' (cl (= (f6 c_0) (f5 c_0)) (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))))) :rule or :premises (t267))
+(step st268 (cl (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (= (f6 c_0) (f5 c_0))) :rule reordering :premises (t267'))
+(step t.end (cl) :rule resolution :premises (nst268.0 nst268.1 nst268.2 st268))

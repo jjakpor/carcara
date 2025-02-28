@@ -1,0 +1,4 @@
+(assume nst50.0 (not (not (and prt red_SR))))
+(assume t40 (not (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt))))
+(step st50 (cl (not (and prt red_SR))) :rule not_or :premises (t40) :args (0))
+(step t.end (cl) :rule resolution :premises (nst50.0 st50))

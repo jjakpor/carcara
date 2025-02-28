@@ -1,0 +1,6 @@
+(assume nst6.0 (not (Btwn$0 next$0 lst$0 lst$0 null$0)))
+(assume nst6.1 (not (not (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 null$0 lst$0)))))
+(assume t5 (or (not (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 null$0 lst$0))) (Btwn$0 next$0 lst$0 lst$0 null$0)))
+(step t5' (cl (not (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 null$0 lst$0))) (Btwn$0 next$0 lst$0 lst$0 null$0)) :rule or :premises (t5))
+(step st6 (cl (Btwn$0 next$0 lst$0 lst$0 null$0) (not (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 null$0 lst$0)))) :rule reordering :premises (t5'))
+(step t.end (cl) :rule resolution :premises (nst6.0 nst6.1 st6))

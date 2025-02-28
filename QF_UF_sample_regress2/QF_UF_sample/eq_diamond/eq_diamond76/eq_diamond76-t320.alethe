@@ -1,0 +1,5 @@
+(assume nst320.0 (not (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))))
+(assume nst320.1 (not (= x27 x28)))
+(assume t319 (=> (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (= x27 x28)))
+(step st320 (cl (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28)))) (= x27 x28)) :rule implies :premises (t319))
+(step t.end (cl) :rule resolution :premises (nst320.0 nst320.1 st320))

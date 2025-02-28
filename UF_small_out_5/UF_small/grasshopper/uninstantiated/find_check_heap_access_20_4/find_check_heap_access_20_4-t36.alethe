@@ -1,0 +1,5 @@
+(assume nst36.0 (not (= (= (read$0 next_2$0 root_x$0) null$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)))))
+(assume t32 (= (= (read$0 next_2$0 root_x$0) null$0) (= null$0 (read$0 next_2$0 root_x$0))))
+(assume t35 (= (= null$0 (read$0 next_2$0 root_x$0)) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))))
+(step st36 (cl (= (= (read$0 next_2$0 root_x$0) null$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)))) :rule trans :premises (t32 t35))
+(step t.end (cl) :rule resolution :premises (nst36.0 st36))

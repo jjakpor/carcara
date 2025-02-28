@@ -1,0 +1,5 @@
+(assume nst1208.0 (not (= (= (op e3 e3) (op (op e1 e3) e1)) false)))
+(assume t415 (= (= (op e3 e3) (op (op (op e1 e3) e3) e3)) false))
+(assume t1207 (= (= (op e3 e3) (op (op e1 e3) e1)) (= (op e3 e3) (op (op (op e1 e3) e3) e3))))
+(step st1208 (cl (= (= (op e3 e3) (op (op e1 e3) e1)) false)) :rule trans :premises (t1207 t415))
+(step t.end (cl) :rule resolution :premises (nst1208.0 st1208))

@@ -1,0 +1,6 @@
+(assume nst663.0 (not (= x59 x60)))
+(assume t658 (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))))
+(assume t662 (or (= x59 x60) (not (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))))))
+(step t662' (cl (= x59 x60) (not (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))))) :rule or :premises (t662))
+(step st663 (cl (= x59 x60)) :rule resolution :premises (t662' t658))
+(step t.end (cl) :rule resolution :premises (nst663.0 st663))

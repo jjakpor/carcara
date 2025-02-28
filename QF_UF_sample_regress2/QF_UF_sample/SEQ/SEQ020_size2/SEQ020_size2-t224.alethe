@@ -1,0 +1,7 @@
+(assume nst224.0 (not (= (f6 c_0) (f5 c_0))))
+(assume nst224.1 (not (not (= c_1 (f6 c_0)))))
+(assume nst224.2 (not (not (= c_1 (f5 c_0)))))
+(assume t223 (or (not (= c_1 (f5 c_0))) (not (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0))))
+(step t223' (cl (not (= c_1 (f5 c_0))) (not (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0))) :rule or :premises (t223))
+(step st224 (cl (= (f6 c_0) (f5 c_0)) (not (= c_1 (f6 c_0))) (not (= c_1 (f5 c_0)))) :rule reordering :premises (t223'))
+(step t.end (cl) :rule resolution :premises (nst224.0 nst224.1 nst224.2 st224))

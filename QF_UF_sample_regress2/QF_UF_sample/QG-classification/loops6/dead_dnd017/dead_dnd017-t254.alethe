@@ -1,0 +1,6 @@
+(assume nst254.0 (not (= e4 e0)))
+(assume nst254.1 (not (not (= e4 (op e4 (op e4 e4))))))
+(assume t253 (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0)))
+(step t253' (cl (not (= e4 (op e4 (op e4 e4)))) (= e4 e0)) :rule or :premises (t253))
+(step st254 (cl (= e4 e0) (not (= e4 (op e4 (op e4 e4))))) :rule reordering :premises (t253'))
+(step t.end (cl) :rule resolution :premises (nst254.0 nst254.1 st254))

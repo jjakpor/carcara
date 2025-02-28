@@ -1,0 +1,5 @@
+(assume nst400.0 (not (= (= e3 (op (op (op e1 e3) e3) (op e1 e3))) false)))
+(assume t385 (= (= e3 (op (op (op e1 e3) e3) (op e1 e3))) (= (op e1 (op e1 e3)) (op (op (op e1 e3) e3) (op e1 e3)))))
+(assume t399 (= (= (op e1 (op e1 e3)) (op (op (op e1 e3) e3) (op e1 e3))) false))
+(step st400 (cl (= (= e3 (op (op (op e1 e3) e3) (op e1 e3))) false)) :rule trans :premises (t385 t399))
+(step t.end (cl) :rule resolution :premises (nst400.0 st400))

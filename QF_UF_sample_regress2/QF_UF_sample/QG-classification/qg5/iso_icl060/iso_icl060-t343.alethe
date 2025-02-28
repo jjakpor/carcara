@@ -1,0 +1,5 @@
+(assume nst343.0 (not (= (or (or (or (or (= (op e4 e0) e3) (= (op e4 e1) e3)) (= (op e4 e2) e3)) (= (op e4 e3) e3)) (= (op e4 e4) e3)) (or (= e3 (op e4 e4)) (= e3 (op e4 e3)) (= e3 (op e4 e2)) (= e3 (op e4 e0)) (= e3 (op e4 e1))))))
+(assume t337 (= (or (or (or (or (= (op e4 e0) e3) (= (op e4 e1) e3)) (= (op e4 e2) e3)) (= (op e4 e3) e3)) (= (op e4 e4) e3)) (or (= (op e4 e4) e3) (= (op e4 e3) e3) (= (op e4 e2) e3) (= (op e4 e0) e3) (= (op e4 e1) e3))))
+(assume t342 (= (or (= (op e4 e4) e3) (= (op e4 e3) e3) (= (op e4 e2) e3) (= (op e4 e0) e3) (= (op e4 e1) e3)) (or (= e3 (op e4 e4)) (= e3 (op e4 e3)) (= e3 (op e4 e2)) (= e3 (op e4 e0)) (= e3 (op e4 e1)))))
+(step st343 (cl (= (or (or (or (or (= (op e4 e0) e3) (= (op e4 e1) e3)) (= (op e4 e2) e3)) (= (op e4 e3) e3)) (= (op e4 e4) e3)) (or (= e3 (op e4 e4)) (= e3 (op e4 e3)) (= e3 (op e4 e2)) (= e3 (op e4 e0)) (= e3 (op e4 e1))))) :rule trans :premises (t337 t342))
+(step t.end (cl) :rule resolution :premises (nst343.0 st343))

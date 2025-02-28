@@ -1,0 +1,6 @@
+(assume nst731.0 (not (= x64 x65)))
+(assume nst731.1 (not (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))))))
+(assume t730 (or (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65)))) (= x64 x65)))
+(step t730' (cl (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65)))) (= x64 x65)) :rule or :premises (t730))
+(step st731 (cl (= x64 x65) (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))))) :rule reordering :premises (t730'))
+(step t.end (cl) :rule resolution :premises (nst731.0 nst731.1 st731))

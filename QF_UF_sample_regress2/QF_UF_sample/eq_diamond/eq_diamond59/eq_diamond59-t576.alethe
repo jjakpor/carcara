@@ -1,0 +1,4 @@
+(assume nst576.0 (not (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34))))
+(assume t575 (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34))))
+(step st576 (cl (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34))) :rule and :premises (t575) :args (1))
+(step t.end (cl) :rule resolution :premises (nst576.0 st576))

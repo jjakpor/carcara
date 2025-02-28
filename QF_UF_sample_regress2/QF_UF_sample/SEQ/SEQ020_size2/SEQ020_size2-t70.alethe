@@ -1,0 +1,8 @@
+(assume nst70.0 (not (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1))))))
+(assume nst70.1 (not (not (= c_0 (f5 c_1)))))
+(assume t63 (or (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1)))))
+(assume t69 (or (not (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1)))) (not (= c_0 (f5 c_1)))))
+(step t63' (cl (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1)))) :rule or :premises (t63))
+(step t69' (cl (not (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1)))) (not (= c_0 (f5 c_1)))) :rule or :premises (t69))
+(step st70 (cl (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (not (= c_0 (f5 c_1)))) :rule resolution :premises (t63' t69'))
+(step t.end (cl) :rule resolution :premises (nst70.0 nst70.1 st70))

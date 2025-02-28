@@ -1,0 +1,4 @@
+(assume nst60.0 (not y$1084))
+(assume t59 (and y$1084 y$1089))
+(step st60 (cl y$1084) :rule and :premises (t59) :args (0))
+(step t.end (cl) :rule resolution :premises (nst60.0 st60))

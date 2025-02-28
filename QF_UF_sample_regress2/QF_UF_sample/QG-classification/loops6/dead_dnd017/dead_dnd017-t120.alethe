@@ -1,0 +1,3 @@
+(assume nst120.0 (not (= (= (op e2 unit) e2) (= e2 (op e2 unit)))))
+(step st120 (cl (= (= (op e2 unit) e2) (= e2 (op e2 unit)))) :rule rare_rewrite :args ("eq-symm" (op e2 unit) e2))
+(step t.end (cl) :rule resolution :premises (nst120.0 st120))

@@ -1,0 +1,6 @@
+(assume nst579.0 (not (= x33 x34)))
+(assume t574 (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))
+(assume t578 (or (= x33 x34) (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))))
+(step t578' (cl (= x33 x34) (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))) :rule or :premises (t578))
+(step st579 (cl (= x33 x34)) :rule resolution :premises (t578' t574))
+(step t.end (cl) :rule resolution :premises (nst579.0 st579))

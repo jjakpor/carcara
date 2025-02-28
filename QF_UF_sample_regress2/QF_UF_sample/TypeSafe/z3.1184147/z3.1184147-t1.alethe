@@ -1,0 +1,4 @@
+(assume nst1.0 (not (= f1 (f3 f4 f5 f6 f7 f10))))
+(assume a2 (= (f3 f4 f5 f6 f7 f10) f1))
+(step st1 (cl (= f1 (f3 f4 f5 f6 f7 f10))) :rule symm :premises (a2))
+(step t.end (cl) :rule resolution :premises (nst1.0 st1))

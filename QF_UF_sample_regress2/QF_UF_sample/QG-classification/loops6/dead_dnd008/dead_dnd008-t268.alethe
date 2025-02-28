@@ -1,0 +1,4 @@
+(assume nst268.0 (not (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))))))
+(assume nst268.1 (not (= e0 (op e5 (op e5 e0)))))
+(step st268 (cl (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0))))) (= e0 (op e5 (op e5 e0)))) :rule and_pos :args (1))
+(step t.end (cl) :rule resolution :premises (nst268.0 nst268.1 st268))

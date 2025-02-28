@@ -1,0 +1,5 @@
+(assume nst635.0 (not (not (= (= (op (op e4 e1) e4) e1) (= (op (op e3 e3) (op e3 e3)) (op (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3))) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))))
+(assume nst635.1 (not (not (= (op (op e4 e1) e4) e1))))
+(assume nst635.2 (not (= (op (op e3 e3) (op e3 e3)) (op (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3))) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(step st635 (cl (not (= (= (op (op e4 e1) e4) e1) (= (op (op e3 e3) (op e3 e3)) (op (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3))) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))) (not (= (op (op e4 e1) e4) e1)) (= (op (op e3 e3) (op e3 e3)) (op (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3))) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst635.0 nst635.1 nst635.2 st635))

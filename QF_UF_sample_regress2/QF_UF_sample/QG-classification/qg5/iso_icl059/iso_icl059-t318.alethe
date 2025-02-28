@@ -1,0 +1,4 @@
+(assume nst318.0 (not (and (not (= (op e1 e0) (op e1 e1))) (not (= (op e1 e0) (op e1 e2))))))
+(assume t317 (and (and (not (= (op e1 e0) (op e1 e1))) (not (= (op e1 e0) (op e1 e2)))) (not (= (op e1 e0) (op e1 e3)))))
+(step st318 (cl (and (not (= (op e1 e0) (op e1 e1))) (not (= (op e1 e0) (op e1 e2))))) :rule and :premises (t317) :args (0))
+(step t.end (cl) :rule resolution :premises (nst318.0 st318))

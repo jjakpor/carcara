@@ -1,0 +1,5 @@
+(assume nst49.0 (not (not (= (or (or (not car) (not clk)) (not (not clk))) (or (or (not car) (not clk)) clk)))))
+(assume nst49.1 (not (not (or (or (not car) (not clk)) (not (not clk))))))
+(assume nst49.2 (not (or (or (not car) (not clk)) clk)))
+(step st49 (cl (not (= (or (or (not car) (not clk)) (not (not clk))) (or (or (not car) (not clk)) clk))) (not (or (or (not car) (not clk)) (not (not clk)))) (or (or (not car) (not clk)) clk)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst49.0 nst49.1 nst49.2 st49))

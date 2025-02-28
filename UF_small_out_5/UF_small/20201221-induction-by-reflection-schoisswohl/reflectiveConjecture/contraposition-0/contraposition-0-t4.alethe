@@ -1,0 +1,4 @@
+(assume nst4.0 (not (or (models empty (notR (notR (qR bR)))) (models empty (notR (pR aR))))))
+(assume nst4.1 (not (not (models empty (notR (pR aR))))))
+(step st4 (cl (or (models empty (notR (notR (qR bR)))) (models empty (notR (pR aR)))) (not (models empty (notR (pR aR))))) :rule or_neg :args (1))
+(step t.end (cl) :rule resolution :premises (nst4.0 nst4.1 st4))

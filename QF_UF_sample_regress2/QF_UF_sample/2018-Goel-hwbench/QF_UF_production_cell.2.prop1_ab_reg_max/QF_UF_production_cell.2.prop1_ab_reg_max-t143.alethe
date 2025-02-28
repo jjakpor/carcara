@@ -1,0 +1,6 @@
+(assume nst143.0 (not (not y$prop)))
+(assume t141 (or (not y$prop) (not y$1559)))
+(assume t142 y$1559)
+(step t141' (cl (not y$prop) (not y$1559)) :rule or :premises (t141))
+(step st143 (cl (not y$prop)) :rule resolution :premises (t141' t142))
+(step t.end (cl) :rule resolution :premises (nst143.0 st143))

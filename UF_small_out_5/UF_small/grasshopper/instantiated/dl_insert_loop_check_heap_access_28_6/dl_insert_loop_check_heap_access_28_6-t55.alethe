@@ -1,0 +1,4 @@
+(assume nst55.0 (not (not (and (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)) (or (in$0 d_init$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 (read$0 prev$0 prv_5$0) (read$0 next$0 d_init$0) d_init$0)) (and (= prv_5$0 (read$0 next$0 d_init$0)) (= d_init$0 (read$0 prev$0 prv_5$0))))))))
+(assume nst55.1 (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))))
+(step st55 (cl (not (and (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)) (or (in$0 d_init$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 (read$0 prev$0 prv_5$0) (read$0 next$0 d_init$0) d_init$0)) (and (= prv_5$0 (read$0 next$0 d_init$0)) (= d_init$0 (read$0 prev$0 prv_5$0)))))) (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))) :rule and_pos :args (0))
+(step t.end (cl) :rule resolution :premises (nst55.0 nst55.1 st55))

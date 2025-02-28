@@ -1,0 +1,5 @@
+(assume nst430.0 (not (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))))
+(assume t429 (or (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))) (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))) (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))))
+(step t429' (cl (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))) (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))) (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))) :rule or :premises (t429))
+(step st430 (cl (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))) :rule contraction :premises (t429'))
+(step t.end (cl) :rule resolution :premises (nst430.0 st430))

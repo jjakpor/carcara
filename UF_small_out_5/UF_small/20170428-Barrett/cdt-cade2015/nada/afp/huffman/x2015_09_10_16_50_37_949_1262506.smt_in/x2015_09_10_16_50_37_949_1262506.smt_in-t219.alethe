@@ -1,0 +1,6 @@
+(assume nst219.0 (not (not (and (= a$ d$) (= a$ c$)))))
+(assume nst219.1 (not (= c$ d$)))
+(assume t218 (or (not (and (= a$ d$) (= a$ c$))) (not (and (= a$ d$) (= a$ c$))) (= c$ d$)))
+(step t218' (cl (not (and (= a$ d$) (= a$ c$))) (not (and (= a$ d$) (= a$ c$))) (= c$ d$)) :rule or :premises (t218))
+(step st219 (cl (not (and (= a$ d$) (= a$ c$))) (= c$ d$)) :rule contraction :premises (t218'))
+(step t.end (cl) :rule resolution :premises (nst219.0 nst219.1 st219))

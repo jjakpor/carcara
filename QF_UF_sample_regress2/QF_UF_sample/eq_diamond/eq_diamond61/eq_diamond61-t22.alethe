@@ -1,0 +1,5 @@
+(assume nst22.0 (not (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))))
+(assume nst22.1 (not (= x0 x1)))
+(assume t21 (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1)))
+(step st22 (cl (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (= x0 x1)) :rule implies :premises (t21))
+(step t.end (cl) :rule resolution :premises (nst22.0 nst22.1 st22))

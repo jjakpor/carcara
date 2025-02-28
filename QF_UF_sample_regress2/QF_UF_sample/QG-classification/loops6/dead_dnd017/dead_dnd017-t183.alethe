@@ -1,0 +1,5 @@
+(assume nst183.0 (not (not (= (= (op e3 unit) e3) (= e3 (op e3 e0))))))
+(assume nst183.1 (not (not (= (op e3 unit) e3))))
+(assume nst183.2 (not (= e3 (op e3 e0))))
+(step st183 (cl (not (= (= (op e3 unit) e3) (= e3 (op e3 e0)))) (not (= (op e3 unit) e3)) (= e3 (op e3 e0))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst183.0 nst183.1 nst183.2 st183))

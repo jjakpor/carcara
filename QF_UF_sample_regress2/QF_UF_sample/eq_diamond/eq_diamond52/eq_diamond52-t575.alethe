@@ -1,0 +1,4 @@
+(assume nst575.0 (not (not (not (not (= x0 x51))))))
+(assume nst575.1 (not (= x0 x51)))
+(step st575 (cl (not (not (not (= x0 x51)))) (= x0 x51)) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nst575.0 nst575.1 st575))

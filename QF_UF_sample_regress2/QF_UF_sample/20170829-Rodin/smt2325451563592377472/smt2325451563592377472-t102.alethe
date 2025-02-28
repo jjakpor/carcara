@@ -1,0 +1,7 @@
+(assume nst102.0 (not (or (or (not car) clk) car)))
+(assume t94 (or (not (= (or (or (not car) clk) (not (not car))) (or (or (not car) clk) car))) (not (or (or (not car) clk) (not (not car)))) (or (or (not car) clk) car)))
+(assume t96 (= (or (or (not car) clk) (not (not car))) (or (or (not car) clk) car)))
+(assume t101 (or (or (not car) clk) (not (not car))))
+(step t94' (cl (not (= (or (or (not car) clk) (not (not car))) (or (or (not car) clk) car))) (not (or (or (not car) clk) (not (not car)))) (or (or (not car) clk) car)) :rule or :premises (t94))
+(step st102 (cl (or (or (not car) clk) car)) :rule resolution :premises (t94' t96 t101))
+(step t.end (cl) :rule resolution :premises (nst102.0 st102))

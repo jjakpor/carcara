@@ -1,0 +1,5 @@
+(assume nst0.0 (not (not (= (= (not i2) (= r2 b2)) false))))
+(assume nst0.1 (not (not (= (not i2) (= r2 b2)))))
+(assume nst0.2 (not false))
+(step st0 (cl (not (= (= (not i2) (= r2 b2)) false)) (not (= (not i2) (= r2 b2))) false) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst0.0 nst0.1 nst0.2 st0))

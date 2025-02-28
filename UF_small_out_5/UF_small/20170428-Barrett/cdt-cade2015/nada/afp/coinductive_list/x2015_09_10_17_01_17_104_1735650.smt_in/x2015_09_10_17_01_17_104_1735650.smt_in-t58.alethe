@@ -1,0 +1,6 @@
+(assume t25 (or (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$))) (not (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))) (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$))))))
+(assume t28 (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$))))
+(assume t44 (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$))))
+(assume t57 (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)))))
+(step t25' (cl (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$))) (not (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))) (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$))))) :rule or :premises (t25))
+(step st58 (cl) :rule resolution :premises (t25' t28 t44 t57))

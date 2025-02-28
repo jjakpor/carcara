@@ -1,0 +1,4 @@
+(assume nst784.0 (not (and (and (= (op e0 e1) (op e1 e0)) (= (op e1 e1) (op e1 e1))) (= (op e2 e1) (op e1 e2)))))
+(assume t783 (and (and (and (= (op e0 e1) (op e1 e0)) (= (op e1 e1) (op e1 e1))) (= (op e2 e1) (op e1 e2))) (= (op e3 e1) (op e1 e3))))
+(step st784 (cl (and (and (= (op e0 e1) (op e1 e0)) (= (op e1 e1) (op e1 e1))) (= (op e2 e1) (op e1 e2)))) :rule and :premises (t783) :args (0))
+(step t.end (cl) :rule resolution :premises (nst784.0 st784))

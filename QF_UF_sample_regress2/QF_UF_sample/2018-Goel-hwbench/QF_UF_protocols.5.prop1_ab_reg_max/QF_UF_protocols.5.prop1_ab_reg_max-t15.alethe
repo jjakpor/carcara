@@ -1,0 +1,5 @@
+(assume nst15.0 (not (not (= (not y$962) y$v3_1517448506_495_op))))
+(assume nst15.1 (not (not (not y$962))))
+(assume nst15.2 (not y$v3_1517448506_495_op))
+(step st15 (cl (not (= (not y$962) y$v3_1517448506_495_op)) (not (not y$962)) y$v3_1517448506_495_op) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst15.0 nst15.1 nst15.2 st15))

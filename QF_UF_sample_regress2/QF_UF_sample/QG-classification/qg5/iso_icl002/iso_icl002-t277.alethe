@@ -1,0 +1,8 @@
+(assume nst277.0 (not (= (or (= e2 (op e4 e4)) (= e2 (op e3 e4)) (= e2 (op e2 e4)) (= e2 (op e0 e4)) (= e2 (op e1 e4))) (or (= (op (op e0 (op e0 e0)) e0) (op (op e0 e0) (op e0 e0))) (= (op (op e0 (op e0 e0)) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0))) (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) (= (op (op e0 (op e0 e0)) e0) (op e0 (op e0 e0))) (= (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) (op e0 e0)))))))
+(assume t64 (= (= e2 (op e3 e4)) (= (op (op e0 (op e0 e0)) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0)))))
+(assume t273 (= (= e2 (op e4 e4)) (= (op (op e0 (op e0 e0)) e0) (op (op e0 e0) (op e0 e0)))))
+(assume t274 (= (= e2 (op e2 e4)) (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))))
+(assume t275 (= (= e2 (op e0 e4)) (= (op (op e0 (op e0 e0)) e0) (op e0 (op e0 e0)))))
+(assume t276 (= (= e2 (op e1 e4)) (= (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) (op e0 e0)))))
+(step st277 (cl (= (or (= e2 (op e4 e4)) (= e2 (op e3 e4)) (= e2 (op e2 e4)) (= e2 (op e0 e4)) (= e2 (op e1 e4))) (or (= (op (op e0 (op e0 e0)) e0) (op (op e0 e0) (op e0 e0))) (= (op (op e0 (op e0 e0)) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0))) (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) (= (op (op e0 (op e0 e0)) e0) (op e0 (op e0 e0))) (= (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) (op e0 e0)))))) :rule cong :premises (t273 t64 t274 t275 t276))
+(step t.end (cl) :rule resolution :premises (nst277.0 st277))

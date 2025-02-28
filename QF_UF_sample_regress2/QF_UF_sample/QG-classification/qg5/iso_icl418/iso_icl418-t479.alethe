@@ -1,0 +1,4 @@
+(assume nst479.0 (not (= (not (= (op e0 e0) (op e0 e4))) (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) e4))))))
+(assume t478 (= (= (op e0 e0) (op e0 e4)) (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) e4))))
+(step st479 (cl (= (not (= (op e0 e0) (op e0 e4))) (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) e4))))) :rule cong :premises (t478))
+(step t.end (cl) :rule resolution :premises (nst479.0 st479))

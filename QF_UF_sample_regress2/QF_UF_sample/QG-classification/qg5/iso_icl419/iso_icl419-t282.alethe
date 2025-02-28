@@ -1,0 +1,4 @@
+(assume nst282.0 (not (and (and (= (op (op e0 e0) e0) e0) (= (op (op e0 e1) e0) e1)) (= (op (op e0 e2) e0) e2))))
+(assume t281 (and (and (and (= (op (op e0 e0) e0) e0) (= (op (op e0 e1) e0) e1)) (= (op (op e0 e2) e0) e2)) (= (op (op e0 e3) e0) e3)))
+(step st282 (cl (and (and (= (op (op e0 e0) e0) e0) (= (op (op e0 e1) e0) e1)) (= (op (op e0 e2) e0) e2))) :rule and :premises (t281) :args (0))
+(step t.end (cl) :rule resolution :premises (nst282.0 st282))

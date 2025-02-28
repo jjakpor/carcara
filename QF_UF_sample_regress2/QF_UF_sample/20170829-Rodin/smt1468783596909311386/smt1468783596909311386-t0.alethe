@@ -1,0 +1,5 @@
+(assume nst0.0 (not (not rd1)))
+(assume nst0.1 (not (not rd2)))
+(assume a0 (=> rd1 (not rd2)))
+(step st0 (cl (not rd1) (not rd2)) :rule implies :premises (a0))
+(step t.end (cl) :rule resolution :premises (nst0.0 nst0.1 st0))

@@ -1,0 +1,5 @@
+(assume nst30.0 (not (not (= (not y$1047) y$v3_1517448506_531_op))))
+(assume nst30.1 (not (not (not y$1047))))
+(assume nst30.2 (not y$v3_1517448506_531_op))
+(step st30 (cl (not (= (not y$1047) y$v3_1517448506_531_op)) (not (not y$1047)) y$v3_1517448506_531_op) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst30.0 nst30.1 nst30.2 st30))

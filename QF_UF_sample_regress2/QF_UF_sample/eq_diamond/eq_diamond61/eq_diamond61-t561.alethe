@@ -1,0 +1,4 @@
+(assume nst561.0 (not (=> (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (= x50 x51))))
+(assume t560 (and (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (=> (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (= x50 x51))))
+(step st561 (cl (=> (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (= x50 x51))) :rule and :premises (t560) :args (1))
+(step t.end (cl) :rule resolution :premises (nst561.0 st561))

@@ -1,0 +1,5 @@
+(assume nst1.0 (not (and (= x11 y11) (= y11 x12))))
+(assume nst1.1 (not (and (= x11 z11) (= z11 x12))))
+(assume t0 (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))))
+(step st1 (cl (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) :rule or :premises (t0))
+(step t.end (cl) :rule resolution :premises (nst1.0 nst1.1 st1))

@@ -1,0 +1,5 @@
+(assume nst292.0 (not (= (or (or (or (or (= (op e3 e0) e0) (= (op e3 e0) e1)) (= (op e3 e0) e2)) (= (op e3 e0) e3)) (= (op e3 e0) e4)) (or (= e4 (op e3 e0)) (= e3 (op e3 e0)) (= e2 (op e3 e0)) (= e0 (op e3 e0)) (= e1 (op e3 e0))))))
+(assume t287 (= (or (or (or (or (= (op e3 e0) e0) (= (op e3 e0) e1)) (= (op e3 e0) e2)) (= (op e3 e0) e3)) (= (op e3 e0) e4)) (or (= (op e3 e0) e4) (= (op e3 e0) e3) (= (op e3 e0) e2) (= (op e3 e0) e0) (= (op e3 e0) e1))))
+(assume t291 (= (or (= (op e3 e0) e4) (= (op e3 e0) e3) (= (op e3 e0) e2) (= (op e3 e0) e0) (= (op e3 e0) e1)) (or (= e4 (op e3 e0)) (= e3 (op e3 e0)) (= e2 (op e3 e0)) (= e0 (op e3 e0)) (= e1 (op e3 e0)))))
+(step st292 (cl (= (or (or (or (or (= (op e3 e0) e0) (= (op e3 e0) e1)) (= (op e3 e0) e2)) (= (op e3 e0) e3)) (= (op e3 e0) e4)) (or (= e4 (op e3 e0)) (= e3 (op e3 e0)) (= e2 (op e3 e0)) (= e0 (op e3 e0)) (= e1 (op e3 e0))))) :rule trans :premises (t287 t291))
+(step t.end (cl) :rule resolution :premises (nst292.0 st292))

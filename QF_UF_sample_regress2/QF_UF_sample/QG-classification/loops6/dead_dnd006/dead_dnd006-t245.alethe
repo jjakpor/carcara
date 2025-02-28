@@ -1,0 +1,7 @@
+(assume nst245.0 (not (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0))))
+(assume t231 (or (not (= (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit)) (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0)))) (not (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit))) (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0))))
+(assume t243 (= (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit)) (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0))))
+(assume t244 (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit)))
+(step t231' (cl (not (= (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit)) (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0)))) (not (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit))) (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0))) :rule or :premises (t231))
+(step st245 (cl (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0))) :rule resolution :premises (t231' t243 t244))
+(step t.end (cl) :rule resolution :premises (nst245.0 st245))

@@ -1,0 +1,4 @@
+(assume nst9.0 (not (= e0 (op e0 (op e0 e0)))))
+(assume t8 (= (op e0 (op e0 e0)) e0))
+(step st9 (cl (= e0 (op e0 (op e0 e0)))) :rule symm :premises (t8))
+(step t.end (cl) :rule resolution :premises (nst9.0 st9))

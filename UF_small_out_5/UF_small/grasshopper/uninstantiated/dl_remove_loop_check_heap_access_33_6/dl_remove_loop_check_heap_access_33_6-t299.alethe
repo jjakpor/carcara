@@ -1,0 +1,5 @@
+(assume nst299.0 (not (= (or (= curr_init$0 curr_init$0) (not (Btwn$0 next$0 c_init$0 curr_init$0 curr_init$0))) true)))
+(assume t297 (= (or (= curr_init$0 curr_init$0) (not (Btwn$0 next$0 c_init$0 curr_init$0 curr_init$0))) (or true (not (Btwn$0 next$0 c_init$0 curr_init$0 curr_init$0)))))
+(assume t298 (= (or true (not (Btwn$0 next$0 c_init$0 curr_init$0 curr_init$0))) true))
+(step st299 (cl (= (or (= curr_init$0 curr_init$0) (not (Btwn$0 next$0 c_init$0 curr_init$0 curr_init$0))) true)) :rule trans :premises (t297 t298))
+(step t.end (cl) :rule resolution :premises (nst299.0 st299))

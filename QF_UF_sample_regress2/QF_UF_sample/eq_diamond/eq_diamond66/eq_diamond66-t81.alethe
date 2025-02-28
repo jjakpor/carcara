@@ -1,0 +1,4 @@
+(assume nst81.0 (not (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9))))
+(assume t80 (and (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9))))
+(step st81 (cl (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9))) :rule and :premises (t80) :args (1))
+(step t.end (cl) :rule resolution :premises (nst81.0 st81))

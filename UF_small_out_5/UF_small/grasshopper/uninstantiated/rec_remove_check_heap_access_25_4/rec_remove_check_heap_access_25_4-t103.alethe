@@ -1,0 +1,6 @@
+(assume nst103.0 (not (not (and (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0)) (Btwn$0 next$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0) null$0)))))
+(assume t64 (or (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0)) (not (and (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0)) (Btwn$0 next$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0) null$0)))))
+(assume t102 (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0))))
+(step t64' (cl (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0)) (not (and (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0)) (Btwn$0 next$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0) null$0)))) :rule or :premises (t64))
+(step st103 (cl (not (and (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0)) (Btwn$0 next$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0) null$0)))) :rule resolution :premises (t64' t102))
+(step t.end (cl) :rule resolution :premises (nst103.0 st103))

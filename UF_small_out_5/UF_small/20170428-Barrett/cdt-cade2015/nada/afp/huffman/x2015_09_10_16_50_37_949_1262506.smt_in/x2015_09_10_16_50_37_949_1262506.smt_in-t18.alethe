@@ -1,0 +1,3 @@
+(assume nst18.0 (not (= (less_eq$ (depth$ t$ a$)) (less_eq$ (depth$ t$ a$)))))
+(step st18 (cl (= (less_eq$ (depth$ t$ a$)) (less_eq$ (depth$ t$ a$)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst18.0 st18))

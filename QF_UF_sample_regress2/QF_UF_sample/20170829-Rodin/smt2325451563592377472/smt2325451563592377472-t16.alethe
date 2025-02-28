@@ -1,0 +1,4 @@
+(assume nst16.0 (not (or (not prt) (not car) (not (not clk)))))
+(assume nst16.1 (not (not (not prt))))
+(step st16 (cl (or (not prt) (not car) (not (not clk))) (not (not prt))) :rule or_neg :args (0))
+(step t.end (cl) :rule resolution :premises (nst16.0 nst16.1 st16))

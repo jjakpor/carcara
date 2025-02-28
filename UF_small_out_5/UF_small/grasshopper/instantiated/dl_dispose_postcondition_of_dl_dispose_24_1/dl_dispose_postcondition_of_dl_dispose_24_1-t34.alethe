@@ -1,0 +1,4 @@
+(assume nst34.0 (not (= b$0 b_1$0)))
+(assume a63 (= b_1$0 b$0))
+(step st34 (cl (= b$0 b_1$0)) :rule symm :premises (a63))
+(step t.end (cl) :rule resolution :premises (nst34.0 st34))

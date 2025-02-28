@@ -1,0 +1,6 @@
+(assume nst8.0 (not (not org)))
+(assume t5 (or (not org) (and (not rd1) (not rd2))))
+(assume t7 (not (and (not rd1) (not rd2))))
+(step t5' (cl (not org) (and (not rd1) (not rd2))) :rule or :premises (t5))
+(step st8 (cl (not org)) :rule resolution :premises (t5' t7))
+(step t.end (cl) :rule resolution :premises (nst8.0 st8))

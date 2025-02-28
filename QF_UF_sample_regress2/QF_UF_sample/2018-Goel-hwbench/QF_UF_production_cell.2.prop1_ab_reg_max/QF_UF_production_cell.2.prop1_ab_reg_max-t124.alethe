@@ -1,0 +1,3 @@
+(assume nst124.0 (not (= y$n5s8 y$n5s8)))
+(step st124 (cl (= y$n5s8 y$n5s8)) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst124.0 st124))

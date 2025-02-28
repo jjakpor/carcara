@@ -1,0 +1,5 @@
+(assume nst248.0 (not (= (or (not (not (= a$ d$))) (not (not (= b$ c$)))) (or (= a$ d$) (= b$ c$)))))
+(assume t246 (= (not (not (= a$ d$))) (= a$ d$)))
+(assume t247 (= (not (not (= b$ c$))) (= b$ c$)))
+(step st248 (cl (= (or (not (not (= a$ d$))) (not (not (= b$ c$)))) (or (= a$ d$) (= b$ c$)))) :rule cong :premises (t246 t247))
+(step t.end (cl) :rule resolution :premises (nst248.0 st248))

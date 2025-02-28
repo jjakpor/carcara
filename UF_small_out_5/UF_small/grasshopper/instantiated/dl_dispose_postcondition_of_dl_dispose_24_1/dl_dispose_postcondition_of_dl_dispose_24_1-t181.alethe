@@ -1,0 +1,4 @@
+(assume nst181.0 (not (= (not (in$0 null$0 Alloc_1$0)) (not (in$0 prv_2$0 Alloc_1$0)))))
+(assume t180 (= (in$0 null$0 Alloc_1$0) (in$0 prv_2$0 Alloc_1$0)))
+(step st181 (cl (= (not (in$0 null$0 Alloc_1$0)) (not (in$0 prv_2$0 Alloc_1$0)))) :rule cong :premises (t180))
+(step t.end (cl) :rule resolution :premises (nst181.0 st181))

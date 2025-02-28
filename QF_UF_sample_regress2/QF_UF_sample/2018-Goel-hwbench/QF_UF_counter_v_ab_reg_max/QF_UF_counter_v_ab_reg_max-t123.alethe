@@ -1,0 +1,5 @@
+(assume nst123.0 (not (= (= y$X y$n1s4) (= y$n1s4 y$n1s4))))
+(assume t47 (= y$n1s4 y$n1s4))
+(assume t122 (= y$X y$n1s4))
+(step st123 (cl (= (= y$X y$n1s4) (= y$n1s4 y$n1s4))) :rule cong :premises (t122 t47))
+(step t.end (cl) :rule resolution :premises (nst123.0 st123))

@@ -1,0 +1,4 @@
+(assume nst685.0 (not (=> (or (and (= x60 y60) (= y60 x61)) (and (= x60 z60) (= z60 x61))) (= x60 x61))))
+(assume t684 (and (or (and (= x60 y60) (= y60 x61)) (and (= x60 z60) (= z60 x61))) (=> (or (and (= x60 y60) (= y60 x61)) (and (= x60 z60) (= z60 x61))) (= x60 x61))))
+(step st685 (cl (=> (or (and (= x60 y60) (= y60 x61)) (and (= x60 z60) (= z60 x61))) (= x60 x61))) :rule and :premises (t684) :args (1))
+(step t.end (cl) :rule resolution :premises (nst685.0 st685))

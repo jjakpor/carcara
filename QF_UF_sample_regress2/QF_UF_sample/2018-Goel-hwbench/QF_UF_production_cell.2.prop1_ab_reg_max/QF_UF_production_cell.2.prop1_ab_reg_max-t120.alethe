@@ -1,0 +1,3 @@
+(assume nst120.0 (not (= (= y$59 true) y$59)))
+(step st120 (cl (= (= y$59 true) y$59)) :rule rare_rewrite :args ("bool-eq-true" y$59))
+(step t.end (cl) :rule resolution :premises (nst120.0 st120))

@@ -1,0 +1,4 @@
+(assume nst24.0 (not (or (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))) (not (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))) (not (not (fun_app$h lnull$ xs$))))))
+(assume nst24.1 (not (not (not (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))))))
+(step st24 (cl (or (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))) (not (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))) (not (not (fun_app$h lnull$ xs$)))) (not (not (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))))) :rule or_neg :args (1))
+(step t.end (cl) :rule resolution :premises (nst24.0 nst24.1 st24))

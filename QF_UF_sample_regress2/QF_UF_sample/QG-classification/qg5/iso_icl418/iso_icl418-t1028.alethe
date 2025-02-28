@@ -1,0 +1,5 @@
+(assume nst1028.0 (not (= (or (or (or (or (= (op e3 e0) e0) (= (op e3 e1) e0)) (= (op e3 e2) e0)) (= (op e3 e3) e0)) (= (op e3 e4) e0)) (or (= e0 (op e3 e4)) (= e0 (op e3 e3)) (= e0 (op e3 e2)) (= e0 (op e3 e0)) (= e0 (op e3 e1))))))
+(assume t1024 (= (or (or (or (or (= (op e3 e0) e0) (= (op e3 e1) e0)) (= (op e3 e2) e0)) (= (op e3 e3) e0)) (= (op e3 e4) e0)) (or (= (op e3 e4) e0) (= (op e3 e3) e0) (= (op e3 e2) e0) (= (op e3 e0) e0) (= (op e3 e1) e0))))
+(assume t1027 (= (or (= (op e3 e4) e0) (= (op e3 e3) e0) (= (op e3 e2) e0) (= (op e3 e0) e0) (= (op e3 e1) e0)) (or (= e0 (op e3 e4)) (= e0 (op e3 e3)) (= e0 (op e3 e2)) (= e0 (op e3 e0)) (= e0 (op e3 e1)))))
+(step st1028 (cl (= (or (or (or (or (= (op e3 e0) e0) (= (op e3 e1) e0)) (= (op e3 e2) e0)) (= (op e3 e3) e0)) (= (op e3 e4) e0)) (or (= e0 (op e3 e4)) (= e0 (op e3 e3)) (= e0 (op e3 e2)) (= e0 (op e3 e0)) (= e0 (op e3 e1))))) :rule trans :premises (t1024 t1027))
+(step t.end (cl) :rule resolution :premises (nst1028.0 st1028))

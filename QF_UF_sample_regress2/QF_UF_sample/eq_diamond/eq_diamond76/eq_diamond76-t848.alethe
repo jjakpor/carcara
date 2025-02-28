@@ -1,0 +1,5 @@
+(assume nst848.0 (not (= (= x11 x12) false)))
+(assume t841 (= (= x11 x12) (= x0 x75)))
+(assume t847 (= (= x0 x75) false))
+(step st848 (cl (= (= x11 x12) false)) :rule trans :premises (t841 t847))
+(step t.end (cl) :rule resolution :premises (nst848.0 st848))

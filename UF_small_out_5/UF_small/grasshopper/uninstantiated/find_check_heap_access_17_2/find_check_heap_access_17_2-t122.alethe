@@ -1,0 +1,7 @@
+(assume nst122.0 (not (not (Btwn$0 next$0 x$0 x$0 root_x$0))))
+(assume t8 (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0)) (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0))))))
+(assume t80 (not (= root_x$0 x$0)))
+(assume t121 (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0))))
+(step t8' (cl (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0)) (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0))))) :rule or :premises (t8))
+(step st122 (cl (not (Btwn$0 next$0 x$0 x$0 root_x$0))) :rule resolution :premises (t8' t80 t121))
+(step t.end (cl) :rule resolution :premises (nst122.0 st122))

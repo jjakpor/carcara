@@ -1,0 +1,7 @@
+(assume nst398.0 (not (not (= (op e1 (op e1 e3)) (op (op (op e1 e3) e3) (op e1 e3))))))
+(assume t390 (or (not (= (not (= (op e1 e2) (op e4 e2))) (not (= (op e1 (op e1 e3)) (op (op (op e1 e3) e3) (op e1 e3)))))) (not (not (= (op e1 e2) (op e4 e2)))) (not (= (op e1 (op e1 e3)) (op (op (op e1 e3) e3) (op e1 e3))))))
+(assume t392 (= (not (= (op e1 e2) (op e4 e2))) (not (= (op e1 (op e1 e3)) (op (op (op e1 e3) e3) (op e1 e3))))))
+(assume t397 (not (= (op e1 e2) (op e4 e2))))
+(step t390' (cl (not (= (not (= (op e1 e2) (op e4 e2))) (not (= (op e1 (op e1 e3)) (op (op (op e1 e3) e3) (op e1 e3)))))) (not (not (= (op e1 e2) (op e4 e2)))) (not (= (op e1 (op e1 e3)) (op (op (op e1 e3) e3) (op e1 e3))))) :rule or :premises (t390))
+(step st398 (cl (not (= (op e1 (op e1 e3)) (op (op (op e1 e3) e3) (op e1 e3))))) :rule resolution :premises (t390' t392 t397))
+(step t.end (cl) :rule resolution :premises (nst398.0 st398))

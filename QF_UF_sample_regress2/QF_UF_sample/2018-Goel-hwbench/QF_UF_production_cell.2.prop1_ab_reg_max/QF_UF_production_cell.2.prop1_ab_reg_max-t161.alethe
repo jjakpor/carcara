@@ -1,0 +1,3 @@
+(assume nst161.0 (not (= (not true) false)))
+(step st161 (cl (= (not true) false)) :rule rare_rewrite :args ("evaluate"))
+(step t.end (cl) :rule resolution :premises (nst161.0 st161))

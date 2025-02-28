@@ -1,0 +1,4 @@
+(assume nst31.0 (not (not rd2)))
+(assume a10 (not (or (and prt grn) org (and (not prt) rd1) rd2 (and grn (not prt)) (and rd1 prt))))
+(step st31 (cl (not rd2)) :rule not_or :premises (a10) :args (3))
+(step t.end (cl) :rule resolution :premises (nst31.0 st31))

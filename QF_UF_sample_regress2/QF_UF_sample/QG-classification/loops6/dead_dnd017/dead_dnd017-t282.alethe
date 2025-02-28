@@ -1,0 +1,5 @@
+(assume nst282.0 (not (= (= (op e5 unit) e5) (= e5 (op e5 e0)))))
+(assume t278 (= (= (op e5 unit) e5) (= e5 (op e5 unit))))
+(assume t281 (= (= e5 (op e5 unit)) (= e5 (op e5 e0))))
+(step st282 (cl (= (= (op e5 unit) e5) (= e5 (op e5 e0)))) :rule trans :premises (t278 t281))
+(step t.end (cl) :rule resolution :premises (nst282.0 st282))

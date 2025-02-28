@@ -1,0 +1,3 @@
+(assume nst301.0 (not (= (= (= e3 (op (op e4 e3) e3)) false) (not (= e3 (op (op e4 e3) e3))))))
+(step st301 (cl (= (= (= e3 (op (op e4 e3) e3)) false) (not (= e3 (op (op e4 e3) e3))))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nst301.0 st301))

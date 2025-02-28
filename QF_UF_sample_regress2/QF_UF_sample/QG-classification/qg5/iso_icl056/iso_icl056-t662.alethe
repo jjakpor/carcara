@@ -1,0 +1,5 @@
+(assume nst662.0 (not (= (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))) false)))
+(assume t651 (= (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))) (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))
+(assume t661 (= (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) false))
+(step st662 (cl (= (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))) false)) :rule trans :premises (t651 t661))
+(step t.end (cl) :rule resolution :premises (nst662.0 st662))

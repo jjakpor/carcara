@@ -1,0 +1,6 @@
+(assume nst290.0 (not (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))))))
+(assume nst290.1 (not (= (f6 c_0) (f5 c_0))))
+(assume t289 (or (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (= (f6 c_0) (f5 c_0))))
+(step t289' (cl (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (= (f6 c_0) (f5 c_0))) :rule or :premises (t289))
+(step st290 (cl (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (= (f6 c_0) (f5 c_0))) :rule contraction :premises (t289'))
+(step t.end (cl) :rule resolution :premises (nst290.0 nst290.1 st290))

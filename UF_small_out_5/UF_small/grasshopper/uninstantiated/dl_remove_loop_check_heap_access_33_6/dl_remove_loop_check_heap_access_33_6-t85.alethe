@@ -1,0 +1,5 @@
+(assume nst85.0 (not (= (in$0 prv_init$0 sk_?X_78$0) (in$0 (read$0 prev$0 prv_5$0) (dlseg_domain$0 next$0 prev$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0 (read$0 prev$0 prv_5$0))))))
+(assume t69 (= prv_init$0 (read$0 prev$0 prv_5$0)))
+(assume t84 (= sk_?X_78$0 (dlseg_domain$0 next$0 prev$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0 (read$0 prev$0 prv_5$0))))
+(step st85 (cl (= (in$0 prv_init$0 sk_?X_78$0) (in$0 (read$0 prev$0 prv_5$0) (dlseg_domain$0 next$0 prev$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0 (read$0 prev$0 prv_5$0))))) :rule cong :premises (t69 t84))
+(step t.end (cl) :rule resolution :premises (nst85.0 st85))

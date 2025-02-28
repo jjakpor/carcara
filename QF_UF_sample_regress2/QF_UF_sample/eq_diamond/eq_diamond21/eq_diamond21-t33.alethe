@@ -1,0 +1,4 @@
+(assume nst33.0 (not (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2))))
+(assume t32 (and (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2))))
+(step st33 (cl (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2))) :rule and :premises (t32) :args (1))
+(step t.end (cl) :rule resolution :premises (nst33.0 st33))

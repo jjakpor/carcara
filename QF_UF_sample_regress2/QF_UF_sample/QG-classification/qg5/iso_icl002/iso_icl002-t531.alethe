@@ -1,0 +1,7 @@
+(assume nst531.0 (not (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)))))
+(assume t527 (or (not (= (not (= (op e1 e0) (op e2 e0))) (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))))) (not (not (= (op e1 e0) (op e2 e0)))) (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)))))
+(assume t529 (= (not (= (op e1 e0) (op e2 e0))) (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)))))
+(assume t530 (not (= (op e1 e0) (op e2 e0))))
+(step t527' (cl (not (= (not (= (op e1 e0) (op e2 e0))) (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))))) (not (not (= (op e1 e0) (op e2 e0)))) (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)))) :rule or :premises (t527))
+(step st531 (cl (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)))) :rule resolution :premises (t527' t529 t530))
+(step t.end (cl) :rule resolution :premises (nst531.0 st531))

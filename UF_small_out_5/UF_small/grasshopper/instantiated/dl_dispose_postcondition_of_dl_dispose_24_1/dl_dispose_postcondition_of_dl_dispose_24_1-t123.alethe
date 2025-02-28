@@ -1,0 +1,5 @@
+(assume nst123.0 (not (= (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= sk_?e$0 prv_2$0)) (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= prv_2$0 sk_?e$0)))))
+(assume t121 (= (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0))))
+(assume t122 (= (= sk_?e$0 prv_2$0) (= prv_2$0 sk_?e$0)))
+(step st123 (cl (= (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= sk_?e$0 prv_2$0)) (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= prv_2$0 sk_?e$0)))) :rule cong :premises (t121 t122))
+(step t.end (cl) :rule resolution :premises (nst123.0 st123))

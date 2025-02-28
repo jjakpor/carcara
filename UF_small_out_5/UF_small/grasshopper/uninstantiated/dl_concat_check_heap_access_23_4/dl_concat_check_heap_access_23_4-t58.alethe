@@ -1,0 +1,8 @@
+(assume nst58.0 (not (= (dlseg_domain$0 next$0 prev$0 start1$0 null$0 null$0 end1$0) (dlseg_domain$0 next$0 prev$0 start1$0 (read$0 next$0 end1$0) (read$0 next$0 end1$0) end1$0))))
+(assume t35 (= null$0 (read$0 next$0 end1$0)))
+(assume t36 (= start1$0 start1$0))
+(assume t48 (= next$0 next$0))
+(assume t50 (= end1$0 end1$0))
+(assume t57 (= prev$0 prev$0))
+(step st58 (cl (= (dlseg_domain$0 next$0 prev$0 start1$0 null$0 null$0 end1$0) (dlseg_domain$0 next$0 prev$0 start1$0 (read$0 next$0 end1$0) (read$0 next$0 end1$0) end1$0))) :rule cong :premises (t48 t57 t36 t35 t35 t50))
+(step t.end (cl) :rule resolution :premises (nst58.0 st58))

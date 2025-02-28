@@ -1,0 +1,3 @@
+(assume nst901.0 (not (= (and true (= (op e3 e4) (op e4 e3)) (= (op e2 e4) (op e4 e2)) (= (op e0 e4) (op e4 e0)) (= (op e1 e4) (op e4 e1))) (and (= (op e3 e4) (op e4 e3)) (= (op e2 e4) (op e4 e2)) (= (op e0 e4) (op e4 e0)) (= (op e1 e4) (op e4 e1))))))
+(step st901 (cl (= (and true (= (op e3 e4) (op e4 e3)) (= (op e2 e4) (op e4 e2)) (= (op e0 e4) (op e4 e0)) (= (op e1 e4) (op e4 e1))) (and (= (op e3 e4) (op e4 e3)) (= (op e2 e4) (op e4 e2)) (= (op e0 e4) (op e4 e0)) (= (op e1 e4) (op e4 e1))))) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst901.0 st901))

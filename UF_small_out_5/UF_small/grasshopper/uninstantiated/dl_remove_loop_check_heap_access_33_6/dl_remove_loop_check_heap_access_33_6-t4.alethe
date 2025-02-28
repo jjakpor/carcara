@@ -1,0 +1,5 @@
+(assume nst4.0 (not (not (or (= prv_5$0 (read$0 next$0 d_init$0)) (not (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0))))))
+(assume nst4.1 (not (= prv_5$0 (read$0 next$0 d_init$0))))
+(assume nst4.2 (not (not (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0))))
+(step st4 (cl (not (or (= prv_5$0 (read$0 next$0 d_init$0)) (not (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0)))) (= prv_5$0 (read$0 next$0 d_init$0)) (not (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0))) :rule or_pos)
+(step t.end (cl) :rule resolution :premises (nst4.0 nst4.1 nst4.2 st4))

@@ -1,0 +1,4 @@
+(assume nst17.0 (not (= null$0 cp_2$0)))
+(assume a8 (= cp_2$0 null$0))
+(step st17 (cl (= null$0 cp_2$0)) :rule symm :premises (a8))
+(step t.end (cl) :rule resolution :premises (nst17.0 st17))

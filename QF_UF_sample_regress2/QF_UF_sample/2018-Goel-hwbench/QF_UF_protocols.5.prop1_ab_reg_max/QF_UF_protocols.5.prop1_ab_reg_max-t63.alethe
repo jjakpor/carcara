@@ -1,0 +1,7 @@
+(assume nst63.0 (not y$v3_1517448506_531_op))
+(assume t30 (or (not (= (not y$1047) y$v3_1517448506_531_op)) (not (not y$1047)) y$v3_1517448506_531_op))
+(assume t31 (= (not y$1047) y$v3_1517448506_531_op))
+(assume t62 (not y$1047))
+(step t30' (cl (not (= (not y$1047) y$v3_1517448506_531_op)) (not (not y$1047)) y$v3_1517448506_531_op) :rule or :premises (t30))
+(step st63 (cl y$v3_1517448506_531_op) :rule resolution :premises (t30' t31 t62))
+(step t.end (cl) :rule resolution :premises (nst63.0 st63))

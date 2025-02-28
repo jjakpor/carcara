@@ -1,0 +1,5 @@
+(assume nst315.0 (not (= (not (= (op e0 e3) (op e3 e3))) (not (= (op e3 e3) (op (op (op e1 e3) e1) e3))))))
+(assume t312 (= (not (= (op e0 e3) (op e3 e3))) (not (= (op (op (op e1 e3) e1) e3) (op e3 e3)))))
+(assume t314 (= (not (= (op (op (op e1 e3) e1) e3) (op e3 e3))) (not (= (op e3 e3) (op (op (op e1 e3) e1) e3)))))
+(step st315 (cl (= (not (= (op e0 e3) (op e3 e3))) (not (= (op e3 e3) (op (op (op e1 e3) e1) e3))))) :rule trans :premises (t312 t314))
+(step t.end (cl) :rule resolution :premises (nst315.0 st315))

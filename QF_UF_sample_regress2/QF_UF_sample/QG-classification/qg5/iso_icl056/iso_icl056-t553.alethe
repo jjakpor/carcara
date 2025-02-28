@@ -1,0 +1,4 @@
+(assume nst553.0 (not (not (= e1 e3))))
+(assume t217 (and (and (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4))) (not (= e1 e2))) (not (= e1 e3))))
+(step st553 (cl (not (= e1 e3))) :rule and :premises (t217) :args (1))
+(step t.end (cl) :rule resolution :premises (nst553.0 st553))

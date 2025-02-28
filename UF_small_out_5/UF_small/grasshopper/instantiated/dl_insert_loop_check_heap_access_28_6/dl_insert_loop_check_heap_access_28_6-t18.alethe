@@ -1,0 +1,4 @@
+(assume nst18.0 (not (= (not (= curr_init$0 null$0)) (not (= null$0 curr_init$0)))))
+(assume t17 (= (= curr_init$0 null$0) (= null$0 curr_init$0)))
+(step st18 (cl (= (not (= curr_init$0 null$0)) (not (= null$0 curr_init$0)))) :rule cong :premises (t17))
+(step t.end (cl) :rule resolution :premises (nst18.0 st18))

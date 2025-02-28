@@ -1,0 +1,8 @@
+(assume nst150.0 (not (= (or (= e4 (op e1 e4)) (= e4 (op e1 e3)) (= e4 (op e1 e2)) (= e4 (op e1 e0)) (= e4 (op e1 e1))) (or (= (op e0 e0) (op (op e0 (op e0 e0)) (op e0 e0))) (= (op e0 e0) (op (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) e0))) (= (op e0 e0) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0))) (= (op e0 e0) (op (op e0 (op e0 e0)) e0)) (= (op e0 e0) (op (op e0 (op e0 e0)) (op e0 (op e0 e0))))))))
+(assume t86 (= (= e4 (op e1 e3)) (= (op e0 e0) (op (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) e0)))))
+(assume t146 (= (= e4 (op e1 e4)) (= (op e0 e0) (op (op e0 (op e0 e0)) (op e0 e0)))))
+(assume t147 (= (= e4 (op e1 e2)) (= (op e0 e0) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)))))
+(assume t148 (= (= e4 (op e1 e0)) (= (op e0 e0) (op (op e0 (op e0 e0)) e0))))
+(assume t149 (= (= e4 (op e1 e1)) (= (op e0 e0) (op (op e0 (op e0 e0)) (op e0 (op e0 e0))))))
+(step st150 (cl (= (or (= e4 (op e1 e4)) (= e4 (op e1 e3)) (= e4 (op e1 e2)) (= e4 (op e1 e0)) (= e4 (op e1 e1))) (or (= (op e0 e0) (op (op e0 (op e0 e0)) (op e0 e0))) (= (op e0 e0) (op (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) e0))) (= (op e0 e0) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0))) (= (op e0 e0) (op (op e0 (op e0 e0)) e0)) (= (op e0 e0) (op (op e0 (op e0 e0)) (op e0 (op e0 e0))))))) :rule cong :premises (t146 t86 t147 t148 t149))
+(step t.end (cl) :rule resolution :premises (nst150.0 st150))

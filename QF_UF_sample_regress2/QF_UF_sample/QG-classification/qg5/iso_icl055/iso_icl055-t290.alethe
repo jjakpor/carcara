@@ -1,0 +1,7 @@
+(assume nst290.0 (not (not (= (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))))
+(assume t272 (or (not (= (not (= (op e2 e0) (op e2 e2))) (not (= (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))) (not (not (= (op e2 e0) (op e2 e2)))) (not (= (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))))
+(assume t276 (= (not (= (op e2 e0) (op e2 e2))) (not (= (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))))
+(assume t289 (not (= (op e2 e0) (op e2 e2))))
+(step t272' (cl (not (= (not (= (op e2 e0) (op e2 e2))) (not (= (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))) (not (not (= (op e2 e0) (op e2 e2)))) (not (= (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))) :rule or :premises (t272))
+(step st290 (cl (not (= (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))) :rule resolution :premises (t272' t276 t289))
+(step t.end (cl) :rule resolution :premises (nst290.0 st290))

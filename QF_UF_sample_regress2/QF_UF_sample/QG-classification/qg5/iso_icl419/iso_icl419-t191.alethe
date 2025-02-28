@@ -1,0 +1,7 @@
+(assume nst191.0 (not (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(assume t172 (or (not (= (not (= (op e0 e2) (op e1 e2))) (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))) (not (not (= (op e0 e2) (op e1 e2)))) (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(assume t177 (= (not (= (op e0 e2) (op e1 e2))) (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(assume t190 (not (= (op e0 e2) (op e1 e2))))
+(step t172' (cl (not (= (not (= (op e0 e2) (op e1 e2))) (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))) (not (not (= (op e0 e2) (op e1 e2)))) (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule or :premises (t172))
+(step st191 (cl (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule resolution :premises (t172' t177 t190))
+(step t.end (cl) :rule resolution :premises (nst191.0 st191))

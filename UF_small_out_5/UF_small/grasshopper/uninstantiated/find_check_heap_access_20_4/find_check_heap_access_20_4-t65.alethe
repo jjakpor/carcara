@@ -1,0 +1,7 @@
+(assume nst65.0 (not (not (or (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)) (not (Btwn$0 next$0 x$0 x$0 x$0)) (Btwn$0 next$0 x$0 root_x$0 x$0) (Btwn$0 next$0 x$0 x$0 root_x$0)))))
+(assume nst65.1 (not (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))))
+(assume nst65.2 (not (not (Btwn$0 next$0 x$0 x$0 x$0))))
+(assume nst65.3 (not (Btwn$0 next$0 x$0 root_x$0 x$0)))
+(assume nst65.4 (not (Btwn$0 next$0 x$0 x$0 root_x$0)))
+(step st65 (cl (not (or (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)) (not (Btwn$0 next$0 x$0 x$0 x$0)) (Btwn$0 next$0 x$0 root_x$0 x$0) (Btwn$0 next$0 x$0 x$0 root_x$0))) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)) (not (Btwn$0 next$0 x$0 x$0 x$0)) (Btwn$0 next$0 x$0 root_x$0 x$0) (Btwn$0 next$0 x$0 x$0 root_x$0)) :rule or_pos)
+(step t.end (cl) :rule resolution :premises (nst65.0 nst65.1 nst65.2 nst65.3 nst65.4 st65))

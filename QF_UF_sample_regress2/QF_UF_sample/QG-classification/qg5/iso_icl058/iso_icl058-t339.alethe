@@ -1,0 +1,4 @@
+(assume nst339.0 (not (= (op e3 e0) (op e0 e3))))
+(assume t279 (and (and (and (= (op e0 e0) (op e0 e0)) (= (op e1 e0) (op e0 e1))) (= (op e2 e0) (op e0 e2))) (= (op e3 e0) (op e0 e3))))
+(step st339 (cl (= (op e3 e0) (op e0 e3))) :rule and :premises (t279) :args (1))
+(step t.end (cl) :rule resolution :premises (nst339.0 st339))

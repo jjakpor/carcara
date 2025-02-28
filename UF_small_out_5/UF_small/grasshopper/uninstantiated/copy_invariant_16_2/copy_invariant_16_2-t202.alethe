@@ -1,0 +1,5 @@
+(assume nst202.0 (not (= (not (= curr_2$0 curr_2$0)) false)))
+(assume t138 (= (not true) false))
+(assume t201 (= (not (= curr_2$0 curr_2$0)) (not true)))
+(step st202 (cl (= (not (= curr_2$0 curr_2$0)) false)) :rule trans :premises (t201 t138))
+(step t.end (cl) :rule resolution :premises (nst202.0 st202))

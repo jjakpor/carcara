@@ -1,0 +1,5 @@
+(assume nst322.0 (not (= (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))) (or true (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))))))
+(assume t219 (= (= root_x$0 root_x$0) true))
+(assume t321 (= (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))))
+(step st322 (cl (= (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))) (or true (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))))) :rule cong :premises (t219 t321))
+(step t.end (cl) :rule resolution :premises (nst322.0 st322))

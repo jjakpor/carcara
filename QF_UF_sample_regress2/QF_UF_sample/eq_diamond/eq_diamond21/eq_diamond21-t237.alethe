@@ -1,0 +1,6 @@
+(assume nst237.0 (not (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))))
+(assume t11 (or (= x3 x4) (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))))
+(assume t236 (not (= x3 x4)))
+(step t11' (cl (= x3 x4) (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))) :rule or :premises (t11))
+(step st237 (cl (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))) :rule resolution :premises (t11' t236))
+(step t.end (cl) :rule resolution :premises (nst237.0 st237))

@@ -1,0 +1,5 @@
+(assume nst16.0 (not (not (forall ((?v0 S6) (?v2 S4) (?v3 S5)) (= ?v3 (f177 (f10 (f11 (f12 f13 ?v2) ?v0) ?v3) ?v0))))))
+(assume nst16.1 (not (= f174 (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))))
+(assume t15 (or (not (forall ((?v0 S6) (?v2 S4) (?v3 S5)) (= ?v3 (f177 (f10 (f11 (f12 f13 ?v2) ?v0) ?v3) ?v0)))) (= f174 (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))))
+(step st16 (cl (not (forall ((?v0 S6) (?v2 S4) (?v3 S5)) (= ?v3 (f177 (f10 (f11 (f12 f13 ?v2) ?v0) ?v3) ?v0)))) (= f174 (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))) :rule or :premises (t15))
+(step t.end (cl) :rule resolution :premises (nst16.0 nst16.1 st16))

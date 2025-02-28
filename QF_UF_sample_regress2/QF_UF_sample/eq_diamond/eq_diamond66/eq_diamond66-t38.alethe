@@ -1,0 +1,5 @@
+(assume nst38.0 (not (not (= (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (and (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12)))))))
+(assume nst38.1 (not (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))))))
+(assume nst38.2 (not (and (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12)))))
+(step st38 (cl (not (= (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (and (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12))))) (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12)))) (and (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst38.0 nst38.1 nst38.2 st38))

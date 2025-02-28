@@ -1,0 +1,7 @@
+(assume nst63.0 (not (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0)))))
+(assume a31 (not (= n_5$0 null$0)))
+(assume t54 (or (not (= (not (= n_5$0 null$0)) (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))))) (not (not (= n_5$0 null$0))) (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0)))))
+(assume t62 (= (not (= n_5$0 null$0)) (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0)))))
+(step t54' (cl (not (= (not (= n_5$0 null$0)) (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))))) (not (not (= n_5$0 null$0))) (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0)))) :rule or :premises (t54))
+(step st63 (cl (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0)))) :rule resolution :premises (t54' t62 a31))
+(step t.end (cl) :rule resolution :premises (nst63.0 st63))

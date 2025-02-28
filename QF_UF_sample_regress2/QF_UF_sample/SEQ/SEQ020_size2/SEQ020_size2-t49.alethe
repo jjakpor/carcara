@@ -1,0 +1,3 @@
+(assume nst49.0 (not (= (= (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1))) true) (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1))))))
+(step st49 (cl (= (= (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1))) true) (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1))))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nst49.0 st49))

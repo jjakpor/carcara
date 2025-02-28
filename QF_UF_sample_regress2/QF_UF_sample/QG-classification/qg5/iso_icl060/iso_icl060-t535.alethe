@@ -1,0 +1,4 @@
+(assume nst535.0 (not (not (not (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))))))
+(assume nst535.1 (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))
+(step st535 (cl (not (not (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))) (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nst535.0 nst535.1 st535))

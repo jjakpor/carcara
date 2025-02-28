@@ -1,0 +1,3 @@
+(assume nst76.0 (not (= (= (read$0 next$0 end1$0) (read$0 next$0 end1$0)) true)))
+(step st76 (cl (= (= (read$0 next$0 end1$0) (read$0 next$0 end1$0)) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst76.0 st76))

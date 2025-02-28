@@ -1,0 +1,5 @@
+(assume nst46.0 (not (or (not (not prt)) (not car) (not clk))))
+(assume t45 (or (or (not (not prt)) (not car) (not clk)) (or (not (not prt)) (not car) (not clk)) (or (not (not prt)) (not car) (not clk))))
+(step t45' (cl (or (not (not prt)) (not car) (not clk)) (or (not (not prt)) (not car) (not clk)) (or (not (not prt)) (not car) (not clk))) :rule or :premises (t45))
+(step st46 (cl (or (not (not prt)) (not car) (not clk))) :rule contraction :premises (t45'))
+(step t.end (cl) :rule resolution :premises (nst46.0 st46))

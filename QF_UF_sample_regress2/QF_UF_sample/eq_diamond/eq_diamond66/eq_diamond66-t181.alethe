@@ -1,0 +1,4 @@
+(assume nst181.0 (not (= x1 x0)))
+(assume t180 (= x0 x1))
+(step st181 (cl (= x1 x0)) :rule symm :premises (t180))
+(step t.end (cl) :rule resolution :premises (nst181.0 st181))

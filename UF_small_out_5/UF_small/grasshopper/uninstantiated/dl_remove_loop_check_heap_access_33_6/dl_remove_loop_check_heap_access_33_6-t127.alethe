@@ -1,0 +1,6 @@
+(assume nst127.0 (not (= (Btwn$0 next$0 curr_init$0 null$0 null$0) (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)))))
+(assume t31 (= null$0 (read$0 next$0 d_init$0)))
+(assume t36 (= curr_init$0 prv_5$0))
+(assume t60 (= next$0 next$0))
+(step st127 (cl (= (Btwn$0 next$0 curr_init$0 null$0 null$0) (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)))) :rule cong :premises (t60 t36 t31 t31))
+(step t.end (cl) :rule resolution :premises (nst127.0 st127))

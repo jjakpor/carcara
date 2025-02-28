@@ -1,0 +1,8 @@
+(assume nst586.0 (not (= (op e3 e4) (op e4 (op (op e4 e3) (op e4 e3))))))
+(assume nst586.1 (not (= (op e3 e4) (op e3 (op (op e4 e3) (op e4 e3))))))
+(assume nst586.2 (not (= (op e3 e4) (op (op e3 e4) (op (op e4 e3) (op e4 e3))))))
+(assume nst586.3 (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))))))
+(assume nst586.4 (not (= (op e3 e4) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))))
+(assume t585 (or (= (op e3 e4) (op e4 (op (op e4 e3) (op e4 e3)))) (= (op e3 e4) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e3 e4) (op (op e3 e4) (op (op e4 e3) (op e4 e3)))) (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))) (= (op e3 e4) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))))
+(step st586 (cl (= (op e3 e4) (op e4 (op (op e4 e3) (op e4 e3)))) (= (op e3 e4) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e3 e4) (op (op e3 e4) (op (op e4 e3) (op e4 e3)))) (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))) (= (op e3 e4) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))) :rule or :premises (t585))
+(step t.end (cl) :rule resolution :premises (nst586.0 nst586.1 nst586.2 nst586.3 nst586.4 st586))

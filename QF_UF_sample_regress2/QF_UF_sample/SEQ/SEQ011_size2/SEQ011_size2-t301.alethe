@@ -1,0 +1,4 @@
+(assume nst301.0 (not (= (not (= (f5 c_0) (f6 c_0))) (not (= (f6 c_0) (f5 c_0))))))
+(assume t300 (= (= (f5 c_0) (f6 c_0)) (= (f6 c_0) (f5 c_0))))
+(step st301 (cl (= (not (= (f5 c_0) (f6 c_0))) (not (= (f6 c_0) (f5 c_0))))) :rule cong :premises (t300))
+(step t.end (cl) :rule resolution :premises (nst301.0 st301))

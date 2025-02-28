@@ -1,0 +1,7 @@
+(assume nst286.0 (not (not (= (op e4 e3) (op (op e4 e3) e3)))))
+(assume t274 (or (not (= (not (= (op e1 e3) (op e4 e3))) (not (= (op e4 e3) (op (op e4 e3) e3))))) (not (not (= (op e1 e3) (op e4 e3)))) (not (= (op e4 e3) (op (op e4 e3) e3)))))
+(assume t279 (= (not (= (op e1 e3) (op e4 e3))) (not (= (op e4 e3) (op (op e4 e3) e3)))))
+(assume t285 (not (= (op e1 e3) (op e4 e3))))
+(step t274' (cl (not (= (not (= (op e1 e3) (op e4 e3))) (not (= (op e4 e3) (op (op e4 e3) e3))))) (not (not (= (op e1 e3) (op e4 e3)))) (not (= (op e4 e3) (op (op e4 e3) e3)))) :rule or :premises (t274))
+(step st286 (cl (not (= (op e4 e3) (op (op e4 e3) e3)))) :rule resolution :premises (t274' t279 t285))
+(step t.end (cl) :rule resolution :premises (nst286.0 st286))

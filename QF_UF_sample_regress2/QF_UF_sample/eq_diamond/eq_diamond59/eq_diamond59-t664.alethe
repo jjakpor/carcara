@@ -1,0 +1,4 @@
+(assume nst664.0 (not (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42))))
+(assume t663 (and (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42))))
+(step st664 (cl (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42))) :rule and :premises (t663) :args (1))
+(step t.end (cl) :rule resolution :premises (nst664.0 st664))

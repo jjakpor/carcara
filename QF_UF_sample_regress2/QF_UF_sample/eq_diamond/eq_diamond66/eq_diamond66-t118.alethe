@@ -1,0 +1,5 @@
+(assume nst118.0 (not (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))))
+(assume nst118.1 (not (= x5 x6)))
+(assume t117 (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6)))
+(step st118 (cl (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (= x5 x6)) :rule implies :premises (t117))
+(step t.end (cl) :rule resolution :premises (nst118.0 nst118.1 st118))

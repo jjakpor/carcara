@@ -1,0 +1,6 @@
+(assume nst390.0 (not (= x33 x34)))
+(assume nst390.1 (not (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))))
+(assume t389 (or (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34)))) (= x33 x34)))
+(step t389' (cl (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34)))) (= x33 x34)) :rule or :premises (t389))
+(step st390 (cl (= x33 x34) (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))) :rule reordering :premises (t389'))
+(step t.end (cl) :rule resolution :premises (nst390.0 nst390.1 st390))

@@ -1,0 +1,5 @@
+(assume nst82.0 (not (not (= (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (= (read$0 ?f ?x) ?x)) (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y))) (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (= ?x (read$0 ?f ?x))) (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y)))))))
+(assume nst82.1 (not (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (= (read$0 ?f ?x) ?x)) (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y))))))
+(assume nst82.2 (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (= ?x (read$0 ?f ?x))) (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y)))))
+(step st82 (cl (not (= (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (= (read$0 ?f ?x) ?x)) (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y))) (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (= ?x (read$0 ?f ?x))) (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y))))) (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (= (read$0 ?f ?x) ?x)) (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y)))) (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (= ?x (read$0 ?f ?x))) (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst82.0 nst82.1 nst82.2 st82))

@@ -1,0 +1,7 @@
+(assume nst283.0 (not (not (or (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)) (in$0 x$0 (setenum$0 root_x$0))))))
+(assume t101 (or (in$0 x$0 (setenum$0 root_x$0)) (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)) (not (or (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)) (in$0 x$0 (setenum$0 root_x$0))))))
+(assume t196 (not (in$0 x$0 (setenum$0 root_x$0))))
+(assume t282 (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))))
+(step t101' (cl (in$0 x$0 (setenum$0 root_x$0)) (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)) (not (or (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)) (in$0 x$0 (setenum$0 root_x$0))))) :rule or :premises (t101))
+(step st283 (cl (not (or (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)) (in$0 x$0 (setenum$0 root_x$0))))) :rule resolution :premises (t101' t196 t282))
+(step t.end (cl) :rule resolution :premises (nst283.0 st283))

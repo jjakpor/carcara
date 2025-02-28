@@ -1,0 +1,3 @@
+(assume nst81.0 (not (= (not (or (not car) (not clk))) (not (or (not car) (not clk))))))
+(step st81 (cl (= (not (or (not car) (not clk))) (not (or (not car) (not clk))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst81.0 st81))

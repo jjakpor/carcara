@@ -1,0 +1,3 @@
+(assume nst223.0 (not (= (not (Btwn$0 next$0 n_5$0 root_x$0 root_x$0)) (not (Btwn$0 next$0 n_5$0 root_x$0 root_x$0)))))
+(step st223 (cl (= (not (Btwn$0 next$0 n_5$0 root_x$0 root_x$0)) (not (Btwn$0 next$0 n_5$0 root_x$0 root_x$0)))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst223.0 st223))

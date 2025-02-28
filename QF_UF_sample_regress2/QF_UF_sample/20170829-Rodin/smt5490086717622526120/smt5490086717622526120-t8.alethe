@@ -1,0 +1,3 @@
+(assume nst8.0 (not (= (= prt prt) true)))
+(step st8 (cl (= (= prt prt) true)) :rule rare_rewrite :args ("eq-refl" prt))
+(step t.end (cl) :rule resolution :premises (nst8.0 st8))

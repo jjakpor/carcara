@@ -1,0 +1,5 @@
+(assume nst553.0 (not (not (= (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) e0))) false))))
+(assume nst553.1 (not (not (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) e0))))))
+(assume t552 (= (= (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) e0))) false) (not (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) e0))))))
+(step st553 (cl (not (= (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) e0))) false)) (not (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) e0))))) :rule equiv1 :premises (t552))
+(step t.end (cl) :rule resolution :premises (nst553.0 nst553.1 st553))

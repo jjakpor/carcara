@@ -1,0 +1,4 @@
+(assume nst1028.0 (not (= (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)) (op (op e0 e0) (op e0 e0)))))
+(assume t1027 (= (op (op e0 e0) (op e0 e0)) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0))))
+(step st1028 (cl (= (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)) (op (op e0 e0) (op e0 e0)))) :rule symm :premises (t1027))
+(step t.end (cl) :rule resolution :premises (nst1028.0 st1028))

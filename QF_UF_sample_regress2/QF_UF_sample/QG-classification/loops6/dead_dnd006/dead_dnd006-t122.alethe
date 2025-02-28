@@ -1,0 +1,4 @@
+(assume nst122.0 (not (= (not (= (op e2 (op e2 e2)) e2)) (not (= e2 (op e2 (op e2 e2)))))))
+(assume t121 (= (= (op e2 (op e2 e2)) e2) (= e2 (op e2 (op e2 e2)))))
+(step st122 (cl (= (not (= (op e2 (op e2 e2)) e2)) (not (= e2 (op e2 (op e2 e2)))))) :rule cong :premises (t121))
+(step t.end (cl) :rule resolution :premises (nst122.0 st122))

@@ -1,0 +1,3 @@
+(assume nst229.0 (not (= (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))))
+(step st229 (cl (= (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) :rule rare_rewrite :args ("bool-eq-false" (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))
+(step t.end (cl) :rule resolution :premises (nst229.0 st229))

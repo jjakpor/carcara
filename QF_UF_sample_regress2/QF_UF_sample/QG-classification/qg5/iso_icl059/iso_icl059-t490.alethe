@@ -1,0 +1,5 @@
+(assume nst490.0 (not (= (= (op e0 e0) (op e3 e0)) (= (op e0 e0) (op (op (op e0 e0) e0) e0)))))
+(assume t43 (= (op e3 e0) (op (op (op e0 e0) e0) e0)))
+(assume t92 (= (op e0 e0) (op e0 e0)))
+(step st490 (cl (= (= (op e0 e0) (op e3 e0)) (= (op e0 e0) (op (op (op e0 e0) e0) e0)))) :rule cong :premises (t92 t43))
+(step t.end (cl) :rule resolution :premises (nst490.0 st490))

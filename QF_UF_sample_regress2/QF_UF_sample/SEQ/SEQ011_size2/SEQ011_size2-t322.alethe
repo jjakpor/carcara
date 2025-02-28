@@ -1,0 +1,5 @@
+(assume nst322.0 (not (not (p4 c_1))))
+(assume nst322.1 (not (p1 (f6 c_1) c_1)))
+(assume t321 (or (not (p4 c_1)) (p1 (f6 c_1) c_1)))
+(step st322 (cl (not (p4 c_1)) (p1 (f6 c_1) c_1)) :rule or :premises (t321))
+(step t.end (cl) :rule resolution :premises (nst322.0 nst322.1 st322))

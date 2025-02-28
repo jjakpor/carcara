@@ -1,0 +1,5 @@
+(assume nst2.0 (not (not (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) true))))
+(assume nst2.1 (not (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1))))
+(assume t1 (= (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) true) (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1))))
+(step st2 (cl (not (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) true)) (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1))) :rule equiv1 :premises (t1))
+(step t.end (cl) :rule resolution :premises (nst2.0 nst2.1 st2))

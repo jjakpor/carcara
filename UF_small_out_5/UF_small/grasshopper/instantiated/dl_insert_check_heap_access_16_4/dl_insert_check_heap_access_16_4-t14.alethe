@@ -1,0 +1,3 @@
+(assume nst14.0 (not (= (read$0 next$0 elt$0) (read$0 next$0 elt$0))))
+(step st14 (cl (= (read$0 next$0 elt$0) (read$0 next$0 elt$0))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst14.0 st14))

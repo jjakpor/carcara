@@ -1,0 +1,6 @@
+(assume nst190.0 (not y$968))
+(assume t181 (or (not (not (not y$968))) y$968))
+(assume t189 (not (not y$968)))
+(step t181' (cl (not (not (not y$968))) y$968) :rule or :premises (t181))
+(step st190 (cl y$968) :rule resolution :premises (t181' t189))
+(step t.end (cl) :rule resolution :premises (nst190.0 st190))

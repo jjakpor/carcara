@@ -1,0 +1,7 @@
+(assume nst145.0 (not (= sk_?X_25$0 (setenum$0 root_x$0))))
+(assume a48 (= sk_?X_25$0 sk_?X_26$0))
+(assume t142 (or (not (= (= sk_?X_25$0 sk_?X_26$0) (= sk_?X_25$0 (setenum$0 root_x$0)))) (not (= sk_?X_25$0 sk_?X_26$0)) (= sk_?X_25$0 (setenum$0 root_x$0))))
+(assume t144 (= (= sk_?X_25$0 sk_?X_26$0) (= sk_?X_25$0 (setenum$0 root_x$0))))
+(step t142' (cl (not (= (= sk_?X_25$0 sk_?X_26$0) (= sk_?X_25$0 (setenum$0 root_x$0)))) (not (= sk_?X_25$0 sk_?X_26$0)) (= sk_?X_25$0 (setenum$0 root_x$0))) :rule or :premises (t142))
+(step st145 (cl (= sk_?X_25$0 (setenum$0 root_x$0))) :rule resolution :premises (t142' t144 a48))
+(step t.end (cl) :rule resolution :premises (nst145.0 st145))

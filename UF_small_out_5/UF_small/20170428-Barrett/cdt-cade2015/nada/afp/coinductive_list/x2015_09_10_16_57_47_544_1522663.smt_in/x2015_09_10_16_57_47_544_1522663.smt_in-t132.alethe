@@ -1,0 +1,7 @@
+(assume nst132.0 (not (not (fun_app$q lnull$d xs$))))
+(assume nst132.1 (not (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$))))
+(assume nst132.2 (not (not (or (not (fun_app$q lnull$d xs$)) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$))))))
+(assume t131 (or (not (or (not (fun_app$q lnull$d xs$)) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$)))) (not (fun_app$q lnull$d xs$)) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$))))
+(step t131' (cl (not (or (not (fun_app$q lnull$d xs$)) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$)))) (not (fun_app$q lnull$d xs$)) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$))) :rule or :premises (t131))
+(step st132 (cl (not (fun_app$q lnull$d xs$)) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$)) (not (or (not (fun_app$q lnull$d xs$)) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$))))) :rule reordering :premises (t131'))
+(step t.end (cl) :rule resolution :premises (nst132.0 nst132.1 nst132.2 st132))

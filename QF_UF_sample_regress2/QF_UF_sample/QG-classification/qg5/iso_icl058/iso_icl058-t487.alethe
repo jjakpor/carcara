@@ -1,0 +1,8 @@
+(assume nst487.0 (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0)))))
+(assume nst487.1 (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))
+(assume nst487.2 (not (= (op (op e0 e0) e0) (op (op e0 e0) (op (op e0 e0) e0)))))
+(assume nst487.3 (not (= (op (op e0 e0) e0) (op e0 (op (op e0 e0) e0)))))
+(assume nst487.4 (not (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0)))))
+(assume t486 (or (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0))) (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (= (op (op e0 e0) e0) (op (op e0 e0) (op (op e0 e0) e0))) (= (op (op e0 e0) e0) (op e0 (op (op e0 e0) e0))) (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0)))))
+(step st487 (cl (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0))) (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (= (op (op e0 e0) e0) (op (op e0 e0) (op (op e0 e0) e0))) (= (op (op e0 e0) e0) (op e0 (op (op e0 e0) e0))) (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0)))) :rule or :premises (t486))
+(step t.end (cl) :rule resolution :premises (nst487.0 nst487.1 nst487.2 nst487.3 nst487.4 st487))

@@ -1,0 +1,5 @@
+(assume nst249.0 (not (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))))))
+(assume nst249.1 (not (= x21 x22)))
+(assume t248 (=> (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (= x21 x22)))
+(step st249 (cl (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22)))) (= x21 x22)) :rule implies :premises (t248))
+(step t.end (cl) :rule resolution :premises (nst249.0 nst249.1 st249))

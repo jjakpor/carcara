@@ -1,0 +1,4 @@
+(assume nst409.0 (not (not (= (op e1 e0) (op e1 e4)))))
+(assume t408 (and (and (and (not (= (op e1 e0) (op e1 e1))) (not (= (op e1 e0) (op e1 e2)))) (not (= (op e1 e0) (op e1 e3)))) (not (= (op e1 e0) (op e1 e4)))))
+(step st409 (cl (not (= (op e1 e0) (op e1 e4)))) :rule and :premises (t408) :args (1))
+(step t.end (cl) :rule resolution :premises (nst409.0 st409))

@@ -1,0 +1,4 @@
+(assume nst390.0 (not (=> (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)) false)))
+(assume nst390.1 (not (not false)))
+(step st390 (cl (=> (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f5 c_1)) (p1 (f5 c_1) c_1)) false) (not false)) :rule implies_neg2)
+(step t.end (cl) :rule resolution :premises (nst390.0 nst390.1 st390))

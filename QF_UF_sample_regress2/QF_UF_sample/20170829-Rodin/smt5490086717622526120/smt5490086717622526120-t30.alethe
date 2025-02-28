@@ -1,0 +1,4 @@
+(assume nst30.0 (not (= (not rd2) (= rd2 false))))
+(assume t29 (= (= rd2 false) (not rd2)))
+(step st30 (cl (= (not rd2) (= rd2 false))) :rule symm :premises (t29))
+(step t.end (cl) :rule resolution :premises (nst30.0 st30))

@@ -1,0 +1,5 @@
+(assume nst612.0 (not (= (= e4 (op e2 e4)) (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))))
+(assume t46 (= e4 (op (op e1 e1) (op e1 (op e1 e1)))))
+(assume t68 (= (op e2 e4) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))
+(step st612 (cl (= (= e4 (op e2 e4)) (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))) :rule cong :premises (t46 t68))
+(step t.end (cl) :rule resolution :premises (nst612.0 st612))

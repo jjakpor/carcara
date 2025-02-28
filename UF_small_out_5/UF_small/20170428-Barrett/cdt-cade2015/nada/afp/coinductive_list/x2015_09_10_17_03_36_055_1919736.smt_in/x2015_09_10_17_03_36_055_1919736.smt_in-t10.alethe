@@ -1,0 +1,5 @@
+(assume nst10.0 (not (not (= (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$)) true))))
+(assume nst10.1 (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))))
+(assume t9 (= (= (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$)) true) (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))))
+(step st10 (cl (not (= (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$)) true)) (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))) :rule equiv1 :premises (t9))
+(step t.end (cl) :rule resolution :premises (nst10.0 nst10.1 st10))

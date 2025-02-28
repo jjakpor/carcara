@@ -1,0 +1,5 @@
+(assume nst609.0 (not (not (= (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (and (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55)))))))
+(assume nst609.1 (not (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))))))
+(assume nst609.2 (not (and (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55)))))
+(step st609 (cl (not (= (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (and (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55))))) (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55)))) (and (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst609.0 nst609.1 nst609.2 st609))

@@ -1,0 +1,4 @@
+(assume nst578.0 (not (= (op e2 e3) (op e3 e2))))
+(assume t577 (= (op e3 e2) (op e2 e3)))
+(step st578 (cl (= (op e2 e3) (op e3 e2))) :rule symm :premises (t577))
+(step t.end (cl) :rule resolution :premises (nst578.0 st578))

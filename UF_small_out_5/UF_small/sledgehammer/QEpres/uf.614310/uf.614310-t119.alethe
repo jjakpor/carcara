@@ -1,0 +1,7 @@
+(define-fun @quantifiers_skolemize_5 () S6 (choice ((?v2 S6)) (not (not (= (f11 (f12 f14 f15) (f11 (f12 f14 f10) (f16 (f17 f18 f19) f9))) (f11 (f12 f34 f20) ?v2))))))
+(define-fun @quantifiers_skolemize_6 () S6 (choice ((?v2 S6)) (not (not (= (f11 (f12 f14 f15) (f11 (f12 f14 f8) (f16 (f17 f18 f19) f9))) (f11 (f12 f34 f20) ?v2))))))
+(assume nst119.0 (not (not (= (forall ((?v0 S6) (?v1 S6)) (= (f33 ?v0 (f11 (f12 f34 ?v0) ?v1)) f1)) (forall ((?v0 S6) (?v1 S6)) (= f1 (f33 ?v0 (f11 (f12 f34 ?v0) ?v1))))))))
+(assume nst119.1 (not (not (forall ((?v0 S6) (?v1 S6)) (= (f33 ?v0 (f11 (f12 f34 ?v0) ?v1)) f1)))))
+(assume nst119.2 (not (forall ((?v0 S6) (?v1 S6)) (= f1 (f33 ?v0 (f11 (f12 f34 ?v0) ?v1))))))
+(step st119 (cl (not (= (forall ((?v0 S6) (?v1 S6)) (= (f33 ?v0 (f11 (f12 f34 ?v0) ?v1)) f1)) (forall ((?v0 S6) (?v1 S6)) (= f1 (f33 ?v0 (f11 (f12 f34 ?v0) ?v1)))))) (not (forall ((?v0 S6) (?v1 S6)) (= (f33 ?v0 (f11 (f12 f34 ?v0) ?v1)) f1))) (forall ((?v0 S6) (?v1 S6)) (= f1 (f33 ?v0 (f11 (f12 f34 ?v0) ?v1))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst119.0 nst119.1 nst119.2 st119))

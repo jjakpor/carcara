@@ -1,0 +1,4 @@
+(assume nst218.0 (not (=> (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))) (= e4 (op e4 (op e4 e4))))))
+(assume nst218.1 (not (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0))))))
+(step st218 (cl (=> (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))) (= e4 (op e4 (op e4 e4)))) (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0))))) :rule implies_neg1)
+(step t.end (cl) :rule resolution :premises (nst218.0 nst218.1 st218))

@@ -1,0 +1,5 @@
+(assume nst705.0 (not (not (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))))))
+(assume nst705.1 (not (= x62 x63)))
+(assume t704 (=> (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))) (= x62 x63)))
+(step st705 (cl (not (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63)))) (= x62 x63)) :rule implies :premises (t704))
+(step t.end (cl) :rule resolution :premises (nst705.0 nst705.1 st705))

@@ -1,0 +1,5 @@
+(assume nst130.0 (not (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))))
+(assume nst130.1 (not (= x4 x5)))
+(assume t129 (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5)))
+(step st130 (cl (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5)))) (= x4 x5)) :rule implies :premises (t129))
+(step t.end (cl) :rule resolution :premises (nst130.0 nst130.1 st130))

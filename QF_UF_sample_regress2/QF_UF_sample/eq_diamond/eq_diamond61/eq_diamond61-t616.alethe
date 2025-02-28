@@ -1,0 +1,4 @@
+(assume nst616.0 (not (=> (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (= x55 x56))))
+(assume t615 (and (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (=> (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (= x55 x56))))
+(step st616 (cl (=> (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (= x55 x56))) :rule and :premises (t615) :args (1))
+(step t.end (cl) :rule resolution :premises (nst616.0 st616))

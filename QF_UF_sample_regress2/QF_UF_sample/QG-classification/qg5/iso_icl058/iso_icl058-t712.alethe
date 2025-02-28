@@ -1,0 +1,7 @@
+(assume nst712.0 (not (not (= (op e0 e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))))
+(assume t708 (or (not (= (not (= (op e0 e0) (op e1 e0))) (not (= (op e0 e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0))))) (not (not (= (op e0 e0) (op e1 e0)))) (not (= (op e0 e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))))
+(assume t710 (= (not (= (op e0 e0) (op e1 e0))) (not (= (op e0 e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))))
+(assume t711 (not (= (op e0 e0) (op e1 e0))))
+(step t708' (cl (not (= (not (= (op e0 e0) (op e1 e0))) (not (= (op e0 e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0))))) (not (not (= (op e0 e0) (op e1 e0)))) (not (= (op e0 e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))) :rule or :premises (t708))
+(step st712 (cl (not (= (op e0 e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))) :rule resolution :premises (t708' t710 t711))
+(step t.end (cl) :rule resolution :premises (nst712.0 st712))

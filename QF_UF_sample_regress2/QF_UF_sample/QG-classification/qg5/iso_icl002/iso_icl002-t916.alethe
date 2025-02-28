@@ -1,0 +1,8 @@
+(assume nst916.0 (not (= (or (= (op e4 e1) e4) (= (op e3 e1) e4) (= (op e2 e1) e4) (= (op e0 e1) e4) (= (op e1 e1) e4)) (or (= e4 (op e4 e1)) (= e4 (op e3 e1)) (= e4 (op e2 e1)) (= e4 (op e0 e1)) (= e4 (op e1 e1))))))
+(assume t10 (= (= (op e3 e1) e4) (= e4 (op e3 e1))))
+(assume t143 (= (= (op e1 e1) e4) (= e4 (op e1 e1))))
+(assume t913 (= (= (op e4 e1) e4) (= e4 (op e4 e1))))
+(assume t914 (= (= (op e2 e1) e4) (= e4 (op e2 e1))))
+(assume t915 (= (= (op e0 e1) e4) (= e4 (op e0 e1))))
+(step st916 (cl (= (or (= (op e4 e1) e4) (= (op e3 e1) e4) (= (op e2 e1) e4) (= (op e0 e1) e4) (= (op e1 e1) e4)) (or (= e4 (op e4 e1)) (= e4 (op e3 e1)) (= e4 (op e2 e1)) (= e4 (op e0 e1)) (= e4 (op e1 e1))))) :rule cong :premises (t913 t10 t914 t915 t143))
+(step t.end (cl) :rule resolution :premises (nst916.0 st916))

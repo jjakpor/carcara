@@ -1,0 +1,7 @@
+(assume nst19.0 (not (= (llength$ us$) (llength$a xs$))))
+(assume a2 (= (llength$ us$) infinity$))
+(assume t11 (or (not (= (= (llength$ us$) infinity$) (= (llength$ us$) (llength$a xs$)))) (not (= (llength$ us$) infinity$)) (= (llength$ us$) (llength$a xs$))))
+(assume t18 (= (= (llength$ us$) infinity$) (= (llength$ us$) (llength$a xs$))))
+(step t11' (cl (not (= (= (llength$ us$) infinity$) (= (llength$ us$) (llength$a xs$)))) (not (= (llength$ us$) infinity$)) (= (llength$ us$) (llength$a xs$))) :rule or :premises (t11))
+(step st19 (cl (= (llength$ us$) (llength$a xs$))) :rule resolution :premises (t11' t18 a2))
+(step t.end (cl) :rule resolution :premises (nst19.0 st19))

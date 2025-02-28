@@ -1,0 +1,5 @@
+(assume nst32.0 (not (= (forall ((?v0 A_llist$) (?v1 Enat$)) (=> (fun_app$ (less_eq$ (llength$a ?v0)) ?v1) (= (ltake$ ?v1 ?v0) ?v0))) (forall ((?v0 A_llist$) (?v1 Enat$)) (or (not (fun_app$ (less_eq$ (llength$a ?v0)) ?v1)) (= ?v0 (ltake$ ?v1 ?v0)))))))
+(assume t30 (= (forall ((?v0 A_llist$) (?v1 Enat$)) (=> (fun_app$ (less_eq$ (llength$a ?v0)) ?v1) (= (ltake$ ?v1 ?v0) ?v0))) (forall ((?v0 A_llist$) (?v1 Enat$)) (=> (fun_app$ (less_eq$ (llength$a ?v0)) ?v1) (= ?v0 (ltake$ ?v1 ?v0))))))
+(assume t31 (= (forall ((?v0 A_llist$) (?v1 Enat$)) (=> (fun_app$ (less_eq$ (llength$a ?v0)) ?v1) (= ?v0 (ltake$ ?v1 ?v0)))) (forall ((?v0 A_llist$) (?v1 Enat$)) (or (not (fun_app$ (less_eq$ (llength$a ?v0)) ?v1)) (= ?v0 (ltake$ ?v1 ?v0))))))
+(step st32 (cl (= (forall ((?v0 A_llist$) (?v1 Enat$)) (=> (fun_app$ (less_eq$ (llength$a ?v0)) ?v1) (= (ltake$ ?v1 ?v0) ?v0))) (forall ((?v0 A_llist$) (?v1 Enat$)) (or (not (fun_app$ (less_eq$ (llength$a ?v0)) ?v1)) (= ?v0 (ltake$ ?v1 ?v0)))))) :rule trans :premises (t30 t31))
+(step t.end (cl) :rule resolution :premises (nst32.0 st32))

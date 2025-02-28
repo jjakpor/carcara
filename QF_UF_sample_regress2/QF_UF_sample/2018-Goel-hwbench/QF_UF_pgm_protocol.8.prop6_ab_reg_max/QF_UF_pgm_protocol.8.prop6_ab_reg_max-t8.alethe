@@ -1,0 +1,7 @@
+(assume nst8.0 (not (= y$9177 (= y$9176 y$prop))))
+(assume a181 (= y$9177 (= y$prop y$9176)))
+(assume t4 (or (not (= (= y$9177 (= y$prop y$9176)) (= y$9177 (= y$9176 y$prop)))) (not (= y$9177 (= y$prop y$9176))) (= y$9177 (= y$9176 y$prop))))
+(assume t7 (= (= y$9177 (= y$prop y$9176)) (= y$9177 (= y$9176 y$prop))))
+(step t4' (cl (not (= (= y$9177 (= y$prop y$9176)) (= y$9177 (= y$9176 y$prop)))) (not (= y$9177 (= y$prop y$9176))) (= y$9177 (= y$9176 y$prop))) :rule or :premises (t4))
+(step st8 (cl (= y$9177 (= y$9176 y$prop))) :rule resolution :premises (t4' t7 a181))
+(step t.end (cl) :rule resolution :premises (nst8.0 st8))

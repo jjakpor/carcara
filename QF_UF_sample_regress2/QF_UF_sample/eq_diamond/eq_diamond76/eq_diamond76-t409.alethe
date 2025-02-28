@@ -1,0 +1,6 @@
+(assume nst409.0 (not (= x35 x36)))
+(assume nst409.1 (not (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))))
+(assume t408 (or (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36)))) (= x35 x36)))
+(step t408' (cl (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36)))) (= x35 x36)) :rule or :premises (t408))
+(step st409 (cl (= x35 x36) (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))) :rule reordering :premises (t408'))
+(step t.end (cl) :rule resolution :premises (nst409.0 nst409.1 st409))

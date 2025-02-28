@@ -1,0 +1,4 @@
+(assume nst91.0 (not (not (not (not y$956)))))
+(assume nst91.1 (not y$956))
+(step st91 (cl (not (not (not y$956))) y$956) :rule not_not)
+(step t.end (cl) :rule resolution :premises (nst91.0 nst91.1 st91))

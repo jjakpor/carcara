@@ -1,0 +1,3 @@
+(assume nst9.0 (not (= (models empty (notR (pR aR))) (models empty (notR (pR aR))))))
+(step st9 (cl (= (models empty (notR (pR aR))) (models empty (notR (pR aR))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst9.0 st9))

@@ -1,0 +1,3 @@
+(assume nst10.0 (not (= (Btwn$0 next$0 curr_init$0 null$0 null$0) (Btwn$0 next$0 curr_init$0 null$0 null$0))))
+(step st10 (cl (= (Btwn$0 next$0 curr_init$0 null$0 null$0) (Btwn$0 next$0 curr_init$0 null$0 null$0))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst10.0 st10))

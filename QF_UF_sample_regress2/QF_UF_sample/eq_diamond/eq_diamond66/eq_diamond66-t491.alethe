@@ -1,0 +1,5 @@
+(assume nst491.0 (not (not (= (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (and (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (=> (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (= x43 x44)))))))
+(assume nst491.1 (not (not (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))))))
+(assume nst491.2 (not (and (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (=> (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (= x43 x44)))))
+(step st491 (cl (not (= (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (and (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (=> (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (= x43 x44))))) (not (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44)))) (and (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (=> (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (= x43 x44)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst491.0 nst491.1 nst491.2 st491))

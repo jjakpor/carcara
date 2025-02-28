@@ -1,0 +1,5 @@
+(assume nst103.0 (not (not (= y$281 (not y$282)))))
+(assume nst103.1 (not (not y$281)))
+(assume nst103.2 (not (not y$282)))
+(step st103 (cl (not (= y$281 (not y$282))) (not y$281) (not y$282)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst103.0 nst103.1 nst103.2 st103))

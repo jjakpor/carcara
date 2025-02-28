@@ -1,0 +1,5 @@
+(assume nst178.0 (not (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))))
+(assume nst178.1 (not (= x0 x1)))
+(assume t177 (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1)))
+(step st178 (cl (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (= x0 x1)) :rule implies :premises (t177))
+(step t.end (cl) :rule resolution :premises (nst178.0 nst178.1 st178))

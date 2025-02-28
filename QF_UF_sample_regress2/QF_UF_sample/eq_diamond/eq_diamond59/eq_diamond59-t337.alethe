@@ -1,0 +1,6 @@
+(assume nst337.0 (not (= x10 x11)))
+(assume t332 (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))
+(assume t336 (or (= x10 x11) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))))
+(step t336' (cl (= x10 x11) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))) :rule or :premises (t336))
+(step st337 (cl (= x10 x11)) :rule resolution :premises (t336' t332))
+(step t.end (cl) :rule resolution :premises (nst337.0 st337))

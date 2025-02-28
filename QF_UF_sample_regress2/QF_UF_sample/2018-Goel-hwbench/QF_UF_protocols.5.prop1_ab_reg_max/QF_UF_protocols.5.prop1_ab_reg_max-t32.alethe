@@ -1,0 +1,5 @@
+(assume nst32.0 (not (not (= y$1048 (= y$1047 y$dve_invalid$next)))))
+(assume nst32.1 (not (not y$1048)))
+(assume nst32.2 (not (= y$1047 y$dve_invalid$next)))
+(step st32 (cl (not (= y$1048 (= y$1047 y$dve_invalid$next))) (not y$1048) (= y$1047 y$dve_invalid$next)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst32.0 nst32.1 nst32.2 st32))

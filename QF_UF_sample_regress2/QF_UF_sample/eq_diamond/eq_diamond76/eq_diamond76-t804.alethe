@@ -1,0 +1,5 @@
+(assume nst804.0 (not (not (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))))))
+(assume nst804.1 (not (= x71 x72)))
+(assume t803 (=> (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (= x71 x72)))
+(step st804 (cl (not (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72)))) (= x71 x72)) :rule implies :premises (t803))
+(step t.end (cl) :rule resolution :premises (nst804.0 nst804.1 st804))

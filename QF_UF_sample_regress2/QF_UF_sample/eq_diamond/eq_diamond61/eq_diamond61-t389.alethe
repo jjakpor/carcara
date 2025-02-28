@@ -1,0 +1,5 @@
+(assume nst389.0 (not (not (= (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (and (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (=> (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (= x35 x36)))))))
+(assume nst389.1 (not (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))))
+(assume nst389.2 (not (and (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (=> (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (= x35 x36)))))
+(step st389 (cl (not (= (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (and (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (=> (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (= x35 x36))))) (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36)))) (and (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (=> (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (= x35 x36)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst389.0 nst389.1 nst389.2 st389))

@@ -1,0 +1,4 @@
+(assume nst138.0 (not (= sk_?e$0 prv_2$0)))
+(assume t137 (= prv_2$0 sk_?e$0))
+(step st138 (cl (= sk_?e$0 prv_2$0)) :rule symm :premises (t137))
+(step t.end (cl) :rule resolution :premises (nst138.0 st138))

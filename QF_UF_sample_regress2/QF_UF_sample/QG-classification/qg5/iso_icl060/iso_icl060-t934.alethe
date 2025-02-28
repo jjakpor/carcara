@@ -1,0 +1,5 @@
+(assume nst934.0 (not (= (= e1 (op e3 (op (op e1 e3) e1))) false)))
+(assume t928 (= (= e1 (op e3 (op (op e1 e3) e1))) (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))
+(assume t933 (= (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))) false))
+(step st934 (cl (= (= e1 (op e3 (op (op e1 e3) e1))) false)) :rule trans :premises (t928 t933))
+(step t.end (cl) :rule resolution :premises (nst934.0 st934))

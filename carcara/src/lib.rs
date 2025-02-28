@@ -657,17 +657,19 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
                     let entry = entry_opt.unwrap();
                     let premise_command = iter.get_premise(*premise);
                     commands.push(ProofCommand::Assume { id: premise_command.id().to_string(), term: entry.termified.as_ref().unwrap().clone()});
+                    
                     entry.assumption_index = Some((0, negation_length + commands.len() - 1));
                     if entry.singleton {
                         entry.premise_index = entry.assumption_index;
                     }
-                } else {
+                } else if premise.0 != 0 { // Change to else if to stop early breaking with repeated premise
                     break;
                 }
             }
 
             // Add or steps to break up any artificially termified disjunctions
             for (premise, entry) in &mut premise_map {
+                
                 if !entry.singleton {
                     let premise_command = iter.get_premise(*premise);
                     let or_step = ProofStep {
@@ -752,7 +754,7 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
                     new_subproof.commands.push(ProofCommand::Step(closing_step.clone()));
 
                 goal_command = Some(ProofCommand::Subproof(new_subproof));
-                println!("{:?}", goal_command);
+                
                  // goal_command
                 } else {
                     panic!("Second to last subproof command is not step.");

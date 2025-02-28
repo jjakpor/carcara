@@ -1,0 +1,5 @@
+(assume nst363.0 (not (not (= (or (not (p1 (f6 c_1) c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f7 c_1))) (not (not (p1 (f7 c_1) c_1)))) (or (not (p1 (f6 c_1) c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f7 c_1))) (p1 (f7 c_1) c_1))))))
+(assume nst363.1 (not (not (or (not (p1 (f6 c_1) c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f7 c_1))) (not (not (p1 (f7 c_1) c_1)))))))
+(assume nst363.2 (not (or (not (p1 (f6 c_1) c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f7 c_1))) (p1 (f7 c_1) c_1))))
+(step st363 (cl (not (= (or (not (p1 (f6 c_1) c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f7 c_1))) (not (not (p1 (f7 c_1) c_1)))) (or (not (p1 (f6 c_1) c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f7 c_1))) (p1 (f7 c_1) c_1)))) (not (or (not (p1 (f6 c_1) c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f7 c_1))) (not (not (p1 (f7 c_1) c_1))))) (or (not (p1 (f6 c_1) c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f7 c_1))) (p1 (f7 c_1) c_1))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst363.0 nst363.1 nst363.2 st363))

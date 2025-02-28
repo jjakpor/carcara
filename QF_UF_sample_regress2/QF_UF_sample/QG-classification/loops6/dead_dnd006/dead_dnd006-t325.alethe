@@ -1,0 +1,7 @@
+(assume nst325.0 (not (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0))))
+(assume t310 (or (not (= (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)))) (not (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit))) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0))))
+(assume t322 (= (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0))))
+(assume t324 (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit)))
+(step t310' (cl (not (= (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)))) (not (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit))) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0))) :rule or :premises (t310))
+(step st325 (cl (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0))) :rule resolution :premises (t310' t322 t324))
+(step t.end (cl) :rule resolution :premises (nst325.0 st325))

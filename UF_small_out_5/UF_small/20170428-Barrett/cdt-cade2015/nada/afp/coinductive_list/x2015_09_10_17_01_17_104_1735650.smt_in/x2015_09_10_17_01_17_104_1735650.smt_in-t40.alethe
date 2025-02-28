@@ -1,0 +1,5 @@
+(assume nst40.0 (not (not (forall ((?v0 Nat$) (?v1 A_a_fun$) (?v2 A$)) (= (fun_app$ (ldropn$ ?v0) (iterates$ ?v1 ?v2)) (iterates$ ?v1 (fun_app$a (fun_app$b (fun_app$c funpow$ ?v0) ?v1) ?v2)))))))
+(assume nst40.1 (not (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))))
+(assume t39 (=> (forall ((?v0 Nat$) (?v1 A_a_fun$) (?v2 A$)) (= (fun_app$ (ldropn$ ?v0) (iterates$ ?v1 ?v2)) (iterates$ ?v1 (fun_app$a (fun_app$b (fun_app$c funpow$ ?v0) ?v1) ?v2)))) (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))))
+(step st40 (cl (not (forall ((?v0 Nat$) (?v1 A_a_fun$) (?v2 A$)) (= (fun_app$ (ldropn$ ?v0) (iterates$ ?v1 ?v2)) (iterates$ ?v1 (fun_app$a (fun_app$b (fun_app$c funpow$ ?v0) ?v1) ?v2))))) (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))) :rule implies :premises (t39))
+(step t.end (cl) :rule resolution :premises (nst40.0 nst40.1 st40))

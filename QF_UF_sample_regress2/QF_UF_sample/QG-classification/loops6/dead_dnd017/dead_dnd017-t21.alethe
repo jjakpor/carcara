@@ -1,0 +1,5 @@
+(assume nst21.0 (not (= (and (= (op e5 (op e5 e0)) e0) (not (= (op e5 e0) unit))) (and (= e0 (op e5 (op e5 e0))) (not (= unit (op e5 e0)))))))
+(assume t18 (= (= (op e5 (op e5 e0)) e0) (= e0 (op e5 (op e5 e0)))))
+(assume t20 (= (not (= (op e5 e0) unit)) (not (= unit (op e5 e0)))))
+(step st21 (cl (= (and (= (op e5 (op e5 e0)) e0) (not (= (op e5 e0) unit))) (and (= e0 (op e5 (op e5 e0))) (not (= unit (op e5 e0)))))) :rule cong :premises (t18 t20))
+(step t.end (cl) :rule resolution :premises (nst21.0 st21))

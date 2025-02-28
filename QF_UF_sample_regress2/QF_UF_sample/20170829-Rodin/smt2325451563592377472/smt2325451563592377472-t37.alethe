@@ -1,0 +1,6 @@
+(assume nst37.0 (not (= (not (not prt)) prt)))
+(assume t29 (or (not (= (= (not (not prt)) prt) true)) (= (not (not prt)) prt)))
+(assume t36 (= (= (not (not prt)) prt) true))
+(step t29' (cl (not (= (= (not (not prt)) prt) true)) (= (not (not prt)) prt)) :rule or :premises (t29))
+(step st37 (cl (= (not (not prt)) prt)) :rule resolution :premises (t29' t36))
+(step t.end (cl) :rule resolution :premises (nst37.0 st37))

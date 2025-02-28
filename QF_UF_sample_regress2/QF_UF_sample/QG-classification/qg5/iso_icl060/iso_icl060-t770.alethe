@@ -1,0 +1,5 @@
+(assume nst770.0 (not (= (= (not (not (= (op e3 e1) (op e3 e3)))) (= (op e3 e1) (op e3 e3))) true)))
+(assume t764 (= (= (not (not (= (op e3 e1) (op e3 e3)))) (= (op e3 e1) (op e3 e3))) (= (= (op e3 e1) (op e3 e3)) (not (not (= (op e3 e1) (op e3 e3)))))))
+(assume t769 (= (= (= (op e3 e1) (op e3 e3)) (not (not (= (op e3 e1) (op e3 e3))))) true))
+(step st770 (cl (= (= (not (not (= (op e3 e1) (op e3 e3)))) (= (op e3 e1) (op e3 e3))) true)) :rule trans :premises (t764 t769))
+(step t.end (cl) :rule resolution :premises (nst770.0 st770))

@@ -1,0 +1,5 @@
+(assume nst341.0 (not (= (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) e1))))
+(assume t149 (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))
+(assume t340 (= (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) e1))
+(step st341 (cl (= (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) e1))) :rule cong :premises (t149 t340))
+(step t.end (cl) :rule resolution :premises (nst341.0 st341))

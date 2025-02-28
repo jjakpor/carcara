@@ -1,0 +1,4 @@
+(assume nst146.0 (not (= Axiom_40$0 (= Axiom_40$0 true))))
+(assume t145 (= (= Axiom_40$0 true) Axiom_40$0))
+(step st146 (cl (= Axiom_40$0 (= Axiom_40$0 true))) :rule symm :premises (t145))
+(step t.end (cl) :rule resolution :premises (nst146.0 st146))

@@ -1,0 +1,5 @@
+(assume nst324.0 (not (= (op e0 (op e0 e3)) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)))))
+(assume t27 (= e0 (op (op e1 e3) e1)))
+(assume t174 (= (op e0 e3) (op (op (op e1 e3) e1) e3)))
+(step st324 (cl (= (op e0 (op e0 e3)) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)))) :rule cong :premises (t27 t174))
+(step t.end (cl) :rule resolution :premises (nst324.0 st324))

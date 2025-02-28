@@ -1,0 +1,5 @@
+(assume nst198.0 (not (= (= unit e3) (= e0 e3))))
+(assume a11 (= unit e0))
+(assume t185 (= e3 e3))
+(step st198 (cl (= (= unit e3) (= e0 e3))) :rule cong :premises (a11 t185))
+(step t.end (cl) :rule resolution :premises (nst198.0 st198))

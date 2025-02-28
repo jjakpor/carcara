@@ -1,0 +1,5 @@
+(assume nst333.0 (not (= (op e1 unit) (op e1 e0))))
+(assume a9 (= unit e0))
+(assume t316 (= e1 e1))
+(step st333 (cl (= (op e1 unit) (op e1 e0))) :rule cong :premises (t316 a9))
+(step t.end (cl) :rule resolution :premises (nst333.0 st333))

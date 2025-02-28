@@ -1,0 +1,4 @@
+(assume nst211.0 (not (=> (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (= x18 x19))))
+(assume t210 (and (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (=> (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (= x18 x19))))
+(step st211 (cl (=> (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (= x18 x19))) :rule and :premises (t210) :args (1))
+(step t.end (cl) :rule resolution :premises (nst211.0 st211))

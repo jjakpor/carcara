@@ -1,0 +1,5 @@
+(assume nst1019.0 (not (= (= e4 (op e3 (op (op e4 e3) (op e4 e3)))) (= (op (op e3 e4) e3) (op (op (op e4 e3) (op e4 e3)) e3)))))
+(assume t329 (= e4 (op (op e3 e4) e3)))
+(assume t1018 (= (op e3 (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) e3)))
+(step st1019 (cl (= (= e4 (op e3 (op (op e4 e3) (op e4 e3)))) (= (op (op e3 e4) e3) (op (op (op e4 e3) (op e4 e3)) e3)))) :rule cong :premises (t329 t1018))
+(step t.end (cl) :rule resolution :premises (nst1019.0 st1019))

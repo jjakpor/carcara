@@ -1,0 +1,3 @@
+(assume nst5.0 (not (= (not (= (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))))) (not (= (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))))))))
+(step st5 (cl (= (not (= (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))))) (not (= (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst5.0 st5))

@@ -1,0 +1,4 @@
+(assume nst545.0 (not (=> (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (= x48 x49))))
+(assume t544 (and (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (=> (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (= x48 x49))))
+(step st545 (cl (=> (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (= x48 x49))) :rule and :premises (t544) :args (1))
+(step t.end (cl) :rule resolution :premises (nst545.0 st545))

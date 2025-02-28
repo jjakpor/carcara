@@ -1,0 +1,4 @@
+(assume nst89.0 (not (= (not (= f1 (f3 (f15 f16 f14) f25))) (not (= (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25)))) (f3 (f15 f16 (f5 f9 (f5 f11 f25))) f25))))))
+(assume t88 (= (= f1 (f3 (f15 f16 f14) f25)) (= (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25)))) (f3 (f15 f16 (f5 f9 (f5 f11 f25))) f25))))
+(step st89 (cl (= (not (= f1 (f3 (f15 f16 f14) f25))) (not (= (f3 f4 (f5 (f6 f7 (f5 (f6 f8 (f5 f9 (f5 f10 (f5 f10 (f5 f11 f25))))) f13)) (f5 f9 (f5 f11 f25)))) (f3 (f15 f16 (f5 f9 (f5 f11 f25))) f25))))) :rule cong :premises (t88))
+(step t.end (cl) :rule resolution :premises (nst89.0 st89))

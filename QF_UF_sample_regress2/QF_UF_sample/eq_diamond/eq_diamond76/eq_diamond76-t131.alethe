@@ -1,0 +1,6 @@
+(assume nst131.0 (not (= x1 x2)))
+(assume nst131.1 (not (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))))))
+(assume t130 (or (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2)))) (= x1 x2)))
+(step t130' (cl (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2)))) (= x1 x2)) :rule or :premises (t130))
+(step st131 (cl (= x1 x2) (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))))) :rule reordering :premises (t130'))
+(step t.end (cl) :rule resolution :premises (nst131.0 nst131.1 st131))

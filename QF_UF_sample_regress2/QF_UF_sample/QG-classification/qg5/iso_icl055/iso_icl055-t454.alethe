@@ -1,0 +1,4 @@
+(assume nst454.0 (not (= (op (op e1 e1) (op (op e1 e1) (op e1 e1))) (op e1 e1))))
+(assume t453 (= (op e1 e1) (op (op e1 e1) (op (op e1 e1) (op e1 e1)))))
+(step st454 (cl (= (op (op e1 e1) (op (op e1 e1) (op e1 e1))) (op e1 e1))) :rule symm :premises (t453))
+(step t.end (cl) :rule resolution :premises (nst454.0 st454))

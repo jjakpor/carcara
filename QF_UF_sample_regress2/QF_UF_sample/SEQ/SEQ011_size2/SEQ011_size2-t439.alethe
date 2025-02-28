@@ -1,0 +1,5 @@
+(assume nst439.0 (not (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))))))
+(assume nst439.1 (not (= (f6 c_1) (f5 c_1))))
+(assume t438 (=> (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))) (= (f6 c_1) (f5 c_1))))
+(step st439 (cl (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1)))) (= (f6 c_1) (f5 c_1))) :rule implies :premises (t438))
+(step t.end (cl) :rule resolution :premises (nst439.0 nst439.1 st439))

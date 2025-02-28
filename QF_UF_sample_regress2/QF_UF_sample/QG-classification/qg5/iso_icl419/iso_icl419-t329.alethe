@@ -1,0 +1,5 @@
+(assume nst329.0 (not (= (= e1 (op e4 e1)) (= (op (op e3 e3) (op e3 e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3)))))))
+(assume t40 (= e1 (op (op e3 e3) (op e3 e3))))
+(assume t58 (= (op e4 e1) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3)))))
+(step st329 (cl (= (= e1 (op e4 e1)) (= (op (op e3 e3) (op e3 e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3)))))) :rule cong :premises (t40 t58))
+(step t.end (cl) :rule resolution :premises (nst329.0 st329))

@@ -1,0 +1,8 @@
+(assume nst24.0 (not (=> (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))) false)))
+(assume nst24.1 (not (=> (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))) false)))
+(assume t22 (or (=> (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))) false) false))
+(assume t23 (or (=> (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))) false) (not false)))
+(step t23' (cl (=> (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))) false) (not false)) :rule or :premises (t23))
+(step t22' (cl (=> (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))) false) false) :rule or :premises (t22))
+(step st24 (cl (=> (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))) false) (=> (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))) false)) :rule resolution :premises (t22' t23'))
+(step t.end (cl) :rule resolution :premises (nst24.0 nst24.1 st24))

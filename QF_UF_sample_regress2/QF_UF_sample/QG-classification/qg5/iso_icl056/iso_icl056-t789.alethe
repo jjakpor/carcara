@@ -1,0 +1,7 @@
+(assume nst789.0 (not (not (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))))))
+(assume t785 (or (not (= (not (= (op e2 e2) (op e4 e2))) (not (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))) (not (not (= (op e2 e2) (op e4 e2)))) (not (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))))))
+(assume t787 (= (not (= (op e2 e2) (op e4 e2))) (not (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))))))
+(assume t788 (not (= (op e2 e2) (op e4 e2))))
+(step t785' (cl (not (= (not (= (op e2 e2) (op e4 e2))) (not (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))) (not (not (= (op e2 e2) (op e4 e2)))) (not (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))))) :rule or :premises (t785))
+(step st789 (cl (not (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))))) :rule resolution :premises (t785' t787 t788))
+(step t.end (cl) :rule resolution :premises (nst789.0 st789))

@@ -1,0 +1,5 @@
+(assume nst467.0 (not (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))))
+(assume nst467.1 (not (= x23 x24)))
+(assume t466 (=> (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (= x23 x24)))
+(step st467 (cl (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24)))) (= x23 x24)) :rule implies :premises (t466))
+(step t.end (cl) :rule resolution :premises (nst467.0 nst467.1 st467))

@@ -1,0 +1,5 @@
+(assume nst134.0 (not (not (forall ((?v0 A_llist$) (?v1 Nat$)) (or (not (fun_app$q lnull$d ?v0)) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0)))))))
+(assume nst134.1 (not (or (not (fun_app$q lnull$d xs$)) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$)))))
+(assume t133 (or (not (forall ((?v0 A_llist$) (?v1 Nat$)) (or (not (fun_app$q lnull$d ?v0)) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0))))) (or (not (fun_app$q lnull$d xs$)) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$)))))
+(step st134 (cl (not (forall ((?v0 A_llist$) (?v1 Nat$)) (or (not (fun_app$q lnull$d ?v0)) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0))))) (or (not (fun_app$q lnull$d xs$)) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$)))) :rule or :premises (t133))
+(step t.end (cl) :rule resolution :premises (nst134.0 nst134.1 st134))

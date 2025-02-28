@@ -1,0 +1,5 @@
+(assume nst261.0 (not (= (and (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 n_5$0 root_x$0 root_x$0))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0)))) (and true (not (in$0 root_x$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0)))))))
+(assume t226 (= (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 n_5$0 root_x$0 root_x$0))) true))
+(assume t260 (= (not (in$0 root_x$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0)))))
+(step st261 (cl (= (and (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 n_5$0 root_x$0 root_x$0))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0)))) (and true (not (in$0 root_x$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0)))))) :rule cong :premises (t226 t260))
+(step t.end (cl) :rule resolution :premises (nst261.0 st261))

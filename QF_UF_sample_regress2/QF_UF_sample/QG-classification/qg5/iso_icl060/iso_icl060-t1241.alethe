@@ -1,0 +1,3 @@
+(assume nst1241.0 (not (= (= (= e1 (op (op e1 e3) (op (op e1 e3) e3))) false) (not (= e1 (op (op e1 e3) (op (op e1 e3) e3)))))))
+(step st1241 (cl (= (= (= e1 (op (op e1 e3) (op (op e1 e3) e3))) false) (not (= e1 (op (op e1 e3) (op (op e1 e3) e3)))))) :rule equiv_simplify)
+(step t.end (cl) :rule resolution :premises (nst1241.0 st1241))

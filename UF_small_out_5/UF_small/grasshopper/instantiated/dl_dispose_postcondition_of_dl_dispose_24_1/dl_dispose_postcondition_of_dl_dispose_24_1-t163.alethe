@@ -1,0 +1,5 @@
+(assume nst163.0 (not (= (= FP_2$0 (union$0 (setminus$0 FP$0 FP_1$0) (union$0 (intersection$0 Alloc_1$0 FP_1$0) (setminus$0 Alloc_1$0 Alloc$0)))) (= FP_2$0 (union$0 (setminus$0 sk_?X_4$0 sk_?X_3$0) (union$0 (intersection$0 Alloc_1$0 sk_?X_3$0) (setminus$0 Alloc_1$0 Alloc$0)))))))
+(assume t158 (= FP_2$0 FP_2$0))
+(assume t162 (= (union$0 (setminus$0 FP$0 FP_1$0) (union$0 (intersection$0 Alloc_1$0 FP_1$0) (setminus$0 Alloc_1$0 Alloc$0))) (union$0 (setminus$0 sk_?X_4$0 sk_?X_3$0) (union$0 (intersection$0 Alloc_1$0 sk_?X_3$0) (setminus$0 Alloc_1$0 Alloc$0)))))
+(step st163 (cl (= (= FP_2$0 (union$0 (setminus$0 FP$0 FP_1$0) (union$0 (intersection$0 Alloc_1$0 FP_1$0) (setminus$0 Alloc_1$0 Alloc$0)))) (= FP_2$0 (union$0 (setminus$0 sk_?X_4$0 sk_?X_3$0) (union$0 (intersection$0 Alloc_1$0 sk_?X_3$0) (setminus$0 Alloc_1$0 Alloc$0)))))) :rule cong :premises (t158 t162))
+(step t.end (cl) :rule resolution :premises (nst163.0 st163))

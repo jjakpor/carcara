@@ -1,0 +1,4 @@
+(assume nst327.0 (not (not (= e0 e1))))
+(assume t160 (and (not (= e0 e1)) (not (= e0 e2))))
+(step st327 (cl (not (= e0 e1))) :rule and :premises (t160) :args (0))
+(step t.end (cl) :rule resolution :premises (nst327.0 st327))

@@ -1,0 +1,6 @@
+(assume nst434.0 (not (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))))))
+(assume nst434.1 (not (= (f6 c_1) (f5 c_1))))
+(assume t433 (or (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1)))) (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1)))) (= (f6 c_1) (f5 c_1))))
+(step t433' (cl (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1)))) (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1)))) (= (f6 c_1) (f5 c_1))) :rule or :premises (t433))
+(step st434 (cl (not (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1)))) (= (f6 c_1) (f5 c_1))) :rule contraction :premises (t433'))
+(step t.end (cl) :rule resolution :premises (nst434.0 nst434.1 st434))

@@ -1,0 +1,5 @@
+(assume nst403.0 (not (not (= (not (= (op e0 e0) (op e0 e3))) (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) e3)))))))
+(assume nst403.1 (not (not (not (= (op e0 e0) (op e0 e3))))))
+(assume nst403.2 (not (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) e3)))))
+(step st403 (cl (not (= (not (= (op e0 e0) (op e0 e3))) (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) e3))))) (not (not (= (op e0 e0) (op e0 e3)))) (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) e3)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst403.0 nst403.1 nst403.2 st403))

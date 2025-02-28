@@ -1,0 +1,4 @@
+(assume nst249.0 (not (not (= e4 e0))))
+(assume t248 (not (= e0 e4)))
+(step st249 (cl (not (= e4 e0))) :rule not_symm :premises (t248))
+(step t.end (cl) :rule resolution :premises (nst249.0 st249))

@@ -1,0 +1,5 @@
+(assume nst161.0 (not (= (= (op e2 unit) e2) (= e2 (op e2 e0)))))
+(assume t158 (= (= (op e2 unit) e2) (= e2 (op e2 unit))))
+(assume t160 (= (= e2 (op e2 unit)) (= e2 (op e2 e0))))
+(step st161 (cl (= (= (op e2 unit) e2) (= e2 (op e2 e0)))) :rule trans :premises (t158 t160))
+(step t.end (cl) :rule resolution :premises (nst161.0 st161))

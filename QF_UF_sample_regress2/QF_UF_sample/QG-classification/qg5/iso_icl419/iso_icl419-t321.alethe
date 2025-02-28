@@ -1,0 +1,4 @@
+(assume nst321.0 (not (= (not (= (op e1 e3) (op e1 e4))) (not (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))))
+(assume t320 (= (= (op e1 e3) (op e1 e4)) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(step st321 (cl (= (not (= (op e1 e3) (op e1 e4))) (not (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))) :rule cong :premises (t320))
+(step t.end (cl) :rule resolution :premises (nst321.0 st321))

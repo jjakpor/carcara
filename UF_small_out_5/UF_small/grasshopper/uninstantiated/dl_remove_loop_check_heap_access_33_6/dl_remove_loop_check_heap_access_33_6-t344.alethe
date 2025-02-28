@@ -1,0 +1,5 @@
+(assume nst344.0 (not (= (in$0 (read$0 next$0 d_init$0) FP_Caller$0) false)))
+(assume nst344.1 (not (not (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0)))))
+(assume t343 (= (= (in$0 (read$0 next$0 d_init$0) FP_Caller$0) false) (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0))))
+(step st344 (cl (= (in$0 (read$0 next$0 d_init$0) FP_Caller$0) false) (not (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0)))) :rule equiv2 :premises (t343))
+(step t.end (cl) :rule resolution :premises (nst344.0 nst344.1 st344))

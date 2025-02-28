@@ -1,0 +1,4 @@
+(assume nst912.0 (not (and (and (and (not (= (op e0 e0) (op e0 e1))) (not (= (op e0 e0) (op e0 e2)))) (not (= (op e0 e0) (op e0 e3)))) (not (= (op e0 e0) (op e0 e4))))))
+(assume t911 (and (and (and (and (not (= (op e0 e0) (op e0 e1))) (not (= (op e0 e0) (op e0 e2)))) (not (= (op e0 e0) (op e0 e3)))) (not (= (op e0 e0) (op e0 e4)))) (not (= (op e0 e1) (op e0 e2)))))
+(step st912 (cl (and (and (and (not (= (op e0 e0) (op e0 e1))) (not (= (op e0 e0) (op e0 e2)))) (not (= (op e0 e0) (op e0 e3)))) (not (= (op e0 e0) (op e0 e4))))) :rule and :premises (t911) :args (0))
+(step t.end (cl) :rule resolution :premises (nst912.0 st912))

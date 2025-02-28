@@ -1,0 +1,6 @@
+(assume nst66.0 (not (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))))
+(assume t59 (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))))
+(assume t65 (or (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))))
+(step t65' (cl (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))) :rule or :premises (t65))
+(step st66 (cl (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))) :rule resolution :premises (t65' t59))
+(step t.end (cl) :rule resolution :premises (nst66.0 st66))

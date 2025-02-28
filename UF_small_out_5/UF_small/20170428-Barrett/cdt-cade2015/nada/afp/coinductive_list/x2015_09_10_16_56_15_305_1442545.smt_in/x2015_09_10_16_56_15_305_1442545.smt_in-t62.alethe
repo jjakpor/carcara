@@ -1,0 +1,4 @@
+(assume nst62.0 (not (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))))
+(assume nst62.1 (not (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))))
+(step st62 (cl (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))) (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))) :rule and_pos :args (0))
+(step t.end (cl) :rule resolution :premises (nst62.0 nst62.1 st62))

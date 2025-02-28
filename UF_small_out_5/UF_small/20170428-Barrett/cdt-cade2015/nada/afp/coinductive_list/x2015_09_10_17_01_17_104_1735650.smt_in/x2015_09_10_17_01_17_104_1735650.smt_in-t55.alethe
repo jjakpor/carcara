@@ -1,0 +1,5 @@
+(assume nst55.0 (not (= (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c compow$ n$) f$) x$))) (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$))))))
+(assume t46 (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$))))
+(assume t54 (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c compow$ n$) f$) x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$))))
+(step st55 (cl (= (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c compow$ n$) f$) x$))) (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$))))) :rule cong :premises (t46 t54))
+(step t.end (cl) :rule resolution :premises (nst55.0 st55))

@@ -1,0 +1,6 @@
+(assume nst652.0 (not (= (= (op e3 e4) (op e3 (op e4 e3))) false)))
+(assume t643 (or (= (= (op e3 e4) (op e3 (op e4 e3))) false) (= (op e3 e4) (op e3 (op e4 e3)))))
+(assume t651 (not (= (op e3 e4) (op e3 (op e4 e3)))))
+(step t643' (cl (= (= (op e3 e4) (op e3 (op e4 e3))) false) (= (op e3 e4) (op e3 (op e4 e3)))) :rule or :premises (t643))
+(step st652 (cl (= (= (op e3 e4) (op e3 (op e4 e3))) false)) :rule resolution :premises (t643' t651))
+(step t.end (cl) :rule resolution :premises (nst652.0 st652))

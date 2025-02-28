@@ -1,0 +1,5 @@
+(assume nst245.0 (not (not (= (or (not (not (= a$ d$))) (not (not (= b$ c$)))) (or (= a$ d$) (= b$ c$))))))
+(assume nst245.1 (not (not (or (not (not (= a$ d$))) (not (not (= b$ c$)))))))
+(assume nst245.2 (not (or (= a$ d$) (= b$ c$))))
+(step st245 (cl (not (= (or (not (not (= a$ d$))) (not (not (= b$ c$)))) (or (= a$ d$) (= b$ c$)))) (not (or (not (not (= a$ d$))) (not (not (= b$ c$))))) (or (= a$ d$) (= b$ c$))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst245.0 nst245.1 nst245.2 st245))

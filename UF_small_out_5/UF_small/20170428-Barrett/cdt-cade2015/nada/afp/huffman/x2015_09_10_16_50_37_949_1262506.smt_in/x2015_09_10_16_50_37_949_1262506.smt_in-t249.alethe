@@ -1,0 +1,5 @@
+(assume nst249.0 (not (not (not (= a$ d$)))))
+(assume nst249.1 (not (not (not (= b$ c$)))))
+(assume a10 (not (and (not (= a$ d$)) (not (= b$ c$)))))
+(step st249 (cl (not (not (= a$ d$))) (not (not (= b$ c$)))) :rule not_and :premises (a10))
+(step t.end (cl) :rule resolution :premises (nst249.0 nst249.1 st249))

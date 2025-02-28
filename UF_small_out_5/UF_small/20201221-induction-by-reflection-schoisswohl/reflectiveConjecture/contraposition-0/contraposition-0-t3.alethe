@@ -1,0 +1,7 @@
+(assume nst3.0 (not (models empty (notR (pR aR)))))
+(assume nst3.1 (not (models empty (qR bR))))
+(assume nst3.2 (not (not (or (models empty (notR (pR aR))) (models empty (qR bR))))))
+(assume t2 (or (not (or (models empty (notR (pR aR))) (models empty (qR bR)))) (models empty (notR (pR aR))) (models empty (qR bR))))
+(step t2' (cl (not (or (models empty (notR (pR aR))) (models empty (qR bR)))) (models empty (notR (pR aR))) (models empty (qR bR))) :rule or :premises (t2))
+(step st3 (cl (models empty (notR (pR aR))) (models empty (qR bR)) (not (or (models empty (notR (pR aR))) (models empty (qR bR))))) :rule reordering :premises (t2'))
+(step t.end (cl) :rule resolution :premises (nst3.0 nst3.1 nst3.2 st3))

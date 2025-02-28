@@ -1,0 +1,5 @@
+(assume nst228.0 (not (not (= (not (= (op e0 e1) (op e0 e2))) (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))))
+(assume nst228.1 (not (not (not (= (op e0 e1) (op e0 e2))))))
+(assume nst228.2 (not (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
+(step st228 (cl (not (= (not (= (op e0 e1) (op e0 e2))) (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))) (not (not (= (op e0 e1) (op e0 e2)))) (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst228.0 nst228.1 nst228.2 st228))

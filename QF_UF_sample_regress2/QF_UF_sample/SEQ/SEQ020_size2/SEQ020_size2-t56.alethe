@@ -1,0 +1,5 @@
+(assume nst56.0 (not (= (= (= (f6 c_1) (f5 c_1)) (not (not (= (f6 c_1) (f5 c_1))))) true)))
+(assume t54 (= (= (= (f6 c_1) (f5 c_1)) (not (not (= (f6 c_1) (f5 c_1))))) (= (= (f6 c_1) (f5 c_1)) (= (f6 c_1) (f5 c_1)))))
+(assume t55 (= (= (= (f6 c_1) (f5 c_1)) (= (f6 c_1) (f5 c_1))) true))
+(step st56 (cl (= (= (= (f6 c_1) (f5 c_1)) (not (not (= (f6 c_1) (f5 c_1))))) true)) :rule trans :premises (t54 t55))
+(step t.end (cl) :rule resolution :premises (nst56.0 st56))

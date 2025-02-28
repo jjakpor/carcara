@@ -1,0 +1,8 @@
+(assume nst1138.0 (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))
+(assume nst1138.1 (not (not (= e1 (op (op (op e1 e3) e1) e3)))))
+(assume nst1138.2 (not (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)))))
+(assume nst1138.3 (not (not (= (op (op e1 e3) e1) (op e3 (op e1 e3))))))
+(assume nst1138.4 (not (not (= e1 (op e3 (op e1 e3))))))
+(assume t1137 (or (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) (not (= e1 (op (op (op e1 e3) e1) e3))) (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3))) (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))) (not (= e1 (op e3 (op e1 e3))))))
+(step st1138 (cl (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) (not (= e1 (op (op (op e1 e3) e1) e3))) (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3))) (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))) (not (= e1 (op e3 (op e1 e3))))) :rule or :premises (t1137))
+(step t.end (cl) :rule resolution :premises (nst1138.0 nst1138.1 nst1138.2 nst1138.3 nst1138.4 st1138))

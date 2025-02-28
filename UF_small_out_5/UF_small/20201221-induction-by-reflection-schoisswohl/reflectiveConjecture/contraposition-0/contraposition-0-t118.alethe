@@ -1,0 +1,6 @@
+(assume nst118.0 (not (= (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (models empty (orR (notR (pR aR)) (qR bR)))))))
+(assume a11 (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))))
+(assume t117 (or (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (models empty (orR (notR (pR aR)) (qR bR)))))))
+(step t117' (cl (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (models empty (orR (notR (pR aR)) (qR bR)))))) :rule or :premises (t117))
+(step st118 (cl (= (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (models empty (orR (notR (pR aR)) (qR bR)))))) :rule resolution :premises (t117' a11))
+(step t.end (cl) :rule resolution :premises (nst118.0 st118))

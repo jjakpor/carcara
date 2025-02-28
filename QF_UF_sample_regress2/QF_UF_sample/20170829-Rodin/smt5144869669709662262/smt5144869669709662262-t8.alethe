@@ -1,0 +1,6 @@
+(assume nst8.0 (not (not (not (= nf nf0)))))
+(assume t4 (not (= flash nf0)))
+(assume t7 (or (not (not (= nf nf0))) (= flash nf0)))
+(step t7' (cl (not (not (= nf nf0))) (= flash nf0)) :rule or :premises (t7))
+(step st8 (cl (not (not (= nf nf0)))) :rule resolution :premises (t7' t4))
+(step t.end (cl) :rule resolution :premises (nst8.0 st8))

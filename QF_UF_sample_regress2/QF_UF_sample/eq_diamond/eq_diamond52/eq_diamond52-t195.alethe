@@ -1,0 +1,6 @@
+(assume nst195.0 (not (= x16 x17)))
+(assume nst195.1 (not (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))))))
+(assume t194 (or (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17)))) (= x16 x17)))
+(step t194' (cl (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17)))) (= x16 x17)) :rule or :premises (t194))
+(step st195 (cl (= x16 x17) (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))))) :rule reordering :premises (t194'))
+(step t.end (cl) :rule resolution :premises (nst195.0 nst195.1 st195))

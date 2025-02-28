@@ -1,0 +1,5 @@
+(assume nst1.0 (not (and (= x4 y4) (= y4 x5))))
+(assume nst1.1 (not (and (= x4 z4) (= z4 x5))))
+(assume t0 (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))
+(step st1 (cl (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) :rule or :premises (t0))
+(step t.end (cl) :rule resolution :premises (nst1.0 nst1.1 st1))

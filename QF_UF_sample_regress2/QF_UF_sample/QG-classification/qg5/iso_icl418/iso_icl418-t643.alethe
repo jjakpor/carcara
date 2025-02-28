@@ -1,0 +1,8 @@
+(assume nst643.0 (not (= (= (op e3 e4) (op e3 (op e4 e3))) false)))
+(assume nst643.1 (not (= (op e3 e4) (op e3 (op e4 e3)))))
+(assume t641 (or (= (= (op e3 e4) (op e3 (op e4 e3))) false) (not (not (= (op e3 e4) (op e3 (op e4 e3)))))))
+(assume t642 (or (not (not (not (= (op e3 e4) (op e3 (op e4 e3)))))) (= (op e3 e4) (op e3 (op e4 e3)))))
+(step t642' (cl (not (not (not (= (op e3 e4) (op e3 (op e4 e3)))))) (= (op e3 e4) (op e3 (op e4 e3)))) :rule or :premises (t642))
+(step t641' (cl (= (= (op e3 e4) (op e3 (op e4 e3))) false) (not (not (= (op e3 e4) (op e3 (op e4 e3)))))) :rule or :premises (t641))
+(step st643 (cl (= (= (op e3 e4) (op e3 (op e4 e3))) false) (= (op e3 e4) (op e3 (op e4 e3)))) :rule resolution :premises (t641' t642'))
+(step t.end (cl) :rule resolution :premises (nst643.0 nst643.1 st643))

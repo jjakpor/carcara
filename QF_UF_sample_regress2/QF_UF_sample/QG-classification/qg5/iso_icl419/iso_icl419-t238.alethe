@@ -1,0 +1,5 @@
+(assume nst238.0 (not (not (= (or (not (= (op e3 e0) e3)) (= (op e0 e3) e3)) (or (not (= e3 (op e3 (op e3 e3)))) (= e3 (op (op e3 e3) e3)))))))
+(assume nst238.1 (not (not (or (not (= (op e3 e0) e3)) (= (op e0 e3) e3)))))
+(assume nst238.2 (not (or (not (= e3 (op e3 (op e3 e3)))) (= e3 (op (op e3 e3) e3)))))
+(step st238 (cl (not (= (or (not (= (op e3 e0) e3)) (= (op e0 e3) e3)) (or (not (= e3 (op e3 (op e3 e3)))) (= e3 (op (op e3 e3) e3))))) (not (or (not (= (op e3 e0) e3)) (= (op e0 e3) e3))) (or (not (= e3 (op e3 (op e3 e3)))) (= e3 (op (op e3 e3) e3)))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst238.0 nst238.1 nst238.2 st238))

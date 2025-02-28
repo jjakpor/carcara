@@ -1,0 +1,5 @@
+(assume nst734.0 (not (= (= x14 x15) (= x0 x65))))
+(assume t182 (= x14 x0))
+(assume t733 (= x15 x65))
+(step st734 (cl (= (= x14 x15) (= x0 x65))) :rule cong :premises (t182 t733))
+(step t.end (cl) :rule resolution :premises (nst734.0 st734))

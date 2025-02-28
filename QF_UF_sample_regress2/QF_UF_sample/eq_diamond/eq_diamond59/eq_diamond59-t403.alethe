@@ -1,0 +1,6 @@
+(assume nst403.0 (not (= x17 x18)))
+(assume t398 (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))))
+(assume t402 (or (= x17 x18) (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))))))
+(step t402' (cl (= x17 x18) (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))))) :rule or :premises (t402))
+(step st403 (cl (= x17 x18)) :rule resolution :premises (t402' t398))
+(step t.end (cl) :rule resolution :premises (nst403.0 st403))

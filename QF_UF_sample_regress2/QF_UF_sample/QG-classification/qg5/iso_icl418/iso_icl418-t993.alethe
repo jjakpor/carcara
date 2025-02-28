@@ -1,0 +1,4 @@
+(assume nst993.0 (not (= (op e4 (op e3 e4)) (op (op e4 e3) e4))))
+(assume t992 (= (op (op e4 e3) e4) (op e4 (op e3 e4))))
+(step st993 (cl (= (op e4 (op e3 e4)) (op (op e4 e3) e4))) :rule symm :premises (t992))
+(step t.end (cl) :rule resolution :premises (nst993.0 st993))

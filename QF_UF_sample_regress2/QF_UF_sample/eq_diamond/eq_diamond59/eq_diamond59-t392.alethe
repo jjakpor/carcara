@@ -1,0 +1,6 @@
+(assume nst392.0 (not (= x16 x17)))
+(assume t387 (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))))
+(assume t391 (or (= x16 x17) (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))))))
+(step t391' (cl (= x16 x17) (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))))) :rule or :premises (t391))
+(step st392 (cl (= x16 x17)) :rule resolution :premises (t391' t387))
+(step t.end (cl) :rule resolution :premises (nst392.0 st392))

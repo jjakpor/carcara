@@ -1,0 +1,5 @@
+(assume nt33.0 (not (= (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)))) (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$)))))))
+(anchor :step t33 :args ((?v1 A$) (?v2 A_llist$) (:= (?v0 A$) ?v1) (:= (?v1 A_llist$) ?v2)))
+(step t33.t0 (cl (= (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$))) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$))))) :rule trust)
+(step t33 (cl (= (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)))) (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$)))))) :rule bind)
+(step t.end (cl) :rule resolution :premises (nt33.0 t33))

@@ -1,0 +1,4 @@
+(assume nst19.0 (not (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1)))))
+(assume nst19.1 (not (= c_1 (f5 c_1))))
+(step st19 (cl (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1))) (= c_1 (f5 c_1))) :rule and_pos :args (2))
+(step t.end (cl) :rule resolution :premises (nst19.0 nst19.1 st19))

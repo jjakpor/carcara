@@ -1,0 +1,7 @@
+(assume nst164.0 (not (not (= e0 (op e2 (op e2 e0))))))
+(assume t118 (or (not (= e2 (op e2 e0))) (= e2 (op e2 (op e2 e2))) (not (= e0 (op e2 (op e2 e0))))))
+(assume t127 (= e2 (op e2 e0)))
+(assume t163 (not (= e2 (op e2 (op e2 e2)))))
+(step t118' (cl (not (= e2 (op e2 e0))) (= e2 (op e2 (op e2 e2))) (not (= e0 (op e2 (op e2 e0))))) :rule or :premises (t118))
+(step st164 (cl (not (= e0 (op e2 (op e2 e0))))) :rule resolution :premises (t118' t127 t163))
+(step t.end (cl) :rule resolution :premises (nst164.0 st164))

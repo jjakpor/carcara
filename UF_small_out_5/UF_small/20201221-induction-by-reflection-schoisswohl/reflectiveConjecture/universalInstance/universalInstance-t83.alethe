@@ -1,0 +1,7 @@
+(assume nst83.0 (not (models empty (pR aR))))
+(assume nst83.1 (not (not (p (eval_alpha empty aR)))))
+(assume nst83.2 (not (not (= (models empty (pR aR)) (p (eval_alpha empty aR))))))
+(assume t82 (or (not (= (models empty (pR aR)) (p (eval_alpha empty aR)))) (models empty (pR aR)) (not (p (eval_alpha empty aR)))))
+(step t82' (cl (not (= (models empty (pR aR)) (p (eval_alpha empty aR)))) (models empty (pR aR)) (not (p (eval_alpha empty aR)))) :rule or :premises (t82))
+(step st83 (cl (models empty (pR aR)) (not (p (eval_alpha empty aR))) (not (= (models empty (pR aR)) (p (eval_alpha empty aR))))) :rule reordering :premises (t82'))
+(step t.end (cl) :rule resolution :premises (nst83.0 nst83.1 nst83.2 st83))

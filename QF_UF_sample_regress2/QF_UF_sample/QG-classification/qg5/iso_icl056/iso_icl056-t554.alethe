@@ -1,0 +1,7 @@
+(assume nst554.0 (not (not (= e1 (op e1 (op e1 e1))))))
+(assume t544 (or (not (= (not (= e1 e3)) (not (= e1 (op e1 (op e1 e1)))))) (not (not (= e1 e3))) (not (= e1 (op e1 (op e1 e1))))))
+(assume t552 (= (not (= e1 e3)) (not (= e1 (op e1 (op e1 e1))))))
+(assume t553 (not (= e1 e3)))
+(step t544' (cl (not (= (not (= e1 e3)) (not (= e1 (op e1 (op e1 e1)))))) (not (not (= e1 e3))) (not (= e1 (op e1 (op e1 e1))))) :rule or :premises (t544))
+(step st554 (cl (not (= e1 (op e1 (op e1 e1))))) :rule resolution :premises (t544' t552 t553))
+(step t.end (cl) :rule resolution :premises (nst554.0 st554))

@@ -1,0 +1,6 @@
+(assume nst116.0 (not (not (= x4 x5))))
+(assume t13 (or (not (= (= x4 x5) false)) (not (= x4 x5))))
+(assume t115 (= (= x4 x5) false))
+(step t13' (cl (not (= (= x4 x5) false)) (not (= x4 x5))) :rule or :premises (t13))
+(step st116 (cl (not (= x4 x5))) :rule resolution :premises (t13' t115))
+(step t.end (cl) :rule resolution :premises (nst116.0 st116))

@@ -1,0 +1,5 @@
+(assume nst167.0 (not (= (= e2 (op e1 e3)) (= (op e1 e3) (op e1 e3)))))
+(assume t13 (= e2 (op e1 e3)))
+(assume t166 (= (op e1 e3) (op e1 e3)))
+(step st167 (cl (= (= e2 (op e1 e3)) (= (op e1 e3) (op e1 e3)))) :rule cong :premises (t13 t166))
+(step t.end (cl) :rule resolution :premises (nst167.0 st167))

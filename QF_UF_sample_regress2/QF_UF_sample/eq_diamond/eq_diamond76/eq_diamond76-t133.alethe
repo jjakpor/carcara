@@ -1,0 +1,4 @@
+(assume nst133.0 (not (= x2 x1)))
+(assume t132 (= x1 x2))
+(step st133 (cl (= x2 x1)) :rule symm :premises (t132))
+(step t.end (cl) :rule resolution :premises (nst133.0 st133))

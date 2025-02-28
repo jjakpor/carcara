@@ -1,0 +1,4 @@
+(assume nst1023.0 (not (not (= (op e0 e2) (op e0 e4)))))
+(assume t245 (and (and (and (and (and (and (and (and (not (= (op e0 e0) (op e0 e1))) (not (= (op e0 e0) (op e0 e2)))) (not (= (op e0 e0) (op e0 e3)))) (not (= (op e0 e0) (op e0 e4)))) (not (= (op e0 e1) (op e0 e2)))) (not (= (op e0 e1) (op e0 e3)))) (not (= (op e0 e1) (op e0 e4)))) (not (= (op e0 e2) (op e0 e3)))) (not (= (op e0 e2) (op e0 e4)))))
+(step st1023 (cl (not (= (op e0 e2) (op e0 e4)))) :rule and :premises (t245) :args (1))
+(step t.end (cl) :rule resolution :premises (nst1023.0 st1023))

@@ -1,0 +1,7 @@
+(assume nst10.0 (not (= y$a_consume0$next y$a_consume0$next_rhs_op)))
+(assume a169 (= y$313 (= y$a_consume0$next y$a_consume0$next_rhs_op)))
+(assume t3 (or (not (= y$313 (= y$a_consume0$next y$a_consume0$next_rhs_op))) (not y$313) (= y$a_consume0$next y$a_consume0$next_rhs_op)))
+(assume t9 y$313)
+(step t3' (cl (not (= y$313 (= y$a_consume0$next y$a_consume0$next_rhs_op))) (not y$313) (= y$a_consume0$next y$a_consume0$next_rhs_op)) :rule or :premises (t3))
+(step st10 (cl (= y$a_consume0$next y$a_consume0$next_rhs_op)) :rule resolution :premises (t3' a169 t9))
+(step t.end (cl) :rule resolution :premises (nst10.0 st10))

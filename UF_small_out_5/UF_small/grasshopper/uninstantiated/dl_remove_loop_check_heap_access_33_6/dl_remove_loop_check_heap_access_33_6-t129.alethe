@@ -1,0 +1,5 @@
+(assume nst129.0 (not (= (= null$0 (read$0 next$0 d_init$0)) (= (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)))))
+(assume t31 (= null$0 (read$0 next$0 d_init$0)))
+(assume t128 (= (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)))
+(step st129 (cl (= (= null$0 (read$0 next$0 d_init$0)) (= (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)))) :rule cong :premises (t31 t128))
+(step t.end (cl) :rule resolution :premises (nst129.0 st129))

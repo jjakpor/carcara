@@ -1,0 +1,5 @@
+(assume nst153.0 (not (= (fun_app$b (less_eq$ (depth$ t$ b$)) (depth$ t$ c$)) (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$)))))
+(assume a7 (= (depth$ t$ c$) (height$ t$)))
+(assume t152 (= (less_eq$ (depth$ t$ b$)) (less_eq$ (depth$ t$ b$))))
+(step st153 (cl (= (fun_app$b (less_eq$ (depth$ t$ b$)) (depth$ t$ c$)) (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$)))) :rule cong :premises (t152 a7))
+(step t.end (cl) :rule resolution :premises (nst153.0 st153))

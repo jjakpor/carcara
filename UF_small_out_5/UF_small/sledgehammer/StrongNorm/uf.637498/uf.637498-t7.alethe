@@ -1,0 +1,3 @@
+(assume nst7.0 (not (= (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39))))))
+(step st7 (cl (= (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst7.0 st7))

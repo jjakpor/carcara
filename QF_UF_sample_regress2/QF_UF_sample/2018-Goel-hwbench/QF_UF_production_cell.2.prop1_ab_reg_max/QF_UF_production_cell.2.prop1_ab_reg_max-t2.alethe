@@ -1,0 +1,5 @@
+(assume nst2.0 (not (not (= y$62 (= y$n0s8 y$v_A)))))
+(assume nst2.1 (not (not y$62)))
+(assume nst2.2 (not (= y$n0s8 y$v_A)))
+(step st2 (cl (not (= y$62 (= y$n0s8 y$v_A))) (not y$62) (= y$n0s8 y$v_A)) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst2.0 nst2.1 nst2.2 st2))

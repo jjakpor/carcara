@@ -1,0 +1,4 @@
+(assume nst17.0 (not (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))))
+(assume nst17.1 (not (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)))))
+(step st17 (cl (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)))) :rule implies_neg1)
+(step t.end (cl) :rule resolution :premises (nst17.0 nst17.1 st17))

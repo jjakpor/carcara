@@ -1,0 +1,6 @@
+(assume nst105.0 (not (= x8 x9)))
+(assume t100 (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))
+(assume t104 (or (= x8 x9) (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))))
+(step t104' (cl (= x8 x9) (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))) :rule or :premises (t104))
+(step st105 (cl (= x8 x9)) :rule resolution :premises (t104' t100))
+(step t.end (cl) :rule resolution :premises (nst105.0 st105))

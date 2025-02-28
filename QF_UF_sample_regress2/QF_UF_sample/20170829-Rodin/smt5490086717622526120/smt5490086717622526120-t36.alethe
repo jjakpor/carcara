@@ -1,0 +1,4 @@
+(assume nst36.0 (not (= (not (or (and prt grn) org (and (not prt) rd1) rd2 (and grn (not prt)) (and rd1 prt))) (not (or (and prt red_SR) false (and (not prt) red_MR) false (and red_SR (not prt)) (and red_MR prt))))))
+(assume t35 (= (or (and prt grn) org (and (not prt) rd1) rd2 (and grn (not prt)) (and rd1 prt)) (or (and prt red_SR) false (and (not prt) red_MR) false (and red_SR (not prt)) (and red_MR prt))))
+(step st36 (cl (= (not (or (and prt grn) org (and (not prt) rd1) rd2 (and grn (not prt)) (and rd1 prt))) (not (or (and prt red_SR) false (and (not prt) red_MR) false (and red_SR (not prt)) (and red_MR prt))))) :rule cong :premises (t35))
+(step t.end (cl) :rule resolution :premises (nst36.0 st36))

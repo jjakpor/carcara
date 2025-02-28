@@ -1,0 +1,3 @@
+(assume nst461.0 (not (= (= (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (and (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (=> (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (= x40 x41)))) true)))
+(step st461 (cl (= (= (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (and (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (=> (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (= x40 x41)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst461.0 st461))

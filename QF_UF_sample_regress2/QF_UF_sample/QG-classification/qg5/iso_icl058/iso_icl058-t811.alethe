@@ -1,0 +1,6 @@
+(assume nst811.0 (not (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op e0 e0))))))
+(assume t807 (or (not (= (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op e0 e0))) false)) (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op e0 e0))))))
+(assume t810 (= (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op e0 e0))) false))
+(step t807' (cl (not (= (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op e0 e0))) false)) (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op e0 e0))))) :rule or :premises (t807))
+(step st811 (cl (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op e0 e0))))) :rule resolution :premises (t807' t810))
+(step t.end (cl) :rule resolution :premises (nst811.0 st811))

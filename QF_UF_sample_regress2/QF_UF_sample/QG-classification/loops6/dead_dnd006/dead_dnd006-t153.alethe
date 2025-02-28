@@ -1,0 +1,4 @@
+(assume nst153.0 (not (and (not (= e0 e1)) (not (= e0 e2)))))
+(assume t152 (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))))
+(step st153 (cl (and (not (= e0 e1)) (not (= e0 e2)))) :rule and :premises (t152) :args (0))
+(step t.end (cl) :rule resolution :premises (nst153.0 st153))

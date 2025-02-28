@@ -1,0 +1,5 @@
+(assume nst29.0 (not (= y$v_B y$v_at_table)))
+(assume t19 (= y$v_B y$v_at_press))
+(assume t27 (= y$v_at_press y$v_at_table))
+(step st29 (cl (= y$v_B y$v_at_table)) :rule trans :premises (t19 t27))
+(step t.end (cl) :rule resolution :premises (nst29.0 st29))

@@ -1,0 +1,3 @@
+(assume nst69.0 (not (= (= (ite (= a$ d$) (fun_app$f (swapSyms$ t$ b$) c$) (ite (= b$ c$) (fun_app$f (swapSyms$ t$ a$) d$) (fun_app$f (swapSyms$ (fun_app$f (swapSyms$ t$ a$) c$) b$) d$))) (ite (= a$ d$) (fun_app$f (swapSyms$ t$ b$) c$) (ite (= b$ c$) (fun_app$f (swapSyms$ t$ a$) d$) (fun_app$f (swapSyms$ (fun_app$f (swapSyms$ t$ a$) c$) b$) d$)))) true)))
+(step st69 (cl (= (= (ite (= a$ d$) (fun_app$f (swapSyms$ t$ b$) c$) (ite (= b$ c$) (fun_app$f (swapSyms$ t$ a$) d$) (fun_app$f (swapSyms$ (fun_app$f (swapSyms$ t$ a$) c$) b$) d$))) (ite (= a$ d$) (fun_app$f (swapSyms$ t$ b$) c$) (ite (= b$ c$) (fun_app$f (swapSyms$ t$ a$) d$) (fun_app$f (swapSyms$ (fun_app$f (swapSyms$ t$ a$) c$) b$) d$)))) true)) :rule hole)
+(step t.end (cl) :rule resolution :premises (nst69.0 st69))

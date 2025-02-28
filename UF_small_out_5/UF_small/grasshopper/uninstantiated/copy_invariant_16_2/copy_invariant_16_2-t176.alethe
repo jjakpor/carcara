@@ -1,0 +1,6 @@
+(assume nst176.0 (not (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))
+(assume nst176.1 (not (not (and (or (= cp_2$0 sk_?e$0) (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))))
+(assume t175 (or (not (and (or (= cp_2$0 sk_?e$0) (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))
+(step t175' (cl (not (and (or (= cp_2$0 sk_?e$0) (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) :rule or :premises (t175))
+(step st176 (cl (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))) (not (and (or (= cp_2$0 sk_?e$0) (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))) :rule reordering :premises (t175'))
+(step t.end (cl) :rule resolution :premises (nst176.0 nst176.1 st176))

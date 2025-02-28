@@ -1,0 +1,5 @@
+(assume nst11.0 (not (not (= (= (llength$ us$) infinity$) (= (llength$ us$) (llength$a xs$))))))
+(assume nst11.1 (not (not (= (llength$ us$) infinity$))))
+(assume nst11.2 (not (= (llength$ us$) (llength$a xs$))))
+(step st11 (cl (not (= (= (llength$ us$) infinity$) (= (llength$ us$) (llength$a xs$)))) (not (= (llength$ us$) infinity$)) (= (llength$ us$) (llength$a xs$))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst11.0 nst11.1 nst11.2 st11))

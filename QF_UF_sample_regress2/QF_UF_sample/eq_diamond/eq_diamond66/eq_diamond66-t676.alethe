@@ -1,0 +1,6 @@
+(assume nst676.0 (not (= x59 x60)))
+(assume nst676.1 (not (not (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))))))
+(assume t675 (or (not (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60)))) (= x59 x60)))
+(step t675' (cl (not (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60)))) (= x59 x60)) :rule or :premises (t675))
+(step st676 (cl (= x59 x60) (not (or (and (= x59 y59) (= y59 x60)) (and (= x59 z59) (= z59 x60))))) :rule reordering :premises (t675'))
+(step t.end (cl) :rule resolution :premises (nst676.0 nst676.1 st676))

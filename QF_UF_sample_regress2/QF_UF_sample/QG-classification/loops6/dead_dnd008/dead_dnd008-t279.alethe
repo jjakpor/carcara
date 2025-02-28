@@ -1,0 +1,5 @@
+(assume nst279.0 (not (not (= (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0))))))
+(assume nst279.1 (not (not (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)))))
+(assume nst279.2 (not (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0))))
+(step st279 (cl (not (= (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0)))) (not (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit))) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0))) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst279.0 nst279.1 nst279.2 st279))

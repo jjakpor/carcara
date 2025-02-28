@@ -1,0 +1,6 @@
+(assume nst347.0 (not (= x11 x12)))
+(assume nst347.1 (not (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))))))
+(assume t346 (or (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12)))) (= x11 x12)))
+(step t346' (cl (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12)))) (= x11 x12)) :rule or :premises (t346))
+(step st347 (cl (= x11 x12) (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))))) :rule reordering :premises (t346'))
+(step t.end (cl) :rule resolution :premises (nst347.0 nst347.1 st347))

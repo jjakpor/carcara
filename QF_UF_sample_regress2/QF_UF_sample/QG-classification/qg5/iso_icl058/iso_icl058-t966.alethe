@@ -1,0 +1,7 @@
+(assume nst966.0 (not (not (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0) (op (op (op (op e0 e0) e0) e0) e0)))))
+(assume t962 (or (not (= (not (= (op e1 e0) (op e3 e0))) (not (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0) (op (op (op (op e0 e0) e0) e0) e0))))) (not (not (= (op e1 e0) (op e3 e0)))) (not (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0) (op (op (op (op e0 e0) e0) e0) e0)))))
+(assume t964 (= (not (= (op e1 e0) (op e3 e0))) (not (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0) (op (op (op (op e0 e0) e0) e0) e0)))))
+(assume t965 (not (= (op e1 e0) (op e3 e0))))
+(step t962' (cl (not (= (not (= (op e1 e0) (op e3 e0))) (not (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0) (op (op (op (op e0 e0) e0) e0) e0))))) (not (not (= (op e1 e0) (op e3 e0)))) (not (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0) (op (op (op (op e0 e0) e0) e0) e0)))) :rule or :premises (t962))
+(step st966 (cl (not (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0) (op (op (op (op e0 e0) e0) e0) e0)))) :rule resolution :premises (t962' t964 t965))
+(step t.end (cl) :rule resolution :premises (nst966.0 st966))

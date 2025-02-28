@@ -1,0 +1,4 @@
+(assume nst16.0 (not (not (= f1 (f3 f4 f5 f6 f7 (f8 f9))))))
+(assume a1 (not (= (f3 f4 f5 f6 f7 (f8 f9)) f1)))
+(step st16 (cl (not (= f1 (f3 f4 f5 f6 f7 (f8 f9))))) :rule not_symm :premises (a1))
+(step t.end (cl) :rule resolution :premises (nst16.0 st16))

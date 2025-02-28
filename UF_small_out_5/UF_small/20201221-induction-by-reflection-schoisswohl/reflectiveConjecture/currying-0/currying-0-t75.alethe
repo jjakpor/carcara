@@ -1,0 +1,3 @@
+(assume nst75.0 (not (= (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))))
+(step st75 (cl (= (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) :rule refl)
+(step t.end (cl) :rule resolution :premises (nst75.0 st75))

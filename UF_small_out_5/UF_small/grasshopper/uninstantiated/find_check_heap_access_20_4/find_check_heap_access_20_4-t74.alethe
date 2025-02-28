@@ -1,0 +1,5 @@
+(assume nst74.0 (not (= (or (Btwn$0 next$0 x$0 root_x$0 root_x$0) (not (lseg_set_struct$0 sk_?X_23$0 next$0 x$0 root_x$0 X$0))) (or (Btwn$0 next$0 x$0 root_x$0 root_x$0) (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))))))
+(assume t68 (= (Btwn$0 next$0 x$0 root_x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 root_x$0)))
+(assume t73 (= (not (lseg_set_struct$0 sk_?X_23$0 next$0 x$0 root_x$0 X$0)) (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))))
+(step st74 (cl (= (or (Btwn$0 next$0 x$0 root_x$0 root_x$0) (not (lseg_set_struct$0 sk_?X_23$0 next$0 x$0 root_x$0 X$0))) (or (Btwn$0 next$0 x$0 root_x$0 root_x$0) (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))))) :rule cong :premises (t68 t73))
+(step t.end (cl) :rule resolution :premises (nst74.0 st74))

@@ -1,0 +1,5 @@
+(assume nst444.0 (not (not (= (= (op e0 (op e0 e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) false))))
+(assume nst444.1 (not (not (= (op e0 (op e0 e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
+(assume t443 (= (= (= (op e0 (op e0 e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) false) (not (= (op e0 (op e0 e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
+(step st444 (cl (not (= (= (op e0 (op e0 e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) false)) (not (= (op e0 (op e0 e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))) :rule equiv1 :premises (t443))
+(step t.end (cl) :rule resolution :premises (nst444.0 nst444.1 st444))

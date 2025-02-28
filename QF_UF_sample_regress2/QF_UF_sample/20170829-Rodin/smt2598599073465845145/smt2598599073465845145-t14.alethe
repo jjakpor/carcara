@@ -1,0 +1,6 @@
+(assume nst14.0 (not (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2)))))))
+(assume t6 (or (not (= (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2))))) true)) (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2)))))))
+(assume t13 (= (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2))))) true))
+(step t6' (cl (not (= (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2))))) true)) (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2)))))) :rule or :premises (t6))
+(step st14 (cl (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2)))))) :rule resolution :premises (t6' t13))
+(step t.end (cl) :rule resolution :premises (nst14.0 st14))

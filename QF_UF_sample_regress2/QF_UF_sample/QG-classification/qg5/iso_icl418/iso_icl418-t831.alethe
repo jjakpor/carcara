@@ -1,0 +1,5 @@
+(assume nst831.0 (not (= (op e4 (op e3 e4)) (op (op (op e3 e4) e3) (op e3 e4)))))
+(assume t48 (= (op e3 e4) (op e3 e4)))
+(assume t329 (= e4 (op (op e3 e4) e3)))
+(step st831 (cl (= (op e4 (op e3 e4)) (op (op (op e3 e4) e3) (op e3 e4)))) :rule cong :premises (t329 t48))
+(step t.end (cl) :rule resolution :premises (nst831.0 st831))

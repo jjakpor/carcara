@@ -1,0 +1,5 @@
+(assume nst19.0 (not (not (= (not y$974) y$v3_1517448506_500_op))))
+(assume nst19.1 (not (not (not y$974))))
+(assume nst19.2 (not y$v3_1517448506_500_op))
+(step st19 (cl (not (= (not y$974) y$v3_1517448506_500_op)) (not (not y$974)) y$v3_1517448506_500_op) :rule equiv_pos2)
+(step t.end (cl) :rule resolution :premises (nst19.0 nst19.1 nst19.2 st19))

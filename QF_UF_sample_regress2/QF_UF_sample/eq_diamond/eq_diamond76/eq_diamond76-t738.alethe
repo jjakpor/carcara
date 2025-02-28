@@ -1,0 +1,5 @@
+(assume nst738.0 (not (not (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))))))
+(assume nst738.1 (not (= x65 x66)))
+(assume t737 (=> (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (= x65 x66)))
+(step st738 (cl (not (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66)))) (= x65 x66)) :rule implies :premises (t737))
+(step t.end (cl) :rule resolution :premises (nst738.0 nst738.1 st738))
