@@ -1,3 +1,0 @@
-(assume nt722.0 (not (= (= (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (and (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65)))) true)))
-(step t722 (cl (= (= (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (and (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt722.0 t722))

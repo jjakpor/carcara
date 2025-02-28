@@ -1,3 +1,0 @@
-(assume nst137.0 (not (= (forall ((?v0 A_llist$) (?v1 Nat$)) (=> (fun_app$q lnull$d ?v0) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0)))) (forall ((?v0 A_llist$) (?v1 Nat$)) (or (not (fun_app$q lnull$d ?v0)) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0)))))))
-(step st137 (cl (= (forall ((?v0 A_llist$) (?v1 Nat$)) (=> (fun_app$q lnull$d ?v0) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0)))) (forall ((?v0 A_llist$) (?v1 Nat$)) (or (not (fun_app$q lnull$d ?v0)) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0)))))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst137.0 st137))

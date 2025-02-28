@@ -1,4 +1,0 @@
-(assume nst45.0 (not (= curr_4$0 prv_5$0)))
-(assume a62 (= prv_5$0 curr_4$0))
-(step st45 (cl (= curr_4$0 prv_5$0)) :rule symm :premises (a62))
-(step t.end (cl) :rule resolution :premises (nst45.0 st45))

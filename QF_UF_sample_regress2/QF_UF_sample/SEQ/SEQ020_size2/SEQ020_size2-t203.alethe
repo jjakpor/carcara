@@ -1,5 +1,0 @@
-(assume nst203.0 (not (not (= (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))))))
-(assume nst203.1 (not (not (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)))))
-(assume nst203.2 (not (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))))
-(step st203 (cl (not (= (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0))))) (not (or (= (f6 c_0) c_0) (= (f6 c_0) c_1))) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst203.0 nst203.1 nst203.2 st203))

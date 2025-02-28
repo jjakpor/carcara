@@ -1,3 +1,0 @@
-(assume nst101.0 (not (= (= (not (= y$X$next y$n15s4)) y$prop$next) (= y$prop$next (not (= y$X$next y$n15s4))))))
-(step st101 (cl (= (= (not (= y$X$next y$n15s4)) y$prop$next) (= y$prop$next (not (= y$X$next y$n15s4))))) :rule rare_rewrite :args ("eq-symm" (not (= y$X$next y$n15s4)) y$prop$next))
-(step t.end (cl) :rule resolution :premises (nst101.0 st101))

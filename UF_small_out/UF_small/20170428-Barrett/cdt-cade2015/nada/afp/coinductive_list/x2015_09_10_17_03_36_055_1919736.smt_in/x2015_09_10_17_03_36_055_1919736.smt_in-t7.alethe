@@ -1,5 +1,0 @@
-(assume nst7.0 (not (not (or (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))) (= xs$ (ltake$ (llength$ us$) xs$))))))
-(assume nst7.1 (not (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$)))))
-(assume nst7.2 (not (= xs$ (ltake$ (llength$ us$) xs$))))
-(step st7 (cl (not (or (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))) (= xs$ (ltake$ (llength$ us$) xs$)))) (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))) (= xs$ (ltake$ (llength$ us$) xs$))) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst7.0 nst7.1 nst7.2 st7))

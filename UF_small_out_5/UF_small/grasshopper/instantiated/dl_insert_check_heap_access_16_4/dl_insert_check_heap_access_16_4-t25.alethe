@@ -1,7 +1,0 @@
-(assume nst25.0 (not (= FP$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0))))
-(assume t8 (or (not (= (= FP$0 sk_?X$0) (= FP$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0)))) (not (= FP$0 sk_?X$0)) (= FP$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0))))
-(assume t23 (= (= FP$0 sk_?X$0) (= FP$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0))))
-(assume t24 (= FP$0 sk_?X$0))
-(step t8' (cl (not (= (= FP$0 sk_?X$0) (= FP$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0)))) (not (= FP$0 sk_?X$0)) (= FP$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0))) :rule or :premises (t8))
-(step st25 (cl (= FP$0 (union$0 (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0) sk_?X_2$0))) :rule resolution :premises (t8' t23 t24))
-(step t.end (cl) :rule resolution :premises (nst25.0 st25))

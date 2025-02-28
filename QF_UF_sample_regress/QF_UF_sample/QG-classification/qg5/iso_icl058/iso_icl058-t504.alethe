@@ -1,4 +1,0 @@
-(assume nst504.0 (not (and (and (and (and (not (= (op e2 e0) (op e2 e1))) (not (= (op e2 e0) (op e2 e2)))) (not (= (op e2 e0) (op e2 e3)))) (not (= (op e2 e0) (op e2 e4)))) (not (= (op e2 e1) (op e2 e2))))))
-(assume t503 (and (and (and (and (and (not (= (op e2 e0) (op e2 e1))) (not (= (op e2 e0) (op e2 e2)))) (not (= (op e2 e0) (op e2 e3)))) (not (= (op e2 e0) (op e2 e4)))) (not (= (op e2 e1) (op e2 e2)))) (not (= (op e2 e1) (op e2 e3)))))
-(step st504 (cl (and (and (and (and (not (= (op e2 e0) (op e2 e1))) (not (= (op e2 e0) (op e2 e2)))) (not (= (op e2 e0) (op e2 e3)))) (not (= (op e2 e0) (op e2 e4)))) (not (= (op e2 e1) (op e2 e2))))) :rule and :premises (t503) :args (0))
-(step t.end (cl) :rule resolution :premises (nst504.0 st504))

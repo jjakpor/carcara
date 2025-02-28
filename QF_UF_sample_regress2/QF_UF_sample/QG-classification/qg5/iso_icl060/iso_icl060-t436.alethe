@@ -1,5 +1,0 @@
-(assume nst436.0 (not (= (not (= (op e2 e3) (op e3 e3))) (not (= (op e3 e3) (op (op e1 e3) e3))))))
-(assume t433 (= (not (= (op e2 e3) (op e3 e3))) (not (= (op (op e1 e3) e3) (op e3 e3)))))
-(assume t435 (= (not (= (op (op e1 e3) e3) (op e3 e3))) (not (= (op e3 e3) (op (op e1 e3) e3)))))
-(step st436 (cl (= (not (= (op e2 e3) (op e3 e3))) (not (= (op e3 e3) (op (op e1 e3) e3))))) :rule trans :premises (t433 t435))
-(step t.end (cl) :rule resolution :premises (nst436.0 st436))

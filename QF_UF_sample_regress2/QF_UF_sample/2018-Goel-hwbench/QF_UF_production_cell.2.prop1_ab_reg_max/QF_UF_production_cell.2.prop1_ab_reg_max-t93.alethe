@@ -1,5 +1,0 @@
-(assume nst93.0 (not (= (= y$n0s8 y$v_k_Table) (= y$v_k_Press y$v_k_Table))))
-(assume t91 (= y$n0s8 y$v_k_Press))
-(assume t92 (= y$v_k_Table y$v_k_Table))
-(step st93 (cl (= (= y$n0s8 y$v_k_Table) (= y$v_k_Press y$v_k_Table))) :rule cong :premises (t91 t92))
-(step t.end (cl) :rule resolution :premises (nst93.0 st93))

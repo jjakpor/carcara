@@ -1,5 +1,0 @@
-(assume nst35.0 (not (not (= (= e1 (op e0 e0)) (= e1 (op (op e3 e3) (op e3 e3)))))))
-(assume nst35.1 (not (not (= e1 (op e0 e0)))))
-(assume nst35.2 (not (= e1 (op (op e3 e3) (op e3 e3)))))
-(step st35 (cl (not (= (= e1 (op e0 e0)) (= e1 (op (op e3 e3) (op e3 e3))))) (not (= e1 (op e0 e0))) (= e1 (op (op e3 e3) (op e3 e3)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst35.0 nst35.1 nst35.2 st35))

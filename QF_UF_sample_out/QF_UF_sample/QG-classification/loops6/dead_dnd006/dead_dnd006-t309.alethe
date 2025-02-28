@@ -1,6 +1,0 @@
-(assume t16 (or (= e0 (op e1 (op e1 e0))) (not (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0)))))))
-(assume t308 (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0)))))
-(assume nt309.0 (not (= e0 (op e1 (op e1 e0)))))
-(step t16' (cl (= e0 (op e1 (op e1 e0))) (not (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0)))))) :rule or :premises (t16))
-(step t309 (cl (= e0 (op e1 (op e1 e0)))) :rule resolution :premises (t16' t308))
-(step t.end (cl) :rule resolution :premises (nt309.0 t309))

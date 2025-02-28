@@ -1,4 +1,0 @@
-(assume nt617.0 (not (and (and (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2)) (= (op (op e1 e3) e1) e3)) (= (op (op e1 e4) e1) e4))))
-(assume t616 (and (and (and (and (and (= (op (op e0 e0) e0) e0) (= (op (op e0 e1) e0) e1)) (= (op (op e0 e2) e0) e2)) (= (op (op e0 e3) e0) e3)) (= (op (op e0 e4) e0) e4)) (and (and (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2)) (= (op (op e1 e3) e1) e3)) (= (op (op e1 e4) e1) e4))))
-(step t617 (cl (and (and (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2)) (= (op (op e1 e3) e1) e3)) (= (op (op e1 e4) e1) e4))) :rule and :premises (t616) :args (1))
-(step t.end (cl) :rule resolution :premises (nt617.0 t617))

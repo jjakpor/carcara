@@ -1,5 +1,0 @@
-(assume nst686.0 (not (= (= (op e3 (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) e3))) false)))
-(assume nst686.1 (not (not (not (= (op e3 (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))))
-(assume t685 (= (= (= (op e3 (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) e3))) false) (not (= (op e3 (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))
-(step st686 (cl (= (= (op e3 (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) e3))) false) (not (not (= (op e3 (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))) :rule equiv2 :premises (t685))
-(step t.end (cl) :rule resolution :premises (nst686.0 nst686.1 st686))

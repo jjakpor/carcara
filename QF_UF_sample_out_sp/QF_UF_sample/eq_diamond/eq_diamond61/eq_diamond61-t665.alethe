@@ -1,5 +1,0 @@
-(assume nt665.0 (not (= (= x1 x2) (= x0 x60))))
-(assume t25 (= x1 x0))
-(assume t664 (= x2 x60))
-(step t665 (cl (= (= x1 x2) (= x0 x60))) :rule cong :premises (t25 t664))
-(step t.end (cl) :rule resolution :premises (nt665.0 t665))

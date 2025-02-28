@@ -1,5 +1,0 @@
-(assume t10 (or (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))) (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1))))))
-(assume nt11.0 (not (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1))))))
-(step t10' (cl (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))) (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1))))) :rule or :premises (t10))
-(step t11 (cl (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1))))) :rule contraction :premises (t10'))
-(step t.end (cl) :rule resolution :premises (nt11.0 t11))

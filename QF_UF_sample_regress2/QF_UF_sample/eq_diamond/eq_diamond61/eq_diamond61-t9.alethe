@@ -1,4 +1,0 @@
-(assume nst9.0 (not (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2))))
-(assume t8 (and (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2))))
-(step st9 (cl (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2))) :rule and :premises (t8) :args (1))
-(step t.end (cl) :rule resolution :premises (nst9.0 st9))

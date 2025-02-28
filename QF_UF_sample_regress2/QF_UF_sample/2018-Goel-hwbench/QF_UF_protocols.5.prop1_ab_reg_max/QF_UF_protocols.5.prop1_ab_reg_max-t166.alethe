@@ -1,6 +1,0 @@
-(assume nst166.0 (not (not y$a_consume0$next)))
-(assume t11 (or (not y$a_consume0$next) y$a_consume0$next_rhs_op))
-(assume t165 (not y$a_consume0$next_rhs_op))
-(step t11' (cl (not y$a_consume0$next) y$a_consume0$next_rhs_op) :rule or :premises (t11))
-(step st166 (cl (not y$a_consume0$next)) :rule resolution :premises (t11' t165))
-(step t.end (cl) :rule resolution :premises (nst166.0 st166))

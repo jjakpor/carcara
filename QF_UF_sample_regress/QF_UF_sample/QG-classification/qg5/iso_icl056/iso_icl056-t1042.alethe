@@ -1,5 +1,0 @@
-(assume nst1042.0 (not (= (or (or (or (or (= (op e4 e0) e4) (= (op e4 e1) e4)) (= (op e4 e2) e4)) (= (op e4 e3) e4)) (= (op e4 e4) e4)) (or (= e4 (op e4 e4)) (= e4 (op e4 e3)) (= e4 (op e4 e2)) (= e4 (op e4 e0)) (= e4 (op e4 e1))))))
-(assume t1037 (= (or (or (or (or (= (op e4 e0) e4) (= (op e4 e1) e4)) (= (op e4 e2) e4)) (= (op e4 e3) e4)) (= (op e4 e4) e4)) (or (= (op e4 e4) e4) (= (op e4 e3) e4) (= (op e4 e2) e4) (= (op e4 e0) e4) (= (op e4 e1) e4))))
-(assume t1041 (= (or (= (op e4 e4) e4) (= (op e4 e3) e4) (= (op e4 e2) e4) (= (op e4 e0) e4) (= (op e4 e1) e4)) (or (= e4 (op e4 e4)) (= e4 (op e4 e3)) (= e4 (op e4 e2)) (= e4 (op e4 e0)) (= e4 (op e4 e1)))))
-(step st1042 (cl (= (or (or (or (or (= (op e4 e0) e4) (= (op e4 e1) e4)) (= (op e4 e2) e4)) (= (op e4 e3) e4)) (= (op e4 e4) e4)) (or (= e4 (op e4 e4)) (= e4 (op e4 e3)) (= e4 (op e4 e2)) (= e4 (op e4 e0)) (= e4 (op e4 e1))))) :rule trans :premises (t1037 t1041))
-(step t.end (cl) :rule resolution :premises (nst1042.0 st1042))

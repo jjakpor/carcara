@@ -1,5 +1,0 @@
-(assume nt84.t555.0 (not (not (= (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (and (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52)))))))
-(assume nt84.t555.1 (not (not (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))))))
-(assume nt84.t555.2 (not (and (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52)))))
-(step t84.t555 (cl (not (= (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (and (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52))))) (not (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52)))) (and (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt84.t555.0 nt84.t555.1 nt84.t555.2 t84.t555))

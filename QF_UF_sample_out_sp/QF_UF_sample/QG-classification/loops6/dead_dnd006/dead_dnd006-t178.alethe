@@ -1,4 +1,0 @@
-(assume nt178.0 (not (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3))))))
-(assume nt178.1 (not (not (= e3 (op e3 (op e3 e3))))))
-(step t178 (cl (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))) (not (= e3 (op e3 (op e3 e3))))) :rule implies_neg2)
-(step t.end (cl) :rule resolution :premises (nt178.0 nt178.1 t178))

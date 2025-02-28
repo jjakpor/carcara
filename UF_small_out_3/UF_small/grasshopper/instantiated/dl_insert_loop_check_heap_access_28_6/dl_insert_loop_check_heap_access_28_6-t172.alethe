@@ -1,6 +1,0 @@
-(assume nst172.0 (not (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0)))
-(assume t112 (or (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0) (not (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0)))))
-(assume t171 (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0)))
-(step t112' (cl (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0) (not (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0)))) :rule or :premises (t112))
-(step st172 (cl (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0)) :rule resolution :premises (t112' t171))
-(step t.end (cl) :rule resolution :premises (nst172.0 st172))

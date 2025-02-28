@@ -1,3 +1,0 @@
-(assume nst63.0 (not (= prv_init$0 prv_init$0)))
-(step st63 (cl (= prv_init$0 prv_init$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst63.0 st63))

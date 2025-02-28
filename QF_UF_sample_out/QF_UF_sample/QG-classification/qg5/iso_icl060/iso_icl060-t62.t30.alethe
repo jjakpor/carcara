@@ -1,5 +1,0 @@
-(assume t62.t28 (= (= (op e4 e4) e4) (= e4 (op e4 e4))))
-(assume t62.t29 (= (= e4 (op e4 e4)) (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3)))))
-(assume nt62.t30.0 (not (= (= (op e4 e4) e4) (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))))))
-(step t62.t30 (cl (= (= (op e4 e4) e4) (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))))) :rule trans :premises (t62.t28 t62.t29))
-(step t.end (cl) :rule resolution :premises (nt62.t30.0 t62.t30))

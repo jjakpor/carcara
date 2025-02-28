@@ -1,3 +1,0 @@
-(assume nst11.0 (not (= sk_?X_3$0 sk_?X_3$0)))
-(step st11 (cl (= sk_?X_3$0 sk_?X_3$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst11.0 st11))

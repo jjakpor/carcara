@@ -1,4 +1,0 @@
-(assume nst40.0 (not (= (not (= (read$0 next$0 d_init$0) prv_5$0)) (not (= prv_5$0 (read$0 next$0 d_init$0))))))
-(assume t39 (= (= (read$0 next$0 d_init$0) prv_5$0) (= prv_5$0 (read$0 next$0 d_init$0))))
-(step st40 (cl (= (not (= (read$0 next$0 d_init$0) prv_5$0)) (not (= prv_5$0 (read$0 next$0 d_init$0))))) :rule cong :premises (t39))
-(step t.end (cl) :rule resolution :premises (nst40.0 st40))

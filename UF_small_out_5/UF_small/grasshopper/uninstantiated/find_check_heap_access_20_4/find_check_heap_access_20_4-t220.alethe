@@ -1,4 +1,0 @@
-(assume nst220.0 (not (= (not (= root_x$0 root_x$0)) (not true))))
-(assume t219 (= (= root_x$0 root_x$0) true))
-(step st220 (cl (= (not (= root_x$0 root_x$0)) (not true))) :rule cong :premises (t219))
-(step t.end (cl) :rule resolution :premises (nst220.0 st220))

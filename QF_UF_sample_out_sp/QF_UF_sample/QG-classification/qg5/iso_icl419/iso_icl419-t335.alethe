@@ -1,4 +1,0 @@
-(assume nt335.0 (not (or (not (= (op e1 e4) e1)) (= (op e4 e1) e1))))
-(assume t334 (and (and (and (and (or (not (= (op e1 e0) e1)) (= (op e0 e1) e1)) (or (not (= (op e1 e1) e1)) (= (op e1 e1) e1))) (or (not (= (op e1 e2) e1)) (= (op e2 e1) e1))) (or (not (= (op e1 e3) e1)) (= (op e3 e1) e1))) (or (not (= (op e1 e4) e1)) (= (op e4 e1) e1))))
-(step t335 (cl (or (not (= (op e1 e4) e1)) (= (op e4 e1) e1))) :rule and :premises (t334) :args (1))
-(step t.end (cl) :rule resolution :premises (nt335.0 t335))

@@ -1,3 +1,0 @@
-(assume nt877.0 (not (= (= (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op e3 (op (op e4 e3) (op e4 e3)))) false) (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op e3 (op (op e4 e3) (op e4 e3))))))))
-(step t877 (cl (= (= (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op e3 (op (op e4 e3) (op e4 e3)))) false) (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op e3 (op (op e4 e3) (op e4 e3))))))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nt877.0 t877))

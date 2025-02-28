@@ -1,5 +1,0 @@
-(assume nt432.0 (not (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))))
-(assume t431 (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1)))))
-(assume t232 (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))
-(step t432 (cl (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))) :rule trans :premises (t431 t232))
-(step t.end (cl) :rule resolution :premises (nt432.0 t432))

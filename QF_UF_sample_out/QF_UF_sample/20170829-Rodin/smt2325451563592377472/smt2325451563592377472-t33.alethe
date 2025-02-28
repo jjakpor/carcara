@@ -1,5 +1,0 @@
-(assume t31 (= prt prt))
-(assume t32 (= (not (not prt)) prt))
-(assume nt33.0 (not (= (= prt (not (not prt))) (= prt prt))))
-(step t33 (cl (= (= prt (not (not prt))) (= prt prt))) :rule cong :premises (t31 t32))
-(step t.end (cl) :rule resolution :premises (nt33.0 t33))

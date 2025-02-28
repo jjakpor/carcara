@@ -1,4 +1,0 @@
-(assume t285.a0 (= c_0 (f5 c_0)))
-(assume nt285.t1.0 (not (= (f5 c_0) c_0)))
-(step t285.t1 (cl (= (f5 c_0) c_0)) :rule symm :premises (t285.a0))
-(step t.end (cl) :rule resolution :premises (nt285.t1.0 t285.t1))

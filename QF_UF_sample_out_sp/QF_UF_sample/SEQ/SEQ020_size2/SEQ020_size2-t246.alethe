@@ -1,8 +1,0 @@
-(assume nt246.0 (not (=> (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0)) false)))
-(assume nt246.1 (not (=> (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0)) false)))
-(assume t244 (or (=> (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0)) false) false))
-(assume t245 (or (=> (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0)) false) (not false)))
-(step t245' (cl (=> (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0)) false) (not false)) :rule or :premises (t245))
-(step t244' (cl (=> (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0)) false) false) :rule or :premises (t244))
-(step t246 (cl (=> (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0)) false) (=> (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0)) false)) :rule resolution :premises (t244' t245'))
-(step t.end (cl) :rule resolution :premises (nt246.0 nt246.1 t246))

@@ -1,5 +1,0 @@
-(assume nst261.0 (not (not (= (not (= (op e0 e2) (op e0 e3))) (not (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))))
-(assume nst261.1 (not (not (not (= (op e0 e2) (op e0 e3))))))
-(assume nst261.2 (not (not (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
-(step st261 (cl (not (= (not (= (op e0 e2) (op e0 e3))) (not (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))) (not (not (= (op e0 e2) (op e0 e3)))) (not (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst261.0 nst261.1 nst261.2 st261))

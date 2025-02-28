@@ -1,5 +1,0 @@
-(assume nst37.0 (not (= (= null$0 curr_init$0) (= (read$0 next$0 d_init$0) prv_5$0))))
-(assume t31 (= null$0 (read$0 next$0 d_init$0)))
-(assume t36 (= curr_init$0 prv_5$0))
-(step st37 (cl (= (= null$0 curr_init$0) (= (read$0 next$0 d_init$0) prv_5$0))) :rule cong :premises (t31 t36))
-(step t.end (cl) :rule resolution :premises (nst37.0 st37))

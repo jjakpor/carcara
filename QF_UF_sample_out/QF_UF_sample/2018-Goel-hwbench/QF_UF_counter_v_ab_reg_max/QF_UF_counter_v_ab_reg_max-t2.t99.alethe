@@ -1,5 +1,0 @@
-(assume nt2.t99.0 (not (not (= y$44 (= y$44 true)))))
-(assume nt2.t99.1 (not (not y$44)))
-(assume nt2.t99.2 (not (= y$44 true)))
-(step t2.t99 (cl (not (= y$44 (= y$44 true))) (not y$44) (= y$44 true)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt2.t99.0 nt2.t99.1 nt2.t99.2 t2.t99))

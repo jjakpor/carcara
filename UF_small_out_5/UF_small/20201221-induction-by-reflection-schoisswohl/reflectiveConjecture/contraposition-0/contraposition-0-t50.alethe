@@ -1,6 +1,0 @@
-(assume nst50.0 (not (= (not (models empty (qR bR))) (models empty (notR (qR bR))))))
-(assume a11 (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))))
-(assume t49 (or (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (not (models empty (qR bR))) (models empty (notR (qR bR))))))
-(step t49' (cl (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (not (models empty (qR bR))) (models empty (notR (qR bR))))) :rule or :premises (t49))
-(step st50 (cl (= (not (models empty (qR bR))) (models empty (notR (qR bR))))) :rule resolution :premises (t49' a11))
-(step t.end (cl) :rule resolution :premises (nst50.0 st50))

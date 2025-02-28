@@ -1,6 +1,0 @@
-(assume nt468.0 (not (= x23 x24)))
-(assume nt468.1 (not (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))))
-(assume t467 (or (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24)))) (= x23 x24)))
-(step t467' (cl (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24)))) (= x23 x24)) :rule or :premises (t467))
-(step t468 (cl (= x23 x24) (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))) :rule reordering :premises (t467'))
-(step t.end (cl) :rule resolution :premises (nt468.0 nt468.1 t468))

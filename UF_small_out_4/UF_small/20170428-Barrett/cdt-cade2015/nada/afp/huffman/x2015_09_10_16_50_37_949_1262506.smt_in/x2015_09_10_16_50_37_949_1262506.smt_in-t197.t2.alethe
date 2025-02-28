@@ -1,8 +1,0 @@
-(assume nt197.0 (not (= (forall ((?v0 A_tree$) (?v1 A$)) (=> (consistent$ ?v0) (= (fun_app$f (swapSyms$ ?v0 ?v1) ?v1) ?v0))) (forall ((?v0 A_tree$) (?v1 A$)) (=> (consistent$ ?v0) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1)))))))
-(anchor :step t197 :args ((?v0 A_tree$) (?v1 A$) (:= (?v0 A_tree$) ?v0) (:= (?v1 A$) ?v1)))
-(step t197.t0 (cl (= (consistent$ ?v0) (consistent$ ?v0))) :rule trust)
-(step t197.t1 (cl (= (= (fun_app$f (swapSyms$ ?v0 ?v1) ?v1) ?v0) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1)))) :rule trust)
-(step st197.t2 (cl (= (=> (consistent$ ?v0) (= (fun_app$f (swapSyms$ ?v0 ?v1) ?v1) ?v0)) (=> (consistent$ ?v0) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1))))) :rule cong :premises (t197.t0 t197.t1))
-(step t197.t2 (cl (= (=> (consistent$ ?v0) (= (fun_app$f (swapSyms$ ?v0 ?v1) ?v1) ?v0)) (=> (consistent$ ?v0) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1))))) :rule trust)
-(step t197 (cl (= (forall ((?v0 A_tree$) (?v1 A$)) (=> (consistent$ ?v0) (= (fun_app$f (swapSyms$ ?v0 ?v1) ?v1) ?v0))) (forall ((?v0 A_tree$) (?v1 A$)) (=> (consistent$ ?v0) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1)))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt197.0 t197))

@@ -1,7 +1,0 @@
-(assume nt619.0 (not (= e4 (op (op (op e4 e3) e4) (op e4 e3)))))
-(assume t611 (or (not (= (= (op (op e1 e4) e1) e4) (= e4 (op (op (op e4 e3) e4) (op e4 e3))))) (not (= (op (op e1 e4) e1) e4)) (= e4 (op (op (op e4 e3) e4) (op e4 e3)))))
-(assume t615 (= (= (op (op e1 e4) e1) e4) (= e4 (op (op (op e4 e3) e4) (op e4 e3)))))
-(assume t618 (= (op (op e1 e4) e1) e4))
-(step t611' (cl (not (= (= (op (op e1 e4) e1) e4) (= e4 (op (op (op e4 e3) e4) (op e4 e3))))) (not (= (op (op e1 e4) e1) e4)) (= e4 (op (op (op e4 e3) e4) (op e4 e3)))) :rule or :premises (t611))
-(step t619 (cl (= e4 (op (op (op e4 e3) e4) (op e4 e3)))) :rule resolution :premises (t611' t615 t618))
-(step t.end (cl) :rule resolution :premises (nt619.0 t619))

@@ -1,4 +1,0 @@
-(assume nt74.0 (not (or (or (not car) (not clk)) (not (not car)))))
-(assume nt74.1 (not (not (not (not car)))))
-(step t74 (cl (or (or (not car) (not clk)) (not (not car))) (not (not (not car)))) :rule or_neg :args (1))
-(step t.end (cl) :rule resolution :premises (nt74.0 nt74.1 t74))

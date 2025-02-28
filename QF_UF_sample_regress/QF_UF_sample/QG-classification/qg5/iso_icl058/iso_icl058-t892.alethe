@@ -1,5 +1,0 @@
-(assume nst892.0 (not (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) false)))
-(assume t878 (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0))))
-(assume t891 (= (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)) false))
-(step st892 (cl (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) false)) :rule trans :premises (t878 t891))
-(step t.end (cl) :rule resolution :premises (nst892.0 st892))

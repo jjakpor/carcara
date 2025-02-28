@@ -1,4 +1,0 @@
-(assume nst226.0 (not (not (not (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))))
-(assume nst226.1 (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(step st226 (cl (not (not (not (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))) (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))) :rule not_not)
-(step t.end (cl) :rule resolution :premises (nst226.0 nst226.1 st226))

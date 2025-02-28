@@ -1,6 +1,0 @@
-(assume nst201.0 (not (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))))))
-(assume t166 (or (not (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))) false)) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))))))
-(assume t200 (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))) false))
-(step t166' (cl (not (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))) false)) (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))))) :rule or :premises (t166))
-(step st201 (cl (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))))) :rule resolution :premises (t166' t200))
-(step t.end (cl) :rule resolution :premises (nst201.0 st201))

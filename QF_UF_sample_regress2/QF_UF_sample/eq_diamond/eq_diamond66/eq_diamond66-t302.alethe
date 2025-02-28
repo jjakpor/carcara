@@ -1,6 +1,0 @@
-(assume nst302.0 (not (= x25 x26)))
-(assume nst302.1 (not (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))))))
-(assume t301 (or (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26)))) (= x25 x26)))
-(step t301' (cl (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26)))) (= x25 x26)) :rule or :premises (t301))
-(step st302 (cl (= x25 x26) (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))))) :rule reordering :premises (t301'))
-(step t.end (cl) :rule resolution :premises (nst302.0 nst302.1 st302))

@@ -1,4 +1,0 @@
-(assume nst271.0 (not (not (= (op e3 e0) (op e4 e0)))))
-(assume t249 (and (and (and (and (and (and (and (and (and (not (= (op e0 e0) (op e1 e0))) (not (= (op e0 e0) (op e2 e0)))) (not (= (op e0 e0) (op e3 e0)))) (not (= (op e0 e0) (op e4 e0)))) (not (= (op e1 e0) (op e2 e0)))) (not (= (op e1 e0) (op e3 e0)))) (not (= (op e1 e0) (op e4 e0)))) (not (= (op e2 e0) (op e3 e0)))) (not (= (op e2 e0) (op e4 e0)))) (not (= (op e3 e0) (op e4 e0)))))
-(step st271 (cl (not (= (op e3 e0) (op e4 e0)))) :rule and :premises (t249) :args (1))
-(step t.end (cl) :rule resolution :premises (nst271.0 st271))

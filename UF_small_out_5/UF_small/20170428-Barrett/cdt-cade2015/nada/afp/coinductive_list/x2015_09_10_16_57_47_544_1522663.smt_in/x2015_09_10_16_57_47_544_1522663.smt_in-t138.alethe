@@ -1,5 +1,0 @@
-(assume nst138.0 (not (= (forall ((?v0 A_llist$) (?v1 Nat$)) (=> (fun_app$q lnull$d ?v0) (= (fun_app$c (ldropn$ ?v1) ?v0) lNil$))) (forall ((?v0 A_llist$) (?v1 Nat$)) (or (not (fun_app$q lnull$d ?v0)) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0)))))))
-(assume t136 (= (forall ((?v0 A_llist$) (?v1 Nat$)) (=> (fun_app$q lnull$d ?v0) (= (fun_app$c (ldropn$ ?v1) ?v0) lNil$))) (forall ((?v0 A_llist$) (?v1 Nat$)) (=> (fun_app$q lnull$d ?v0) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0))))))
-(assume t137 (= (forall ((?v0 A_llist$) (?v1 Nat$)) (=> (fun_app$q lnull$d ?v0) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0)))) (forall ((?v0 A_llist$) (?v1 Nat$)) (or (not (fun_app$q lnull$d ?v0)) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0))))))
-(step st138 (cl (= (forall ((?v0 A_llist$) (?v1 Nat$)) (=> (fun_app$q lnull$d ?v0) (= (fun_app$c (ldropn$ ?v1) ?v0) lNil$))) (forall ((?v0 A_llist$) (?v1 Nat$)) (or (not (fun_app$q lnull$d ?v0)) (= lNil$ (fun_app$c (ldropn$ ?v1) ?v0)))))) :rule trans :premises (t136 t137))
-(step t.end (cl) :rule resolution :premises (nst138.0 st138))

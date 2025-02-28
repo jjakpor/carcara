@@ -1,5 +1,0 @@
-(assume nt192.0 (not (= (= unit e3) (= e0 e3))))
-(assume a8 (= unit e0))
-(assume t191 (= e3 e3))
-(step t192 (cl (= (= unit e3) (= e0 e3))) :rule cong :premises (a8 t191))
-(step t.end (cl) :rule resolution :premises (nt192.0 t192))

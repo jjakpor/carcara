@@ -1,8 +1,0 @@
-(assume nst855.0 (not (= (or (= (op e4 e2) e0) (= (op e3 e2) e0) (= (op e2 e2) e0) (= (op e0 e2) e0) (= (op e1 e2) e0)) (or (= e0 (op e4 e2)) (= e0 (op e3 e2)) (= e0 (op e2 e2)) (= e0 (op e0 e2)) (= e0 (op e1 e2))))))
-(assume t19 (= (= (op e1 e2) e0) (= e0 (op e1 e2))))
-(assume t705 (= (= (op e2 e2) e0) (= e0 (op e2 e2))))
-(assume t852 (= (= (op e4 e2) e0) (= e0 (op e4 e2))))
-(assume t853 (= (= (op e3 e2) e0) (= e0 (op e3 e2))))
-(assume t854 (= (= (op e0 e2) e0) (= e0 (op e0 e2))))
-(step st855 (cl (= (or (= (op e4 e2) e0) (= (op e3 e2) e0) (= (op e2 e2) e0) (= (op e0 e2) e0) (= (op e1 e2) e0)) (or (= e0 (op e4 e2)) (= e0 (op e3 e2)) (= e0 (op e2 e2)) (= e0 (op e0 e2)) (= e0 (op e1 e2))))) :rule cong :premises (t852 t853 t705 t854 t19))
-(step t.end (cl) :rule resolution :premises (nst855.0 st855))

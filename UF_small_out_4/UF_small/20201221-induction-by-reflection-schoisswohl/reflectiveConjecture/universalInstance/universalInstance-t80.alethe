@@ -1,7 +1,0 @@
-(assume nst80.0 (not (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v)))))
-(assume a0 (forall ((env env) (v var_alpha) (x alpha)) (= (evalV_alpha (push_alpha env v x) v) x)))
-(assume t78 (or (not (= (forall ((env env) (v var_alpha) (x alpha)) (= (evalV_alpha (push_alpha env v x) v) x)) (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v))))) (not (forall ((env env) (v var_alpha) (x alpha)) (= (evalV_alpha (push_alpha env v x) v) x))) (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v)))))
-(assume t79 (= (forall ((env env) (v var_alpha) (x alpha)) (= (evalV_alpha (push_alpha env v x) v) x)) (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v)))))
-(step t78' (cl (not (= (forall ((env env) (v var_alpha) (x alpha)) (= (evalV_alpha (push_alpha env v x) v) x)) (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v))))) (not (forall ((env env) (v var_alpha) (x alpha)) (= (evalV_alpha (push_alpha env v x) v) x))) (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v)))) :rule or :premises (t78))
-(step st80 (cl (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v)))) :rule resolution :premises (t78' t79 a0))
-(step t.end (cl) :rule resolution :premises (nst80.0 st80))

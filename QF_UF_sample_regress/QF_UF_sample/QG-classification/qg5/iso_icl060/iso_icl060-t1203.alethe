@@ -1,5 +1,0 @@
-(assume nst1203.0 (not (= (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e1))) false)))
-(assume t1187 (= (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e1))) (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))
-(assume t1202 (= (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))) false))
-(step st1203 (cl (= (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e1))) false)) :rule trans :premises (t1187 t1202))
-(step t.end (cl) :rule resolution :premises (nst1203.0 st1203))

@@ -1,4 +1,0 @@
-(assume nst294.0 (not (= (not (= curr_init$0 curr_init$0)) (not true))))
-(assume t293 (= (= curr_init$0 curr_init$0) true))
-(step st294 (cl (= (not (= curr_init$0 curr_init$0)) (not true))) :rule cong :premises (t293))
-(step t.end (cl) :rule resolution :premises (nst294.0 st294))

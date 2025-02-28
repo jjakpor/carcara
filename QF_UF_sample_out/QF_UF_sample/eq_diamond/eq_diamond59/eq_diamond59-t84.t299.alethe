@@ -1,5 +1,0 @@
-(assume t84.t298 (=> (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (= x27 x28)))
-(assume nt84.t299.0 (not (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))))
-(assume nt84.t299.1 (not (= x27 x28)))
-(step t84.t299 (cl (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28)))) (= x27 x28)) :rule implies :premises (t84.t298))
-(step t.end (cl) :rule resolution :premises (nt84.t299.0 nt84.t299.1 t84.t299))

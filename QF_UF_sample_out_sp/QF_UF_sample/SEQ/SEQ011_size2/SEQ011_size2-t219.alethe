@@ -1,5 +1,0 @@
-(assume nt219.0 (not (= (or (= (f5 c_0) c_0) (= (f5 c_0) c_1)) (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0))))))
-(assume t217 (= (= (f5 c_0) c_0) (= c_0 (f5 c_0))))
-(assume t218 (= (= (f5 c_0) c_1) (= c_1 (f5 c_0))))
-(step t219 (cl (= (or (= (f5 c_0) c_0) (= (f5 c_0) c_1)) (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0))))) :rule cong :premises (t217 t218))
-(step t.end (cl) :rule resolution :premises (nt219.0 t219))

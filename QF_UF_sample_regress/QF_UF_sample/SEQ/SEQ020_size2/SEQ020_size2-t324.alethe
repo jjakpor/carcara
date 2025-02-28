@@ -1,6 +1,0 @@
-(assume nst324.0 (not (= c8 c_1)))
-(assume t108 (or (= c8 c_0) (= c8 c_1)))
-(assume t323 (not (= c8 c_0)))
-(step t108' (cl (= c8 c_0) (= c8 c_1)) :rule or :premises (t108))
-(step st324 (cl (= c8 c_1)) :rule resolution :premises (t108' t323))
-(step t.end (cl) :rule resolution :premises (nst324.0 st324))

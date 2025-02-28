@@ -1,4 +1,0 @@
-(assume nst1068.0 (not (= (not (= (op e3 e2) (op e4 e2))) (not (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))))
-(assume t1067 (= (= (op e3 e2) (op e4 e2)) (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))
-(step st1068 (cl (= (not (= (op e3 e2) (op e4 e2))) (not (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))) :rule cong :premises (t1067))
-(step t.end (cl) :rule resolution :premises (nst1068.0 st1068))

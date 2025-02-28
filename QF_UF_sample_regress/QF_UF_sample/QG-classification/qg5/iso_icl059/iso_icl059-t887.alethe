@@ -1,8 +1,0 @@
-(assume nst887.0 (not (= (or (= (op e4 e3) e2) (= (op e3 e3) e2) (= (op e2 e3) e2) (= (op e0 e3) e2) (= (op e1 e3) e2)) (or (= e2 (op e4 e3)) (= e2 (op e3 e3)) (= e2 (op e2 e3)) (= e2 (op e0 e3)) (= e2 (op e1 e3))))))
-(assume t18 (= (= (op e1 e3) e2) (= e2 (op e1 e3))))
-(assume t883 (= (= (op e4 e3) e2) (= e2 (op e4 e3))))
-(assume t884 (= (= (op e3 e3) e2) (= e2 (op e3 e3))))
-(assume t885 (= (= (op e2 e3) e2) (= e2 (op e2 e3))))
-(assume t886 (= (= (op e0 e3) e2) (= e2 (op e0 e3))))
-(step st887 (cl (= (or (= (op e4 e3) e2) (= (op e3 e3) e2) (= (op e2 e3) e2) (= (op e0 e3) e2) (= (op e1 e3) e2)) (or (= e2 (op e4 e3)) (= e2 (op e3 e3)) (= e2 (op e2 e3)) (= e2 (op e0 e3)) (= e2 (op e1 e3))))) :rule cong :premises (t883 t884 t885 t886 t18))
-(step t.end (cl) :rule resolution :premises (nst887.0 st887))

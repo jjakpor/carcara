@@ -1,5 +1,0 @@
-(assume nst0.0 (not rd1))
-(assume nst0.1 (not (or org (and prt rd1))))
-(assume a11 (not (= rd1 (or org (and prt rd1)))))
-(step st0 (cl rd1 (or org (and prt rd1))) :rule not_equiv1 :premises (a11))
-(step t.end (cl) :rule resolution :premises (nst0.0 nst0.1 st0))

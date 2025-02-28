@@ -1,4 +1,0 @@
-(assume nst201.0 (not (= (not (= curr_2$0 curr_2$0)) (not true))))
-(assume t200 (= (= curr_2$0 curr_2$0) true))
-(step st201 (cl (= (not (= curr_2$0 curr_2$0)) (not true))) :rule cong :premises (t200))
-(step t.end (cl) :rule resolution :premises (nst201.0 st201))

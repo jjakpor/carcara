@@ -1,4 +1,0 @@
-(assume nst22.0 (not (or (models empty (notR (pR aR))) (models empty (orR (notR (qR bR)) (rR cR))))))
-(assume nst22.1 (not (not (models empty (orR (notR (qR bR)) (rR cR))))))
-(step st22 (cl (or (models empty (notR (pR aR))) (models empty (orR (notR (qR bR)) (rR cR)))) (not (models empty (orR (notR (qR bR)) (rR cR))))) :rule or_neg :args (1))
-(step t.end (cl) :rule resolution :premises (nst22.0 nst22.1 st22))

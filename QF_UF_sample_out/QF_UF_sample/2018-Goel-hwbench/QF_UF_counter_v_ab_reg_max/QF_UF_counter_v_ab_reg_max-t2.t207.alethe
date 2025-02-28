@@ -1,3 +1,0 @@
-(assume nt2.t207.0 (not (= (= (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (not true)) (= (not true) (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))))
-(step t2.t207 (cl (= (= (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (not true)) (= (not true) (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))) :rule rare_rewrite :args ("eq-symm" (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (not true)))
-(step t.end (cl) :rule resolution :premises (nt2.t207.0 t2.t207))

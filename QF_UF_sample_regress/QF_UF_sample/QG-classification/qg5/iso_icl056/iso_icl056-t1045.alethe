@@ -1,5 +1,0 @@
-(assume nst1045.0 (not (= (= e4 (op e4 e0)) (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))))
-(assume t46 (= e4 (op (op e1 e1) (op e1 (op e1 e1)))))
-(assume t56 (= (op e4 e0) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))
-(step st1045 (cl (= (= e4 (op e4 e0)) (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))) :rule cong :premises (t46 t56))
-(step t.end (cl) :rule resolution :premises (nst1045.0 st1045))

@@ -1,5 +1,0 @@
-(assume nst105.0 (not (= y$n0s8 y$v_k_Table)))
-(assume t6 (= y$n0s8 y$v_A))
-(assume t104 (= y$v_A y$v_k_Table))
-(step st105 (cl (= y$n0s8 y$v_k_Table)) :rule trans :premises (t6 t104))
-(step t.end (cl) :rule resolution :premises (nst105.0 st105))

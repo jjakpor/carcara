@@ -1,8 +1,0 @@
-(assume nst205.0 (not (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false)))
-(assume nst205.1 (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))
-(assume t203 (or (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false) (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))))
-(assume t204 (or (not (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))
-(step t204' (cl (not (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) :rule or :premises (t204))
-(step t203' (cl (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false) (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) :rule or :premises (t203))
-(step st205 (cl (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) :rule resolution :premises (t203' t204'))
-(step t.end (cl) :rule resolution :premises (nst205.0 nst205.1 st205))

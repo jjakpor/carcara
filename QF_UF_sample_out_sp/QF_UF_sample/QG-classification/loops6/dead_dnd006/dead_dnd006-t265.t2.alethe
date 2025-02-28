@@ -1,3 +1,0 @@
-(assume nt265.t2.0 (not (= e5 e5)))
-(step t265.t2 (cl (= e5 e5)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt265.t2.0 t265.t2))

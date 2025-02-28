@@ -1,3 +1,0 @@
-(assume nst666.0 (not (= (= (= x0 x60) false) (not (= x0 x60)))))
-(step st666 (cl (= (= (= x0 x60) false) (not (= x0 x60)))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nst666.0 st666))

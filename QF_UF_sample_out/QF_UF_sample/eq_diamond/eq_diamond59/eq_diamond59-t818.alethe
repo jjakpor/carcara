@@ -1,4 +1,0 @@
-(assume t817 (and (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (=> (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (= x55 x56))))
-(assume nt818.0 (not (=> (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (= x55 x56))))
-(step t818 (cl (=> (or (and (= x55 y55) (= y55 x56)) (and (= x55 z55) (= z55 x56))) (= x55 x56))) :rule and :premises (t817) :args (1))
-(step t.end (cl) :rule resolution :premises (nt818.0 t818))

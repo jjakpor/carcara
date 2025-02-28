@@ -1,8 +1,0 @@
-(assume nst129.0 (not (= (or (= (op e0 e4) e2) (= (op e0 e3) e2) (= (op e0 e2) e2) (= (op e0 e0) e2) (= (op e0 e1) e2)) (or (= e2 (op e0 e4)) (= e2 (op e0 e3)) (= e2 (op e0 e2)) (= e2 (op e0 e0)) (= e2 (op e0 e1))))))
-(assume t24 (= (= (op e0 e2) e2) (= e2 (op e0 e2))))
-(assume t125 (= (= (op e0 e4) e2) (= e2 (op e0 e4))))
-(assume t126 (= (= (op e0 e3) e2) (= e2 (op e0 e3))))
-(assume t127 (= (= (op e0 e0) e2) (= e2 (op e0 e0))))
-(assume t128 (= (= (op e0 e1) e2) (= e2 (op e0 e1))))
-(step st129 (cl (= (or (= (op e0 e4) e2) (= (op e0 e3) e2) (= (op e0 e2) e2) (= (op e0 e0) e2) (= (op e0 e1) e2)) (or (= e2 (op e0 e4)) (= e2 (op e0 e3)) (= e2 (op e0 e2)) (= e2 (op e0 e0)) (= e2 (op e0 e1))))) :rule cong :premises (t125 t126 t24 t127 t128))
-(step t.end (cl) :rule resolution :premises (nst129.0 st129))

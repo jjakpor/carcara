@@ -1,6 +1,0 @@
-(assume nst59.0 (not (= x10 x11)))
-(assume nst59.1 (not (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))))
-(assume t58 (or (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11)))) (= x10 x11)))
-(step t58' (cl (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11)))) (= x10 x11)) :rule or :premises (t58))
-(step st59 (cl (= x10 x11) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))) :rule reordering :premises (t58'))
-(step t.end (cl) :rule resolution :premises (nst59.0 nst59.1 st59))

@@ -1,4 +1,0 @@
-(assume nst48.0 (not (= FP$0 sk_?X_4$0)))
-(assume a55 (= sk_?X_4$0 FP$0))
-(step st48 (cl (= FP$0 sk_?X_4$0)) :rule symm :premises (a55))
-(step t.end (cl) :rule resolution :premises (nst48.0 st48))

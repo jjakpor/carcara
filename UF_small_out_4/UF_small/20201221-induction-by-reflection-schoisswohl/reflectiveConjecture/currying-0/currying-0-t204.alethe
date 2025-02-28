@@ -1,6 +1,0 @@
-(assume nst204.0 (not (not (models empty (notR (pR aR))))))
-(assume t175 (not (or (models empty (notR (pR aR))) (models empty (orR (notR (qR bR)) (rR cR))))))
-(assume t203 (or (or (models empty (notR (pR aR))) (models empty (orR (notR (qR bR)) (rR cR)))) (not (models empty (notR (pR aR))))))
-(step t203' (cl (or (models empty (notR (pR aR))) (models empty (orR (notR (qR bR)) (rR cR)))) (not (models empty (notR (pR aR))))) :rule or :premises (t203))
-(step st204 (cl (not (models empty (notR (pR aR))))) :rule resolution :premises (t203' t175))
-(step t.end (cl) :rule resolution :premises (nst204.0 st204))

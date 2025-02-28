@@ -1,4 +1,0 @@
-(assume nt48.0 (not (= e3 (op e2 e0))))
-(assume t30 (and (and (= e0 (op e4 e4)) (= e2 (op e1 e1))) (= e3 (op e2 e0))))
-(step t48 (cl (= e3 (op e2 e0))) :rule and :premises (t30) :args (1))
-(step t.end (cl) :rule resolution :premises (nt48.0 t48))

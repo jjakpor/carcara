@@ -1,5 +1,0 @@
-(assume nst21.0 (not (= y$v_A y$v_at_press)))
-(assume t12 (= y$v_A y$v_B))
-(assume t19 (= y$v_B y$v_at_press))
-(step st21 (cl (= y$v_A y$v_at_press)) :rule trans :premises (t12 t19))
-(step t.end (cl) :rule resolution :premises (nst21.0 st21))

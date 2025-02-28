@@ -1,5 +1,0 @@
-(assume nt2.t20.0 (not (= (= y$6 (= y$n15s4 y$X)) (= y$6 (= y$X y$n15s4)))))
-(assume t2.t18 (= y$6 y$6))
-(assume t2.t19 (= (= y$n15s4 y$X) (= y$X y$n15s4)))
-(step t2.t20 (cl (= (= y$6 (= y$n15s4 y$X)) (= y$6 (= y$X y$n15s4)))) :rule cong :premises (t2.t18 t2.t19))
-(step t.end (cl) :rule resolution :premises (nt2.t20.0 t2.t20))

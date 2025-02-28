@@ -1,6 +1,0 @@
-(assume nst116.0 (not (not (and y$282 y$284))))
-(assume t102 (or (not (and y$282 y$284)) y$282))
-(assume t115 (not y$282))
-(step t102' (cl (not (and y$282 y$284)) y$282) :rule or :premises (t102))
-(step st116 (cl (not (and y$282 y$284))) :rule resolution :premises (t102' t115))
-(step t.end (cl) :rule resolution :premises (nst116.0 st116))

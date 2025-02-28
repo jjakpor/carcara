@@ -1,6 +1,0 @@
-(assume t35 (or (= x0 x1) (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))))
-(assume t31 (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))
-(assume nt36.0 (not (= x0 x1)))
-(step t35' (cl (= x0 x1) (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))) :rule or :premises (t35))
-(step t36 (cl (= x0 x1)) :rule resolution :premises (t35' t31))
-(step t.end (cl) :rule resolution :premises (nt36.0 t36))

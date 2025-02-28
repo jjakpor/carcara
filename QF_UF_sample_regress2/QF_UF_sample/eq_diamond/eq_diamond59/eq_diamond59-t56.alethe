@@ -1,3 +1,0 @@
-(assume nst56.0 (not (= (not (= x35 x36)) (not (= x35 x36)))))
-(step st56 (cl (= (not (= x35 x36)) (not (= x35 x36)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst56.0 st56))

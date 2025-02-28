@@ -1,5 +1,0 @@
-(assume nt171.0 (not (not (= (not (= e1 e2)) (not (= e1 (op e1 e1)))))))
-(assume nt171.1 (not (not (not (= e1 e2)))))
-(assume nt171.2 (not (not (= e1 (op e1 e1)))))
-(step t171 (cl (not (= (not (= e1 e2)) (not (= e1 (op e1 e1))))) (not (not (= e1 e2))) (not (= e1 (op e1 e1)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt171.0 nt171.1 nt171.2 t171))

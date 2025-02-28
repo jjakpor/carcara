@@ -1,4 +1,0 @@
-(assume nst25.0 (not (or (and (= null$0 (read$0 next$0 d_init$0)) (= prv_init$0 (read$0 prev$0 curr_init$0)) (in$0 d_init$0 sk_?X_76$0)) (and (= null$0 curr_init$0) (= d_init$0 prv_init$0)))))
-(assume t24 (and (Btwn$0 next$0 curr_init$0 null$0 null$0) (or (and (= null$0 (read$0 next$0 d_init$0)) (= prv_init$0 (read$0 prev$0 curr_init$0)) (in$0 d_init$0 sk_?X_76$0)) (and (= null$0 curr_init$0) (= d_init$0 prv_init$0))) Axiom_40$0))
-(step st25 (cl (or (and (= null$0 (read$0 next$0 d_init$0)) (= prv_init$0 (read$0 prev$0 curr_init$0)) (in$0 d_init$0 sk_?X_76$0)) (and (= null$0 curr_init$0) (= d_init$0 prv_init$0)))) :rule and :premises (t24) :args (1))
-(step t.end (cl) :rule resolution :premises (nst25.0 st25))

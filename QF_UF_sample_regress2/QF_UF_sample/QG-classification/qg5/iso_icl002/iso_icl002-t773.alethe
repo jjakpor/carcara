@@ -1,6 +1,0 @@
-(assume nst773.0 (not (not (= e0 (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))))
-(assume t755 (or (not (= (= e0 (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) false)) (not (= e0 (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))))
-(assume t772 (= (= e0 (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) false))
-(step t755' (cl (not (= (= e0 (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) false)) (not (= e0 (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))) :rule or :premises (t755))
-(step st773 (cl (not (= e0 (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))) :rule resolution :premises (t755' t772))
-(step t.end (cl) :rule resolution :premises (nst773.0 st773))

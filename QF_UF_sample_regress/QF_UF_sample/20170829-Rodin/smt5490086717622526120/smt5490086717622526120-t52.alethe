@@ -1,5 +1,0 @@
-(assume nst52.0 (not (not (= (or grn rd1) (or red_SR red_MR)))))
-(assume nst52.1 (not (not (or grn rd1))))
-(assume nst52.2 (not (or red_SR red_MR)))
-(step st52 (cl (not (= (or grn rd1) (or red_SR red_MR))) (not (or grn rd1)) (or red_SR red_MR)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst52.0 nst52.1 nst52.2 st52))

@@ -1,3 +1,0 @@
-(assume nst94.0 (not (or (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))))))
-(step st94 (cl (or (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))))) :rule forall_inst :args (empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))
-(step t.end (cl) :rule resolution :premises (nst94.0 st94))

@@ -1,3 +1,0 @@
-(assume nst38.0 (not (= (not (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))))) (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))))))
-(step st38 (cl (= (not (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))))) (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst38.0 st38))

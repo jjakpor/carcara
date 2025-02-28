@@ -1,5 +1,0 @@
-(assume nst272.0 (not (not (= (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6)))))))
-(assume nst272.1 (not (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))))
-(assume nst272.2 (not (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6)))))
-(step st272 (cl (not (= (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6))))) (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst272.0 nst272.1 nst272.2 st272))

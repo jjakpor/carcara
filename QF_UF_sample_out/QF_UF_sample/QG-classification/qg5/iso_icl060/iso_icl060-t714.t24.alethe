@@ -1,5 +1,0 @@
-(assume t714.t21 (= (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 (op (op e1 e3) e1)) (op e3 e1)))))
-(assume t714.t23 (= (not (= (op e3 (op (op e1 e3) e1)) (op e3 e1))) (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))))
-(assume nt714.t24.0 (not (= (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e1) (op e3 (op (op e1 e3) e1)))))))
-(step t714.t24 (cl (= (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e1) (op e3 (op (op e1 e3) e1)))))) :rule trans :premises (t714.t21 t714.t23))
-(step t.end (cl) :rule resolution :premises (nt714.t24.0 t714.t24))

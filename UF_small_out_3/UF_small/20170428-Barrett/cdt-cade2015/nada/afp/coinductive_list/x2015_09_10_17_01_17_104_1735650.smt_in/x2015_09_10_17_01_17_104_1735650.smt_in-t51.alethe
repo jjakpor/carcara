@@ -1,5 +1,0 @@
-(assume nst51.0 (not (= (fun_app$b (fun_app$c compow$ n$) f$) (fun_app$b (fun_app$c funpow$ n$) f$))))
-(assume t47 (= f$ f$))
-(assume t50 (= (fun_app$c compow$ n$) (fun_app$c funpow$ n$)))
-(step st51 (cl (= (fun_app$b (fun_app$c compow$ n$) f$) (fun_app$b (fun_app$c funpow$ n$) f$))) :rule cong :premises (t50 t47))
-(step t.end (cl) :rule resolution :premises (nst51.0 st51))

@@ -1,5 +1,0 @@
-(assume nst373.0 (not (= (or (= (f7 c_1) c_0) (= (f7 c_1) c_1)) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1))))))
-(assume t371 (= (= (f7 c_1) c_0) (= c_0 (f7 c_1))))
-(assume t372 (= (= (f7 c_1) c_1) (= c_1 (f7 c_1))))
-(step st373 (cl (= (or (= (f7 c_1) c_0) (= (f7 c_1) c_1)) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1))))) :rule cong :premises (t371 t372))
-(step t.end (cl) :rule resolution :premises (nst373.0 st373))

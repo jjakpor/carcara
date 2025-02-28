@@ -1,5 +1,0 @@
-(assume nst8.0 (not (not (= (models empty (notR (orR (notR (notR (qR bR))) (notR (pR aR))))) (not (models empty (orR (notR (notR (qR bR))) (notR (pR aR)))))))))
-(assume nst8.1 (not (not (models empty (notR (orR (notR (notR (qR bR))) (notR (pR aR))))))))
-(assume nst8.2 (not (not (models empty (orR (notR (notR (qR bR))) (notR (pR aR)))))))
-(step st8 (cl (not (= (models empty (notR (orR (notR (notR (qR bR))) (notR (pR aR))))) (not (models empty (orR (notR (notR (qR bR))) (notR (pR aR))))))) (not (models empty (notR (orR (notR (notR (qR bR))) (notR (pR aR)))))) (not (models empty (orR (notR (notR (qR bR))) (notR (pR aR)))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst8.0 nst8.1 nst8.2 st8))

@@ -1,5 +1,0 @@
-(assume nst46.0 (not (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))))
-(assume nst46.1 (not (= x3 x4)))
-(assume t45 (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4)))
-(step st46 (cl (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4)))) (= x3 x4)) :rule implies :premises (t45))
-(step t.end (cl) :rule resolution :premises (nst46.0 nst46.1 st46))

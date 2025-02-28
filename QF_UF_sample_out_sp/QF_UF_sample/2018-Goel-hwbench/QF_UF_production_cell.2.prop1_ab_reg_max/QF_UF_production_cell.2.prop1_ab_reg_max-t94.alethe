@@ -1,5 +1,0 @@
-(assume nt94.0 (not (= y$80 (= y$v_k_Press y$v_k_Table))))
-(assume a41 (= y$80 (= y$n0s8 y$v_k_Table)))
-(assume t93 (= (= y$n0s8 y$v_k_Table) (= y$v_k_Press y$v_k_Table)))
-(step t94 (cl (= y$80 (= y$v_k_Press y$v_k_Table))) :rule trans :premises (a41 t93))
-(step t.end (cl) :rule resolution :premises (nt94.0 t94))

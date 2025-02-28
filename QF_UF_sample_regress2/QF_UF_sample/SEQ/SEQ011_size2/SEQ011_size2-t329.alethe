@@ -1,7 +1,0 @@
-(assume nst329.0 (not (or (= c_0 (f6 c_1)) (= c_1 (f6 c_1)))))
-(assume t324 (or (not (= (or (= (f6 c_1) c_0) (= (f6 c_1) c_1)) (or (= c_0 (f6 c_1)) (= c_1 (f6 c_1))))) (not (or (= (f6 c_1) c_0) (= (f6 c_1) c_1))) (or (= c_0 (f6 c_1)) (= c_1 (f6 c_1)))))
-(assume t327 (= (or (= (f6 c_1) c_0) (= (f6 c_1) c_1)) (or (= c_0 (f6 c_1)) (= c_1 (f6 c_1)))))
-(assume t328 (or (= (f6 c_1) c_0) (= (f6 c_1) c_1)))
-(step t324' (cl (not (= (or (= (f6 c_1) c_0) (= (f6 c_1) c_1)) (or (= c_0 (f6 c_1)) (= c_1 (f6 c_1))))) (not (or (= (f6 c_1) c_0) (= (f6 c_1) c_1))) (or (= c_0 (f6 c_1)) (= c_1 (f6 c_1)))) :rule or :premises (t324))
-(step st329 (cl (or (= c_0 (f6 c_1)) (= c_1 (f6 c_1)))) :rule resolution :premises (t324' t327 t328))
-(step t.end (cl) :rule resolution :premises (nst329.0 st329))

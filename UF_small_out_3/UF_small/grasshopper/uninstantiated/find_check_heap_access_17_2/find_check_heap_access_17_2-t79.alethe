@@ -1,6 +1,0 @@
-(assume nst79.0 (not (in$0 root_x$0 (setenum$0 root_x$0))))
-(assume t66 (or (not (forall ((BOUND_VARIABLE_557 Loc)) (in$0 BOUND_VARIABLE_557 (setenum$0 BOUND_VARIABLE_557)))) (in$0 root_x$0 (setenum$0 root_x$0))))
-(assume t78 (forall ((BOUND_VARIABLE_557 Loc)) (in$0 BOUND_VARIABLE_557 (setenum$0 BOUND_VARIABLE_557))))
-(step t66' (cl (not (forall ((BOUND_VARIABLE_557 Loc)) (in$0 BOUND_VARIABLE_557 (setenum$0 BOUND_VARIABLE_557)))) (in$0 root_x$0 (setenum$0 root_x$0))) :rule or :premises (t66))
-(step st79 (cl (in$0 root_x$0 (setenum$0 root_x$0))) :rule resolution :premises (t66' t78))
-(step t.end (cl) :rule resolution :premises (nst79.0 st79))

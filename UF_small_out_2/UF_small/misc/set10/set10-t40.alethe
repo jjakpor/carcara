@@ -1,4 +1,0 @@
-(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (union a b))) (member ?x c)))))
-(assume nst40.0 (not (= (or (not (member @quantifiers_skolemize_3 (union a b))) (member @quantifiers_skolemize_3 c)) (or (not (member @quantifiers_skolemize_3 (union a b))) (member @quantifiers_skolemize_3 c)))))
-(step st40 (cl (= (or (not (member @quantifiers_skolemize_3 (union a b))) (member @quantifiers_skolemize_3 c)) (or (not (member @quantifiers_skolemize_3 (union a b))) (member @quantifiers_skolemize_3 c)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst40.0 st40))

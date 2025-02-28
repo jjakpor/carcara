@@ -1,5 +1,0 @@
-(assume nst43.0 (not (= (= y$n0s8 y$v_done) (= y$v_count y$v_done))))
-(assume t41 (= y$n0s8 y$v_count))
-(assume t42 (= y$v_done y$v_done))
-(step st43 (cl (= (= y$n0s8 y$v_done) (= y$v_count y$v_done))) :rule cong :premises (t41 t42))
-(step t.end (cl) :rule resolution :premises (nst43.0 st43))

@@ -1,5 +1,0 @@
-(assume nt708.0 (not (= (= (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (= (op e3 e1) (op e3 (op (op e1 e3) e1)))) true)))
-(assume t702 (= (= (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (= (op e3 e1) (op e3 (op (op e1 e3) e1)))) (= (= (op e3 e1) (op e3 (op (op e1 e3) e1))) (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))))))
-(assume t707 (= (= (= (op e3 e1) (op e3 (op (op e1 e3) e1))) (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1)))))) true))
-(step t708 (cl (= (= (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (= (op e3 e1) (op e3 (op (op e1 e3) e1)))) true)) :rule trans :premises (t702 t707))
-(step t.end (cl) :rule resolution :premises (nt708.0 t708))

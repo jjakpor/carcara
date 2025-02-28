@@ -1,6 +1,0 @@
-(assume nst4.0 (not (and (not rd1) (not rd2))))
-(assume t0 (or (not org) (and (not rd1) (not rd2))))
-(assume t3 org)
-(step t0' (cl (not org) (and (not rd1) (not rd2))) :rule or :premises (t0))
-(step st4 (cl (and (not rd1) (not rd2))) :rule resolution :premises (t0' t3))
-(step t.end (cl) :rule resolution :premises (nst4.0 st4))

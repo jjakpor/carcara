@@ -1,5 +1,0 @@
-(assume nst398.0 (not (not (= (= (op e0 e3) (op e3 e0)) (= (op (op (op (op e0 (op e0 e0)) e0) e0) e0) (op e0 (op (op (op e0 (op e0 e0)) e0) e0)))))))
-(assume nst398.1 (not (not (= (op e0 e3) (op e3 e0)))))
-(assume nst398.2 (not (= (op (op (op (op e0 (op e0 e0)) e0) e0) e0) (op e0 (op (op (op e0 (op e0 e0)) e0) e0)))))
-(step st398 (cl (not (= (= (op e0 e3) (op e3 e0)) (= (op (op (op (op e0 (op e0 e0)) e0) e0) e0) (op e0 (op (op (op e0 (op e0 e0)) e0) e0))))) (not (= (op e0 e3) (op e3 e0))) (= (op (op (op (op e0 (op e0 e0)) e0) e0) e0) (op e0 (op (op (op e0 (op e0 e0)) e0) e0)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst398.0 nst398.1 nst398.2 st398))

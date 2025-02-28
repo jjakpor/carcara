@@ -1,5 +1,0 @@
-(assume nst816.0 (not (= (or (or (or (or (= (op e2 e0) e1) (= (op e2 e1) e1)) (= (op e2 e2) e1)) (= (op e2 e3) e1)) (= (op e2 e4) e1)) (or (= e1 (op e2 e4)) (= e1 (op e2 e3)) (= e1 (op e2 e2)) (= e1 (op e2 e0)) (= e1 (op e2 e1))))))
-(assume t811 (= (or (or (or (or (= (op e2 e0) e1) (= (op e2 e1) e1)) (= (op e2 e2) e1)) (= (op e2 e3) e1)) (= (op e2 e4) e1)) (or (= (op e2 e4) e1) (= (op e2 e3) e1) (= (op e2 e2) e1) (= (op e2 e0) e1) (= (op e2 e1) e1))))
-(assume t815 (= (or (= (op e2 e4) e1) (= (op e2 e3) e1) (= (op e2 e2) e1) (= (op e2 e0) e1) (= (op e2 e1) e1)) (or (= e1 (op e2 e4)) (= e1 (op e2 e3)) (= e1 (op e2 e2)) (= e1 (op e2 e0)) (= e1 (op e2 e1)))))
-(step st816 (cl (= (or (or (or (or (= (op e2 e0) e1) (= (op e2 e1) e1)) (= (op e2 e2) e1)) (= (op e2 e3) e1)) (= (op e2 e4) e1)) (or (= e1 (op e2 e4)) (= e1 (op e2 e3)) (= e1 (op e2 e2)) (= e1 (op e2 e0)) (= e1 (op e2 e1))))) :rule trans :premises (t811 t815))
-(step t.end (cl) :rule resolution :premises (nst816.0 st816))

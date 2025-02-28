@@ -1,3 +1,0 @@
-(assume nst485.0 (not (= (= (= e3 (op (op (op e4 e3) (op e4 e3)) e4)) false) (not (= e3 (op (op (op e4 e3) (op e4 e3)) e4))))))
-(step st485 (cl (= (= (= e3 (op (op (op e4 e3) (op e4 e3)) e4)) false) (not (= e3 (op (op (op e4 e3) (op e4 e3)) e4))))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nst485.0 st485))

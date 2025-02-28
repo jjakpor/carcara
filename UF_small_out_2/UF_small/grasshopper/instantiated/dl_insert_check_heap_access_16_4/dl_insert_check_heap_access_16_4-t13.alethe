@@ -1,4 +1,0 @@
-(assume nst13.0 (not (= null$0 a$0)))
-(assume a30 (= a$0 null$0))
-(step st13 (cl (= null$0 a$0)) :rule symm :premises (a30))
-(step t.end (cl) :rule resolution :premises (nst13.0 st13))

@@ -1,6 +1,0 @@
-(assume nt149.0 (not (not (and y$a_got_msg_Receiver y$19))))
-(assume t145 (or (not (and y$a_got_msg_Receiver y$19)) y$a_got_msg_Receiver))
-(assume t148 (not y$a_got_msg_Receiver))
-(step t145' (cl (not (and y$a_got_msg_Receiver y$19)) y$a_got_msg_Receiver) :rule or :premises (t145))
-(step t149 (cl (not (and y$a_got_msg_Receiver y$19))) :rule resolution :premises (t145' t148))
-(step t.end (cl) :rule resolution :premises (nt149.0 t149))

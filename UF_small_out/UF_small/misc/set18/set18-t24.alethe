@@ -1,7 +1,0 @@
-(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (difference b a))) (member ?x (difference b d))))))
-(assume nst24.0 (not (member @quantifiers_skolemize_3 (difference b a))))
-(assume nst24.1 (not (or (not (member @quantifiers_skolemize_3 (difference b a))) (member @quantifiers_skolemize_3 (difference b d)))))
-(assume t23 (or (or (not (member @quantifiers_skolemize_3 (difference b a))) (member @quantifiers_skolemize_3 (difference b d))) (member @quantifiers_skolemize_3 (difference b a))))
-(step t23' (cl (or (not (member @quantifiers_skolemize_3 (difference b a))) (member @quantifiers_skolemize_3 (difference b d))) (member @quantifiers_skolemize_3 (difference b a))) :rule or :premises (t23))
-(step st24 (cl (member @quantifiers_skolemize_3 (difference b a)) (or (not (member @quantifiers_skolemize_3 (difference b a))) (member @quantifiers_skolemize_3 (difference b d)))) :rule reordering :premises (t23'))
-(step t.end (cl) :rule resolution :premises (nst24.0 nst24.1 st24))

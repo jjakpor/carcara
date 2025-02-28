@@ -1,4 +1,0 @@
-(assume nst195.0 (not (= FP$0 sk_?X_91$0)))
-(assume a65 (= sk_?X_91$0 FP$0))
-(step st195 (cl (= FP$0 sk_?X_91$0)) :rule symm :premises (a65))
-(step t.end (cl) :rule resolution :premises (nst195.0 st195))

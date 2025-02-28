@@ -1,4 +1,0 @@
-(assume nst136.0 (not (= FP_2$0 sk_?X_24$0)))
-(assume a22 (= sk_?X_24$0 FP_2$0))
-(step st136 (cl (= FP_2$0 sk_?X_24$0)) :rule symm :premises (a22))
-(step t.end (cl) :rule resolution :premises (nst136.0 st136))

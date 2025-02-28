@@ -1,4 +1,0 @@
-(assume nst654.0 (not (= (op (op e1 e1) (op (op e1 e1) (op e1 e1))) (op (op (op e1 e1) (op e1 e1)) (op e1 e1)))))
-(assume t443 (= (op (op (op e1 e1) (op e1 e1)) (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 e1)))))
-(step st654 (cl (= (op (op e1 e1) (op (op e1 e1) (op e1 e1))) (op (op (op e1 e1) (op e1 e1)) (op e1 e1)))) :rule symm :premises (t443))
-(step t.end (cl) :rule resolution :premises (nst654.0 st654))

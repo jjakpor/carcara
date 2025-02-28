@@ -1,5 +1,0 @@
-(assume nst167.0 (not (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))))))
-(assume nst167.1 (not (or (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0)) (= cp_2$0 sk_?e$0))))
-(assume t166 (or (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y)))) (or (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0)) (= cp_2$0 sk_?e$0))))
-(step st167 (cl (not (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y)))) (or (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0)) (= cp_2$0 sk_?e$0))) :rule or :premises (t166))
-(step t.end (cl) :rule resolution :premises (nst167.0 nst167.1 st167))

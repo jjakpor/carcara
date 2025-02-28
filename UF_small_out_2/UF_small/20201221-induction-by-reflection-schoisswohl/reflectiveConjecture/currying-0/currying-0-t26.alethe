@@ -1,7 +1,0 @@
-(assume nst26.0 (not (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))))
-(assume nst26.1 (not (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))
-(assume nst26.2 (not (not (= (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))))
-(assume t25 (or (not (= (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))
-(step t25' (cl (not (= (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) :rule or :premises (t25))
-(step st26 (cl (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (not (= (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))) :rule reordering :premises (t25'))
-(step t.end (cl) :rule resolution :premises (nst26.0 nst26.1 nst26.2 st26))

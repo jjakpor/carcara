@@ -1,7 +1,0 @@
-(assume nt373.0 (not (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
-(assume t368 (or (not (= (not (= (op e3 e3) e3)) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) (not (not (= (op e3 e3) e3))) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
-(assume t371 (= (not (= (op e3 e3) e3)) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
-(assume t372 (not (= (op e3 e3) e3)))
-(step t368' (cl (not (= (not (= (op e3 e3) e3)) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) (not (not (= (op e3 e3) e3))) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))) :rule or :premises (t368))
-(step t373 (cl (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))) :rule resolution :premises (t368' t371 t372))
-(step t.end (cl) :rule resolution :premises (nt373.0 t373))

@@ -1,4 +1,0 @@
-(assume nst27.0 (not (not (and (= null$0 curr_init$0) (= d_init$0 prv_init$0)))))
-(assume nst27.1 (not (= null$0 curr_init$0)))
-(step st27 (cl (not (and (= null$0 curr_init$0) (= d_init$0 prv_init$0))) (= null$0 curr_init$0)) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nst27.0 nst27.1 st27))

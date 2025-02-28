@@ -1,4 +1,0 @@
-(assume nst11.0 (not (or (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) (not (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))))
-(assume nst11.1 (not (not (not (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)))))))
-(step st11 (cl (or (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) (not (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))) (not (not (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)))))) :rule or_neg :args (1))
-(step t.end (cl) :rule resolution :premises (nst11.0 nst11.1 st11))

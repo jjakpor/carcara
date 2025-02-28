@@ -1,3 +1,0 @@
-(assume nst16.0 (not (= (= x0 x58) (= x0 x58))))
-(step st16 (cl (= (= x0 x58) (= x0 x58))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst16.0 st16))

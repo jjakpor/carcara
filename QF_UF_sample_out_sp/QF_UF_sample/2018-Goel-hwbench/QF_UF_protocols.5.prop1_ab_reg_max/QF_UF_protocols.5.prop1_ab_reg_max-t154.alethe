@@ -1,6 +1,0 @@
-(assume nt154.0 (not y$545))
-(assume t140 (or (not (not (not y$545))) y$545))
-(assume t153 (not (not y$545)))
-(step t140' (cl (not (not (not y$545))) y$545) :rule or :premises (t140))
-(step t154 (cl y$545) :rule resolution :premises (t140' t153))
-(step t.end (cl) :rule resolution :premises (nt154.0 t154))

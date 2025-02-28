@@ -1,4 +1,0 @@
-(assume nst188.0 (not (= (op e0 e4) (op e4 e0))))
-(assume t187 (= (op e4 e0) (op e0 e4)))
-(step st188 (cl (= (op e0 e4) (op e4 e0))) :rule symm :premises (t187))
-(step t.end (cl) :rule resolution :premises (nst188.0 st188))

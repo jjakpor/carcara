@@ -1,6 +1,0 @@
-(assume nst75.0 (not (= (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha) (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))))
-(assume t71 (or (not (forall ((env env) (v var_alpha)) (= (evalV_alpha env v) (eval_alpha env (inj_alpha v))))) (= (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha) (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))))
-(assume t74 (forall ((env env) (v var_alpha)) (= (evalV_alpha env v) (eval_alpha env (inj_alpha v)))))
-(step t71' (cl (not (forall ((env env) (v var_alpha)) (= (evalV_alpha env v) (eval_alpha env (inj_alpha v))))) (= (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha) (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))) :rule or :premises (t71))
-(step st75 (cl (= (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha) (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))) :rule resolution :premises (t71' t74))
-(step t.end (cl) :rule resolution :premises (nst75.0 st75))

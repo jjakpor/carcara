@@ -1,5 +1,0 @@
-(assume nst38.0 (not (= (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) f1)) (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78))))))
-(assume t34 (= (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) f1)) (forall ((?v0 S52) (?v1 S51)) (= f1 (f75 ?v0 ?v1 ?v1)))))
-(assume t37 (= (forall ((?v0 S52) (?v1 S51)) (= f1 (f75 ?v0 ?v1 ?v1))) (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78)))))
-(step st38 (cl (= (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) f1)) (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78))))) :rule trans :premises (t34 t37))
-(step t.end (cl) :rule resolution :premises (nst38.0 st38))

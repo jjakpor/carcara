@@ -1,4 +1,0 @@
-(assume nst65.0 (not (= (not (= (f3 (f15 f16 f14) f25) f1)) (not (= f1 (f3 (f15 f16 f14) f25))))))
-(assume t64 (= (= (f3 (f15 f16 f14) f25) f1) (= f1 (f3 (f15 f16 f14) f25))))
-(step st65 (cl (= (not (= (f3 (f15 f16 f14) f25) f1)) (not (= f1 (f3 (f15 f16 f14) f25))))) :rule cong :premises (t64))
-(step t.end (cl) :rule resolution :premises (nst65.0 st65))

@@ -1,6 +1,0 @@
-(assume nst346.0 (not (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)))))
-(assume nst346.1 (not false))
-(assume t345 (or (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1))) false))
-(step t345' (cl (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1))) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1))) false) :rule or :premises (t345))
-(step st346 (cl (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1))) false) :rule contraction :premises (t345'))
-(step t.end (cl) :rule resolution :premises (nst346.0 nst346.1 st346))

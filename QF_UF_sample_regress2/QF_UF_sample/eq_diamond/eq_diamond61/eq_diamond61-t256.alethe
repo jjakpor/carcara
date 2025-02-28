@@ -1,6 +1,0 @@
-(assume nst256.0 (not (= x22 x23)))
-(assume t251 (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))))
-(assume t255 (or (= x22 x23) (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))))))
-(step t255' (cl (= x22 x23) (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))))) :rule or :premises (t255))
-(step st256 (cl (= x22 x23)) :rule resolution :premises (t255' t251))
-(step t.end (cl) :rule resolution :premises (nst256.0 st256))

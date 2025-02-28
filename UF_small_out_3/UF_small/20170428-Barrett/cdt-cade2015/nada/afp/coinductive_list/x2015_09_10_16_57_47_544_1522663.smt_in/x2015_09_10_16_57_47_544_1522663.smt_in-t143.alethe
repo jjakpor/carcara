@@ -1,5 +1,0 @@
-(assume nst143.0 (not (not (forall ((?v0 A_llist$)) (or (fun_app$q lnull$d ?v0) (= ?v0 (lCons$ (lhd$ ?v0) (ltl$ ?v0))))))))
-(assume nst143.1 (not (or (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$))))))
-(assume t142 (or (not (forall ((?v0 A_llist$)) (or (fun_app$q lnull$d ?v0) (= ?v0 (lCons$ (lhd$ ?v0) (ltl$ ?v0)))))) (or (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$))))))
-(step st143 (cl (not (forall ((?v0 A_llist$)) (or (fun_app$q lnull$d ?v0) (= ?v0 (lCons$ (lhd$ ?v0) (ltl$ ?v0)))))) (or (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$))))) :rule or :premises (t142))
-(step t.end (cl) :rule resolution :premises (nst143.0 nst143.1 st143))

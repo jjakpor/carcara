@@ -1,5 +1,0 @@
-(assume nst147.0 (not (= sk_?X_24$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0)))))
-(assume a47 (= sk_?X_24$0 (union$0 sk_?X_27$0 sk_?X_25$0)))
-(assume t146 (= (union$0 sk_?X_27$0 sk_?X_25$0) (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))
-(step st147 (cl (= sk_?X_24$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0)))) :rule trans :premises (a47 t146))
-(step t.end (cl) :rule resolution :premises (nst147.0 st147))

@@ -1,8 +1,0 @@
-(assume nst220.0 (not (= (= x0 x19) false)))
-(assume nst220.1 (not (= x0 x19)))
-(assume t218 (or (= (= x0 x19) false) (not (not (= x0 x19)))))
-(assume t219 (or (not (not (not (= x0 x19)))) (= x0 x19)))
-(step t219' (cl (not (not (not (= x0 x19)))) (= x0 x19)) :rule or :premises (t219))
-(step t218' (cl (= (= x0 x19) false) (not (not (= x0 x19)))) :rule or :premises (t218))
-(step st220 (cl (= (= x0 x19) false) (= x0 x19)) :rule resolution :premises (t218' t219'))
-(step t.end (cl) :rule resolution :premises (nst220.0 nst220.1 st220))

@@ -1,5 +1,0 @@
-(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (difference b a))) (member ?x (difference b d))))))
-(assume nst18.0 (not (or (or (not (member @quantifiers_skolemize_3 (difference b a))) (member @quantifiers_skolemize_3 (difference b d))) (not (not (member @quantifiers_skolemize_3 (difference b a)))))))
-(assume nst18.1 (not (not (or (not (member @quantifiers_skolemize_3 (difference b a))) (member @quantifiers_skolemize_3 (difference b d))))))
-(step st18 (cl (or (or (not (member @quantifiers_skolemize_3 (difference b a))) (member @quantifiers_skolemize_3 (difference b d))) (not (not (member @quantifiers_skolemize_3 (difference b a))))) (not (or (not (member @quantifiers_skolemize_3 (difference b a))) (member @quantifiers_skolemize_3 (difference b d))))) :rule or_neg :args (0))
-(step t.end (cl) :rule resolution :premises (nst18.0 nst18.1 st18))

@@ -1,3 +1,0 @@
-(assume nt363.0 (not (= (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op e3 e3))) (= (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(step t363 (cl (= (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op e3 e3))) (= (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))) :rule rare_rewrite :args ("eq-symm" (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op e3 e3))))
-(step t.end (cl) :rule resolution :premises (nt363.0 t363))

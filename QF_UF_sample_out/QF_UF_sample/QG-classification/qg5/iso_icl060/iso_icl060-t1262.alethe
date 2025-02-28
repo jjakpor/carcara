@@ -1,5 +1,0 @@
-(assume t1251 (= (= e1 (op e1 (op (op e1 e3) e3))) (= (op e1 e1) (op e1 (op (op e1 e3) e3)))))
-(assume t1261 (= (= (op e1 e1) (op e1 (op (op e1 e3) e3))) false))
-(assume nt1262.0 (not (= (= e1 (op e1 (op (op e1 e3) e3))) false)))
-(step t1262 (cl (= (= e1 (op e1 (op (op e1 e3) e3))) false)) :rule trans :premises (t1251 t1261))
-(step t.end (cl) :rule resolution :premises (nt1262.0 t1262))

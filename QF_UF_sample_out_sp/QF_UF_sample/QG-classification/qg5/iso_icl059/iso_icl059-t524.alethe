@@ -1,5 +1,0 @@
-(assume nt524.0 (not (= (= (op e1 (op e1 e1)) e1) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))))
-(assume t521 (= (= (op e1 (op e1 e1)) e1) (= e1 (op e1 (op e1 e1)))))
-(assume t523 (= (= e1 (op e1 (op e1 e1))) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
-(step t524 (cl (= (= (op e1 (op e1 e1)) e1) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) :rule trans :premises (t521 t523))
-(step t.end (cl) :rule resolution :premises (nt524.0 t524))

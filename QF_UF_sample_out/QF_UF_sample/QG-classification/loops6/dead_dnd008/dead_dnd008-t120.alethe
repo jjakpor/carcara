@@ -1,4 +1,0 @@
-(assume t119 (and (and (or (not (= (op e0 (op e0 e0)) e0)) (= e0 unit)) (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit))) (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit))))
-(assume nt120.0 (not (and (or (not (= (op e0 (op e0 e0)) e0)) (= e0 unit)) (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit)))))
-(step t120 (cl (and (or (not (= (op e0 (op e0 e0)) e0)) (= e0 unit)) (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit)))) :rule and :premises (t119) :args (0))
-(step t.end (cl) :rule resolution :premises (nt120.0 t120))

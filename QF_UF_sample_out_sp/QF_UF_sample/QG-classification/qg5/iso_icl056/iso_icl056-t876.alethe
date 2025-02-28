@@ -1,6 +1,0 @@
-(assume nt876.0 (not (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1))))) false)))
-(assume t867 (or (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1))))) false) (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1)))))))
-(assume t875 (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1)))))))
-(step t867' (cl (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1))))) false) (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1)))))) :rule or :premises (t867))
-(step t876 (cl (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1))))) false)) :rule resolution :premises (t867' t875))
-(step t.end (cl) :rule resolution :premises (nt876.0 t876))

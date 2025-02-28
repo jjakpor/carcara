@@ -1,6 +1,0 @@
-(assume nst191.0 (not (not y$a_consume1$next_rhs_op)))
-(assume t180 (or (not y$a_consume1$next_rhs_op) (not y$968)))
-(assume t190 y$968)
-(step t180' (cl (not y$a_consume1$next_rhs_op) (not y$968)) :rule or :premises (t180))
-(step st191 (cl (not y$a_consume1$next_rhs_op)) :rule resolution :premises (t180' t190))
-(step t.end (cl) :rule resolution :premises (nst191.0 st191))

@@ -1,5 +1,0 @@
-(assume nst0.0 (not (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0))))))
-(assume nst0.1 (not (not (= e2 (op e2 e0)))))
-(assume nst0.2 (not (not (= e0 (op e2 (op e2 e0))))))
-(step st0 (cl (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (not (= e2 (op e2 e0))) (not (= e0 (op e2 (op e2 e0))))) :rule and_neg)
-(step t.end (cl) :rule resolution :premises (nst0.0 nst0.1 nst0.2 st0))

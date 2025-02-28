@@ -1,5 +1,0 @@
-(assume nst387.0 (not (= (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0)) false)))
-(assume nst387.1 (not (not (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))))
-(assume t386 (= (= (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0)) false) (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0)))))
-(step st387 (cl (= (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0)) false) (not (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))) :rule equiv2 :premises (t386))
-(step t.end (cl) :rule resolution :premises (nst387.0 nst387.1 st387))

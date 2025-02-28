@@ -1,5 +1,0 @@
-(assume t487 (= (= e3 (op (op (op e4 e3) (op e4 e3)) e4)) (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4))))
-(assume t501 (= (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4)) false))
-(assume nt502.0 (not (= (= e3 (op (op (op e4 e3) (op e4 e3)) e4)) false)))
-(step t502 (cl (= (= e3 (op (op (op e4 e3) (op e4 e3)) e4)) false)) :rule trans :premises (t487 t501))
-(step t.end (cl) :rule resolution :premises (nt502.0 t502))

@@ -1,5 +1,0 @@
-(assume nt327.0 (not (= (or (= (f6 c_1) c_0) (= (f6 c_1) c_1)) (or (= c_0 (f6 c_1)) (= c_1 (f6 c_1))))))
-(assume t325 (= (= (f6 c_1) c_0) (= c_0 (f6 c_1))))
-(assume t326 (= (= (f6 c_1) c_1) (= c_1 (f6 c_1))))
-(step t327 (cl (= (or (= (f6 c_1) c_0) (= (f6 c_1) c_1)) (or (= c_0 (f6 c_1)) (= c_1 (f6 c_1))))) :rule cong :premises (t325 t326))
-(step t.end (cl) :rule resolution :premises (nt327.0 t327))

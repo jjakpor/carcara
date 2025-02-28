@@ -1,3 +1,0 @@
-(assume nst249.0 (not (= (= (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (and (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23)))) true)))
-(step st249 (cl (= (= (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (and (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst249.0 st249))

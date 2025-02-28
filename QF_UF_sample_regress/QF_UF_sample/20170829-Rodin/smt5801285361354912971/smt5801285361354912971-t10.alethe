@@ -1,6 +1,0 @@
-(assume nst10.0 (not (not (and prt rd1))))
-(assume t2 (not rd1))
-(assume t9 (or (not (and prt rd1)) rd1))
-(step t9' (cl (not (and prt rd1)) rd1) :rule or :premises (t9))
-(step st10 (cl (not (and prt rd1))) :rule resolution :premises (t9' t2))
-(step t.end (cl) :rule resolution :premises (nst10.0 st10))

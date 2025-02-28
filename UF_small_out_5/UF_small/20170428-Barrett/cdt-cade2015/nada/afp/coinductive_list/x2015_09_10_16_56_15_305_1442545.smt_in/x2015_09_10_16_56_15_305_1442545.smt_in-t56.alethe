@@ -1,4 +1,0 @@
-(assume nst56.0 (not (= (not (= (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ zero$)))) (not (= (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))))))
-(assume t55 (= (= (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ zero$))) (= (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))))
-(step st56 (cl (= (not (= (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ zero$)))) (not (= (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))))) :rule cong :premises (t55))
-(step t.end (cl) :rule resolution :premises (nst56.0 st56))

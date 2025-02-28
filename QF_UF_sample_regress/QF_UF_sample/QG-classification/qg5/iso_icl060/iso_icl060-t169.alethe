@@ -1,5 +1,0 @@
-(assume nst169.0 (not (= (= e3 (op e1 e2)) (= e3 (op e1 (op e1 e3))))))
-(assume t14 (= e3 e3))
-(assume t168 (= (op e1 e2) (op e1 (op e1 e3))))
-(step st169 (cl (= (= e3 (op e1 e2)) (= e3 (op e1 (op e1 e3))))) :rule cong :premises (t14 t168))
-(step t.end (cl) :rule resolution :premises (nst169.0 st169))

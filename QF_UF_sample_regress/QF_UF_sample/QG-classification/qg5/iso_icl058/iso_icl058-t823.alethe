@@ -1,8 +1,0 @@
-(assume nst823.0 (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))
-(assume nst823.1 (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))
-(assume nst823.2 (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op e0 e0)))))
-(assume nst823.3 (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))
-(assume nst823.4 (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
-(assume t822 (or (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op e0 e0))) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0)) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
-(step st823 (cl (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op e0 e0))) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0)) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))) :rule or :premises (t822))
-(step t.end (cl) :rule resolution :premises (nst823.0 nst823.1 nst823.2 nst823.3 nst823.4 st823))

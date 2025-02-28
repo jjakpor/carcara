@@ -1,5 +1,0 @@
-(assume nst100.0 (not (not (or (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)) (in$0 x$0 (setenum$0 root_x$0))))))
-(assume nst100.1 (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))))
-(assume nst100.2 (not (in$0 x$0 (setenum$0 root_x$0))))
-(step st100 (cl (not (or (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)) (in$0 x$0 (setenum$0 root_x$0)))) (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)) (in$0 x$0 (setenum$0 root_x$0))) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst100.0 nst100.1 nst100.2 st100))

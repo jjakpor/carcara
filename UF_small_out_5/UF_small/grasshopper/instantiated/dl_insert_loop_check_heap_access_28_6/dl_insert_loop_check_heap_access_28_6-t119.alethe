@@ -1,3 +1,0 @@
-(assume nst119.0 (not (= (and (= null$0 prv_init$0) (= c_init$0 curr_init$0)) (and (= null$0 prv_init$0) (= c_init$0 curr_init$0)))))
-(step st119 (cl (= (and (= null$0 prv_init$0) (= c_init$0 curr_init$0)) (and (= null$0 prv_init$0) (= c_init$0 curr_init$0)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst119.0 st119))

@@ -1,3 +1,0 @@
-(assume nst726.0 (not (= (= (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (and (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48)))) true)))
-(step st726 (cl (= (= (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (and (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst726.0 st726))

@@ -1,5 +1,0 @@
-(assume nt346.0 (not (= (= (op (op e1 e2) e1) e2) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3)))))))
-(assume t343 (= (= (op (op e1 e2) e1) e2) (= e2 (op (op e1 e2) e1))))
-(assume t345 (= (= e2 (op (op e1 e2) e1)) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3))))))
-(step t346 (cl (= (= (op (op e1 e2) e1) e2) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3)))))) :rule trans :premises (t343 t345))
-(step t.end (cl) :rule resolution :premises (nt346.0 t346))

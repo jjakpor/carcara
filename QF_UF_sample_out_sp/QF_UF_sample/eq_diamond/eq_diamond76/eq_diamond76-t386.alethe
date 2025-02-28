@@ -1,5 +1,0 @@
-(assume nt386.0 (not (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))))
-(assume nt386.1 (not (= x33 x34)))
-(assume t385 (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34)))
-(step t386 (cl (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34)))) (= x33 x34)) :rule implies :premises (t385))
-(step t.end (cl) :rule resolution :premises (nt386.0 nt386.1 t386))

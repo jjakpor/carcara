@@ -1,4 +1,0 @@
-(assume nst55.0 (not (forall ((BOUND_VARIABLE_631 Loc)) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631)))))
-(assume t54 (and (forall ((BOUND_VARIABLE_631 Loc)) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631))) (forall ((BOUND_VARIABLE_641 Loc) (BOUND_VARIABLE_643 Loc)) (or (and (= BOUND_VARIABLE_641 BOUND_VARIABLE_643) (in$0 BOUND_VARIABLE_643 (setenum$0 BOUND_VARIABLE_641))) (not (in$0 BOUND_VARIABLE_643 (setenum$0 BOUND_VARIABLE_641)))))))
-(step st55 (cl (forall ((BOUND_VARIABLE_631 Loc)) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631)))) :rule and :premises (t54) :args (0))
-(step t.end (cl) :rule resolution :premises (nst55.0 st55))

@@ -1,4 +1,0 @@
-(assume nst215.0 (not (not (and (= a$ d$) (= a$ c$)))))
-(assume nst215.1 (not (= a$ d$)))
-(step st215 (cl (not (and (= a$ d$) (= a$ c$))) (= a$ d$)) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nst215.0 nst215.1 st215))

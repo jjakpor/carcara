@@ -1,7 +1,0 @@
-(assume t644.t2 (or (not (= (= (op e0 (op e0 e4)) e4) (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))) (not (= (op e0 (op e0 e4)) e4)) (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))))
-(assume t644.t6 (= (= (op e0 (op e0 e4)) e4) (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))))
-(assume t644.t7 (= (op e0 (op e0 e4)) e4))
-(assume nt644.t8.0 (not (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))))
-(step t644.t2' (cl (not (= (= (op e0 (op e0 e4)) e4) (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))) (not (= (op e0 (op e0 e4)) e4)) (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))) :rule or :premises (t644.t2))
-(step t644.t8 (cl (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))) :rule resolution :premises (t644.t2' t644.t6 t644.t7))
-(step t.end (cl) :rule resolution :premises (nt644.t8.0 t644.t8))

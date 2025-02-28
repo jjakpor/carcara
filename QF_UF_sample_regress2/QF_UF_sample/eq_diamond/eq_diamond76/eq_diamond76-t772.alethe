@@ -1,6 +1,0 @@
-(assume nst772.0 (not (= x68 x69)))
-(assume nst772.1 (not (not (or (and (= x68 y68) (= y68 x69)) (and (= x68 z68) (= z68 x69))))))
-(assume t771 (or (not (or (and (= x68 y68) (= y68 x69)) (and (= x68 z68) (= z68 x69)))) (= x68 x69)))
-(step t771' (cl (not (or (and (= x68 y68) (= y68 x69)) (and (= x68 z68) (= z68 x69)))) (= x68 x69)) :rule or :premises (t771))
-(step st772 (cl (= x68 x69) (not (or (and (= x68 y68) (= y68 x69)) (and (= x68 z68) (= z68 x69))))) :rule reordering :premises (t771'))
-(step t.end (cl) :rule resolution :premises (nst772.0 nst772.1 st772))

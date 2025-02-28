@@ -1,3 +1,0 @@
-(assume nt313.0 (not (= (= e1 unit) (= unit e1))))
-(step t313 (cl (= (= e1 unit) (= unit e1))) :rule rare_rewrite :args ("eq-symm" e1 unit))
-(step t.end (cl) :rule resolution :premises (nt313.0 t313))

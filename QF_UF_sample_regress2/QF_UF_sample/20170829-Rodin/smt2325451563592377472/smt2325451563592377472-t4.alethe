@@ -1,5 +1,0 @@
-(assume nst4.0 (not (not (= (= (not (not clk)) clk) true))))
-(assume nst4.1 (not (= (not (not clk)) clk)))
-(assume t3 (= (= (= (not (not clk)) clk) true) (= (not (not clk)) clk)))
-(step st4 (cl (not (= (= (not (not clk)) clk) true)) (= (not (not clk)) clk)) :rule equiv1 :premises (t3))
-(step t.end (cl) :rule resolution :premises (nst4.0 nst4.1 st4))

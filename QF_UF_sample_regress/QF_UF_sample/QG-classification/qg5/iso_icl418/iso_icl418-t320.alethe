@@ -1,7 +1,0 @@
-(assume nst320.0 (not (not (= (op (op e4 e3) e4) (op (op e4 e3) e3)))))
-(assume t313 (or (not (= (not (= (op e1 e3) (op e1 e4))) (not (= (op (op e4 e3) e4) (op (op e4 e3) e3))))) (not (not (= (op e1 e3) (op e1 e4)))) (not (= (op (op e4 e3) e4) (op (op e4 e3) e3)))))
-(assume t318 (= (not (= (op e1 e3) (op e1 e4))) (not (= (op (op e4 e3) e4) (op (op e4 e3) e3)))))
-(assume t319 (not (= (op e1 e3) (op e1 e4))))
-(step t313' (cl (not (= (not (= (op e1 e3) (op e1 e4))) (not (= (op (op e4 e3) e4) (op (op e4 e3) e3))))) (not (not (= (op e1 e3) (op e1 e4)))) (not (= (op (op e4 e3) e4) (op (op e4 e3) e3)))) :rule or :premises (t313))
-(step st320 (cl (not (= (op (op e4 e3) e4) (op (op e4 e3) e3)))) :rule resolution :premises (t313' t318 t319))
-(step t.end (cl) :rule resolution :premises (nst320.0 st320))

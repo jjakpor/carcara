@@ -1,6 +1,0 @@
-(assume nst80.0 (not (= (ite y$6 y$n1s4 y$s$1_op) (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)))))
-(assume a3 (= y$s$1_op (Add_4_4_4 y$X y$n1s4)))
-(assume t47 (= y$n1s4 y$n1s4))
-(assume t79 (= y$6 (= y$X y$n15s4)))
-(step st80 (cl (= (ite y$6 y$n1s4 y$s$1_op) (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)))) :rule cong :premises (t79 t47 a3))
-(step t.end (cl) :rule resolution :premises (nst80.0 st80))

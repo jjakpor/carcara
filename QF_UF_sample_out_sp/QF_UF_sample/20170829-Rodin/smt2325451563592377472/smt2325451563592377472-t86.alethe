@@ -1,4 +1,0 @@
-(assume nt86.0 (not (or (not (not prt)) (not (or (not car) (not clk))))))
-(assume nt86.1 (not (not (not (or (not car) (not clk))))))
-(step t86 (cl (or (not (not prt)) (not (or (not car) (not clk)))) (not (not (or (not car) (not clk))))) :rule or_neg :args (1))
-(step t.end (cl) :rule resolution :premises (nt86.0 nt86.1 t86))

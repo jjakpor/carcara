@@ -1,4 +1,0 @@
-(assume t219 (and (and (or (or (or (or (= (op e0 e0) e0) (= (op e1 e1) e0)) (= (op e2 e2) e0)) (= (op e3 e3) e0)) (= (op e4 e4) e0)) (or (or (or (or (= (op e0 e0) e1) (= (op e1 e1) e1)) (= (op e2 e2) e1)) (= (op e3 e3) e1)) (= (op e4 e4) e1))) (or (or (or (or (= (op e0 e0) e2) (= (op e1 e1) e2)) (= (op e2 e2) e2)) (= (op e3 e3) e2)) (= (op e4 e4) e2))))
-(assume nt495.0 (not (or (or (or (or (= (op e0 e0) e2) (= (op e1 e1) e2)) (= (op e2 e2) e2)) (= (op e3 e3) e2)) (= (op e4 e4) e2))))
-(step t495 (cl (or (or (or (or (= (op e0 e0) e2) (= (op e1 e1) e2)) (= (op e2 e2) e2)) (= (op e3 e3) e2)) (= (op e4 e4) e2))) :rule and :premises (t219) :args (1))
-(step t.end (cl) :rule resolution :premises (nt495.0 t495))

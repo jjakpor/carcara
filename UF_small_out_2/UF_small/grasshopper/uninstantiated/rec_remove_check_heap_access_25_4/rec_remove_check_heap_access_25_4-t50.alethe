@@ -1,7 +1,0 @@
-(assume nst50.0 (not (= null$0 lst$0)))
-(assume nst50.1 (not (not (Btwn$0 next$0 lst$0 lst$0 null$0))))
-(assume nst50.2 (not (not (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))))))
-(assume t49 (or (not (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0)))) (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))))
-(step t49' (cl (not (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0)))) (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) :rule or :premises (t49))
-(step st50 (cl (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0)) (not (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))))) :rule reordering :premises (t49'))
-(step t.end (cl) :rule resolution :premises (nst50.0 nst50.1 nst50.2 st50))

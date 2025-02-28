@@ -1,7 +1,0 @@
-(define-fun @quantifiers_skolemize_5 () S6 (choice ((?v2 S6)) (not (not (= (f11 (f12 f14 f15) (f11 (f12 f14 f10) (f16 (f17 f18 f19) f9))) (f11 (f12 f34 f20) ?v2))))))
-(define-fun @quantifiers_skolemize_6 () S6 (choice ((?v2 S6)) (not (not (= (f11 (f12 f14 f15) (f11 (f12 f14 f8) (f16 (f17 f18 f19) f9))) (f11 (f12 f34 f20) ?v2))))))
-(assume nst267.0 (not (= (not (= (= (f3 f4 (f5 (f6 f7 f8) f9)) f1) (= (f3 f4 (f5 (f6 f7 f10) f9)) f1))) (not (= (= f1 (f3 (f21 f20 f15 (f5 (f6 f7 f23) f19)) (f5 (f6 f7 f10) f9))) (= f1 (f3 (f21 f20 f15 (f5 (f6 f7 f23) f19)) (f5 (f6 f7 f8) f9))))))))
-(assume t250 (= (not (= (= (f3 f4 (f5 (f6 f7 f8) f9)) f1) (= (f3 f4 (f5 (f6 f7 f10) f9)) f1))) (not (= (= f1 (f3 f4 (f5 (f6 f7 f8) f9))) (= f1 (f3 f4 (f5 (f6 f7 f10) f9)))))))
-(assume t266 (= (not (= (= f1 (f3 f4 (f5 (f6 f7 f8) f9))) (= f1 (f3 f4 (f5 (f6 f7 f10) f9))))) (not (= (= f1 (f3 (f21 f20 f15 (f5 (f6 f7 f23) f19)) (f5 (f6 f7 f10) f9))) (= f1 (f3 (f21 f20 f15 (f5 (f6 f7 f23) f19)) (f5 (f6 f7 f8) f9)))))))
-(step st267 (cl (= (not (= (= (f3 f4 (f5 (f6 f7 f8) f9)) f1) (= (f3 f4 (f5 (f6 f7 f10) f9)) f1))) (not (= (= f1 (f3 (f21 f20 f15 (f5 (f6 f7 f23) f19)) (f5 (f6 f7 f10) f9))) (= f1 (f3 (f21 f20 f15 (f5 (f6 f7 f23) f19)) (f5 (f6 f7 f8) f9))))))) :rule trans :premises (t250 t266))
-(step t.end (cl) :rule resolution :premises (nst267.0 st267))

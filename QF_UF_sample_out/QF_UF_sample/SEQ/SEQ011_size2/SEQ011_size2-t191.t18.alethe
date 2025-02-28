@@ -1,7 +1,0 @@
-(assume t191.t0 (or (not (= (= false true) false)) (not (= false true)) false))
-(assume t191.t1 (= (= false true) false))
-(assume t191.t17 (= false true))
-(assume nt191.t18.0 (not false))
-(step t191.t0' (cl (not (= (= false true) false)) (not (= false true)) false) :rule or :premises (t191.t0))
-(step t191.t18 (cl false) :rule resolution :premises (t191.t0' t191.t1 t191.t17))
-(step t.end (cl) :rule resolution :premises (nt191.t18.0 t191.t18))

@@ -1,6 +1,0 @@
-(assume nst171.0 (not (not (and (= x2 z2) (= z2 x3)))))
-(assume t2 (or (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (not (and (= x2 z2) (= z2 x3)))))
-(assume t170 (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))))
-(step t2' (cl (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (not (and (= x2 z2) (= z2 x3)))) :rule or :premises (t2))
-(step st171 (cl (not (and (= x2 z2) (= z2 x3)))) :rule resolution :premises (t2' t170))
-(step t.end (cl) :rule resolution :premises (nst171.0 st171))

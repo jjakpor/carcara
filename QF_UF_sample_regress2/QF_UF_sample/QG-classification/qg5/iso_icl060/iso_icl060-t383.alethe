@@ -1,4 +1,0 @@
-(assume nst383.0 (not (= e3 (op e1 (op e1 e3)))))
-(assume t382 (= (op e1 (op e1 e3)) e3))
-(step st383 (cl (= e3 (op e1 (op e1 e3)))) :rule symm :premises (t382))
-(step t.end (cl) :rule resolution :premises (nst383.0 st383))

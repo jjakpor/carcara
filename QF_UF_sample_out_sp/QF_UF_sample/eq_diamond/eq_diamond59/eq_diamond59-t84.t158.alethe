@@ -1,4 +1,0 @@
-(assume nt84.t158.0 (not (= x14 x15)))
-(assume t84.t157 (= x15 x14))
-(step t84.t158 (cl (= x14 x15)) :rule symm :premises (t84.t157))
-(step t.end (cl) :rule resolution :premises (nt84.t158.0 t84.t158))

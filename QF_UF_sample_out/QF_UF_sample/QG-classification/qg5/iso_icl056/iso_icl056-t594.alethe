@@ -1,8 +1,0 @@
-(assume t162 (= (= (op e4 e4) e4) (= e4 (op e4 e4))))
-(assume t563 (= (= (op e3 e4) e3) (= e3 (op e3 e4))))
-(assume t12 (= (= (op e2 e4) e2) (= e2 (op e2 e4))))
-(assume t592 (= (= (op e0 e4) e0) (= e0 (op e0 e4))))
-(assume t593 (= (= (op e1 e4) e1) (= e1 (op e1 e4))))
-(assume nt594.0 (not (= (or (= (op e4 e4) e4) (= (op e3 e4) e3) (= (op e2 e4) e2) (= (op e0 e4) e0) (= (op e1 e4) e1)) (or (= e4 (op e4 e4)) (= e3 (op e3 e4)) (= e2 (op e2 e4)) (= e0 (op e0 e4)) (= e1 (op e1 e4))))))
-(step t594 (cl (= (or (= (op e4 e4) e4) (= (op e3 e4) e3) (= (op e2 e4) e2) (= (op e0 e4) e0) (= (op e1 e4) e1)) (or (= e4 (op e4 e4)) (= e3 (op e3 e4)) (= e2 (op e2 e4)) (= e0 (op e0 e4)) (= e1 (op e1 e4))))) :rule cong :premises (t162 t563 t12 t592 t593))
-(step t.end (cl) :rule resolution :premises (nt594.0 t594))

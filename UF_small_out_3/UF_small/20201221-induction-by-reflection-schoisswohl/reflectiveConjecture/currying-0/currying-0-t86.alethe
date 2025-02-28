@@ -1,7 +1,0 @@
-(assume nst86.0 (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))
-(assume nst86.1 (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))
-(assume nst86.2 (not (not (= (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))))
-(assume t85 (or (not (= (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))
-(step t85' (cl (not (= (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) :rule or :premises (t85))
-(step st86 (cl (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))) (not (= (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))) :rule reordering :premises (t85'))
-(step t.end (cl) :rule resolution :premises (nst86.0 nst86.1 nst86.2 st86))

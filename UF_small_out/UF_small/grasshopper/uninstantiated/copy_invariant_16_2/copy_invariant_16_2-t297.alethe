@@ -1,6 +1,0 @@
-(assume nst297.0 (not (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))))
-(assume nst297.1 (not (not (and (in$0 sk_?e$0 (union$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)) (lseg_domain$0 next$0 cp_2$0 cp_2$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))))))
-(assume t296 (or (not (and (in$0 sk_?e$0 (union$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)) (lseg_domain$0 next$0 cp_2$0 cp_2$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))))
-(step t296' (cl (not (and (in$0 sk_?e$0 (union$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)) (lseg_domain$0 next$0 cp_2$0 cp_2$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) :rule or :premises (t296))
-(step st297 (cl (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))) (not (and (in$0 sk_?e$0 (union$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)) (lseg_domain$0 next$0 cp_2$0 cp_2$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))))) :rule reordering :premises (t296'))
-(step t.end (cl) :rule resolution :premises (nst297.0 nst297.1 st297))

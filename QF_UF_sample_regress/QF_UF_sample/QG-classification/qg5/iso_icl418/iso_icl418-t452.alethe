@@ -1,8 +1,0 @@
-(assume nst452.0 (not (= e4 (op (op (op e4 e3) (op e4 e3)) e4))))
-(assume nst452.1 (not (= e3 (op (op (op e4 e3) (op e4 e3)) e4))))
-(assume nst452.2 (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4))))
-(assume nst452.3 (not (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4))))
-(assume nst452.4 (not (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4))))
-(assume t451 (or (= e4 (op (op (op e4 e3) (op e4 e3)) e4)) (= e3 (op (op (op e4 e3) (op e4 e3)) e4)) (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4)) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4))))
-(step st452 (cl (= e4 (op (op (op e4 e3) (op e4 e3)) e4)) (= e3 (op (op (op e4 e3) (op e4 e3)) e4)) (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e4)) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4))) :rule or :premises (t451))
-(step t.end (cl) :rule resolution :premises (nst452.0 nst452.1 nst452.2 nst452.3 nst452.4 st452))

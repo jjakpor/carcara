@@ -1,4 +1,0 @@
-(assume nst352.0 (not (= (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3))) (op (op (op e3 e3) (op e3 e3)) e3))))
-(assume t351 (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3)))))
-(step st352 (cl (= (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3))) (op (op (op e3 e3) (op e3 e3)) e3))) :rule symm :premises (t351))
-(step t.end (cl) :rule resolution :premises (nst352.0 st352))

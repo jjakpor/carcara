@@ -1,6 +1,0 @@
-(assume nt42.0 (not (= (forall ((?v0 Nat$) (?v1 A_a_fun$) (?v2 A$)) (= (fun_app$ (ldropn$ ?v0) (iterates$ ?v1 ?v2)) (iterates$ ?v1 (fun_app$a (fun_app$b (fun_app$c compow$ ?v0) ?v1) ?v2)))) (forall ((?v0 Nat$) (?v1 A_a_fun$) (?v2 A$)) (= (fun_app$ (ldropn$ ?v0) (iterates$ ?v1 ?v2)) (iterates$ ?v1 (fun_app$a (fun_app$b (fun_app$c funpow$ ?v0) ?v1) ?v2)))))))
-(anchor :step t42 :args ((?v0 Nat$) (?v1 A_a_fun$) (?v2 A$) (:= (?v0 Nat$) ?v0) (:= (?v1 A_a_fun$) ?v1) (:= (?v2 A$) ?v2)))
-(step st42.t1 (cl (= ?v1 ?v1)) :rule refl)
-(step t42.t9 (cl (= (= (fun_app$ (ldropn$ ?v0) (iterates$ ?v1 ?v2)) (iterates$ ?v1 (fun_app$a (fun_app$b (fun_app$c compow$ ?v0) ?v1) ?v2))) (= (fun_app$ (ldropn$ ?v0) (iterates$ ?v1 ?v2)) (iterates$ ?v1 (fun_app$a (fun_app$b (fun_app$c funpow$ ?v0) ?v1) ?v2))))) :rule trust)
-(step t42 (cl (= (forall ((?v0 Nat$) (?v1 A_a_fun$) (?v2 A$)) (= (fun_app$ (ldropn$ ?v0) (iterates$ ?v1 ?v2)) (iterates$ ?v1 (fun_app$a (fun_app$b (fun_app$c compow$ ?v0) ?v1) ?v2)))) (forall ((?v0 Nat$) (?v1 A_a_fun$) (?v2 A$)) (= (fun_app$ (ldropn$ ?v0) (iterates$ ?v1 ?v2)) (iterates$ ?v1 (fun_app$a (fun_app$b (fun_app$c funpow$ ?v0) ?v1) ?v2)))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt42.0 t42))

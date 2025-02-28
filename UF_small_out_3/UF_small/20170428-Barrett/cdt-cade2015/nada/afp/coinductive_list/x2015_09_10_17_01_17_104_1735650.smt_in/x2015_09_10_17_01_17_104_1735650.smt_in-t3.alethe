@@ -1,3 +1,0 @@
-(assume nst3.0 (not (= (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))) (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))))))
-(step st3 (cl (= (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))) (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst3.0 st3))

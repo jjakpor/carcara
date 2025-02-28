@@ -1,4 +1,0 @@
-(assume nst2.0 (not (not (and y$a_q4_Bottle_1 y$103))))
-(assume nst2.1 (not y$a_q4_Bottle_1))
-(step st2 (cl (not (and y$a_q4_Bottle_1 y$103)) y$a_q4_Bottle_1) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nst2.0 nst2.1 st2))

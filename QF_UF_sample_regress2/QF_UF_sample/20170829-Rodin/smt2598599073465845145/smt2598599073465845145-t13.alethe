@@ -1,5 +1,0 @@
-(assume nst13.0 (not (= (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2))))) true)))
-(assume t11 (= (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2))))) (= (not (= i2 (not (= b2 r2)))) (= i2 (= b2 r2)))))
-(assume t12 (= (= (not (= i2 (not (= b2 r2)))) (= i2 (= b2 r2))) true))
-(step st13 (cl (= (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2))))) true)) :rule trans :premises (t11 t12))
-(step t.end (cl) :rule resolution :premises (nst13.0 st13))

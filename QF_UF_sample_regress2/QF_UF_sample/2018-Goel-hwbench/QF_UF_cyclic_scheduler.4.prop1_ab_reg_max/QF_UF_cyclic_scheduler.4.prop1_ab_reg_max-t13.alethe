@@ -1,3 +1,0 @@
-(assume nst13.0 (not (= (= y$prop y$3079) (= y$3079 y$prop))))
-(step st13 (cl (= (= y$prop y$3079) (= y$3079 y$prop))) :rule rare_rewrite :args ("eq-symm" y$prop y$3079))
-(step t.end (cl) :rule resolution :premises (nst13.0 st13))

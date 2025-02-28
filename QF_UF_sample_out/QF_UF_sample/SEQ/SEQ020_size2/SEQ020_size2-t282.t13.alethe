@@ -1,5 +1,0 @@
-(assume t282.t12 (= c_0 (f5 c_0)))
-(assume t282.t9 (= c_0 c_0))
-(assume nt282.t13.0 (not (= (p1 c_0 c_0) (p1 (f5 c_0) c_0))))
-(step t282.t13 (cl (= (p1 c_0 c_0) (p1 (f5 c_0) c_0))) :rule cong :premises (t282.t12 t282.t9))
-(step t.end (cl) :rule resolution :premises (nt282.t13.0 t282.t13))

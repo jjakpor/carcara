@@ -1,5 +1,0 @@
-(assume nst104.0 (not (= (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))) true)))
-(assume t102 (= (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))) (or true (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)))))
-(assume t103 (= (or true (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))) true))
-(step st104 (cl (= (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))) true)) :rule trans :premises (t102 t103))
-(step t.end (cl) :rule resolution :premises (nst104.0 st104))

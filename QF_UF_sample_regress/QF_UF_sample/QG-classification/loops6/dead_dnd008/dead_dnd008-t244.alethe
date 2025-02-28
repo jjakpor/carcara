@@ -1,5 +1,0 @@
-(assume nst244.0 (not (= (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit)) (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0)))))
-(assume t236 (= (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit)) (or (not (= e4 (op e4 (op e4 e4)))) (= unit e4))))
-(assume t243 (= (or (not (= e4 (op e4 (op e4 e4)))) (= unit e4)) (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0))))
-(step st244 (cl (= (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit)) (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0)))) :rule trans :premises (t236 t243))
-(step t.end (cl) :rule resolution :premises (nst244.0 st244))

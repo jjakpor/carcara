@@ -1,5 +1,0 @@
-(assume nt25.0 (not (= y$68 (= y$v_at_press y$v_at_table))))
-(assume a35 (= y$68 (= y$n0s8 y$v_at_table)))
-(assume t24 (= (= y$n0s8 y$v_at_table) (= y$v_at_press y$v_at_table)))
-(step t25 (cl (= y$68 (= y$v_at_press y$v_at_table))) :rule trans :premises (a35 t24))
-(step t.end (cl) :rule resolution :premises (nt25.0 t25))

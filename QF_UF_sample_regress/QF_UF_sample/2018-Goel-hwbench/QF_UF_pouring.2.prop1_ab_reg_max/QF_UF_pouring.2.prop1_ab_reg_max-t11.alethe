@@ -1,5 +1,0 @@
-(assume nst11.0 (not (not (= (= y$55379 (= y$prop y$55378)) (= y$55379 (= y$55378 y$prop))))))
-(assume nst11.1 (not (not (= y$55379 (= y$prop y$55378)))))
-(assume nst11.2 (not (= y$55379 (= y$55378 y$prop))))
-(step st11 (cl (not (= (= y$55379 (= y$prop y$55378)) (= y$55379 (= y$55378 y$prop)))) (not (= y$55379 (= y$prop y$55378))) (= y$55379 (= y$55378 y$prop))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst11.0 nst11.1 nst11.2 st11))

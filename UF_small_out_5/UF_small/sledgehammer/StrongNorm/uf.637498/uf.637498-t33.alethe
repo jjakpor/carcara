@@ -1,5 +1,0 @@
-(assume nt33.0 (not (= (forall ((?v0 S7)) (= (f3 f5 (f9 f10 ?v0)) f1)) (forall ((?v0 S7)) (= f1 (f3 f5 (f9 f10 ?v0)))))))
-(anchor :step t33 :args ((?v0 S7) (:= (?v0 S7) ?v0)))
-(step t33.t0 (cl (= (= (f3 f5 (f9 f10 ?v0)) f1) (= f1 (f3 f5 (f9 f10 ?v0))))) :rule trust)
-(step t33 (cl (= (forall ((?v0 S7)) (= (f3 f5 (f9 f10 ?v0)) f1)) (forall ((?v0 S7)) (= f1 (f3 f5 (f9 f10 ?v0)))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt33.0 t33))

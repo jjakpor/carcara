@@ -1,4 +1,0 @@
-(assume nst269.0 (not (= (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op e0 e0) e0) e0))) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))))
-(assume t268 (= (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op e0 e0) e0) e0)) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))
-(step st269 (cl (= (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op e0 e0) e0) e0))) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0))))) :rule cong :premises (t268))
-(step t.end (cl) :rule resolution :premises (nst269.0 st269))

@@ -1,6 +1,0 @@
-(assume nt157.0 (not (not (= e0 (op e0 e0)))))
-(assume nt157.1 (not (not (and (= e0 (op e0 (op e0 e0))) (not (= e0 (op e0 e0)))))))
-(assume t156 (or (not (and (= e0 (op e0 (op e0 e0))) (not (= e0 (op e0 e0))))) (not (= e0 (op e0 e0)))))
-(step t156' (cl (not (and (= e0 (op e0 (op e0 e0))) (not (= e0 (op e0 e0))))) (not (= e0 (op e0 e0)))) :rule or :premises (t156))
-(step t157 (cl (not (= e0 (op e0 e0))) (not (and (= e0 (op e0 (op e0 e0))) (not (= e0 (op e0 e0)))))) :rule reordering :premises (t156'))
-(step t.end (cl) :rule resolution :premises (nt157.0 nt157.1 t157))

@@ -1,5 +1,0 @@
-(assume t47 (= (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))) (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))
-(assume t48 (= (not (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))) (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))
-(assume nt49.0 (not (= (= (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))) (not (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))) (= (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))) (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))))
-(step t49 (cl (= (= (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))) (not (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))) (= (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))) (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))) :rule cong :premises (t47 t48))
-(step t.end (cl) :rule resolution :premises (nt49.0 t49))

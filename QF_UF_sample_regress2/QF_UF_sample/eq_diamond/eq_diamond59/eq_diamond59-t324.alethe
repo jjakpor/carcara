@@ -1,5 +1,0 @@
-(assume nst324.0 (not (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))))
-(assume nst324.1 (not (= x9 x10)))
-(assume t323 (=> (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (= x9 x10)))
-(step st324 (cl (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10)))) (= x9 x10)) :rule implies :premises (t323))
-(step t.end (cl) :rule resolution :premises (nst324.0 nst324.1 st324))

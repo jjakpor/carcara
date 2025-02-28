@@ -1,8 +1,0 @@
-(assume nst180.0 (not (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))))
-(assume t121 (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0))
-(assume t123 (or (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))) (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)) (not (or (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))) (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))))))
-(assume t176 (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)))
-(assume t179 (or (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))) (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))))
-(step t123' (cl (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))) (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)) (not (or (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))) (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))))) :rule or :premises (t123))
-(step st180 (cl (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))) :rule resolution :premises (t123' t121 t176 t179))
-(step t.end (cl) :rule resolution :premises (nst180.0 st180))

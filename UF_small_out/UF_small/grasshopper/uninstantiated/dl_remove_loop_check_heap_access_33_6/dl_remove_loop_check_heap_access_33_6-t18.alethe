@@ -1,3 +1,0 @@
-(assume nst18.0 (not (= Axiom_40$0 Axiom_40$0)))
-(step st18 (cl (= Axiom_40$0 Axiom_40$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst18.0 st18))

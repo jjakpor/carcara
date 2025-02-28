@@ -1,5 +1,0 @@
-(assume nt1.0 (not (not y$id84_op)))
-(assume nt1.1 (not (and y$a_q_error_customer_0 y$127)))
-(assume a84 (= y$id84_op (and y$a_q_error_customer_0 y$127)))
-(step t1 (cl (not y$id84_op) (and y$a_q_error_customer_0 y$127)) :rule equiv1 :premises (a84))
-(step t.end (cl) :rule resolution :premises (nt1.0 nt1.1 t1))

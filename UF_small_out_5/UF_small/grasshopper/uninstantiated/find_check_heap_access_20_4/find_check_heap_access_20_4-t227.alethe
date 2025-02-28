@@ -1,3 +1,0 @@
-(assume nst227.0 (not (= (not (in$0 root_x$0 (lseg_set_X$0 next$0 n_5$0 root_x$0))) (not (in$0 root_x$0 (lseg_set_X$0 next$0 n_5$0 root_x$0))))))
-(step st227 (cl (= (not (in$0 root_x$0 (lseg_set_X$0 next$0 n_5$0 root_x$0))) (not (in$0 root_x$0 (lseg_set_X$0 next$0 n_5$0 root_x$0))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst227.0 st227))

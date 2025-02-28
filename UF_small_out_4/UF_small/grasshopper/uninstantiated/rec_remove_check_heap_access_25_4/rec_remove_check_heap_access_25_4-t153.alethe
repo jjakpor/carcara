@@ -1,4 +1,0 @@
-(assume nst153.0 (not (not (and (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)) (in$0 lst$0 (setminus$0 (lseg_domain$0 next$0 lst$0 null$0) (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)))))))
-(assume nst153.1 (not (in$0 lst$0 (setminus$0 (lseg_domain$0 next$0 lst$0 null$0) (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)))))
-(step st153 (cl (not (and (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)) (in$0 lst$0 (setminus$0 (lseg_domain$0 next$0 lst$0 null$0) (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0))))) (in$0 lst$0 (setminus$0 (lseg_domain$0 next$0 lst$0 null$0) (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)))) :rule and_pos :args (1))
-(step t.end (cl) :rule resolution :premises (nst153.0 nst153.1 st153))

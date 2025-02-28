@@ -1,6 +1,0 @@
-(assume nst173.0 (not (= x14 x15)))
-(assume nst173.1 (not (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))))
-(assume t172 (or (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15)))) (= x14 x15)))
-(step t172' (cl (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15)))) (= x14 x15)) :rule or :premises (t172))
-(step st173 (cl (= x14 x15) (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))) :rule reordering :premises (t172'))
-(step t.end (cl) :rule resolution :premises (nst173.0 nst173.1 st173))

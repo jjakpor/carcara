@@ -1,8 +1,0 @@
-(assume nt414.t9.0 (not (= (= (f6 c_1) (f5 c_1)) false)))
-(assume nt414.t9.1 (not (= (f6 c_1) (f5 c_1))))
-(assume t414.t7 (or (= (= (f6 c_1) (f5 c_1)) false) (not (not (= (f6 c_1) (f5 c_1))))))
-(assume t414.t8 (or (not (not (not (= (f6 c_1) (f5 c_1))))) (= (f6 c_1) (f5 c_1))))
-(step t414.t7' (cl (= (= (f6 c_1) (f5 c_1)) false) (not (not (= (f6 c_1) (f5 c_1))))) :rule or :premises (t414.t7))
-(step t414.t8' (cl (not (not (not (= (f6 c_1) (f5 c_1))))) (= (f6 c_1) (f5 c_1))) :rule or :premises (t414.t8))
-(step t414.t9 (cl (= (= (f6 c_1) (f5 c_1)) false) (= (f6 c_1) (f5 c_1))) :rule resolution :premises (t414.t7' t414.t8'))
-(step t.end (cl) :rule resolution :premises (nt414.t9.0 nt414.t9.1 t414.t9))

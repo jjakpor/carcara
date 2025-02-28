@@ -1,5 +1,0 @@
-(assume nst81.0 (not (= (= sk_?X_78$0 (dlseg_domain$0 next$0 prev$0 c_init$0 null$0 curr_init$0 prv_init$0)) (= sk_?X_78$0 (dlseg_domain$0 next$0 prev$0 c_init$0 null$0 prv_5$0 prv_init$0)))))
-(assume t78 (= sk_?X_78$0 sk_?X_78$0))
-(assume t80 (= (dlseg_domain$0 next$0 prev$0 c_init$0 null$0 curr_init$0 prv_init$0) (dlseg_domain$0 next$0 prev$0 c_init$0 null$0 prv_5$0 prv_init$0)))
-(step st81 (cl (= (= sk_?X_78$0 (dlseg_domain$0 next$0 prev$0 c_init$0 null$0 curr_init$0 prv_init$0)) (= sk_?X_78$0 (dlseg_domain$0 next$0 prev$0 c_init$0 null$0 prv_5$0 prv_init$0)))) :rule cong :premises (t78 t80))
-(step t.end (cl) :rule resolution :premises (nst81.0 st81))

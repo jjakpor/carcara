@@ -1,6 +1,0 @@
-(assume nt236.t16.0 (not (= (p1 (f7 c_0) c_0) false)))
-(assume t236.t15 (or (= (p1 (f7 c_0) c_0) false) (p1 (f7 c_0) c_0)))
-(assume t236.a0 (not (p1 (f7 c_0) c_0)))
-(step t236.t15' (cl (= (p1 (f7 c_0) c_0) false) (p1 (f7 c_0) c_0)) :rule or :premises (t236.t15))
-(step t236.t16 (cl (= (p1 (f7 c_0) c_0) false)) :rule resolution :premises (t236.t15' t236.a0))
-(step t.end (cl) :rule resolution :premises (nt236.t16.0 t236.t16))

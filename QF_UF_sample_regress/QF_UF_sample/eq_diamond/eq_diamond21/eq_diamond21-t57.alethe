@@ -1,7 +1,0 @@
-(assume nst57.0 (not (and (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5)))))
-(assume t51 (or (not (= (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (and (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5))))) (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5)))) (and (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5)))))
-(assume t55 (= (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (and (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5)))))
-(assume t56 (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))
-(step t51' (cl (not (= (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (and (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5))))) (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5)))) (and (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5)))) :rule or :premises (t51))
-(step st57 (cl (and (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5)))) :rule resolution :premises (t51' t55 t56))
-(step t.end (cl) :rule resolution :premises (nst57.0 st57))

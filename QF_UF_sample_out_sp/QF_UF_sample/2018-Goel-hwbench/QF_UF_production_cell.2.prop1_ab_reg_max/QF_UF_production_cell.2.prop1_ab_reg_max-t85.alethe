@@ -1,5 +1,0 @@
-(assume nt85.0 (not (= y$v_done y$v_k_Press)))
-(assume t57 (= y$v_done y$v_k_Belt))
-(assume t84 (= y$v_k_Belt y$v_k_Press))
-(step t85 (cl (= y$v_done y$v_k_Press)) :rule trans :premises (t57 t84))
-(step t.end (cl) :rule resolution :premises (nt85.0 t85))

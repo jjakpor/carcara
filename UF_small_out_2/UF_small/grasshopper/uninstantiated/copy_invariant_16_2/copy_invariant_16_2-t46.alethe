@@ -1,5 +1,0 @@
-(assume nst46.0 (not (= (union$0 sk_?X_3$0 sk_?X_2$0) (union$0 sk_?X_3$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))
-(assume t11 (= sk_?X_3$0 sk_?X_3$0))
-(assume t39 (= sk_?X_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))
-(step st46 (cl (= (union$0 sk_?X_3$0 sk_?X_2$0) (union$0 sk_?X_3$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) :rule cong :premises (t11 t39))
-(step t.end (cl) :rule resolution :premises (nst46.0 st46))

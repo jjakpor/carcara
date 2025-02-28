@@ -1,4 +1,0 @@
-(assume nst106.0 (not (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2))))))
-(assume nst106.1 (not (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0))))))
-(step st106 (cl (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2)))) (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0))))) :rule implies_neg1)
-(step t.end (cl) :rule resolution :premises (nst106.0 nst106.1 st106))

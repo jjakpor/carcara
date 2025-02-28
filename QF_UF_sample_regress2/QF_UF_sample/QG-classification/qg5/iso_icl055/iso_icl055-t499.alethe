@@ -1,8 +1,0 @@
-(assume nst499.0 (not (= (or (= (op e4 e4) e3) (= (op e3 e4) e3) (= (op e2 e4) e3) (= (op e0 e4) e3) (= (op e1 e4) e3)) (or (= e3 (op e4 e4)) (= e3 (op e3 e4)) (= e3 (op e2 e4)) (= e3 (op e0 e4)) (= e3 (op e1 e4))))))
-(assume t17 (= (= (op e1 e4) e3) (= e3 (op e1 e4))))
-(assume t232 (= (= (op e4 e4) e3) (= e3 (op e4 e4))))
-(assume t496 (= (= (op e3 e4) e3) (= e3 (op e3 e4))))
-(assume t497 (= (= (op e2 e4) e3) (= e3 (op e2 e4))))
-(assume t498 (= (= (op e0 e4) e3) (= e3 (op e0 e4))))
-(step st499 (cl (= (or (= (op e4 e4) e3) (= (op e3 e4) e3) (= (op e2 e4) e3) (= (op e0 e4) e3) (= (op e1 e4) e3)) (or (= e3 (op e4 e4)) (= e3 (op e3 e4)) (= e3 (op e2 e4)) (= e3 (op e0 e4)) (= e3 (op e1 e4))))) :rule cong :premises (t232 t496 t497 t498 t17))
-(step t.end (cl) :rule resolution :premises (nst499.0 st499))

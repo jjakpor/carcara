@@ -1,4 +1,0 @@
-(assume nst60.0 (not (= (not (= (read$0 next$0 root_x$0) (read$0 next$0 x$0))) (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))))))
-(assume t59 (= (= (read$0 next$0 root_x$0) (read$0 next$0 x$0)) (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))))
-(step st60 (cl (= (not (= (read$0 next$0 root_x$0) (read$0 next$0 x$0))) (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))))) :rule cong :premises (t59))
-(step t.end (cl) :rule resolution :premises (nst60.0 st60))

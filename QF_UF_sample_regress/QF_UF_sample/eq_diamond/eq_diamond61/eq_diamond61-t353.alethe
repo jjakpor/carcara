@@ -1,5 +1,0 @@
-(assume nst353.0 (not (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))))))
-(assume nst353.1 (not (= x31 x32)))
-(assume t352 (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32)))
-(step st353 (cl (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32)))) (= x31 x32)) :rule implies :premises (t352))
-(step t.end (cl) :rule resolution :premises (nst353.0 nst353.1 st353))

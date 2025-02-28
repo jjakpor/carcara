@@ -1,5 +1,0 @@
-(assume nst196.0 (not (not (= (forall ((?v0 A_tree$) (?v1 A$)) (=> (consistent$ ?v0) (= (fun_app$f (swapSyms$ ?v0 ?v1) ?v1) ?v0))) (forall ((?v0 A_tree$) (?v1 A$)) (or (not (consistent$ ?v0)) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1))))))))
-(assume nst196.1 (not (not (forall ((?v0 A_tree$) (?v1 A$)) (=> (consistent$ ?v0) (= (fun_app$f (swapSyms$ ?v0 ?v1) ?v1) ?v0))))))
-(assume nst196.2 (not (forall ((?v0 A_tree$) (?v1 A$)) (or (not (consistent$ ?v0)) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1))))))
-(step st196 (cl (not (= (forall ((?v0 A_tree$) (?v1 A$)) (=> (consistent$ ?v0) (= (fun_app$f (swapSyms$ ?v0 ?v1) ?v1) ?v0))) (forall ((?v0 A_tree$) (?v1 A$)) (or (not (consistent$ ?v0)) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1)))))) (not (forall ((?v0 A_tree$) (?v1 A$)) (=> (consistent$ ?v0) (= (fun_app$f (swapSyms$ ?v0 ?v1) ?v1) ?v0)))) (forall ((?v0 A_tree$) (?v1 A$)) (or (not (consistent$ ?v0)) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst196.0 nst196.1 nst196.2 st196))

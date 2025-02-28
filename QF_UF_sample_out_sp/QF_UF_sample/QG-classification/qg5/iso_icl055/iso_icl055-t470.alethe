@@ -1,5 +1,0 @@
-(assume nt470.0 (not (= (= (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op e1 e1))) false)))
-(assume t459 (= (= (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op e1 e1))) (= (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))
-(assume t469 (= (= (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))) false))
-(step t470 (cl (= (= (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op e1 e1))) false)) :rule trans :premises (t459 t469))
-(step t.end (cl) :rule resolution :premises (nt470.0 t470))

@@ -1,5 +1,0 @@
-(assume nst163.0 (not (= (= x0 x14) false)))
-(assume nst163.1 (not (not (not (= x0 x14)))))
-(assume t162 (= (= (= x0 x14) false) (not (= x0 x14))))
-(step st163 (cl (= (= x0 x14) false) (not (not (= x0 x14)))) :rule equiv2 :premises (t162))
-(step t.end (cl) :rule resolution :premises (nst163.0 nst163.1 st163))

@@ -1,3 +1,0 @@
-(assume nst630.0 (not (= (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))) (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))))))
-(step st630 (cl (= (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))) (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst630.0 st630))

@@ -1,6 +1,0 @@
-(assume nst69.0 (not (= x5 x6)))
-(assume t64 (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))
-(assume t68 (or (= x5 x6) (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))))
-(step t68' (cl (= x5 x6) (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))) :rule or :premises (t68))
-(step st69 (cl (= x5 x6)) :rule resolution :premises (t68' t64))
-(step t.end (cl) :rule resolution :premises (nst69.0 st69))

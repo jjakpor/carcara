@@ -1,4 +1,0 @@
-(assume nst256.0 (not (and (= (op unit e4) e4) (= (op e4 unit) e4))))
-(assume t95 (and (and (and (and (and (= (op unit e0) e0) (= (op e0 unit) e0)) (and (= (op unit e1) e1) (= (op e1 unit) e1))) (and (= (op unit e2) e2) (= (op e2 unit) e2))) (and (= (op unit e3) e3) (= (op e3 unit) e3))) (and (= (op unit e4) e4) (= (op e4 unit) e4))))
-(step st256 (cl (and (= (op unit e4) e4) (= (op e4 unit) e4))) :rule and :premises (t95) :args (1))
-(step t.end (cl) :rule resolution :premises (nst256.0 st256))

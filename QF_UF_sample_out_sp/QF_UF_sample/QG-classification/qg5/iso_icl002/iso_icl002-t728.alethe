@@ -1,5 +1,0 @@
-(assume nt728.0 (not (= (= e0 (op (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) e0))) false)))
-(assume t727 (= (= e0 (op (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) e0))) (= e0 (op (op e0 (op e0 e0)) e0))))
-(assume t472 (= (= e0 (op (op e0 (op e0 e0)) e0)) false))
-(step t728 (cl (= (= e0 (op (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) e0))) false)) :rule trans :premises (t727 t472))
-(step t.end (cl) :rule resolution :premises (nt728.0 t728))

@@ -1,6 +1,0 @@
-(assume nt84.t12.0 (not (= x10 x11)))
-(assume t84.t11 (or (= x10 x11) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))))
-(assume t84.t7 (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))
-(step t84.t11' (cl (= x10 x11) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))) :rule or :premises (t84.t11))
-(step t84.t12 (cl (= x10 x11)) :rule resolution :premises (t84.t11' t84.t7))
-(step t.end (cl) :rule resolution :premises (nt84.t12.0 t84.t12))

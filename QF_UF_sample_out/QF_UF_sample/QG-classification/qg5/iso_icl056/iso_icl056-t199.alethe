@@ -1,5 +1,0 @@
-(assume t196 (= (not (= (op e2 e2) (op e2 e3))) (not (= (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1)))))))
-(assume t198 (= (not (= (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1))))))
-(assume nt199.0 (not (= (not (= (op e2 e2) (op e2 e3))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1)))))))
-(step t199 (cl (= (not (= (op e2 e2) (op e2 e3))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1)))))) :rule trans :premises (t196 t198))
-(step t.end (cl) :rule resolution :premises (nt199.0 t199))

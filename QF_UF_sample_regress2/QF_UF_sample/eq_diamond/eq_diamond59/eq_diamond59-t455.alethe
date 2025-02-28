@@ -1,4 +1,0 @@
-(assume nst455.0 (not (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23))))
-(assume t454 (and (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23))))
-(step st455 (cl (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23))) :rule and :premises (t454) :args (1))
-(step t.end (cl) :rule resolution :premises (nst455.0 st455))

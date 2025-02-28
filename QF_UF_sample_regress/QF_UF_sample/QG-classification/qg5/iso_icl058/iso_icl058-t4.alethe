@@ -1,4 +1,0 @@
-(assume nst4.0 (not (not (and (= e0 (op (op (op (op e0 e0) e0) e0) e0)) (= e0 (op (op e0 e0) (op e0 e0))) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) (op e0 e0))) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0))))))
-(assume nst4.1 (not (= e0 (op (op e0 e0) (op e0 e0)))))
-(step st4 (cl (not (and (= e0 (op (op (op (op e0 e0) e0) e0) e0)) (= e0 (op (op e0 e0) (op e0 e0))) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) (op e0 e0))) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))) (= e0 (op (op e0 e0) (op e0 e0)))) :rule and_pos :args (1))
-(step t.end (cl) :rule resolution :premises (nst4.0 nst4.1 st4))

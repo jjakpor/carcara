@@ -1,5 +1,0 @@
-(assume nst294.0 (not (not (= e5 (op e5 (op e5 e5))))))
-(assume nst294.1 (not (= e5 e0)))
-(assume t293 (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0)))
-(step st294 (cl (not (= e5 (op e5 (op e5 e5)))) (= e5 e0)) :rule or :premises (t293))
-(step t.end (cl) :rule resolution :premises (nst294.0 nst294.1 st294))

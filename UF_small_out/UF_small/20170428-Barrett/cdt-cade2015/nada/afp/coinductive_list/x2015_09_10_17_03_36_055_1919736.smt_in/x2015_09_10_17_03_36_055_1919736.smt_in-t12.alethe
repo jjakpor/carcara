@@ -1,3 +1,0 @@
-(assume nst12.0 (not (= (= (llength$ us$) infinity$) (= infinity$ (llength$ us$)))))
-(step st12 (cl (= (= (llength$ us$) infinity$) (= infinity$ (llength$ us$)))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst12.0 st12))

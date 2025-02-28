@@ -1,7 +1,0 @@
-(assume t381 (or (not (= (= (op e1 (op e1 e4)) e4) (= (op (op e1 e1) (op e1 e1)) (op e1 (op e1 (op (op e1 e1) (op e1 e1))))))) (not (= (op e1 (op e1 e4)) e4)) (= (op (op e1 e1) (op e1 e1)) (op e1 (op e1 (op (op e1 e1) (op e1 e1)))))))
-(assume t385 (= (= (op e1 (op e1 e4)) e4) (= (op (op e1 e1) (op e1 e1)) (op e1 (op e1 (op (op e1 e1) (op e1 e1)))))))
-(assume t386 (= (op e1 (op e1 e4)) e4))
-(assume nt387.0 (not (= (op (op e1 e1) (op e1 e1)) (op e1 (op e1 (op (op e1 e1) (op e1 e1)))))))
-(step t381' (cl (not (= (= (op e1 (op e1 e4)) e4) (= (op (op e1 e1) (op e1 e1)) (op e1 (op e1 (op (op e1 e1) (op e1 e1))))))) (not (= (op e1 (op e1 e4)) e4)) (= (op (op e1 e1) (op e1 e1)) (op e1 (op e1 (op (op e1 e1) (op e1 e1)))))) :rule or :premises (t381))
-(step t387 (cl (= (op (op e1 e1) (op e1 e1)) (op e1 (op e1 (op (op e1 e1) (op e1 e1)))))) :rule resolution :premises (t381' t385 t386))
-(step t.end (cl) :rule resolution :premises (nt387.0 t387))

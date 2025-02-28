@@ -1,6 +1,0 @@
-(assume nt43.0 (not (= (= x0 x3) false)))
-(assume t41 (or (= (= x0 x3) false) (= x0 x3)))
-(assume t42 (not (= x0 x3)))
-(step t41' (cl (= (= x0 x3) false) (= x0 x3)) :rule or :premises (t41))
-(step t43 (cl (= (= x0 x3) false)) :rule resolution :premises (t41' t42))
-(step t.end (cl) :rule resolution :premises (nt43.0 t43))

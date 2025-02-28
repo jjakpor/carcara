@@ -1,5 +1,0 @@
-(assume nst104.0 (not (not (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next))))))
-(assume nst104.1 (not (not (= y$28 (= y$prop$next y$27)))))
-(assume nst104.2 (not (= y$28 (= y$27 y$prop$next))))
-(step st104 (cl (not (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next)))) (not (= y$28 (= y$prop$next y$27))) (= y$28 (= y$27 y$prop$next))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst104.0 nst104.1 nst104.2 st104))

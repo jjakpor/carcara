@@ -1,4 +1,0 @@
-(assume nt860.0 (not (= (not (= (op e2 e1) (op e4 e1))) (not (= (op (op e0 e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0)))))))
-(assume t859 (= (= (op e2 e1) (op e4 e1)) (= (op (op e0 e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0)))))
-(step t860 (cl (= (not (= (op e2 e1) (op e4 e1))) (not (= (op (op e0 e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0)))))) :rule cong :premises (t859))
-(step t.end (cl) :rule resolution :premises (nt860.0 t860))

@@ -1,4 +1,0 @@
-(assume nst248.0 (not (and (and (and (and (and (and (not (= (op e0 e3) (op e1 e3))) (not (= (op e0 e3) (op e2 e3)))) (not (= (op e0 e3) (op e3 e3)))) (not (= (op e0 e3) (op e4 e3)))) (not (= (op e1 e3) (op e2 e3)))) (not (= (op e1 e3) (op e3 e3)))) (not (= (op e1 e3) (op e4 e3))))))
-(assume t247 (and (and (and (and (and (and (and (not (= (op e0 e3) (op e1 e3))) (not (= (op e0 e3) (op e2 e3)))) (not (= (op e0 e3) (op e3 e3)))) (not (= (op e0 e3) (op e4 e3)))) (not (= (op e1 e3) (op e2 e3)))) (not (= (op e1 e3) (op e3 e3)))) (not (= (op e1 e3) (op e4 e3)))) (not (= (op e2 e3) (op e3 e3)))))
-(step st248 (cl (and (and (and (and (and (and (not (= (op e0 e3) (op e1 e3))) (not (= (op e0 e3) (op e2 e3)))) (not (= (op e0 e3) (op e3 e3)))) (not (= (op e0 e3) (op e4 e3)))) (not (= (op e1 e3) (op e2 e3)))) (not (= (op e1 e3) (op e3 e3)))) (not (= (op e1 e3) (op e4 e3))))) :rule and :premises (t247) :args (0))
-(step t.end (cl) :rule resolution :premises (nst248.0 st248))

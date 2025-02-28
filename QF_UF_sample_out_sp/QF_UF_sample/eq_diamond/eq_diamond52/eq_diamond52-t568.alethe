@@ -1,5 +1,0 @@
-(assume nt568.0 (not (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))))))
-(assume nt568.1 (not (= x50 x51)))
-(assume t567 (=> (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (= x50 x51)))
-(step t568 (cl (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51)))) (= x50 x51)) :rule implies :premises (t567))
-(step t.end (cl) :rule resolution :premises (nt568.0 nt568.1 t568))

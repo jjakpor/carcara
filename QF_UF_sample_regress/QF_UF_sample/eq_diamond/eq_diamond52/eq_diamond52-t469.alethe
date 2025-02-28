@@ -1,5 +1,0 @@
-(assume nst469.0 (not (not (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))))))
-(assume nst469.1 (not (= x41 x42)))
-(assume t468 (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42)))
-(step st469 (cl (not (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42)))) (= x41 x42)) :rule implies :premises (t468))
-(step t.end (cl) :rule resolution :premises (nst469.0 nst469.1 st469))

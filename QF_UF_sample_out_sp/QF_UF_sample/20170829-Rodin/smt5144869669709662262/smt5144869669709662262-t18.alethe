@@ -1,5 +1,0 @@
-(assume nt18.0 (not (= (not (= flash nf0)) false)))
-(assume t13 (= (not (= flash nf0)) (not (= nf0 nf0))))
-(assume t17 (= (not (= nf0 nf0)) false))
-(step t18 (cl (= (not (= flash nf0)) false)) :rule trans :premises (t13 t17))
-(step t.end (cl) :rule resolution :premises (nt18.0 t18))

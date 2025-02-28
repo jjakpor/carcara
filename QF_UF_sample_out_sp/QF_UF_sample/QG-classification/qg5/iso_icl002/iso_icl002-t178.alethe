@@ -1,7 +1,0 @@
-(assume nt178.0 (not (not (= (op e0 e0) (op (op e0 (op e0 e0)) e0)))))
-(assume t161 (or (not (= (not (= (op e0 e0) (op e1 e0))) (not (= (op e0 e0) (op (op e0 (op e0 e0)) e0))))) (not (not (= (op e0 e0) (op e1 e0)))) (not (= (op e0 e0) (op (op e0 (op e0 e0)) e0)))))
-(assume t163 (= (not (= (op e0 e0) (op e1 e0))) (not (= (op e0 e0) (op (op e0 (op e0 e0)) e0)))))
-(assume t177 (not (= (op e0 e0) (op e1 e0))))
-(step t161' (cl (not (= (not (= (op e0 e0) (op e1 e0))) (not (= (op e0 e0) (op (op e0 (op e0 e0)) e0))))) (not (not (= (op e0 e0) (op e1 e0)))) (not (= (op e0 e0) (op (op e0 (op e0 e0)) e0)))) :rule or :premises (t161))
-(step t178 (cl (not (= (op e0 e0) (op (op e0 (op e0 e0)) e0)))) :rule resolution :premises (t161' t163 t177))
-(step t.end (cl) :rule resolution :premises (nt178.0 t178))

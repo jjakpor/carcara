@@ -1,4 +1,0 @@
-(assume nt62.t34.0 (not (= (op (op (op e1 e3) e3) (op (op e1 e3) e3)) (op e3 (op (op e1 e3) e1)))))
-(assume t62.t33 (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e3))))
-(step t62.t34 (cl (= (op (op (op e1 e3) e3) (op (op e1 e3) e3)) (op e3 (op (op e1 e3) e1)))) :rule symm :premises (t62.t33))
-(step t.end (cl) :rule resolution :premises (nt62.t34.0 t62.t34))

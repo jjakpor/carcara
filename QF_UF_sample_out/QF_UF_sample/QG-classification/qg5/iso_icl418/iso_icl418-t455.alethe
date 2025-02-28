@@ -1,5 +1,0 @@
-(assume t454 (= (= (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4)) false) (not (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4)))))
-(assume nt455.0 (not (not (= (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4)) false))))
-(assume nt455.1 (not (not (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4)))))
-(step t455 (cl (not (= (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4)) false)) (not (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4)))) :rule equiv1 :premises (t454))
-(step t.end (cl) :rule resolution :premises (nt455.0 nt455.1 t455))

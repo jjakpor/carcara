@@ -1,3 +1,0 @@
-(assume nt638.0 (not (= (not (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))) (not (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))))
-(step t638 (cl (= (not (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))) (not (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt638.0 t638))

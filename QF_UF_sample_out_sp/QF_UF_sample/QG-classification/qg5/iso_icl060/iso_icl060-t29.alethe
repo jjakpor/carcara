@@ -1,5 +1,0 @@
-(assume nt29.0 (not (= (= e1 (op e0 e4)) (= e1 (op (op (op e1 e3) e1) (op (op e1 e3) e3))))))
-(assume t9 (= e1 e1))
-(assume t28 (= (op e0 e4) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))
-(step t29 (cl (= (= e1 (op e0 e4)) (= e1 (op (op (op e1 e3) e1) (op (op e1 e3) e3))))) :rule cong :premises (t9 t28))
-(step t.end (cl) :rule resolution :premises (nt29.0 t29))

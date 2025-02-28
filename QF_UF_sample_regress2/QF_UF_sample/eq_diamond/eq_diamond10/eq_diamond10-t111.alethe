@@ -1,4 +1,0 @@
-(assume nst111.0 (not (not (not (not (= x0 x9))))))
-(assume nst111.1 (not (= x0 x9)))
-(step st111 (cl (not (not (not (= x0 x9)))) (= x0 x9)) :rule not_not)
-(step t.end (cl) :rule resolution :premises (nst111.0 nst111.1 st111))

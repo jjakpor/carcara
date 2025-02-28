@@ -1,6 +1,0 @@
-(assume nst237.0 (not (= x19 x20)))
-(assume t232 (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))))
-(assume t236 (or (= x19 x20) (not (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))))))
-(step t236' (cl (= x19 x20) (not (or (and (= x19 y19) (= y19 x20)) (and (= x19 z19) (= z19 x20))))) :rule or :premises (t236))
-(step st237 (cl (= x19 x20)) :rule resolution :premises (t236' t232))
-(step t.end (cl) :rule resolution :premises (nst237.0 st237))

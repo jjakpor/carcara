@@ -1,4 +1,0 @@
-(assume t635 (and (and (and (and (and (and (and (not (= (op e0 e1) (op e1 e1))) (not (= (op e0 e1) (op e2 e1)))) (not (= (op e0 e1) (op e3 e1)))) (not (= (op e0 e1) (op e4 e1)))) (not (= (op e1 e1) (op e2 e1)))) (not (= (op e1 e1) (op e3 e1)))) (not (= (op e1 e1) (op e4 e1)))) (not (= (op e2 e1) (op e3 e1)))))
-(assume nt636.0 (not (and (and (and (and (and (and (not (= (op e0 e1) (op e1 e1))) (not (= (op e0 e1) (op e2 e1)))) (not (= (op e0 e1) (op e3 e1)))) (not (= (op e0 e1) (op e4 e1)))) (not (= (op e1 e1) (op e2 e1)))) (not (= (op e1 e1) (op e3 e1)))) (not (= (op e1 e1) (op e4 e1))))))
-(step t636 (cl (and (and (and (and (and (and (not (= (op e0 e1) (op e1 e1))) (not (= (op e0 e1) (op e2 e1)))) (not (= (op e0 e1) (op e3 e1)))) (not (= (op e0 e1) (op e4 e1)))) (not (= (op e1 e1) (op e2 e1)))) (not (= (op e1 e1) (op e3 e1)))) (not (= (op e1 e1) (op e4 e1))))) :rule and :premises (t635) :args (0))
-(step t.end (cl) :rule resolution :premises (nt636.0 t636))

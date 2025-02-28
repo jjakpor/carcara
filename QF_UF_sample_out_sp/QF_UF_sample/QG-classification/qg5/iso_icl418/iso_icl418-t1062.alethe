@@ -1,5 +1,0 @@
-(assume nt1062.0 (not (= (op (op e4 e3) (op e3 e4)) e4)))
-(assume t1060 (= (op (op e4 e3) (op e3 e4)) (op (op (op e3 e4) e4) (op e3 e4))))
-(assume t1061 (= (op (op (op e3 e4) e4) (op e3 e4)) e4))
-(step t1062 (cl (= (op (op e4 e3) (op e3 e4)) e4)) :rule trans :premises (t1060 t1061))
-(step t.end (cl) :rule resolution :premises (nt1062.0 t1062))

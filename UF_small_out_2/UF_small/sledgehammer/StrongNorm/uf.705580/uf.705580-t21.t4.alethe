@@ -1,6 +1,0 @@
-(assume nt21.0 (not (= (forall ((?v0 S6) (?v2 S4) (?v3 S5)) (or (not (= ?v0 ?v0)) (= ?v3 (f177 (f10 (f11 (f12 f13 ?v2) ?v0) ?v3) ?v0)))) (forall ((?v0 S6) (?v2 S4) (?v3 S5)) (= ?v3 (f177 (f10 (f11 (f12 f13 ?v2) ?v0) ?v3) ?v0))))))
-(anchor :step t21 :args ((?v0 S6) (?v2 S4) (?v3 S5) (:= (?v0 S6) ?v0) (:= (?v2 S4) ?v2) (:= (?v3 S5) ?v3)))
-(step st21.t4 (cl (= (= ?v3 (f177 (f10 (f11 (f12 f13 ?v2) ?v0) ?v3) ?v0)) (= ?v3 (f177 (f10 (f11 (f12 f13 ?v2) ?v0) ?v3) ?v0)))) :rule refl)
-(step t21.t7 (cl (= (or (not (= ?v0 ?v0)) (= ?v3 (f177 (f10 (f11 (f12 f13 ?v2) ?v0) ?v3) ?v0))) (= ?v3 (f177 (f10 (f11 (f12 f13 ?v2) ?v0) ?v3) ?v0)))) :rule trust)
-(step t21 (cl (= (forall ((?v0 S6) (?v2 S4) (?v3 S5)) (or (not (= ?v0 ?v0)) (= ?v3 (f177 (f10 (f11 (f12 f13 ?v2) ?v0) ?v3) ?v0)))) (forall ((?v0 S6) (?v2 S4) (?v3 S5)) (= ?v3 (f177 (f10 (f11 (f12 f13 ?v2) ?v0) ?v3) ?v0))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt21.0 t21))

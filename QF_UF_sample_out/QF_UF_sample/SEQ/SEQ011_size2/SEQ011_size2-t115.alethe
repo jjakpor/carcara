@@ -1,5 +1,0 @@
-(assume nt115.0 (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))))
-(assume nt115.1 (not (not (= c_1 (f5 c_0)))))
-(assume nt115.2 (not (not (= c_1 (f6 c_0)))))
-(step t115 (cl (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))) (not (= c_1 (f5 c_0))) (not (= c_1 (f6 c_0)))) :rule and_neg)
-(step t.end (cl) :rule resolution :premises (nt115.0 nt115.1 nt115.2 t115))

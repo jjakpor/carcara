@@ -1,7 +1,0 @@
-(assume nst209.0 (not (not (models empty (orR (notR (pR aR)) (notR (qR bR)))))))
-(assume t45 (= (models empty (orR (notR (pR aR)) (notR (qR bR)))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR))))))
-(assume t200 (or (not (models empty (orR (notR (pR aR)) (notR (qR bR))))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR)))) (not (= (models empty (orR (notR (pR aR)) (notR (qR bR)))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR))))))))
-(assume t208 (not (or (models empty (notR (pR aR))) (models empty (notR (qR bR))))))
-(step t200' (cl (not (models empty (orR (notR (pR aR)) (notR (qR bR))))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR)))) (not (= (models empty (orR (notR (pR aR)) (notR (qR bR)))) (or (models empty (notR (pR aR))) (models empty (notR (qR bR))))))) :rule or :premises (t200))
-(step st209 (cl (not (models empty (orR (notR (pR aR)) (notR (qR bR)))))) :rule resolution :premises (t200' t208 t45))
-(step t.end (cl) :rule resolution :premises (nst209.0 st209))

@@ -1,4 +1,0 @@
-(assume nt240.0 (not (not (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0)))))
-(assume nt240.1 (not (p1 (f6 c_0) c_0)))
-(step t240 (cl (not (and (not (p1 (f7 c_0) c_0)) (= c_1 (f7 c_0)) (= c_1 (f6 c_0)) (p1 (f6 c_0) c_0))) (p1 (f6 c_0) c_0)) :rule and_pos :args (3))
-(step t.end (cl) :rule resolution :premises (nt240.0 nt240.1 t240))

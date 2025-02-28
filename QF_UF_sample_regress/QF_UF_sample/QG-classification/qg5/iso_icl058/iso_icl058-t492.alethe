@@ -1,5 +1,0 @@
-(assume nst492.0 (not (= (not (= (op e4 e4) e4)) (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0)))))))
-(assume t490 (= (not (= (op e4 e4) e4)) (not (= e4 (op e4 e4)))))
-(assume t491 (= (not (= e4 (op e4 e4))) (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0))))))
-(step st492 (cl (= (not (= (op e4 e4) e4)) (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0)))))) :rule trans :premises (t490 t491))
-(step t.end (cl) :rule resolution :premises (nst492.0 st492))

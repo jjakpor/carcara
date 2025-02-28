@@ -1,5 +1,0 @@
-(assume nst170.0 (not (= (union$0 FP_2$0 Alloc_1$0) (union$0 (union$0 (setminus$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0) (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0)) (union$0 (intersection$0 Alloc_1$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0)) (setminus$0 Alloc_1$0 Alloc$0))) Alloc_1$0))))
-(assume t29 (= Alloc_1$0 Alloc_1$0))
-(assume t169 (= FP_2$0 (union$0 (setminus$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0) (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0)) (union$0 (intersection$0 Alloc_1$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0)) (setminus$0 Alloc_1$0 Alloc$0)))))
-(step st170 (cl (= (union$0 FP_2$0 Alloc_1$0) (union$0 (union$0 (setminus$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0) (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0)) (union$0 (intersection$0 Alloc_1$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0)) (setminus$0 Alloc_1$0 Alloc$0))) Alloc_1$0))) :rule cong :premises (t169 t29))
-(step t.end (cl) :rule resolution :premises (nst170.0 st170))

@@ -1,5 +1,0 @@
-(assume nst141.0 (not (not (= y$26 (= y$26 true)))))
-(assume nst141.1 (not (not y$26)))
-(assume nst141.2 (not (= y$26 true)))
-(step st141 (cl (not (= y$26 (= y$26 true))) (not y$26) (= y$26 true)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst141.0 nst141.1 nst141.2 st141))

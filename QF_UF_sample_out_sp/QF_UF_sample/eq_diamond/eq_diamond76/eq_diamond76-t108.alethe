@@ -1,6 +1,0 @@
-(assume nt108.0 (not (= x3 x4)))
-(assume t107 (or (= x3 x4) (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))))
-(assume t103 (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))
-(step t107' (cl (= x3 x4) (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))) :rule or :premises (t107))
-(step t108 (cl (= x3 x4)) :rule resolution :premises (t107' t103))
-(step t.end (cl) :rule resolution :premises (nt108.0 t108))

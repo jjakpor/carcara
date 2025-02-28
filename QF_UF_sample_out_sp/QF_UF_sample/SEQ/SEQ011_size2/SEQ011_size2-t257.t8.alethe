@@ -1,4 +1,0 @@
-(assume nt257.t8.0 (not (= (f7 c_0) c_0)))
-(assume t257.a2 (= c_0 (f7 c_0)))
-(step t257.t8 (cl (= (f7 c_0) c_0)) :rule symm :premises (t257.a2))
-(step t.end (cl) :rule resolution :premises (nt257.t8.0 t257.t8))

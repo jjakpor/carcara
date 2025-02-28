@@ -1,3 +1,0 @@
-(assume nst1.0 (not (= (not prt) (not prt))))
-(step st1 (cl (= (not prt) (not prt))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst1.0 st1))

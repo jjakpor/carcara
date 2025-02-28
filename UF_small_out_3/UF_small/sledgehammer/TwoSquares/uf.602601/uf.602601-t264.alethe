@@ -1,5 +1,0 @@
-(assume nst264.0 (not (not (forall ((?v0 S3)) (= ?v0 (f5 f9 ?v0))))))
-(assume nst264.1 (not (= (f5 f11 (f5 f11 f25)) (f5 f9 (f5 f11 (f5 f11 f25))))))
-(assume t263 (or (not (forall ((?v0 S3)) (= ?v0 (f5 f9 ?v0)))) (= (f5 f11 (f5 f11 f25)) (f5 f9 (f5 f11 (f5 f11 f25))))))
-(step st264 (cl (not (forall ((?v0 S3)) (= ?v0 (f5 f9 ?v0)))) (= (f5 f11 (f5 f11 f25)) (f5 f9 (f5 f11 (f5 f11 f25))))) :rule or :premises (t263))
-(step t.end (cl) :rule resolution :premises (nst264.0 nst264.1 st264))

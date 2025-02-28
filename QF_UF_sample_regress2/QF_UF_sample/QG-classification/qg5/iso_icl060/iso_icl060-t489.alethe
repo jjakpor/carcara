@@ -1,5 +1,0 @@
-(assume nst489.0 (not (= (= (op e2 e2) e2) (= (op e1 e3) (op (op e1 e3) (op e1 e3))))))
-(assume t162 (= (= e2 (op e2 e2)) (= (op e1 e3) (op (op e1 e3) (op e1 e3)))))
-(assume t488 (= (= (op e2 e2) e2) (= e2 (op e2 e2))))
-(step st489 (cl (= (= (op e2 e2) e2) (= (op e1 e3) (op (op e1 e3) (op e1 e3))))) :rule trans :premises (t488 t162))
-(step t.end (cl) :rule resolution :premises (nst489.0 st489))

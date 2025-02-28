@@ -1,4 +1,0 @@
-(assume nt284.0 (not (= (op e5 unit) e5)))
-(assume t283 (and (= (op unit e5) e5) (= (op e5 unit) e5)))
-(step t284 (cl (= (op e5 unit) e5)) :rule and :premises (t283) :args (1))
-(step t.end (cl) :rule resolution :premises (nt284.0 t284))

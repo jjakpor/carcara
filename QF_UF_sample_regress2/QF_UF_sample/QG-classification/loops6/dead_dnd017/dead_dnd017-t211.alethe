@@ -1,7 +1,0 @@
-(assume nst211.0 (not (not (= e0 (op e3 (op e3 e0))))))
-(assume t182 (or (not (= e3 (op e3 e0))) (= e3 (op e3 (op e3 e3))) (not (= e0 (op e3 (op e3 e0))))))
-(assume t191 (= e3 (op e3 e0)))
-(assume t210 (not (= e3 (op e3 (op e3 e3)))))
-(step t182' (cl (not (= e3 (op e3 e0))) (= e3 (op e3 (op e3 e3))) (not (= e0 (op e3 (op e3 e0))))) :rule or :premises (t182))
-(step st211 (cl (not (= e0 (op e3 (op e3 e0))))) :rule resolution :premises (t182' t191 t210))
-(step t.end (cl) :rule resolution :premises (nst211.0 st211))

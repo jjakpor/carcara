@@ -1,6 +1,0 @@
-(assume nt501.0 (not (= x43 x44)))
-(assume t500 (or (= x43 x44) (not (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))))))
-(assume t496 (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))))
-(step t500' (cl (= x43 x44) (not (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))))) :rule or :premises (t500))
-(step t501 (cl (= x43 x44)) :rule resolution :premises (t500' t496))
-(step t.end (cl) :rule resolution :premises (nt501.0 t501))

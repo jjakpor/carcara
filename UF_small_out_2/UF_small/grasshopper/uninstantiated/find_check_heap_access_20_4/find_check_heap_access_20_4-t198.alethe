@@ -1,6 +1,0 @@
-(assume nst198.0 (not (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)))))
-(assume nst198.1 (not (not (and (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))) (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)))))))
-(assume t197 (or (not (and (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))) (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))))) (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)))))
-(step t197' (cl (not (and (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))) (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))))) (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)))) :rule or :premises (t197))
-(step st198 (cl (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))) (not (and (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))) (not (in$0 x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0)))))) :rule reordering :premises (t197'))
-(step t.end (cl) :rule resolution :premises (nst198.0 nst198.1 st198))

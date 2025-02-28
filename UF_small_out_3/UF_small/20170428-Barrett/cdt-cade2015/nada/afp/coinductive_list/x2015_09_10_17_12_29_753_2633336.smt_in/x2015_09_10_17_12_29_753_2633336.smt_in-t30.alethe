@@ -1,8 +1,0 @@
-(assume nt30.0 (not (= (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (exists ((?v1 A$) (?v2 A_llist$)) (= ?v0 (lCons$ ?v1 ?v2))))) (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0)))))))))
-(anchor :step t30 :args ((?v0 A_llist$) (:= (?v0 A_llist$) ?v0)))
-(anchor :step t30 :args ((?v0 A_llist$) (:= (?v0 A_llist$) ?v0)))
-(step t30.t4 (cl (= (= (not (lnull$ ?v0)) (exists ((?v1 A$) (?v2 A_llist$)) (= ?v0 (lCons$ ?v1 ?v2)))) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0))))))) :rule trust)
-(step t30 (cl (= (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (exists ((?v1 A$) (?v2 A_llist$)) (= ?v0 (lCons$ ?v1 ?v2))))) (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0)))))))) :rule bind)
-(step t30.t4 (cl (= (= (not (lnull$ ?v0)) (exists ((?v1 A$) (?v2 A_llist$)) (= ?v0 (lCons$ ?v1 ?v2)))) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0))))))) :rule trust)
-(step t30 (cl (= (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (exists ((?v1 A$) (?v2 A_llist$)) (= ?v0 (lCons$ ?v1 ?v2))))) (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0)))))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt30.0 t30))

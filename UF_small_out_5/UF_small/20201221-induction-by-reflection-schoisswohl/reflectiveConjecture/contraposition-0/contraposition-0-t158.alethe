@@ -1,3 +1,0 @@
-(assume nst158.0 (not (= (not (= (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (models empty (orR (notR (pR aR)) (qR bR)))))) (not (= (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (models empty (orR (notR (pR aR)) (qR bR)))))))))
-(step st158 (cl (= (not (= (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (models empty (orR (notR (pR aR)) (qR bR)))))) (not (= (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (models empty (orR (notR (pR aR)) (qR bR)))))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst158.0 st158))

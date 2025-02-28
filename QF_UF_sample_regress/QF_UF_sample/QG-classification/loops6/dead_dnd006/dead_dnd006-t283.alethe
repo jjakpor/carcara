@@ -1,3 +1,0 @@
-(assume nst283.0 (not (= (not (= e5 (op e5 (op e5 e5)))) (not (= e5 (op e5 (op e5 e5)))))))
-(step st283 (cl (= (not (= e5 (op e5 (op e5 e5)))) (not (= e5 (op e5 (op e5 e5)))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst283.0 st283))

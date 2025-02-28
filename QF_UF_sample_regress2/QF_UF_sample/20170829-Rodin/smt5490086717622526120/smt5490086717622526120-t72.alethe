@@ -1,6 +1,0 @@
-(assume nst72.0 (not red_SR))
-(assume t56 (or red_MR red_SR))
-(assume t71 (not red_MR))
-(step t56' (cl red_MR red_SR) :rule or :premises (t56))
-(step st72 (cl red_SR) :rule resolution :premises (t56' t71))
-(step t.end (cl) :rule resolution :premises (nst72.0 st72))

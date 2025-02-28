@@ -1,5 +1,0 @@
-(assume nst34.0 (not (= y$70 (= y$v_at_table y$v_count))))
-(assume a36 (= y$70 (= y$n0s8 y$v_count)))
-(assume t33 (= (= y$n0s8 y$v_count) (= y$v_at_table y$v_count)))
-(step st34 (cl (= y$70 (= y$v_at_table y$v_count))) :rule trans :premises (a36 t33))
-(step t.end (cl) :rule resolution :premises (nst34.0 st34))

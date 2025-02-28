@@ -1,3 +1,0 @@
-(assume nst40.0 (not (= (not (= x51 x52)) (not (= x51 x52)))))
-(step st40 (cl (= (not (= x51 x52)) (not (= x51 x52)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst40.0 st40))

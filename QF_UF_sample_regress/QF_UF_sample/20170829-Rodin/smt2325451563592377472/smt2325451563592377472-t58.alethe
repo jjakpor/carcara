@@ -1,5 +1,0 @@
-(assume nst58.0 (not (or (not car) (not clk))))
-(assume nst58.1 (not clk))
-(assume t57 (or (or (not car) (not clk)) clk))
-(step st58 (cl (or (not car) (not clk)) clk) :rule or :premises (t57))
-(step t.end (cl) :rule resolution :premises (nst58.0 nst58.1 st58))

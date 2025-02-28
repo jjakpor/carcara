@@ -1,5 +1,0 @@
-(assume nt227.t15.0 (not (= (p1 (f6 c_0) c_0) true)))
-(assume nt227.t15.1 (not (not (p1 (f6 c_0) c_0))))
-(assume t227.t14 (= (= (p1 (f6 c_0) c_0) true) (p1 (f6 c_0) c_0)))
-(step t227.t15 (cl (= (p1 (f6 c_0) c_0) true) (not (p1 (f6 c_0) c_0))) :rule equiv2 :premises (t227.t14))
-(step t.end (cl) :rule resolution :premises (nt227.t15.0 nt227.t15.1 t227.t15))

@@ -1,6 +1,0 @@
-(assume nt798.0 (not (= x53 x54)))
-(assume nt798.1 (not (not (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))))))
-(assume t797 (or (not (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54)))) (= x53 x54)))
-(step t797' (cl (not (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54)))) (= x53 x54)) :rule or :premises (t797))
-(step t798 (cl (= x53 x54) (not (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))))) :rule reordering :premises (t797'))
-(step t.end (cl) :rule resolution :premises (nt798.0 nt798.1 t798))

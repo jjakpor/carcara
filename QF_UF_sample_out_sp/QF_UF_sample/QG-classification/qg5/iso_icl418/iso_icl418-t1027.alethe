@@ -1,8 +1,0 @@
-(assume nt1027.0 (not (= (or (= (op e3 e4) e0) (= (op e3 e3) e0) (= (op e3 e2) e0) (= (op e3 e0) e0) (= (op e3 e1) e0)) (or (= e0 (op e3 e4)) (= e0 (op e3 e3)) (= e0 (op e3 e2)) (= e0 (op e3 e0)) (= e0 (op e3 e1))))))
-(assume t1025 (= (= (op e3 e4) e0) (= e0 (op e3 e4))))
-(assume t8 (= (= (op e3 e3) e0) (= e0 (op e3 e3))))
-(assume t756 (= (= (op e3 e2) e0) (= e0 (op e3 e2))))
-(assume t859 (= (= (op e3 e0) e0) (= e0 (op e3 e0))))
-(assume t1026 (= (= (op e3 e1) e0) (= e0 (op e3 e1))))
-(step t1027 (cl (= (or (= (op e3 e4) e0) (= (op e3 e3) e0) (= (op e3 e2) e0) (= (op e3 e0) e0) (= (op e3 e1) e0)) (or (= e0 (op e3 e4)) (= e0 (op e3 e3)) (= e0 (op e3 e2)) (= e0 (op e3 e0)) (= e0 (op e3 e1))))) :rule cong :premises (t1025 t8 t756 t859 t1026))
-(step t.end (cl) :rule resolution :premises (nt1027.0 t1027))

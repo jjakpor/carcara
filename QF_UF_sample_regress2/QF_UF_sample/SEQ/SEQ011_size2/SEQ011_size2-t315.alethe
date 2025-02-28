@@ -1,6 +1,0 @@
-(assume nst315.0 (not (not (p4 c_0))))
-(assume nst315.1 (not (not (p1 (f7 c_0) c_0))))
-(assume t314 (or (not (p1 (f7 c_0) c_0)) (not (p4 c_0))))
-(step t314' (cl (not (p1 (f7 c_0) c_0)) (not (p4 c_0))) :rule or :premises (t314))
-(step st315 (cl (not (p4 c_0)) (not (p1 (f7 c_0) c_0))) :rule reordering :premises (t314'))
-(step t.end (cl) :rule resolution :premises (nst315.0 nst315.1 st315))

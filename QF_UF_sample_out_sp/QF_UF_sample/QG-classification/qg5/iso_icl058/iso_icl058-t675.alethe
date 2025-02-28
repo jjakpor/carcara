@@ -1,4 +1,0 @@
-(assume nt675.0 (not (not (= (op e2 e0) (op e2 e2)))))
-(assume t674 (and (not (= (op e2 e0) (op e2 e1))) (not (= (op e2 e0) (op e2 e2)))))
-(step t675 (cl (not (= (op e2 e0) (op e2 e2)))) :rule and :premises (t674) :args (1))
-(step t.end (cl) :rule resolution :premises (nt675.0 t675))

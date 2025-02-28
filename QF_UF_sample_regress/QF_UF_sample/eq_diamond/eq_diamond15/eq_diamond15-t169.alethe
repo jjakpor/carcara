@@ -1,6 +1,0 @@
-(assume nst169.0 (not (not (= x2 x3))))
-(assume t13 (or (not (= (= x2 x3) false)) (not (= x2 x3))))
-(assume t168 (= (= x2 x3) false))
-(step t13' (cl (not (= (= x2 x3) false)) (not (= x2 x3))) :rule or :premises (t13))
-(step st169 (cl (not (= x2 x3))) :rule resolution :premises (t13' t168))
-(step t.end (cl) :rule resolution :premises (nst169.0 st169))

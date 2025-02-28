@@ -1,5 +1,0 @@
-(assume nst71.0 (not (= (= c_init$0 curr_init$0) (= c_init$0 prv_5$0))))
-(assume t36 (= curr_init$0 prv_5$0))
-(assume t61 (= c_init$0 c_init$0))
-(step st71 (cl (= (= c_init$0 curr_init$0) (= c_init$0 prv_5$0))) :rule cong :premises (t61 t36))
-(step t.end (cl) :rule resolution :premises (nst71.0 st71))

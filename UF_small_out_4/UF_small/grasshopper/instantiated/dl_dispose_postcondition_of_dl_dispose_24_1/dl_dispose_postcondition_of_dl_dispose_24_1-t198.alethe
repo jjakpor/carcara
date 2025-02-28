@@ -1,3 +1,0 @@
-(assume nst198.0 (not (not false)))
-(step st198 (cl (not false)) :rule false)
-(step t.end (cl) :rule resolution :premises (nst198.0 st198))

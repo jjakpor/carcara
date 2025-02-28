@@ -1,5 +1,0 @@
-(assume nst154.0 (not (= (=> (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (= (fun_app$e uu$ (lhd$ xs$)) (ldropn$ n$))) (=> (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$)))))))
-(assume t152 (= (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$)))))
-(assume t153 (= (= (fun_app$e uu$ (lhd$ xs$)) (ldropn$ n$)) (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$)))))
-(step st154 (cl (= (=> (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (= (fun_app$e uu$ (lhd$ xs$)) (ldropn$ n$))) (=> (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$)))))) :rule cong :premises (t152 t153))
-(step t.end (cl) :rule resolution :premises (nst154.0 st154))

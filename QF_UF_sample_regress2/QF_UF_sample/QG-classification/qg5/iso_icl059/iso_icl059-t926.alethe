@@ -1,4 +1,0 @@
-(assume nst926.0 (not (and (not (= (op e0 e0) (op e0 e1))) (not (= (op e0 e0) (op e0 e2))))))
-(assume t913 (and (and (not (= (op e0 e0) (op e0 e1))) (not (= (op e0 e0) (op e0 e2)))) (not (= (op e0 e0) (op e0 e3)))))
-(step st926 (cl (and (not (= (op e0 e0) (op e0 e1))) (not (= (op e0 e0) (op e0 e2))))) :rule and :premises (t913) :args (0))
-(step t.end (cl) :rule resolution :premises (nst926.0 st926))

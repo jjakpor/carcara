@@ -1,6 +1,0 @@
-(assume nt84.t245.0 (not (= x22 x23)))
-(assume nt84.t245.1 (not (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))))))
-(assume t84.t244 (or (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23)))) (= x22 x23)))
-(step t84.t244' (cl (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23)))) (= x22 x23)) :rule or :premises (t84.t244))
-(step t84.t245 (cl (= x22 x23) (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))))) :rule reordering :premises (t84.t244'))
-(step t.end (cl) :rule resolution :premises (nt84.t245.0 nt84.t245.1 t84.t245))

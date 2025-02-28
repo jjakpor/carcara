@@ -1,7 +1,0 @@
-(assume nst203.0 (not (= sk_?X_75$0 (union$0 sk_?X_78$0 sk_?X_76$0))))
-(assume a30 (= sk_?X_75$0 (union$0 sk_?X_77$0 sk_?X_76$0)))
-(assume t199 (or (not (= (= sk_?X_75$0 (union$0 sk_?X_77$0 sk_?X_76$0)) (= sk_?X_75$0 (union$0 sk_?X_78$0 sk_?X_76$0)))) (not (= sk_?X_75$0 (union$0 sk_?X_77$0 sk_?X_76$0))) (= sk_?X_75$0 (union$0 sk_?X_78$0 sk_?X_76$0))))
-(assume t202 (= (= sk_?X_75$0 (union$0 sk_?X_77$0 sk_?X_76$0)) (= sk_?X_75$0 (union$0 sk_?X_78$0 sk_?X_76$0))))
-(step t199' (cl (not (= (= sk_?X_75$0 (union$0 sk_?X_77$0 sk_?X_76$0)) (= sk_?X_75$0 (union$0 sk_?X_78$0 sk_?X_76$0)))) (not (= sk_?X_75$0 (union$0 sk_?X_77$0 sk_?X_76$0))) (= sk_?X_75$0 (union$0 sk_?X_78$0 sk_?X_76$0))) :rule or :premises (t199))
-(step st203 (cl (= sk_?X_75$0 (union$0 sk_?X_78$0 sk_?X_76$0))) :rule resolution :premises (t199' t202 a30))
-(step t.end (cl) :rule resolution :premises (nst203.0 st203))

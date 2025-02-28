@@ -1,5 +1,0 @@
-(assume nst513.0 (not (not (= (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46)))))))
-(assume nst513.1 (not (not (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))))))
-(assume nst513.2 (not (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46)))))
-(step st513 (cl (not (= (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46))))) (not (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46)))) (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst513.0 nst513.1 nst513.2 st513))

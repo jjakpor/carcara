@@ -1,4 +1,0 @@
-(assume nst1057.0 (not (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2))))
-(assume t661 (and (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2)) (= (op (op e1 e3) e1) e3)))
-(step st1057 (cl (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2))) :rule and :premises (t661) :args (0))
-(step t.end (cl) :rule resolution :premises (nst1057.0 st1057))

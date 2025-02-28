@@ -1,8 +1,0 @@
-(assume nst940.0 (not (= (and (= (op e1 e4) (op e4 e1)) (= (op e1 e3) (op e3 e1)) (= (op e1 e2) (op e2 e1)) (= (op e1 e0) (op e0 e1)) (= (op e1 e1) (op e1 e1))) (and (= (op e1 e4) (op e4 e1)) (= (op e1 e3) (op e3 e1)) (= (op e1 e2) (op e2 e1)) (= (op e0 e1) (op e1 e0)) true))))
-(assume t935 (= (= (op e1 e4) (op e4 e1)) (= (op e1 e4) (op e4 e1))))
-(assume t936 (= (= (op e1 e3) (op e3 e1)) (= (op e1 e3) (op e3 e1))))
-(assume t937 (= (= (op e1 e2) (op e2 e1)) (= (op e1 e2) (op e2 e1))))
-(assume t938 (= (= (op e1 e0) (op e0 e1)) (= (op e0 e1) (op e1 e0))))
-(assume t939 (= (= (op e1 e1) (op e1 e1)) true))
-(step st940 (cl (= (and (= (op e1 e4) (op e4 e1)) (= (op e1 e3) (op e3 e1)) (= (op e1 e2) (op e2 e1)) (= (op e1 e0) (op e0 e1)) (= (op e1 e1) (op e1 e1))) (and (= (op e1 e4) (op e4 e1)) (= (op e1 e3) (op e3 e1)) (= (op e1 e2) (op e2 e1)) (= (op e0 e1) (op e1 e0)) true))) :rule cong :premises (t935 t936 t937 t938 t939))
-(step t.end (cl) :rule resolution :premises (nst940.0 st940))

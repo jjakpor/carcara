@@ -1,5 +1,0 @@
-(assume nt84.t357.0 (not (not (= (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34)))))))
-(assume nt84.t357.1 (not (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))))
-(assume nt84.t357.2 (not (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34)))))
-(step t84.t357 (cl (not (= (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34))))) (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34)))) (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt84.t357.0 nt84.t357.1 nt84.t357.2 t84.t357))

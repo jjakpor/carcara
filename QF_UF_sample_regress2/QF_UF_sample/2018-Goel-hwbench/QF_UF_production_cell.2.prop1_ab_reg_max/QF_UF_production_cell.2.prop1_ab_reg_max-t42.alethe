@@ -1,3 +1,0 @@
-(assume nst42.0 (not (= y$v_done y$v_done)))
-(step st42 (cl (= y$v_done y$v_done)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst42.0 st42))

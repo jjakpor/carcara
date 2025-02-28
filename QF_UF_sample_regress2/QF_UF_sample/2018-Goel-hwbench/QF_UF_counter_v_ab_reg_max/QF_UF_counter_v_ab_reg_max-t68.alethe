@@ -1,3 +1,0 @@
-(assume nst68.0 (not (= y$X$next y$X$next)))
-(step st68 (cl (= y$X$next y$X$next)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst68.0 st68))

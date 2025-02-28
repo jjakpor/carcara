@@ -1,6 +1,0 @@
-(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (difference b a))) (member ?x (difference b d))))))
-(assume nst53.0 (not (not (= (forall ((?x Elem) (?s1 Set) (?s2 Set)) (= (member ?x (difference ?s1 ?s2)) (and (member ?x ?s1) (not (member ?x ?s2))))) (forall ((?x Elem) (?s1 Set) (?s2 Set)) (= (and (member ?x ?s1) (not (member ?x ?s2))) (member ?x (difference ?s1 ?s2))))))))
-(assume nst53.1 (not (not (forall ((?x Elem) (?s1 Set) (?s2 Set)) (= (member ?x (difference ?s1 ?s2)) (and (member ?x ?s1) (not (member ?x ?s2))))))))
-(assume nst53.2 (not (forall ((?x Elem) (?s1 Set) (?s2 Set)) (= (and (member ?x ?s1) (not (member ?x ?s2))) (member ?x (difference ?s1 ?s2))))))
-(step st53 (cl (not (= (forall ((?x Elem) (?s1 Set) (?s2 Set)) (= (member ?x (difference ?s1 ?s2)) (and (member ?x ?s1) (not (member ?x ?s2))))) (forall ((?x Elem) (?s1 Set) (?s2 Set)) (= (and (member ?x ?s1) (not (member ?x ?s2))) (member ?x (difference ?s1 ?s2)))))) (not (forall ((?x Elem) (?s1 Set) (?s2 Set)) (= (member ?x (difference ?s1 ?s2)) (and (member ?x ?s1) (not (member ?x ?s2)))))) (forall ((?x Elem) (?s1 Set) (?s2 Set)) (= (and (member ?x ?s1) (not (member ?x ?s2))) (member ?x (difference ?s1 ?s2))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst53.0 nst53.1 nst53.2 st53))

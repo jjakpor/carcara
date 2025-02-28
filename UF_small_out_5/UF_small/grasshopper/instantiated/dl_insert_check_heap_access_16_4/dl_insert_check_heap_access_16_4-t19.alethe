@@ -1,8 +1,0 @@
-(assume nst19.0 (not (= (dlseg_domain$0 next$0 prev$0 a$0 null$0 null$0 b$0) (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0))))
-(assume t10 (= next$0 next$0))
-(assume t11 (= prev$0 prev$0))
-(assume t16 (= null$0 (read$0 next$0 elt$0)))
-(assume t17 (= a$0 (read$0 next$0 elt$0)))
-(assume t18 (= b$0 b$0))
-(step st19 (cl (= (dlseg_domain$0 next$0 prev$0 a$0 null$0 null$0 b$0) (dlseg_domain$0 next$0 prev$0 (read$0 next$0 elt$0) (read$0 next$0 elt$0) (read$0 next$0 elt$0) b$0))) :rule cong :premises (t10 t11 t17 t16 t16 t18))
-(step t.end (cl) :rule resolution :premises (nst19.0 st19))

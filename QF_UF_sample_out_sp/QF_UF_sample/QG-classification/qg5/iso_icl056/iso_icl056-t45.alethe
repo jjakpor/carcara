@@ -1,4 +1,0 @@
-(assume nt45.0 (not (= e4 (op e2 e3))))
-(assume a10 (and (and (and (= e0 (op e4 e4)) (= e2 (op e1 e1))) (= e3 (op e1 e2))) (= e4 (op e2 e3))))
-(step t45 (cl (= e4 (op e2 e3))) :rule and :premises (a10) :args (1))
-(step t.end (cl) :rule resolution :premises (nt45.0 t45))

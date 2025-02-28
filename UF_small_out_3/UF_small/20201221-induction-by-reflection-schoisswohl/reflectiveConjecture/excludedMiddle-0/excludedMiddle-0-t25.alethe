@@ -1,5 +1,0 @@
-(assume nst25.0 (not (not (forall ((env env) (phi form) (psi form)) (= (models env (orR phi psi)) (or (models env phi) (models env psi)))))))
-(assume nst25.1 (not (= (models empty (orR (pR aR) (notR (pR aR)))) (or (models empty (pR aR)) (models empty (notR (pR aR)))))))
-(assume t24 (or (not (forall ((env env) (phi form) (psi form)) (= (models env (orR phi psi)) (or (models env phi) (models env psi))))) (= (models empty (orR (pR aR) (notR (pR aR)))) (or (models empty (pR aR)) (models empty (notR (pR aR)))))))
-(step st25 (cl (not (forall ((env env) (phi form) (psi form)) (= (models env (orR phi psi)) (or (models env phi) (models env psi))))) (= (models empty (orR (pR aR) (notR (pR aR)))) (or (models empty (pR aR)) (models empty (notR (pR aR)))))) :rule or :premises (t24))
-(step t.end (cl) :rule resolution :premises (nst25.0 nst25.1 st25))

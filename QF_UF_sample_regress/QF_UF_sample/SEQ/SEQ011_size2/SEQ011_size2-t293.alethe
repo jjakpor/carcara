@@ -1,8 +1,0 @@
-(assume nst293.0 (not (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0)))))
-(assume nst293.1 (not (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0)))))
-(assume t291 (or (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (= (f6 c_0) (f5 c_0))))
-(assume t292 (or (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (not (= (f6 c_0) (f5 c_0)))))
-(step t291' (cl (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (= (f6 c_0) (f5 c_0))) :rule or :premises (t291))
-(step t292' (cl (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (not (= (f6 c_0) (f5 c_0)))) :rule or :premises (t292))
-(step st293 (cl (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0)))) :rule resolution :premises (t291' t292'))
-(step t.end (cl) :rule resolution :premises (nst293.0 nst293.1 st293))

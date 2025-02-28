@@ -1,4 +1,0 @@
-(assume t706 (and (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))) (=> (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))) (= x62 x63))))
-(assume nt707.0 (not (=> (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))) (= x62 x63))))
-(step t707 (cl (=> (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))) (= x62 x63))) :rule and :premises (t706) :args (1))
-(step t.end (cl) :rule resolution :premises (nt707.0 t707))

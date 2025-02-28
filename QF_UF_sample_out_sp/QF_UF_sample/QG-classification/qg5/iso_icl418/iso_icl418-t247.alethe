@@ -1,5 +1,0 @@
-(assume nt247.0 (not (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))) false)))
-(assume t233 (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))) (= (op e3 e4) (op e4 e3))))
-(assume t246 (= (= (op e3 e4) (op e4 e3)) false))
-(step t247 (cl (= (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))) false)) :rule trans :premises (t233 t246))
-(step t.end (cl) :rule resolution :premises (nt247.0 t247))

@@ -1,3 +1,0 @@
-(assume nst175.0 (not (= (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))) (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))))))
-(step st175 (cl (= (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))) (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst175.0 st175))

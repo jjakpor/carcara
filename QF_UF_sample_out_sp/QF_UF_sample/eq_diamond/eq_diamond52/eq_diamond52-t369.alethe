@@ -1,4 +1,0 @@
-(assume nt369.0 (not (=> (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (= x32 x33))))
-(assume t368 (and (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (=> (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (= x32 x33))))
-(step t369 (cl (=> (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (= x32 x33))) :rule and :premises (t368) :args (1))
-(step t.end (cl) :rule resolution :premises (nt369.0 t369))

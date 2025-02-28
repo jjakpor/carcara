@@ -1,3 +1,0 @@
-(assume nst186.0 (not (= (= (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (and (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16)))) true)))
-(step st186 (cl (= (= (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (and (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst186.0 st186))

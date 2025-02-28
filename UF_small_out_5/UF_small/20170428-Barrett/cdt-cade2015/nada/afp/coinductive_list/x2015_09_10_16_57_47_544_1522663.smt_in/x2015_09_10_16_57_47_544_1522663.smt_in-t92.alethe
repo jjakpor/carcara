@@ -1,7 +1,0 @@
-(assume nst92.0 (not (= (fun_app$c (ldropn$ (suc$ n$)) xs$) (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$))))
-(assume nst92.1 (not (not (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$)))))
-(assume nst92.2 (not (not (= (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)))))))
-(assume nst92.3 (not (not (= lNil$ (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)))))))
-(assume t91 (or (= (fun_app$c (ldropn$ (suc$ n$)) xs$) (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$)) (not (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$))) (not (= (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))))) (not (= lNil$ (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)))))))
-(step st92 (cl (= (fun_app$c (ldropn$ (suc$ n$)) xs$) (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$)) (not (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$))) (not (= (fun_app$c (fun_app$bc (case_llist$ lNil$) uu$) xs$) (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$))))) (not (= lNil$ (ite (fun_app$q lnull$d xs$) lNil$ (fun_app$c (fun_app$e uu$ (lhd$ xs$)) (ltl$ xs$)))))) :rule or :premises (t91))
-(step t.end (cl) :rule resolution :premises (nst92.0 nst92.1 nst92.2 nst92.3 st92))

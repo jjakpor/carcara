@@ -1,5 +1,0 @@
-(assume nst51.0 (not (= sk_FP$0 (union$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)) (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))
-(assume t48 (= sk_FP$0 (union$0 sk_?X_3$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))
-(assume t50 (= (union$0 sk_?X_3$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (union$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)) (lseg_domain$0 next$0 cp_2$0 cp_2$0))))
-(step st51 (cl (= sk_FP$0 (union$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)) (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) :rule trans :premises (t48 t50))
-(step t.end (cl) :rule resolution :premises (nst51.0 st51))

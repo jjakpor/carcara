@@ -1,8 +1,0 @@
-(assume nt324.0 (not (= (or (= (op e4 e4) e3) (= (op e4 e3) e3) (= (op e4 e2) e3) (= (op e4 e0) e3) (= (op e4 e1) e3)) (or (= e3 (op e4 e4)) (= e3 (op e4 e3)) (= e3 (op e4 e2)) (= e3 (op e4 e0)) (= e3 (op e4 e1))))))
-(assume t320 (= (= (op e4 e4) e3) (= e3 (op e4 e4))))
-(assume t321 (= (= (op e4 e3) e3) (= e3 (op e4 e3))))
-(assume t322 (= (= (op e4 e2) e3) (= e3 (op e4 e2))))
-(assume t6 (= (= (op e4 e0) e3) (= e3 (op e4 e0))))
-(assume t323 (= (= (op e4 e1) e3) (= e3 (op e4 e1))))
-(step t324 (cl (= (or (= (op e4 e4) e3) (= (op e4 e3) e3) (= (op e4 e2) e3) (= (op e4 e0) e3) (= (op e4 e1) e3)) (or (= e3 (op e4 e4)) (= e3 (op e4 e3)) (= e3 (op e4 e2)) (= e3 (op e4 e0)) (= e3 (op e4 e1))))) :rule cong :premises (t320 t321 t322 t6 t323))
-(step t.end (cl) :rule resolution :premises (nt324.0 t324))

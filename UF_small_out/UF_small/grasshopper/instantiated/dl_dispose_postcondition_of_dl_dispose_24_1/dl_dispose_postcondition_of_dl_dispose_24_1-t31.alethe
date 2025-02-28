@@ -1,5 +1,0 @@
-(assume nst31.0 (not (not (= (= sk_?X_3$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 null$0 b$0)) (= sk_?X_3$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0))))))
-(assume nst31.1 (not (not (= sk_?X_3$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 null$0 b$0)))))
-(assume nst31.2 (not (= sk_?X_3$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0))))
-(step st31 (cl (not (= (= sk_?X_3$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 null$0 b$0)) (= sk_?X_3$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0)))) (not (= sk_?X_3$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 null$0 b$0))) (= sk_?X_3$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst31.0 nst31.1 nst31.2 st31))

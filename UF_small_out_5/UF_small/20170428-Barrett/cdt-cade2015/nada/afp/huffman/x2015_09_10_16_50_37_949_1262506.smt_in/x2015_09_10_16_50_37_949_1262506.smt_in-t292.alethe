@@ -1,7 +1,0 @@
-(assume nst292.0 (not (not (= b$ d$))))
-(assume a4 (not (= c$ d$)))
-(assume t256 (= b$ c$))
-(assume t291 (or (= c$ d$) (not (= b$ c$)) (not (= b$ d$))))
-(step t291' (cl (= c$ d$) (not (= b$ c$)) (not (= b$ d$))) :rule or :premises (t291))
-(step st292 (cl (not (= b$ d$))) :rule resolution :premises (t291' a4 t256))
-(step t.end (cl) :rule resolution :premises (nst292.0 st292))

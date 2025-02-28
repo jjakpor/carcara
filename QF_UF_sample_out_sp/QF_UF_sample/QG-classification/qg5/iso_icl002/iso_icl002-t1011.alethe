@@ -1,8 +1,0 @@
-(assume nt1011.0 (not (= (or (= e1 (op e4 e2)) (= e1 (op e3 e2)) (= e1 (op e2 e2)) (= e1 (op e0 e2)) (= e1 (op e1 e2))) (or (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))) (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op e0 (op e0 e0)) e0))) (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) e0))) (= (op e0 (op e0 e0)) (op e0 (op (op e0 (op e0 e0)) e0))) (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)))))))
-(assume t1008 (= (= e1 (op e4 e2)) (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0)))))
-(assume t68 (= (= e1 (op e3 e2)) (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op e0 (op e0 e0)) e0)))))
-(assume t208 (= (= e1 (op e2 e2)) (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) e0)))))
-(assume t1009 (= (= e1 (op e0 e2)) (= (op e0 (op e0 e0)) (op e0 (op (op e0 (op e0 e0)) e0)))))
-(assume t1010 (= (= e1 (op e1 e2)) (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)))))
-(step t1011 (cl (= (or (= e1 (op e4 e2)) (= e1 (op e3 e2)) (= e1 (op e2 e2)) (= e1 (op e0 e2)) (= e1 (op e1 e2))) (or (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))) (= (op e0 (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op e0 (op e0 e0)) e0))) (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) e0))) (= (op e0 (op e0 e0)) (op e0 (op (op e0 (op e0 e0)) e0))) (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)))))) :rule cong :premises (t1008 t68 t208 t1009 t1010))
-(step t.end (cl) :rule resolution :premises (nt1011.0 t1011))

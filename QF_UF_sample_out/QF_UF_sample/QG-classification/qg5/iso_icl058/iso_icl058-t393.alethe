@@ -1,3 +1,0 @@
-(assume nt393.0 (not (= (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))
-(step t393 (cl (= (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt393.0 t393))

@@ -1,5 +1,0 @@
-(assume nt826.0 (not (not (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))))))
-(assume nt826.1 (not (= x73 x74)))
-(assume t825 (=> (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (= x73 x74)))
-(step t826 (cl (not (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74)))) (= x73 x74)) :rule implies :premises (t825))
-(step t.end (cl) :rule resolution :premises (nt826.0 nt826.1 t826))

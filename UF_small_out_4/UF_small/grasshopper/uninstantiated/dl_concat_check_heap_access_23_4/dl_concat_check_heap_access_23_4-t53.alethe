@@ -1,3 +1,0 @@
-(assume nst53.0 (not (= (read$0 next$0 end1$0) (read$0 next$0 end1$0))))
-(step st53 (cl (= (read$0 next$0 end1$0) (read$0 next$0 end1$0))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst53.0 st53))

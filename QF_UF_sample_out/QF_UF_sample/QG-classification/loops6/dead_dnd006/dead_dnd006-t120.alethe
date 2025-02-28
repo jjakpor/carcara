@@ -1,5 +1,0 @@
-(assume nt120.0 (not (not (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))))))
-(assume nt120.1 (not (not (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)))))
-(assume nt120.2 (not (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))))
-(step t120 (cl (not (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))) (not (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit))) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt120.0 nt120.1 nt120.2 t120))

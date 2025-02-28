@@ -1,5 +1,0 @@
-(assume nst282.0 (not (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))))))
-(assume nst282.1 (not (= x24 x25)))
-(assume t281 (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25)))
-(step st282 (cl (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25)))) (= x24 x25)) :rule implies :premises (t281))
-(step t.end (cl) :rule resolution :premises (nst282.0 nst282.1 st282))

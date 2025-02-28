@@ -1,3 +1,0 @@
-(assume nst122.0 (not (= (= sk_?e$0 prv_2$0) (= prv_2$0 sk_?e$0))))
-(step st122 (cl (= (= sk_?e$0 prv_2$0) (= prv_2$0 sk_?e$0))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst122.0 st122))

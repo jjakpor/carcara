@@ -1,5 +1,0 @@
-(assume nt807.0 (not (not (= (or (and (= x72 y72) (= y72 x73)) (and (= x72 z72) (= z72 x73))) (and (or (and (= x72 y72) (= y72 x73)) (and (= x72 z72) (= z72 x73))) (=> (or (and (= x72 y72) (= y72 x73)) (and (= x72 z72) (= z72 x73))) (= x72 x73)))))))
-(assume nt807.1 (not (not (or (and (= x72 y72) (= y72 x73)) (and (= x72 z72) (= z72 x73))))))
-(assume nt807.2 (not (and (or (and (= x72 y72) (= y72 x73)) (and (= x72 z72) (= z72 x73))) (=> (or (and (= x72 y72) (= y72 x73)) (and (= x72 z72) (= z72 x73))) (= x72 x73)))))
-(step t807 (cl (not (= (or (and (= x72 y72) (= y72 x73)) (and (= x72 z72) (= z72 x73))) (and (or (and (= x72 y72) (= y72 x73)) (and (= x72 z72) (= z72 x73))) (=> (or (and (= x72 y72) (= y72 x73)) (and (= x72 z72) (= z72 x73))) (= x72 x73))))) (not (or (and (= x72 y72) (= y72 x73)) (and (= x72 z72) (= z72 x73)))) (and (or (and (= x72 y72) (= y72 x73)) (and (= x72 z72) (= z72 x73))) (=> (or (and (= x72 y72) (= y72 x73)) (and (= x72 z72) (= z72 x73))) (= x72 x73)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt807.0 nt807.1 nt807.2 t807))

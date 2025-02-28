@@ -1,7 +1,0 @@
-(assume nst59.0 (not (and y$1084 y$1089)))
-(assume a671 (= y$id34$next_op (and y$1084 y$1089)))
-(assume t42 (or (not (= y$id34$next_op (and y$1084 y$1089))) (not y$id34$next_op) (and y$1084 y$1089)))
-(assume t58 y$id34$next_op)
-(step t42' (cl (not (= y$id34$next_op (and y$1084 y$1089))) (not y$id34$next_op) (and y$1084 y$1089)) :rule or :premises (t42))
-(step st59 (cl (and y$1084 y$1089)) :rule resolution :premises (t42' a671 t58))
-(step t.end (cl) :rule resolution :premises (nst59.0 st59))

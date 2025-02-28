@@ -1,3 +1,0 @@
-(assume nst33.0 (not (= (not (fun_app$b (less_eq$ (cost$ (fun_app$f (swapSyms$ t$ a$) d$))) (cost$ t$))) (not (fun_app$b (less_eq$ (cost$ (fun_app$f (swapSyms$ t$ a$) d$))) (cost$ t$))))))
-(step st33 (cl (= (not (fun_app$b (less_eq$ (cost$ (fun_app$f (swapSyms$ t$ a$) d$))) (cost$ t$))) (not (fun_app$b (less_eq$ (cost$ (fun_app$f (swapSyms$ t$ a$) d$))) (cost$ t$))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst33.0 st33))

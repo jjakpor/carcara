@@ -1,5 +1,0 @@
-(assume nst1014.0 (not (= (= (op e3 (op e4 e3)) (op (op e4 e3) e3)) false)))
-(assume t345 (= (= (op (op e3 e4) e3) (op (op e4 e3) e3)) false))
-(assume t1013 (= (= (op e3 (op e4 e3)) (op (op e4 e3) e3)) (= (op (op e3 e4) e3) (op (op e4 e3) e3))))
-(step st1014 (cl (= (= (op e3 (op e4 e3)) (op (op e4 e3) e3)) false)) :rule trans :premises (t1013 t345))
-(step t.end (cl) :rule resolution :premises (nst1014.0 st1014))

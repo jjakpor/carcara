@@ -1,5 +1,0 @@
-(assume nst361.0 (not (not (= (not (in$0 null$0 Alloc$0)) (not (in$0 (read$0 next$0 d_init$0) Alloc$0))))))
-(assume nst361.1 (not (not (not (in$0 null$0 Alloc$0)))))
-(assume nst361.2 (not (not (in$0 (read$0 next$0 d_init$0) Alloc$0))))
-(step st361 (cl (not (= (not (in$0 null$0 Alloc$0)) (not (in$0 (read$0 next$0 d_init$0) Alloc$0)))) (not (not (in$0 null$0 Alloc$0))) (not (in$0 (read$0 next$0 d_init$0) Alloc$0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst361.0 nst361.1 nst361.2 st361))

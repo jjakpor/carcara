@@ -1,6 +1,0 @@
-(assume nt60.0 (not (= x4 x5)))
-(assume t59 (or (= x4 x5) (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))))
-(assume t55 (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))
-(step t59' (cl (= x4 x5) (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))) :rule or :premises (t59))
-(step t60 (cl (= x4 x5)) :rule resolution :premises (t59' t55))
-(step t.end (cl) :rule resolution :premises (nt60.0 t60))

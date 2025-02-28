@@ -1,3 +1,0 @@
-(assume nst34.0 (not (not false)))
-(step st34 (cl (not false)) :rule false)
-(step t.end (cl) :rule resolution :premises (nst34.0 st34))

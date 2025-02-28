@@ -1,6 +1,0 @@
-(assume nst825.0 (not (not (and (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))) (= e1 (op e3 (op (op e1 e3) e3)))))))
-(assume nst825.1 (not (= (op e3 e1) (op (op e1 e3) e3))))
-(assume t824 (or (not (and (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))) (= e1 (op e3 (op (op e1 e3) e3))))) (not (and (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))) (= e1 (op e3 (op (op e1 e3) e3))))) (= (op e3 e1) (op (op e1 e3) e3))))
-(step t824' (cl (not (and (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))) (= e1 (op e3 (op (op e1 e3) e3))))) (not (and (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))) (= e1 (op e3 (op (op e1 e3) e3))))) (= (op e3 e1) (op (op e1 e3) e3))) :rule or :premises (t824))
-(step st825 (cl (not (and (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))) (= e1 (op e3 (op (op e1 e3) e3))))) (= (op e3 e1) (op (op e1 e3) e3))) :rule contraction :premises (t824'))
-(step t.end (cl) :rule resolution :premises (nst825.0 nst825.1 st825))

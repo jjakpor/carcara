@@ -1,5 +1,0 @@
-(assume nst445.0 (not (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))))))
-(assume nst445.1 (not (= x21 x22)))
-(assume t444 (=> (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (= x21 x22)))
-(step st445 (cl (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22)))) (= x21 x22)) :rule implies :premises (t444))
-(step t.end (cl) :rule resolution :premises (nst445.0 nst445.1 st445))

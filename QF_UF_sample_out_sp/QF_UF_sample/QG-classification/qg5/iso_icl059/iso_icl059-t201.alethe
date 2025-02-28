@@ -1,5 +1,0 @@
-(assume nt201.0 (not (= (op (op e0 e0) (op (op e0 e0) e0)) (op e0 (op e0 e0)))))
-(assume t193 (= (op (op e0 e0) (op (op e0 e0) e0)) e0))
-(assume t200 (= e0 (op e0 (op e0 e0))))
-(step t201 (cl (= (op (op e0 e0) (op (op e0 e0) e0)) (op e0 (op e0 e0)))) :rule trans :premises (t193 t200))
-(step t.end (cl) :rule resolution :premises (nt201.0 t201))

@@ -1,6 +1,0 @@
-(assume nst318.0 (not (= (= (op e3 e3) (op (op (op e1 e3) e1) e3)) false)))
-(assume t308 (or (= (= (op e3 e3) (op (op (op e1 e3) e1) e3)) false) (= (op e3 e3) (op (op (op e1 e3) e1) e3))))
-(assume t317 (not (= (op e3 e3) (op (op (op e1 e3) e1) e3))))
-(step t308' (cl (= (= (op e3 e3) (op (op (op e1 e3) e1) e3)) false) (= (op e3 e3) (op (op (op e1 e3) e1) e3))) :rule or :premises (t308))
-(step st318 (cl (= (= (op e3 e3) (op (op (op e1 e3) e1) e3)) false)) :rule resolution :premises (t308' t317))
-(step t.end (cl) :rule resolution :premises (nst318.0 st318))

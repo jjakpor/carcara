@@ -1,3 +1,0 @@
-(assume nst176.0 (not (= (op e0 e0) (op e0 e0))))
-(step st176 (cl (= (op e0 e0) (op e0 e0))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst176.0 st176))

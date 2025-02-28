@@ -1,3 +1,0 @@
-(assume nst2.0 (not (= (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 f72 f78)) true)))
-(step st2 (cl (= (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 f72 f78)) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst2.0 st2))

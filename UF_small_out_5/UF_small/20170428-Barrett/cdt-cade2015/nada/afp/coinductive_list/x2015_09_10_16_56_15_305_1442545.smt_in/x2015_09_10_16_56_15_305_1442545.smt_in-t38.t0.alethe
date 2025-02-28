@@ -1,6 +1,0 @@
-(assume nt38.0 (not (= (forall ((?v0 Enat$) (?v1 A_llist$)) (= (not (fun_app$h lnull$ (fun_app$c (ltake$ ?v0) ?v1))) (and (not (= ?v0 zero$)) (not (fun_app$h lnull$ ?v1))))) (forall ((?v0 Enat$) (?v1 A_llist$)) (= (not (fun_app$h lnull$ (fun_app$c (ltake$ ?v0) ?v1))) (and (not (= zero$ ?v0)) (not (fun_app$h lnull$ ?v1))))))))
-(anchor :step t38 :args ((?v0 Enat$) (?v1 A_llist$) (:= (?v0 Enat$) ?v0) (:= (?v1 A_llist$) ?v1)))
-(step st38.t0 (cl (= (not (fun_app$h lnull$ (fun_app$c (ltake$ ?v0) ?v1))) (not (fun_app$h lnull$ (fun_app$c (ltake$ ?v0) ?v1))))) :rule refl)
-(step t38.t5 (cl (= (= (not (fun_app$h lnull$ (fun_app$c (ltake$ ?v0) ?v1))) (and (not (= ?v0 zero$)) (not (fun_app$h lnull$ ?v1)))) (= (not (fun_app$h lnull$ (fun_app$c (ltake$ ?v0) ?v1))) (and (not (= zero$ ?v0)) (not (fun_app$h lnull$ ?v1)))))) :rule trust)
-(step t38 (cl (= (forall ((?v0 Enat$) (?v1 A_llist$)) (= (not (fun_app$h lnull$ (fun_app$c (ltake$ ?v0) ?v1))) (and (not (= ?v0 zero$)) (not (fun_app$h lnull$ ?v1))))) (forall ((?v0 Enat$) (?v1 A_llist$)) (= (not (fun_app$h lnull$ (fun_app$c (ltake$ ?v0) ?v1))) (and (not (= zero$ ?v0)) (not (fun_app$h lnull$ ?v1))))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt38.0 t38))

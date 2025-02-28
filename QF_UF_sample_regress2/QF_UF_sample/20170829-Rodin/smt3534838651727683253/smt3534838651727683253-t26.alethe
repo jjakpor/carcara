@@ -1,5 +1,0 @@
-(assume nst26.0 (not (= (and (not (= nf0 nf0)) (= nf0 nf0)) (and false true))))
-(assume t22 (= (= nf0 nf0) true))
-(assume t25 (= (not (= nf0 nf0)) false))
-(step st26 (cl (= (and (not (= nf0 nf0)) (= nf0 nf0)) (and false true))) :rule cong :premises (t25 t22))
-(step t.end (cl) :rule resolution :premises (nst26.0 st26))

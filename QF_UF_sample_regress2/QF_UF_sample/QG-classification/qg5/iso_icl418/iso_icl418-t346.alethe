@@ -1,5 +1,0 @@
-(assume nst346.0 (not (= (= e4 (op (op e4 e3) e3)) false)))
-(assume t330 (= (= e4 (op (op e4 e3) e3)) (= (op (op e3 e4) e3) (op (op e4 e3) e3))))
-(assume t345 (= (= (op (op e3 e4) e3) (op (op e4 e3) e3)) false))
-(step st346 (cl (= (= e4 (op (op e4 e3) e3)) false)) :rule trans :premises (t330 t345))
-(step t.end (cl) :rule resolution :premises (nst346.0 st346))

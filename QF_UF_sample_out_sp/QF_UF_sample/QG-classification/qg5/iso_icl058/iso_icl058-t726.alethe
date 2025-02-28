@@ -1,5 +1,0 @@
-(assume nt726.0 (not (= (= e1 (op e1 e4)) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0))))))
-(assume t48 (= e1 (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))
-(assume t161 (= (op e1 e4) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0))))
-(step t726 (cl (= (= e1 (op e1 e4)) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0))))) :rule cong :premises (t48 t161))
-(step t.end (cl) :rule resolution :premises (nt726.0 t726))

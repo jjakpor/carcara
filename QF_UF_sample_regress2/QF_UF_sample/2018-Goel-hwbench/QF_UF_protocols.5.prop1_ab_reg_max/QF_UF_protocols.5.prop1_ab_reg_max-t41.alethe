@@ -1,5 +1,0 @@
-(assume nst41.0 (not (not y$dve_invalid$next)))
-(assume nst41.1 (not (not y$1084)))
-(assume a666 (= y$dve_invalid$next (not y$1084)))
-(step st41 (cl (not y$dve_invalid$next) (not y$1084)) :rule equiv1 :premises (a666))
-(step t.end (cl) :rule resolution :premises (nst41.0 nst41.1 st41))

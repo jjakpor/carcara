@@ -1,6 +1,0 @@
-(assume nst467.0 (not (= x40 x41)))
-(assume nst467.1 (not (not (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))))))
-(assume t466 (or (not (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41)))) (= x40 x41)))
-(step t466' (cl (not (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41)))) (= x40 x41)) :rule or :premises (t466))
-(step st467 (cl (= x40 x41) (not (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))))) :rule reordering :premises (t466'))
-(step t.end (cl) :rule resolution :premises (nst467.0 nst467.1 st467))

@@ -1,5 +1,0 @@
-(assume t1 (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))
-(assume t118 (not (and (= x4 z4) (= z4 x5))))
-(assume t120 (not (and (= x4 y4) (= y4 x5))))
-(step t1' (cl (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) :rule or :premises (t1))
-(step st121 (cl) :rule resolution :premises (t1' t118 t120))

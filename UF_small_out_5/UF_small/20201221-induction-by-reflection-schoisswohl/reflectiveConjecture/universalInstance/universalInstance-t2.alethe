@@ -1,3 +1,0 @@
-(assume nst2.0 (not (= (not (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha))) (not (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha))))))
-(step st2 (cl (= (not (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha))) (not (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst2.0 st2))

@@ -1,5 +1,0 @@
-(assume nst233.0 (not (not (or (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0)) (= lst$0 sk_?e$0)))))
-(assume nst233.1 (not (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0))))
-(assume nst233.2 (not (= lst$0 sk_?e$0)))
-(step st233 (cl (not (or (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0)) (= lst$0 sk_?e$0))) (not (Btwn$0 next$0 lst$0 sk_?e$0 lst$0)) (= lst$0 sk_?e$0)) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst233.0 nst233.1 nst233.2 st233))

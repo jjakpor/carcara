@@ -1,6 +1,0 @@
-(assume nt391.0 (not (= x33 x34)))
-(assume t390 (or (= x33 x34) (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))))
-(assume t386 (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))
-(step t390' (cl (= x33 x34) (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))) :rule or :premises (t390))
-(step t391 (cl (= x33 x34)) :rule resolution :premises (t390' t386))
-(step t.end (cl) :rule resolution :premises (nt391.0 t391))

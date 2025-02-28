@@ -1,3 +1,0 @@
-(assume nst102.0 (not (= (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0))))
-(step st102 (cl (= (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst102.0 st102))

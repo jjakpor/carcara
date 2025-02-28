@@ -1,7 +1,0 @@
-(assume nst30.0 (not (fun_app$h lnull$ xs$)))
-(assume nst30.1 (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))
-(assume nst30.2 (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))
-(assume t29 (or (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)) (fun_app$h lnull$ xs$)))
-(step t29' (cl (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)) (fun_app$h lnull$ xs$)) :rule or :premises (t29))
-(step st30 (cl (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))) :rule reordering :premises (t29'))
-(step t.end (cl) :rule resolution :premises (nst30.0 nst30.1 nst30.2 st30))

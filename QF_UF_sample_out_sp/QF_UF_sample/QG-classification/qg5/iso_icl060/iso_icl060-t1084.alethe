@@ -1,5 +1,0 @@
-(assume nt1084.0 (not (not (and (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))) (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))))))
-(assume nt1084.1 (not (not (= (op e1 e3) (op e3 (op (op e1 e3) e3))))))
-(assume t1083 (=> (and (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))) (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (not (= (op e1 e3) (op e3 (op (op e1 e3) e3))))))
-(step t1084 (cl (not (and (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))) (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3)))))) (not (= (op e1 e3) (op e3 (op (op e1 e3) e3))))) :rule implies :premises (t1083))
-(step t.end (cl) :rule resolution :premises (nt1084.0 nt1084.1 t1084))

@@ -1,5 +1,0 @@
-(assume nt41.0 (not (not (= (= e2 (op e1 e3)) (= e2 (op (op (op e3 e3) (op e3 e3)) e3))))))
-(assume nt41.1 (not (not (= e2 (op e1 e3)))))
-(assume nt41.2 (not (= e2 (op (op (op e3 e3) (op e3 e3)) e3))))
-(step t41 (cl (not (= (= e2 (op e1 e3)) (= e2 (op (op (op e3 e3) (op e3 e3)) e3)))) (not (= e2 (op e1 e3))) (= e2 (op (op (op e3 e3) (op e3 e3)) e3))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt41.0 nt41.1 nt41.2 t41))

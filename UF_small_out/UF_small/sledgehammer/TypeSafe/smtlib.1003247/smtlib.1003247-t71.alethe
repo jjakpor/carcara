@@ -1,7 +1,0 @@
-(assume nst71.0 (not (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) f76)))))
-(assume t20 (or (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) f76))) (not (= (f64 f65 f66 f67 f72 f78) (f75 f65 f76 f76))) (not (or (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) f76))) (not (= (f64 f65 f66 f67 f72 f78) (f75 f65 f76 f76)))))))
-(assume t40 (= (f64 f65 f66 f67 f72 f78) (f75 f65 f76 f76)))
-(assume t70 (or (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) f76))) (not (= (f64 f65 f66 f67 f72 f78) (f75 f65 f76 f76)))))
-(step t20' (cl (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) f76))) (not (= (f64 f65 f66 f67 f72 f78) (f75 f65 f76 f76))) (not (or (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) f76))) (not (= (f64 f65 f66 f67 f72 f78) (f75 f65 f76 f76)))))) :rule or :premises (t20))
-(step st71 (cl (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) f76)))) :rule resolution :premises (t20' t40 t70))
-(step t.end (cl) :rule resolution :premises (nst71.0 st71))

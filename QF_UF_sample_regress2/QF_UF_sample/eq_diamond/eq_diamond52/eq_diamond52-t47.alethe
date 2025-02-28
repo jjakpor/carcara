@@ -1,6 +1,0 @@
-(assume nst47.0 (not (= x3 x4)))
-(assume nst47.1 (not (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))))
-(assume t46 (or (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4)))) (= x3 x4)))
-(step t46' (cl (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4)))) (= x3 x4)) :rule or :premises (t46))
-(step st47 (cl (= x3 x4) (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))) :rule reordering :premises (t46'))
-(step t.end (cl) :rule resolution :premises (nst47.0 nst47.1 st47))

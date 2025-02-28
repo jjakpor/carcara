@@ -1,3 +1,0 @@
-(assume nt2.0 (not (= (not (not rd1)) rd1)))
-(step t2 (cl (= (not (not rd1)) rd1)) :rule rare_rewrite :args ("bool-double-not-elim" rd1))
-(step t.end (cl) :rule resolution :premises (nt2.0 t2))

@@ -1,6 +1,0 @@
-(assume nt112.0 (not (= (forall ((?v0 S3)) (= (= (f3 (f15 f16 (f5 f10 ?v0)) f12) f1) (= (f3 (f15 f16 ?v0) f12) f1))) (forall ((?v0 S3)) (= (= f1 (f3 (f15 f16 (f5 f10 ?v0)) f12)) (= f1 (f3 (f15 f16 ?v0) f12)))))))
-(anchor :step t112 :args ((?v0 S3) (:= (?v0 S3) ?v0)))
-(step st112.t1 (cl (= (= (f3 (f15 f16 ?v0) f12) f1) (= f1 (f3 (f15 f16 ?v0) f12)))) :rule hole)
-(step t112.t2 (cl (= (= (= (f3 (f15 f16 (f5 f10 ?v0)) f12) f1) (= (f3 (f15 f16 ?v0) f12) f1)) (= (= f1 (f3 (f15 f16 (f5 f10 ?v0)) f12)) (= f1 (f3 (f15 f16 ?v0) f12))))) :rule trust)
-(step t112 (cl (= (forall ((?v0 S3)) (= (= (f3 (f15 f16 (f5 f10 ?v0)) f12) f1) (= (f3 (f15 f16 ?v0) f12) f1))) (forall ((?v0 S3)) (= (= f1 (f3 (f15 f16 (f5 f10 ?v0)) f12)) (= f1 (f3 (f15 f16 ?v0) f12)))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt112.0 t112))

@@ -1,5 +1,0 @@
-(assume nt818.0 (not (not (= (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (and (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (=> (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (= x73 x74)))))))
-(assume nt818.1 (not (not (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))))))
-(assume nt818.2 (not (and (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (=> (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (= x73 x74)))))
-(step t818 (cl (not (= (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (and (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (=> (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (= x73 x74))))) (not (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74)))) (and (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (=> (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (= x73 x74)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt818.0 nt818.1 nt818.2 t818))

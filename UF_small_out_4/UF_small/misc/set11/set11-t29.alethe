@@ -1,6 +1,0 @@
-(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x b)) (member ?x (union a b))))))
-(assume nst29.0 (not (= (forall ((?s1 Set) (?s2 Set)) (=> (not (subset ?s1 ?s2)) (exists ((?x Elem)) (and (member ?x ?s1) (not (member ?x ?s2)))))) (forall ((?s1 Set) (?s2 Set)) (or (subset ?s1 ?s2) (not (forall ((?x Elem)) (or (not (member ?x ?s1)) (member ?x ?s2)))))))))
-(assume t27 (= (forall ((?s1 Set) (?s2 Set)) (=> (not (subset ?s1 ?s2)) (exists ((?x Elem)) (and (member ?x ?s1) (not (member ?x ?s2)))))) (forall ((?s1 Set) (?s2 Set)) (=> (not (subset ?s1 ?s2)) (not (forall ((?x Elem)) (or (not (member ?x ?s1)) (member ?x ?s2))))))))
-(assume t28 (= (forall ((?s1 Set) (?s2 Set)) (=> (not (subset ?s1 ?s2)) (not (forall ((?x Elem)) (or (not (member ?x ?s1)) (member ?x ?s2)))))) (forall ((?s1 Set) (?s2 Set)) (or (subset ?s1 ?s2) (not (forall ((?x Elem)) (or (not (member ?x ?s1)) (member ?x ?s2))))))))
-(step st29 (cl (= (forall ((?s1 Set) (?s2 Set)) (=> (not (subset ?s1 ?s2)) (exists ((?x Elem)) (and (member ?x ?s1) (not (member ?x ?s2)))))) (forall ((?s1 Set) (?s2 Set)) (or (subset ?s1 ?s2) (not (forall ((?x Elem)) (or (not (member ?x ?s1)) (member ?x ?s2)))))))) :rule trans :premises (t27 t28))
-(step t.end (cl) :rule resolution :premises (nst29.0 st29))

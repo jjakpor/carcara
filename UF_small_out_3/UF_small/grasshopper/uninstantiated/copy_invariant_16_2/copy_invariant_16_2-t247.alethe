@@ -1,5 +1,0 @@
-(assume nst247.0 (not (not (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))))
-(assume nst247.1 (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0))))
-(assume nst247.2 (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))
-(step st247 (cl (not (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0))) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst247.0 nst247.1 nst247.2 st247))

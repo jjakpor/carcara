@@ -1,7 +1,0 @@
-(assume nst50.0 (not (= y$1093 (= y$1092 y$prop$next))))
-(assume a673 (= y$1093 (= y$prop$next y$1092)))
-(assume t46 (or (not (= (= y$1093 (= y$prop$next y$1092)) (= y$1093 (= y$1092 y$prop$next)))) (not (= y$1093 (= y$prop$next y$1092))) (= y$1093 (= y$1092 y$prop$next))))
-(assume t49 (= (= y$1093 (= y$prop$next y$1092)) (= y$1093 (= y$1092 y$prop$next))))
-(step t46' (cl (not (= (= y$1093 (= y$prop$next y$1092)) (= y$1093 (= y$1092 y$prop$next)))) (not (= y$1093 (= y$prop$next y$1092))) (= y$1093 (= y$1092 y$prop$next))) :rule or :premises (t46))
-(step st50 (cl (= y$1093 (= y$1092 y$prop$next))) :rule resolution :premises (t46' t49 a673))
-(step t.end (cl) :rule resolution :premises (nst50.0 st50))

@@ -1,4 +1,0 @@
-(assume nst30.0 (not (and (= e0 (op e1 e1)) (= e1 (op e4 e3)))))
-(assume a14 (and (and (= e0 (op e1 e1)) (= e1 (op e4 e3))) (= e2 (op e3 e4))))
-(step st30 (cl (and (= e0 (op e1 e1)) (= e1 (op e4 e3)))) :rule and :premises (a14) :args (0))
-(step t.end (cl) :rule resolution :premises (nst30.0 st30))

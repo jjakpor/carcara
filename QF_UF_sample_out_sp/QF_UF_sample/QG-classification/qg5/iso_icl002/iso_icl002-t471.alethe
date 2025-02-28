@@ -1,7 +1,0 @@
-(assume nt471.0 (not (not (= e0 (op (op e0 (op e0 e0)) e0)))))
-(assume t459 (or (not (= (not (= e0 e2)) (not (= e0 (op (op e0 (op e0 e0)) e0))))) (not (not (= e0 e2))) (not (= e0 (op (op e0 (op e0 e0)) e0)))))
-(assume t467 (= (not (= e0 e2)) (not (= e0 (op (op e0 (op e0 e0)) e0)))))
-(assume t470 (not (= e0 e2)))
-(step t459' (cl (not (= (not (= e0 e2)) (not (= e0 (op (op e0 (op e0 e0)) e0))))) (not (not (= e0 e2))) (not (= e0 (op (op e0 (op e0 e0)) e0)))) :rule or :premises (t459))
-(step t471 (cl (not (= e0 (op (op e0 (op e0 e0)) e0)))) :rule resolution :premises (t459' t467 t470))
-(step t.end (cl) :rule resolution :premises (nt471.0 t471))

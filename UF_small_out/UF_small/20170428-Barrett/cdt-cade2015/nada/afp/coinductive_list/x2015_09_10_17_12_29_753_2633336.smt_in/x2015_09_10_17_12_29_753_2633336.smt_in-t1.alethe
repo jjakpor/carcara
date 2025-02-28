@@ -1,3 +1,0 @@
-(assume nst1.0 (not (= (not (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))) (not (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))))))
-(step st1 (cl (= (not (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))) (not (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst1.0 st1))

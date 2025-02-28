@@ -1,4 +1,0 @@
-(assume nt79.0 (not y$975))
-(assume t78 (and y$v3_1517448506_489_op y$975))
-(step t79 (cl y$975) :rule and :premises (t78) :args (1))
-(step t.end (cl) :rule resolution :premises (nt79.0 t79))

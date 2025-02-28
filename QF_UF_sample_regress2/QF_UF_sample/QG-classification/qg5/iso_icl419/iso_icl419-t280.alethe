@@ -1,4 +1,0 @@
-(assume nst280.0 (not (and (and (and (and (= (op (op e0 e0) e0) e0) (= (op (op e0 e1) e0) e1)) (= (op (op e0 e2) e0) e2)) (= (op (op e0 e3) e0) e3)) (= (op (op e0 e4) e0) e4))))
-(assume t279 (and (and (and (and (and (= (op (op e0 e0) e0) e0) (= (op (op e0 e1) e0) e1)) (= (op (op e0 e2) e0) e2)) (= (op (op e0 e3) e0) e3)) (= (op (op e0 e4) e0) e4)) (and (and (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2)) (= (op (op e1 e3) e1) e3)) (= (op (op e1 e4) e1) e4))))
-(step st280 (cl (and (and (and (and (= (op (op e0 e0) e0) e0) (= (op (op e0 e1) e0) e1)) (= (op (op e0 e2) e0) e2)) (= (op (op e0 e3) e0) e3)) (= (op (op e0 e4) e0) e4))) :rule and :premises (t279) :args (0))
-(step t.end (cl) :rule resolution :premises (nst280.0 st280))

@@ -1,3 +1,0 @@
-(assume nst72.0 (not (or (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (notR (orR (notR (notR (qR bR))) (notR (pR aR)))))) (not (models empty (notR (orR (notR (notR (qR bR))) (notR (pR aR))))))))))
-(step st72 (cl (or (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (notR (orR (notR (notR (qR bR))) (notR (pR aR)))))) (not (models empty (notR (orR (notR (notR (qR bR))) (notR (pR aR))))))))) :rule forall_inst :args (empty (notR (orR (notR (notR (qR bR))) (notR (pR aR))))))
-(step t.end (cl) :rule resolution :premises (nst72.0 st72))

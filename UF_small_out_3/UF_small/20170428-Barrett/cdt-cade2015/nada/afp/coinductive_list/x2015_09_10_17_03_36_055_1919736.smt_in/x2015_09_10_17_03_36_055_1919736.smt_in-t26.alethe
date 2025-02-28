@@ -1,5 +1,0 @@
-(assume nst26.0 (not (= (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$)) true)))
-(assume t22 (= (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$)) (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$))))
-(assume t25 (= (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)) true))
-(step st26 (cl (= (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$)) true)) :rule trans :premises (t22 t25))
-(step t.end (cl) :rule resolution :premises (nst26.0 st26))

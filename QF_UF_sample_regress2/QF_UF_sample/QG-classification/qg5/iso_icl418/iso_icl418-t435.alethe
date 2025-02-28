@@ -1,5 +1,0 @@
-(assume nst435.0 (not (= (= e4 (op (op (op e4 e3) (op e4 e3)) e3)) false)))
-(assume t421 (= (= e4 (op (op (op e4 e3) (op e4 e3)) e3)) (= (op (op e3 e4) e3) (op (op (op e4 e3) (op e4 e3)) e3))))
-(assume t434 (= (= (op (op e3 e4) e3) (op (op (op e4 e3) (op e4 e3)) e3)) false))
-(step st435 (cl (= (= e4 (op (op (op e4 e3) (op e4 e3)) e3)) false)) :rule trans :premises (t421 t434))
-(step t.end (cl) :rule resolution :premises (nst435.0 st435))

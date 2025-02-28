@@ -1,8 +1,0 @@
-(assume nst459.0 (not (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3))))
-(assume nst459.1 (not (= e3 (op (op (op e1 e3) e3) e3))))
-(assume nst459.2 (not (= (op e1 e3) (op (op (op e1 e3) e3) e3))))
-(assume nst459.3 (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3))))
-(assume nst459.4 (not (= e1 (op (op (op e1 e3) e3) e3))))
-(assume t458 (or (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3)) (= e3 (op (op (op e1 e3) e3) e3)) (= (op e1 e3) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= e1 (op (op (op e1 e3) e3) e3))))
-(step st459 (cl (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3)) (= e3 (op (op (op e1 e3) e3) e3)) (= (op e1 e3) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= e1 (op (op (op e1 e3) e3) e3))) :rule or :premises (t458))
-(step t.end (cl) :rule resolution :premises (nst459.0 nst459.1 nst459.2 nst459.3 nst459.4 st459))

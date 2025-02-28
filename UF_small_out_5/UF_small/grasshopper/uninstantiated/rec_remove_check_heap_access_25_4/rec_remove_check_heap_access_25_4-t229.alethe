@@ -1,6 +1,0 @@
-(assume nst229.0 (not (not (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)))))
-(assume t48 (or (Btwn$0 next$0 lst$0 lst$0 null$0) (not (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)))))
-(assume t228 (not (Btwn$0 next$0 lst$0 lst$0 null$0)))
-(step t48' (cl (Btwn$0 next$0 lst$0 lst$0 null$0) (not (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)))) :rule or :premises (t48))
-(step st229 (cl (not (and (Btwn$0 next$0 lst$0 lst$0 null$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)))) :rule resolution :premises (t48' t228))
-(step t.end (cl) :rule resolution :premises (nst229.0 st229))

@@ -1,4 +1,0 @@
-(assume t234 (and (and (and (not (= (op e0 e4) (op e1 e4))) (not (= (op e0 e4) (op e2 e4)))) (not (= (op e0 e4) (op e3 e4)))) (not (= (op e0 e4) (op e4 e4)))))
-(assume nt546.0 (not (and (and (not (= (op e0 e4) (op e1 e4))) (not (= (op e0 e4) (op e2 e4)))) (not (= (op e0 e4) (op e3 e4))))))
-(step t546 (cl (and (and (not (= (op e0 e4) (op e1 e4))) (not (= (op e0 e4) (op e2 e4)))) (not (= (op e0 e4) (op e3 e4))))) :rule and :premises (t234) :args (0))
-(step t.end (cl) :rule resolution :premises (nt546.0 t546))

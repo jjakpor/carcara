@@ -1,5 +1,0 @@
-(assume nst5.0 (not (= (=> (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= x$0 root_x$0))) (=> (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0))))))
-(assume t1 (= (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))) (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y)))))
-(assume t4 (= (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= x$0 root_x$0)) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0))))
-(step st5 (cl (= (=> (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= x$0 root_x$0))) (=> (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (Btwn$0 ?f ?x ?y ?x)) (= ?x ?y))) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0))))) :rule cong :premises (t1 t4))
-(step t.end (cl) :rule resolution :premises (nst5.0 st5))

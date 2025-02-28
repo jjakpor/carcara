@@ -1,5 +1,0 @@
-(assume nst403.0 (not (not (= (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (and (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (=> (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (= x35 x36)))))))
-(assume nst403.1 (not (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))))
-(assume nst403.2 (not (and (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (=> (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (= x35 x36)))))
-(step st403 (cl (not (= (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (and (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (=> (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (= x35 x36))))) (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36)))) (and (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (=> (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (= x35 x36)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst403.0 nst403.1 nst403.2 st403))

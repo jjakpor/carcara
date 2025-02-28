@@ -1,5 +1,0 @@
-(assume nt263.0 (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0))))))
-(assume nt263.1 (not (not (= e5 (op e5 e0)))))
-(assume nt263.2 (not (not (= e0 (op e5 (op e5 e0))))))
-(step t263 (cl (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (not (= e5 (op e5 e0))) (not (= e0 (op e5 (op e5 e0))))) :rule and_neg)
-(step t.end (cl) :rule resolution :premises (nt263.0 nt263.1 nt263.2 t263))

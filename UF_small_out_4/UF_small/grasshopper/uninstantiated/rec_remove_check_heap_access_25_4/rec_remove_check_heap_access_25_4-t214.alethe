@@ -1,5 +1,0 @@
-(assume nst214.0 (not (= (and (or (= null$0 null$0) (not (Btwn$0 next$0 lst$0 null$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 lst$0 null$0)))) (not (in$0 null$0 (lseg_domain$0 next$0 lst$0 null$0))))))
-(assume t212 (= (and (or (= null$0 null$0) (not (Btwn$0 next$0 lst$0 null$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 lst$0 null$0)))) (and true (not (in$0 null$0 (lseg_domain$0 next$0 lst$0 null$0))))))
-(assume t213 (= (and true (not (in$0 null$0 (lseg_domain$0 next$0 lst$0 null$0)))) (not (in$0 null$0 (lseg_domain$0 next$0 lst$0 null$0)))))
-(step st214 (cl (= (and (or (= null$0 null$0) (not (Btwn$0 next$0 lst$0 null$0 null$0))) (not (in$0 null$0 (lseg_domain$0 next$0 lst$0 null$0)))) (not (in$0 null$0 (lseg_domain$0 next$0 lst$0 null$0))))) :rule trans :premises (t212 t213))
-(step t.end (cl) :rule resolution :premises (nst214.0 st214))

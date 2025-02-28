@@ -1,6 +1,0 @@
-(assume nst634.0 (not (= x38 x39)))
-(assume t629 (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))))
-(assume t633 (or (= x38 x39) (not (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))))))
-(step t633' (cl (= x38 x39) (not (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))))) :rule or :premises (t633))
-(step st634 (cl (= x38 x39)) :rule resolution :premises (t633' t629))
-(step t.end (cl) :rule resolution :premises (nst634.0 st634))

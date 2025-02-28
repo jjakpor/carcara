@@ -1,7 +1,0 @@
-(assume nst114.0 (not (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0))))
-(assume nst114.1 (not (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0))))
-(assume nst114.2 (not (not (or (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0))))))
-(assume t113 (or (not (or (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0)))) (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0))))
-(step t113' (cl (not (or (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0)))) (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0))) :rule or :premises (t113))
-(step st114 (cl (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0)) (not (or (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0))))) :rule reordering :premises (t113'))
-(step t.end (cl) :rule resolution :premises (nst114.0 nst114.1 nst114.2 st114))

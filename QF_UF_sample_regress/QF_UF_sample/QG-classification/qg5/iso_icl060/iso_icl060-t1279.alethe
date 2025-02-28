@@ -1,8 +1,0 @@
-(assume t42 (or (= e1 (op (op (op e1 e3) e1) (op (op e1 e3) e3))) (= e1 (op e1 (op (op e1 e3) e3))) (= e1 (op (op e1 e3) (op (op e1 e3) e3))) (= e1 (op e3 (op (op e1 e3) e3))) (= e1 (op (op (op e1 e3) e3) (op (op e1 e3) e3)))))
-(assume t1211 (not (= e1 (op (op (op e1 e3) e3) (op (op e1 e3) e3)))))
-(assume t1240 (not (= e1 (op e3 (op (op e1 e3) e3)))))
-(assume t1247 (not (= e1 (op (op e1 e3) (op (op e1 e3) e3)))))
-(assume t1263 (not (= e1 (op e1 (op (op e1 e3) e3)))))
-(assume t1278 (not (= e1 (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))
-(step t42' (cl (= e1 (op (op (op e1 e3) e1) (op (op e1 e3) e3))) (= e1 (op e1 (op (op e1 e3) e3))) (= e1 (op (op e1 e3) (op (op e1 e3) e3))) (= e1 (op e3 (op (op e1 e3) e3))) (= e1 (op (op (op e1 e3) e3) (op (op e1 e3) e3)))) :rule or :premises (t42))
-(step st1279 (cl) :rule resolution :premises (t42' t1211 t1240 t1247 t1263 t1278))

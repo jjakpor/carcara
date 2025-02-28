@@ -1,5 +1,0 @@
-(assume nst197.0 (not (not (= (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (and (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18)))))))
-(assume nst197.1 (not (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))))))
-(assume nst197.2 (not (and (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18)))))
-(step st197 (cl (not (= (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (and (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18))))) (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18)))) (and (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst197.0 nst197.1 nst197.2 st197))

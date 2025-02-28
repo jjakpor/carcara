@@ -1,6 +1,0 @@
-(assume nst32.0 (not (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))))
-(assume t28 (or (not (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0))))))) (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))))
-(assume t31 (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0)))))))
-(step t28' (cl (not (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0))))))) (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))) :rule or :premises (t28))
-(step st32 (cl (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))) :rule resolution :premises (t28' t31))
-(step t.end (cl) :rule resolution :premises (nst32.0 st32))

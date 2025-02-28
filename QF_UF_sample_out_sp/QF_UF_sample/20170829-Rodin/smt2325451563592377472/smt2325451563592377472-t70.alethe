@@ -1,6 +1,0 @@
-(assume nt70.0 (not (= (not (not car)) car)))
-(assume t62 (or (not (= (= (not (not car)) car) true)) (= (not (not car)) car)))
-(assume t69 (= (= (not (not car)) car) true))
-(step t62' (cl (not (= (= (not (not car)) car) true)) (= (not (not car)) car)) :rule or :premises (t62))
-(step t70 (cl (= (not (not car)) car)) :rule resolution :premises (t62' t69))
-(step t.end (cl) :rule resolution :premises (nt70.0 t70))

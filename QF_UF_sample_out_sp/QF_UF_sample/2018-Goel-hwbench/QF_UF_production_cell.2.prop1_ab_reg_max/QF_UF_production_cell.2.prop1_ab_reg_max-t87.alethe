@@ -1,5 +1,0 @@
-(assume nt87.0 (not (= y$v_at_table y$v_k_Press)))
-(assume t36 (= y$v_at_table y$v_count))
-(assume t86 (= y$v_count y$v_k_Press))
-(step t87 (cl (= y$v_at_table y$v_k_Press)) :rule trans :premises (t36 t86))
-(step t.end (cl) :rule resolution :premises (nt87.0 t87))

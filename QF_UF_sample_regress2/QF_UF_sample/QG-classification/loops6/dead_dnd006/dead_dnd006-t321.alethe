@@ -1,5 +1,0 @@
-(assume nst321.0 (not (= (or (not (= e1 (op e1 (op e1 e1)))) (= unit e1)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)))))
-(assume t318 (= (or (not (= e1 (op e1 (op e1 e1)))) (= unit e1)) (or (not (= e1 (op e1 (op e1 e1)))) (= e0 e1))))
-(assume t320 (= (or (not (= e1 (op e1 (op e1 e1)))) (= e0 e1)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0))))
-(step st321 (cl (= (or (not (= e1 (op e1 (op e1 e1)))) (= unit e1)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)))) :rule trans :premises (t318 t320))
-(step t.end (cl) :rule resolution :premises (nst321.0 st321))

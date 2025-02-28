@@ -1,5 +1,0 @@
-(assume nst96.0 (not (= (and (= (read$0 next$0 d_init$0) prv_5$0) (= d_init$0 (read$0 prev$0 prv_5$0))) (and (= prv_5$0 (read$0 next$0 d_init$0)) (= d_init$0 (read$0 prev$0 prv_5$0))))))
-(assume t3 (= (= (read$0 next$0 d_init$0) prv_5$0) (= prv_5$0 (read$0 next$0 d_init$0))))
-(assume t95 (= (= d_init$0 (read$0 prev$0 prv_5$0)) (= d_init$0 (read$0 prev$0 prv_5$0))))
-(step st96 (cl (= (and (= (read$0 next$0 d_init$0) prv_5$0) (= d_init$0 (read$0 prev$0 prv_5$0))) (and (= prv_5$0 (read$0 next$0 d_init$0)) (= d_init$0 (read$0 prev$0 prv_5$0))))) :rule cong :premises (t3 t95))
-(step t.end (cl) :rule resolution :premises (nst96.0 st96))

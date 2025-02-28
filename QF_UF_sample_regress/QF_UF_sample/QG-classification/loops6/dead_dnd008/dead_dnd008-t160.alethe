@@ -1,3 +1,0 @@
-(assume nst160.0 (not (= e0 e0)))
-(step st160 (cl (= e0 e0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst160.0 st160))

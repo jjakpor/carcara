@@ -1,6 +1,0 @@
-(assume t2 (or (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (not (and (= x3 z3) (= z3 x4)))))
-(assume t237 (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4)))))
-(assume nt238.0 (not (not (and (= x3 z3) (= z3 x4)))))
-(step t2' (cl (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (not (and (= x3 z3) (= z3 x4)))) :rule or :premises (t2))
-(step t238 (cl (not (and (= x3 z3) (= z3 x4)))) :rule resolution :premises (t2' t237))
-(step t.end (cl) :rule resolution :premises (nt238.0 t238))

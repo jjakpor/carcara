@@ -1,5 +1,0 @@
-(assume nst54.0 (not (= FP$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0))))
-(assume t48 (= FP$0 sk_?X_4$0))
-(assume t53 (= sk_?X_4$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0)))
-(step st54 (cl (= FP$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0))) :rule trans :premises (t48 t53))
-(step t.end (cl) :rule resolution :premises (nst54.0 st54))

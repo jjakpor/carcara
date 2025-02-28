@@ -1,5 +1,0 @@
-(assume nst132.0 (not (not (= (= sk_?X_76$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)) (= sk_?X_76$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0))))))
-(assume nst132.1 (not (not (= sk_?X_76$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)))))
-(assume nst132.2 (not (= sk_?X_76$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0))))
-(step st132 (cl (not (= (= sk_?X_76$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)) (= sk_?X_76$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0)))) (not (= sk_?X_76$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0))) (= sk_?X_76$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst132.0 nst132.1 nst132.2 st132))

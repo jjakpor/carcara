@@ -1,3 +1,0 @@
-(assume nst97.0 (not (= (= root_x$0 root_x$0) true)))
-(step st97 (cl (= (= root_x$0 root_x$0) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst97.0 st97))

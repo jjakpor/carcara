@@ -1,4 +1,0 @@
-(assume t304 (and (and (and (and (= (op e0 e0) (op e0 e0)) (= (op e1 e0) (op e0 e1))) (= (op e2 e0) (op e0 e2))) (= (op e3 e0) (op e0 e3))) (= (op e4 e0) (op e0 e4))))
-(assume nt305.0 (not (= (op e4 e0) (op e0 e4))))
-(step t305 (cl (= (op e4 e0) (op e0 e4))) :rule and :premises (t304) :args (1))
-(step t.end (cl) :rule resolution :premises (nt305.0 t305))

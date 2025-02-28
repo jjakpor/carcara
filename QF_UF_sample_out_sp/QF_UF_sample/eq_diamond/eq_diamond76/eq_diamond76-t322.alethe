@@ -1,6 +1,0 @@
-(assume nt322.0 (not (= x27 x28)))
-(assume t321 (or (= x27 x28) (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))))
-(assume t317 (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))
-(step t321' (cl (= x27 x28) (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))) :rule or :premises (t321))
-(step t322 (cl (= x27 x28)) :rule resolution :premises (t321' t317))
-(step t.end (cl) :rule resolution :premises (nt322.0 t322))

@@ -1,3 +1,0 @@
-(assume nst279.0 (not (= e5 e5)))
-(step st279 (cl (= e5 e5)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst279.0 st279))

@@ -1,3 +1,0 @@
-(assume nst588.0 (not (= (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))))
-(step st588 (cl (= (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst588.0 st588))

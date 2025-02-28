@@ -1,5 +1,0 @@
-(assume nt178.t13.0 (not (= (p1 c_0 c_0) (p1 (f6 c_0) c_0))))
-(assume t178.t12 (= c_0 (f6 c_0)))
-(assume t178.t9 (= c_0 c_0))
-(step t178.t13 (cl (= (p1 c_0 c_0) (p1 (f6 c_0) c_0))) :rule cong :premises (t178.t12 t178.t9))
-(step t.end (cl) :rule resolution :premises (nt178.t13.0 t178.t13))

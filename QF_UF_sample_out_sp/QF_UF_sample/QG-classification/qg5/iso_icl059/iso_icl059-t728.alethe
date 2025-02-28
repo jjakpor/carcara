@@ -1,6 +1,0 @@
-(assume nt728.0 (not (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false)))
-(assume t727 (or (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))
-(assume t366 (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))
-(step t727' (cl (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) :rule or :premises (t727))
-(step t728 (cl (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false)) :rule resolution :premises (t727' t366))
-(step t.end (cl) :rule resolution :premises (nt728.0 t728))

@@ -1,5 +1,0 @@
-(assume nt228.0 (not (= (= x3 x4) (= x0 x20))))
-(assume t50 (= x3 x0))
-(assume t227 (= x4 x20))
-(step t228 (cl (= (= x3 x4) (= x0 x20))) :rule cong :premises (t50 t227))
-(step t.end (cl) :rule resolution :premises (nt228.0 t228))

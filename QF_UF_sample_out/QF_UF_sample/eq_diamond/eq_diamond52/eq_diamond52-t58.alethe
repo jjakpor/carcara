@@ -1,5 +1,0 @@
-(assume t57 (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3)))
-(assume nt58.0 (not (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))))
-(assume nt58.1 (not (= x2 x3)))
-(step t58 (cl (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))) (= x2 x3)) :rule implies :premises (t57))
-(step t.end (cl) :rule resolution :premises (nt58.0 nt58.1 t58))

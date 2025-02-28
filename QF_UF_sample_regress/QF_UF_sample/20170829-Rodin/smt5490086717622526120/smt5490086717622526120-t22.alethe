@@ -1,6 +1,0 @@
-(assume nst22.0 (not (not org_MR)))
-(assume t20 (or org (not org_MR)))
-(assume t21 (not org))
-(step t20' (cl org (not org_MR)) :rule or :premises (t20))
-(step st22 (cl (not org_MR)) :rule resolution :premises (t20' t21))
-(step t.end (cl) :rule resolution :premises (nst22.0 st22))

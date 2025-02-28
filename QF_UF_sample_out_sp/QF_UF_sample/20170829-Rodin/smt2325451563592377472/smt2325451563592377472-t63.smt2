@@ -1,8 +1,0 @@
-(set-logic QF_UF)
-(declare-fun car () Bool)
-(declare-fun circuit () Bool)
-(declare-fun clk () Bool)
-(declare-fun prt () Bool)
-(assert (not (= (= (not (not car)) car) (= car (not (not car))))))
-(check-sat)
-(exit)

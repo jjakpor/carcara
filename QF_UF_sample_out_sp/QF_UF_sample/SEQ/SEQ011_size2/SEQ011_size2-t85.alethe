@@ -1,4 +1,0 @@
-(assume nt85.0 (not (not (and (p4 c8) (= c8 c_1)))))
-(assume nt85.1 (not (p4 c8)))
-(step t85 (cl (not (and (p4 c8) (= c8 c_1))) (p4 c8)) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nt85.0 nt85.1 t85))

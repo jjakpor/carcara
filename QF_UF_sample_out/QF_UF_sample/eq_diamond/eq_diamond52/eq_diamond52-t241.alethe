@@ -1,5 +1,0 @@
-(assume nt241.0 (not (not (= (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (and (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (=> (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (= x21 x22)))))))
-(assume nt241.1 (not (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))))))
-(assume nt241.2 (not (and (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (=> (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (= x21 x22)))))
-(step t241 (cl (not (= (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (and (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (=> (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (= x21 x22))))) (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22)))) (and (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (=> (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (= x21 x22)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt241.0 nt241.1 nt241.2 t241))

@@ -1,5 +1,0 @@
-(assume t876 (= (= (op (op e4 e3) (op e4 e3)) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op e3 (op (op e4 e3) (op e4 e3))))))
-(assume t886 (= (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op e3 (op (op e4 e3) (op e4 e3)))) false))
-(assume nt887.0 (not (= (= (op (op e4 e3) (op e4 e3)) (op e3 (op (op e4 e3) (op e4 e3)))) false)))
-(step t887 (cl (= (= (op (op e4 e3) (op e4 e3)) (op e3 (op (op e4 e3) (op e4 e3)))) false)) :rule trans :premises (t876 t886))
-(step t.end (cl) :rule resolution :premises (nt887.0 t887))

@@ -1,4 +1,0 @@
-(assume nst34.0 (not (= (not (= null$0 null$0)) (not true))))
-(assume t33 (= (= null$0 null$0) true))
-(step st34 (cl (= (not (= null$0 null$0)) (not true))) :rule cong :premises (t33))
-(step t.end (cl) :rule resolution :premises (nst34.0 st34))

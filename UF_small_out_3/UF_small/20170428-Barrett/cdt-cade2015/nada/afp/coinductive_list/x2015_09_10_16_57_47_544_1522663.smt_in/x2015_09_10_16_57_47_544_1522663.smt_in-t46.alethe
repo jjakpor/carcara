@@ -1,3 +1,0 @@
-(assume nst46.0 (not (= (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)))) (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)))))))
-(step st46 (cl (= (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)))) (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst46.0 st46))

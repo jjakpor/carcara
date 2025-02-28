@@ -1,4 +1,0 @@
-(assume nst80.0 (not (= Axiom_33$0 (= Axiom_33$0 true))))
-(assume t79 (= (= Axiom_33$0 true) Axiom_33$0))
-(step st80 (cl (= Axiom_33$0 (= Axiom_33$0 true))) :rule symm :premises (t79))
-(step t.end (cl) :rule resolution :premises (nst80.0 st80))

@@ -1,4 +1,0 @@
-(assume nt872.0 (not (= (not (= (op e1 (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1)))))))))
-(assume t871 (= (= (op e1 (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))) (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1)))))))
-(step t872 (cl (= (not (= (op e1 (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1)))))))) :rule cong :premises (t871))
-(step t.end (cl) :rule resolution :premises (nt872.0 t872))

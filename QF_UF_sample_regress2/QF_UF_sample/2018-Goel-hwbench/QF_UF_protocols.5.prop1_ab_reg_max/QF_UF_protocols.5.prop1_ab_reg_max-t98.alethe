@@ -1,5 +1,0 @@
-(assume nst98.0 (not (and y$287 y$288)))
-(assume nst98.1 (not (not y$287)))
-(assume nst98.2 (not (not y$288)))
-(step st98 (cl (and y$287 y$288) (not y$287) (not y$288)) :rule and_neg)
-(step t.end (cl) :rule resolution :premises (nst98.0 nst98.1 nst98.2 st98))

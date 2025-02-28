@@ -1,6 +1,0 @@
-(assume nst166.0 (not (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) c$))))
-(assume nst166.1 (not (not (and (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) c$)) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) c$))))))
-(assume t165 (or (not (and (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) c$)) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) c$)))) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) c$))))
-(step t165' (cl (not (and (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) c$)) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) c$)))) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) c$))) :rule or :premises (t165))
-(step st166 (cl (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) c$)) (not (and (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) c$)) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) c$))))) :rule reordering :premises (t165'))
-(step t.end (cl) :rule resolution :premises (nst166.0 nst166.1 st166))

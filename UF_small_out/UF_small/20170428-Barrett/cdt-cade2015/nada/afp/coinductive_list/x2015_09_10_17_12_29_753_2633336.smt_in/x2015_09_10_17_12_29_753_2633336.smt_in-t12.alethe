@@ -1,6 +1,0 @@
-(assume nst12.0 (not (not (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))))))
-(assume nst12.1 (not (lnull$ (lconcat$ xssa$))))
-(assume nst12.2 (not (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))))
-(assume t11 (or (not (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))) (lnull$ (lconcat$ xssa$)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))))
-(step st12 (cl (not (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))) (lnull$ (lconcat$ xssa$)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))) :rule or :premises (t11))
-(step t.end (cl) :rule resolution :premises (nst12.0 nst12.1 nst12.2 st12))

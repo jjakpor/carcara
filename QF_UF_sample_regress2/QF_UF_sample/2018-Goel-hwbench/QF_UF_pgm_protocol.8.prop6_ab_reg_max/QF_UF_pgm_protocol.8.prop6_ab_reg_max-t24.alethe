@@ -1,6 +1,0 @@
-(assume nst24.0 (not (not y$a_r4)))
-(assume t22 (or (not y$a_r4) (not y$81)))
-(assume t23 y$81)
-(step t22' (cl (not y$a_r4) (not y$81)) :rule or :premises (t22))
-(step st24 (cl (not y$a_r4)) :rule resolution :premises (t22' t23))
-(step t.end (cl) :rule resolution :premises (nst24.0 st24))

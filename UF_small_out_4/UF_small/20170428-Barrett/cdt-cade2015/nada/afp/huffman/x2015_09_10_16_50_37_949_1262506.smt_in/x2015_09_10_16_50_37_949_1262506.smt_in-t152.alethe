@@ -1,3 +1,0 @@
-(assume nst152.0 (not (= (less_eq$ (depth$ t$ b$)) (less_eq$ (depth$ t$ b$)))))
-(step st152 (cl (= (less_eq$ (depth$ t$ b$)) (less_eq$ (depth$ t$ b$)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst152.0 st152))

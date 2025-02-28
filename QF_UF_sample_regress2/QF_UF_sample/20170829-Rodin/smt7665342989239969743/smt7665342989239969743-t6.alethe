@@ -1,3 +1,0 @@
-(assume a3 rd2)
-(assume t5 (not rd2))
-(step st6 (cl) :rule resolution :premises (a3 t5))

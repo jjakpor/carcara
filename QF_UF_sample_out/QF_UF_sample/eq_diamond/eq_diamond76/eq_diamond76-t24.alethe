@@ -1,6 +1,0 @@
-(assume t23 (or (= x10 x11) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))))
-(assume t19 (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))
-(assume nt24.0 (not (= x10 x11)))
-(step t23' (cl (= x10 x11) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))) :rule or :premises (t23))
-(step t24 (cl (= x10 x11)) :rule resolution :premises (t23' t19))
-(step t.end (cl) :rule resolution :premises (nt24.0 t24))

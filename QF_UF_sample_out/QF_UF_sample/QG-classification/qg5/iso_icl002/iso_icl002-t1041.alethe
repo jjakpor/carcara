@@ -1,6 +1,0 @@
-(assume t1033 (or (not (= (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))) false)) (not (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))))))
-(assume t1040 (= (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))) false))
-(assume nt1041.0 (not (not (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))))))
-(step t1033' (cl (not (= (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))) false)) (not (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))))) :rule or :premises (t1033))
-(step t1041 (cl (not (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))))) :rule resolution :premises (t1033' t1040))
-(step t.end (cl) :rule resolution :premises (nt1041.0 t1041))

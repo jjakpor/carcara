@@ -1,7 +1,0 @@
-(assume nst77.0 (not (= (lseg_struct$0 sk_?X_4$0 next$0 curr_2$0 null$0) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0))))
-(assume a23 (= curr_2$0 lst$0))
-(assume t15 (= next$0 next$0))
-(assume t17 (= null$0 cp_2$0))
-(assume t23 (= sk_?X_4$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))
-(step st77 (cl (= (lseg_struct$0 sk_?X_4$0 next$0 curr_2$0 null$0) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 cp_2$0) next$0 lst$0 cp_2$0))) :rule cong :premises (t23 t15 a23 t17))
-(step t.end (cl) :rule resolution :premises (nst77.0 st77))

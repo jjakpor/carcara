@@ -1,6 +1,0 @@
-(assume nst11.0 (not (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0)))))
-(assume nst11.1 (not (not (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))))
-(assume t10 (or (not (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))) (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0)))))
-(step t10' (cl (not (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))) (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0)))) :rule or :premises (t10))
-(step st11 (cl (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))) :rule reordering :premises (t10'))
-(step t.end (cl) :rule resolution :premises (nst11.0 nst11.1 st11))

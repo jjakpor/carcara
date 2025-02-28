@@ -1,8 +1,0 @@
-(assume nst53.0 (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))))
-(assume nst53.1 (not (not (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)))))
-(assume nst53.2 (not (not (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))))
-(assume nst53.3 (not (not (= root_x$0 x$0))))
-(assume t52 (or (not (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (not (= root_x$0 x$0)) (not (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))))
-(step t52' (cl (not (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (not (= root_x$0 x$0)) (not (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))) :rule or :premises (t52))
-(step st53 (cl (= (read$0 next$0 x$0) (read$0 next$0 root_x$0)) (not (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (not (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (not (= root_x$0 x$0))) :rule reordering :premises (t52'))
-(step t.end (cl) :rule resolution :premises (nst53.0 nst53.1 nst53.2 nst53.3 st53))

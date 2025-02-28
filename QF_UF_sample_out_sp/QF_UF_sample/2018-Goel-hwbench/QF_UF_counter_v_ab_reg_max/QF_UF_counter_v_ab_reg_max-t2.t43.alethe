@@ -1,5 +1,0 @@
-(assume nt2.t43.0 (not (= (= y$27 y$prop$next) (= (not (= y$X$next y$n15s4)) y$prop$next))))
-(assume t2.t41 (= y$27 (not (= y$X$next y$n15s4))))
-(assume t2.t42 (= y$prop$next y$prop$next))
-(step t2.t43 (cl (= (= y$27 y$prop$next) (= (not (= y$X$next y$n15s4)) y$prop$next))) :rule cong :premises (t2.t41 t2.t42))
-(step t.end (cl) :rule resolution :premises (nt2.t43.0 t2.t43))

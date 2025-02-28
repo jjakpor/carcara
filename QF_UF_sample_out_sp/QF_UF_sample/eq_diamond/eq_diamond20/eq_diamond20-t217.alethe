@@ -1,3 +1,0 @@
-(assume nt217.0 (not (= (= (= x0 x19) false) (not (= x0 x19)))))
-(step t217 (cl (= (= (= x0 x19) false) (not (= x0 x19)))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nt217.0 t217))

@@ -1,3 +1,0 @@
-(assume nt125.0 (not (= (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) e1)) (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) e1)))))
-(step t125 (cl (= (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) e1)) (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) e1)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt125.0 t125))

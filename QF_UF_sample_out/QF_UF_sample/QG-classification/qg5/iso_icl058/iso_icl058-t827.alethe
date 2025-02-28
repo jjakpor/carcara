@@ -1,3 +1,0 @@
-(assume nt827.0 (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
-(step t827 (cl (= (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt827.0 t827))

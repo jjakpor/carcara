@@ -1,5 +1,0 @@
-(assume nt130.0 (not (not (= (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))))))
-(assume nt130.1 (not (not (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)))))
-(assume nt130.2 (not (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))))
-(step t130 (cl (not (= (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0))))) (not (or (= (f6 c_0) c_0) (= (f6 c_0) c_1))) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt130.0 nt130.1 nt130.2 t130))

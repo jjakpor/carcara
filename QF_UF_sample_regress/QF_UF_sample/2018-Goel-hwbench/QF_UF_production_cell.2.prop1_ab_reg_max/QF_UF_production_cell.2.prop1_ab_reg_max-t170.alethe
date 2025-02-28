@@ -1,7 +1,0 @@
-(assume nst170.0 (not false))
-(assume a0 (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8))
-(assume t0 (or (not (= (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8) false)) (not (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8)) false))
-(assume t169 (= (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8) false))
-(step t0' (cl (not (= (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8) false)) (not (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8)) false) :rule or :premises (t0))
-(step st170 (cl false) :rule resolution :premises (t0' t169 a0))
-(step t.end (cl) :rule resolution :premises (nst170.0 st170))

@@ -1,6 +1,0 @@
-(assume t500 (or (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27)))) (= x26 x27)))
-(assume nt501.0 (not (= x26 x27)))
-(assume nt501.1 (not (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))))))
-(step t500' (cl (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27)))) (= x26 x27)) :rule or :premises (t500))
-(step t501 (cl (= x26 x27) (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))))) :rule reordering :premises (t500'))
-(step t.end (cl) :rule resolution :premises (nt501.0 nt501.1 t501))

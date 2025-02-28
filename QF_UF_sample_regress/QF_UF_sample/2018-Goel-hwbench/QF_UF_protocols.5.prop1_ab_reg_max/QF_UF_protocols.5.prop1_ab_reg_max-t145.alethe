@@ -1,4 +1,0 @@
-(assume nst145.0 (not (not (and y$a_got_msg_Receiver y$19))))
-(assume nst145.1 (not y$a_got_msg_Receiver))
-(step st145 (cl (not (and y$a_got_msg_Receiver y$19)) y$a_got_msg_Receiver) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nst145.0 nst145.1 st145))

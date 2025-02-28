@@ -1,3 +1,0 @@
-(assume nst198.0 (not (= (forall ((?v0 A_tree$) (?v1 A$)) (=> (consistent$ ?v0) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1)))) (forall ((?v0 A_tree$) (?v1 A$)) (or (not (consistent$ ?v0)) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1)))))))
-(step st198 (cl (= (forall ((?v0 A_tree$) (?v1 A$)) (=> (consistent$ ?v0) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1)))) (forall ((?v0 A_tree$) (?v1 A$)) (or (not (consistent$ ?v0)) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1)))))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst198.0 st198))

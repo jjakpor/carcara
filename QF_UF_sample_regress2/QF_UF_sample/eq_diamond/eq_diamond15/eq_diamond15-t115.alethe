@@ -1,6 +1,0 @@
-(assume nst115.0 (not (= x9 x10)))
-(assume t110 (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))
-(assume t114 (or (= x9 x10) (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))))
-(step t114' (cl (= x9 x10) (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))) :rule or :premises (t114))
-(step st115 (cl (= x9 x10)) :rule resolution :premises (t114' t110))
-(step t.end (cl) :rule resolution :premises (nst115.0 st115))

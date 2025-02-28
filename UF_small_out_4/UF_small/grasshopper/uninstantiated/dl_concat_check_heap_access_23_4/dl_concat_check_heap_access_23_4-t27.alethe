@@ -1,5 +1,0 @@
-(assume nst27.0 (not (and (Btwn$0 next$0 start1$0 null$0 null$0) (or (and (= null$0 end1$0) (= null$0 start1$0)) (and (= null$0 (read$0 next$0 end1$0)) (= null$0 (read$0 prev$0 start1$0)) (in$0 end1$0 sk_?X_10$0))) Axiom_6$0)))
-(assume nst27.1 (not (not (dlseg_struct$0 sk_?X_10$0 next$0 prev$0 start1$0 null$0 null$0 end1$0))))
-(assume t26 (or (and (Btwn$0 next$0 start1$0 null$0 null$0) (or (and (= null$0 end1$0) (= null$0 start1$0)) (and (= null$0 (read$0 next$0 end1$0)) (= null$0 (read$0 prev$0 start1$0)) (in$0 end1$0 sk_?X_10$0))) Axiom_6$0) (not (dlseg_struct$0 sk_?X_10$0 next$0 prev$0 start1$0 null$0 null$0 end1$0))))
-(step st27 (cl (and (Btwn$0 next$0 start1$0 null$0 null$0) (or (and (= null$0 end1$0) (= null$0 start1$0)) (and (= null$0 (read$0 next$0 end1$0)) (= null$0 (read$0 prev$0 start1$0)) (in$0 end1$0 sk_?X_10$0))) Axiom_6$0) (not (dlseg_struct$0 sk_?X_10$0 next$0 prev$0 start1$0 null$0 null$0 end1$0))) :rule or :premises (t26))
-(step t.end (cl) :rule resolution :premises (nst27.0 nst27.1 st27))

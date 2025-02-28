@@ -1,5 +1,0 @@
-(assume nt589.0 (not (= (= e4 (op e3 e4)) (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op e1 e1) (op e1 e1)))))))
-(assume t39 (= e4 (op (op e1 e1) (op e1 e1))))
-(assume t61 (= (op e3 e4) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op e1 e1) (op e1 e1)))))
-(step t589 (cl (= (= e4 (op e3 e4)) (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op e1 e1) (op e1 e1)))))) :rule cong :premises (t39 t61))
-(step t.end (cl) :rule resolution :premises (nt589.0 t589))

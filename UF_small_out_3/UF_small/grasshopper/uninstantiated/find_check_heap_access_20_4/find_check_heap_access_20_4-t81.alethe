@@ -1,7 +1,0 @@
-(assume nst81.0 (not (= root_x$0 x$0)))
-(assume nst81.1 (not (not (Btwn$0 next$0 x$0 x$0 root_x$0))))
-(assume nst81.2 (not (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0))))))
-(assume t80 (or (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0)))) (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0))))
-(step t80' (cl (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0)))) (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0))) :rule or :premises (t80))
-(step st81 (cl (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0)) (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0))))) :rule reordering :premises (t80'))
-(step t.end (cl) :rule resolution :premises (nst81.0 nst81.1 nst81.2 st81))

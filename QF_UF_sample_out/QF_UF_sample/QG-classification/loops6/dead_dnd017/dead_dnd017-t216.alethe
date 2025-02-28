@@ -1,4 +1,0 @@
-(assume nt216.0 (not (=> (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))) (= e4 (op e4 (op e4 e4))))))
-(assume nt216.1 (not (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0))))))
-(step t216 (cl (=> (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))) (= e4 (op e4 (op e4 e4)))) (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0))))) :rule implies_neg1)
-(step t.end (cl) :rule resolution :premises (nt216.0 nt216.1 t216))

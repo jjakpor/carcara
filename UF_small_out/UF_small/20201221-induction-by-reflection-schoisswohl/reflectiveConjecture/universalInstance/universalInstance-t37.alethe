@@ -1,3 +1,0 @@
-(assume nst37.0 (not (= (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))))
-(step st37 (cl (= (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst37.0 st37))

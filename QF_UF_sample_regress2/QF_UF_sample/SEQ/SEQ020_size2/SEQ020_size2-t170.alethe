@@ -1,7 +1,0 @@
-(assume nst170.0 (not (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))))
-(assume t165 (or (not (= (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0))))) (not (or (= (f7 c_0) c_0) (= (f7 c_0) c_1))) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))))
-(assume t168 (= (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))))
-(assume t169 (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)))
-(step t165' (cl (not (= (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0))))) (not (or (= (f7 c_0) c_0) (= (f7 c_0) c_1))) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))) :rule or :premises (t165))
-(step st170 (cl (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))) :rule resolution :premises (t165' t168 t169))
-(step t.end (cl) :rule resolution :premises (nst170.0 st170))

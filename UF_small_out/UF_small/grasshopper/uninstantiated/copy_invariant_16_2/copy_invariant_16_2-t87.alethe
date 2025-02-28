@@ -1,6 +1,0 @@
-(assume nst87.0 (not (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)))
-(assume nst87.1 (not (not (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)))))
-(assume t86 (or (not (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0))) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)))
-(step t86' (cl (not (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0))) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)) :rule or :premises (t86))
-(step st87 (cl (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0) (not (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)))) :rule reordering :premises (t86'))
-(step t.end (cl) :rule resolution :premises (nst87.0 nst87.1 st87))

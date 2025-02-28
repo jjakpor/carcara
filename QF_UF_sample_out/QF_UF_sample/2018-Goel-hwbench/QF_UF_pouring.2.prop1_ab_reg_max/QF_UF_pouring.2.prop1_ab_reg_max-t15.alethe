@@ -1,7 +1,0 @@
-(assume t11 (or (not (= (= y$55379 (= y$prop y$55378)) (= y$55379 (= y$55378 y$prop)))) (not (= y$55379 (= y$prop y$55378))) (= y$55379 (= y$55378 y$prop))))
-(assume t14 (= (= y$55379 (= y$prop y$55378)) (= y$55379 (= y$55378 y$prop))))
-(assume a55 (= y$55379 (= y$prop y$55378)))
-(assume nt15.0 (not (= y$55379 (= y$55378 y$prop))))
-(step t11' (cl (not (= (= y$55379 (= y$prop y$55378)) (= y$55379 (= y$55378 y$prop)))) (not (= y$55379 (= y$prop y$55378))) (= y$55379 (= y$55378 y$prop))) :rule or :premises (t11))
-(step t15 (cl (= y$55379 (= y$55378 y$prop))) :rule resolution :premises (t11' t14 a55))
-(step t.end (cl) :rule resolution :premises (nt15.0 t15))

@@ -1,6 +1,0 @@
-(assume nst8.0 (not (= (or (not (= (f33 (f34 f38 (f9 f10 f11)) f39) (f33 (f34 f38 (f9 f10 f11)) f39))) (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))) (or false (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))))))
-(assume t5 (= (not (= (f33 (f34 f38 (f9 f10 f11)) f39) (f33 (f34 f38 (f9 f10 f11)) f39))) false))
-(assume t6 (= (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11))))))
-(assume t7 (= (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))))
-(step st8 (cl (= (or (not (= (f33 (f34 f38 (f9 f10 f11)) f39) (f33 (f34 f38 (f9 f10 f11)) f39))) (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))) (or false (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))))) :rule cong :premises (t5 t6 t7))
-(step t.end (cl) :rule resolution :premises (nst8.0 st8))

@@ -1,5 +1,0 @@
-(assume nst169.0 (not (not (forall ((?x Loc) (?y Loc) (?z Loc)) (or (not (Btwn$0 next$0 ?x ?y ?z)) (and (Btwn$0 next$0 ?x ?y ?y) (Btwn$0 next$0 ?y ?z ?z)))))))
-(assume nst169.1 (not (or (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0)))))
-(assume t168 (or (not (forall ((?x Loc) (?y Loc) (?z Loc)) (or (not (Btwn$0 next$0 ?x ?y ?z)) (and (Btwn$0 next$0 ?x ?y ?y) (Btwn$0 next$0 ?y ?z ?z))))) (or (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0)))))
-(step st169 (cl (not (forall ((?x Loc) (?y Loc) (?z Loc)) (or (not (Btwn$0 next$0 ?x ?y ?z)) (and (Btwn$0 next$0 ?x ?y ?y) (Btwn$0 next$0 ?y ?z ?z))))) (or (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0)))) :rule or :premises (t168))
-(step t.end (cl) :rule resolution :premises (nst169.0 nst169.1 st169))

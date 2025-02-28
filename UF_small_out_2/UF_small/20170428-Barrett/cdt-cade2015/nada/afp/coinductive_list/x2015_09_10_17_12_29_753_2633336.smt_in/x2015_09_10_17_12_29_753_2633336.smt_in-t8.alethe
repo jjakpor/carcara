@@ -1,4 +1,0 @@
-(assume nst8.0 (not (or (not (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))) (not (not (lnull$ (lconcat$ xssa$)))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))))
-(assume nst8.1 (not (not (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))))
-(step st8 (cl (or (not (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))) (not (not (lnull$ (lconcat$ xssa$)))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))) (not (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2))))))) :rule or_neg :args (2))
-(step t.end (cl) :rule resolution :premises (nst8.0 nst8.1 st8))

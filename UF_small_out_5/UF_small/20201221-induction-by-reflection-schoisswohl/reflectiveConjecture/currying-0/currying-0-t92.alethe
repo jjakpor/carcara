@@ -1,5 +1,0 @@
-(assume nst92.0 (not (not (= (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))))))
-(assume nst92.1 (not (not (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))))
-(assume nst92.2 (not (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))))
-(step st92 (cl (not (= (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))) (not (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst92.0 nst92.1 nst92.2 st92))

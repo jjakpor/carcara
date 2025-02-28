@@ -1,5 +1,0 @@
-(assume nst100.0 (not (= (not (= root_x$0 root_x$0)) false)))
-(assume t98 (= (not (= root_x$0 root_x$0)) (not true)))
-(assume t99 (= (not true) false))
-(step st100 (cl (= (not (= root_x$0 root_x$0)) false)) :rule trans :premises (t98 t99))
-(step t.end (cl) :rule resolution :premises (nst100.0 st100))

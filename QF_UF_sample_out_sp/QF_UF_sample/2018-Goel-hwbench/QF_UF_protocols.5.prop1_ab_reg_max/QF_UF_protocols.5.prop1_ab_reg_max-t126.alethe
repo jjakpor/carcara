@@ -1,5 +1,0 @@
-(assume nt126.0 (not (not (= y$v3_1517448506_390_op (and y$v3_1517448506_340_op y$734)))))
-(assume nt126.1 (not (not y$v3_1517448506_390_op)))
-(assume nt126.2 (not (and y$v3_1517448506_340_op y$734)))
-(step t126 (cl (not (= y$v3_1517448506_390_op (and y$v3_1517448506_340_op y$734))) (not y$v3_1517448506_390_op) (and y$v3_1517448506_340_op y$734)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt126.0 nt126.1 nt126.2 t126))

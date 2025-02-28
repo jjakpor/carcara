@@ -1,5 +1,0 @@
-(assume nt30.t1.0 (not (= (exists ((?v1 A$) (?v2 A_llist$)) (= ?v0 (lCons$ ?v1 ?v2))) (exists ((?v1 A$) (?v2 A_llist$)) (= (lCons$ ?v1 ?v2) ?v0)))))
-(anchor :step t30.t1 :args ((?v1 A$) (?v2 A_llist$) (:= (?v1 A$) ?v1) (:= (?v2 A_llist$) ?v2)))
-(step t30.t1.t0 (cl (= (= ?v0 (lCons$ ?v1 ?v2)) (= (lCons$ ?v1 ?v2) ?v0))) :rule trust)
-(step t30.t1 (cl (= (exists ((?v1 A$) (?v2 A_llist$)) (= ?v0 (lCons$ ?v1 ?v2))) (exists ((?v1 A$) (?v2 A_llist$)) (= (lCons$ ?v1 ?v2) ?v0)))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt30.t1.0 t30.t1))

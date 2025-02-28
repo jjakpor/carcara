@@ -1,5 +1,0 @@
-(assume nt299.0 (not (not (= (or (not (= (f5 c_0) (f6 c_0))) (not (p4 c_0))) (or (not (= (f6 c_0) (f5 c_0))) (not (p4 c_0)))))))
-(assume nt299.1 (not (not (or (not (= (f5 c_0) (f6 c_0))) (not (p4 c_0))))))
-(assume nt299.2 (not (or (not (= (f6 c_0) (f5 c_0))) (not (p4 c_0)))))
-(step t299 (cl (not (= (or (not (= (f5 c_0) (f6 c_0))) (not (p4 c_0))) (or (not (= (f6 c_0) (f5 c_0))) (not (p4 c_0))))) (not (or (not (= (f5 c_0) (f6 c_0))) (not (p4 c_0)))) (or (not (= (f6 c_0) (f5 c_0))) (not (p4 c_0)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt299.0 nt299.1 nt299.2 t299))

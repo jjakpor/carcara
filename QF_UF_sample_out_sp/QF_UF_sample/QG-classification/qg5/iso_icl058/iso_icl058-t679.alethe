@@ -1,4 +1,0 @@
-(assume nt679.0 (not (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op e0 e0) e0) e0))))
-(assume t468 (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))
-(step t679 (cl (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op e0 e0) e0) e0))) :rule symm :premises (t468))
-(step t.end (cl) :rule resolution :premises (nt679.0 t679))

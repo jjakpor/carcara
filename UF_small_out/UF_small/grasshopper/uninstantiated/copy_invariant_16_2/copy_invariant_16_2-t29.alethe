@@ -1,6 +1,0 @@
-(assume nst29.0 (not (= (lseg_domain$0 next$0 lst$0 curr_2$0) (lseg_domain$0 next$0 lst$0 lst$0))))
-(assume a23 (= curr_2$0 lst$0))
-(assume t15 (= next$0 next$0))
-(assume t28 (= lst$0 lst$0))
-(step st29 (cl (= (lseg_domain$0 next$0 lst$0 curr_2$0) (lseg_domain$0 next$0 lst$0 lst$0))) :rule cong :premises (t15 t28 a23))
-(step t.end (cl) :rule resolution :premises (nst29.0 st29))

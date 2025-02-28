@@ -1,5 +1,0 @@
-(assume nst251.0 (not (not (= (= (op e4 unit) e4) (= e4 (op e4 e0))))))
-(assume nst251.1 (not (not (= (op e4 unit) e4))))
-(assume nst251.2 (not (= e4 (op e4 e0))))
-(step st251 (cl (not (= (= (op e4 unit) e4) (= e4 (op e4 e0)))) (not (= (op e4 unit) e4)) (= e4 (op e4 e0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst251.0 nst251.1 nst251.2 st251))

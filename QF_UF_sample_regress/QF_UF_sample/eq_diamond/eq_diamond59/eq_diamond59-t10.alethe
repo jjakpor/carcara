@@ -1,5 +1,0 @@
-(assume nst10.0 (not (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))))
-(assume nst10.1 (not (= x14 x15)))
-(assume t9 (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15)))
-(step st10 (cl (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15)))) (= x14 x15)) :rule implies :premises (t9))
-(step t.end (cl) :rule resolution :premises (nst10.0 nst10.1 st10))

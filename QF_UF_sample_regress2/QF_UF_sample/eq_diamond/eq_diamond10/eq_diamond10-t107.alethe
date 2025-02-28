@@ -1,7 +1,0 @@
-(assume nst107.0 (not (= x5 x9)))
-(assume t73 (= x5 x6))
-(assume t84 (= x6 x7))
-(assume t95 (= x7 x8))
-(assume t106 (= x8 x9))
-(step st107 (cl (= x5 x9)) :rule trans :premises (t73 t84 t95 t106))
-(step t.end (cl) :rule resolution :premises (nst107.0 st107))

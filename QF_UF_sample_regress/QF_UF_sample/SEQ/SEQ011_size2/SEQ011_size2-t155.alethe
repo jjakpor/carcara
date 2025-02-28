@@ -1,4 +1,0 @@
-(assume nst155.0 (not (not (and (not (p1 (f7 c_0) c_0)) (= c_0 (f7 c_0)) (= c_0 (f6 c_0)) (p1 (f6 c_0) c_0)))))
-(assume nst155.1 (not (= c_0 (f7 c_0))))
-(step st155 (cl (not (and (not (p1 (f7 c_0) c_0)) (= c_0 (f7 c_0)) (= c_0 (f6 c_0)) (p1 (f6 c_0) c_0))) (= c_0 (f7 c_0))) :rule and_pos :args (1))
-(step t.end (cl) :rule resolution :premises (nst155.0 nst155.1 st155))

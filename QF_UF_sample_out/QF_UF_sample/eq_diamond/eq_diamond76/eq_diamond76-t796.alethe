@@ -1,5 +1,0 @@
-(assume nt796.0 (not (not (= (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (and (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (=> (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (= x71 x72)))))))
-(assume nt796.1 (not (not (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))))))
-(assume nt796.2 (not (and (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (=> (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (= x71 x72)))))
-(step t796 (cl (not (= (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (and (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (=> (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (= x71 x72))))) (not (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72)))) (and (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (=> (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (= x71 x72)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt796.0 nt796.1 nt796.2 t796))

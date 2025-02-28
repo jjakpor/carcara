@@ -1,3 +1,0 @@
-(assume nst725.0 (not (= (= (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (and (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65)))) true)))
-(step st725 (cl (= (= (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (and (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst725.0 st725))

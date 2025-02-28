@@ -1,6 +1,0 @@
-(assume nst69.0 (not (not (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))))))
-(assume nst69.1 (not (not (= c_0 (f5 c_1)))))
-(assume t68 (or (not (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1)))) (not (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1)))) (not (= c_0 (f5 c_1)))))
-(step t68' (cl (not (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1)))) (not (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1)))) (not (= c_0 (f5 c_1)))) :rule or :premises (t68))
-(step st69 (cl (not (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1)))) (not (= c_0 (f5 c_1)))) :rule contraction :premises (t68'))
-(step t.end (cl) :rule resolution :premises (nst69.0 nst69.1 st69))

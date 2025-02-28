@@ -1,6 +1,0 @@
-(assume nt84.t268.0 (not (= x24 x25)))
-(assume t84.t267 (or (= x24 x25) (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))))))
-(assume t84.t263 (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))))
-(step t84.t267' (cl (= x24 x25) (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))))) :rule or :premises (t84.t267))
-(step t84.t268 (cl (= x24 x25)) :rule resolution :premises (t84.t267' t84.t263))
-(step t.end (cl) :rule resolution :premises (nt84.t268.0 t84.t268))

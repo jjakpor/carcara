@@ -1,5 +1,0 @@
-(assume nst119.0 (not (not (= y$58 (and y$2 y$13 y$28 y$26 y$45 y$44)))))
-(assume nst119.1 (not (not y$58)))
-(assume nst119.2 (not (and y$2 y$13 y$28 y$26 y$45 y$44)))
-(step st119 (cl (not (= y$58 (and y$2 y$13 y$28 y$26 y$45 y$44))) (not y$58) (and y$2 y$13 y$28 y$26 y$45 y$44)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst119.0 nst119.1 nst119.2 st119))

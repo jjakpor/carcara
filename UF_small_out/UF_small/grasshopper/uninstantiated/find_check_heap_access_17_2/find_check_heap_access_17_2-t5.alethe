@@ -1,4 +1,0 @@
-(assume nst5.0 (not (not (and (Btwn$0 next$0 x$0 x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 x$0)))))
-(assume nst5.1 (not (Btwn$0 next$0 x$0 x$0 root_x$0)))
-(step st5 (cl (not (and (Btwn$0 next$0 x$0 x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 x$0))) (Btwn$0 next$0 x$0 x$0 root_x$0)) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nst5.0 nst5.1 st5))

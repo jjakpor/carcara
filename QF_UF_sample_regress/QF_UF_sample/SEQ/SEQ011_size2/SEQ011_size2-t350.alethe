@@ -1,5 +1,0 @@
-(assume nst350.0 (not (= (or (not (= (f5 c_1) (f6 c_1))) (not (p4 c_1))) (or (not (= (f6 c_1) (f5 c_1))) (not (p4 c_1))))))
-(assume t348 (= (not (= (f5 c_1) (f6 c_1))) (not (= (f6 c_1) (f5 c_1)))))
-(assume t349 (= (not (p4 c_1)) (not (p4 c_1))))
-(step st350 (cl (= (or (not (= (f5 c_1) (f6 c_1))) (not (p4 c_1))) (or (not (= (f6 c_1) (f5 c_1))) (not (p4 c_1))))) :rule cong :premises (t348 t349))
-(step t.end (cl) :rule resolution :premises (nst350.0 st350))

@@ -1,5 +1,0 @@
-(assume nst408.0 (not (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))))
-(assume nst408.1 (not (= x35 x36)))
-(assume t407 (=> (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (= x35 x36)))
-(step st408 (cl (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36)))) (= x35 x36)) :rule implies :premises (t407))
-(step t.end (cl) :rule resolution :premises (nst408.0 nst408.1 st408))

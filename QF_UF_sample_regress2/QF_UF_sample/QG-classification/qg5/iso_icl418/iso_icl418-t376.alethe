@@ -1,5 +1,0 @@
-(assume nst376.0 (not (= (or (or (or (or (= (op e0 e3) e0) (= (op e0 e3) e1)) (= (op e0 e3) e2)) (= (op e0 e3) e3)) (= (op e0 e3) e4)) (or (= e4 (op e0 e3)) (= e3 (op e0 e3)) (= e2 (op e0 e3)) (= e0 (op e0 e3)) (= e1 (op e0 e3))))))
-(assume t371 (= (or (or (or (or (= (op e0 e3) e0) (= (op e0 e3) e1)) (= (op e0 e3) e2)) (= (op e0 e3) e3)) (= (op e0 e3) e4)) (or (= (op e0 e3) e4) (= (op e0 e3) e3) (= (op e0 e3) e2) (= (op e0 e3) e0) (= (op e0 e3) e1))))
-(assume t375 (= (or (= (op e0 e3) e4) (= (op e0 e3) e3) (= (op e0 e3) e2) (= (op e0 e3) e0) (= (op e0 e3) e1)) (or (= e4 (op e0 e3)) (= e3 (op e0 e3)) (= e2 (op e0 e3)) (= e0 (op e0 e3)) (= e1 (op e0 e3)))))
-(step st376 (cl (= (or (or (or (or (= (op e0 e3) e0) (= (op e0 e3) e1)) (= (op e0 e3) e2)) (= (op e0 e3) e3)) (= (op e0 e3) e4)) (or (= e4 (op e0 e3)) (= e3 (op e0 e3)) (= e2 (op e0 e3)) (= e0 (op e0 e3)) (= e1 (op e0 e3))))) :rule trans :premises (t371 t375))
-(step t.end (cl) :rule resolution :premises (nst376.0 st376))

@@ -1,7 +1,0 @@
-(assume nst291.0 (not (= c$ d$)))
-(assume nst291.1 (not (not (= b$ c$))))
-(assume nst291.2 (not (not (= b$ d$))))
-(assume t290 (or (not (= b$ c$)) (= c$ d$) (not (= b$ d$))))
-(step t290' (cl (not (= b$ c$)) (= c$ d$) (not (= b$ d$))) :rule or :premises (t290))
-(step st291 (cl (= c$ d$) (not (= b$ c$)) (not (= b$ d$))) :rule reordering :premises (t290'))
-(step t.end (cl) :rule resolution :premises (nst291.0 nst291.1 nst291.2 st291))

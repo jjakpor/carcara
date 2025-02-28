@@ -1,6 +1,0 @@
-(assume nst1028.0 (not (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op e0 e0) e0))))))
-(assume t1014 (or (not (= (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op e0 e0) e0))) false)) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op e0 e0) e0))))))
-(assume t1027 (= (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op e0 e0) e0))) false))
-(step t1014' (cl (not (= (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op e0 e0) e0))) false)) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op e0 e0) e0))))) :rule or :premises (t1014))
-(step st1028 (cl (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op e0 e0) e0))))) :rule resolution :premises (t1014' t1027))
-(step t.end (cl) :rule resolution :premises (nst1028.0 st1028))

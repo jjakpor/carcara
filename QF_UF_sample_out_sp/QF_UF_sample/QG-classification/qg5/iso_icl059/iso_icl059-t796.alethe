@@ -1,5 +1,0 @@
-(assume nt796.0 (not (= (= (op (op (op e0 e0) e0) e0) (op e0 (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false)))
-(assume t777 (= (= (op (op (op e0 e0) e0) e0) (op e0 (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) (= (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) (op e0 (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
-(assume t795 (= (= (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) (op e0 (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false))
-(step t796 (cl (= (= (op (op (op e0 e0) e0) e0) (op e0 (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false)) :rule trans :premises (t777 t795))
-(step t.end (cl) :rule resolution :premises (nt796.0 t796))

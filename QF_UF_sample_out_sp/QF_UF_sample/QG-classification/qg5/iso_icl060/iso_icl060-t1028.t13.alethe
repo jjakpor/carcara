@@ -1,4 +1,0 @@
-(assume nt1028.t13.0 (not (= (op (op e1 e3) (op (op e1 e3) e3)) (op (op (op e1 e3) e3) (op (op e1 e3) e1)))))
-(assume t1028.t12 (= (op (op (op e1 e3) e3) (op (op e1 e3) e1)) (op (op e1 e3) (op (op e1 e3) e3))))
-(step t1028.t13 (cl (= (op (op e1 e3) (op (op e1 e3) e3)) (op (op (op e1 e3) e3) (op (op e1 e3) e1)))) :rule symm :premises (t1028.t12))
-(step t.end (cl) :rule resolution :premises (nt1028.t13.0 t1028.t13))

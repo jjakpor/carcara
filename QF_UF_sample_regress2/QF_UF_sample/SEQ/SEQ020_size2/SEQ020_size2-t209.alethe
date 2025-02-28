@@ -1,5 +1,0 @@
-(assume nst209.0 (not (= c_0 (f6 c_0))))
-(assume nst209.1 (not (= c_1 (f6 c_0))))
-(assume t208 (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0))))
-(step st209 (cl (= c_0 (f6 c_0)) (= c_1 (f6 c_0))) :rule or :premises (t208))
-(step t.end (cl) :rule resolution :premises (nst209.0 nst209.1 st209))

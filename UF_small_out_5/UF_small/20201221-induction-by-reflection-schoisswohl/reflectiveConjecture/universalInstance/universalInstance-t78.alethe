@@ -1,5 +1,0 @@
-(assume nst78.0 (not (not (= (forall ((env env) (v var_alpha) (x alpha)) (= (evalV_alpha (push_alpha env v x) v) x)) (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v)))))))
-(assume nst78.1 (not (not (forall ((env env) (v var_alpha) (x alpha)) (= (evalV_alpha (push_alpha env v x) v) x)))))
-(assume nst78.2 (not (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v)))))
-(step st78 (cl (not (= (forall ((env env) (v var_alpha) (x alpha)) (= (evalV_alpha (push_alpha env v x) v) x)) (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v))))) (not (forall ((env env) (v var_alpha) (x alpha)) (= (evalV_alpha (push_alpha env v x) v) x))) (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst78.0 nst78.1 nst78.2 st78))

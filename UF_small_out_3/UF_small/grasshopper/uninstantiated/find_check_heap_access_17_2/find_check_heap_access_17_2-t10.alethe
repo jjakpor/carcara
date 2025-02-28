@@ -1,3 +1,0 @@
-(assume nst10.0 (not (= (not (not (in$0 x$0 (setenum$0 root_x$0)))) (in$0 x$0 (setenum$0 root_x$0)))))
-(step st10 (cl (= (not (not (in$0 x$0 (setenum$0 root_x$0)))) (in$0 x$0 (setenum$0 root_x$0)))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst10.0 st10))

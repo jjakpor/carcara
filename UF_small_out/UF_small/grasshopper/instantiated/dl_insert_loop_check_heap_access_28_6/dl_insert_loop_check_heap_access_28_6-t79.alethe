@@ -1,3 +1,0 @@
-(assume nst79.0 (not (= (= Axiom_33$0 true) Axiom_33$0)))
-(step st79 (cl (= (= Axiom_33$0 true) Axiom_33$0)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst79.0 st79))

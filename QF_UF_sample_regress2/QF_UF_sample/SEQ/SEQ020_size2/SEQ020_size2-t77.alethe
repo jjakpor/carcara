@@ -1,4 +1,0 @@
-(assume nst77.0 (not (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1))))))
-(assume nst77.1 (not (not (not (= c_0 (f6 c_1))))))
-(step st77 (cl (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (not (not (= c_0 (f6 c_1))))) :rule or_neg :args (1))
-(step t.end (cl) :rule resolution :premises (nst77.0 nst77.1 st77))

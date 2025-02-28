@@ -1,4 +1,0 @@
-(assume t8 (and y$83 y$98 y$103 y$117 y$128 y$139 y$149 y$161 y$165 y$179 y$197 y$211 y$213 y$228 y$238 y$240 y$261 y$268 y$275 y$292 y$306 y$313 y$320 y$330 y$342 y$354 y$359 y$373 y$383 y$391 y$1048))
-(assume nt172.0 (not y$320))
-(step t172 (cl y$320) :rule and :premises (t8) :args (22))
-(step t.end (cl) :rule resolution :premises (nt172.0 t172))

@@ -1,3 +1,0 @@
-(assume nst966.0 (not (= (or (or (or (or (= (op e0 e3) e0) (= (op e1 e3) e0)) (= (op e2 e3) e0)) (= (op e3 e3) e0)) (= (op e4 e3) e0)) (or (= (op e4 e3) e0) (= (op e3 e3) e0) (= (op e2 e3) e0) (= (op e0 e3) e0) (= (op e1 e3) e0)))))
-(step st966 (cl (= (or (or (or (or (= (op e0 e3) e0) (= (op e1 e3) e0)) (= (op e2 e3) e0)) (= (op e3 e3) e0)) (= (op e4 e3) e0)) (or (= (op e4 e3) e0) (= (op e3 e3) e0) (= (op e2 e3) e0) (= (op e0 e3) e0) (= (op e1 e3) e0)))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst966.0 st966))

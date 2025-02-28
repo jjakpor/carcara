@@ -1,6 +1,0 @@
-(assume nst65.0 (not (models (push_alpha empty v0_alpha (eval_alpha empty aR)) (pR (inj_alpha v0_alpha)))))
-(assume t32 (or (not (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha))))) (models (push_alpha empty v0_alpha (eval_alpha empty aR)) (pR (inj_alpha v0_alpha)))))
-(assume t64 (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha)))))
-(step t32' (cl (not (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha))))) (models (push_alpha empty v0_alpha (eval_alpha empty aR)) (pR (inj_alpha v0_alpha)))) :rule or :premises (t32))
-(step st65 (cl (models (push_alpha empty v0_alpha (eval_alpha empty aR)) (pR (inj_alpha v0_alpha)))) :rule resolution :premises (t32' t64))
-(step t.end (cl) :rule resolution :premises (nst65.0 st65))

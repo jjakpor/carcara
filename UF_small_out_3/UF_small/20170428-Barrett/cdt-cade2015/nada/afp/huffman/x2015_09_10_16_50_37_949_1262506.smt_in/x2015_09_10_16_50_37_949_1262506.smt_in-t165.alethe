@@ -1,4 +1,0 @@
-(assume nst165.0 (not (not (and (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) c$)) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) c$))))))
-(assume nst165.1 (not (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) c$))))
-(step st165 (cl (not (and (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) c$)) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) c$)))) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) c$))) :rule and_pos :args (1))
-(step t.end (cl) :rule resolution :premises (nst165.0 nst165.1 st165))

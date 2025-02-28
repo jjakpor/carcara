@@ -1,5 +1,0 @@
-(assume nst96.0 (not (= (or (= null$0 null$0) (not (Btwn$0 next$0 a_1$0 null$0 null$0))) true)))
-(assume t94 (= (or (= null$0 null$0) (not (Btwn$0 next$0 a_1$0 null$0 null$0))) (or true (not (Btwn$0 next$0 a_1$0 null$0 null$0)))))
-(assume t95 (= (or true (not (Btwn$0 next$0 a_1$0 null$0 null$0))) true))
-(step st96 (cl (= (or (= null$0 null$0) (not (Btwn$0 next$0 a_1$0 null$0 null$0))) true)) :rule trans :premises (t94 t95))
-(step t.end (cl) :rule resolution :premises (nst96.0 st96))

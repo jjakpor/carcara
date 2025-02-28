@@ -1,5 +1,0 @@
-(assume t49 (or prt (not red_SR)))
-(assume t72 red_SR)
-(assume t73 (not prt))
-(step t49' (cl prt (not red_SR)) :rule or :premises (t49))
-(step st74 (cl) :rule resolution :premises (t49' t73 t72))

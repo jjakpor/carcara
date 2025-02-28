@@ -1,6 +1,0 @@
-(assume t1 (or (not (models empty (qR bR))) (not (models empty (notR (qR bR)))) (not (= (not (models empty (qR bR))) (models empty (notR (qR bR)))))))
-(assume t50 (= (not (models empty (qR bR))) (models empty (notR (qR bR)))))
-(assume t173 (models empty (qR bR)))
-(assume t190 (models empty (notR (qR bR))))
-(step t1' (cl (not (models empty (qR bR))) (not (models empty (notR (qR bR)))) (not (= (not (models empty (qR bR))) (models empty (notR (qR bR)))))) :rule or :premises (t1))
-(step st191 (cl) :rule resolution :premises (t1' t173 t190 t50))

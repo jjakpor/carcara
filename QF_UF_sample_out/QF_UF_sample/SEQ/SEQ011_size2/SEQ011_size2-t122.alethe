@@ -1,6 +1,0 @@
-(assume t121 (or (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (= (f6 c_0) (f5 c_0))))
-(assume nt122.0 (not (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))))))
-(assume nt122.1 (not (= (f6 c_0) (f5 c_0))))
-(step t121' (cl (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (= (f6 c_0) (f5 c_0))) :rule or :premises (t121))
-(step t122 (cl (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (= (f6 c_0) (f5 c_0))) :rule contraction :premises (t121'))
-(step t.end (cl) :rule resolution :premises (nt122.0 nt122.1 t122))

@@ -1,3 +1,0 @@
-(assume nst221.0 (not (= (not true) false)))
-(step st221 (cl (= (not true) false)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst221.0 st221))

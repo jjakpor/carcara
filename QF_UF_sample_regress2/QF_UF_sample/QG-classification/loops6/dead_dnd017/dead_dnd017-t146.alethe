@@ -1,5 +1,0 @@
-(assume nst146.0 (not (not (= e2 (op e2 (op e2 e2))))))
-(assume nst146.1 (not (= e2 e0)))
-(assume t145 (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))
-(step st146 (cl (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)) :rule or :premises (t145))
-(step t.end (cl) :rule resolution :premises (nst146.0 nst146.1 st146))

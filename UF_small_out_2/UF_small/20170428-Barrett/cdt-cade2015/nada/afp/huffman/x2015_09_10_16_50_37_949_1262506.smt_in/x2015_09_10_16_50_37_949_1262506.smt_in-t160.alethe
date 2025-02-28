@@ -1,5 +1,0 @@
-(assume nst160.0 (not (= (fun_app$b (less_eq$ (depth$ t$ b$)) (depth$ t$ c$)) true)))
-(assume t153 (= (fun_app$b (less_eq$ (depth$ t$ b$)) (depth$ t$ c$)) (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$))))
-(assume t159 (= (fun_app$b (less_eq$ (depth$ t$ b$)) (height$ t$)) true))
-(step st160 (cl (= (fun_app$b (less_eq$ (depth$ t$ b$)) (depth$ t$ c$)) true)) :rule trans :premises (t153 t159))
-(step t.end (cl) :rule resolution :premises (nst160.0 st160))

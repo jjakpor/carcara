@@ -1,3 +1,0 @@
-(assume nst140.0 (not (= (not (Btwn$0 next$0 cp_2$0 null$0 null$0)) (not (Btwn$0 next$0 cp_2$0 null$0 null$0)))))
-(step st140 (cl (= (not (Btwn$0 next$0 cp_2$0 null$0 null$0)) (not (Btwn$0 next$0 cp_2$0 null$0 null$0)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst140.0 st140))

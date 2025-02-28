@@ -1,5 +1,0 @@
-(assume nt46.0 (not (= (= e4 (op e1 e1)) (= e4 (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
-(assume t32 (= e4 e4))
-(assume t45 (= (op e1 e1) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))
-(step t46 (cl (= (= e4 (op e1 e1)) (= e4 (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))) :rule cong :premises (t32 t45))
-(step t.end (cl) :rule resolution :premises (nt46.0 t46))

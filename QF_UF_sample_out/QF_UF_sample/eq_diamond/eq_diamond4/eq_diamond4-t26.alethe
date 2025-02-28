@@ -1,5 +1,0 @@
-(assume nt26.0 (not (not (= (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3)))))))
-(assume nt26.1 (not (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))))
-(assume nt26.2 (not (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3)))))
-(step t26 (cl (not (= (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3))))) (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))) (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt26.0 nt26.1 nt26.2 t26))

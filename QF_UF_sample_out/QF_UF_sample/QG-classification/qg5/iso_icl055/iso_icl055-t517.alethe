@@ -1,4 +1,0 @@
-(assume t516 (= (= (op e2 e0) (op e2 e4)) (= (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op e1 e1) (op (op e1 e1) (op e1 e1))))))
-(assume nt517.0 (not (= (not (= (op e2 e0) (op e2 e4))) (not (= (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op e1 e1) (op (op e1 e1) (op e1 e1))))))))
-(step t517 (cl (= (not (= (op e2 e0) (op e2 e4))) (not (= (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op e1 e1) (op (op e1 e1) (op e1 e1))))))) :rule cong :premises (t516))
-(step t.end (cl) :rule resolution :premises (nt517.0 t517))

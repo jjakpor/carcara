@@ -1,6 +1,0 @@
-(assume nst449.0 (not (= x39 x40)))
-(assume t444 (or (and (= x39 y39) (= y39 x40)) (and (= x39 z39) (= z39 x40))))
-(assume t448 (or (= x39 x40) (not (or (and (= x39 y39) (= y39 x40)) (and (= x39 z39) (= z39 x40))))))
-(step t448' (cl (= x39 x40) (not (or (and (= x39 y39) (= y39 x40)) (and (= x39 z39) (= z39 x40))))) :rule or :premises (t448))
-(step st449 (cl (= x39 x40)) :rule resolution :premises (t448' t444))
-(step t.end (cl) :rule resolution :premises (nst449.0 st449))

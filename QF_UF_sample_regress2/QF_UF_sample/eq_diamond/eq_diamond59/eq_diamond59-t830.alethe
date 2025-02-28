@@ -1,5 +1,0 @@
-(assume nst830.0 (not (not (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))))))
-(assume nst830.1 (not (= x56 x57)))
-(assume t829 (=> (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))) (= x56 x57)))
-(step st830 (cl (not (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57)))) (= x56 x57)) :rule implies :premises (t829))
-(step t.end (cl) :rule resolution :premises (nst830.0 nst830.1 st830))

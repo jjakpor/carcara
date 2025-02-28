@@ -1,4 +1,0 @@
-(assume t277 (and (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (=> (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (= x23 x24))))
-(assume nt278.0 (not (=> (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (= x23 x24))))
-(step t278 (cl (=> (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (= x23 x24))) :rule and :premises (t277) :args (1))
-(step t.end (cl) :rule resolution :premises (nt278.0 t278))

@@ -1,5 +1,0 @@
-(assume nt800.0 (not (not (= (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (and (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55)))))))
-(assume nt800.1 (not (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))))))
-(assume nt800.2 (not (and (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55)))))
-(step t800 (cl (not (= (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (and (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55))))) (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55)))) (and (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt800.0 nt800.1 nt800.2 t800))

@@ -1,5 +1,0 @@
-(assume nt83.0 (not (not (= y$80 (= y$v_k_Press y$v_k_Table)))))
-(assume nt83.1 (not (not y$80)))
-(assume nt83.2 (not (= y$v_k_Press y$v_k_Table)))
-(step t83 (cl (not (= y$80 (= y$v_k_Press y$v_k_Table))) (not y$80) (= y$v_k_Press y$v_k_Table)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt83.0 nt83.1 nt83.2 t83))

@@ -1,5 +1,0 @@
-(assume t11 (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2)))))
-(assume nt12.0 (not (not (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))))))
-(assume nt12.1 (not (= e2 (op e2 (op e2 e2)))))
-(step t12 (cl (not (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0))))) (= e2 (op e2 (op e2 e2)))) :rule implies :premises (t11))
-(step t.end (cl) :rule resolution :premises (nt12.0 nt12.1 t12))

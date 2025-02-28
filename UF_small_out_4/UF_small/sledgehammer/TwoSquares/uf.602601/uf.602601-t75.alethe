@@ -1,5 +1,0 @@
-(assume nst75.0 (not (= (f5 f10 (f5 f10 (f5 f11 f12))) (f5 f10 (f5 f10 (f5 f11 f25))))))
-(assume t71 (= f10 f10))
-(assume t74 (= (f5 f10 (f5 f11 f12)) (f5 f10 (f5 f11 f25))))
-(step st75 (cl (= (f5 f10 (f5 f10 (f5 f11 f12))) (f5 f10 (f5 f10 (f5 f11 f25))))) :rule cong :premises (t71 t74))
-(step t.end (cl) :rule resolution :premises (nst75.0 st75))

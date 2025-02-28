@@ -1,7 +1,0 @@
-(assume nt366.0 (not (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)))))
-(assume t362 (or (not (= (not (= (op e2 e0) (op e3 e0))) (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))) (not (not (= (op e2 e0) (op e3 e0)))) (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)))))
-(assume t364 (= (not (= (op e2 e0) (op e3 e0))) (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)))))
-(assume t365 (not (= (op e2 e0) (op e3 e0))))
-(step t362' (cl (not (= (not (= (op e2 e0) (op e3 e0))) (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))) (not (not (= (op e2 e0) (op e3 e0)))) (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)))) :rule or :premises (t362))
-(step t366 (cl (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)))) :rule resolution :premises (t362' t364 t365))
-(step t.end (cl) :rule resolution :premises (nt366.0 t366))

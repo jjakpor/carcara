@@ -1,4 +1,0 @@
-(assume nst31.0 (not (or (not (not (in$0 x$0 (setenum$0 root_x$0)))) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0))))))
-(assume nst31.1 (not (not (not (= root_x$0 x$0)))))
-(step st31 (cl (or (not (not (in$0 x$0 (setenum$0 root_x$0)))) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0)))) (not (not (= root_x$0 x$0)))) :rule or_neg :args (1))
-(step t.end (cl) :rule resolution :premises (nst31.0 nst31.1 st31))

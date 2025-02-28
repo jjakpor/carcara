@@ -1,7 +1,0 @@
-(assume nst32.0 (not (and (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2)))))
-(assume t26 (or (not (= (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (and (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2))))) (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2)))) (and (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2)))))
-(assume t30 (= (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (and (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2)))))
-(assume t31 (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))))
-(step t26' (cl (not (= (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (and (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2))))) (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2)))) (and (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2)))) :rule or :premises (t26))
-(step st32 (cl (and (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2)))) :rule resolution :premises (t26' t30 t31))
-(step t.end (cl) :rule resolution :premises (nst32.0 st32))

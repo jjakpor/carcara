@@ -1,5 +1,0 @@
-(assume nst17.0 (not (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))))))
-(assume nst17.1 (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))))
-(assume t16 (or (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))))
-(step st17 (cl (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))) :rule or :premises (t16))
-(step t.end (cl) :rule resolution :premises (nst17.0 nst17.1 st17))

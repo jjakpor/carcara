@@ -1,6 +1,0 @@
-(assume nst180.0 (not (= x0 x1)))
-(assume t175 (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))
-(assume t179 (or (= x0 x1) (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))))
-(step t179' (cl (= x0 x1) (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))) :rule or :premises (t179))
-(step st180 (cl (= x0 x1)) :rule resolution :premises (t179' t175))
-(step t.end (cl) :rule resolution :premises (nst180.0 st180))

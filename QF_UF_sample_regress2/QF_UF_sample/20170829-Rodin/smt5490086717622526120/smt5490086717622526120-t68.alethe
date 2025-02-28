@@ -1,5 +1,0 @@
-(assume nst68.0 (not (or (not (not prt)) (not red_MR))))
-(assume t67 (or (or (not (not prt)) (not red_MR)) (or (not (not prt)) (not red_MR))))
-(step t67' (cl (or (not (not prt)) (not red_MR)) (or (not (not prt)) (not red_MR))) :rule or :premises (t67))
-(step st68 (cl (or (not (not prt)) (not red_MR))) :rule contraction :premises (t67'))
-(step t.end (cl) :rule resolution :premises (nst68.0 st68))

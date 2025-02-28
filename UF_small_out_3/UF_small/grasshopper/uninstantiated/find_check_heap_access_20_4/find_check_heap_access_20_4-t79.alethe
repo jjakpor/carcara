@@ -1,6 +1,0 @@
-(assume nst79.0 (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)))
-(assume t76 (or (Btwn$0 next$0 x$0 root_x$0 root_x$0) (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))))
-(assume t78 (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))
-(step t76' (cl (Btwn$0 next$0 x$0 root_x$0 root_x$0) (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))) :rule or :premises (t76))
-(step st79 (cl (Btwn$0 next$0 x$0 root_x$0 root_x$0)) :rule resolution :premises (t76' t78))
-(step t.end (cl) :rule resolution :premises (nst79.0 st79))

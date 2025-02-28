@@ -1,4 +1,0 @@
-(assume nst686.0 (not (or (or (or (or (= (op e3 e0) e1) (= (op e3 e1) e1)) (= (op e3 e2) e1)) (= (op e3 e3) e1)) (= (op e3 e4) e1))))
-(assume t685 (and (or (or (or (or (= (op e3 e0) e1) (= (op e3 e1) e1)) (= (op e3 e2) e1)) (= (op e3 e3) e1)) (= (op e3 e4) e1)) (or (or (or (or (= (op e0 e3) e1) (= (op e1 e3) e1)) (= (op e2 e3) e1)) (= (op e3 e3) e1)) (= (op e4 e3) e1))))
-(step st686 (cl (or (or (or (or (= (op e3 e0) e1) (= (op e3 e1) e1)) (= (op e3 e2) e1)) (= (op e3 e3) e1)) (= (op e3 e4) e1))) :rule and :premises (t685) :args (0))
-(step t.end (cl) :rule resolution :premises (nst686.0 st686))

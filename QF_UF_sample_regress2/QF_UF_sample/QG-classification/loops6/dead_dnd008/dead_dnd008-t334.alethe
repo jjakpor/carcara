@@ -1,5 +1,0 @@
-(assume nst334.0 (not (= (= e2 (op e2 unit)) (= e2 (op e2 e0)))))
-(assume t317 (= e2 e2))
-(assume t333 (= (op e2 unit) (op e2 e0)))
-(step st334 (cl (= (= e2 (op e2 unit)) (= e2 (op e2 e0)))) :rule cong :premises (t317 t333))
-(step t.end (cl) :rule resolution :premises (nst334.0 st334))

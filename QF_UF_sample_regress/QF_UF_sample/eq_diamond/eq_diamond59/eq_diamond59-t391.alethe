@@ -1,6 +1,0 @@
-(assume nst391.0 (not (= x16 x17)))
-(assume nst391.1 (not (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))))))
-(assume t390 (or (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17)))) (= x16 x17)))
-(step t390' (cl (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17)))) (= x16 x17)) :rule or :premises (t390))
-(step st391 (cl (= x16 x17) (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))))) :rule reordering :premises (t390'))
-(step t.end (cl) :rule resolution :premises (nst391.0 nst391.1 st391))

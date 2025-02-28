@@ -1,4 +1,0 @@
-(assume nt9.0 (not (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12))))
-(assume t8 (and (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12))))
-(step t9 (cl (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12))) :rule and :premises (t8) :args (1))
-(step t.end (cl) :rule resolution :premises (nt9.0 t9))

@@ -1,5 +1,0 @@
-(assume t226 (= (= (f5 c_0) c_0) (= c_0 (f5 c_0))))
-(assume t227 (= (= (f5 c_0) c_1) (= c_1 (f5 c_0))))
-(assume nt228.0 (not (= (or (= (f5 c_0) c_0) (= (f5 c_0) c_1)) (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0))))))
-(step t228 (cl (= (or (= (f5 c_0) c_0) (= (f5 c_0) c_1)) (or (= c_0 (f5 c_0)) (= c_1 (f5 c_0))))) :rule cong :premises (t226 t227))
-(step t.end (cl) :rule resolution :premises (nt228.0 t228))

@@ -1,4 +1,0 @@
-(assume nst31.0 (not (= (not y$1047) y$v3_1517448506_531_op)))
-(assume a663 (= y$v3_1517448506_531_op (not y$1047)))
-(step st31 (cl (= (not y$1047) y$v3_1517448506_531_op)) :rule symm :premises (a663))
-(step t.end (cl) :rule resolution :premises (nst31.0 st31))

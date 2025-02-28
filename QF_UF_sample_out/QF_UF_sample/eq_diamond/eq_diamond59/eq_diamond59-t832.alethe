@@ -1,6 +1,0 @@
-(assume t831 (or (= x56 x57) (not (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))))))
-(assume t827 (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))))
-(assume nt832.0 (not (= x56 x57)))
-(step t831' (cl (= x56 x57) (not (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))))) :rule or :premises (t831))
-(step t832 (cl (= x56 x57)) :rule resolution :premises (t831' t827))
-(step t.end (cl) :rule resolution :premises (nt832.0 t832))

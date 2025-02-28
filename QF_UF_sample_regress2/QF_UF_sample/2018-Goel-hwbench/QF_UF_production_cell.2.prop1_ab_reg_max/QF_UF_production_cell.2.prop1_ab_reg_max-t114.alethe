@@ -1,3 +1,0 @@
-(assume nst114.0 (not (= y$id44_op y$id44_op)))
-(step st114 (cl (= y$id44_op y$id44_op)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst114.0 st114))

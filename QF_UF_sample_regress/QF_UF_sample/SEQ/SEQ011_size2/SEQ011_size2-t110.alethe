@@ -1,8 +1,0 @@
-(assume nst110.0 (not (=> (and (p4 c8) (= c8 c_0)) (p4 c_0))))
-(assume nst110.1 (not (=> (and (p4 c8) (= c8 c_0)) (p4 c_0))))
-(assume t108 (or (=> (and (p4 c8) (= c8 c_0)) (p4 c_0)) (p4 c_0)))
-(assume t109 (or (=> (and (p4 c8) (= c8 c_0)) (p4 c_0)) (not (p4 c_0))))
-(step t108' (cl (=> (and (p4 c8) (= c8 c_0)) (p4 c_0)) (p4 c_0)) :rule or :premises (t108))
-(step t109' (cl (=> (and (p4 c8) (= c8 c_0)) (p4 c_0)) (not (p4 c_0))) :rule or :premises (t109))
-(step st110 (cl (=> (and (p4 c8) (= c8 c_0)) (p4 c_0)) (=> (and (p4 c8) (= c8 c_0)) (p4 c_0))) :rule resolution :premises (t108' t109'))
-(step t.end (cl) :rule resolution :premises (nst110.0 nst110.1 st110))

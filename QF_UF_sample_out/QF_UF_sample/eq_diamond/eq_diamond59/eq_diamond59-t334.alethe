@@ -1,4 +1,0 @@
-(assume t333 (and (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11))))
-(assume nt334.0 (not (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11))))
-(step t334 (cl (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11))) :rule and :premises (t333) :args (1))
-(step t.end (cl) :rule resolution :premises (nt334.0 t334))

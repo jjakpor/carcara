@@ -1,3 +1,0 @@
-(assume nst52.0 (not (= (= (f6 c_1) (f5 c_1)) (= (f6 c_1) (f5 c_1)))))
-(step st52 (cl (= (= (f6 c_1) (f5 c_1)) (= (f6 c_1) (f5 c_1)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst52.0 st52))

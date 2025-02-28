@@ -1,6 +1,0 @@
-(assume nst388.0 (not (= x33 x34)))
-(assume t383 (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))
-(assume t387 (or (= x33 x34) (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))))
-(step t387' (cl (= x33 x34) (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))) :rule or :premises (t387))
-(step st388 (cl (= x33 x34)) :rule resolution :premises (t387' t383))
-(step t.end (cl) :rule resolution :premises (nst388.0 st388))

@@ -1,7 +1,0 @@
-(assume nst107.0 (not (= y$28 (= y$27 y$prop$next))))
-(assume a8 (= y$28 (= y$prop$next y$27)))
-(assume t104 (or (not (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next)))) (not (= y$28 (= y$prop$next y$27))) (= y$28 (= y$27 y$prop$next))))
-(assume t106 (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next))))
-(step t104' (cl (not (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next)))) (not (= y$28 (= y$prop$next y$27))) (= y$28 (= y$27 y$prop$next))) :rule or :premises (t104))
-(step st107 (cl (= y$28 (= y$27 y$prop$next))) :rule resolution :premises (t104' t106 a8))
-(step t.end (cl) :rule resolution :premises (nst107.0 st107))

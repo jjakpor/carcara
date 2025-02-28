@@ -1,4 +1,0 @@
-(assume nst605.0 (not (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55))))
-(assume t604 (and (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55))))
-(step st605 (cl (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55))) :rule and :premises (t604) :args (1))
-(step t.end (cl) :rule resolution :premises (nst605.0 st605))

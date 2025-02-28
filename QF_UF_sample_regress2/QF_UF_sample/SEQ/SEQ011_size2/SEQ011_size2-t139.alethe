@@ -1,5 +1,0 @@
-(assume nst139.0 (not (not (= (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0)) true))))
-(assume nst139.1 (not (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0))))
-(assume t138 (= (= (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0)) true) (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0))))
-(step st139 (cl (not (= (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0)) true)) (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0))) :rule equiv1 :premises (t138))
-(step t.end (cl) :rule resolution :premises (nst139.0 nst139.1 st139))

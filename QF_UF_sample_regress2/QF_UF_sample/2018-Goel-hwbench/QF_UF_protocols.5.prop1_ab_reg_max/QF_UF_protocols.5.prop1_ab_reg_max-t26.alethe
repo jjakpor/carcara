@@ -1,5 +1,0 @@
-(assume nst26.0 (not (not (= y$v3_1517448506_526_op (and y$v3_1517448506_519_op y$1033)))))
-(assume nst26.1 (not (not y$v3_1517448506_526_op)))
-(assume nst26.2 (not (and y$v3_1517448506_519_op y$1033)))
-(step st26 (cl (not (= y$v3_1517448506_526_op (and y$v3_1517448506_519_op y$1033))) (not y$v3_1517448506_526_op) (and y$v3_1517448506_519_op y$1033)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst26.0 nst26.1 nst26.2 st26))

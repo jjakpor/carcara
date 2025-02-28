@@ -1,4 +1,0 @@
-(assume nst81.0 (not (not (and (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0))) (not (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))))))
-(assume nst81.1 (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0)))))
-(step st81 (cl (not (and (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0))) (not (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))))) (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0)))) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nst81.0 nst81.1 st81))

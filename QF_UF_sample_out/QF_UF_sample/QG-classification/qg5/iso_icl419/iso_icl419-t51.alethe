@@ -1,7 +1,0 @@
-(assume t33 (or (not (= (= e4 (op e1 e2)) (= e4 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))) (not (= e4 (op e1 e2))) (= e4 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(assume t49 (= (= e4 (op e1 e2)) (= e4 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(assume t50 (= e4 (op e1 e2)))
-(assume nt51.0 (not (= e4 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(step t33' (cl (not (= (= e4 (op e1 e2)) (= e4 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))) (not (= e4 (op e1 e2))) (= e4 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))) :rule or :premises (t33))
-(step t51 (cl (= e4 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))) :rule resolution :premises (t33' t49 t50))
-(step t.end (cl) :rule resolution :premises (nt51.0 t51))

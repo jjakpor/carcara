@@ -1,3 +1,0 @@
-(assume nst29.0 (not (= Alloc_1$0 Alloc_1$0)))
-(step st29 (cl (= Alloc_1$0 Alloc_1$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst29.0 st29))

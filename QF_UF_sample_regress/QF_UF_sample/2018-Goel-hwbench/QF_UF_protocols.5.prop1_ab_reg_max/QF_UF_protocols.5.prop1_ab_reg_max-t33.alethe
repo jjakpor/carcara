@@ -1,5 +1,0 @@
-(assume nst33.0 (not (not (= (= y$1048 (= y$dve_invalid$next y$1047)) (= y$1048 (= y$1047 y$dve_invalid$next))))))
-(assume nst33.1 (not (not (= y$1048 (= y$dve_invalid$next y$1047)))))
-(assume nst33.2 (not (= y$1048 (= y$1047 y$dve_invalid$next))))
-(step st33 (cl (not (= (= y$1048 (= y$dve_invalid$next y$1047)) (= y$1048 (= y$1047 y$dve_invalid$next)))) (not (= y$1048 (= y$dve_invalid$next y$1047))) (= y$1048 (= y$1047 y$dve_invalid$next))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst33.0 nst33.1 nst33.2 st33))

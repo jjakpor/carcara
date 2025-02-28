@@ -1,5 +1,0 @@
-(assume t305 (= (not (= (op e1 e0) (op e1 e1))) (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
-(assume t307 (= (not (= (op (op (op (op e0 e0) e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) e0)))))
-(assume nt308.0 (not (= (not (= (op e1 e0) (op e1 e1))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) e0))))))
-(step t308 (cl (= (not (= (op e1 e0) (op e1 e1))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) e0))))) :rule trans :premises (t305 t307))
-(step t.end (cl) :rule resolution :premises (nt308.0 t308))

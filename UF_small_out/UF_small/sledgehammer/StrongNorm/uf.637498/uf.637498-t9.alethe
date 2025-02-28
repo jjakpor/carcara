@@ -1,3 +1,0 @@
-(assume nst9.0 (not (= (or false (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))) (or (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))))))
-(step st9 (cl (= (or false (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))) (or (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst9.0 st9))

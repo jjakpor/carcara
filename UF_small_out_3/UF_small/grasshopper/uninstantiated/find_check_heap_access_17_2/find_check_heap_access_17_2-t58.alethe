@@ -1,7 +1,0 @@
-(assume nst58.0 (not (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))))))
-(assume a13 (not (in$0 x$0 FP$0)))
-(assume t44 (or (not (= (not (in$0 x$0 FP$0)) (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)))))) (not (not (in$0 x$0 FP$0))) (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))))))
-(assume t57 (= (not (in$0 x$0 FP$0)) (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))))))
-(step t44' (cl (not (= (not (in$0 x$0 FP$0)) (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)))))) (not (not (in$0 x$0 FP$0))) (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))))) :rule or :premises (t44))
-(step st58 (cl (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))))) :rule resolution :premises (t44' t57 a13))
-(step t.end (cl) :rule resolution :premises (nst58.0 st58))

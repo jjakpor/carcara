@@ -1,4 +1,0 @@
-(assume nt567.0 (not (=> (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (= x50 x51))))
-(assume t566 (and (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (=> (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (= x50 x51))))
-(step t567 (cl (=> (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))) (= x50 x51))) :rule and :premises (t566) :args (1))
-(step t.end (cl) :rule resolution :premises (nt567.0 t567))

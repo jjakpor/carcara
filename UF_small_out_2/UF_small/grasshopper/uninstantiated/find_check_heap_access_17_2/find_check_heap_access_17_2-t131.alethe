@@ -1,4 +1,0 @@
-(assume nst131.0 (not (= (not (lseg_set_struct$0 sk_?X_5$0 next$0 x$0 root_x$0 X$0)) (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0))))))
-(assume t130 (= (lseg_set_struct$0 sk_?X_5$0 next$0 x$0 root_x$0 X$0) (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0))))
-(step st131 (cl (= (not (lseg_set_struct$0 sk_?X_5$0 next$0 x$0 root_x$0 X$0)) (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0))))) :rule cong :premises (t130))
-(step t.end (cl) :rule resolution :premises (nst131.0 st131))

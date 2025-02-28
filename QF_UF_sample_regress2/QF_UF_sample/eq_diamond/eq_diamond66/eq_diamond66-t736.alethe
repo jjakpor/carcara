@@ -1,5 +1,0 @@
-(assume nst736.0 (not (= (= x0 x65) false)))
-(assume nst736.1 (not (not (not (= x0 x65)))))
-(assume t735 (= (= (= x0 x65) false) (not (= x0 x65))))
-(step st736 (cl (= (= x0 x65) false) (not (not (= x0 x65)))) :rule equiv2 :premises (t735))
-(step t.end (cl) :rule resolution :premises (nst736.0 nst736.1 st736))

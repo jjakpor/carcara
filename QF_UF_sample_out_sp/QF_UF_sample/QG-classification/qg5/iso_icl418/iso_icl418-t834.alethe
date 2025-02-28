@@ -1,5 +1,0 @@
-(assume nt834.0 (not (= (op (op e2 e3) e2) (op (op (op e3 e4) e3) (op e3 e4)))))
-(assume t60 (= (op e2 e3) (op (op e3 e4) e3)))
-(assume t41 (= e2 (op e3 e4)))
-(step t834 (cl (= (op (op e2 e3) e2) (op (op (op e3 e4) e3) (op e3 e4)))) :rule cong :premises (t60 t41))
-(step t.end (cl) :rule resolution :premises (nt834.0 t834))

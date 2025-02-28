@@ -1,4 +1,0 @@
-(assume nst676.0 (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2)))))
-(assume nst676.1 (not (not (and (= x1 y1) (= y1 x2)))))
-(step st676 (cl (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (not (and (= x1 y1) (= y1 x2)))) :rule or_neg :args (0))
-(step t.end (cl) :rule resolution :premises (nst676.0 nst676.1 st676))

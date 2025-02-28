@@ -1,4 +1,0 @@
-(assume nst516.0 (not (or (or (or (or (= (op e0 e4) e0) (= (op e1 e4) e0)) (= (op e2 e4) e0)) (= (op e3 e4) e0)) (= (op e4 e4) e0))))
-(assume t515 (and (or (or (or (or (= (op e4 e0) e0) (= (op e4 e1) e0)) (= (op e4 e2) e0)) (= (op e4 e3) e0)) (= (op e4 e4) e0)) (or (or (or (or (= (op e0 e4) e0) (= (op e1 e4) e0)) (= (op e2 e4) e0)) (= (op e3 e4) e0)) (= (op e4 e4) e0))))
-(step st516 (cl (or (or (or (or (= (op e0 e4) e0) (= (op e1 e4) e0)) (= (op e2 e4) e0)) (= (op e3 e4) e0)) (= (op e4 e4) e0))) :rule and :premises (t515) :args (1))
-(step t.end (cl) :rule resolution :premises (nst516.0 st516))

@@ -1,6 +1,0 @@
-(assume t845 (or (= (= x0 x75) false) (= x0 x75)))
-(assume t846 (not (= x0 x75)))
-(assume nt847.0 (not (= (= x0 x75) false)))
-(step t845' (cl (= (= x0 x75) false) (= x0 x75)) :rule or :premises (t845))
-(step t847 (cl (= (= x0 x75) false)) :rule resolution :premises (t845' t846))
-(step t.end (cl) :rule resolution :premises (nt847.0 t847))

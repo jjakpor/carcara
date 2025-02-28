@@ -1,5 +1,0 @@
-(assume nst15.0 (not (not (= (not (= i2 (not (= r2 b2)))) (not (= i2 (not (= b2 r2))))))))
-(assume nst15.1 (not (not (not (= i2 (not (= r2 b2)))))))
-(assume nst15.2 (not (not (= i2 (not (= b2 r2))))))
-(step st15 (cl (not (= (not (= i2 (not (= r2 b2)))) (not (= i2 (not (= b2 r2)))))) (not (not (= i2 (not (= r2 b2))))) (not (= i2 (not (= b2 r2))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst15.0 nst15.1 nst15.2 st15))

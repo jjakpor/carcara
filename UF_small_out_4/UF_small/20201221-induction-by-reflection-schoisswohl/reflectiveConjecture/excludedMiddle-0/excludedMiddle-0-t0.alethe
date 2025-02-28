@@ -1,4 +1,0 @@
-(assume nst0.0 (not (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (pR aR))) (not (models empty (pR aR)))))))
-(assume nst0.1 (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))))
-(step st0 (cl (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (pR aR))) (not (models empty (pR aR))))) (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) :rule implies_neg1)
-(step t.end (cl) :rule resolution :premises (nst0.0 nst0.1 st0))

@@ -1,7 +1,0 @@
-(assume nst375.0 (not (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1)))))
-(assume t370 (or (not (= (or (= (f7 c_1) c_0) (= (f7 c_1) c_1)) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1))))) (not (or (= (f7 c_1) c_0) (= (f7 c_1) c_1))) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1)))))
-(assume t373 (= (or (= (f7 c_1) c_0) (= (f7 c_1) c_1)) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1)))))
-(assume t374 (or (= (f7 c_1) c_0) (= (f7 c_1) c_1)))
-(step t370' (cl (not (= (or (= (f7 c_1) c_0) (= (f7 c_1) c_1)) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1))))) (not (or (= (f7 c_1) c_0) (= (f7 c_1) c_1))) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1)))) :rule or :premises (t370))
-(step st375 (cl (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1)))) :rule resolution :premises (t370' t373 t374))
-(step t.end (cl) :rule resolution :premises (nst375.0 st375))

@@ -1,6 +1,0 @@
-(assume nst130.0 (not (= (Btwn$0 next$0 c_init$0 curr_init$0 curr_init$0) (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0))))
-(assume t46 (= curr_init$0 prv_5$0))
-(assume t58 (= next$0 next$0))
-(assume t129 (= c_init$0 c_init$0))
-(step st130 (cl (= (Btwn$0 next$0 c_init$0 curr_init$0 curr_init$0) (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0))) :rule cong :premises (t58 t129 t46 t46))
-(step t.end (cl) :rule resolution :premises (nst130.0 st130))

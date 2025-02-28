@@ -1,8 +1,0 @@
-(assume nt914.0 (not (= (or (= e1 (op e3 e4)) (= e1 (op e3 e3)) (= e1 (op e3 e2)) (= e1 (op e3 e0)) (= e1 (op e3 e1))) (or (= e1 (op e3 (op (op e1 e3) e3))) (= e1 (op e3 e3)) (= e1 (op e3 (op e1 e3))) (= e1 (op e3 (op (op e1 e3) e1))) (= e1 (op e3 e1))))))
-(assume t22 (= (= e1 (op e3 e4)) (= e1 (op e3 (op (op e1 e3) e3)))))
-(assume t910 (= (= e1 (op e3 e3)) (= e1 (op e3 e3))))
-(assume t911 (= (= e1 (op e3 e2)) (= e1 (op e3 (op e1 e3)))))
-(assume t912 (= (= e1 (op e3 e0)) (= e1 (op e3 (op (op e1 e3) e1)))))
-(assume t913 (= (= e1 (op e3 e1)) (= e1 (op e3 e1))))
-(step t914 (cl (= (or (= e1 (op e3 e4)) (= e1 (op e3 e3)) (= e1 (op e3 e2)) (= e1 (op e3 e0)) (= e1 (op e3 e1))) (or (= e1 (op e3 (op (op e1 e3) e3))) (= e1 (op e3 e3)) (= e1 (op e3 (op e1 e3))) (= e1 (op e3 (op (op e1 e3) e1))) (= e1 (op e3 e1))))) :rule cong :premises (t22 t910 t911 t912 t913))
-(step t.end (cl) :rule resolution :premises (nt914.0 t914))

@@ -1,7 +1,0 @@
-(assume nst226.0 (not (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))))
-(assume t54 (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)) (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))) (not (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)) (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))))))
-(assume t198 (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))
-(assume t225 (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)) (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))))
-(step t54' (cl (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)) (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))) (not (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)) (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))))) :rule or :premises (t54))
-(step st226 (cl (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))) :rule resolution :premises (t54' t198 t225))
-(step t.end (cl) :rule resolution :premises (nst226.0 st226))

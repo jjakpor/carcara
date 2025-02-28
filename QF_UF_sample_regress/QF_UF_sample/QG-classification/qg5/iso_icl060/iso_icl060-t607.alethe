@@ -1,6 +1,0 @@
-(assume nst607.0 (not (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)))))))
-(assume nst607.1 (not (= e1 (op (op (op e1 e3) e3) (op e1 e3)))))
-(assume t606 (or (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))) (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))) (= e1 (op (op (op e1 e3) e3) (op e1 e3)))))
-(step t606' (cl (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))) (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))) (= e1 (op (op (op e1 e3) e3) (op e1 e3)))) :rule or :premises (t606))
-(step st607 (cl (not (and (= (op e1 e3) (op (op (op e1 e3) e3) e1)) (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))) (= e1 (op (op (op e1 e3) e3) (op e1 e3)))) :rule contraction :premises (t606'))
-(step t.end (cl) :rule resolution :premises (nst607.0 nst607.1 st607))

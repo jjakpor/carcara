@@ -1,5 +1,0 @@
-(assume nt986.t26.0 (not (= (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) false)))
-(assume t986.t15 (= (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1)))))
-(assume t986.t25 (= (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) false))
-(step t986.t26 (cl (= (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) false)) :rule trans :premises (t986.t15 t986.t25))
-(step t.end (cl) :rule resolution :premises (nt986.t26.0 t986.t26))

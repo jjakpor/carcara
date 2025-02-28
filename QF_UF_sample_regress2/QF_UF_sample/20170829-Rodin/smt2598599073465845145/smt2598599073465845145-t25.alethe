@@ -1,3 +1,0 @@
-(assume nst25.0 (not (= (not (not (= b2 r2))) (= b2 r2))))
-(step st25 (cl (= (not (not (= b2 r2))) (= b2 r2))) :rule rare_rewrite :args ("bool-double-not-elim" (= b2 r2)))
-(step t.end (cl) :rule resolution :premises (nst25.0 st25))

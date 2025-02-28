@@ -1,4 +1,0 @@
-(assume t511 (and (and (and (and (= (op (op e2 e0) e2) e0) (= (op (op e2 e1) e2) e1)) (= (op (op e2 e2) e2) e2)) (= (op (op e2 e3) e2) e3)) (= (op (op e2 e4) e2) e4)))
-(assume nt512.0 (not (= (op (op e2 e4) e2) e4)))
-(step t512 (cl (= (op (op e2 e4) e2) e4)) :rule and :premises (t511) :args (1))
-(step t.end (cl) :rule resolution :premises (nt512.0 t512))

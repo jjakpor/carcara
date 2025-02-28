@@ -1,4 +1,0 @@
-(assume nst16.0 (not (= null$0 (read$0 next$0 elt$0))))
-(assume a31 (= (read$0 next$0 elt$0) null$0))
-(step st16 (cl (= null$0 (read$0 next$0 elt$0))) :rule symm :premises (a31))
-(step t.end (cl) :rule resolution :premises (nst16.0 st16))

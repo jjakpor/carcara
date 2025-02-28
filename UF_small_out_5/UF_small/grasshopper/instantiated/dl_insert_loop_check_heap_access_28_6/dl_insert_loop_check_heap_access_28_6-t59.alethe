@@ -1,6 +1,0 @@
-(assume nst59.0 (not (= (Btwn$0 next$0 curr_init$0 null$0 null$0) (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)))))
-(assume t41 (= null$0 (read$0 next$0 d_init$0)))
-(assume t46 (= curr_init$0 prv_5$0))
-(assume t58 (= next$0 next$0))
-(step st59 (cl (= (Btwn$0 next$0 curr_init$0 null$0 null$0) (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)))) :rule cong :premises (t58 t46 t41 t41))
-(step t.end (cl) :rule resolution :premises (nst59.0 st59))

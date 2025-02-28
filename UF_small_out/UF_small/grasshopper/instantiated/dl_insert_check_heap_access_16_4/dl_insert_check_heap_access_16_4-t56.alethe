@@ -1,6 +1,0 @@
-(assume nst56.0 (not (in$0 elt$0 (setenum$0 elt$0))))
-(assume t41 (or (not (forall ((BOUND_VARIABLE_631 Loc)) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631)))) (in$0 elt$0 (setenum$0 elt$0))))
-(assume t55 (forall ((BOUND_VARIABLE_631 Loc)) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631))))
-(step t41' (cl (not (forall ((BOUND_VARIABLE_631 Loc)) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631)))) (in$0 elt$0 (setenum$0 elt$0))) :rule or :premises (t41))
-(step st56 (cl (in$0 elt$0 (setenum$0 elt$0))) :rule resolution :premises (t41' t55))
-(step t.end (cl) :rule resolution :premises (nst56.0 st56))

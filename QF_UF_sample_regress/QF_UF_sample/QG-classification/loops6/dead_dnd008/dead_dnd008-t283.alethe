@@ -1,5 +1,0 @@
-(assume nst283.0 (not (= (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)) (or (not (= e5 (op e5 (op e5 e5)))) (= unit e5)))))
-(assume t281 (= (not (= (op e5 (op e5 e5)) e5)) (not (= e5 (op e5 (op e5 e5))))))
-(assume t282 (= (= e5 unit) (= unit e5)))
-(step st283 (cl (= (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)) (or (not (= e5 (op e5 (op e5 e5)))) (= unit e5)))) :rule cong :premises (t281 t282))
-(step t.end (cl) :rule resolution :premises (nst283.0 st283))

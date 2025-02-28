@@ -1,5 +1,0 @@
-(assume nt84.t258.0 (not (not (= (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (and (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25)))))))
-(assume nt84.t258.1 (not (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))))))
-(assume nt84.t258.2 (not (and (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25)))))
-(step t84.t258 (cl (not (= (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (and (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25))))) (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25)))) (and (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt84.t258.0 nt84.t258.1 nt84.t258.2 t84.t258))

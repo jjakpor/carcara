@@ -1,3 +1,0 @@
-(assume t170 false)
-(assume t171 (not false))
-(step st172 (cl) :rule resolution :premises (t170 t171))

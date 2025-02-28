@@ -1,6 +1,0 @@
-(assume nst564.0 (not (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op e0 e0))))))
-(assume t462 (or (not (= (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op e0 e0))) false)) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op e0 e0))))))
-(assume t563 (= (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op e0 e0))) false))
-(step t462' (cl (not (= (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op e0 e0))) false)) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op e0 e0))))) :rule or :premises (t462))
-(step st564 (cl (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op e0 e0))))) :rule resolution :premises (t462' t563))
-(step t.end (cl) :rule resolution :premises (nst564.0 st564))

@@ -1,5 +1,0 @@
-(assume nst285.0 (not (not (= (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (and (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (=> (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (= x25 x26)))))))
-(assume nst285.1 (not (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))))))
-(assume nst285.2 (not (and (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (=> (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (= x25 x26)))))
-(step st285 (cl (not (= (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (and (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (=> (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (= x25 x26))))) (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26)))) (and (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (=> (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))) (= x25 x26)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst285.0 nst285.1 nst285.2 st285))

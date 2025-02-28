@@ -1,7 +1,0 @@
-(assume nst23.0 (not clk))
-(assume nst23.1 (not (not prt)))
-(assume nst23.2 (not (not car)))
-(assume t22 (or (not prt) (not car) clk))
-(step t22' (cl (not prt) (not car) clk) :rule or :premises (t22))
-(step st23 (cl clk (not prt) (not car)) :rule reordering :premises (t22'))
-(step t.end (cl) :rule resolution :premises (nst23.0 nst23.1 nst23.2 st23))

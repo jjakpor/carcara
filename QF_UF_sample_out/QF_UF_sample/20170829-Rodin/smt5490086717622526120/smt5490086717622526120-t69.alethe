@@ -1,7 +1,0 @@
-(assume t60 (or (not (= (or (not (not prt)) (not red_MR)) (or prt (not red_MR)))) (not (or (not (not prt)) (not red_MR))) (or prt (not red_MR))))
-(assume t62 (= (or (not (not prt)) (not red_MR)) (or prt (not red_MR))))
-(assume t68 (or (not (not prt)) (not red_MR)))
-(assume nt69.0 (not (or prt (not red_MR))))
-(step t60' (cl (not (= (or (not (not prt)) (not red_MR)) (or prt (not red_MR)))) (not (or (not (not prt)) (not red_MR))) (or prt (not red_MR))) :rule or :premises (t60))
-(step t69 (cl (or prt (not red_MR))) :rule resolution :premises (t60' t62 t68))
-(step t.end (cl) :rule resolution :premises (nt69.0 t69))

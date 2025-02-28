@@ -1,7 +1,0 @@
-(assume nst202.0 (not (= t$ (fun_app$f (swapSyms$ t$ b$) b$))))
-(assume a3 (consistent$ t$))
-(assume t193 (or (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$)) (not (or (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$))))))
-(assume t201 (or (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$))))
-(step t193' (cl (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$)) (not (or (not (consistent$ t$)) (= t$ (fun_app$f (swapSyms$ t$ b$) b$))))) :rule or :premises (t193))
-(step st202 (cl (= t$ (fun_app$f (swapSyms$ t$ b$) b$))) :rule resolution :premises (t193' a3 t201))
-(step t.end (cl) :rule resolution :premises (nst202.0 st202))

@@ -1,5 +1,0 @@
-(assume nst868.0 (not (not (= (not (= (op e1 e4) (op e4 e4))) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1))))))))))
-(assume nst868.1 (not (not (not (= (op e1 e4) (op e4 e4))))))
-(assume nst868.2 (not (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1))))))))
-(step st868 (cl (not (= (not (= (op e1 e4) (op e4 e4))) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1)))))))) (not (not (= (op e1 e4) (op e4 e4)))) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op (op e1 e1) (op e1 (op e1 e1))))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst868.0 nst868.1 nst868.2 st868))

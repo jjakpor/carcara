@@ -1,5 +1,0 @@
-(assume nst806.0 (not (= (= (op e0 e1) (op e4 e1)) (= (op e0 (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0))))))
-(assume t55 (= (op e4 e1) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0))))
-(assume t94 (= (op e0 e1) (op e0 (op (op (op e0 e0) e0) e0))))
-(step st806 (cl (= (= (op e0 e1) (op e4 e1)) (= (op e0 (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0))))) :rule cong :premises (t94 t55))
-(step t.end (cl) :rule resolution :premises (nst806.0 st806))

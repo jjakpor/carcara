@@ -1,4 +1,0 @@
-(assume nst469.0 (not (and (not (= e0 e1)) (not (= e0 e2)))))
-(assume t468 (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))))
-(step st469 (cl (and (not (= e0 e1)) (not (= e0 e2)))) :rule and :premises (t468) :args (0))
-(step t.end (cl) :rule resolution :premises (nst469.0 st469))

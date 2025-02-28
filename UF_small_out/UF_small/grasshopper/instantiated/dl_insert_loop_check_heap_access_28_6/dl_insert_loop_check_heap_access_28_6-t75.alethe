@@ -1,5 +1,0 @@
-(assume nst75.0 (not (= (= d_init$0 prv_init$0) (= d_init$0 (read$0 prev$0 prv_5$0)))))
-(assume t68 (= prv_init$0 (read$0 prev$0 prv_5$0)))
-(assume t70 (= d_init$0 d_init$0))
-(step st75 (cl (= (= d_init$0 prv_init$0) (= d_init$0 (read$0 prev$0 prv_5$0)))) :rule cong :premises (t70 t68))
-(step t.end (cl) :rule resolution :premises (nst75.0 st75))

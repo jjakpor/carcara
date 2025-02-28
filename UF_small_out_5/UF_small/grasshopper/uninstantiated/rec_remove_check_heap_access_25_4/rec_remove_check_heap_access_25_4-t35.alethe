@@ -1,6 +1,0 @@
-(assume nst35.0 (not (= (or (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= lst$0 null$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)) (or (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)))))
-(assume t32 (= (not (Btwn$0 next$0 lst$0 null$0 null$0)) (not (Btwn$0 next$0 lst$0 null$0 null$0))))
-(assume t33 (= (= lst$0 null$0) (= null$0 lst$0)))
-(assume t34 (= (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)))
-(step st35 (cl (= (or (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= lst$0 null$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)) (or (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= null$0 lst$0) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)))) :rule cong :premises (t32 t33 t34))
-(step t.end (cl) :rule resolution :premises (nst35.0 st35))

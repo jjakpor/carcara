@@ -1,6 +1,0 @@
-(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (union a b))) (member ?x c)))))
-(assume nst16.0 (not (not (forall ((?s1 Set) (?s2 Set)) (or (subset ?s1 ?s2) (not (forall ((?x Elem)) (or (not (member ?x ?s1)) (member ?x ?s2)))))))))
-(assume nst16.1 (not (or (subset (union a b) c) (not (forall ((?x Elem)) (or (not (member ?x (union a b))) (member ?x c)))))))
-(assume t15 (or (not (forall ((?s1 Set) (?s2 Set)) (or (subset ?s1 ?s2) (not (forall ((?x Elem)) (or (not (member ?x ?s1)) (member ?x ?s2))))))) (or (subset (union a b) c) (not (forall ((?x Elem)) (or (not (member ?x (union a b))) (member ?x c)))))))
-(step st16 (cl (not (forall ((?s1 Set) (?s2 Set)) (or (subset ?s1 ?s2) (not (forall ((?x Elem)) (or (not (member ?x ?s1)) (member ?x ?s2))))))) (or (subset (union a b) c) (not (forall ((?x Elem)) (or (not (member ?x (union a b))) (member ?x c)))))) :rule or :premises (t15))
-(step t.end (cl) :rule resolution :premises (nst16.0 nst16.1 st16))

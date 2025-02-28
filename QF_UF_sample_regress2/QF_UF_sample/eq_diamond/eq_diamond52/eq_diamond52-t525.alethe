@@ -1,6 +1,0 @@
-(assume nst525.0 (not (= x46 x47)))
-(assume nst525.1 (not (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))))))
-(assume t524 (or (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47)))) (= x46 x47)))
-(step t524' (cl (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47)))) (= x46 x47)) :rule or :premises (t524))
-(step st525 (cl (= x46 x47) (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))))) :rule reordering :premises (t524'))
-(step t.end (cl) :rule resolution :premises (nst525.0 nst525.1 st525))

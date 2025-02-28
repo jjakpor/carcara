@@ -1,6 +1,0 @@
-(assume t14 (or (not (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1))) (not (= e1 (op e1 e0)))))
-(assume t309 (= e0 (op e1 (op e1 e0))))
-(assume t330 (not (= e1 (op e1 (op e1 e1)))))
-(assume t338 (= e1 (op e1 e0)))
-(step t14' (cl (not (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1))) (not (= e1 (op e1 e0)))) :rule or :premises (t14))
-(step st339 (cl) :rule resolution :premises (t14' t309 t330 t338))

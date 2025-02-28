@@ -1,4 +1,0 @@
-(assume nst188.0 (not (= (not (= e0 e1)) (not (= e1 e0)))))
-(assume t187 (= (= e0 e1) (= e1 e0)))
-(step st188 (cl (= (not (= e0 e1)) (not (= e1 e0)))) :rule cong :premises (t187))
-(step t.end (cl) :rule resolution :premises (nst188.0 st188))

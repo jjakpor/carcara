@@ -1,4 +1,0 @@
-(assume nst22.0 (not (= null$0 prv_2$0)))
-(assume a49 (= prv_2$0 null$0))
-(step st22 (cl (= null$0 prv_2$0)) :rule symm :premises (a49))
-(step t.end (cl) :rule resolution :premises (nst22.0 st22))

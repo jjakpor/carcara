@@ -1,4 +1,0 @@
-(assume nt722.0 (not (=> (and (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))) (= e1 (op e3 (op (op e1 e3) e3))) (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (not (= (op (op e1 e3) e3) (op e3 (op (op e1 e3) e1)))))))
-(assume nt722.1 (not (not (not (= (op (op e1 e3) e3) (op e3 (op (op e1 e3) e1)))))))
-(step t722 (cl (=> (and (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))) (= e1 (op e3 (op (op e1 e3) e3))) (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) (not (= (op (op e1 e3) e3) (op e3 (op (op e1 e3) e1))))) (not (not (= (op (op e1 e3) e3) (op e3 (op (op e1 e3) e1)))))) :rule implies_neg2)
-(step t.end (cl) :rule resolution :premises (nt722.0 nt722.1 t722))

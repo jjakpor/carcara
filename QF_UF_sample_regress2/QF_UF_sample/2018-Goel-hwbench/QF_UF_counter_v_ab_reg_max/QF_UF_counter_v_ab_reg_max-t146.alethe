@@ -1,4 +1,0 @@
-(assume nst146.0 (not (= (not y$26) (not true))))
-(assume t145 (= y$26 true))
-(step st146 (cl (= (not y$26) (not true))) :rule cong :premises (t145))
-(step t.end (cl) :rule resolution :premises (nst146.0 st146))

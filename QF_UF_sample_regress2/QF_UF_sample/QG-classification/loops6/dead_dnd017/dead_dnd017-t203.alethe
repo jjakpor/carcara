@@ -1,5 +1,0 @@
-(assume nst203.0 (not (= (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit)) (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0)))))
-(assume t196 (= (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit)) (or (not (= e3 (op e3 (op e3 e3)))) (= unit e3))))
-(assume t202 (= (or (not (= e3 (op e3 (op e3 e3)))) (= unit e3)) (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0))))
-(step st203 (cl (= (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit)) (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0)))) :rule trans :premises (t196 t202))
-(step t.end (cl) :rule resolution :premises (nst203.0 st203))

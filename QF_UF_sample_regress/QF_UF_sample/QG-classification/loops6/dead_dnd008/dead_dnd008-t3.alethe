@@ -1,4 +1,0 @@
-(assume nst3.0 (not (not (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))))))
-(assume nst3.1 (not (= e2 (op e2 e0))))
-(step st3 (cl (not (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0))))) (= e2 (op e2 e0))) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nst3.0 nst3.1 st3))

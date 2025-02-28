@@ -1,5 +1,0 @@
-(assume nst239.0 (not (= (or (not (= e4 (op e4 (op e4 e4)))) (= unit e4)) (or (not (= e4 (op e4 (op e4 e4)))) (= e0 e4)))))
-(assume t236 (= (not (= e4 (op e4 (op e4 e4)))) (not (= e4 (op e4 (op e4 e4))))))
-(assume t238 (= (= unit e4) (= e0 e4)))
-(step st239 (cl (= (or (not (= e4 (op e4 (op e4 e4)))) (= unit e4)) (or (not (= e4 (op e4 (op e4 e4)))) (= e0 e4)))) :rule cong :premises (t236 t238))
-(step t.end (cl) :rule resolution :premises (nst239.0 st239))

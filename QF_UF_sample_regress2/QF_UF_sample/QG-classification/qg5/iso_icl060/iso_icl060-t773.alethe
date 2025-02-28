@@ -1,3 +1,0 @@
-(assume nst773.0 (not (= (not (= e3 (op (op e1 e3) (op (op e1 e3) e3)))) (not (= e3 (op (op e1 e3) (op (op e1 e3) e3)))))))
-(step st773 (cl (= (not (= e3 (op (op e1 e3) (op (op e1 e3) e3)))) (not (= e3 (op (op e1 e3) (op (op e1 e3) e3)))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst773.0 st773))

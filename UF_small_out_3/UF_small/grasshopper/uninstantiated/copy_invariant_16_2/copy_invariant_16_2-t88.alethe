@@ -1,6 +1,0 @@
-(assume nst88.0 (not (not (or (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0))))))
-(assume nst88.1 (not (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0))))
-(assume nst88.2 (not (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0))))
-(assume nst88.3 (not (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0))))
-(step st88 (cl (not (or (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)))) (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0))) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst88.0 nst88.1 nst88.2 nst88.3 st88))

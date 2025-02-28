@@ -1,5 +1,0 @@
-(assume nst576.0 (not (not (= (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (and (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52)))))))
-(assume nst576.1 (not (not (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))))))
-(assume nst576.2 (not (and (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52)))))
-(step st576 (cl (not (= (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (and (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52))))) (not (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52)))) (and (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst576.0 nst576.1 nst576.2 st576))

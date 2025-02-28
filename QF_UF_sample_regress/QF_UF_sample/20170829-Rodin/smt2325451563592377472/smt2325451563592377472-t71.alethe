@@ -1,5 +1,0 @@
-(assume nst71.0 (not (= (or (or (not car) (not clk)) (not (not car))) (or (or (not car) (not clk)) car))))
-(assume t50 (= (or (not car) (not clk)) (or (not car) (not clk))))
-(assume t70 (= (not (not car)) car))
-(step st71 (cl (= (or (or (not car) (not clk)) (not (not car))) (or (or (not car) (not clk)) car))) :rule cong :premises (t50 t70))
-(step t.end (cl) :rule resolution :premises (nst71.0 st71))

@@ -1,3 +1,0 @@
-(assume nt648.0 (not (= (= (or (and (= x57 y57) (= y57 x58)) (and (= x57 z57) (= z57 x58))) (and (or (and (= x57 y57) (= y57 x58)) (and (= x57 z57) (= z57 x58))) (=> (or (and (= x57 y57) (= y57 x58)) (and (= x57 z57) (= z57 x58))) (= x57 x58)))) true)))
-(step t648 (cl (= (= (or (and (= x57 y57) (= y57 x58)) (and (= x57 z57) (= z57 x58))) (and (or (and (= x57 y57) (= y57 x58)) (and (= x57 z57) (= z57 x58))) (=> (or (and (= x57 y57) (= y57 x58)) (and (= x57 z57) (= z57 x58))) (= x57 x58)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt648.0 t648))

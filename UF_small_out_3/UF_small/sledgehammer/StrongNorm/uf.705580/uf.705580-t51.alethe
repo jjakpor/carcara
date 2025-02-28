@@ -1,5 +1,0 @@
-(assume nst51.0 (not (= (not (= (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) f174) f1)) (not (= (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) f174) (f3 f5 f176))))))
-(assume t43 (= (not (= (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) f174) f1)) (not (= f1 (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) f174)))))
-(assume t50 (= (not (= f1 (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) f174))) (not (= (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) f174) (f3 f5 f176)))))
-(step st51 (cl (= (not (= (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) f174) f1)) (not (= (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) f174) (f3 f5 f176))))) :rule trans :premises (t43 t50))
-(step t.end (cl) :rule resolution :premises (nst51.0 st51))

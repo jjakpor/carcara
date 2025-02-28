@@ -1,3 +1,0 @@
-(assume nst2.0 (not (= (= r2 b2) (= b2 r2))))
-(step st2 (cl (= (= r2 b2) (= b2 r2))) :rule rare_rewrite :args ("eq-symm" r2 b2))
-(step t.end (cl) :rule resolution :premises (nst2.0 st2))

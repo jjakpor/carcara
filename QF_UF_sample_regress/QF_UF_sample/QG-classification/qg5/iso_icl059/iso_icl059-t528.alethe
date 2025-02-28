@@ -1,4 +1,0 @@
-(assume nst528.0 (not (and (= (op e1 (op e1 e0)) e0) (= (op e1 (op e1 e1)) e1))))
-(assume t527 (and (and (= (op e1 (op e1 e0)) e0) (= (op e1 (op e1 e1)) e1)) (= (op e1 (op e1 e2)) e2)))
-(step st528 (cl (and (= (op e1 (op e1 e0)) e0) (= (op e1 (op e1 e1)) e1))) :rule and :premises (t527) :args (0))
-(step t.end (cl) :rule resolution :premises (nst528.0 st528))

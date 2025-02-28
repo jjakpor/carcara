@@ -1,4 +1,0 @@
-(assume nst12.0 (not (= (not (= start1$0 null$0)) (not (= null$0 start1$0)))))
-(assume t11 (= (= start1$0 null$0) (= null$0 start1$0)))
-(step st12 (cl (= (not (= start1$0 null$0)) (not (= null$0 start1$0)))) :rule cong :premises (t11))
-(step t.end (cl) :rule resolution :premises (nst12.0 st12))

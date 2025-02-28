@@ -1,3 +1,0 @@
-(assume nst32.0 (not (= sk_?X_3$0 sk_?X_3$0)))
-(step st32 (cl (= sk_?X_3$0 sk_?X_3$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst32.0 st32))

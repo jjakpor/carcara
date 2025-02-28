@@ -1,5 +1,0 @@
-(assume nt44.0 (not (= y$72 (= y$v_count y$v_done))))
-(assume a37 (= y$72 (= y$n0s8 y$v_done)))
-(assume t43 (= (= y$n0s8 y$v_done) (= y$v_count y$v_done)))
-(step t44 (cl (= y$72 (= y$v_count y$v_done))) :rule trans :premises (a37 t43))
-(step t.end (cl) :rule resolution :premises (nt44.0 t44))

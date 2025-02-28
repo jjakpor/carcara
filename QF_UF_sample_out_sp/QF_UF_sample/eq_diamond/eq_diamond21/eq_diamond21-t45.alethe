@@ -1,4 +1,0 @@
-(assume nt45.0 (not (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1))))
-(assume t44 (and (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1))))
-(step t45 (cl (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1))) :rule and :premises (t44) :args (1))
-(step t.end (cl) :rule resolution :premises (nt45.0 t45))

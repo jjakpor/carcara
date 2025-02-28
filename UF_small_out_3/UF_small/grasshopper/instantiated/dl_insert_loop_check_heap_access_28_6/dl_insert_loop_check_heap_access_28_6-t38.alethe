@@ -1,4 +1,0 @@
-(assume nst38.0 (not (not (= null$0 curr_init$0))))
-(assume a55 (not (= curr_init$0 null$0)))
-(step st38 (cl (not (= null$0 curr_init$0))) :rule not_symm :premises (a55))
-(step t.end (cl) :rule resolution :premises (nst38.0 st38))

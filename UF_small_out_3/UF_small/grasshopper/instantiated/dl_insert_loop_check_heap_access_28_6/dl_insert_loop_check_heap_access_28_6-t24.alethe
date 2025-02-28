@@ -1,6 +1,0 @@
-(assume nst24.0 (not (= (and (= (read$0 next$0 d_init$0) null$0) (= (read$0 prev$0 curr_init$0) prv_init$0) (in$0 d_init$0 sk_?X_92$0)) (and (= null$0 (read$0 next$0 d_init$0)) (= prv_init$0 (read$0 prev$0 curr_init$0)) (in$0 d_init$0 sk_?X_92$0)))))
-(assume t21 (= (= (read$0 next$0 d_init$0) null$0) (= null$0 (read$0 next$0 d_init$0))))
-(assume t22 (= (= (read$0 prev$0 curr_init$0) prv_init$0) (= prv_init$0 (read$0 prev$0 curr_init$0))))
-(assume t23 (= (in$0 d_init$0 sk_?X_92$0) (in$0 d_init$0 sk_?X_92$0)))
-(step st24 (cl (= (and (= (read$0 next$0 d_init$0) null$0) (= (read$0 prev$0 curr_init$0) prv_init$0) (in$0 d_init$0 sk_?X_92$0)) (and (= null$0 (read$0 next$0 d_init$0)) (= prv_init$0 (read$0 prev$0 curr_init$0)) (in$0 d_init$0 sk_?X_92$0)))) :rule cong :premises (t21 t22 t23))
-(step t.end (cl) :rule resolution :premises (nst24.0 st24))

@@ -1,3 +1,0 @@
-(assume nst19.0 (not (= (forall ((?v0 S5) (?v1 S5) (?v2 S9) (?v3 S10)) (=> (= ?v1 ?v0) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v1)))) (forall ((?v0 S5) (?v1 S5) (?v2 S9) (?v3 S10)) (or (not (= ?v1 ?v0)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v1)))))))
-(step st19 (cl (= (forall ((?v0 S5) (?v1 S5) (?v2 S9) (?v3 S10)) (=> (= ?v1 ?v0) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v1)))) (forall ((?v0 S5) (?v1 S5) (?v2 S9) (?v3 S10)) (or (not (= ?v1 ?v0)) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v1)))))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst19.0 st19))

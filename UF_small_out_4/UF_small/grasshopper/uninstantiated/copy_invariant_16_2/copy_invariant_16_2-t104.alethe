@@ -1,6 +1,0 @@
-(assume nst104.0 (not (= (or (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))) (not (= cp_2$0 sk_?e$0)) (not (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))) (or (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))) (not (= cp_2$0 sk_?e$0)) (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))))
-(assume t101 (= (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))
-(assume t102 (= (not (= cp_2$0 sk_?e$0)) (not (= cp_2$0 sk_?e$0))))
-(assume t103 (= (not (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))
-(step st104 (cl (= (or (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))) (not (= cp_2$0 sk_?e$0)) (not (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))) (or (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))) (not (= cp_2$0 sk_?e$0)) (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))) :rule cong :premises (t101 t102 t103))
-(step t.end (cl) :rule resolution :premises (nst104.0 st104))

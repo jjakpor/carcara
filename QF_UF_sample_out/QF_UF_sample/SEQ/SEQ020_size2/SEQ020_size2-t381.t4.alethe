@@ -1,6 +1,0 @@
-(assume t381.t3 (or (= (p1 (f5 c_1) c_1) true) (not (p1 (f5 c_1) c_1))))
-(assume t381.a3 (p1 (f5 c_1) c_1))
-(assume nt381.t4.0 (not (= (p1 (f5 c_1) c_1) true)))
-(step t381.t3' (cl (= (p1 (f5 c_1) c_1) true) (not (p1 (f5 c_1) c_1))) :rule or :premises (t381.t3))
-(step t381.t4 (cl (= (p1 (f5 c_1) c_1) true)) :rule resolution :premises (t381.t3' t381.a3))
-(step t.end (cl) :rule resolution :premises (nt381.t4.0 t381.t4))

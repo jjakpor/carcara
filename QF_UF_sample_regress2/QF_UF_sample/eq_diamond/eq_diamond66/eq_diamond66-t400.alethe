@@ -1,5 +1,0 @@
-(assume nst400.0 (not (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))))
-(assume nst400.1 (not (= x34 x35)))
-(assume t399 (=> (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))) (= x34 x35)))
-(step st400 (cl (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35)))) (= x34 x35)) :rule implies :premises (t399))
-(step t.end (cl) :rule resolution :premises (nst400.0 nst400.1 st400))

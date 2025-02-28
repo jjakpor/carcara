@@ -1,7 +1,0 @@
-(assume nt2.t98.0 (not (= y$45 true)))
-(assume t2.t94 (or (not (= y$45 (= y$45 true))) (not y$45) (= y$45 true)))
-(assume t2.t96 (= y$45 (= y$45 true)))
-(assume t2.t97 y$45)
-(step t2.t94' (cl (not (= y$45 (= y$45 true))) (not y$45) (= y$45 true)) :rule or :premises (t2.t94))
-(step t2.t98 (cl (= y$45 true)) :rule resolution :premises (t2.t94' t2.t96 t2.t97))
-(step t.end (cl) :rule resolution :premises (nt2.t98.0 t2.t98))

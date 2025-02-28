@@ -1,4 +1,0 @@
-(assume nst97.0 (not (= (and y$287 y$288) y$v3_1517448506_161_op)))
-(assume a155 (= y$v3_1517448506_161_op (and y$287 y$288)))
-(step st97 (cl (= (and y$287 y$288) y$v3_1517448506_161_op)) :rule symm :premises (a155))
-(step t.end (cl) :rule resolution :premises (nst97.0 st97))

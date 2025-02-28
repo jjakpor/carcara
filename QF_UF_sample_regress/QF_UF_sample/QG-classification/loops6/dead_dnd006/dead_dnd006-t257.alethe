@@ -1,4 +1,0 @@
-(assume nst257.0 (not (= (op e4 unit) e4)))
-(assume t256 (and (= (op unit e4) e4) (= (op e4 unit) e4)))
-(step st257 (cl (= (op e4 unit) e4)) :rule and :premises (t256) :args (1))
-(step t.end (cl) :rule resolution :premises (nst257.0 st257))

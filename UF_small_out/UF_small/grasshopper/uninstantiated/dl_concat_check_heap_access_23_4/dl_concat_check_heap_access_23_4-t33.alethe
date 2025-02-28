@@ -1,6 +1,0 @@
-(assume nst33.0 (not (not (and (= null$0 end1$0) (= null$0 start1$0)))))
-(assume t31 (or (not (and (= null$0 end1$0) (= null$0 start1$0))) (= null$0 start1$0)))
-(assume t32 (not (= null$0 start1$0)))
-(step t31' (cl (not (and (= null$0 end1$0) (= null$0 start1$0))) (= null$0 start1$0)) :rule or :premises (t31))
-(step st33 (cl (not (and (= null$0 end1$0) (= null$0 start1$0)))) :rule resolution :premises (t31' t32))
-(step t.end (cl) :rule resolution :premises (nst33.0 st33))

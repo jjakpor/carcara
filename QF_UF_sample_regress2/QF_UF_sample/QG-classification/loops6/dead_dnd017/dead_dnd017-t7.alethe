@@ -1,6 +1,0 @@
-(assume nst7.0 (not (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))))))
-(assume nst7.1 (not (= e1 (op e1 (op e1 e1)))))
-(assume t6 (or (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (= e1 (op e1 (op e1 e1)))))
-(step t6' (cl (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (= e1 (op e1 (op e1 e1)))) :rule or :premises (t6))
-(step st7 (cl (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (= e1 (op e1 (op e1 e1)))) :rule contraction :premises (t6'))
-(step t.end (cl) :rule resolution :premises (nst7.0 nst7.1 st7))

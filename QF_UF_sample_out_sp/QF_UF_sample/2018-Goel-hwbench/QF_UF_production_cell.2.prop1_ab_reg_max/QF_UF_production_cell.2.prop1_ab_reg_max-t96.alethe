@@ -1,7 +1,0 @@
-(assume nt96.0 (not (= y$v_k_Press y$v_k_Table)))
-(assume t83 (or (not (= y$80 (= y$v_k_Press y$v_k_Table))) (not y$80) (= y$v_k_Press y$v_k_Table)))
-(assume t94 (= y$80 (= y$v_k_Press y$v_k_Table)))
-(assume t95 y$80)
-(step t83' (cl (not (= y$80 (= y$v_k_Press y$v_k_Table))) (not y$80) (= y$v_k_Press y$v_k_Table)) :rule or :premises (t83))
-(step t96 (cl (= y$v_k_Press y$v_k_Table)) :rule resolution :premises (t83' t94 t95))
-(step t.end (cl) :rule resolution :premises (nt96.0 t96))

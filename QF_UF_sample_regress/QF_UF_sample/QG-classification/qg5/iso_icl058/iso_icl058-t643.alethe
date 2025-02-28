@@ -1,6 +1,0 @@
-(assume nst643.0 (not (= (= (op e0 e0) (op (op (op e0 e0) e0) e0)) false)))
-(assume t378 (not (= (op e0 e0) (op (op (op e0 e0) e0) e0))))
-(assume t642 (or (= (= (op e0 e0) (op (op (op e0 e0) e0) e0)) false) (= (op e0 e0) (op (op (op e0 e0) e0) e0))))
-(step t642' (cl (= (= (op e0 e0) (op (op (op e0 e0) e0) e0)) false) (= (op e0 e0) (op (op (op e0 e0) e0) e0))) :rule or :premises (t642))
-(step st643 (cl (= (= (op e0 e0) (op (op (op e0 e0) e0) e0)) false)) :rule resolution :premises (t642' t378))
-(step t.end (cl) :rule resolution :premises (nst643.0 st643))

@@ -1,6 +1,0 @@
-(assume nt687.0 (not (= x60 x61)))
-(assume nt687.1 (not (not (or (and (= x60 y60) (= y60 x61)) (and (= x60 z60) (= z60 x61))))))
-(assume t686 (or (not (or (and (= x60 y60) (= y60 x61)) (and (= x60 z60) (= z60 x61)))) (= x60 x61)))
-(step t686' (cl (not (or (and (= x60 y60) (= y60 x61)) (and (= x60 z60) (= z60 x61)))) (= x60 x61)) :rule or :premises (t686))
-(step t687 (cl (= x60 x61) (not (or (and (= x60 y60) (= y60 x61)) (and (= x60 z60) (= z60 x61))))) :rule reordering :premises (t686'))
-(step t.end (cl) :rule resolution :premises (nt687.0 nt687.1 t687))

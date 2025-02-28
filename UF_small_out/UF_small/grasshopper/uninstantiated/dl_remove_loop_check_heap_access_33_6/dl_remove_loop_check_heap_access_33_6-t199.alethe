@@ -1,5 +1,0 @@
-(assume nst199.0 (not (not (= (= sk_?X_75$0 (union$0 sk_?X_77$0 sk_?X_76$0)) (= sk_?X_75$0 (union$0 sk_?X_78$0 sk_?X_76$0))))))
-(assume nst199.1 (not (not (= sk_?X_75$0 (union$0 sk_?X_77$0 sk_?X_76$0)))))
-(assume nst199.2 (not (= sk_?X_75$0 (union$0 sk_?X_78$0 sk_?X_76$0))))
-(step st199 (cl (not (= (= sk_?X_75$0 (union$0 sk_?X_77$0 sk_?X_76$0)) (= sk_?X_75$0 (union$0 sk_?X_78$0 sk_?X_76$0)))) (not (= sk_?X_75$0 (union$0 sk_?X_77$0 sk_?X_76$0))) (= sk_?X_75$0 (union$0 sk_?X_78$0 sk_?X_76$0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst199.0 nst199.1 nst199.2 st199))

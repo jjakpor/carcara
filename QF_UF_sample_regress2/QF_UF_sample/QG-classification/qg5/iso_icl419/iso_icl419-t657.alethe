@@ -1,8 +1,0 @@
-(assume nst657.0 (not (= (or (= (op e4 e4) e1) (= (op e4 e3) e1) (= (op e4 e2) e1) (= (op e4 e0) e1) (= (op e4 e1) e1)) (or (= e1 (op e4 e4)) (= e1 (op e4 e3)) (= e1 (op e4 e2)) (= e1 (op e4 e0)) (= e1 (op e4 e1))))))
-(assume t3 (= (= (op e4 e3) e1) (= e1 (op e4 e3))))
-(assume t326 (= (= (op e4 e1) e1) (= e1 (op e4 e1))))
-(assume t654 (= (= (op e4 e4) e1) (= e1 (op e4 e4))))
-(assume t655 (= (= (op e4 e2) e1) (= e1 (op e4 e2))))
-(assume t656 (= (= (op e4 e0) e1) (= e1 (op e4 e0))))
-(step st657 (cl (= (or (= (op e4 e4) e1) (= (op e4 e3) e1) (= (op e4 e2) e1) (= (op e4 e0) e1) (= (op e4 e1) e1)) (or (= e1 (op e4 e4)) (= e1 (op e4 e3)) (= e1 (op e4 e2)) (= e1 (op e4 e0)) (= e1 (op e4 e1))))) :rule cong :premises (t654 t3 t655 t656 t326))
-(step t.end (cl) :rule resolution :premises (nst657.0 st657))

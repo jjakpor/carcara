@@ -1,3 +1,0 @@
-(assume nst39.0 (not (= (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))))))
-(step st39 (cl (= (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst39.0 st39))

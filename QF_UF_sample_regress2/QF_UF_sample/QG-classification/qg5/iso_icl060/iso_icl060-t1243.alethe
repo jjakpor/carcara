@@ -1,4 +1,0 @@
-(assume nst1243.0 (not (= (op (op e1 e3) (op (op e1 e3) e3)) e3)))
-(assume t500 (= e3 (op (op e1 e3) (op (op e1 e3) e3))))
-(step st1243 (cl (= (op (op e1 e3) (op (op e1 e3) e3)) e3)) :rule symm :premises (t500))
-(step t.end (cl) :rule resolution :premises (nst1243.0 st1243))

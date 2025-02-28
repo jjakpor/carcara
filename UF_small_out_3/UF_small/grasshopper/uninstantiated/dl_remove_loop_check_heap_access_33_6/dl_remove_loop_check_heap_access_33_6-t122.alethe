@@ -1,6 +1,0 @@
-(assume nst122.0 (not (not (or (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))) (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))))))
-(assume nst122.1 (not (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0))))
-(assume nst122.2 (not (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)))))
-(assume nst122.3 (not (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))))
-(step st122 (cl (not (or (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))) (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0)))) (not (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0)) (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))) (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) (read$0 next$0 d_init$0))) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst122.0 nst122.1 nst122.2 nst122.3 st122))

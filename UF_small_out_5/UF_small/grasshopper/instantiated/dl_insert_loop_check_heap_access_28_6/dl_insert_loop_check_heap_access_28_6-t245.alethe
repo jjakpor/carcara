@@ -1,3 +1,0 @@
-(assume nst245.0 (not (= (not true) false)))
-(step st245 (cl (= (not true) false)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst245.0 st245))

@@ -1,5 +1,0 @@
-(assume t70 (= (= e0 (op e1 (op e1 e0))) (= e0 (op e1 (op e1 e0)))))
-(assume t73 (= (not (= unit (op e1 e0))) (not (= e0 (op e1 e0)))))
-(assume nt74.0 (not (= (and (= e0 (op e1 (op e1 e0))) (not (= unit (op e1 e0)))) (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0)))))))
-(step t74 (cl (= (and (= e0 (op e1 (op e1 e0))) (not (= unit (op e1 e0)))) (and (= e0 (op e1 (op e1 e0))) (not (= e0 (op e1 e0)))))) :rule cong :premises (t70 t73))
-(step t.end (cl) :rule resolution :premises (nt74.0 t74))

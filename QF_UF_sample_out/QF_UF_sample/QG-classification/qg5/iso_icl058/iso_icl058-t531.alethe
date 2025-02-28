@@ -1,8 +1,0 @@
-(assume t529 (or (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false) (not (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))))
-(assume t530 (or (not (not (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))
-(assume nt531.0 (not (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false)))
-(assume nt531.1 (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))
-(step t530' (cl (not (not (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) :rule or :premises (t530))
-(step t529' (cl (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false) (not (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))) :rule or :premises (t529))
-(step t531 (cl (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) false) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) :rule resolution :premises (t529' t530'))
-(step t.end (cl) :rule resolution :premises (nt531.0 nt531.1 t531))

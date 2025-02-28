@@ -1,3 +1,0 @@
-(assume nst11.0 (not (= (= start1$0 null$0) (= null$0 start1$0))))
-(step st11 (cl (= (= start1$0 null$0) (= null$0 start1$0))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst11.0 st11))

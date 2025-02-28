@@ -1,7 +1,0 @@
-(assume nst20.0 (not false))
-(assume a5 (not (= nf0 flash)))
-(assume t0 (or (not (= (not (= nf0 flash)) false)) (not (not (= nf0 flash))) false))
-(assume t19 (= (not (= nf0 flash)) false))
-(step t0' (cl (not (= (not (= nf0 flash)) false)) (not (not (= nf0 flash))) false) :rule or :premises (t0))
-(step st20 (cl false) :rule resolution :premises (t0' t19 a5))
-(step t.end (cl) :rule resolution :premises (nst20.0 st20))

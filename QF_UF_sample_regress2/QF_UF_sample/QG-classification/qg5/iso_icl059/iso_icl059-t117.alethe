@@ -1,3 +1,0 @@
-(assume nst117.0 (not (= (= e0 (op (op (op (op e0 e0) e0) e0) e0)) (= e0 (op (op (op (op e0 e0) e0) e0) e0)))))
-(step st117 (cl (= (= e0 (op (op (op (op e0 e0) e0) e0) e0)) (= e0 (op (op (op (op e0 e0) e0) e0) e0)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst117.0 st117))

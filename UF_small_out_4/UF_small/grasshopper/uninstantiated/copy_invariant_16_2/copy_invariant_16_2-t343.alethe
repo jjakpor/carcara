@@ -1,6 +1,0 @@
-(assume nst343.0 (not (not (and (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)) (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))))))
-(assume t249 (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0))))
-(assume t342 (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (not (and (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)) (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))))))
-(step t342' (cl (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (not (and (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)) (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))))) :rule or :premises (t342))
-(step st343 (cl (not (and (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)) (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))))) :rule resolution :premises (t342' t249))
-(step t.end (cl) :rule resolution :premises (nst343.0 st343))

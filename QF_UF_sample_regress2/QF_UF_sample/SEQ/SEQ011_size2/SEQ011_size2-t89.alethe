@@ -1,6 +1,0 @@
-(assume nst89.0 (not (not (and (p4 c8) (= c8 c_1)))))
-(assume nst89.1 (not (p4 c_1)))
-(assume t88 (or (not (and (p4 c8) (= c8 c_1))) (not (and (p4 c8) (= c8 c_1))) (p4 c_1)))
-(step t88' (cl (not (and (p4 c8) (= c8 c_1))) (not (and (p4 c8) (= c8 c_1))) (p4 c_1)) :rule or :premises (t88))
-(step st89 (cl (not (and (p4 c8) (= c8 c_1))) (p4 c_1)) :rule contraction :premises (t88'))
-(step t.end (cl) :rule resolution :premises (nst89.0 nst89.1 st89))

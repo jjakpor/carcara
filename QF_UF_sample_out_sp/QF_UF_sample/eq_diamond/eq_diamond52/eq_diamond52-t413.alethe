@@ -1,4 +1,0 @@
-(assume nt413.0 (not (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37))))
-(assume t412 (and (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37))))
-(step t413 (cl (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37))) :rule and :premises (t412) :args (1))
-(step t.end (cl) :rule resolution :premises (nt413.0 t413))

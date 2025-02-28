@@ -1,5 +1,0 @@
-(assume nt646.0 (not (not (= (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (and (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (=> (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (= x40 x41)))))))
-(assume nt646.1 (not (not (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))))))
-(assume nt646.2 (not (and (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (=> (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (= x40 x41)))))
-(step t646 (cl (not (= (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (and (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (=> (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (= x40 x41))))) (not (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41)))) (and (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (=> (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))) (= x40 x41)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt646.0 nt646.1 nt646.2 t646))

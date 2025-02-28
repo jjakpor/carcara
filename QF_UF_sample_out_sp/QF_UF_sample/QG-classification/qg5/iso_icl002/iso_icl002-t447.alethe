@@ -1,7 +1,0 @@
-(assume nt447.0 (not (not (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)))))
-(assume t443 (or (not (= (not (= (op e0 e0) (op e3 e0))) (not (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0))))) (not (not (= (op e0 e0) (op e3 e0)))) (not (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)))))
-(assume t445 (= (not (= (op e0 e0) (op e3 e0))) (not (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)))))
-(assume t446 (not (= (op e0 e0) (op e3 e0))))
-(step t443' (cl (not (= (not (= (op e0 e0) (op e3 e0))) (not (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0))))) (not (not (= (op e0 e0) (op e3 e0)))) (not (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)))) :rule or :premises (t443))
-(step t447 (cl (not (= (op e0 e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)))) :rule resolution :premises (t443' t445 t446))
-(step t.end (cl) :rule resolution :premises (nt447.0 t447))

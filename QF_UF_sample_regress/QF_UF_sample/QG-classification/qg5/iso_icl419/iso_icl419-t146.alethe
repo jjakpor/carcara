@@ -1,4 +1,0 @@
-(assume nst146.0 (not (= (op (op e2 e0) e2) e0)))
-(assume t145 (and (= (op (op e2 e0) e2) e0) (= (op (op e2 e1) e2) e1)))
-(step st146 (cl (= (op (op e2 e0) e2) e0)) :rule and :premises (t145) :args (0))
-(step t.end (cl) :rule resolution :premises (nst146.0 st146))

@@ -1,6 +1,0 @@
-(assume nst54.0 (not (= (and (= (read$0 next$0 prv_init$0) curr_init$0) (= (read$0 prev$0 c_init$0) null$0) (in$0 prv_init$0 sk_?X_78$0)) (and (= curr_init$0 (read$0 next$0 prv_init$0)) (= null$0 (read$0 prev$0 c_init$0)) (in$0 prv_init$0 sk_?X_78$0)))))
-(assume t51 (= (= (read$0 next$0 prv_init$0) curr_init$0) (= curr_init$0 (read$0 next$0 prv_init$0))))
-(assume t52 (= (= (read$0 prev$0 c_init$0) null$0) (= null$0 (read$0 prev$0 c_init$0))))
-(assume t53 (= (in$0 prv_init$0 sk_?X_78$0) (in$0 prv_init$0 sk_?X_78$0)))
-(step st54 (cl (= (and (= (read$0 next$0 prv_init$0) curr_init$0) (= (read$0 prev$0 c_init$0) null$0) (in$0 prv_init$0 sk_?X_78$0)) (and (= curr_init$0 (read$0 next$0 prv_init$0)) (= null$0 (read$0 prev$0 c_init$0)) (in$0 prv_init$0 sk_?X_78$0)))) :rule cong :premises (t51 t52 t53))
-(step t.end (cl) :rule resolution :premises (nst54.0 st54))

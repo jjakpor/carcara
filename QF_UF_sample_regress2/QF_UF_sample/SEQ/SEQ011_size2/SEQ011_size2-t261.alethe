@@ -1,4 +1,0 @@
-(assume nst261.0 (not (not (and (p1 (f5 c_0) c_0) (= c_0 (f5 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))))))
-(assume nst261.1 (not (not (p1 (f7 c_0) c_0))))
-(step st261 (cl (not (and (p1 (f5 c_0) c_0) (= c_0 (f5 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0)))) (not (p1 (f7 c_0) c_0))) :rule and_pos :args (3))
-(step t.end (cl) :rule resolution :premises (nst261.0 nst261.1 st261))

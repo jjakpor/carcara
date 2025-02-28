@@ -1,5 +1,0 @@
-(assume nst29.0 (not (not (= (models (push_alpha empty v0_alpha (eval_alpha empty aR)) (pR (inj_alpha v0_alpha))) (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))))))
-(assume nst29.1 (not (not (models (push_alpha empty v0_alpha (eval_alpha empty aR)) (pR (inj_alpha v0_alpha))))))
-(assume nst29.2 (not (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))))
-(step st29 (cl (not (= (models (push_alpha empty v0_alpha (eval_alpha empty aR)) (pR (inj_alpha v0_alpha))) (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha))))) (not (models (push_alpha empty v0_alpha (eval_alpha empty aR)) (pR (inj_alpha v0_alpha)))) (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst29.0 nst29.1 nst29.2 st29))

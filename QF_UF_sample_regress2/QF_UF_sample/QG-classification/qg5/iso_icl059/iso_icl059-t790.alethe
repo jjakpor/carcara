@@ -1,4 +1,0 @@
-(assume nst790.0 (not (and (and (and (not (= (op e0 e4) (op e1 e4))) (not (= (op e0 e4) (op e2 e4)))) (not (= (op e0 e4) (op e3 e4)))) (not (= (op e0 e4) (op e4 e4))))))
-(assume t789 (and (and (and (and (not (= (op e0 e4) (op e1 e4))) (not (= (op e0 e4) (op e2 e4)))) (not (= (op e0 e4) (op e3 e4)))) (not (= (op e0 e4) (op e4 e4)))) (not (= (op e1 e4) (op e2 e4)))))
-(step st790 (cl (and (and (and (not (= (op e0 e4) (op e1 e4))) (not (= (op e0 e4) (op e2 e4)))) (not (= (op e0 e4) (op e3 e4)))) (not (= (op e0 e4) (op e4 e4))))) :rule and :premises (t789) :args (0))
-(step t.end (cl) :rule resolution :premises (nst790.0 st790))

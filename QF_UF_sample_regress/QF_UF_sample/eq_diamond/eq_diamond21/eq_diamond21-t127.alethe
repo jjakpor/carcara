@@ -1,6 +1,0 @@
-(assume nst127.0 (not (= x10 x11)))
-(assume t122 (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))
-(assume t126 (or (= x10 x11) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))))
-(step t126' (cl (= x10 x11) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))) :rule or :premises (t126))
-(step st127 (cl (= x10 x11)) :rule resolution :premises (t126' t122))
-(step t.end (cl) :rule resolution :premises (nst127.0 st127))

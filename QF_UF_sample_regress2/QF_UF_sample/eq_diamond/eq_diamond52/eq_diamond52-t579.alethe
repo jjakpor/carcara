@@ -1,5 +1,0 @@
-(assume nst579.0 (not (= (= x6 x7) false)))
-(assume t572 (= (= x6 x7) (= x0 x51)))
-(assume t578 (= (= x0 x51) false))
-(step st579 (cl (= (= x6 x7) false)) :rule trans :premises (t572 t578))
-(step t.end (cl) :rule resolution :premises (nst579.0 st579))

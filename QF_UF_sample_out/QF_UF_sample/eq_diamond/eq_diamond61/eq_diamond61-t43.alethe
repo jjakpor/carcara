@@ -1,7 +1,0 @@
-(assume t37 (or (not (= (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4))))) (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4)))) (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4)))))
-(assume t41 (= (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4)))))
-(assume t42 (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))))
-(assume nt43.0 (not (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4)))))
-(step t37' (cl (not (= (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4))))) (not (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4)))) (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4)))) :rule or :premises (t37))
-(step t43 (cl (and (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (=> (or (and (= x3 y3) (= y3 x4)) (and (= x3 z3) (= z3 x4))) (= x3 x4)))) :rule resolution :premises (t37' t41 t42))
-(step t.end (cl) :rule resolution :premises (nt43.0 t43))

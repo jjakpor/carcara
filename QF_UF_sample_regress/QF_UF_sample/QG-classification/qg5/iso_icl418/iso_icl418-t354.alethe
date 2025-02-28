@@ -1,8 +1,0 @@
-(assume nst354.0 (not (= (= (op (op e4 e3) e3) (op (op (op e4 e3) (op e4 e3)) e3)) false)))
-(assume nst354.1 (not (= (op (op e4 e3) e3) (op (op (op e4 e3) (op e4 e3)) e3))))
-(assume t352 (or (= (= (op (op e4 e3) e3) (op (op (op e4 e3) (op e4 e3)) e3)) false) (not (not (= (op (op e4 e3) e3) (op (op (op e4 e3) (op e4 e3)) e3))))))
-(assume t353 (or (not (not (not (= (op (op e4 e3) e3) (op (op (op e4 e3) (op e4 e3)) e3))))) (= (op (op e4 e3) e3) (op (op (op e4 e3) (op e4 e3)) e3))))
-(step t352' (cl (= (= (op (op e4 e3) e3) (op (op (op e4 e3) (op e4 e3)) e3)) false) (not (not (= (op (op e4 e3) e3) (op (op (op e4 e3) (op e4 e3)) e3))))) :rule or :premises (t352))
-(step t353' (cl (not (not (not (= (op (op e4 e3) e3) (op (op (op e4 e3) (op e4 e3)) e3))))) (= (op (op e4 e3) e3) (op (op (op e4 e3) (op e4 e3)) e3))) :rule or :premises (t353))
-(step st354 (cl (= (= (op (op e4 e3) e3) (op (op (op e4 e3) (op e4 e3)) e3)) false) (= (op (op e4 e3) e3) (op (op (op e4 e3) (op e4 e3)) e3))) :rule resolution :premises (t352' t353'))
-(step t.end (cl) :rule resolution :premises (nst354.0 nst354.1 st354))

@@ -1,5 +1,0 @@
-(assume nst129.0 (not (= y$id44_op (= y$n5s8 y$v_k_Table))))
-(assume t127 (= y$id44_op (and true (= y$n5s8 y$v_k_Table))))
-(assume t128 (= (and true (= y$n5s8 y$v_k_Table)) (= y$n5s8 y$v_k_Table)))
-(step st129 (cl (= y$id44_op (= y$n5s8 y$v_k_Table))) :rule trans :premises (t127 t128))
-(step t.end (cl) :rule resolution :premises (nst129.0 st129))

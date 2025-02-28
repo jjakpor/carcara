@@ -1,3 +1,0 @@
-(assume nst152.0 (not (= (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))))))
-(step st152 (cl (= (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))) (forall ((?v0 A$)) (= (fun_app$e uu$ ?v0) (ldropn$ n$))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst152.0 st152))

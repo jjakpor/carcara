@@ -1,5 +1,0 @@
-(assume nst1072.0 (not (= (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))) false)))
-(assume t1061 (= (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))) (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))
-(assume t1071 (= (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))) false))
-(step st1072 (cl (= (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))) false)) :rule trans :premises (t1061 t1071))
-(step t.end (cl) :rule resolution :premises (nst1072.0 st1072))

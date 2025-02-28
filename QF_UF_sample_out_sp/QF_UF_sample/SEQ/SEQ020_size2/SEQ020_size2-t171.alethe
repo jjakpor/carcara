@@ -1,5 +1,0 @@
-(assume nt171.0 (not (= c_0 (f7 c_0))))
-(assume nt171.1 (not (= c_1 (f7 c_0))))
-(assume t170 (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0))))
-(step t171 (cl (= c_0 (f7 c_0)) (= c_1 (f7 c_0))) :rule or :premises (t170))
-(step t.end (cl) :rule resolution :premises (nt171.0 nt171.1 t171))

@@ -1,4 +1,0 @@
-(assume t66 (and y$v3_1517448506_460_op y$v3_1517448506_529_op))
-(assume nt128.0 (not y$v3_1517448506_460_op))
-(step t128 (cl y$v3_1517448506_460_op) :rule and :premises (t66) :args (0))
-(step t.end (cl) :rule resolution :premises (nt128.0 t128))

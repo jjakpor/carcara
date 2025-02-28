@@ -1,7 +1,0 @@
-(assume nt23.0 (not (= org_MR false)))
-(assume t17 (or (not (= (not org_MR) (= org_MR false))) (not (not org_MR)) (= org_MR false)))
-(assume t19 (= (not org_MR) (= org_MR false)))
-(assume t22 (not org_MR))
-(step t17' (cl (not (= (not org_MR) (= org_MR false))) (not (not org_MR)) (= org_MR false)) :rule or :premises (t17))
-(step t23 (cl (= org_MR false)) :rule resolution :premises (t17' t19 t22))
-(step t.end (cl) :rule resolution :premises (nt23.0 t23))

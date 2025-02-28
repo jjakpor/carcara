@@ -1,7 +1,0 @@
-(assume t178 (or (not (= (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0))))) (not (or (= (f7 c_0) c_0) (= (f7 c_0) c_1))) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))))
-(assume t181 (= (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))))
-(assume t182 (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)))
-(assume nt183.0 (not (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))))
-(step t178' (cl (not (= (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0))))) (not (or (= (f7 c_0) c_0) (= (f7 c_0) c_1))) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))) :rule or :premises (t178))
-(step t183 (cl (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))) :rule resolution :premises (t178' t181 t182))
-(step t.end (cl) :rule resolution :premises (nt183.0 t183))

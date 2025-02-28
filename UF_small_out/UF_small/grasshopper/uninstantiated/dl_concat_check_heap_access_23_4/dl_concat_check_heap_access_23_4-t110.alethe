@@ -1,3 +1,0 @@
-(assume nst110.0 (not (= start2$0 start2$0)))
-(step st110 (cl (= start2$0 start2$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst110.0 st110))

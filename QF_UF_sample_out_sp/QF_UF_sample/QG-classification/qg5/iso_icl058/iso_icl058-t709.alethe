@@ -1,5 +1,0 @@
-(assume nt709.0 (not (= (= (op e0 e0) (op e1 e0)) (= (op e0 e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))))
-(assume t176 (= (op e0 e0) (op e0 e0)))
-(assume t168 (= (op e1 e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))
-(step t709 (cl (= (= (op e0 e0) (op e1 e0)) (= (op e0 e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))) :rule cong :premises (t176 t168))
-(step t.end (cl) :rule resolution :premises (nt709.0 t709))

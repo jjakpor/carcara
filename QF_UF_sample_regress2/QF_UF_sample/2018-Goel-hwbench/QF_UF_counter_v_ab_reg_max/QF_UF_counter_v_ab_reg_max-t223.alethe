@@ -1,3 +1,0 @@
-(assume nst223.0 (not (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
-(step st223 (cl (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst223.0 st223))

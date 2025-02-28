@@ -1,3 +1,0 @@
-(assume nst236.0 (not (= (= (= e3 (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) false) (not (= e3 (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))))
-(step st236 (cl (= (= (= e3 (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) false) (not (= e3 (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nst236.0 st236))

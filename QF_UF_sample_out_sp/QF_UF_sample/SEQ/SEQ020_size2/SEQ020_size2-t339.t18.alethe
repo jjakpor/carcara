@@ -1,7 +1,0 @@
-(assume nt339.t18.0 (not false))
-(assume t339.t0 (or (not (= (= true false) false)) (not (= true false)) false))
-(assume t339.t1 (= (= true false) false))
-(assume t339.t17 (= true false))
-(step t339.t0' (cl (not (= (= true false) false)) (not (= true false)) false) :rule or :premises (t339.t0))
-(step t339.t18 (cl false) :rule resolution :premises (t339.t0' t339.t1 t339.t17))
-(step t.end (cl) :rule resolution :premises (nt339.t18.0 t339.t18))

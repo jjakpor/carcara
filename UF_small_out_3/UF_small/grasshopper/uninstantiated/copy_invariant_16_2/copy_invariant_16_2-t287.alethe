@@ -1,4 +1,0 @@
-(assume nst287.0 (not (=> (and (in$0 sk_?e$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0)) (in$0 lst$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))))
-(assume nst287.1 (not (not (in$0 lst$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))))
-(step st287 (cl (=> (and (in$0 sk_?e$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0)) (in$0 lst$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))) (not (in$0 lst$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))) :rule implies_neg2)
-(step t.end (cl) :rule resolution :premises (nst287.0 nst287.1 st287))

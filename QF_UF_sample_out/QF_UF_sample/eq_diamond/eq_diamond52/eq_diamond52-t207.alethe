@@ -1,6 +1,0 @@
-(assume t206 (or (= x17 x18) (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))))))
-(assume t202 (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))))
-(assume nt207.0 (not (= x17 x18)))
-(step t206' (cl (= x17 x18) (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))))) :rule or :premises (t206))
-(step t207 (cl (= x17 x18)) :rule resolution :premises (t206' t202))
-(step t.end (cl) :rule resolution :premises (nt207.0 t207))

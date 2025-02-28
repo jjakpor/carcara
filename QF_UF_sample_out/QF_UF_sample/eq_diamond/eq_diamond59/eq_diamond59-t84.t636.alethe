@@ -1,4 +1,0 @@
-(assume nt84.t636.0 (not (not (not (not (= x0 x58))))))
-(assume nt84.t636.1 (not (= x0 x58)))
-(step t84.t636 (cl (not (not (not (= x0 x58)))) (= x0 x58)) :rule not_not)
-(step t.end (cl) :rule resolution :premises (nt84.t636.0 nt84.t636.1 t84.t636))

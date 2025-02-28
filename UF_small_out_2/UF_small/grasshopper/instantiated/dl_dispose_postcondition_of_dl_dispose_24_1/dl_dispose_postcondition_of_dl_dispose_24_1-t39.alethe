@@ -1,5 +1,0 @@
-(assume nst39.0 (not (= (intersection$0 Alloc_1$0 FP_1$0) (intersection$0 Alloc_1$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0)))))
-(assume t29 (= Alloc_1$0 Alloc_1$0))
-(assume t38 (= FP_1$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0)))
-(step st39 (cl (= (intersection$0 Alloc_1$0 FP_1$0) (intersection$0 Alloc_1$0 (dlseg_domain$0 next$0 prev$0 a$0 prv_2$0 prv_2$0 b_1$0)))) :rule cong :premises (t29 t38))
-(step t.end (cl) :rule resolution :premises (nst39.0 st39))

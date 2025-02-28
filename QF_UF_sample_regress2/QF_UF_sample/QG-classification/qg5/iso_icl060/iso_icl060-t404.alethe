@@ -1,3 +1,0 @@
-(assume nst404.0 (not (= (op (op (op e1 e3) e3) e3) (op (op (op e1 e3) e3) e3))))
-(step st404 (cl (= (op (op (op e1 e3) e3) e3) (op (op (op e1 e3) e3) e3))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst404.0 st404))

@@ -1,5 +1,0 @@
-(assume nst726.0 (not (= (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) (op (op e3 e3) (op e3 e3))) (op e3 (op (op e3 e3) (op e3 e3))))))
-(assume t341 (= (op (op e3 e3) (op e3 e3)) (op (op e3 e3) (op e3 e3))))
-(assume t725 (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) e3))
-(step st726 (cl (= (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) (op (op e3 e3) (op e3 e3))) (op e3 (op (op e3 e3) (op e3 e3))))) :rule cong :premises (t725 t341))
-(step t.end (cl) :rule resolution :premises (nst726.0 st726))

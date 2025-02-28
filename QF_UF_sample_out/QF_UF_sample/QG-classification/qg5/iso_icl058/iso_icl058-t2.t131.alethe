@@ -1,5 +1,0 @@
-(assume t2.t128 (= (not (= (op e3 e3) (op e3 e4))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
-(assume t2.t130 (= (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
-(assume nt2.t131.0 (not (= (not (= (op e3 e3) (op e3 e4))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))))
-(step t2.t131 (cl (= (not (= (op e3 e3) (op e3 e4))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) :rule trans :premises (t2.t128 t2.t130))
-(step t.end (cl) :rule resolution :premises (nt2.t131.0 t2.t131))

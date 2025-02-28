@@ -1,5 +1,0 @@
-(assume nt2.t196.0 (not (= (= y$n15s4 y$s$1_op) (= y$n15s4 (Add_4_4_4 y$X y$n1s4)))))
-(assume t2.t69 (= y$n15s4 y$n15s4))
-(assume a3 (= y$s$1_op (Add_4_4_4 y$X y$n1s4)))
-(step t2.t196 (cl (= (= y$n15s4 y$s$1_op) (= y$n15s4 (Add_4_4_4 y$X y$n1s4)))) :rule cong :premises (t2.t69 a3))
-(step t.end (cl) :rule resolution :premises (nt2.t196.0 t2.t196))

@@ -1,7 +1,0 @@
-(assume nst207.0 (not (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1))))))
-(assume t194 (or (not (= (not (= (op e2 e2) (op e2 e3))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1)))))) (not (not (= (op e2 e2) (op e2 e3)))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1))))))
-(assume t199 (= (not (= (op e2 e2) (op e2 e3))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1))))))
-(assume t206 (not (= (op e2 e2) (op e2 e3))))
-(step t194' (cl (not (= (not (= (op e2 e2) (op e2 e3))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1)))))) (not (not (= (op e2 e2) (op e2 e3)))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1))))) :rule or :premises (t194))
-(step st207 (cl (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 e1))))) :rule resolution :premises (t194' t199 t206))
-(step t.end (cl) :rule resolution :premises (nst207.0 st207))

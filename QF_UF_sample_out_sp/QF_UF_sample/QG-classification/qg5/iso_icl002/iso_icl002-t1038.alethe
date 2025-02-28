@@ -1,8 +1,0 @@
-(assume nt1038.0 (not (= (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) false)))
-(assume nt1038.1 (not (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))))
-(assume t1036 (or (= (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) false) (not (not (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))))))
-(assume t1037 (or (not (not (not (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))))) (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))))
-(step t1037' (cl (not (not (not (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))))) (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))) :rule or :premises (t1037))
-(step t1036' (cl (= (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) false) (not (not (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))))) :rule or :premises (t1036))
-(step t1038 (cl (= (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) false) (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))) :rule resolution :premises (t1036' t1037'))
-(step t.end (cl) :rule resolution :premises (nt1038.0 nt1038.1 t1038))

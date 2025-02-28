@@ -1,6 +1,0 @@
-(assume t84.t618 (or (not (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57)))) (= x56 x57)))
-(assume nt84.t619.0 (not (= x56 x57)))
-(assume nt84.t619.1 (not (not (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))))))
-(step t84.t618' (cl (not (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57)))) (= x56 x57)) :rule or :premises (t84.t618))
-(step t84.t619 (cl (= x56 x57) (not (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))))) :rule reordering :premises (t84.t618'))
-(step t.end (cl) :rule resolution :premises (nt84.t619.0 nt84.t619.1 t84.t619))

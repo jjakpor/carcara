@@ -1,5 +1,0 @@
-(assume nst142.0 (not (not (= (= sk_?X_25$0 sk_?X_26$0) (= sk_?X_25$0 (setenum$0 root_x$0))))))
-(assume nst142.1 (not (not (= sk_?X_25$0 sk_?X_26$0))))
-(assume nst142.2 (not (= sk_?X_25$0 (setenum$0 root_x$0))))
-(step st142 (cl (not (= (= sk_?X_25$0 sk_?X_26$0) (= sk_?X_25$0 (setenum$0 root_x$0)))) (not (= sk_?X_25$0 sk_?X_26$0)) (= sk_?X_25$0 (setenum$0 root_x$0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst142.0 nst142.1 nst142.2 st142))

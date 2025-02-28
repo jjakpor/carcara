@@ -1,6 +1,0 @@
-(assume nst211.0 (not (= x17 x18)))
-(assume nst211.1 (not (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))))))
-(assume t210 (or (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18)))) (= x17 x18)))
-(step t210' (cl (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18)))) (= x17 x18)) :rule or :premises (t210))
-(step st211 (cl (= x17 x18) (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))))) :rule reordering :premises (t210'))
-(step t.end (cl) :rule resolution :premises (nst211.0 nst211.1 st211))

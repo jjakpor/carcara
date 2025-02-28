@@ -1,4 +1,0 @@
-(assume nst617.0 (not (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
-(assume t616 (= (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0))))
-(step st617 (cl (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))) :rule symm :premises (t616))
-(step t.end (cl) :rule resolution :premises (nst617.0 st617))

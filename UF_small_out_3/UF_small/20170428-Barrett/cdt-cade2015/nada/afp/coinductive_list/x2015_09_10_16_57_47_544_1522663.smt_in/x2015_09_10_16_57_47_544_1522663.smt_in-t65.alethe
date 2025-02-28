@@ -1,7 +1,0 @@
-(assume nst65.0 (not (fun_app$q lnull$d xs$)))
-(assume nst65.1 (not (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$)))))
-(assume nst65.2 (not (not (or (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$)))))))
-(assume t64 (or (not (or (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$))))) (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$)))))
-(step t64' (cl (not (or (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$))))) (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$)))) :rule or :premises (t64))
-(step st65 (cl (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$))) (not (or (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$)))))) :rule reordering :premises (t64'))
-(step t.end (cl) :rule resolution :premises (nst65.0 nst65.1 nst65.2 st65))

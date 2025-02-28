@@ -1,4 +1,0 @@
-(assume nt686.0 (not (not (and (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))))))
-(assume nt686.1 (not (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))
-(step t686 (cl (not (and (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))) (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nt686.0 nt686.1 t686))

@@ -1,5 +1,0 @@
-(assume nst62.0 (not (not (= (= (not (not car)) car) true))))
-(assume nst62.1 (not (= (not (not car)) car)))
-(assume t61 (= (= (= (not (not car)) car) true) (= (not (not car)) car)))
-(step st62 (cl (not (= (= (not (not car)) car) true)) (= (not (not car)) car)) :rule equiv1 :premises (t61))
-(step t.end (cl) :rule resolution :premises (nst62.0 nst62.1 st62))

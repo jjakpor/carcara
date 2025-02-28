@@ -1,6 +1,0 @@
-(assume nst409.0 (not (not (= (op e0 (op e0 e0)) (op (op e0 e0) e0)))))
-(assume t179 (or (not (= (= (op e0 (op e0 e0)) (op (op e0 e0) e0)) false)) (not (= (op e0 (op e0 e0)) (op (op e0 e0) e0)))))
-(assume t408 (= (= (op e0 (op e0 e0)) (op (op e0 e0) e0)) false))
-(step t179' (cl (not (= (= (op e0 (op e0 e0)) (op (op e0 e0) e0)) false)) (not (= (op e0 (op e0 e0)) (op (op e0 e0) e0)))) :rule or :premises (t179))
-(step st409 (cl (not (= (op e0 (op e0 e0)) (op (op e0 e0) e0)))) :rule resolution :premises (t179' t408))
-(step t.end (cl) :rule resolution :premises (nst409.0 st409))

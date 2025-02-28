@@ -1,5 +1,0 @@
-(assume nst44.0 (not (= (= curr_4$0 prv_5$0) (= curr_init$0 prv_5$0))))
-(assume a60 (= curr_4$0 curr_init$0))
-(assume t43 (= prv_5$0 prv_5$0))
-(step st44 (cl (= (= curr_4$0 prv_5$0) (= curr_init$0 prv_5$0))) :rule cong :premises (a60 t43))
-(step t.end (cl) :rule resolution :premises (nst44.0 st44))

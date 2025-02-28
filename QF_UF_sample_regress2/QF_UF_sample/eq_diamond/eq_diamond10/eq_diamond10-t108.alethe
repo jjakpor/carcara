@@ -1,5 +1,0 @@
-(assume nst108.0 (not (= (= x4 x5) (= x0 x9))))
-(assume t62 (= x4 x0))
-(assume t107 (= x5 x9))
-(step st108 (cl (= (= x4 x5) (= x0 x9))) :rule cong :premises (t62 t107))
-(step t.end (cl) :rule resolution :premises (nst108.0 st108))

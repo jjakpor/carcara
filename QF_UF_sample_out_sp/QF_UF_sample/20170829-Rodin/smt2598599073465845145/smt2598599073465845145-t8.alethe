@@ -1,3 +1,0 @@
-(assume nt8.0 (not (= i2 i2)))
-(step t8 (cl (= i2 i2)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt8.0 t8))

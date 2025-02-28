@@ -1,5 +1,0 @@
-(assume nst14.0 (not (not (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0)))))
-(assume nst14.1 (not (not (Btwn$0 next$0 x$0 root_x$0 x$0))))
-(assume nst14.2 (not (= root_x$0 x$0)))
-(step st14 (cl (not (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0))) (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0)) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst14.0 nst14.1 nst14.2 st14))

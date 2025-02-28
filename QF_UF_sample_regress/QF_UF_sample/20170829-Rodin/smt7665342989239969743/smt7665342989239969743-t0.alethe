@@ -1,5 +1,0 @@
-(assume nst0.0 (not (not org)))
-(assume nst0.1 (not (and (not rd1) (not rd2))))
-(assume a0 (=> org (and (not rd1) (not rd2))))
-(step st0 (cl (not org) (and (not rd1) (not rd2))) :rule implies :premises (a0))
-(step t.end (cl) :rule resolution :premises (nst0.0 nst0.1 st0))

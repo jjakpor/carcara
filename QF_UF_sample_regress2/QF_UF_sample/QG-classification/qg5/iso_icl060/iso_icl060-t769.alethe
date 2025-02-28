@@ -1,5 +1,0 @@
-(assume nst769.0 (not (= (= (= (op e3 e1) (op e3 e3)) (not (not (= (op e3 e1) (op e3 e3))))) true)))
-(assume t767 (= (= (= (op e3 e1) (op e3 e3)) (not (not (= (op e3 e1) (op e3 e3))))) (= (= (op e3 e1) (op e3 e3)) (= (op e3 e1) (op e3 e3)))))
-(assume t768 (= (= (= (op e3 e1) (op e3 e3)) (= (op e3 e1) (op e3 e3))) true))
-(step st769 (cl (= (= (= (op e3 e1) (op e3 e3)) (not (not (= (op e3 e1) (op e3 e3))))) true)) :rule trans :premises (t767 t768))
-(step t.end (cl) :rule resolution :premises (nst769.0 st769))

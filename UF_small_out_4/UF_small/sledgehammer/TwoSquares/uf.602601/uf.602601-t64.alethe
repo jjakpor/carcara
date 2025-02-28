@@ -1,3 +1,0 @@
-(assume nst64.0 (not (= (= (f3 (f15 f16 f14) f25) f1) (= f1 (f3 (f15 f16 f14) f25)))))
-(step st64 (cl (= (= (f3 (f15 f16 f14) f25) f1) (= f1 (f3 (f15 f16 f14) f25)))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst64.0 st64))

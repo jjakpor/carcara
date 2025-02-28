@@ -1,5 +1,0 @@
-(assume nt2.t31.0 (not (= (= y$X$next y$X$next_rhs_op) (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)))))
-(assume t2.t10 (= y$X$next y$X$next))
-(assume t2.t30 (= y$X$next_rhs_op (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)))
-(step t2.t31 (cl (= (= y$X$next y$X$next_rhs_op) (= y$X$next (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)))) :rule cong :premises (t2.t10 t2.t30))
-(step t.end (cl) :rule resolution :premises (nt2.t31.0 t2.t31))

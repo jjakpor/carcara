@@ -1,6 +1,0 @@
-(assume nt35.0 (not (= x2 x3)))
-(assume nt35.1 (not (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))))
-(assume t34 (or (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))) (= x2 x3)))
-(step t34' (cl (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))) (= x2 x3)) :rule or :premises (t34))
-(step t35 (cl (= x2 x3) (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))) :rule reordering :premises (t34'))
-(step t.end (cl) :rule resolution :premises (nt35.0 nt35.1 t35))

@@ -1,5 +1,0 @@
-(assume t28 (= (= (= (not (not prt)) prt) true) (= (not (not prt)) prt)))
-(assume nt29.0 (not (not (= (= (not (not prt)) prt) true))))
-(assume nt29.1 (not (= (not (not prt)) prt)))
-(step t29 (cl (not (= (= (not (not prt)) prt) true)) (= (not (not prt)) prt)) :rule equiv1 :premises (t28))
-(step t.end (cl) :rule resolution :premises (nt29.0 nt29.1 t29))

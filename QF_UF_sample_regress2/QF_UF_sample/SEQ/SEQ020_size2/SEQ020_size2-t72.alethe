@@ -1,8 +1,0 @@
-(assume nst72.0 (not (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1))))))
-(assume nst72.1 (not (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1))))))
-(assume t70 (or (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (not (= c_0 (f5 c_1)))))
-(assume t71 (or (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (not (not (= c_0 (f5 c_1))))))
-(step t70' (cl (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (not (= c_0 (f5 c_1)))) :rule or :premises (t70))
-(step t71' (cl (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (not (not (= c_0 (f5 c_1))))) :rule or :premises (t71))
-(step st72 (cl (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1))))) :rule resolution :premises (t70' t71'))
-(step t.end (cl) :rule resolution :premises (nst72.0 nst72.1 st72))

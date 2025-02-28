@@ -1,3 +1,0 @@
-(assume nst51.0 (not (= (op e4 e0) (op e4 e0))))
-(step st51 (cl (= (op e4 e0) (op e4 e0))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst51.0 st51))

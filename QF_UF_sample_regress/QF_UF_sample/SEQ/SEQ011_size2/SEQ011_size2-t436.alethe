@@ -1,4 +1,0 @@
-(assume nst436.0 (not (=> (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))) (= (f6 c_1) (f5 c_1)))))
-(assume nst436.1 (not (not (= (f6 c_1) (f5 c_1)))))
-(step st436 (cl (=> (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))) (= (f6 c_1) (f5 c_1))) (not (= (f6 c_1) (f5 c_1)))) :rule implies_neg2)
-(step t.end (cl) :rule resolution :premises (nst436.0 nst436.1 st436))

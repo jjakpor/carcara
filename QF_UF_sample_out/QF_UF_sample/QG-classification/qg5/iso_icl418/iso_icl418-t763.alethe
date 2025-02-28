@@ -1,5 +1,0 @@
-(assume t34 (= e0 (op (op e4 e3) (op e4 e3))))
-(assume t81 (= (op e0 e2) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))))
-(assume nt763.0 (not (= (= e0 (op e0 e2)) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))))))
-(step t763 (cl (= (= e0 (op e0 e2)) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))))) :rule cong :premises (t34 t81))
-(step t.end (cl) :rule resolution :premises (nt763.0 t763))

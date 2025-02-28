@@ -1,6 +1,0 @@
-(assume nst285.0 (not (not (and (in$0 sk_?e$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0)))))
-(assume nst285.1 (not (in$0 lst$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))))
-(assume t284 (or (not (and (in$0 sk_?e$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0))) (not (and (in$0 sk_?e$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0))) (in$0 lst$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))))
-(step t284' (cl (not (and (in$0 sk_?e$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0))) (not (and (in$0 sk_?e$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0))) (in$0 lst$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))) :rule or :premises (t284))
-(step st285 (cl (not (and (in$0 sk_?e$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0))) (in$0 lst$0 (union$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))) :rule contraction :premises (t284'))
-(step t.end (cl) :rule resolution :premises (nst285.0 nst285.1 st285))

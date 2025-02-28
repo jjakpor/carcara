@@ -1,5 +1,0 @@
-(assume nst17.0 (not (= y$66 (= y$v_B y$v_at_press))))
-(assume a34 (= y$66 (= y$n0s8 y$v_at_press)))
-(assume t16 (= (= y$n0s8 y$v_at_press) (= y$v_B y$v_at_press)))
-(step st17 (cl (= y$66 (= y$v_B y$v_at_press))) :rule trans :premises (a34 t16))
-(step t.end (cl) :rule resolution :premises (nst17.0 st17))

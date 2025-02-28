@@ -1,4 +1,0 @@
-(assume t381 (= (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) (op (op e0 e0) (op (op e0 e0) e0))))
-(assume nt382.0 (not (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
-(step t382 (cl (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))) :rule symm :premises (t381))
-(step t.end (cl) :rule resolution :premises (nt382.0 t382))

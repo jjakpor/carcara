@@ -1,4 +1,0 @@
-(assume nst86.0 (not (not (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)))))
-(assume nst86.1 (not (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)))
-(step st86 (cl (not (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0))) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)) :rule and_pos :args (1))
-(step t.end (cl) :rule resolution :premises (nst86.0 nst86.1 st86))

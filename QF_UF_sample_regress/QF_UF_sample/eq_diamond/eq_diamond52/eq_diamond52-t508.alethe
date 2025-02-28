@@ -1,3 +1,0 @@
-(assume nst508.0 (not (= (= (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46)))) true)))
-(step st508 (cl (= (= (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst508.0 st508))

@@ -1,7 +1,0 @@
-(assume nst235.0 (not (= lst$0 (read$0 next$0 lst$0))))
-(assume nst235.1 (not (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0))))
-(assume nst235.2 (not (not (or (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0)) (= lst$0 (read$0 next$0 lst$0))))))
-(assume t234 (or (not (or (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0)) (= lst$0 (read$0 next$0 lst$0)))) (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0)) (= lst$0 (read$0 next$0 lst$0))))
-(step t234' (cl (not (or (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0)) (= lst$0 (read$0 next$0 lst$0)))) (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0)) (= lst$0 (read$0 next$0 lst$0))) :rule or :premises (t234))
-(step st235 (cl (= lst$0 (read$0 next$0 lst$0)) (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0)) (not (or (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0)) (= lst$0 (read$0 next$0 lst$0))))) :rule reordering :premises (t234'))
-(step t.end (cl) :rule resolution :premises (nst235.0 nst235.1 nst235.2 st235))

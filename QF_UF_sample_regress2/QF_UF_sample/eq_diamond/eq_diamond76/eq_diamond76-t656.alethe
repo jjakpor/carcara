@@ -1,3 +1,0 @@
-(assume nst656.0 (not (= (= (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (and (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (=> (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (= x58 x59)))) true)))
-(step st656 (cl (= (= (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (and (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (=> (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (= x58 x59)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst656.0 st656))

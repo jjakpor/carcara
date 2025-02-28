@@ -1,4 +1,0 @@
-(assume t695 (and (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (=> (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (= x61 x62))))
-(assume nt696.0 (not (=> (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (= x61 x62))))
-(step t696 (cl (=> (or (and (= x61 y61) (= y61 x62)) (and (= x61 z61) (= z61 x62))) (= x61 x62))) :rule and :premises (t695) :args (1))
-(step t.end (cl) :rule resolution :premises (nt696.0 t696))

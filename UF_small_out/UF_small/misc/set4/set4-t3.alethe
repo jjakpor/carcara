@@ -1,7 +1,0 @@
-(assume nst3.0 (not (member x s2)))
-(assume a5 (member x s1))
-(assume t0 (or (not (= (member x s1) (member x s2))) (not (member x s1)) (member x s2)))
-(assume t2 (= (member x s1) (member x s2)))
-(step t0' (cl (not (= (member x s1) (member x s2))) (not (member x s1)) (member x s2)) :rule or :premises (t0))
-(step st3 (cl (member x s2)) :rule resolution :premises (t0' t2 a5))
-(step t.end (cl) :rule resolution :premises (nst3.0 st3))

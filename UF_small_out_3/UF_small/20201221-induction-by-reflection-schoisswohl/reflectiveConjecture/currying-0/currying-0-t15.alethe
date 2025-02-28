@@ -1,7 +1,0 @@
-(assume nst15.0 (not (not (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))))))
-(assume nst15.1 (not (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))))))
-(assume nst15.2 (not (not (= (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))))))))
-(assume t14 (or (not (= (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR)))))))) (not (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR))))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))))))
-(step t14' (cl (not (= (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR)))))))) (not (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR))))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))))) :rule or :premises (t14))
-(step st15 (cl (not (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR))))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR)))))) (not (= (models empty (notR (notR (orR (notR (pR aR)) (notR (qR bR)))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))))))) :rule reordering :premises (t14'))
-(step t.end (cl) :rule resolution :premises (nst15.0 nst15.1 nst15.2 st15))

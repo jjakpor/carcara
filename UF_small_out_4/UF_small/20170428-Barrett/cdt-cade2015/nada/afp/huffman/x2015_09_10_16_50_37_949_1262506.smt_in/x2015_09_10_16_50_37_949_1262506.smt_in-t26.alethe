@@ -1,5 +1,0 @@
-(assume nst26.0 (not (= (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$)) true)))
-(assume t19 (= (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$)) (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$))))
-(assume t25 (= (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$)) true))
-(step st26 (cl (= (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$)) true)) :rule trans :premises (t19 t25))
-(step t.end (cl) :rule resolution :premises (nst26.0 st26))

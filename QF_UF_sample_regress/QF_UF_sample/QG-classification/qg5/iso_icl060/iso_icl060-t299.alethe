@@ -1,6 +1,0 @@
-(assume nst299.0 (not (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)))))
-(assume t265 (or (not (= (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)) false)) (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)))))
-(assume t298 (= (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)) false))
-(step t265' (cl (not (= (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)) false)) (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)))) :rule or :premises (t265))
-(step st299 (cl (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)))) :rule resolution :premises (t265' t298))
-(step t.end (cl) :rule resolution :premises (nst299.0 st299))

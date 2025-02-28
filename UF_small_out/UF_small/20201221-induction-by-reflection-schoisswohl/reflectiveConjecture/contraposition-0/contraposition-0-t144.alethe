@@ -1,5 +1,0 @@
-(assume nst144.0 (not (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))))))
-(assume nst144.1 (not (= (models empty (notR (orR (notR (orR (notR (pR aR)) (qR bR))) (notR (orR (notR (notR (qR bR))) (notR (pR aR))))))) (not (models empty (orR (notR (orR (notR (pR aR)) (qR bR))) (notR (orR (notR (notR (qR bR))) (notR (pR aR))))))))))
-(assume t143 (or (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (orR (notR (orR (notR (pR aR)) (qR bR))) (notR (orR (notR (notR (qR bR))) (notR (pR aR))))))) (not (models empty (orR (notR (orR (notR (pR aR)) (qR bR))) (notR (orR (notR (notR (qR bR))) (notR (pR aR))))))))))
-(step st144 (cl (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (orR (notR (orR (notR (pR aR)) (qR bR))) (notR (orR (notR (notR (qR bR))) (notR (pR aR))))))) (not (models empty (orR (notR (orR (notR (pR aR)) (qR bR))) (notR (orR (notR (notR (qR bR))) (notR (pR aR))))))))) :rule or :premises (t143))
-(step t.end (cl) :rule resolution :premises (nst144.0 nst144.1 st144))

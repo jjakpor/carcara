@@ -1,4 +1,0 @@
-(assume nt417.0 (not (or (or (or (or (= (op e4 e0) e3) (= (op e4 e1) e3)) (= (op e4 e2) e3)) (= (op e4 e3) e3)) (= (op e4 e4) e3))))
-(assume t416 (and (or (or (or (or (= (op e4 e0) e3) (= (op e4 e1) e3)) (= (op e4 e2) e3)) (= (op e4 e3) e3)) (= (op e4 e4) e3)) (or (or (or (or (= (op e0 e4) e3) (= (op e1 e4) e3)) (= (op e2 e4) e3)) (= (op e3 e4) e3)) (= (op e4 e4) e3))))
-(step t417 (cl (or (or (or (or (= (op e4 e0) e3) (= (op e4 e1) e3)) (= (op e4 e2) e3)) (= (op e4 e3) e3)) (= (op e4 e4) e3))) :rule and :premises (t416) :args (0))
-(step t.end (cl) :rule resolution :premises (nt417.0 t417))

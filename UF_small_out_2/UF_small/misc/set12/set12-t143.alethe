@@ -1,7 +1,0 @@
-(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (intersection a (intersection b c)))) (member ?x (intersection (intersection a b) c))))))
-(define-fun @quantifiers_skolemize_4 () Elem (choice ((?x Elem)) (not (or (not (member ?x (intersection (intersection a b) c))) (member ?x (intersection a (intersection b c)))))))
-(assume nst143.0 (not (not (forall ((?x Elem) (?s1 Set) (?s2 Set)) (= (member ?x (intersection ?s1 ?s2)) (and (member ?x ?s1) (member ?x ?s2)))))))
-(assume nst143.1 (not (= (member @quantifiers_skolemize_4 (intersection a b)) (and (member @quantifiers_skolemize_4 a) (member @quantifiers_skolemize_4 b)))))
-(assume t142 (or (not (forall ((?x Elem) (?s1 Set) (?s2 Set)) (= (member ?x (intersection ?s1 ?s2)) (and (member ?x ?s1) (member ?x ?s2))))) (= (member @quantifiers_skolemize_4 (intersection a b)) (and (member @quantifiers_skolemize_4 a) (member @quantifiers_skolemize_4 b)))))
-(step st143 (cl (not (forall ((?x Elem) (?s1 Set) (?s2 Set)) (= (member ?x (intersection ?s1 ?s2)) (and (member ?x ?s1) (member ?x ?s2))))) (= (member @quantifiers_skolemize_4 (intersection a b)) (and (member @quantifiers_skolemize_4 a) (member @quantifiers_skolemize_4 b)))) :rule or :premises (t142))
-(step t.end (cl) :rule resolution :premises (nst143.0 nst143.1 st143))

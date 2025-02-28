@@ -1,3 +1,0 @@
-(assume nst337.0 (not (= (= (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (and (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (=> (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (= x30 x31)))) true)))
-(step st337 (cl (= (= (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (and (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (=> (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (= x30 x31)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst337.0 st337))

@@ -1,7 +1,0 @@
-(assume nst760.0 (not (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3))))))
-(assume t753 (or (not (= (= (op e3 (op e3 e4)) e4) (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))))) (not (= (op e3 (op e3 e4)) e4)) (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3))))))
-(assume t757 (= (= (op e3 (op e3 e4)) e4) (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3))))))
-(assume t759 (= (op e3 (op e3 e4)) e4))
-(step t753' (cl (not (= (= (op e3 (op e3 e4)) e4) (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))))) (not (= (op e3 (op e3 e4)) e4)) (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3))))) :rule or :premises (t753))
-(step st760 (cl (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3))))) :rule resolution :premises (t753' t757 t759))
-(step t.end (cl) :rule resolution :premises (nst760.0 st760))

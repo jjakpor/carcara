@@ -1,7 +1,0 @@
-(assume nst52.0 (not (= (or (not (p1 (f6 c_1) c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f7 c_1))) (not (not (p1 (f7 c_1) c_1)))) (or (not (p1 (f6 c_1) c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f7 c_1))) (p1 (f7 c_1) c_1)))))
-(assume t13 (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)))
-(assume t49 (= (not (p1 (f6 c_1) c_1)) (not (p1 (f6 c_1) c_1))))
-(assume t50 (= (not (= c_0 (f6 c_1))) (not (= c_0 (f6 c_1)))))
-(assume t51 (= (not (= c_0 (f7 c_1))) (not (= c_0 (f7 c_1)))))
-(step st52 (cl (= (or (not (p1 (f6 c_1) c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f7 c_1))) (not (not (p1 (f7 c_1) c_1)))) (or (not (p1 (f6 c_1) c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f7 c_1))) (p1 (f7 c_1) c_1)))) :rule cong :premises (t49 t50 t51 t13))
-(step t.end (cl) :rule resolution :premises (nst52.0 st52))

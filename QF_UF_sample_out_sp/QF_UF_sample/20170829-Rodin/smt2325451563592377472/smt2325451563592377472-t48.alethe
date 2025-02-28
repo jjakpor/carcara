@@ -1,6 +1,0 @@
-(assume nt48.0 (not prt))
-(assume nt48.1 (not (not car)))
-(assume nt48.2 (not (not clk)))
-(assume t47 (or prt (not car) (not clk)))
-(step t48 (cl prt (not car) (not clk)) :rule or :premises (t47))
-(step t.end (cl) :rule resolution :premises (nt48.0 nt48.1 nt48.2 t48))

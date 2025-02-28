@@ -1,5 +1,0 @@
-(assume nt1.0 (not (and (= x1 y1) (= y1 x2))))
-(assume nt1.1 (not (and (= x1 z1) (= z1 x2))))
-(assume t0 (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))))
-(step t1 (cl (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) :rule or :premises (t0))
-(step t.end (cl) :rule resolution :premises (nt1.0 nt1.1 t1))

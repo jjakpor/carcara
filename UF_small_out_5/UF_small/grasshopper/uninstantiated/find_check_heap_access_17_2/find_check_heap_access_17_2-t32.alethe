@@ -1,4 +1,0 @@
-(assume nst32.0 (not (or (not (not (in$0 x$0 (setenum$0 root_x$0)))) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0))))))
-(assume nst32.1 (not (not (not (in$0 root_x$0 (setenum$0 root_x$0))))))
-(step st32 (cl (or (not (not (in$0 x$0 (setenum$0 root_x$0)))) (not (= root_x$0 x$0)) (not (in$0 root_x$0 (setenum$0 root_x$0)))) (not (not (in$0 root_x$0 (setenum$0 root_x$0))))) :rule or_neg :args (2))
-(step t.end (cl) :rule resolution :premises (nst32.0 nst32.1 st32))

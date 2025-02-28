@@ -1,4 +1,0 @@
-(assume nt19.0 (not (= (not org_MR) (= org_MR false))))
-(assume t18 (= (= org_MR false) (not org_MR)))
-(step t19 (cl (= (not org_MR) (= org_MR false))) :rule symm :premises (t18))
-(step t.end (cl) :rule resolution :premises (nt19.0 t19))

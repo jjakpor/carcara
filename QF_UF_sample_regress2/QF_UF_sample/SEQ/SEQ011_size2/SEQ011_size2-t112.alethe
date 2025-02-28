@@ -1,5 +1,0 @@
-(assume nst112.0 (not (not (and (p4 c8) (= c8 c_0)))))
-(assume nst112.1 (not (p4 c_0)))
-(assume t111 (=> (and (p4 c8) (= c8 c_0)) (p4 c_0)))
-(step st112 (cl (not (and (p4 c8) (= c8 c_0))) (p4 c_0)) :rule implies :premises (t111))
-(step t.end (cl) :rule resolution :premises (nst112.0 nst112.1 st112))

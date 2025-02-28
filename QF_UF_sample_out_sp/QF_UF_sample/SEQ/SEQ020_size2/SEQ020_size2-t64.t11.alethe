@@ -1,5 +1,0 @@
-(assume nt64.t11.0 (not (= (= c_0 (f5 c_1)) false)))
-(assume t64.t5 (= (= c_0 (f5 c_1)) (= (f6 c_1) (f5 c_1))))
-(assume t64.t10 (= (= (f6 c_1) (f5 c_1)) false))
-(step t64.t11 (cl (= (= c_0 (f5 c_1)) false)) :rule trans :premises (t64.t5 t64.t10))
-(step t.end (cl) :rule resolution :premises (nt64.t11.0 t64.t11))

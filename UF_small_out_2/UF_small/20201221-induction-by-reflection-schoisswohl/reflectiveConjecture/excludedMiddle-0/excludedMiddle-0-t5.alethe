@@ -1,5 +1,0 @@
-(assume nst5.0 (not (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (pR aR))) (not (models empty (pR aR)))))))
-(assume t4 (or (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (pR aR))) (not (models empty (pR aR))))) (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (pR aR))) (not (models empty (pR aR)))))))
-(step t4' (cl (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (pR aR))) (not (models empty (pR aR))))) (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (pR aR))) (not (models empty (pR aR)))))) :rule or :premises (t4))
-(step st5 (cl (=> (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))) (= (models empty (notR (pR aR))) (not (models empty (pR aR)))))) :rule contraction :premises (t4'))
-(step t.end (cl) :rule resolution :premises (nst5.0 st5))

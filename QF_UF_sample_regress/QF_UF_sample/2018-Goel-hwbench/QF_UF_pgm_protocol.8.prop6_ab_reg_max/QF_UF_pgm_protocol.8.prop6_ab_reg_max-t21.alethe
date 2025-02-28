@@ -1,4 +1,0 @@
-(assume nst21.0 (not (not (and y$a_r4 y$v3_1517448504_182_op))))
-(assume nst21.1 (not y$a_r4))
-(step st21 (cl (not (and y$a_r4 y$v3_1517448504_182_op)) y$a_r4) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nst21.0 nst21.1 st21))

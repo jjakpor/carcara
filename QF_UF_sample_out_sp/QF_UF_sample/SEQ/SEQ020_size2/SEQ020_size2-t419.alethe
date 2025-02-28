@@ -1,6 +1,0 @@
-(assume nt419.0 (not (not (and (not (= (f6 c_1) (f5 c_1))) (= c_1 (f6 c_1))))))
-(assume nt419.1 (not (not (= c_1 (f5 c_1)))))
-(assume t418 (or (not (and (not (= (f6 c_1) (f5 c_1))) (= c_1 (f6 c_1)))) (not (and (not (= (f6 c_1) (f5 c_1))) (= c_1 (f6 c_1)))) (not (= c_1 (f5 c_1)))))
-(step t418' (cl (not (and (not (= (f6 c_1) (f5 c_1))) (= c_1 (f6 c_1)))) (not (and (not (= (f6 c_1) (f5 c_1))) (= c_1 (f6 c_1)))) (not (= c_1 (f5 c_1)))) :rule or :premises (t418))
-(step t419 (cl (not (and (not (= (f6 c_1) (f5 c_1))) (= c_1 (f6 c_1)))) (not (= c_1 (f5 c_1)))) :rule contraction :premises (t418'))
-(step t.end (cl) :rule resolution :premises (nt419.0 nt419.1 t419))

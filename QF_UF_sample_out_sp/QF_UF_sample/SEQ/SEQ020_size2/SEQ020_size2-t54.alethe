@@ -1,5 +1,0 @@
-(assume nt54.0 (not (= (= (= (f6 c_1) (f5 c_1)) (not (not (= (f6 c_1) (f5 c_1))))) (= (= (f6 c_1) (f5 c_1)) (= (f6 c_1) (f5 c_1))))))
-(assume t52 (= (= (f6 c_1) (f5 c_1)) (= (f6 c_1) (f5 c_1))))
-(assume t53 (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1))))
-(step t54 (cl (= (= (= (f6 c_1) (f5 c_1)) (not (not (= (f6 c_1) (f5 c_1))))) (= (= (f6 c_1) (f5 c_1)) (= (f6 c_1) (f5 c_1))))) :rule cong :premises (t52 t53))
-(step t.end (cl) :rule resolution :premises (nt54.0 t54))

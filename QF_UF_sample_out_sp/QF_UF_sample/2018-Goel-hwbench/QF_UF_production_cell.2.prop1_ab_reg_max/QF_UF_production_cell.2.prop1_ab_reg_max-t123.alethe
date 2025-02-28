@@ -1,7 +1,0 @@
-(assume nt123.0 (not (= y$59 true)))
-(assume t119 (or (not (= y$59 (= y$59 true))) (not y$59) (= y$59 true)))
-(assume t121 (= y$59 (= y$59 true)))
-(assume t122 y$59)
-(step t119' (cl (not (= y$59 (= y$59 true))) (not y$59) (= y$59 true)) :rule or :premises (t119))
-(step t123 (cl (= y$59 true)) :rule resolution :premises (t119' t121 t122))
-(step t.end (cl) :rule resolution :premises (nt123.0 t123))

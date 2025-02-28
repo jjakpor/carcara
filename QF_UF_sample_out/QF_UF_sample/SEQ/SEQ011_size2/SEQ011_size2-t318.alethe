@@ -1,6 +1,0 @@
-(assume t99 (or (= c8 c_0) (= c8 c_1)))
-(assume t317 (not (= c8 c_0)))
-(assume nt318.0 (not (= c8 c_1)))
-(step t99' (cl (= c8 c_0) (= c8 c_1)) :rule or :premises (t99))
-(step t318 (cl (= c8 c_1)) :rule resolution :premises (t99' t317))
-(step t.end (cl) :rule resolution :premises (nt318.0 t318))

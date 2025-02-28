@@ -1,4 +1,0 @@
-(assume t97 (and (and (and (and (and (and (and (and (and (not (= (op e0 e0) (op e1 e0))) (not (= (op e0 e0) (op e2 e0)))) (not (= (op e0 e0) (op e3 e0)))) (not (= (op e0 e0) (op e4 e0)))) (not (= (op e1 e0) (op e2 e0)))) (not (= (op e1 e0) (op e3 e0)))) (not (= (op e1 e0) (op e4 e0)))) (not (= (op e2 e0) (op e3 e0)))) (not (= (op e2 e0) (op e4 e0)))) (not (= (op e3 e0) (op e4 e0)))))
-(assume nt986.t23.0 (not (not (= (op e3 e0) (op e4 e0)))))
-(step t986.t23 (cl (not (= (op e3 e0) (op e4 e0)))) :rule and :premises (t97) :args (1))
-(step t.end (cl) :rule resolution :premises (nt986.t23.0 t986.t23))

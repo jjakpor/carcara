@@ -1,7 +1,0 @@
-(assume nst38.0 (not (not (or (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))))))
-(assume t21 (or (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39))) (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (or (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))))))
-(assume t29 (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))
-(assume t37 (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11))))
-(step t21' (cl (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39))) (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (or (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))))) :rule or :premises (t21))
-(step st38 (cl (not (or (not (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 f11)))) (not (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))))) :rule resolution :premises (t21' t29 t37))
-(step t.end (cl) :rule resolution :premises (nst38.0 st38))

@@ -1,6 +1,0 @@
-(assume nst207.0 (not (not (and (fun_app$b (less_eq$ (cost$ (swapFourSyms$ t$ a$ b$ c$ d$))) (cost$ t$)) (fun_app$b (less_eq$ (cost$ t$)) (cost$ (swapFourSyms$ t$ a$ b$ c$ d$)))))))
-(assume a2 (not (fun_app$b (less_eq$ (cost$ (swapFourSyms$ t$ a$ b$ c$ d$))) (cost$ t$))))
-(assume t206 (or (fun_app$b (less_eq$ (cost$ (swapFourSyms$ t$ a$ b$ c$ d$))) (cost$ t$)) (not (and (fun_app$b (less_eq$ (cost$ (swapFourSyms$ t$ a$ b$ c$ d$))) (cost$ t$)) (fun_app$b (less_eq$ (cost$ t$)) (cost$ (swapFourSyms$ t$ a$ b$ c$ d$)))))))
-(step t206' (cl (fun_app$b (less_eq$ (cost$ (swapFourSyms$ t$ a$ b$ c$ d$))) (cost$ t$)) (not (and (fun_app$b (less_eq$ (cost$ (swapFourSyms$ t$ a$ b$ c$ d$))) (cost$ t$)) (fun_app$b (less_eq$ (cost$ t$)) (cost$ (swapFourSyms$ t$ a$ b$ c$ d$)))))) :rule or :premises (t206))
-(step st207 (cl (not (and (fun_app$b (less_eq$ (cost$ (swapFourSyms$ t$ a$ b$ c$ d$))) (cost$ t$)) (fun_app$b (less_eq$ (cost$ t$)) (cost$ (swapFourSyms$ t$ a$ b$ c$ d$)))))) :rule resolution :premises (t206' a2))
-(step t.end (cl) :rule resolution :premises (nst207.0 st207))

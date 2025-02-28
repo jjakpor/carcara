@@ -1,5 +1,0 @@
-(assume nst149.0 (not (= (intersection$0 Alloc$0 FP_2$0) (intersection$0 Alloc$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))))
-(assume t135 (= Alloc$0 Alloc$0))
-(assume t148 (= FP_2$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))
-(step st149 (cl (= (intersection$0 Alloc$0 FP_2$0) (intersection$0 Alloc$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))) :rule cong :premises (t135 t148))
-(step t.end (cl) :rule resolution :premises (nst149.0 st149))

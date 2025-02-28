@@ -1,4 +1,0 @@
-(assume nst529.0 (not (= (not (= e0 e1)) (not (= e1 e0)))))
-(assume t528 (= (= e0 e1) (= e1 e0)))
-(step st529 (cl (= (not (= e0 e1)) (not (= e1 e0)))) :rule cong :premises (t528))
-(step t.end (cl) :rule resolution :premises (nst529.0 st529))

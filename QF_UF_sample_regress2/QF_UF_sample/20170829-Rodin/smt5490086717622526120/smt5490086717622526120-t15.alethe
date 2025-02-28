@@ -1,5 +1,0 @@
-(assume nst15.0 (not (= (and prt grn) (and prt red_SR))))
-(assume t5 (= prt prt))
-(assume t14 (= grn red_SR))
-(step st15 (cl (= (and prt grn) (and prt red_SR))) :rule cong :premises (t5 t14))
-(step t.end (cl) :rule resolution :premises (nst15.0 st15))

@@ -1,5 +1,0 @@
-(assume nt602.t13.0 (not (= e1 (op (op (op e1 e3) e3) (op e1 e3)))))
-(assume t602.t10 (= e1 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1))))
-(assume t602.t12 (= (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e1)) (op (op (op e1 e3) e3) (op e1 e3))))
-(step t602.t13 (cl (= e1 (op (op (op e1 e3) e3) (op e1 e3)))) :rule trans :premises (t602.t10 t602.t12))
-(step t.end (cl) :rule resolution :premises (nt602.t13.0 t602.t13))

@@ -1,5 +1,0 @@
-(assume t370 (= (= (op e4 (op e4 e0)) e0) (= e0 (op e4 (op e4 e0)))))
-(assume t372 (= (= e0 (op e4 (op e4 e0))) (= e0 (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)))))
-(assume nt373.0 (not (= (= (op e4 (op e4 e0)) e0) (= e0 (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))))
-(step t373 (cl (= (= (op e4 (op e4 e0)) e0) (= e0 (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))) :rule trans :premises (t370 t372))
-(step t.end (cl) :rule resolution :premises (nt373.0 t373))

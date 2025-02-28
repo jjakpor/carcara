@@ -1,5 +1,0 @@
-(assume t451 (=> (or (and (= x39 y39) (= y39 x40)) (and (= x39 z39) (= z39 x40))) (= x39 x40)))
-(assume nt452.0 (not (not (or (and (= x39 y39) (= y39 x40)) (and (= x39 z39) (= z39 x40))))))
-(assume nt452.1 (not (= x39 x40)))
-(step t452 (cl (not (or (and (= x39 y39) (= y39 x40)) (and (= x39 z39) (= z39 x40)))) (= x39 x40)) :rule implies :premises (t451))
-(step t.end (cl) :rule resolution :premises (nt452.0 nt452.1 t452))

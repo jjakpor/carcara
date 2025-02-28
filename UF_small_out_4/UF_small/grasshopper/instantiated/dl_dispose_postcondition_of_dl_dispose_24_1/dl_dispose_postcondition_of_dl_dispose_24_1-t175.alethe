@@ -1,3 +1,0 @@
-(assume nst175.0 (not (= (= (in$0 prv_2$0 Alloc_1$0) false) (not (in$0 prv_2$0 Alloc_1$0)))))
-(step st175 (cl (= (= (in$0 prv_2$0 Alloc_1$0) false) (not (in$0 prv_2$0 Alloc_1$0)))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nst175.0 st175))

@@ -1,5 +1,0 @@
-(assume nst489.0 (not (= (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4)) false)))
-(assume nst489.1 (not (not (not (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4))))))
-(assume t488 (= (= (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4)) false) (not (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4)))))
-(step st489 (cl (= (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4)) false) (not (not (= (op (op e4 e3) e4) (op (op (op e4 e3) (op e4 e3)) e4))))) :rule equiv2 :premises (t488))
-(step t.end (cl) :rule resolution :premises (nst489.0 nst489.1 st489))

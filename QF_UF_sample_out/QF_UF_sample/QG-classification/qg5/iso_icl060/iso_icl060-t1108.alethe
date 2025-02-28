@@ -1,5 +1,0 @@
-(assume t1106 (= (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))) (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))))
-(assume t1107 (= (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) true))
-(assume nt1108.0 (not (= (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))) true)))
-(step t1108 (cl (= (= (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)) (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))) true)) :rule trans :premises (t1106 t1107))
-(step t.end (cl) :rule resolution :premises (nt1108.0 t1108))

@@ -1,5 +1,0 @@
-(assume nt856.0 (not (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op e0 e0))) (= (op e0 (op e0 e0)) (op (op (op e0 e0) e0) (op e0 e0))))))
-(assume t854 (= (op (op e0 e0) e0) (op e0 (op e0 e0))))
-(assume t855 (= (op (op (op e0 e0) e0) (op e0 e0)) (op (op (op e0 e0) e0) (op e0 e0))))
-(step t856 (cl (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op e0 e0))) (= (op e0 (op e0 e0)) (op (op (op e0 e0) e0) (op e0 e0))))) :rule cong :premises (t854 t855))
-(step t.end (cl) :rule resolution :premises (nt856.0 t856))

@@ -1,6 +1,0 @@
-(assume nt699.0 (not (= x44 x45)))
-(assume nt699.1 (not (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))))))
-(assume t698 (or (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45)))) (= x44 x45)))
-(step t698' (cl (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45)))) (= x44 x45)) :rule or :premises (t698))
-(step t699 (cl (= x44 x45) (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))))) :rule reordering :premises (t698'))
-(step t.end (cl) :rule resolution :premises (nt699.0 nt699.1 t699))

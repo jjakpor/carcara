@@ -1,5 +1,0 @@
-(assume nst70.0 (not (= (= e2 (op e3 e0)) (= (op e1 e1) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))))
-(assume t35 (= e2 (op e1 e1)))
-(assume t69 (= (op e3 e0) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))
-(step st70 (cl (= (= e2 (op e3 e0)) (= (op e1 e1) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))) :rule cong :premises (t35 t69))
-(step t.end (cl) :rule resolution :premises (nst70.0 st70))

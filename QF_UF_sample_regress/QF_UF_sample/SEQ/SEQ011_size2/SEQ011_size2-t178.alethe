@@ -1,5 +1,0 @@
-(assume nst178.0 (not (not (= (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))))))
-(assume nst178.1 (not (not (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)))))
-(assume nst178.2 (not (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))))
-(step st178 (cl (not (= (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0))))) (not (or (= (f7 c_0) c_0) (= (f7 c_0) c_1))) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst178.0 nst178.1 nst178.2 st178))

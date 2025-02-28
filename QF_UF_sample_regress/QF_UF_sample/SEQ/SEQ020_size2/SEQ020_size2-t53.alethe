@@ -1,3 +1,0 @@
-(assume nst53.0 (not (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1)))))
-(step st53 (cl (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1)))) :rule rare_rewrite :args ("bool-double-not-elim" (= (f6 c_1) (f5 c_1))))
-(step t.end (cl) :rule resolution :premises (nst53.0 st53))

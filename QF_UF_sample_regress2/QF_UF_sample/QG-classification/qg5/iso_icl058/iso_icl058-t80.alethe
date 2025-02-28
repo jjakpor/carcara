@@ -1,7 +1,0 @@
-(assume nst80.0 (not (not (= e0 (op (op e0 e0) e0)))))
-(assume t64 (or (not (= (not (= e0 e4)) (not (= e0 (op (op e0 e0) e0))))) (not (not (= e0 e4))) (not (= e0 (op (op e0 e0) e0)))))
-(assume t72 (= (not (= e0 e4)) (not (= e0 (op (op e0 e0) e0)))))
-(assume t79 (not (= e0 e4)))
-(step t64' (cl (not (= (not (= e0 e4)) (not (= e0 (op (op e0 e0) e0))))) (not (not (= e0 e4))) (not (= e0 (op (op e0 e0) e0)))) :rule or :premises (t64))
-(step st80 (cl (not (= e0 (op (op e0 e0) e0)))) :rule resolution :premises (t64' t72 t79))
-(step t.end (cl) :rule resolution :premises (nst80.0 st80))

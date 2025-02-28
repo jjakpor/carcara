@@ -1,5 +1,0 @@
-(assume nst83.0 (not (not (or (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)) (and (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0))) (not (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))))))))
-(assume nst83.1 (not (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))))
-(assume nst83.2 (not (and (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0))) (not (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))))))
-(step st83 (cl (not (or (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)) (and (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0))) (not (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))))) (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)) (and (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0))) (not (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))))) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst83.0 nst83.1 nst83.2 st83))

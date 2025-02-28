@@ -1,6 +1,0 @@
-(assume nst739.0 (not (= x65 x66)))
-(assume nst739.1 (not (not (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))))))
-(assume t738 (or (not (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66)))) (= x65 x66)))
-(step t738' (cl (not (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66)))) (= x65 x66)) :rule or :premises (t738))
-(step st739 (cl (= x65 x66) (not (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))))) :rule reordering :premises (t738'))
-(step t.end (cl) :rule resolution :premises (nst739.0 nst739.1 st739))

@@ -1,8 +1,0 @@
-(assume nt589.0 (not (= (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)))))
-(assume nt589.1 (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))
-(assume nt589.2 (not (= (op (op (op e0 e0) e0) e0) (op (op e0 e0) (op (op (op e0 e0) e0) e0)))))
-(assume nt589.3 (not (= (op (op (op e0 e0) e0) e0) (op e0 (op (op (op e0 e0) e0) e0)))))
-(assume nt589.4 (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0)))))
-(assume t588 (or (= (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) (= (op (op (op e0 e0) e0) e0) (op (op e0 e0) (op (op (op e0 e0) e0) e0))) (= (op (op (op e0 e0) e0) e0) (op e0 (op (op (op e0 e0) e0) e0))) (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0)))))
-(step t589 (cl (= (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))) (= (op (op (op e0 e0) e0) e0) (op (op e0 e0) (op (op (op e0 e0) e0) e0))) (= (op (op (op e0 e0) e0) e0) (op e0 (op (op (op e0 e0) e0) e0))) (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0)))) :rule or :premises (t588))
-(step t.end (cl) :rule resolution :premises (nt589.0 nt589.1 nt589.2 nt589.3 nt589.4 t589))

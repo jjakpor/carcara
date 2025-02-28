@@ -1,3 +1,0 @@
-(assume nst153.0 (not (= (= (fun_app$e uu$ (lhd$ xs$)) (ldropn$ n$)) (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$))))))
-(step st153 (cl (= (= (fun_app$e uu$ (lhd$ xs$)) (ldropn$ n$)) (= (ldropn$ n$) (fun_app$e uu$ (lhd$ xs$))))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst153.0 st153))

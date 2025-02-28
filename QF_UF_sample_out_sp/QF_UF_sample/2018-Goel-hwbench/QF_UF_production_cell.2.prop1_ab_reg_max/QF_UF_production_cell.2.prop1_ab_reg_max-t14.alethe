@@ -1,5 +1,0 @@
-(assume nt14.0 (not (= y$n0s8 y$v_B)))
-(assume t6 (= y$n0s8 y$v_A))
-(assume t12 (= y$v_A y$v_B))
-(step t14 (cl (= y$n0s8 y$v_B)) :rule trans :premises (t6 t12))
-(step t.end (cl) :rule resolution :premises (nt14.0 t14))

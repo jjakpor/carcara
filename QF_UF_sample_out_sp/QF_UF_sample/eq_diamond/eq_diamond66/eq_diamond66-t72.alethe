@@ -1,6 +1,0 @@
-(assume nt72.0 (not (= x9 x10)))
-(assume t71 (or (= x9 x10) (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))))
-(assume t67 (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))
-(step t71' (cl (= x9 x10) (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))) :rule or :premises (t71))
-(step t72 (cl (= x9 x10)) :rule resolution :premises (t71' t67))
-(step t.end (cl) :rule resolution :premises (nt72.0 t72))

@@ -1,4 +1,0 @@
-(assume nt65.0 (not (not (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))))))
-(assume nt65.1 (not (not (= (f6 c_1) (f5 c_1)))))
-(step t65 (cl (not (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1)))) (not (= (f6 c_1) (f5 c_1)))) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nt65.0 nt65.1 t65))

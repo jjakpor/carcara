@@ -1,5 +1,0 @@
-(assume nt98.0 (not (not (= (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (and (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9)))))))
-(assume nt98.1 (not (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))))
-(assume nt98.2 (not (and (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9)))))
-(step t98 (cl (not (= (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (and (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9))))) (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9)))) (and (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt98.0 nt98.1 nt98.2 t98))

@@ -1,5 +1,0 @@
-(assume nst35.0 (not (= (forall ((?v0 S7)) (= (f3 f5 (f9 f10 ?v0)) f1)) (forall ((?v0 S7)) (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 ?v0)))))))
-(assume t33 (= (forall ((?v0 S7)) (= (f3 f5 (f9 f10 ?v0)) f1)) (forall ((?v0 S7)) (= f1 (f3 f5 (f9 f10 ?v0))))))
-(assume t34 (= (forall ((?v0 S7)) (= f1 (f3 f5 (f9 f10 ?v0)))) (forall ((?v0 S7)) (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 ?v0))))))
-(step st35 (cl (= (forall ((?v0 S7)) (= (f3 f5 (f9 f10 ?v0)) f1)) (forall ((?v0 S7)) (= (f115 (f133 f134 f5) f135) (f3 f5 (f9 f10 ?v0)))))) :rule trans :premises (t33 t34))
-(step t.end (cl) :rule resolution :premises (nst35.0 st35))

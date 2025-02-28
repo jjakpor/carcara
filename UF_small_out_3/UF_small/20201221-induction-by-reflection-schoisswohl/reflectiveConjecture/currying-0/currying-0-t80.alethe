@@ -1,4 +1,0 @@
-(assume nst80.0 (not (or (not (= (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (not (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))))
-(assume nst80.1 (not (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))))
-(step st80 (cl (or (not (= (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))) (not (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))) :rule or_neg :args (1))
-(step t.end (cl) :rule resolution :premises (nst80.0 nst80.1 st80))

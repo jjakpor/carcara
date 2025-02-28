@@ -1,7 +1,0 @@
-(assume nst223.0 (not (not (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))))))
-(assume nst223.1 (not (not (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))))))
-(assume nst223.2 (not (= e4 (op e4 (op e4 e4)))))
-(assume t222 (or (= e4 (op e4 (op e4 e4))) (not (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0))))) (not (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))))))
-(step t222' (cl (= e4 (op e4 (op e4 e4))) (not (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0))))) (not (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))))) :rule or :premises (t222))
-(step st223 (cl (not (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0))))) (not (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0))))) (= e4 (op e4 (op e4 e4)))) :rule reordering :premises (t222'))
-(step t.end (cl) :rule resolution :premises (nst223.0 nst223.1 nst223.2 st223))

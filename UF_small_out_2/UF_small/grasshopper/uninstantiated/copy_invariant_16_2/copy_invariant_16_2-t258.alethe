@@ -1,4 +1,0 @@
-(assume nst258.0 (not (=> (and (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))))
-(assume nst258.1 (not (and (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0))))
-(step st258 (cl (=> (and (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (and (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0))) :rule implies_neg1)
-(step t.end (cl) :rule resolution :premises (nst258.0 nst258.1 st258))

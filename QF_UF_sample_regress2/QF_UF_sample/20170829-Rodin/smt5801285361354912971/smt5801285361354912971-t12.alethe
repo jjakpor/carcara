@@ -1,3 +1,0 @@
-(assume t3 (or org (and prt rd1)))
-(assume t11 (not (or org (and prt rd1))))
-(step st12 (cl) :rule resolution :premises (t3 t11))

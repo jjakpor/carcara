@@ -1,8 +1,0 @@
-(assume nst115.0 (not (=> (and (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (= cp_2$0 sk_?e$0) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) false)))
-(assume nst115.1 (not (=> (and (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (= cp_2$0 sk_?e$0) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) false)))
-(assume t113 (or (=> (and (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (= cp_2$0 sk_?e$0) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) false) false))
-(assume t114 (or (=> (and (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (= cp_2$0 sk_?e$0) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) false) (not false)))
-(step t113' (cl (=> (and (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (= cp_2$0 sk_?e$0) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) false) false) :rule or :premises (t113))
-(step t114' (cl (=> (and (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (= cp_2$0 sk_?e$0) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) false) (not false)) :rule or :premises (t114))
-(step st115 (cl (=> (and (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (= cp_2$0 sk_?e$0) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) false) (=> (and (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)) (= cp_2$0 sk_?e$0) (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) false)) :rule resolution :premises (t113' t114'))
-(step t.end (cl) :rule resolution :premises (nst115.0 nst115.1 st115))

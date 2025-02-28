@@ -1,5 +1,0 @@
-(assume nt123.0 (not (not (= e1 (op e1 (op e1 e1))))))
-(assume nt123.1 (not (= e1 e0)))
-(assume t122 (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)))
-(step t123 (cl (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)) :rule or :premises (t122))
-(step t.end (cl) :rule resolution :premises (nt123.0 nt123.1 t123))

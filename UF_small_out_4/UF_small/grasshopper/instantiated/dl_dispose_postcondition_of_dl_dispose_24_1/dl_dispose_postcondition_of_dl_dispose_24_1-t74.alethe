@@ -1,7 +1,0 @@
-(assume nst74.0 (not (= prv_2$0 sk_?e$0)))
-(assume nst74.1 (not (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0))))
-(assume nst74.2 (not (not (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= prv_2$0 sk_?e$0)))))
-(assume t73 (or (not (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= prv_2$0 sk_?e$0))) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= prv_2$0 sk_?e$0)))
-(step t73' (cl (not (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= prv_2$0 sk_?e$0))) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= prv_2$0 sk_?e$0)) :rule or :premises (t73))
-(step st74 (cl (= prv_2$0 sk_?e$0) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (not (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= prv_2$0 sk_?e$0)))) :rule reordering :premises (t73'))
-(step t.end (cl) :rule resolution :premises (nst74.0 nst74.1 nst74.2 st74))

@@ -1,4 +1,0 @@
-(assume nst870.0 (not (= (not (= (op e1 e4) (op e4 e4))) (not (= (op e1 (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))))
-(assume t869 (= (= (op e1 e4) (op e4 e4)) (= (op e1 (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))
-(step st870 (cl (= (not (= (op e1 e4) (op e4 e4))) (not (= (op e1 (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))) :rule cong :premises (t869))
-(step t.end (cl) :rule resolution :premises (nst870.0 st870))

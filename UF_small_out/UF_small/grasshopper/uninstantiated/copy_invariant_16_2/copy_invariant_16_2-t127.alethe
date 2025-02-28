@@ -1,6 +1,0 @@
-(assume nst127.0 (not (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))
-(assume nst127.1 (not (not (= cp_2$0 sk_?e$0))))
-(assume nst127.2 (not (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))
-(assume t126 (or (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))) (not (= cp_2$0 sk_?e$0)) (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))
-(step st127 (cl (not (in$0 sk_?e$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))) (not (= cp_2$0 sk_?e$0)) (in$0 cp_2$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))) :rule or :premises (t126))
-(step t.end (cl) :rule resolution :premises (nst127.0 nst127.1 nst127.2 st127))

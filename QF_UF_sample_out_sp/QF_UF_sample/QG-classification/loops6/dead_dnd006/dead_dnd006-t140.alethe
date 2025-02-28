@@ -1,6 +1,0 @@
-(assume nt140.0 (not (= e2 e0)))
-(assume nt140.1 (not (not (= e2 (op e2 (op e2 e2))))))
-(assume t139 (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))
-(step t139' (cl (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)) :rule or :premises (t139))
-(step t140 (cl (= e2 e0) (not (= e2 (op e2 (op e2 e2))))) :rule reordering :premises (t139'))
-(step t.end (cl) :rule resolution :premises (nt140.0 nt140.1 t140))

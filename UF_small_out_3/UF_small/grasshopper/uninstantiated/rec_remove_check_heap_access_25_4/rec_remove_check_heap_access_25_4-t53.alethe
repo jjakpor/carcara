@@ -1,5 +1,0 @@
-(assume nst53.0 (not (not (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)) (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))))))
-(assume nst53.1 (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))
-(assume nst53.2 (not (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))))
-(step st53 (cl (not (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)) (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)) (and (or (= null$0 lst$0) (not (Btwn$0 next$0 lst$0 lst$0 null$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst53.0 nst53.1 nst53.2 st53))

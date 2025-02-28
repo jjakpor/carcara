@@ -1,6 +1,0 @@
-(assume nst348.0 (not (or (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)) (not (Btwn$0 next$0 x$0 x$0 x$0)) (Btwn$0 next$0 x$0 root_x$0 x$0) (Btwn$0 next$0 x$0 x$0 root_x$0))))
-(assume a68 (forall ((?f FldLoc) (?x Loc) (?y Loc) (?z Loc)) (or (not (Btwn$0 ?f ?x ?y ?y)) (not (Btwn$0 ?f ?x ?z ?z)) (Btwn$0 ?f ?x ?y ?z) (Btwn$0 ?f ?x ?z ?y))))
-(assume t347 (or (not (forall ((?f FldLoc) (?x Loc) (?y Loc) (?z Loc)) (or (not (Btwn$0 ?f ?x ?y ?y)) (not (Btwn$0 ?f ?x ?z ?z)) (Btwn$0 ?f ?x ?y ?z) (Btwn$0 ?f ?x ?z ?y)))) (or (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)) (not (Btwn$0 next$0 x$0 x$0 x$0)) (Btwn$0 next$0 x$0 root_x$0 x$0) (Btwn$0 next$0 x$0 x$0 root_x$0))))
-(step t347' (cl (not (forall ((?f FldLoc) (?x Loc) (?y Loc) (?z Loc)) (or (not (Btwn$0 ?f ?x ?y ?y)) (not (Btwn$0 ?f ?x ?z ?z)) (Btwn$0 ?f ?x ?y ?z) (Btwn$0 ?f ?x ?z ?y)))) (or (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)) (not (Btwn$0 next$0 x$0 x$0 x$0)) (Btwn$0 next$0 x$0 root_x$0 x$0) (Btwn$0 next$0 x$0 x$0 root_x$0))) :rule or :premises (t347))
-(step st348 (cl (or (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)) (not (Btwn$0 next$0 x$0 x$0 x$0)) (Btwn$0 next$0 x$0 root_x$0 x$0) (Btwn$0 next$0 x$0 x$0 root_x$0))) :rule resolution :premises (t347' a68))
-(step t.end (cl) :rule resolution :premises (nst348.0 st348))

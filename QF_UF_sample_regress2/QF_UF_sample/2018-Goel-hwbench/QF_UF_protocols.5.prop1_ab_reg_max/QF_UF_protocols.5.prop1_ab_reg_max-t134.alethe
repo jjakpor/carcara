@@ -1,4 +1,0 @@
-(assume nst134.0 (not y$v3_1517448506_305_op))
-(assume t133 (and y$v3_1517448506_305_op y$617))
-(step st134 (cl y$v3_1517448506_305_op) :rule and :premises (t133) :args (0))
-(step t.end (cl) :rule resolution :premises (nst134.0 st134))

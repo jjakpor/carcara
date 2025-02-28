@@ -1,5 +1,0 @@
-(assume nt34.0 (not (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))))
-(assume nt34.1 (not (= x0 x1)))
-(assume t33 (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1)))
-(step t34 (cl (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (= x0 x1)) :rule implies :premises (t33))
-(step t.end (cl) :rule resolution :premises (nt34.0 nt34.1 t34))

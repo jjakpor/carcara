@@ -1,5 +1,0 @@
-(assume nst21.0 (not (not y$974)))
-(assume nst21.1 (not (not y$975)))
-(assume a613 (= y$974 (not y$975)))
-(step st21 (cl (not y$974) (not y$975)) :rule equiv1 :premises (a613))
-(step t.end (cl) :rule resolution :premises (nst21.0 nst21.1 st21))

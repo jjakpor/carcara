@@ -1,8 +1,0 @@
-(assume t305 (or (not (p1 (f5 c_0) c_0)) (not (= c_0 (f5 c_0))) (not (= c_0 (f7 c_0))) (p1 (f7 c_0) c_0)))
-(assume nt306.0 (not (p1 (f7 c_0) c_0)))
-(assume nt306.1 (not (not (p1 (f5 c_0) c_0))))
-(assume nt306.2 (not (not (= c_0 (f7 c_0)))))
-(assume nt306.3 (not (not (= c_0 (f5 c_0)))))
-(step t305' (cl (not (p1 (f5 c_0) c_0)) (not (= c_0 (f5 c_0))) (not (= c_0 (f7 c_0))) (p1 (f7 c_0) c_0)) :rule or :premises (t305))
-(step t306 (cl (p1 (f7 c_0) c_0) (not (p1 (f5 c_0) c_0)) (not (= c_0 (f7 c_0))) (not (= c_0 (f5 c_0)))) :rule reordering :premises (t305'))
-(step t.end (cl) :rule resolution :premises (nt306.0 nt306.1 nt306.2 nt306.3 t306))

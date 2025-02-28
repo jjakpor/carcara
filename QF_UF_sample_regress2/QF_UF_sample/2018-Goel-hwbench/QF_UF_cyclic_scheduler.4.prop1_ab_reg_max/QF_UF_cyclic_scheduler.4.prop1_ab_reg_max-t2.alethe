@@ -1,4 +1,0 @@
-(assume nst2.0 (not (not (and y$a_q_error_customer_0 y$127))))
-(assume nst2.1 (not y$a_q_error_customer_0))
-(step st2 (cl (not (and y$a_q_error_customer_0 y$127)) y$a_q_error_customer_0) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nst2.0 nst2.1 st2))

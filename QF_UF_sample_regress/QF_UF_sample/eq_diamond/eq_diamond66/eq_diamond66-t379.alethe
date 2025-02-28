@@ -1,6 +1,0 @@
-(assume nst379.0 (not (= x32 x33)))
-(assume nst379.1 (not (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))))))
-(assume t378 (or (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33)))) (= x32 x33)))
-(step t378' (cl (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33)))) (= x32 x33)) :rule or :premises (t378))
-(step st379 (cl (= x32 x33) (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))))) :rule reordering :premises (t378'))
-(step t.end (cl) :rule resolution :premises (nst379.0 nst379.1 st379))

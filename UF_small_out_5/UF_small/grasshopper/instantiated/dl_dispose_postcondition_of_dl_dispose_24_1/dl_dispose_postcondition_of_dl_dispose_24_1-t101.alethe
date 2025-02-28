@@ -1,5 +1,0 @@
-(assume nst101.0 (not (= (or (not (= null$0 null$0)) (and (or (= null$0 null$0) (not (Btwn$0 next$0 a_1$0 null$0 null$0))) (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 a_1$0 prv_3$0 null$0 b_1$0))))) (or false (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 a_1$0 prv_3$0 null$0 b_1$0)))))))
-(assume t92 (= (not (= null$0 null$0)) false))
-(assume t100 (= (and (or (= null$0 null$0) (not (Btwn$0 next$0 a_1$0 null$0 null$0))) (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 a_1$0 prv_3$0 null$0 b_1$0)))) (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 a_1$0 prv_3$0 null$0 b_1$0)))))
-(step st101 (cl (= (or (not (= null$0 null$0)) (and (or (= null$0 null$0) (not (Btwn$0 next$0 a_1$0 null$0 null$0))) (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 a_1$0 prv_3$0 null$0 b_1$0))))) (or false (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 a_1$0 prv_3$0 null$0 b_1$0)))))) :rule cong :premises (t92 t100))
-(step t.end (cl) :rule resolution :premises (nst101.0 st101))

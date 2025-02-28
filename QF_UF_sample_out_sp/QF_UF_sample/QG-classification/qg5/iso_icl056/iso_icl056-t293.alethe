@@ -1,7 +1,0 @@
-(assume nt293.0 (not (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))))
-(assume t284 (or (not (= (not (= (op e2 e4) (op e4 e4))) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1)))))))) (not (not (= (op e2 e4) (op e4 e4)))) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))))
-(assume t289 (= (not (= (op e2 e4) (op e4 e4))) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))))
-(assume t292 (not (= (op e2 e4) (op e4 e4))))
-(step t284' (cl (not (= (not (= (op e2 e4) (op e4 e4))) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1)))))))) (not (not (= (op e2 e4) (op e4 e4)))) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))) :rule or :premises (t284))
-(step t293 (cl (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))) :rule resolution :premises (t284' t289 t292))
-(step t.end (cl) :rule resolution :premises (nt293.0 t293))

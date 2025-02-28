@@ -1,5 +1,0 @@
-(assume nst6.0 (not (not (= (not (= curr_init$0 null$0)) (not (= prv_5$0 (read$0 next$0 d_init$0)))))))
-(assume nst6.1 (not (not (not (= curr_init$0 null$0)))))
-(assume nst6.2 (not (not (= prv_5$0 (read$0 next$0 d_init$0)))))
-(step st6 (cl (not (= (not (= curr_init$0 null$0)) (not (= prv_5$0 (read$0 next$0 d_init$0))))) (not (not (= curr_init$0 null$0))) (not (= prv_5$0 (read$0 next$0 d_init$0)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst6.0 nst6.1 nst6.2 st6))

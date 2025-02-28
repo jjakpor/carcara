@@ -1,5 +1,0 @@
-(assume t9 (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2)))
-(assume nt10.0 (not (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))))))
-(assume nt10.1 (not (= x1 x2)))
-(step t10 (cl (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2)))) (= x1 x2)) :rule implies :premises (t9))
-(step t.end (cl) :rule resolution :premises (nt10.0 nt10.1 t10))

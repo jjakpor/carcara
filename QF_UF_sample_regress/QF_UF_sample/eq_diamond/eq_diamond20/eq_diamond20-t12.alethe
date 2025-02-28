@@ -1,3 +1,0 @@
-(assume nst12.0 (not (= (= (= x2 x3) false) (not (= x2 x3)))))
-(step st12 (cl (= (= (= x2 x3) false) (not (= x2 x3)))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nst12.0 st12))

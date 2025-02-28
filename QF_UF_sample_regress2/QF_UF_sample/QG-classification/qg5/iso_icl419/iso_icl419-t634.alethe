@@ -1,5 +1,0 @@
-(assume nst634.0 (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op (op e3 e3) (op e3 e3)) e3) e3))))
-(assume t542 (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) e3)))
-(assume t633 (= (op (op e3 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) e3) (op (op (op (op e3 e3) (op e3 e3)) e3) e3)))
-(step st634 (cl (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op (op e3 e3) (op e3 e3)) e3) e3))) :rule trans :premises (t542 t633))
-(step t.end (cl) :rule resolution :premises (nst634.0 st634))

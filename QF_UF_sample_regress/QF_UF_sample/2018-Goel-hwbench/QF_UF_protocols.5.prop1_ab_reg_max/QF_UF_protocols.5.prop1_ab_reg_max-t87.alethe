@@ -1,4 +1,0 @@
-(assume nst87.0 (not y$959))
-(assume t86 (and y$952 y$959))
-(step st87 (cl y$959) :rule and :premises (t86) :args (1))
-(step t.end (cl) :rule resolution :premises (nst87.0 st87))

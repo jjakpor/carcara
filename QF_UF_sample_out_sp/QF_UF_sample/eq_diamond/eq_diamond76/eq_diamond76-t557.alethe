@@ -1,3 +1,0 @@
-(assume nt557.0 (not (= (= (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (and (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (=> (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (= x49 x50)))) true)))
-(step t557 (cl (= (= (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (and (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (=> (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (= x49 x50)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt557.0 t557))

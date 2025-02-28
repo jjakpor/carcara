@@ -1,6 +1,0 @@
-(assume t258 (or (= x21 x22) (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))))))
-(assume t254 (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))))
-(assume nt259.0 (not (= x21 x22)))
-(step t258' (cl (= x21 x22) (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))))) :rule or :premises (t258))
-(step t259 (cl (= x21 x22)) :rule resolution :premises (t258' t254))
-(step t.end (cl) :rule resolution :premises (nt259.0 t259))

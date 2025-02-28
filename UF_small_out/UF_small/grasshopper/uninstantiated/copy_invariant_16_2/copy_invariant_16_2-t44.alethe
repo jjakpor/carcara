@@ -1,5 +1,0 @@
-(assume nst44.0 (not (not (= (= sk_?X_1$0 (union$0 sk_?X_3$0 sk_?X_2$0)) (= sk_FP$0 (union$0 sk_?X_3$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))))
-(assume nst44.1 (not (not (= sk_?X_1$0 (union$0 sk_?X_3$0 sk_?X_2$0)))))
-(assume nst44.2 (not (= sk_FP$0 (union$0 sk_?X_3$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))))
-(step st44 (cl (not (= (= sk_?X_1$0 (union$0 sk_?X_3$0 sk_?X_2$0)) (= sk_FP$0 (union$0 sk_?X_3$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0))))) (not (= sk_?X_1$0 (union$0 sk_?X_3$0 sk_?X_2$0))) (= sk_FP$0 (union$0 sk_?X_3$0 (lseg_domain$0 next$0 cp_2$0 cp_2$0)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst44.0 nst44.1 nst44.2 st44))

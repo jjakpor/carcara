@@ -1,3 +1,0 @@
-(assume nt455.0 (not (= (= (= e0 (op (op e0 (op e0 e0)) e0)) false) (not (= e0 (op (op e0 (op e0 e0)) e0))))))
-(step t455 (cl (= (= (= e0 (op (op e0 (op e0 e0)) e0)) false) (not (= e0 (op (op e0 (op e0 e0)) e0))))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nt455.0 t455))

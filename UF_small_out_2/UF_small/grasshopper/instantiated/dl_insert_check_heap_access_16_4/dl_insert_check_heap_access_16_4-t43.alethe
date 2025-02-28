@@ -1,3 +1,0 @@
-(assume nst43.0 (not (= (forall ((y Loc) (x Loc)) (or (and (= x y) (in$0 x (setenum$0 y))) (and (not (= x y)) (not (in$0 x (setenum$0 y)))))) (forall ((y Loc) (x Loc)) (and (or (and (= x y) (in$0 x (setenum$0 y))) (not (= x y))) (or (and (= x y) (in$0 x (setenum$0 y))) (not (in$0 x (setenum$0 y)))))))))
-(step st43 (cl (= (forall ((y Loc) (x Loc)) (or (and (= x y) (in$0 x (setenum$0 y))) (and (not (= x y)) (not (in$0 x (setenum$0 y)))))) (forall ((y Loc) (x Loc)) (and (or (and (= x y) (in$0 x (setenum$0 y))) (not (= x y))) (or (and (= x y) (in$0 x (setenum$0 y))) (not (in$0 x (setenum$0 y)))))))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst43.0 st43))

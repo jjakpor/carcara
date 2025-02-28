@@ -1,3 +1,0 @@
-(assume nt1063.0 (not (= (= (= (op (op e0 e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false) (not (= (op (op e0 e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))))
-(step t1063 (cl (= (= (= (op (op e0 e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false) (not (= (op (op e0 e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nt1063.0 t1063))

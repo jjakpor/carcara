@@ -1,7 +1,0 @@
-(assume nt32.0 (not (= rd2 false)))
-(assume t28 (or (not (= (not rd2) (= rd2 false))) (not (not rd2)) (= rd2 false)))
-(assume t30 (= (not rd2) (= rd2 false)))
-(assume t31 (not rd2))
-(step t28' (cl (not (= (not rd2) (= rd2 false))) (not (not rd2)) (= rd2 false)) :rule or :premises (t28))
-(step t32 (cl (= rd2 false)) :rule resolution :premises (t28' t30 t31))
-(step t.end (cl) :rule resolution :premises (nt32.0 t32))

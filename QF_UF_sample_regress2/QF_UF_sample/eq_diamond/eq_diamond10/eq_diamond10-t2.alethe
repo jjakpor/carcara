@@ -1,4 +1,0 @@
-(assume nst2.0 (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5)))))
-(assume nst2.1 (not (not (and (= x4 z4) (= z4 x5)))))
-(step st2 (cl (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (not (and (= x4 z4) (= z4 x5)))) :rule or_neg :args (1))
-(step t.end (cl) :rule resolution :premises (nst2.0 nst2.1 st2))

@@ -1,7 +1,0 @@
-(assume nst158.0 (not (and y$287 y$288)))
-(assume t98 (or (and y$287 y$288) (not y$287) (not y$288)))
-(assume t119 y$287)
-(assume t157 y$288)
-(step t98' (cl (and y$287 y$288) (not y$287) (not y$288)) :rule or :premises (t98))
-(step st158 (cl (and y$287 y$288)) :rule resolution :premises (t98' t119 t157))
-(step t.end (cl) :rule resolution :premises (nst158.0 st158))

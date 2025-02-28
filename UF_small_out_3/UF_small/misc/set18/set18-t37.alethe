@@ -1,7 +1,0 @@
-(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (difference b a))) (member ?x (difference b d))))))
-(assume nst37.0 (not (or (subset (difference b a) (difference b d)) (not (forall ((?x Elem)) (or (not (member ?x (difference b a))) (member ?x (difference b d))))))))
-(assume t31 (or (not (forall ((?s1 Set) (?s2 Set)) (or (subset ?s1 ?s2) (not (forall ((?x Elem)) (or (not (member ?x ?s1)) (member ?x ?s2))))))) (or (subset (difference b a) (difference b d)) (not (forall ((?x Elem)) (or (not (member ?x (difference b a))) (member ?x (difference b d))))))))
-(assume t36 (forall ((?s1 Set) (?s2 Set)) (or (subset ?s1 ?s2) (not (forall ((?x Elem)) (or (not (member ?x ?s1)) (member ?x ?s2)))))))
-(step t31' (cl (not (forall ((?s1 Set) (?s2 Set)) (or (subset ?s1 ?s2) (not (forall ((?x Elem)) (or (not (member ?x ?s1)) (member ?x ?s2))))))) (or (subset (difference b a) (difference b d)) (not (forall ((?x Elem)) (or (not (member ?x (difference b a))) (member ?x (difference b d))))))) :rule or :premises (t31))
-(step st37 (cl (or (subset (difference b a) (difference b d)) (not (forall ((?x Elem)) (or (not (member ?x (difference b a))) (member ?x (difference b d))))))) :rule resolution :premises (t31' t36))
-(step t.end (cl) :rule resolution :premises (nst37.0 st37))

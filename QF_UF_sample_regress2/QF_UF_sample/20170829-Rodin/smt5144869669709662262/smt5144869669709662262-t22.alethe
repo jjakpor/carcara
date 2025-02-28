@@ -1,3 +1,0 @@
-(assume t20 false)
-(assume t21 (not false))
-(step st22 (cl) :rule resolution :premises (t20 t21))

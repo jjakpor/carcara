@@ -1,3 +1,0 @@
-(assume nst129.0 (not (= root_x$0 root_x$0)))
-(step st129 (cl (= root_x$0 root_x$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst129.0 st129))

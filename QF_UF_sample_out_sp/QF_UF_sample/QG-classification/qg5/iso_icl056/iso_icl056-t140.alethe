@@ -1,5 +1,0 @@
-(assume nt140.0 (not (= (= e1 (op e4 e0)) (= e1 (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))))
-(assume t38 (= e1 e1))
-(assume t56 (= (op e4 e0) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))
-(step t140 (cl (= (= e1 (op e4 e0)) (= e1 (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))) :rule cong :premises (t38 t56))
-(step t.end (cl) :rule resolution :premises (nt140.0 t140))

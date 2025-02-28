@@ -1,7 +1,0 @@
-(assume nst197.0 (not false))
-(assume t0 (or (not (= (= true false) false)) (not (= true false)) false))
-(assume t1 (= (= true false) false))
-(assume t196 (= true false))
-(step t0' (cl (not (= (= true false) false)) (not (= true false)) false) :rule or :premises (t0))
-(step st197 (cl false) :rule resolution :premises (t0' t1 t196))
-(step t.end (cl) :rule resolution :premises (nst197.0 st197))

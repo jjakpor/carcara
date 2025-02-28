@@ -1,6 +1,0 @@
-(assume nt47.0 (not (= (forall ((BOUND_VARIABLE_631 Loc)) (or (and (= BOUND_VARIABLE_631 BOUND_VARIABLE_631) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631))) (not (= BOUND_VARIABLE_631 BOUND_VARIABLE_631)))) (forall ((BOUND_VARIABLE_631 Loc)) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631))))))
-(anchor :step t47 :args ((BOUND_VARIABLE_631 Loc) (:= (BOUND_VARIABLE_631 Loc) BOUND_VARIABLE_631)))
-(step st47.t3 (cl (= (and true (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631))) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631)))) :rule hole)
-(step t47.t10 (cl (= (or (and (= BOUND_VARIABLE_631 BOUND_VARIABLE_631) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631))) (not (= BOUND_VARIABLE_631 BOUND_VARIABLE_631))) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631)))) :rule trust)
-(step t47 (cl (= (forall ((BOUND_VARIABLE_631 Loc)) (or (and (= BOUND_VARIABLE_631 BOUND_VARIABLE_631) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631))) (not (= BOUND_VARIABLE_631 BOUND_VARIABLE_631)))) (forall ((BOUND_VARIABLE_631 Loc)) (in$0 BOUND_VARIABLE_631 (setenum$0 BOUND_VARIABLE_631))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt47.0 t47))

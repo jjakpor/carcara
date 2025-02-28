@@ -1,7 +1,0 @@
-(assume nt5.0 (not (and y$1 y$3 y$5 y$7 y$10 y$12 y$14 y$16 y$18 y$20 y$22 y$24 y$642 y$630)))
-(assume t4 (or (not (= y$649 (and y$1 y$3 y$5 y$7 y$10 y$12 y$14 y$16 y$18 y$20 y$22 y$24 y$642 y$630))) (not y$649) (and y$1 y$3 y$5 y$7 y$10 y$12 y$14 y$16 y$18 y$20 y$22 y$24 y$642 y$630)))
-(assume a18 (= y$649 (and y$1 y$3 y$5 y$7 y$10 y$12 y$14 y$16 y$18 y$20 y$22 y$24 y$642 y$630)))
-(assume a19 y$649)
-(step t4' (cl (not (= y$649 (and y$1 y$3 y$5 y$7 y$10 y$12 y$14 y$16 y$18 y$20 y$22 y$24 y$642 y$630))) (not y$649) (and y$1 y$3 y$5 y$7 y$10 y$12 y$14 y$16 y$18 y$20 y$22 y$24 y$642 y$630)) :rule or :premises (t4))
-(step t5 (cl (and y$1 y$3 y$5 y$7 y$10 y$12 y$14 y$16 y$18 y$20 y$22 y$24 y$642 y$630)) :rule resolution :premises (t4' a18 a19))
-(step t.end (cl) :rule resolution :premises (nt5.0 t5))

@@ -1,5 +1,0 @@
-(assume nt5.t5.0 (not (= (forall ((?v4 A_treeFI$)) (or (not (= ?v0 ?v0)) (not (= ?v1 ?v1)) (not (= (shd$ ?v0) (lab$ ?v1))) (not (member$ ?v4 (set$ (sub$ ?v1)))) (not (fun_app$a (properPath$ (stl$ ?v0)) ?v4)))) (forall ((?v4 A_treeFI$)) (or (not (= (shd$ ?v0) (lab$ ?v1))) (not (member$ ?v4 (set$ (sub$ ?v1)))) (not (fun_app$a (properPath$ (stl$ ?v0)) ?v4)))))))
-(anchor :step t5.t5 :args ((?v4 A_treeFI$) (:= (?v4 A_treeFI$) ?v4)))
-(step t5.t5.t12 (cl (= (or (not (= ?v0 ?v0)) (not (= ?v1 ?v1)) (not (= (shd$ ?v0) (lab$ ?v1))) (not (member$ ?v4 (set$ (sub$ ?v1)))) (not (fun_app$a (properPath$ (stl$ ?v0)) ?v4))) (or (not (= (shd$ ?v0) (lab$ ?v1))) (not (member$ ?v4 (set$ (sub$ ?v1)))) (not (fun_app$a (properPath$ (stl$ ?v0)) ?v4))))) :rule trust)
-(step t5.t5 (cl (= (forall ((?v4 A_treeFI$)) (or (not (= ?v0 ?v0)) (not (= ?v1 ?v1)) (not (= (shd$ ?v0) (lab$ ?v1))) (not (member$ ?v4 (set$ (sub$ ?v1)))) (not (fun_app$a (properPath$ (stl$ ?v0)) ?v4)))) (forall ((?v4 A_treeFI$)) (or (not (= (shd$ ?v0) (lab$ ?v1))) (not (member$ ?v4 (set$ (sub$ ?v1)))) (not (fun_app$a (properPath$ (stl$ ?v0)) ?v4)))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt5.t5.0 t5.t5))

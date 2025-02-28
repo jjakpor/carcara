@@ -1,5 +1,0 @@
-(assume nst230.0 (not (= (= x0 x20) false)))
-(assume nst230.1 (not (not (not (= x0 x20)))))
-(assume t229 (= (= (= x0 x20) false) (not (= x0 x20))))
-(step st230 (cl (= (= x0 x20) false) (not (not (= x0 x20)))) :rule equiv2 :premises (t229))
-(step t.end (cl) :rule resolution :premises (nst230.0 nst230.1 st230))

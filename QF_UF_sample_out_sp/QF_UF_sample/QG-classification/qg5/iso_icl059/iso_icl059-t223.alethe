@@ -1,8 +1,0 @@
-(assume nt223.0 (not (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
-(assume nt223.1 (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0)))))
-(assume nt223.2 (not (= (op (op e0 e0) e0) (op (op e0 e0) (op e0 e0)))))
-(assume nt223.3 (not (= (op e0 e0) (op (op e0 e0) e0))))
-(assume nt223.4 (not (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))
-(assume t222 (or (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0))) (= (op (op e0 e0) e0) (op (op e0 e0) (op e0 e0))) (= (op e0 e0) (op (op e0 e0) e0)) (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))
-(step t223 (cl (= (op (op e0 e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0))) (= (op (op e0 e0) e0) (op (op e0 e0) (op e0 e0))) (= (op e0 e0) (op (op e0 e0) e0)) (= (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) :rule or :premises (t222))
-(step t.end (cl) :rule resolution :premises (nt223.0 nt223.1 nt223.2 nt223.3 nt223.4 t223))

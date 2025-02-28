@@ -1,4 +1,0 @@
-(assume nt281.0 (not (= (not (= (op e5 (op e5 e5)) e5)) (not (= e5 (op e5 (op e5 e5)))))))
-(assume t280 (= (= (op e5 (op e5 e5)) e5) (= e5 (op e5 (op e5 e5)))))
-(step t281 (cl (= (not (= (op e5 (op e5 e5)) e5)) (not (= e5 (op e5 (op e5 e5)))))) :rule cong :premises (t280))
-(step t.end (cl) :rule resolution :premises (nt281.0 t281))

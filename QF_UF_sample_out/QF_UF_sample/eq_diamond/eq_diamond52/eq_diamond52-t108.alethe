@@ -1,6 +1,0 @@
-(assume t107 (or (= x8 x9) (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))))
-(assume t103 (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))
-(assume nt108.0 (not (= x8 x9)))
-(step t107' (cl (= x8 x9) (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))) :rule or :premises (t107))
-(step t108 (cl (= x8 x9)) :rule resolution :premises (t107' t103))
-(step t.end (cl) :rule resolution :premises (nt108.0 t108))

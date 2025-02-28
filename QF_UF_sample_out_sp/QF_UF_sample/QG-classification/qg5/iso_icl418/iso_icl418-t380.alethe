@@ -1,8 +1,0 @@
-(assume nt380.0 (not (= (or (= e4 (op e0 e3)) (= e3 (op e0 e3)) (= e2 (op e0 e3)) (= e0 (op e0 e3)) (= e1 (op e0 e3))) (or (= e4 (op (op (op e4 e3) (op e4 e3)) e3)) (= e3 (op (op (op e4 e3) (op e4 e3)) e3)) (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e3)) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e3)) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e3))))))
-(assume t377 (= (= e4 (op e0 e3)) (= e4 (op (op (op e4 e3) (op e4 e3)) e3))))
-(assume t80 (= (= e3 (op e0 e3)) (= e3 (op (op (op e4 e3) (op e4 e3)) e3))))
-(assume t132 (= (= e2 (op e0 e3)) (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e3))))
-(assume t378 (= (= e0 (op e0 e3)) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e3))))
-(assume t379 (= (= e1 (op e0 e3)) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e3))))
-(step t380 (cl (= (or (= e4 (op e0 e3)) (= e3 (op e0 e3)) (= e2 (op e0 e3)) (= e0 (op e0 e3)) (= e1 (op e0 e3))) (or (= e4 (op (op (op e4 e3) (op e4 e3)) e3)) (= e3 (op (op (op e4 e3) (op e4 e3)) e3)) (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e3)) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e3)) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e3))))) :rule cong :premises (t377 t80 t132 t378 t379))
-(step t.end (cl) :rule resolution :premises (nt380.0 t380))

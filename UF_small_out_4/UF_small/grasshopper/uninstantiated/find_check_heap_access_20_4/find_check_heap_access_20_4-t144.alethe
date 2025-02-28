@@ -1,5 +1,0 @@
-(assume nst144.0 (not (= (= sk_?X_25$0 sk_?X_26$0) (= sk_?X_25$0 (setenum$0 root_x$0)))))
-(assume a23 (= sk_?X_26$0 (setenum$0 root_x$0)))
-(assume t143 (= sk_?X_25$0 sk_?X_25$0))
-(step st144 (cl (= (= sk_?X_25$0 sk_?X_26$0) (= sk_?X_25$0 (setenum$0 root_x$0)))) :rule cong :premises (t143 a23))
-(step t.end (cl) :rule resolution :premises (nst144.0 st144))

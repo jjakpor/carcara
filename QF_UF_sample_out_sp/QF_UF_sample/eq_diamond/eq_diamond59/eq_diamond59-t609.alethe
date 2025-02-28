@@ -1,4 +1,0 @@
-(assume nt609.0 (not (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37))))
-(assume t608 (and (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37))))
-(step t609 (cl (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37))) :rule and :premises (t608) :args (1))
-(step t.end (cl) :rule resolution :premises (nt609.0 t609))

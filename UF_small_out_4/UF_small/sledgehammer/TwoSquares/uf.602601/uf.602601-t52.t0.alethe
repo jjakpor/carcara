@@ -1,6 +1,0 @@
-(assume nt52.0 (not (= (forall ((?v0 S3)) (= (f5 f9 ?v0) ?v0)) (forall ((?v0 S3)) (= ?v0 (f5 f9 ?v0))))))
-(anchor :step t52 :args ((?v0 S3) (:= (?v0 S3) ?v0)))
-(step st52.t0 (cl (= (= (f5 f9 ?v0) ?v0) (= ?v0 (f5 f9 ?v0)))) :rule hole)
-(step t52.t0 (cl (= (= (f5 f9 ?v0) ?v0) (= ?v0 (f5 f9 ?v0)))) :rule trust)
-(step t52 (cl (= (forall ((?v0 S3)) (= (f5 f9 ?v0) ?v0)) (forall ((?v0 S3)) (= ?v0 (f5 f9 ?v0))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt52.0 t52))

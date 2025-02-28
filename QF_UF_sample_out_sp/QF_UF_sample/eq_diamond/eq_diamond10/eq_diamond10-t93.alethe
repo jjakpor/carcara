@@ -1,5 +1,0 @@
-(assume nt93.0 (not (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))))
-(assume nt93.1 (not (= x7 x8)))
-(assume t92 (=> (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))) (= x7 x8)))
-(step t93 (cl (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8)))) (= x7 x8)) :rule implies :premises (t92))
-(step t.end (cl) :rule resolution :premises (nt93.0 nt93.1 t93))

@@ -1,6 +1,0 @@
-(assume nst176.0 (not (not (models empty (orR (notR (qR bR)) (rR cR))))))
-(assume t22 (or (or (models empty (notR (pR aR))) (models empty (orR (notR (qR bR)) (rR cR)))) (not (models empty (orR (notR (qR bR)) (rR cR))))))
-(assume t175 (not (or (models empty (notR (pR aR))) (models empty (orR (notR (qR bR)) (rR cR))))))
-(step t22' (cl (or (models empty (notR (pR aR))) (models empty (orR (notR (qR bR)) (rR cR)))) (not (models empty (orR (notR (qR bR)) (rR cR))))) :rule or :premises (t22))
-(step st176 (cl (not (models empty (orR (notR (qR bR)) (rR cR))))) :rule resolution :premises (t22' t175))
-(step t.end (cl) :rule resolution :premises (nst176.0 st176))

@@ -1,5 +1,0 @@
-(assume nst49.0 (not (= (= y$1093 (= y$prop$next y$1092)) (= y$1093 (= y$1092 y$prop$next)))))
-(assume t47 (= y$1093 y$1093))
-(assume t48 (= (= y$prop$next y$1092) (= y$1092 y$prop$next)))
-(step st49 (cl (= (= y$1093 (= y$prop$next y$1092)) (= y$1093 (= y$1092 y$prop$next)))) :rule cong :premises (t47 t48))
-(step t.end (cl) :rule resolution :premises (nst49.0 st49))

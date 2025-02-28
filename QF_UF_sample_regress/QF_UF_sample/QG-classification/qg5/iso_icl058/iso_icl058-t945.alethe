@@ -1,5 +1,0 @@
-(assume nst945.0 (not (not (= (= e0 (op (op e0 e0) (op (op (op e0 e0) e0) e0))) false))))
-(assume nst945.1 (not (not (= e0 (op (op e0 e0) (op (op (op e0 e0) e0) e0))))))
-(assume t944 (= (= (= e0 (op (op e0 e0) (op (op (op e0 e0) e0) e0))) false) (not (= e0 (op (op e0 e0) (op (op (op e0 e0) e0) e0))))))
-(step st945 (cl (not (= (= e0 (op (op e0 e0) (op (op (op e0 e0) e0) e0))) false)) (not (= e0 (op (op e0 e0) (op (op (op e0 e0) e0) e0))))) :rule equiv1 :premises (t944))
-(step t.end (cl) :rule resolution :premises (nst945.0 nst945.1 st945))

@@ -1,6 +1,0 @@
-(define-fun @quantifiers_skolemize_10 () A_list$ (choice ((?v3 A_list$)) (not (or (not (member$c ?v3 (collect$a top$b))) (not (= xs$ (fun_app$g llist_of$ ?v3)))))))
-(assume nst51.0 (not (= (or thesis$ (forall ((?v0 A_list$)) (not (= xs$ (fun_app$g llist_of$ ?v0))))) (or false (forall ((?v0 A_list$)) (not (= xs$ (fun_app$g llist_of$ ?v0))))))))
-(assume t49 (= thesis$ false))
-(assume t50 (= (forall ((?v0 A_list$)) (not (= xs$ (fun_app$g llist_of$ ?v0)))) (forall ((?v0 A_list$)) (not (= xs$ (fun_app$g llist_of$ ?v0))))))
-(step st51 (cl (= (or thesis$ (forall ((?v0 A_list$)) (not (= xs$ (fun_app$g llist_of$ ?v0))))) (or false (forall ((?v0 A_list$)) (not (= xs$ (fun_app$g llist_of$ ?v0))))))) :rule cong :premises (t49 t50))
-(step t.end (cl) :rule resolution :premises (nst51.0 st51))

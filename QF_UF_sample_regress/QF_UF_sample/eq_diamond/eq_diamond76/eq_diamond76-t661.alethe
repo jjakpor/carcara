@@ -1,5 +1,0 @@
-(assume nst661.0 (not (not (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))))))
-(assume nst661.1 (not (= x58 x59)))
-(assume t660 (=> (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59))) (= x58 x59)))
-(step st661 (cl (not (or (and (= x58 y58) (= y58 x59)) (and (= x58 z58) (= z58 x59)))) (= x58 x59)) :rule implies :premises (t660))
-(step t.end (cl) :rule resolution :premises (nst661.0 nst661.1 st661))

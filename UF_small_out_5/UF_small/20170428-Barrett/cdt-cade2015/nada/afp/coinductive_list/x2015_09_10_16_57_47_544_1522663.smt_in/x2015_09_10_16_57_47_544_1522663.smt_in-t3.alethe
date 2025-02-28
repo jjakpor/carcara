@@ -1,3 +1,0 @@
-(assume nst3.0 (not (= (not (= (fun_app$h (fun_app$o (case_nat$ (lCons$ (lhd$ xs$) (ltl$ xs$))) (uvn$ (ltl$ xs$))) (suc$ n$)) (fun_app$h (uvn$ (ltl$ xs$)) n$))) (not (= (fun_app$h (fun_app$o (case_nat$ (lCons$ (lhd$ xs$) (ltl$ xs$))) (uvn$ (ltl$ xs$))) (suc$ n$)) (fun_app$h (uvn$ (ltl$ xs$)) n$))))))
-(step st3 (cl (= (not (= (fun_app$h (fun_app$o (case_nat$ (lCons$ (lhd$ xs$) (ltl$ xs$))) (uvn$ (ltl$ xs$))) (suc$ n$)) (fun_app$h (uvn$ (ltl$ xs$)) n$))) (not (= (fun_app$h (fun_app$o (case_nat$ (lCons$ (lhd$ xs$) (ltl$ xs$))) (uvn$ (ltl$ xs$))) (suc$ n$)) (fun_app$h (uvn$ (ltl$ xs$)) n$))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst3.0 st3))

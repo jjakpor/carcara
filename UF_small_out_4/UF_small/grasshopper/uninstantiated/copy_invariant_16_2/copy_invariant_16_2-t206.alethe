@@ -1,5 +1,0 @@
-(assume nst206.0 (not (= (or (= curr_2$0 curr_2$0) (not (Btwn$0 next$0 lst$0 curr_2$0 curr_2$0))) true)))
-(assume t204 (= (or (= curr_2$0 curr_2$0) (not (Btwn$0 next$0 lst$0 curr_2$0 curr_2$0))) (or true (not (Btwn$0 next$0 lst$0 curr_2$0 curr_2$0)))))
-(assume t205 (= (or true (not (Btwn$0 next$0 lst$0 curr_2$0 curr_2$0))) true))
-(step st206 (cl (= (or (= curr_2$0 curr_2$0) (not (Btwn$0 next$0 lst$0 curr_2$0 curr_2$0))) true)) :rule trans :premises (t204 t205))
-(step t.end (cl) :rule resolution :premises (nst206.0 st206))

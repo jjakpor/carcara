@@ -1,5 +1,0 @@
-(assume nst96.0 (not (= (op e0 e2) (op e0 (op (op e0 (op e0 e0)) e0)))))
-(assume t30 (= e0 e0))
-(assume t45 (= e2 (op (op e0 (op e0 e0)) e0)))
-(step st96 (cl (= (op e0 e2) (op e0 (op (op e0 (op e0 e0)) e0)))) :rule cong :premises (t30 t45))
-(step t.end (cl) :rule resolution :premises (nst96.0 st96))

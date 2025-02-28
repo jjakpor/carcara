@@ -1,6 +1,0 @@
-(assume nst304.0 (not (not (= e5 (op e5 (op e5 e5))))))
-(assume t301 (or (= e5 e0) (not (= e5 (op e5 (op e5 e5))))))
-(assume t303 (not (= e5 e0)))
-(step t301' (cl (= e5 e0) (not (= e5 (op e5 (op e5 e5))))) :rule or :premises (t301))
-(step st304 (cl (not (= e5 (op e5 (op e5 e5))))) :rule resolution :premises (t301' t303))
-(step t.end (cl) :rule resolution :premises (nst304.0 st304))

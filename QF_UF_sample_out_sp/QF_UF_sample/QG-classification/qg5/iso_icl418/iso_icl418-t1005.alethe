@@ -1,6 +1,0 @@
-(assume nt1005.0 (not (= (= (op (op e4 e3) e4) (op (op e3 e4) e4)) false)))
-(assume t999 (or (= (= (op (op e4 e3) e4) (op (op e3 e4) e4)) false) (= (op (op e4 e3) e4) (op (op e3 e4) e4))))
-(assume t1004 (not (= (op (op e4 e3) e4) (op (op e3 e4) e4))))
-(step t999' (cl (= (= (op (op e4 e3) e4) (op (op e3 e4) e4)) false) (= (op (op e4 e3) e4) (op (op e3 e4) e4))) :rule or :premises (t999))
-(step t1005 (cl (= (= (op (op e4 e3) e4) (op (op e3 e4) e4)) false)) :rule resolution :premises (t999' t1004))
-(step t.end (cl) :rule resolution :premises (nt1005.0 t1005))

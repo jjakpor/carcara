@@ -1,5 +1,0 @@
-(assume nst48.0 (not (not (= (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (or (= (f6 c_1) (f5 c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1))))))))
-(assume nst48.1 (not (not (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))))))
-(assume nst48.2 (not (or (= (f6 c_1) (f5 c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1))))))
-(step st48 (cl (not (= (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (or (= (f6 c_1) (f5 c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))))) (not (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1))))) (or (= (f6 c_1) (f5 c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst48.0 nst48.1 nst48.2 st48))

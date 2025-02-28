@@ -1,4 +1,0 @@
-(assume nst38.0 (not (= (not (or (and prt red_SR) false (and (not prt) red_MR) false (and red_SR (not prt)) (and red_MR prt))) (not (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt))))))
-(assume t37 (= (or (and prt red_SR) false (and (not prt) red_MR) false (and red_SR (not prt)) (and red_MR prt)) (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt))))
-(step st38 (cl (= (not (or (and prt red_SR) false (and (not prt) red_MR) false (and red_SR (not prt)) (and red_MR prt))) (not (or (and prt red_SR) (and (not prt) red_MR) (and red_SR (not prt)) (and red_MR prt))))) :rule cong :premises (t37))
-(step t.end (cl) :rule resolution :premises (nst38.0 st38))

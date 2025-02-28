@@ -1,7 +1,0 @@
-(assume nst7.0 (not (not (or (not (Btwn$0 next$0 lst$0 lst$0 lst$0)) (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0))) (Btwn$0 next$0 lst$0 lst$0 (read$0 next$0 lst$0)) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0)))))
-(assume nst7.1 (not (not (Btwn$0 next$0 lst$0 lst$0 lst$0))))
-(assume nst7.2 (not (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0)))))
-(assume nst7.3 (not (Btwn$0 next$0 lst$0 lst$0 (read$0 next$0 lst$0))))
-(assume nst7.4 (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0)))
-(step st7 (cl (not (or (not (Btwn$0 next$0 lst$0 lst$0 lst$0)) (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0))) (Btwn$0 next$0 lst$0 lst$0 (read$0 next$0 lst$0)) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0))) (not (Btwn$0 next$0 lst$0 lst$0 lst$0)) (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0))) (Btwn$0 next$0 lst$0 lst$0 (read$0 next$0 lst$0)) (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0)) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst7.0 nst7.1 nst7.2 nst7.3 nst7.4 st7))

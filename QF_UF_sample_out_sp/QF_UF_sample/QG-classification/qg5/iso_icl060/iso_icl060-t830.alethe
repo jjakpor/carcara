@@ -1,5 +1,0 @@
-(assume nt830.0 (not (not (and (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))) (= e1 (op e3 (op (op e1 e3) e3)))))))
-(assume nt830.1 (not (= (op e3 e1) (op (op e1 e3) e3))))
-(assume t829 (=> (and (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))) (= e1 (op e3 (op (op e1 e3) e3)))) (= (op e3 e1) (op (op e1 e3) e3))))
-(step t830 (cl (not (and (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))) (= e1 (op e3 (op (op e1 e3) e3))))) (= (op e3 e1) (op (op e1 e3) e3))) :rule implies :premises (t829))
-(step t.end (cl) :rule resolution :premises (nt830.0 nt830.1 t830))

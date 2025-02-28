@@ -1,5 +1,0 @@
-(assume nt30.0 (not (= (= (not (not (not (= b2 r2)))) (= b2 r2)) false)))
-(assume t24 (= (= (not (not (not (= b2 r2)))) (= b2 r2)) (= (= b2 r2) (not (not (not (= b2 r2)))))))
-(assume t29 (= (= (= b2 r2) (not (not (not (= b2 r2))))) false))
-(step t30 (cl (= (= (not (not (not (= b2 r2)))) (= b2 r2)) false)) :rule trans :premises (t24 t29))
-(step t.end (cl) :rule resolution :premises (nt30.0 t30))

@@ -1,5 +1,0 @@
-(assume t16 (= org org_MR))
-(assume nt20.0 (not org))
-(assume nt20.1 (not (not org_MR)))
-(step t20 (cl org (not org_MR)) :rule equiv2 :premises (t16))
-(step t.end (cl) :rule resolution :premises (nt20.0 nt20.1 t20))

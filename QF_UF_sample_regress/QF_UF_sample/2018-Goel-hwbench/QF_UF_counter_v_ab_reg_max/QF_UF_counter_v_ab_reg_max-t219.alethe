@@ -1,5 +1,0 @@
-(assume nst219.0 (not (= y$42 (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))))
-(assume t216 (= y$42 (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4)))))
-(assume t218 (= (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4))) (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
-(step st219 (cl (= y$42 (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) :rule trans :premises (t216 t218))
-(step t.end (cl) :rule resolution :premises (nst219.0 st219))

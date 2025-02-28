@@ -1,4 +1,0 @@
-(assume nst165.0 (not (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2))))
-(assume t164 (and (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2))))
-(step st165 (cl (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2))) :rule and :premises (t164) :args (1))
-(step t.end (cl) :rule resolution :premises (nst165.0 st165))

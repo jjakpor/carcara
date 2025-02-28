@@ -1,5 +1,0 @@
-(assume nst50.0 (not (not (= (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3)))))))
-(assume nst50.1 (not (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))))
-(assume nst50.2 (not (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3)))))
-(step st50 (cl (not (= (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3))))) (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))) (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst50.0 nst50.1 nst50.2 st50))

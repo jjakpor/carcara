@@ -1,4 +1,0 @@
-(assume nst1035.0 (not (not (and (not (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1)))) (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3)))) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= e3 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3))) (= e3 (op e1 (op e1 e3))) (= e3 (op (op e1 e3) (op (op e1 e3) e3)))))))
-(assume nst1035.1 (not (= e3 (op (op e1 e3) (op (op e1 e3) e3)))))
-(step st1035 (cl (not (and (not (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1)))) (= (op (op e1 e3) e1) (op e3 (op e1 e3))) (= (op e1 e3) (op e3 (op e3 (op e1 e3)))) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= e3 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3))) (= e3 (op e1 (op e1 e3))) (= e3 (op (op e1 e3) (op (op e1 e3) e3))))) (= e3 (op (op e1 e3) (op (op e1 e3) e3)))) :rule and_pos :args (6))
-(step t.end (cl) :rule resolution :premises (nst1035.0 nst1035.1 st1035))

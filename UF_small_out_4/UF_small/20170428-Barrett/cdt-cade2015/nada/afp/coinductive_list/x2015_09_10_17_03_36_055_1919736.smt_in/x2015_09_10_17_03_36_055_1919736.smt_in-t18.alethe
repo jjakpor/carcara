@@ -1,5 +1,0 @@
-(assume nst18.0 (not (= (= (llength$ us$) infinity$) (= (llength$ us$) (llength$a xs$)))))
-(assume t12 (= (= (llength$ us$) infinity$) (= infinity$ (llength$ us$))))
-(assume t17 (= (= infinity$ (llength$ us$)) (= (llength$ us$) (llength$a xs$))))
-(step st18 (cl (= (= (llength$ us$) infinity$) (= (llength$ us$) (llength$a xs$)))) :rule trans :premises (t12 t17))
-(step t.end (cl) :rule resolution :premises (nst18.0 st18))

@@ -1,3 +1,0 @@
-(assume nt106.t2.0 (not (= e2 e2)))
-(step t106.t2 (cl (= e2 e2)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt106.t2.0 t106.t2))

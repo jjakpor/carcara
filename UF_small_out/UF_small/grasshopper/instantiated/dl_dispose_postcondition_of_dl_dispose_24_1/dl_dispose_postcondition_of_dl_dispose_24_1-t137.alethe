@@ -1,7 +1,0 @@
-(assume nst137.0 (not (= prv_2$0 sk_?e$0)))
-(assume t74 (or (= prv_2$0 sk_?e$0) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (not (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= prv_2$0 sk_?e$0)))))
-(assume t118 (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0))
-(assume t136 (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= prv_2$0 sk_?e$0)))
-(step t74' (cl (= prv_2$0 sk_?e$0) (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (not (or (not (Btwn$0 next$0 prv_2$0 sk_?e$0 prv_2$0)) (= prv_2$0 sk_?e$0)))) :rule or :premises (t74))
-(step st137 (cl (= prv_2$0 sk_?e$0)) :rule resolution :premises (t74' t118 t136))
-(step t.end (cl) :rule resolution :premises (nst137.0 st137))

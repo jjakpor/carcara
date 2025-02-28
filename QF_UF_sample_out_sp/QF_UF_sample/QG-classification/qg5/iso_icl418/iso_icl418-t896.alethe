@@ -1,3 +1,0 @@
-(assume nt896.0 (not (= (= (op e4 e4) (op e4 e4)) true)))
-(step t896 (cl (= (= (op e4 e4) (op e4 e4)) true)) :rule rare_rewrite :args ("eq-refl" (op e4 e4)))
-(step t.end (cl) :rule resolution :premises (nt896.0 t896))

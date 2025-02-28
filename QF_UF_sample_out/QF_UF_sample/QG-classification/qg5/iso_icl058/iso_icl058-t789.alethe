@@ -1,5 +1,0 @@
-(assume t769 (= (= e0 (op e0 (op (op e0 e0) e0))) (= (op e0 (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0)))))
-(assume t788 (= (= (op e0 (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0))) false))
-(assume nt789.0 (not (= (= e0 (op e0 (op (op e0 e0) e0))) false)))
-(step t789 (cl (= (= e0 (op e0 (op (op e0 e0) e0))) false)) :rule trans :premises (t769 t788))
-(step t.end (cl) :rule resolution :premises (nt789.0 t789))

@@ -1,4 +1,0 @@
-(assume nst21.0 (not (=> (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0)))))) (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$)))))))))
-(assume nst21.1 (not (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0))))))))
-(step st21 (cl (=> (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0)))))) (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$))))))) (forall ((?v0 A_llist$)) (= (not (lnull$ ?v0)) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) ?v0))))))) :rule implies_neg1)
-(step t.end (cl) :rule resolution :premises (nst21.0 nst21.1 st21))

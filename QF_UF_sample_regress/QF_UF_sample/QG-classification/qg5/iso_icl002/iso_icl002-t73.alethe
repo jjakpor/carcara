@@ -1,5 +1,0 @@
-(assume nst73.0 (not (= (op e2 e4) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))))
-(assume t31 (= e4 (op e0 e0)))
-(assume t45 (= e2 (op (op e0 (op e0 e0)) e0)))
-(step st73 (cl (= (op e2 e4) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))) :rule cong :premises (t45 t31))
-(step t.end (cl) :rule resolution :premises (nst73.0 st73))

@@ -1,4 +1,0 @@
-(assume t227.t11 (= (f6 c_0) c_1))
-(assume nt227.t12.0 (not (= c_1 (f6 c_0))))
-(step t227.t12 (cl (= c_1 (f6 c_0))) :rule symm :premises (t227.t11))
-(step t.end (cl) :rule resolution :premises (nt227.t12.0 t227.t12))

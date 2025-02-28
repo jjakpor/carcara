@@ -1,7 +1,0 @@
-(assume nst378.0 (not (not (= (op e0 e0) (op (op (op e0 e0) e0) e0)))))
-(assume t374 (or (not (= (not (= (op e0 e0) (op e4 e0))) (not (= (op e0 e0) (op (op (op e0 e0) e0) e0))))) (not (not (= (op e0 e0) (op e4 e0)))) (not (= (op e0 e0) (op (op (op e0 e0) e0) e0)))))
-(assume t376 (= (not (= (op e0 e0) (op e4 e0))) (not (= (op e0 e0) (op (op (op e0 e0) e0) e0)))))
-(assume t377 (not (= (op e0 e0) (op e4 e0))))
-(step t374' (cl (not (= (not (= (op e0 e0) (op e4 e0))) (not (= (op e0 e0) (op (op (op e0 e0) e0) e0))))) (not (not (= (op e0 e0) (op e4 e0)))) (not (= (op e0 e0) (op (op (op e0 e0) e0) e0)))) :rule or :premises (t374))
-(step st378 (cl (not (= (op e0 e0) (op (op (op e0 e0) e0) e0)))) :rule resolution :premises (t374' t376 t377))
-(step t.end (cl) :rule resolution :premises (nst378.0 st378))

@@ -1,4 +1,0 @@
-(assume nst314.0 (not (and (and (and (and (and (not (= (op e1 e0) (op e1 e1))) (not (= (op e1 e0) (op e1 e2)))) (not (= (op e1 e0) (op e1 e3)))) (not (= (op e1 e0) (op e1 e4)))) (not (= (op e1 e1) (op e1 e2)))) (not (= (op e1 e1) (op e1 e3))))))
-(assume t313 (and (and (and (and (and (and (not (= (op e1 e0) (op e1 e1))) (not (= (op e1 e0) (op e1 e2)))) (not (= (op e1 e0) (op e1 e3)))) (not (= (op e1 e0) (op e1 e4)))) (not (= (op e1 e1) (op e1 e2)))) (not (= (op e1 e1) (op e1 e3)))) (not (= (op e1 e1) (op e1 e4)))))
-(step st314 (cl (and (and (and (and (and (not (= (op e1 e0) (op e1 e1))) (not (= (op e1 e0) (op e1 e2)))) (not (= (op e1 e0) (op e1 e3)))) (not (= (op e1 e0) (op e1 e4)))) (not (= (op e1 e1) (op e1 e2)))) (not (= (op e1 e1) (op e1 e3))))) :rule and :premises (t313) :args (0))
-(step t.end (cl) :rule resolution :premises (nst314.0 st314))

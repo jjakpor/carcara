@@ -1,4 +1,0 @@
-(assume nst972.0 (not (not (not (not (= (op e0 (op (op e0 (op e0 e0)) e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))))))))
-(assume nst972.1 (not (= (op e0 (op (op e0 (op e0 e0)) e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0)))))
-(step st972 (cl (not (not (not (= (op e0 (op (op e0 (op e0 e0)) e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0)))))) (= (op e0 (op (op e0 (op e0 e0)) e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0)))) :rule not_not)
-(step t.end (cl) :rule resolution :premises (nst972.0 nst972.1 st972))

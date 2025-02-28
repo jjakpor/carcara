@@ -1,6 +1,0 @@
-(assume nst394.0 (not (= x34 x35)))
-(assume t389 (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))
-(assume t393 (or (= x34 x35) (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))))
-(step t393' (cl (= x34 x35) (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))) :rule or :premises (t393))
-(step st394 (cl (= x34 x35)) :rule resolution :premises (t393' t389))
-(step t.end (cl) :rule resolution :premises (nst394.0 st394))

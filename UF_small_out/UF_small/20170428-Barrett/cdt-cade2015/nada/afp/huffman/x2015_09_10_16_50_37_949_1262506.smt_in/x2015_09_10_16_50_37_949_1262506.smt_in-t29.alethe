@@ -1,3 +1,0 @@
-(assume nst29.0 (not (= (not (not (fun_app$b (less_eq$ (cost$ (swapFourSyms$ t$ a$ b$ c$ d$))) (cost$ t$)))) (fun_app$b (less_eq$ (cost$ (swapFourSyms$ t$ a$ b$ c$ d$))) (cost$ t$)))))
-(step st29 (cl (= (not (not (fun_app$b (less_eq$ (cost$ (swapFourSyms$ t$ a$ b$ c$ d$))) (cost$ t$)))) (fun_app$b (less_eq$ (cost$ (swapFourSyms$ t$ a$ b$ c$ d$))) (cost$ t$)))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst29.0 st29))

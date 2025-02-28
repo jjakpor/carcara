@@ -1,6 +1,0 @@
-(assume nst375.0 (not (= (in$0 (read$0 next$0 d_init$0) FP_Caller$0) false)))
-(assume t346 (or (= (in$0 (read$0 next$0 d_init$0) FP_Caller$0) false) (in$0 (read$0 next$0 d_init$0) FP_Caller$0)))
-(assume t374 (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0)))
-(step t346' (cl (= (in$0 (read$0 next$0 d_init$0) FP_Caller$0) false) (in$0 (read$0 next$0 d_init$0) FP_Caller$0)) :rule or :premises (t346))
-(step st375 (cl (= (in$0 (read$0 next$0 d_init$0) FP_Caller$0) false)) :rule resolution :premises (t346' t374))
-(step t.end (cl) :rule resolution :premises (nst375.0 st375))

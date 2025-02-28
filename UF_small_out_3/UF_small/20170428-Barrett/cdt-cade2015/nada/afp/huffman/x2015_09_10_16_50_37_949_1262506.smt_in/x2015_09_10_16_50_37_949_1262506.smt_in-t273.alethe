@@ -1,4 +1,0 @@
-(assume nst273.0 (not (not (and (= b$ c$) (not (= c$ d$))))))
-(assume nst273.1 (not (= b$ c$)))
-(step st273 (cl (not (and (= b$ c$) (not (= c$ d$)))) (= b$ c$)) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nst273.0 nst273.1 st273))

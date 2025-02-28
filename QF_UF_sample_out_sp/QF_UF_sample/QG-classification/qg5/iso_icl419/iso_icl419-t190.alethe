@@ -1,4 +1,0 @@
-(assume nt190.0 (not (not (= (op e0 e2) (op e1 e2)))))
-(assume t189 (and (not (= (op e0 e2) (op e1 e2))) (not (= (op e0 e2) (op e2 e2)))))
-(step t190 (cl (not (= (op e0 e2) (op e1 e2)))) :rule and :premises (t189) :args (0))
-(step t.end (cl) :rule resolution :premises (nt190.0 t190))

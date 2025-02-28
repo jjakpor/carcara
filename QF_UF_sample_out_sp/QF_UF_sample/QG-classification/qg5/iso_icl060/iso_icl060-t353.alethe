@@ -1,8 +1,0 @@
-(assume nt353.0 (not (= e3 (op (op (op e1 e3) e3) (op (op e1 e3) e3)))))
-(assume nt353.1 (not (= e3 (op (op (op e1 e3) e3) e3))))
-(assume nt353.2 (not (= e3 (op (op (op e1 e3) e3) (op e1 e3)))))
-(assume nt353.3 (not (= e3 (op (op (op e1 e3) e3) (op (op e1 e3) e1)))))
-(assume nt353.4 (not (= e3 (op (op (op e1 e3) e3) e1))))
-(assume t352 (or (= e3 (op (op (op e1 e3) e3) (op (op e1 e3) e3))) (= e3 (op (op (op e1 e3) e3) e3)) (= e3 (op (op (op e1 e3) e3) (op e1 e3))) (= e3 (op (op (op e1 e3) e3) (op (op e1 e3) e1))) (= e3 (op (op (op e1 e3) e3) e1))))
-(step t353 (cl (= e3 (op (op (op e1 e3) e3) (op (op e1 e3) e3))) (= e3 (op (op (op e1 e3) e3) e3)) (= e3 (op (op (op e1 e3) e3) (op e1 e3))) (= e3 (op (op (op e1 e3) e3) (op (op e1 e3) e1))) (= e3 (op (op (op e1 e3) e3) e1))) :rule or :premises (t352))
-(step t.end (cl) :rule resolution :premises (nt353.0 nt353.1 nt353.2 nt353.3 nt353.4 t353))

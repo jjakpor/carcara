@@ -1,3 +1,0 @@
-(assume nst52.0 (not (= (not (= (models empty (notR (orR (notR (notR (qR bR))) (notR (pR aR))))) (not (models empty (orR (notR (notR (qR bR))) (notR (pR aR))))))) (not (= (models empty (notR (orR (notR (notR (qR bR))) (notR (pR aR))))) (not (models empty (orR (notR (notR (qR bR))) (notR (pR aR))))))))))
-(step st52 (cl (= (not (= (models empty (notR (orR (notR (notR (qR bR))) (notR (pR aR))))) (not (models empty (orR (notR (notR (qR bR))) (notR (pR aR))))))) (not (= (models empty (notR (orR (notR (notR (qR bR))) (notR (pR aR))))) (not (models empty (orR (notR (notR (qR bR))) (notR (pR aR))))))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst52.0 st52))

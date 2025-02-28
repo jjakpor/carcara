@@ -1,3 +1,0 @@
-(assume nst131.0 (not (= d_init$0 d_init$0)))
-(step st131 (cl (= d_init$0 d_init$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst131.0 st131))

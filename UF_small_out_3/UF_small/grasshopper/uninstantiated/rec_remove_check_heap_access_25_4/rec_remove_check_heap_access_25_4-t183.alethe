@@ -1,5 +1,0 @@
-(assume nst183.0 (not (= (in$0 lst$0 FP_2$0) (in$0 lst$0 (union$0 (setminus$0 (lseg_domain$0 next$0 lst$0 null$0) (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (union$0 (intersection$0 Alloc_1$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (setminus$0 Alloc_1$0 Alloc$0)))))))
-(assume t20 (= lst$0 lst$0))
-(assume t182 (= FP_2$0 (union$0 (setminus$0 (lseg_domain$0 next$0 lst$0 null$0) (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (union$0 (intersection$0 Alloc_1$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (setminus$0 Alloc_1$0 Alloc$0)))))
-(step st183 (cl (= (in$0 lst$0 FP_2$0) (in$0 lst$0 (union$0 (setminus$0 (lseg_domain$0 next$0 lst$0 null$0) (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (union$0 (intersection$0 Alloc_1$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (setminus$0 Alloc_1$0 Alloc$0)))))) :rule cong :premises (t20 t182))
-(step t.end (cl) :rule resolution :premises (nst183.0 st183))

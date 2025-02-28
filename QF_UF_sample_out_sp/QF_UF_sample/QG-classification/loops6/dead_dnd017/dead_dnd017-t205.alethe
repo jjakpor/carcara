@@ -1,7 +1,0 @@
-(assume nt205.0 (not (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0))))
-(assume t192 (or (not (= (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit)) (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0)))) (not (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit))) (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0))))
-(assume t203 (= (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit)) (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0))))
-(assume t204 (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit)))
-(step t192' (cl (not (= (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit)) (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0)))) (not (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit))) (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0))) :rule or :premises (t192))
-(step t205 (cl (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0))) :rule resolution :premises (t192' t203 t204))
-(step t.end (cl) :rule resolution :premises (nt205.0 t205))

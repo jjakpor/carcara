@@ -1,5 +1,0 @@
-(assume nt1073.t17.0 (not (= (= (op e1 e3) (op e3 (op (op e1 e3) e3))) false)))
-(assume t1073.t6 (= (= (op e1 e3) (op e3 (op (op e1 e3) e3))) (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))))
-(assume t1073.t16 (= (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))) false))
-(step t1073.t17 (cl (= (= (op e1 e3) (op e3 (op (op e1 e3) e3))) false)) :rule trans :premises (t1073.t6 t1073.t16))
-(step t.end (cl) :rule resolution :premises (nt1073.t17.0 t1073.t17))

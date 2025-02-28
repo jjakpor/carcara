@@ -1,3 +1,0 @@
-(assume nst68.0 (not (= (= f39 (f33 (f34 f38 (f9 f10 f11)) f39)) (= f39 (f33 (f34 f38 (f9 f10 f11)) f39)))))
-(step st68 (cl (= (= f39 (f33 (f34 f38 (f9 f10 f11)) f39)) (= f39 (f33 (f34 f38 (f9 f10 f11)) f39)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst68.0 st68))

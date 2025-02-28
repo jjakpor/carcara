@@ -1,5 +1,0 @@
-(assume nst1079.0 (not (= (= (op e0 e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false)))
-(assume t929 (= (= (op e0 e0) (op e0 (op e0 e0))) false))
-(assume t1078 (= (= (op e0 e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) (= (op e0 e0) (op e0 (op e0 e0)))))
-(step st1079 (cl (= (= (op e0 e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false)) :rule trans :premises (t1078 t929))
-(step t.end (cl) :rule resolution :premises (nst1079.0 st1079))

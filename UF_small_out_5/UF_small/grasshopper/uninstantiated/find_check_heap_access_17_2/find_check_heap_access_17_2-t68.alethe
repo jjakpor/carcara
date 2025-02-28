@@ -1,3 +1,0 @@
-(assume nst68.0 (not (= (forall ((x Loc) (y Loc)) (or (and (= x y) (in$0 x (setenum$0 y))) (and (not (= x y)) (not (in$0 x (setenum$0 y)))))) (forall ((x Loc) (y Loc)) (and (or (and (= x y) (in$0 x (setenum$0 y))) (not (= x y))) (or (and (= x y) (in$0 x (setenum$0 y))) (not (in$0 x (setenum$0 y)))))))))
-(step st68 (cl (= (forall ((x Loc) (y Loc)) (or (and (= x y) (in$0 x (setenum$0 y))) (and (not (= x y)) (not (in$0 x (setenum$0 y)))))) (forall ((x Loc) (y Loc)) (and (or (and (= x y) (in$0 x (setenum$0 y))) (not (= x y))) (or (and (= x y) (in$0 x (setenum$0 y))) (not (in$0 x (setenum$0 y)))))))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst68.0 st68))

@@ -1,7 +1,0 @@
-(assume nst124.0 (not (not (or (not (Btwn$0 next$0 x$0 x$0 x$0)) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)) (Btwn$0 next$0 x$0 x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 x$0)))))
-(assume nst124.1 (not (not (Btwn$0 next$0 x$0 x$0 x$0))))
-(assume nst124.2 (not (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))))
-(assume nst124.3 (not (Btwn$0 next$0 x$0 x$0 root_x$0)))
-(assume nst124.4 (not (Btwn$0 next$0 x$0 root_x$0 x$0)))
-(step st124 (cl (not (or (not (Btwn$0 next$0 x$0 x$0 x$0)) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)) (Btwn$0 next$0 x$0 x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 x$0))) (not (Btwn$0 next$0 x$0 x$0 x$0)) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)) (Btwn$0 next$0 x$0 x$0 root_x$0) (Btwn$0 next$0 x$0 root_x$0 x$0)) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst124.0 nst124.1 nst124.2 nst124.3 nst124.4 st124))

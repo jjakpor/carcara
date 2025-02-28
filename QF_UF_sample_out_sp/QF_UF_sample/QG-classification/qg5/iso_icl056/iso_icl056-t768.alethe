@@ -1,6 +1,0 @@
-(assume nt768.0 (not (not (= (op e1 e1) (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))))))
-(assume t753 (or (not (= (= (op e1 e1) (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))) false)) (not (= (op e1 e1) (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))))))
-(assume t767 (= (= (op e1 e1) (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))) false))
-(step t753' (cl (not (= (= (op e1 e1) (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))) false)) (not (= (op e1 e1) (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))))) :rule or :premises (t753))
-(step t768 (cl (not (= (op e1 e1) (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))))) :rule resolution :premises (t753' t767))
-(step t.end (cl) :rule resolution :premises (nt768.0 t768))

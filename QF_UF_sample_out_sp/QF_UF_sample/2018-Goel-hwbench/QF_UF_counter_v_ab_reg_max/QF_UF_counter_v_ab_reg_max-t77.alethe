@@ -1,5 +1,0 @@
-(assume nt77.0 (not (= (= y$6 (= y$n15s4 y$X)) (= y$6 (= y$X y$n15s4)))))
-(assume t75 (= y$6 y$6))
-(assume t76 (= (= y$n15s4 y$X) (= y$X y$n15s4)))
-(step t77 (cl (= (= y$6 (= y$n15s4 y$X)) (= y$6 (= y$X y$n15s4)))) :rule cong :premises (t75 t76))
-(step t.end (cl) :rule resolution :premises (nt77.0 t77))

@@ -1,5 +1,0 @@
-(assume nst63.0 (not (= y$v_A y$v_k_Belt)))
-(assume t12 (= y$v_A y$v_B))
-(assume t62 (= y$v_B y$v_k_Belt))
-(step st63 (cl (= y$v_A y$v_k_Belt)) :rule trans :premises (t12 t62))
-(step t.end (cl) :rule resolution :premises (nst63.0 st63))

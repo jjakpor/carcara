@@ -1,3 +1,0 @@
-(assume nst1.0 (not (= (not (not (p (eval_alpha empty aR)))) (p (eval_alpha empty aR)))))
-(step st1 (cl (= (not (not (p (eval_alpha empty aR)))) (p (eval_alpha empty aR)))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst1.0 st1))

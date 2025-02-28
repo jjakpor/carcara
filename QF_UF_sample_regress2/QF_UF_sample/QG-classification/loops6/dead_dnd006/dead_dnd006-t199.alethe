@@ -1,5 +1,0 @@
-(assume nst199.0 (not (not (= e3 (op e3 (op e3 e3))))))
-(assume nst199.1 (not (= e3 e0)))
-(assume t198 (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0)))
-(step st199 (cl (not (= e3 (op e3 (op e3 e3)))) (= e3 e0)) :rule or :premises (t198))
-(step t.end (cl) :rule resolution :premises (nst199.0 nst199.1 st199))

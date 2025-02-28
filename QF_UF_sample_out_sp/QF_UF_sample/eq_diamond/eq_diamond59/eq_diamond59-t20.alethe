@@ -1,5 +1,0 @@
-(assume nt20.0 (not (= (= (= x0 x58) (not (not (= x0 x58)))) true)))
-(assume t18 (= (= (= x0 x58) (not (not (= x0 x58)))) (= (= x0 x58) (= x0 x58))))
-(assume t19 (= (= (= x0 x58) (= x0 x58)) true))
-(step t20 (cl (= (= (= x0 x58) (not (not (= x0 x58)))) true)) :rule trans :premises (t18 t19))
-(step t.end (cl) :rule resolution :premises (nt20.0 t20))

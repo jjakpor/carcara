@@ -1,5 +1,0 @@
-(assume nst17.0 (not (= (= i2 (not (= r2 b2))) (= i2 (not (= b2 r2))))))
-(assume t8 (= i2 i2))
-(assume t16 (= (not (= r2 b2)) (not (= b2 r2))))
-(step st17 (cl (= (= i2 (not (= r2 b2))) (= i2 (not (= b2 r2))))) :rule cong :premises (t8 t16))
-(step t.end (cl) :rule resolution :premises (nst17.0 st17))

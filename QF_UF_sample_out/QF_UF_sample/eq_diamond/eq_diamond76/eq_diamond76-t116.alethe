@@ -1,7 +1,0 @@
-(assume t110 (or (not (= (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3))))) (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))) (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3)))))
-(assume t114 (= (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3)))))
-(assume t115 (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))
-(assume nt116.0 (not (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3)))))
-(step t110' (cl (not (= (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3))))) (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))) (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3)))) :rule or :premises (t110))
-(step t116 (cl (and (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (=> (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (= x2 x3)))) :rule resolution :premises (t110' t114 t115))
-(step t.end (cl) :rule resolution :premises (nt116.0 t116))

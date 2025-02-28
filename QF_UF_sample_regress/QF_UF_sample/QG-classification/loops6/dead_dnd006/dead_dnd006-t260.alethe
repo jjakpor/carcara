@@ -1,6 +1,0 @@
-(assume nst260.0 (not (not (and (= e0 (op e4 (op e4 e0))) (not (= e0 (op e4 e0)))))))
-(assume t215 (or (= e0 (op e4 (op e4 e0))) (not (and (= e0 (op e4 (op e4 e0))) (not (= e0 (op e4 e0)))))))
-(assume t259 (not (= e0 (op e4 (op e4 e0)))))
-(step t215' (cl (= e0 (op e4 (op e4 e0))) (not (and (= e0 (op e4 (op e4 e0))) (not (= e0 (op e4 e0)))))) :rule or :premises (t215))
-(step st260 (cl (not (and (= e0 (op e4 (op e4 e0))) (not (= e0 (op e4 e0)))))) :rule resolution :premises (t215' t259))
-(step t.end (cl) :rule resolution :premises (nst260.0 st260))

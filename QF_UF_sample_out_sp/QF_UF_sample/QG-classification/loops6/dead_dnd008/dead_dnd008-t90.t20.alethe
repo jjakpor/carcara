@@ -1,5 +1,0 @@
-(assume nt90.t20.0 (not (= e1 (op e1 (op e1 e1)))))
-(assume t90.t13 (= e1 (op e1 e0)))
-(assume t90.t19 (= (op e1 e0) (op e1 (op e1 e1))))
-(step t90.t20 (cl (= e1 (op e1 (op e1 e1)))) :rule trans :premises (t90.t13 t90.t19))
-(step t.end (cl) :rule resolution :premises (nt90.t20.0 t90.t20))

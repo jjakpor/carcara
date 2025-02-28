@@ -1,5 +1,0 @@
-(assume nt160.0 (not (= (= e2 (op e2 unit)) (= e2 (op e2 e0)))))
-(assume t126 (= e2 e2))
-(assume t159 (= (op e2 unit) (op e2 e0)))
-(step t160 (cl (= (= e2 (op e2 unit)) (= e2 (op e2 e0)))) :rule cong :premises (t126 t159))
-(step t.end (cl) :rule resolution :premises (nt160.0 t160))

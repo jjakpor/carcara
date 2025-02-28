@@ -1,8 +1,0 @@
-(assume nst62.0 (not (= e0 (op (op e0 e0) (op (op e0 e0) e0)))))
-(assume nst62.1 (not (= e0 (op (op e0 e0) (op (op (op e0 e0) e0) e0)))))
-(assume nst62.2 (not (= e0 (op (op e0 e0) (op e0 e0)))))
-(assume nst62.3 (not (= e0 (op (op e0 e0) e0))))
-(assume nst62.4 (not (= e0 (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
-(assume t61 (or (= e0 (op (op e0 e0) (op (op e0 e0) e0))) (= e0 (op (op e0 e0) (op (op (op e0 e0) e0) e0))) (= e0 (op (op e0 e0) (op e0 e0))) (= e0 (op (op e0 e0) e0)) (= e0 (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
-(step st62 (cl (= e0 (op (op e0 e0) (op (op e0 e0) e0))) (= e0 (op (op e0 e0) (op (op (op e0 e0) e0) e0))) (= e0 (op (op e0 e0) (op e0 e0))) (= e0 (op (op e0 e0) e0)) (= e0 (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))) :rule or :premises (t61))
-(step t.end (cl) :rule resolution :premises (nst62.0 nst62.1 nst62.2 nst62.3 nst62.4 st62))

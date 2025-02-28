@@ -1,4 +1,0 @@
-(assume nst203.0 (not (= (not (= (op (op e1 e1) (op e1 e1)) e1)) (not (= e1 (op (op e1 e1) (op e1 e1)))))))
-(assume t202 (= (= (op (op e1 e1) (op e1 e1)) e1) (= e1 (op (op e1 e1) (op e1 e1)))))
-(step st203 (cl (= (not (= (op (op e1 e1) (op e1 e1)) e1)) (not (= e1 (op (op e1 e1) (op e1 e1)))))) :rule cong :premises (t202))
-(step t.end (cl) :rule resolution :premises (nst203.0 st203))

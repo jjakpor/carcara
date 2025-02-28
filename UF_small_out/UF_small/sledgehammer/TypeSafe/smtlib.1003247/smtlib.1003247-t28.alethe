@@ -1,4 +1,0 @@
-(assume nst28.0 (not (=> (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78))) (= (f75 f65 f76 f76) (f64 f65 f66 f67 f72 f78)))))
-(assume nst28.1 (not (not (= (f75 f65 f76 f76) (f64 f65 f66 f67 f72 f78)))))
-(step st28 (cl (=> (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78))) (= (f75 f65 f76 f76) (f64 f65 f66 f67 f72 f78))) (not (= (f75 f65 f76 f76) (f64 f65 f66 f67 f72 f78)))) :rule implies_neg2)
-(step t.end (cl) :rule resolution :premises (nst28.0 nst28.1 st28))

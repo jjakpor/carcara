@@ -1,4 +1,0 @@
-(assume t188 (and (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (=> (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (= x16 x17))))
-(assume nt189.0 (not (=> (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (= x16 x17))))
-(step t189 (cl (=> (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (= x16 x17))) :rule and :premises (t188) :args (1))
-(step t.end (cl) :rule resolution :premises (nt189.0 t189))

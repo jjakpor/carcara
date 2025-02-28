@@ -1,5 +1,0 @@
-(assume nst505.0 (not (not (= (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46)))))))
-(assume nst505.1 (not (not (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))))))
-(assume nst505.2 (not (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46)))))
-(step st505 (cl (not (= (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46))))) (not (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46)))) (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst505.0 nst505.1 nst505.2 st505))

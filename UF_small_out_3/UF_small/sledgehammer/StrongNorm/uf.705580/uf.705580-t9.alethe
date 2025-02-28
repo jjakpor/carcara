@@ -1,4 +1,0 @@
-(assume nst9.0 (not (=> (and (= (f3 f5 f176) (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))) (= f174 (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))) (= (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) f174) (f3 f5 f176)))))
-(assume nst9.1 (not (not (= (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) f174) (f3 f5 f176)))))
-(step st9 (cl (=> (and (= (f3 f5 f176) (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))) (= f174 (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))) (= (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) f174) (f3 f5 f176))) (not (= (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) f174) (f3 f5 f176)))) :rule implies_neg2)
-(step t.end (cl) :rule resolution :premises (nst9.0 nst9.1 st9))

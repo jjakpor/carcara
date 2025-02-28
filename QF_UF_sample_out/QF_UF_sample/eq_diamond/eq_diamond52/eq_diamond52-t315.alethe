@@ -1,5 +1,0 @@
-(assume t314 (=> (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (= x27 x28)))
-(assume nt315.0 (not (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))))
-(assume nt315.1 (not (= x27 x28)))
-(step t315 (cl (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28)))) (= x27 x28)) :rule implies :premises (t314))
-(step t.end (cl) :rule resolution :premises (nt315.0 nt315.1 t315))

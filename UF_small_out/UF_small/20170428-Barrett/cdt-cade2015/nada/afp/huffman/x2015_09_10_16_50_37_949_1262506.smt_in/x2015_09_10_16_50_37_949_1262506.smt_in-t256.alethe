@@ -1,6 +1,0 @@
-(assume nst256.0 (not (= b$ c$)))
-(assume t228 (not (= a$ d$)))
-(assume t255 (or (= a$ d$) (= b$ c$)))
-(step t255' (cl (= a$ d$) (= b$ c$)) :rule or :premises (t255))
-(step st256 (cl (= b$ c$)) :rule resolution :premises (t255' t228))
-(step t.end (cl) :rule resolution :premises (nst256.0 st256))

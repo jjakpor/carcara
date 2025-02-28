@@ -1,7 +1,0 @@
-(assume nst115.0 (not (not y$282)))
-(assume a150 (= y$281 (not y$282)))
-(assume t103 (or (not (= y$281 (not y$282))) (not y$281) (not y$282)))
-(assume t114 y$281)
-(step t103' (cl (not (= y$281 (not y$282))) (not y$281) (not y$282)) :rule or :premises (t103))
-(step st115 (cl (not y$282)) :rule resolution :premises (t103' a150 t114))
-(step t.end (cl) :rule resolution :premises (nst115.0 st115))

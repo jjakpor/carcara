@@ -1,4 +1,0 @@
-(assume nst177.0 (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op e4 e3) (op e4 e3)))))
-(assume t176 (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3)))))
-(step st177 (cl (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op e4 e3) (op e4 e3)))) :rule symm :premises (t176))
-(step t.end (cl) :rule resolution :premises (nst177.0 st177))

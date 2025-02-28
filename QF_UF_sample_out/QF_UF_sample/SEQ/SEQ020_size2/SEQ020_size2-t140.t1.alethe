@@ -1,3 +1,0 @@
-(assume nt140.t1.0 (not (= (= false true) false)))
-(step t140.t1 (cl (= (= false true) false)) :rule rare_rewrite :args ("evaluate"))
-(step t.end (cl) :rule resolution :premises (nt140.t1.0 t140.t1))

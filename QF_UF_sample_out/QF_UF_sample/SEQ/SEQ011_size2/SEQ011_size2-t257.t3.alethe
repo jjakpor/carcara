@@ -1,5 +1,0 @@
-(assume t257.t2 (= (= (p1 (f7 c_0) c_0) false) (not (p1 (f7 c_0) c_0))))
-(assume nt257.t3.0 (not (= (p1 (f7 c_0) c_0) false)))
-(assume nt257.t3.1 (not (not (not (p1 (f7 c_0) c_0)))))
-(step t257.t3 (cl (= (p1 (f7 c_0) c_0) false) (not (not (p1 (f7 c_0) c_0)))) :rule equiv2 :premises (t257.t2))
-(step t.end (cl) :rule resolution :premises (nt257.t3.0 nt257.t3.1 t257.t3))

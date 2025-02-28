@@ -1,3 +1,0 @@
-(assume nst26.0 (not (= (=> (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))) false) (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0)))))))
-(step st26 (cl (= (=> (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))) false) (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0)))))) :rule implies_simplify)
-(step t.end (cl) :rule resolution :premises (nst26.0 st26))

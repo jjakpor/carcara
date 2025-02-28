@@ -1,5 +1,0 @@
-(assume nt106.0 (not (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next)))))
-(assume t91 (= y$28 y$28))
-(assume t105 (= (= y$prop$next y$27) (= y$27 y$prop$next)))
-(step t106 (cl (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next)))) :rule cong :premises (t91 t105))
-(step t.end (cl) :rule resolution :premises (nt106.0 t106))

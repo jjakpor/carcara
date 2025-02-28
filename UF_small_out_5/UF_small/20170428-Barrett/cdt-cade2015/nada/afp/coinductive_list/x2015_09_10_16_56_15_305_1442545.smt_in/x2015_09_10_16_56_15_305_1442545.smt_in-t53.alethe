@@ -1,5 +1,0 @@
-(assume nst53.0 (not (= (= n$ zero$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))))
-(assume t48 (= n$ n$))
-(assume t52 (= zero$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))
-(step st53 (cl (= (= n$ zero$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))) :rule cong :premises (t48 t52))
-(step t.end (cl) :rule resolution :premises (nst53.0 st53))

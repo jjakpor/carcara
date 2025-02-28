@@ -1,4 +1,0 @@
-(assume nst176.0 (not (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16))))
-(assume t175 (and (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16))))
-(step st176 (cl (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16))) :rule and :premises (t175) :args (1))
-(step t.end (cl) :rule resolution :premises (nst176.0 st176))

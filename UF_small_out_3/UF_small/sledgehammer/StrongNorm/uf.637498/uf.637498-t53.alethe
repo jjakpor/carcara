@@ -1,5 +1,0 @@
-(assume nst53.0 (not (not (= (not (= (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39)) f1)) (not (= (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39)) (f115 (f133 f134 f5) f135)))))))
-(assume nst53.1 (not (not (not (= (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39)) f1)))))
-(assume nst53.2 (not (not (= (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39)) (f115 (f133 f134 f5) f135)))))
-(step st53 (cl (not (= (not (= (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39)) f1)) (not (= (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39)) (f115 (f133 f134 f5) f135))))) (not (not (= (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39)) f1))) (not (= (f115 (f133 f134 f5) (f33 (f34 f38 (f9 f10 f11)) f39)) (f115 (f133 f134 f5) f135)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst53.0 nst53.1 nst53.2 st53))

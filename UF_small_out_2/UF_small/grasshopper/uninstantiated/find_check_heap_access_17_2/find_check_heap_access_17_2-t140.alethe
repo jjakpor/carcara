@@ -1,6 +1,0 @@
-(assume nst140.0 (not (Btwn$0 next$0 x$0 x$0 x$0)))
-(assume a37 (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x)))
-(assume t139 (or (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x))) (Btwn$0 next$0 x$0 x$0 x$0)))
-(step t139' (cl (not (forall ((?f FldLoc) (?x Loc)) (Btwn$0 ?f ?x ?x ?x))) (Btwn$0 next$0 x$0 x$0 x$0)) :rule or :premises (t139))
-(step st140 (cl (Btwn$0 next$0 x$0 x$0 x$0)) :rule resolution :premises (t139' a37))
-(step t.end (cl) :rule resolution :premises (nst140.0 st140))

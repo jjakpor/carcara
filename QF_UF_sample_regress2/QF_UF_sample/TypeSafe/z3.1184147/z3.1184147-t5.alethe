@@ -1,3 +1,0 @@
-(assume nst5.0 (not (= f7 f7)))
-(step st5 (cl (= f7 f7)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst5.0 st5))

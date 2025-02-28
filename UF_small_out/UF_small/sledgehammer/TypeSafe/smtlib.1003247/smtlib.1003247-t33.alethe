@@ -1,5 +1,0 @@
-(assume nst33.0 (not (not (= (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) f1)) (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78)))))))
-(assume nst33.1 (not (not (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) f1)))))
-(assume nst33.2 (not (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78)))))
-(step st33 (cl (not (= (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) f1)) (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78))))) (not (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) f1))) (forall ((?v0 S52) (?v1 S51)) (= (f75 ?v0 ?v1 ?v1) (f64 f65 f66 f67 f72 f78)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst33.0 nst33.1 nst33.2 st33))

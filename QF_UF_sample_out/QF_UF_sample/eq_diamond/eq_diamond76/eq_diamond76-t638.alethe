@@ -1,4 +1,0 @@
-(assume t637 (and (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))) (=> (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))) (= x56 x57))))
-(assume nt638.0 (not (=> (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))) (= x56 x57))))
-(step t638 (cl (=> (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))) (= x56 x57))) :rule and :premises (t637) :args (1))
-(step t.end (cl) :rule resolution :premises (nt638.0 t638))

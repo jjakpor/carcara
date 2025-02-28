@@ -1,6 +1,0 @@
-(assume nt616.0 (not (= (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3))) false)))
-(assume t607 (or (= (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3))) false) (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3)))))
-(assume t615 (not (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3)))))
-(step t607' (cl (= (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3))) false) (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3)))) :rule or :premises (t607))
-(step t616 (cl (= (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3))) false)) :rule resolution :premises (t607' t615))
-(step t.end (cl) :rule resolution :premises (nt616.0 t616))

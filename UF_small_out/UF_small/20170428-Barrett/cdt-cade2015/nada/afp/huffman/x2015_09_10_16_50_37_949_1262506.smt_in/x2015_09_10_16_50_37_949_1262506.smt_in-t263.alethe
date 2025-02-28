@@ -1,7 +1,0 @@
-(assume nst263.0 (not (not (or (not (member$ d$ (alphabet$ t$))) (= a$ d$) (= b$ d$) (and (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) d$)) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) d$)))))))
-(assume nst263.1 (not (not (member$ d$ (alphabet$ t$)))))
-(assume nst263.2 (not (= a$ d$)))
-(assume nst263.3 (not (= b$ d$)))
-(assume nst263.4 (not (and (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) d$)) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) d$)))))
-(step st263 (cl (not (or (not (member$ d$ (alphabet$ t$))) (= a$ d$) (= b$ d$) (and (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) d$)) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) d$))))) (not (member$ d$ (alphabet$ t$))) (= a$ d$) (= b$ d$) (and (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) d$)) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) d$)))) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst263.0 nst263.1 nst263.2 nst263.3 nst263.4 st263))

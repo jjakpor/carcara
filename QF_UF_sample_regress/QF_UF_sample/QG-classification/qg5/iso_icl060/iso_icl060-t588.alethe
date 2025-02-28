@@ -1,8 +1,0 @@
-(assume nst588.0 (not (= (= (op (op e1 e3) e3) (op (op e1 e3) e1)) false)))
-(assume nst588.1 (not (= (op (op e1 e3) e3) (op (op e1 e3) e1))))
-(assume t586 (or (= (= (op (op e1 e3) e3) (op (op e1 e3) e1)) false) (not (not (= (op (op e1 e3) e3) (op (op e1 e3) e1))))))
-(assume t587 (or (not (not (not (= (op (op e1 e3) e3) (op (op e1 e3) e1))))) (= (op (op e1 e3) e3) (op (op e1 e3) e1))))
-(step t587' (cl (not (not (not (= (op (op e1 e3) e3) (op (op e1 e3) e1))))) (= (op (op e1 e3) e3) (op (op e1 e3) e1))) :rule or :premises (t587))
-(step t586' (cl (= (= (op (op e1 e3) e3) (op (op e1 e3) e1)) false) (not (not (= (op (op e1 e3) e3) (op (op e1 e3) e1))))) :rule or :premises (t586))
-(step st588 (cl (= (= (op (op e1 e3) e3) (op (op e1 e3) e1)) false) (= (op (op e1 e3) e3) (op (op e1 e3) e1))) :rule resolution :premises (t586' t587'))
-(step t.end (cl) :rule resolution :premises (nst588.0 nst588.1 st588))

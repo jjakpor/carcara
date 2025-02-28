@@ -1,5 +1,0 @@
-(assume t1077 (= (or (or (or (or (= (op e4 e3) e0) (= (op e4 e3) e1)) (= (op e4 e3) e2)) (= (op e4 e3) e3)) (= (op e4 e3) e4)) (or (= (op e4 e3) e4) (= (op e4 e3) e3) (= (op e4 e3) e2) (= (op e4 e3) e0) (= (op e4 e3) e1))))
-(assume t1078 (= (or (= (op e4 e3) e4) (= (op e4 e3) e3) (= (op e4 e3) e2) (= (op e4 e3) e0) (= (op e4 e3) e1)) (or (= e4 (op e4 e3)) (= e3 (op e4 e3)) (= e2 (op e4 e3)) (= e0 (op e4 e3)) (= e1 (op e4 e3)))))
-(assume nt1079.0 (not (= (or (or (or (or (= (op e4 e3) e0) (= (op e4 e3) e1)) (= (op e4 e3) e2)) (= (op e4 e3) e3)) (= (op e4 e3) e4)) (or (= e4 (op e4 e3)) (= e3 (op e4 e3)) (= e2 (op e4 e3)) (= e0 (op e4 e3)) (= e1 (op e4 e3))))))
-(step t1079 (cl (= (or (or (or (or (= (op e4 e3) e0) (= (op e4 e3) e1)) (= (op e4 e3) e2)) (= (op e4 e3) e3)) (= (op e4 e3) e4)) (or (= e4 (op e4 e3)) (= e3 (op e4 e3)) (= e2 (op e4 e3)) (= e0 (op e4 e3)) (= e1 (op e4 e3))))) :rule trans :premises (t1077 t1078))
-(step t.end (cl) :rule resolution :premises (nt1079.0 t1079))

@@ -1,8 +1,0 @@
-(assume nst8.0 (not (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1))))))
-(assume nst8.1 (not (= e1 (op e1 (op e1 e1)))))
-(assume t1 (or (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))) (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))))
-(assume t7 (or (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (= e1 (op e1 (op e1 e1)))))
-(step t1' (cl (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))) (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) :rule or :premises (t1))
-(step t7' (cl (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) (= e1 (op e1 (op e1 e1)))) :rule or :premises (t7))
-(step st8 (cl (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))) (= e1 (op e1 (op e1 e1)))) :rule resolution :premises (t1' t7'))
-(step t.end (cl) :rule resolution :premises (nst8.0 nst8.1 st8))

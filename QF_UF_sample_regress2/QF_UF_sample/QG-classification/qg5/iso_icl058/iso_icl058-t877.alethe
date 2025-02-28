@@ -1,5 +1,0 @@
-(assume nst877.0 (not (not (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) false))))
-(assume nst877.1 (not (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))))
-(assume t876 (= (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) false) (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))))
-(step st877 (cl (not (= (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) false)) (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))) :rule equiv1 :premises (t876))
-(step t.end (cl) :rule resolution :premises (nst877.0 nst877.1 st877))

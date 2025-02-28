@@ -1,5 +1,0 @@
-(assume nt81.0 (not (and (= (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op e0 e0))) (= e0 (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))))
-(assume nt81.1 (not (not (= (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op e0 e0))))))
-(assume nt81.2 (not (not (= e0 (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))))
-(step t81 (cl (and (= (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op e0 e0))) (= e0 (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))) (not (= (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op e0 e0)))) (not (= e0 (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))) :rule and_neg)
-(step t.end (cl) :rule resolution :premises (nt81.0 nt81.1 nt81.2 t81))

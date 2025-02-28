@@ -1,5 +1,0 @@
-(assume nst125.0 (not (not (= (models empty (orR (notR (orR (notR (pR aR)) (qR bR))) (notR (orR (notR (notR (qR bR))) (notR (pR aR)))))) (or (models empty (notR (orR (notR (pR aR)) (qR bR)))) (models empty (notR (orR (notR (notR (qR bR))) (notR (pR aR))))))))))
-(assume nst125.1 (not (not (models empty (orR (notR (orR (notR (pR aR)) (qR bR))) (notR (orR (notR (notR (qR bR))) (notR (pR aR)))))))))
-(assume nst125.2 (not (or (models empty (notR (orR (notR (pR aR)) (qR bR)))) (models empty (notR (orR (notR (notR (qR bR))) (notR (pR aR))))))))
-(step st125 (cl (not (= (models empty (orR (notR (orR (notR (pR aR)) (qR bR))) (notR (orR (notR (notR (qR bR))) (notR (pR aR)))))) (or (models empty (notR (orR (notR (pR aR)) (qR bR)))) (models empty (notR (orR (notR (notR (qR bR))) (notR (pR aR)))))))) (not (models empty (orR (notR (orR (notR (pR aR)) (qR bR))) (notR (orR (notR (notR (qR bR))) (notR (pR aR))))))) (or (models empty (notR (orR (notR (pR aR)) (qR bR)))) (models empty (notR (orR (notR (notR (qR bR))) (notR (pR aR))))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst125.0 nst125.1 nst125.2 st125))

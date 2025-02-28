@@ -1,3 +1,0 @@
-(assume nt362.0 (not (= (= (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (and (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32)))) true)))
-(step t362 (cl (= (= (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (and (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt362.0 t362))

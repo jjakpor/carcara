@@ -1,6 +1,0 @@
-(assume nst418.0 (not (not (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e3)))))
-(assume t397 (or (not (= (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e3)) false)) (not (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e3)))))
-(assume t417 (= (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e3)) false))
-(step t397' (cl (not (= (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e3)) false)) (not (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e3)))) :rule or :premises (t397))
-(step st418 (cl (not (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e3)))) :rule resolution :premises (t397' t417))
-(step t.end (cl) :rule resolution :premises (nst418.0 st418))

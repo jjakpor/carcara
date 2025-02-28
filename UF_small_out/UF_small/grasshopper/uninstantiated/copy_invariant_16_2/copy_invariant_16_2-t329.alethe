@@ -1,6 +1,0 @@
-(assume nst329.0 (not (not (in$0 sk_?e$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))))))
-(assume nst329.1 (not (not (= lst$0 sk_?e$0))))
-(assume nst329.2 (not (not (not (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))))))
-(assume t328 (not (and (in$0 sk_?e$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0) (not (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))))))
-(step st329 (cl (not (in$0 sk_?e$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))) (not (= lst$0 sk_?e$0)) (not (not (in$0 lst$0 (intersection$0 (lseg_domain$0 next$0 lst$0 lst$0) (lseg_domain$0 next$0 lst$0 cp_2$0)))))) :rule not_and :premises (t328))
-(step t.end (cl) :rule resolution :premises (nst329.0 nst329.1 nst329.2 st329))

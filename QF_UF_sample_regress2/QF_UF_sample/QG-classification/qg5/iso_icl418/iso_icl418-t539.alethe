@@ -1,8 +1,0 @@
-(assume nst539.0 (not (= (op e4 e3) (op e4 e4))))
-(assume nst539.1 (not (= (op e3 e4) (op e4 e3))))
-(assume nst539.2 (not (= (op e4 e3) (op (op e3 e4) e4))))
-(assume nst539.3 (not (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4))))
-(assume nst539.4 (not (= (op e4 e3) (op (op e4 e3) e4))))
-(assume t538 (or (= (op e4 e3) (op e4 e4)) (= (op e3 e4) (op e4 e3)) (= (op e4 e3) (op (op e3 e4) e4)) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4)) (= (op e4 e3) (op (op e4 e3) e4))))
-(step st539 (cl (= (op e4 e3) (op e4 e4)) (= (op e3 e4) (op e4 e3)) (= (op e4 e3) (op (op e3 e4) e4)) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e4)) (= (op e4 e3) (op (op e4 e3) e4))) :rule or :premises (t538))
-(step t.end (cl) :rule resolution :premises (nst539.0 nst539.1 nst539.2 nst539.3 nst539.4 st539))

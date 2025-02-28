@@ -1,6 +1,0 @@
-(assume nt151.0 (not (= x12 x13)))
-(assume nt151.1 (not (not (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))))))
-(assume t150 (or (not (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13)))) (= x12 x13)))
-(step t150' (cl (not (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13)))) (= x12 x13)) :rule or :premises (t150))
-(step t151 (cl (= x12 x13) (not (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))))) :rule reordering :premises (t150'))
-(step t.end (cl) :rule resolution :premises (nt151.0 nt151.1 t151))

@@ -1,5 +1,0 @@
-(assume nst135.0 (not (not (= (lseg_set_struct$0 sk_?X_5$0 next$0 x$0 root_x$0 X$0) (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0))))))
-(assume nst135.1 (not (not (lseg_set_struct$0 sk_?X_5$0 next$0 x$0 root_x$0 X$0))))
-(assume nst135.2 (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0))))
-(step st135 (cl (not (= (lseg_set_struct$0 sk_?X_5$0 next$0 x$0 root_x$0 X$0) (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))) (not (lseg_set_struct$0 sk_?X_5$0 next$0 x$0 root_x$0 X$0)) (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst135.0 nst135.1 nst135.2 st135))

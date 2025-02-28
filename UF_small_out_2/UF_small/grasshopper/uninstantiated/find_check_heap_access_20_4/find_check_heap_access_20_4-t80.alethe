@@ -1,5 +1,0 @@
-(assume nst80.0 (not (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0))))))
-(assume nst80.1 (not (= root_x$0 x$0)))
-(assume nst80.2 (not (not (Btwn$0 next$0 x$0 x$0 root_x$0))))
-(step st80 (cl (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0)))) (= root_x$0 x$0) (not (Btwn$0 next$0 x$0 x$0 root_x$0))) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst80.0 nst80.1 nst80.2 st80))

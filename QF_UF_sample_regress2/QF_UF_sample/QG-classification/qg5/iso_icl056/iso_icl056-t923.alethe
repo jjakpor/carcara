@@ -1,5 +1,0 @@
-(assume nst923.0 (not (not (= (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))) false))))
-(assume nst923.1 (not (not (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))))
-(assume t922 (= (= (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))) false) (not (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))))
-(step st923 (cl (not (= (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))) false)) (not (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))) :rule equiv1 :premises (t922))
-(step t.end (cl) :rule resolution :premises (nst923.0 nst923.1 st923))

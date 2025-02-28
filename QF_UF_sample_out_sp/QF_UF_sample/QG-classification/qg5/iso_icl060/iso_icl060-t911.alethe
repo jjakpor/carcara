@@ -1,5 +1,0 @@
-(assume nt911.0 (not (= (= e1 (op e3 e2)) (= e1 (op e3 (op e1 e3))))))
-(assume t9 (= e1 e1))
-(assume t154 (= (op e3 e2) (op e3 (op e1 e3))))
-(step t911 (cl (= (= e1 (op e3 e2)) (= e1 (op e3 (op e1 e3))))) :rule cong :premises (t9 t154))
-(step t.end (cl) :rule resolution :premises (nt911.0 t911))

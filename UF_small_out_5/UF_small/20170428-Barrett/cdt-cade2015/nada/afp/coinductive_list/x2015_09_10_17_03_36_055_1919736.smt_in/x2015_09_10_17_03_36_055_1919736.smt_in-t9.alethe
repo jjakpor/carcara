@@ -1,3 +1,0 @@
-(assume nst9.0 (not (= (= (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$)) true) (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$)))))
-(step st9 (cl (= (= (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$)) true) (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$)))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nst9.0 st9))

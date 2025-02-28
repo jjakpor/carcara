@@ -1,7 +1,0 @@
-(assume nst282.0 (not (not (or (= prv_5$0 (read$0 next$0 d_init$0)) (not (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0))))))
-(assume t5 (or (= prv_5$0 (read$0 next$0 d_init$0)) (not (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0)) (not (or (= prv_5$0 (read$0 next$0 d_init$0)) (not (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0))))))
-(assume t43 (not (= prv_5$0 (read$0 next$0 d_init$0))))
-(assume t281 (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0))
-(step t5' (cl (= prv_5$0 (read$0 next$0 d_init$0)) (not (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0)) (not (or (= prv_5$0 (read$0 next$0 d_init$0)) (not (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0))))) :rule or :premises (t5))
-(step st282 (cl (not (or (= prv_5$0 (read$0 next$0 d_init$0)) (not (Btwn$0 next$0 c_init$0 (read$0 next$0 d_init$0) prv_5$0))))) :rule resolution :premises (t5' t43 t281))
-(step t.end (cl) :rule resolution :premises (nst282.0 st282))

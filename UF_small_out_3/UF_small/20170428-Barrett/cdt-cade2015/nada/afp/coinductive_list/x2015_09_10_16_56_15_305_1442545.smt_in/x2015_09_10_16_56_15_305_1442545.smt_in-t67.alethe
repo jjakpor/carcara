@@ -1,6 +1,0 @@
-(assume t1 (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)) (not (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))))
-(assume t61 (not (fun_app$h lnull$ xs$)))
-(assume t64 (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))
-(assume t66 (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))
-(step t1' (cl (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)) (not (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))) :rule or :premises (t1))
-(step st67 (cl) :rule resolution :premises (t1' t61 t64 t66))

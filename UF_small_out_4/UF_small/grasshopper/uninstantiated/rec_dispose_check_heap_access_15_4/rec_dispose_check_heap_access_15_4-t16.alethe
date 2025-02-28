@@ -1,5 +1,0 @@
-(assume nst16.0 (not (not (= (= FP$0 sk_?X$0) (= FP$0 (lseg_domain$0 next$0 lst$0 null$0))))))
-(assume nst16.1 (not (not (= FP$0 sk_?X$0))))
-(assume nst16.2 (not (= FP$0 (lseg_domain$0 next$0 lst$0 null$0))))
-(step st16 (cl (not (= (= FP$0 sk_?X$0) (= FP$0 (lseg_domain$0 next$0 lst$0 null$0)))) (not (= FP$0 sk_?X$0)) (= FP$0 (lseg_domain$0 next$0 lst$0 null$0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst16.0 nst16.1 nst16.2 st16))

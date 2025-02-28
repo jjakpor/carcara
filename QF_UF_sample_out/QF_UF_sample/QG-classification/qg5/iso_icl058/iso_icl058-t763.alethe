@@ -1,7 +1,0 @@
-(assume t755 (or (not (= (= (op e2 e3) (op e3 e2)) (= (op (op (op (op e0 e0) e0) e0) (op e0 e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0))))) (not (= (op e2 e3) (op e3 e2))) (= (op (op (op (op e0 e0) e0) e0) (op e0 e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0)))))
-(assume t758 (= (= (op e2 e3) (op e3 e2)) (= (op (op (op (op e0 e0) e0) e0) (op e0 e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0)))))
-(assume t762 (= (op e2 e3) (op e3 e2)))
-(assume nt763.0 (not (= (op (op (op (op e0 e0) e0) e0) (op e0 e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0)))))
-(step t755' (cl (not (= (= (op e2 e3) (op e3 e2)) (= (op (op (op (op e0 e0) e0) e0) (op e0 e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0))))) (not (= (op e2 e3) (op e3 e2))) (= (op (op (op (op e0 e0) e0) e0) (op e0 e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0)))) :rule or :premises (t755))
-(step t763 (cl (= (op (op (op (op e0 e0) e0) e0) (op e0 e0)) (op (op e0 e0) (op (op (op e0 e0) e0) e0)))) :rule resolution :premises (t755' t758 t762))
-(step t.end (cl) :rule resolution :premises (nt763.0 t763))

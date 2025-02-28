@@ -1,5 +1,0 @@
-(assume nst13.0 (not (not (= y$66 (= y$v_B y$v_at_press)))))
-(assume nst13.1 (not (not y$66)))
-(assume nst13.2 (not (= y$v_B y$v_at_press)))
-(step st13 (cl (not (= y$66 (= y$v_B y$v_at_press))) (not y$66) (= y$v_B y$v_at_press)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst13.0 nst13.1 nst13.2 st13))

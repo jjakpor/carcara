@@ -1,4 +1,0 @@
-(assume nst94.0 (not (not (and y$291 y$953))))
-(assume nst94.1 (not y$291))
-(step st94 (cl (not (and y$291 y$953)) y$291) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nst94.0 nst94.1 st94))

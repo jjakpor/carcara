@@ -1,4 +1,0 @@
-(assume nt6.0 (not (not (not (not (= nf nf0))))))
-(assume nt6.1 (not (= nf nf0)))
-(step t6 (cl (not (not (not (= nf nf0)))) (= nf nf0)) :rule not_not)
-(step t.end (cl) :rule resolution :premises (nt6.0 nt6.1 t6))

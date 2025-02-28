@@ -1,3 +1,0 @@
-(assume nt46.0 (not (= (op e5 e0) (op e5 e0))))
-(step t46 (cl (= (op e5 e0) (op e5 e0))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt46.0 t46))

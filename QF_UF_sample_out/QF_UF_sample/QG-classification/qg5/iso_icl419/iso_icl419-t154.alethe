@@ -1,8 +1,0 @@
-(assume t150 (= (= (op e0 e2) e4) (= e4 (op e0 e2))))
-(assume t151 (= (= (op e0 e2) e3) (= e3 (op e0 e2))))
-(assume t24 (= (= (op e0 e2) e2) (= e2 (op e0 e2))))
-(assume t152 (= (= (op e0 e2) e0) (= e0 (op e0 e2))))
-(assume t153 (= (= (op e0 e2) e1) (= e1 (op e0 e2))))
-(assume nt154.0 (not (= (or (= (op e0 e2) e4) (= (op e0 e2) e3) (= (op e0 e2) e2) (= (op e0 e2) e0) (= (op e0 e2) e1)) (or (= e4 (op e0 e2)) (= e3 (op e0 e2)) (= e2 (op e0 e2)) (= e0 (op e0 e2)) (= e1 (op e0 e2))))))
-(step t154 (cl (= (or (= (op e0 e2) e4) (= (op e0 e2) e3) (= (op e0 e2) e2) (= (op e0 e2) e0) (= (op e0 e2) e1)) (or (= e4 (op e0 e2)) (= e3 (op e0 e2)) (= e2 (op e0 e2)) (= e0 (op e0 e2)) (= e1 (op e0 e2))))) :rule cong :premises (t150 t151 t24 t152 t153))
-(step t.end (cl) :rule resolution :premises (nt154.0 t154))

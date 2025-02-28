@@ -1,5 +1,0 @@
-(assume nt108.0 (not (= c8 c_0)))
-(assume nt108.1 (not (= c8 c_1)))
-(assume t107 (or (= c8 c_0) (= c8 c_1)))
-(step t108 (cl (= c8 c_0) (= c8 c_1)) :rule or :premises (t107))
-(step t.end (cl) :rule resolution :premises (nt108.0 nt108.1 t108))

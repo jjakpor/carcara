@@ -1,7 +1,0 @@
-(assume nst153.0 (not (= e1 (op e1 e0))))
-(assume t141 (or (not (= (= (op e1 unit) e1) (= e1 (op e1 e0)))) (not (= (op e1 unit) e1)) (= e1 (op e1 e0))))
-(assume t145 (= (= (op e1 unit) e1) (= e1 (op e1 e0))))
-(assume t152 (= (op e1 unit) e1))
-(step t141' (cl (not (= (= (op e1 unit) e1) (= e1 (op e1 e0)))) (not (= (op e1 unit) e1)) (= e1 (op e1 e0))) :rule or :premises (t141))
-(step st153 (cl (= e1 (op e1 e0))) :rule resolution :premises (t141' t145 t152))
-(step t.end (cl) :rule resolution :premises (nst153.0 st153))

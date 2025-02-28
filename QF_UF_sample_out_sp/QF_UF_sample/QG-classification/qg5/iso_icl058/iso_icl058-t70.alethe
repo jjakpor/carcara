@@ -1,4 +1,0 @@
-(assume nt70.0 (not (= (not (= (op (op e0 e0) e0) e0)) (not (= e0 (op (op e0 e0) e0))))))
-(assume t69 (= (= (op (op e0 e0) e0) e0) (= e0 (op (op e0 e0) e0))))
-(step t70 (cl (= (not (= (op (op e0 e0) e0) e0)) (not (= e0 (op (op e0 e0) e0))))) :rule cong :premises (t69))
-(step t.end (cl) :rule resolution :premises (nt70.0 t70))

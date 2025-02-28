@@ -1,6 +1,0 @@
-(assume nst457.0 (not (= x22 x23)))
-(assume nst457.1 (not (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))))))
-(assume t456 (or (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23)))) (= x22 x23)))
-(step t456' (cl (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23)))) (= x22 x23)) :rule or :premises (t456))
-(step st457 (cl (= x22 x23) (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))))) :rule reordering :premises (t456'))
-(step t.end (cl) :rule resolution :premises (nst457.0 nst457.1 st457))

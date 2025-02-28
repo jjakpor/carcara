@@ -1,4 +1,0 @@
-(assume nst582.0 (not (= (not (= (op e3 e4) (op e4 e4))) (not (= (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))))
-(assume t581 (= (= (op e3 e4) (op e4 e4)) (= (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))
-(step st582 (cl (= (not (= (op e3 e4) (op e4 e4))) (not (= (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))) :rule cong :premises (t581))
-(step t.end (cl) :rule resolution :premises (nst582.0 st582))

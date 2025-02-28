@@ -1,5 +1,0 @@
-(assume nst252.0 (not (= (and (or (= null$0 null$0) (not (Btwn$0 next$0 curr_init$0 null$0 null$0))) (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)))) (and true (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)))))))
-(assume t250 (= (or (= null$0 null$0) (not (Btwn$0 next$0 curr_init$0 null$0 null$0))) true))
-(assume t251 (= (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0))) (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)))))
-(step st252 (cl (= (and (or (= null$0 null$0) (not (Btwn$0 next$0 curr_init$0 null$0 null$0))) (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)))) (and true (not (in$0 null$0 (dlseg_domain$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)))))) :rule cong :premises (t250 t251))
-(step t.end (cl) :rule resolution :premises (nst252.0 st252))

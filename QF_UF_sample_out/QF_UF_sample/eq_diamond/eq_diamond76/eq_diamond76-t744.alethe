@@ -1,3 +1,0 @@
-(assume nt744.0 (not (= (= (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (and (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (=> (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (= x66 x67)))) true)))
-(step t744 (cl (= (= (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (and (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (=> (or (and (= x66 y66) (= y66 x67)) (and (= x66 z66) (= z66 x67))) (= x66 x67)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt744.0 t744))

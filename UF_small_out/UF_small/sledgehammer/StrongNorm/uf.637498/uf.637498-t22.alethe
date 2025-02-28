@@ -1,3 +1,0 @@
-(assume nst22.0 (not (or (not (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39)))) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))))
-(step st22 (cl (or (not (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39)))) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 f5) f39)))) :rule forall_inst :args (f5))
-(step t.end (cl) :rule resolution :premises (nst22.0 st22))

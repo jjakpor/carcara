@@ -1,3 +1,0 @@
-(assume nst508.0 (not (= (= e1 (op e1 e1)) (= e1 (op e1 e1)))))
-(step st508 (cl (= (= e1 (op e1 e1)) (= e1 (op e1 e1)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst508.0 st508))

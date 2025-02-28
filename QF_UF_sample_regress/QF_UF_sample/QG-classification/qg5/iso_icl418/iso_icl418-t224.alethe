@@ -1,5 +1,0 @@
-(assume nst224.0 (not (= (= e1 (op e1 (op e1 e1))) (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3)))))))
-(assume t32 (= e1 (op e4 e3)))
-(assume t223 (= (op e1 (op e1 e1)) (op (op e4 e3) (op (op e4 e3) (op e4 e3)))))
-(step st224 (cl (= (= e1 (op e1 (op e1 e1))) (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3)))))) :rule cong :premises (t32 t223))
-(step t.end (cl) :rule resolution :premises (nst224.0 st224))

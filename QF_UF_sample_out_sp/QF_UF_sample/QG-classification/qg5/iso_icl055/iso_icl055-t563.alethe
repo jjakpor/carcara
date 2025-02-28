@@ -1,6 +1,0 @@
-(assume nt563.0 (not (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) e1))))
-(assume t387 (= (op (op e1 e1) (op e1 e1)) (op e1 (op e1 (op (op e1 e1) (op e1 e1))))))
-(assume t492 (= (op e1 (op e1 (op (op e1 e1) (op e1 e1)))) (op e1 (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))
-(assume t562 (= (op e1 (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) e1)))
-(step t563 (cl (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) e1))) :rule trans :premises (t387 t492 t562))
-(step t.end (cl) :rule resolution :premises (nt563.0 t563))

@@ -1,5 +1,0 @@
-(assume nst82.0 (not (not (= (models empty (pR aR)) (p (eval_alpha empty aR))))))
-(assume nst82.1 (not (models empty (pR aR))))
-(assume nst82.2 (not (not (p (eval_alpha empty aR)))))
-(step st82 (cl (not (= (models empty (pR aR)) (p (eval_alpha empty aR)))) (models empty (pR aR)) (not (p (eval_alpha empty aR)))) :rule equiv_pos1)
-(step t.end (cl) :rule resolution :premises (nst82.0 nst82.1 nst82.2 st82))

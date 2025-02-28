@@ -1,5 +1,0 @@
-(assume nt111.0 (not (= y$28 (= (not y$26) (not (= y$X$next y$n15s4))))))
-(assume t108 (= y$28 (= y$prop$next (not (= y$X$next y$n15s4)))))
-(assume t110 (= (= y$prop$next (not (= y$X$next y$n15s4))) (= (not y$26) (not (= y$X$next y$n15s4)))))
-(step t111 (cl (= y$28 (= (not y$26) (not (= y$X$next y$n15s4))))) :rule trans :premises (t108 t110))
-(step t.end (cl) :rule resolution :premises (nt111.0 t111))

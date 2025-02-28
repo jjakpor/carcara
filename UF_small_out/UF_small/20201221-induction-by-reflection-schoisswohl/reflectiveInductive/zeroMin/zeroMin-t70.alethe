@@ -1,7 +1,0 @@
-(define-fun @quantifiers_skolemize_1 () nat (choice ((x nat)) (not (leq zero x))))
-(define-fun @quantifiers_skolemize_15 () nat (choice ((x0 nat)) (not (or (not (models (push_nat empty v0_nat x0) (leqR zeroR (inj_nat v0_nat)))) (models (push_nat empty v0_nat (s x0)) (leqR zeroR (inj_nat v0_nat)))))))
-(assume nst70.0 (not (= (leq zero zero) true)))
-(assume nst70.1 (not (not (leq zero zero))))
-(assume t69 (= (= (leq zero zero) true) (leq zero zero)))
-(step st70 (cl (= (leq zero zero) true) (not (leq zero zero))) :rule equiv2 :premises (t69))
-(step t.end (cl) :rule resolution :premises (nst70.0 nst70.1 st70))

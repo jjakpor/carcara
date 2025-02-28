@@ -1,5 +1,0 @@
-(assume nst260.0 (not (not (= (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (and (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23)))))))
-(assume nst260.1 (not (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))))))
-(assume nst260.2 (not (and (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23)))))
-(step st260 (cl (not (= (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (and (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23))))) (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23)))) (and (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst260.0 nst260.1 nst260.2 st260))

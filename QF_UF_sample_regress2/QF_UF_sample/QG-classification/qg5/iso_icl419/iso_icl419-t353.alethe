@@ -1,5 +1,0 @@
-(assume nst353.0 (not (= (= (op (op e3 e3) (op e3 e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3)))) (= (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(assume t341 (= (op (op e3 e3) (op e3 e3)) (op (op e3 e3) (op e3 e3))))
-(assume t352 (= (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3))) (op (op (op e3 e3) (op e3 e3)) e3)))
-(step st353 (cl (= (= (op (op e3 e3) (op e3 e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3)))) (= (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))) :rule cong :premises (t341 t352))
-(step t.end (cl) :rule resolution :premises (nst353.0 st353))

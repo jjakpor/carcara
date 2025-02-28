@@ -1,6 +1,0 @@
-(assume t401 (or (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18)))) (= x17 x18)))
-(assume nt402.0 (not (= x17 x18)))
-(assume nt402.1 (not (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))))))
-(step t401' (cl (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18)))) (= x17 x18)) :rule or :premises (t401))
-(step t402 (cl (= x17 x18) (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))))) :rule reordering :premises (t401'))
-(step t.end (cl) :rule resolution :premises (nt402.0 nt402.1 t402))

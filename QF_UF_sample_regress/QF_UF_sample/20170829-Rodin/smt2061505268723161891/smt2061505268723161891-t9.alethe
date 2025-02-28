@@ -1,4 +1,0 @@
-(assume nst9.0 (not (not (and prt rd1))))
-(assume nst9.1 (not rd1))
-(step st9 (cl (not (and prt rd1)) rd1) :rule and_pos :args (1))
-(step t.end (cl) :rule resolution :premises (nst9.0 nst9.1 st9))

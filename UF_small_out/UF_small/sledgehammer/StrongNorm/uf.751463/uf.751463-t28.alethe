@@ -1,5 +1,0 @@
-(assume nst28.0 (not (not (forall ((?v0 S9) (?v1 S5)) (= (f11 f22 f188) (f13 (f14 (f15 f16 ?v0) (f5 f187 ?v1)) (f189 ?v0 ?v1)))))))
-(assume nst28.1 (not (= (f11 f22 f188) (f13 (f14 (f15 f16 (f17 (f18 (f19 f20 f23) f27) (f180 (f181 (f182 f183 f184) f185) f186))) (f5 f187 f27)) (f189 (f17 (f18 (f19 f20 f23) f27) (f180 (f181 (f182 f183 f184) f185) f186)) f27)))))
-(assume t27 (or (not (forall ((?v0 S9) (?v1 S5)) (= (f11 f22 f188) (f13 (f14 (f15 f16 ?v0) (f5 f187 ?v1)) (f189 ?v0 ?v1))))) (= (f11 f22 f188) (f13 (f14 (f15 f16 (f17 (f18 (f19 f20 f23) f27) (f180 (f181 (f182 f183 f184) f185) f186))) (f5 f187 f27)) (f189 (f17 (f18 (f19 f20 f23) f27) (f180 (f181 (f182 f183 f184) f185) f186)) f27)))))
-(step st28 (cl (not (forall ((?v0 S9) (?v1 S5)) (= (f11 f22 f188) (f13 (f14 (f15 f16 ?v0) (f5 f187 ?v1)) (f189 ?v0 ?v1))))) (= (f11 f22 f188) (f13 (f14 (f15 f16 (f17 (f18 (f19 f20 f23) f27) (f180 (f181 (f182 f183 f184) f185) f186))) (f5 f187 f27)) (f189 (f17 (f18 (f19 f20 f23) f27) (f180 (f181 (f182 f183 f184) f185) f186)) f27)))) :rule or :premises (t27))
-(step t.end (cl) :rule resolution :premises (nst28.0 nst28.1 st28))

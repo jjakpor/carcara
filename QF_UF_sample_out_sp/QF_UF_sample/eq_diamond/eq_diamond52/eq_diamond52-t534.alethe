@@ -1,4 +1,0 @@
-(assume nt534.0 (not (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48))))
-(assume t533 (and (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48))))
-(step t534 (cl (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48))) :rule and :premises (t533) :args (1))
-(step t.end (cl) :rule resolution :premises (nt534.0 t534))

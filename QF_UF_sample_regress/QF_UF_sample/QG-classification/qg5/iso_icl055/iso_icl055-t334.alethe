@@ -1,4 +1,0 @@
-(assume nst334.0 (not (not (= (op e0 e2) (op e1 e2)))))
-(assume t333 (and (not (= (op e0 e2) (op e1 e2))) (not (= (op e0 e2) (op e2 e2)))))
-(step st334 (cl (not (= (op e0 e2) (op e1 e2)))) :rule and :premises (t333) :args (0))
-(step t.end (cl) :rule resolution :premises (nst334.0 st334))

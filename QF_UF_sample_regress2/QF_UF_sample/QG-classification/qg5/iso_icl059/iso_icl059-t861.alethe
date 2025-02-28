@@ -1,4 +1,0 @@
-(assume nst861.0 (not (not (= (op e2 e1) (op e4 e1)))))
-(assume t634 (and (and (and (and (and (and (and (and (not (= (op e0 e1) (op e1 e1))) (not (= (op e0 e1) (op e2 e1)))) (not (= (op e0 e1) (op e3 e1)))) (not (= (op e0 e1) (op e4 e1)))) (not (= (op e1 e1) (op e2 e1)))) (not (= (op e1 e1) (op e3 e1)))) (not (= (op e1 e1) (op e4 e1)))) (not (= (op e2 e1) (op e3 e1)))) (not (= (op e2 e1) (op e4 e1)))))
-(step st861 (cl (not (= (op e2 e1) (op e4 e1)))) :rule and :premises (t634) :args (1))
-(step t.end (cl) :rule resolution :premises (nst861.0 st861))

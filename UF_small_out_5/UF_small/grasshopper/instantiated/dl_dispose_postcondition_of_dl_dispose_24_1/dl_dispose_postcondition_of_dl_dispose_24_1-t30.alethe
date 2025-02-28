@@ -1,4 +1,0 @@
-(assume nst30.0 (not (= FP_1$0 sk_?X_3$0)))
-(assume a53 (= sk_?X_3$0 FP_1$0))
-(step st30 (cl (= FP_1$0 sk_?X_3$0)) :rule symm :premises (a53))
-(step t.end (cl) :rule resolution :premises (nst30.0 st30))

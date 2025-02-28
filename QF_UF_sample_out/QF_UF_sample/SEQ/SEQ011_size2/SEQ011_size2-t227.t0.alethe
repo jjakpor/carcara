@@ -1,5 +1,0 @@
-(assume nt227.t0.0 (not (not (= (= false true) false))))
-(assume nt227.t0.1 (not (not (= false true))))
-(assume nt227.t0.2 (not false))
-(step t227.t0 (cl (not (= (= false true) false)) (not (= false true)) false) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt227.t0.0 nt227.t0.1 nt227.t0.2 t227.t0))

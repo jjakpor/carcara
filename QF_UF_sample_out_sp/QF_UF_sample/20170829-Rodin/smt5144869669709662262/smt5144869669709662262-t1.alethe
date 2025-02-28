@@ -1,3 +1,0 @@
-(assume nt1.0 (not (= (= nf0 flash) (= flash nf0))))
-(step t1 (cl (= (= nf0 flash) (= flash nf0))) :rule rare_rewrite :args ("eq-symm" nf0 flash))
-(step t.end (cl) :rule resolution :premises (nt1.0 t1))

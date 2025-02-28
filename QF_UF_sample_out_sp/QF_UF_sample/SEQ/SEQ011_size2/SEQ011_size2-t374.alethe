@@ -1,6 +1,0 @@
-(assume nt374.0 (not (not (and (p1 (f6 c_1) c_1) (= c_1 (f6 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))))))
-(assume nt374.1 (not false))
-(assume t373 (or (not (and (p1 (f6 c_1) c_1) (= c_1 (f6 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) (not (and (p1 (f6 c_1) c_1) (= c_1 (f6 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) (not (and (p1 (f6 c_1) c_1) (= c_1 (f6 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) (not (and (p1 (f6 c_1) c_1) (= c_1 (f6 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) false))
-(step t373' (cl (not (and (p1 (f6 c_1) c_1) (= c_1 (f6 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) (not (and (p1 (f6 c_1) c_1) (= c_1 (f6 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) (not (and (p1 (f6 c_1) c_1) (= c_1 (f6 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) (not (and (p1 (f6 c_1) c_1) (= c_1 (f6 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) false) :rule or :premises (t373))
-(step t374 (cl (not (and (p1 (f6 c_1) c_1) (= c_1 (f6 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) false) :rule contraction :premises (t373'))
-(step t.end (cl) :rule resolution :premises (nt374.0 nt374.1 t374))

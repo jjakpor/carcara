@@ -1,4 +1,0 @@
-(assume nst726.0 (not (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65))))
-(assume t725 (and (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65))))
-(step st726 (cl (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65))) :rule and :premises (t725) :args (1))
-(step t.end (cl) :rule resolution :premises (nst726.0 st726))

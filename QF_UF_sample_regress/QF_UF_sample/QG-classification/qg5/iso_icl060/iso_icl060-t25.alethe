@@ -1,4 +1,0 @@
-(assume nst25.0 (not (= e0 (op e2 e1))))
-(assume t12 (and (= e0 (op e2 e1)) (= e2 (op e1 e3))))
-(step st25 (cl (= e0 (op e2 e1))) :rule and :premises (t12) :args (0))
-(step t.end (cl) :rule resolution :premises (nst25.0 st25))

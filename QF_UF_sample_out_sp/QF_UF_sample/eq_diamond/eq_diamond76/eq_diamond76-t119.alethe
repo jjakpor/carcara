@@ -1,6 +1,0 @@
-(assume nt119.0 (not (= x2 x3)))
-(assume nt119.1 (not (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))))
-(assume t118 (or (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))) (= x2 x3)))
-(step t118' (cl (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))) (= x2 x3)) :rule or :premises (t118))
-(step t119 (cl (= x2 x3) (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))))) :rule reordering :premises (t118'))
-(step t.end (cl) :rule resolution :premises (nt119.0 nt119.1 t119))

@@ -1,5 +1,0 @@
-(assume nst180.0 (not (not (= (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (and (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (=> (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (= x16 x17)))))))
-(assume nst180.1 (not (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))))))
-(assume nst180.2 (not (and (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (=> (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (= x16 x17)))))
-(step st180 (cl (not (= (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (and (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (=> (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (= x16 x17))))) (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17)))) (and (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (=> (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (= x16 x17)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst180.0 nst180.1 nst180.2 st180))

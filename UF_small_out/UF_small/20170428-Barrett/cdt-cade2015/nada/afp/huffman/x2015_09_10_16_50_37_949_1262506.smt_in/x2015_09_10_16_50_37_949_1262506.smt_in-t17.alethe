@@ -1,5 +1,0 @@
-(assume nst17.0 (not (not (= (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$)) true))))
-(assume nst17.1 (not (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$))))
-(assume t16 (= (= (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$)) true) (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$))))
-(step st17 (cl (not (= (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$)) true)) (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$))) :rule equiv1 :premises (t16))
-(step t.end (cl) :rule resolution :premises (nst17.0 nst17.1 st17))

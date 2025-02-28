@@ -1,6 +1,0 @@
-(assume nst12.0 (not (not (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4)))))))))
-(assume a9 (not (= (shd$ as$) (lab$ tr$))))
-(assume t11 (or (= (shd$ as$) (lab$ tr$)) (not (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4)))))))))
-(step t11' (cl (= (shd$ as$) (lab$ tr$)) (not (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4)))))))) :rule or :premises (t11))
-(step st12 (cl (not (and (= (shd$ as$) (lab$ tr$)) (not (forall ((?v4 A_treeFI$)) (or (not (member$ ?v4 (set$ (sub$ tr$)))) (not (fun_app$a (properPath$ (stl$ as$)) ?v4)))))))) :rule resolution :premises (t11' a9))
-(step t.end (cl) :rule resolution :premises (nst12.0 st12))

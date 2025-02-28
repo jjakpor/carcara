@@ -1,8 +1,0 @@
-(assume nt177.0 (not (p1 (f7 c_0) c_0)))
-(assume nt177.1 (not (not (p1 (f6 c_0) c_0))))
-(assume nt177.2 (not (not (= c_0 (f7 c_0)))))
-(assume nt177.3 (not (not (= c_0 (f6 c_0)))))
-(assume t176 (or (p1 (f7 c_0) c_0) (not (= c_0 (f7 c_0))) (not (= c_0 (f6 c_0))) (not (p1 (f6 c_0) c_0))))
-(step t176' (cl (p1 (f7 c_0) c_0) (not (= c_0 (f7 c_0))) (not (= c_0 (f6 c_0))) (not (p1 (f6 c_0) c_0))) :rule or :premises (t176))
-(step t177 (cl (p1 (f7 c_0) c_0) (not (p1 (f6 c_0) c_0)) (not (= c_0 (f7 c_0))) (not (= c_0 (f6 c_0)))) :rule reordering :premises (t176'))
-(step t.end (cl) :rule resolution :premises (nt177.0 nt177.1 nt177.2 nt177.3 t177))

@@ -1,6 +1,0 @@
-(assume nst30.0 (not (and (= null$0 (read$0 next$0 d_init$0)) (= prv_init$0 (read$0 prev$0 curr_init$0)) (in$0 d_init$0 sk_?X_76$0))))
-(assume t26 (or (and (= null$0 (read$0 next$0 d_init$0)) (= prv_init$0 (read$0 prev$0 curr_init$0)) (in$0 d_init$0 sk_?X_76$0)) (and (= null$0 curr_init$0) (= d_init$0 prv_init$0))))
-(assume t29 (not (and (= null$0 curr_init$0) (= d_init$0 prv_init$0))))
-(step t26' (cl (and (= null$0 (read$0 next$0 d_init$0)) (= prv_init$0 (read$0 prev$0 curr_init$0)) (in$0 d_init$0 sk_?X_76$0)) (and (= null$0 curr_init$0) (= d_init$0 prv_init$0))) :rule or :premises (t26))
-(step st30 (cl (and (= null$0 (read$0 next$0 d_init$0)) (= prv_init$0 (read$0 prev$0 curr_init$0)) (in$0 d_init$0 sk_?X_76$0))) :rule resolution :premises (t26' t29))
-(step t.end (cl) :rule resolution :premises (nst30.0 st30))

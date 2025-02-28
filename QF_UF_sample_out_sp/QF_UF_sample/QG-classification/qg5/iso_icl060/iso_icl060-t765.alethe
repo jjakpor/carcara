@@ -1,3 +1,0 @@
-(assume nt765.0 (not (= (= (op e3 e1) (op e3 e3)) (= (op e3 e1) (op e3 e3)))))
-(step t765 (cl (= (= (op e3 e1) (op e3 e3)) (= (op e3 e1) (op e3 e3)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt765.0 t765))

@@ -1,4 +1,0 @@
-(assume t2.t97 (= (= e1 (op e1 e1)) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
-(assume nt2.t116.0 (not (= (not (= e1 (op e1 e1))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))))
-(step t2.t116 (cl (= (not (= e1 (op e1 e1))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))) :rule cong :premises (t2.t97))
-(step t.end (cl) :rule resolution :premises (nt2.t116.0 t2.t116))

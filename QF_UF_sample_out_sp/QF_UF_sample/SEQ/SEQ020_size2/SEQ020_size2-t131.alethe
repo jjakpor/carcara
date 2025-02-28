@@ -1,3 +1,0 @@
-(assume nt131.0 (not (= (p1 (f7 c_0) c_0) (p1 (f7 c_0) c_0))))
-(step t131 (cl (= (p1 (f7 c_0) c_0) (p1 (f7 c_0) c_0))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt131.0 t131))

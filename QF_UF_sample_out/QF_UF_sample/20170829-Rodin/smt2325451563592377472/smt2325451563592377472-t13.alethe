@@ -1,6 +1,0 @@
-(assume t1 (= (not prt) (not prt)))
-(assume t2 (= (not car) (not car)))
-(assume t12 (= (not (not clk)) clk))
-(assume nt13.0 (not (= (or (not prt) (not car) (not (not clk))) (or (not prt) (not car) clk))))
-(step t13 (cl (= (or (not prt) (not car) (not (not clk))) (or (not prt) (not car) clk))) :rule cong :premises (t1 t2 t12))
-(step t.end (cl) :rule resolution :premises (nt13.0 t13))

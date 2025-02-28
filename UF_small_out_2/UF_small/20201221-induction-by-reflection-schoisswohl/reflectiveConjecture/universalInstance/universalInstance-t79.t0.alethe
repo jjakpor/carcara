@@ -1,6 +1,0 @@
-(assume nt79.0 (not (= (forall ((env env) (v var_alpha) (x alpha)) (= (evalV_alpha (push_alpha env v x) v) x)) (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v))))))
-(anchor :step t79 :args ((env env) (v var_alpha) (x alpha) (:= (env env) env) (:= (v var_alpha) v) (:= (x alpha) x)))
-(step st79.t0 (cl (= (= (evalV_alpha (push_alpha env v x) v) x) (= x (evalV_alpha (push_alpha env v x) v)))) :rule hole)
-(step t79.t0 (cl (= (= (evalV_alpha (push_alpha env v x) v) x) (= x (evalV_alpha (push_alpha env v x) v)))) :rule trust)
-(step t79 (cl (= (forall ((env env) (v var_alpha) (x alpha)) (= (evalV_alpha (push_alpha env v x) v) x)) (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt79.0 t79))

@@ -1,3 +1,0 @@
-(assume nst189.0 (not (= (not (= e3 (op e3 (op e3 e3)))) (not (= e3 (op e3 (op e3 e3)))))))
-(step st189 (cl (= (not (= e3 (op e3 (op e3 e3)))) (not (= e3 (op e3 (op e3 e3)))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst189.0 st189))

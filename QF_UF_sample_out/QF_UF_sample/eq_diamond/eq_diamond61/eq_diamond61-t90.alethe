@@ -1,6 +1,0 @@
-(assume t89 (or (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8)))) (= x7 x8)))
-(assume nt90.0 (not (= x7 x8)))
-(assume nt90.1 (not (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))))
-(step t89' (cl (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8)))) (= x7 x8)) :rule or :premises (t89))
-(step t90 (cl (= x7 x8) (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))) :rule reordering :premises (t89'))
-(step t.end (cl) :rule resolution :premises (nt90.0 nt90.1 t90))

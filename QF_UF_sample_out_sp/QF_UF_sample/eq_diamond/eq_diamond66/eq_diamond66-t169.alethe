@@ -1,4 +1,0 @@
-(assume nt169.0 (not (= x2 x1)))
-(assume t168 (= x1 x2))
-(step t169 (cl (= x2 x1)) :rule symm :premises (t168))
-(step t.end (cl) :rule resolution :premises (nt169.0 t169))

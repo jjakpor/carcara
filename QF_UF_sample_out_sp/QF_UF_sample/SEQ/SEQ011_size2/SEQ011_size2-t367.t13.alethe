@@ -1,5 +1,0 @@
-(assume nt367.t13.0 (not (= (p1 c_1 c_1) (p1 (f6 c_1) c_1))))
-(assume t367.t12 (= c_1 (f6 c_1)))
-(assume t367.t9 (= c_1 c_1))
-(step t367.t13 (cl (= (p1 c_1 c_1) (p1 (f6 c_1) c_1))) :rule cong :premises (t367.t12 t367.t9))
-(step t.end (cl) :rule resolution :premises (nt367.t13.0 t367.t13))

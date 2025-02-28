@@ -1,5 +1,0 @@
-(define-fun @quantifiers_skolemize_10 () A_list$ (choice ((?v3 A_list$)) (not (or (not (member$c ?v3 (collect$a top$b))) (not (= xs$ (fun_app$g llist_of$ ?v3)))))))
-(assume nst21.0 (not (= (not (forall ((?v3 A_list$)) (or (not (member$c ?v3 (collect$a top$b))) (not (= xs$ (fun_app$g llist_of$ ?v3)))))) (not (or (not (member$c @quantifiers_skolemize_10 (collect$a top$b))) (not (= xs$ (fun_app$g llist_of$ @quantifiers_skolemize_10))))))))
-(assume t20 (= (forall ((?v3 A_list$)) (or (not (member$c ?v3 (collect$a top$b))) (not (= xs$ (fun_app$g llist_of$ ?v3))))) (or (not (member$c @quantifiers_skolemize_10 (collect$a top$b))) (not (= xs$ (fun_app$g llist_of$ @quantifiers_skolemize_10))))))
-(step st21 (cl (= (not (forall ((?v3 A_list$)) (or (not (member$c ?v3 (collect$a top$b))) (not (= xs$ (fun_app$g llist_of$ ?v3)))))) (not (or (not (member$c @quantifiers_skolemize_10 (collect$a top$b))) (not (= xs$ (fun_app$g llist_of$ @quantifiers_skolemize_10))))))) :rule cong :premises (t20))
-(step t.end (cl) :rule resolution :premises (nst21.0 st21))

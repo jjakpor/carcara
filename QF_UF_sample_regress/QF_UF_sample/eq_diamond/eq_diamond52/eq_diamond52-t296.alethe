@@ -1,5 +1,0 @@
-(assume nst296.0 (not (not (= (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (and (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (=> (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (= x26 x27)))))))
-(assume nst296.1 (not (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))))))
-(assume nst296.2 (not (and (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (=> (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (= x26 x27)))))
-(step st296 (cl (not (= (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (and (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (=> (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (= x26 x27))))) (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27)))) (and (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (=> (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (= x26 x27)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst296.0 nst296.1 nst296.2 st296))

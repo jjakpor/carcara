@@ -1,6 +1,0 @@
-(assume nst310.0 (not (= x26 x27)))
-(assume nst310.1 (not (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))))))
-(assume t309 (or (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27)))) (= x26 x27)))
-(step t309' (cl (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27)))) (= x26 x27)) :rule or :premises (t309))
-(step st310 (cl (= x26 x27) (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))))) :rule reordering :premises (t309'))
-(step t.end (cl) :rule resolution :premises (nst310.0 nst310.1 st310))

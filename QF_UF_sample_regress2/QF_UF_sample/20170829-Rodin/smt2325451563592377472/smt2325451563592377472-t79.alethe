@@ -1,6 +1,0 @@
-(assume nst79.0 (not car))
-(assume nst79.1 (not (or (not car) (not clk))))
-(assume t78 (or (or (not car) (not clk)) car))
-(step t78' (cl (or (not car) (not clk)) car) :rule or :premises (t78))
-(step st79 (cl car (or (not car) (not clk))) :rule reordering :premises (t78'))
-(step t.end (cl) :rule resolution :premises (nst79.0 nst79.1 st79))

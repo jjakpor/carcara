@@ -1,5 +1,0 @@
-(assume nst268.0 (not (= (= e1 (op e1 e0)) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0)))))
-(assume t44 (= e1 (op (op (op e0 e0) e0) e0)))
-(assume t84 (= (op e1 e0) (op (op (op (op e0 e0) e0) e0) e0)))
-(step st268 (cl (= (= e1 (op e1 e0)) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) e0)))) :rule cong :premises (t44 t84))
-(step t.end (cl) :rule resolution :premises (nst268.0 st268))

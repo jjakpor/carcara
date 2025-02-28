@@ -1,4 +1,0 @@
-(assume nst263.0 (not (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0)))))
-(assume nst263.1 (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))))
-(step st263 (cl (=> (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) :rule implies_neg1)
-(step t.end (cl) :rule resolution :premises (nst263.0 nst263.1 st263))

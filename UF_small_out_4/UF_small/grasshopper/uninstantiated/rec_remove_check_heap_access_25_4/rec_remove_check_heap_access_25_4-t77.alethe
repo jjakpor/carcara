@@ -1,4 +1,0 @@
-(assume nst77.0 (not (=> (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (= ?x (read$0 ?f ?x))) (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y))) (or (not (= lst$0 (read$0 next$0 lst$0))) (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= lst$0 null$0)))))
-(assume nst77.1 (not (not (or (not (= lst$0 (read$0 next$0 lst$0))) (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= lst$0 null$0)))))
-(step st77 (cl (=> (forall ((?f FldLoc) (?x Loc) (?y Loc)) (or (not (= ?x (read$0 ?f ?x))) (not (Btwn$0 ?f ?x ?y ?y)) (= ?x ?y))) (or (not (= lst$0 (read$0 next$0 lst$0))) (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= lst$0 null$0))) (not (or (not (= lst$0 (read$0 next$0 lst$0))) (not (Btwn$0 next$0 lst$0 null$0 null$0)) (= lst$0 null$0)))) :rule implies_neg2)
-(step t.end (cl) :rule resolution :premises (nst77.0 nst77.1 st77))

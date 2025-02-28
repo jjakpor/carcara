@@ -1,7 +1,0 @@
-(assume nt129.0 (not (= (f6 c_0) (f5 c_0))))
-(assume nt129.1 (not (not (= c_1 (f6 c_0)))))
-(assume nt129.2 (not (not (= c_1 (f5 c_0)))))
-(assume t128 (or (not (= c_1 (f5 c_0))) (not (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0))))
-(step t128' (cl (not (= c_1 (f5 c_0))) (not (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0))) :rule or :premises (t128))
-(step t129 (cl (= (f6 c_0) (f5 c_0)) (not (= c_1 (f6 c_0))) (not (= c_1 (f5 c_0)))) :rule reordering :premises (t128'))
-(step t.end (cl) :rule resolution :premises (nt129.0 nt129.1 nt129.2 t129))

@@ -1,7 +1,0 @@
-(assume nst138.0 (not (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))))
-(assume t120 (or (not (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))) (not (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit))) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))))
-(assume t132 (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))))
-(assume t137 (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)))
-(step t120' (cl (not (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))) (not (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit))) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))) :rule or :premises (t120))
-(step st138 (cl (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))) :rule resolution :premises (t120' t132 t137))
-(step t.end (cl) :rule resolution :premises (nst138.0 st138))

@@ -1,8 +1,0 @@
-(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (difference b a))) (member ?x (difference b d))))))
-(assume nst97.0 (not (forall ((?x Elem) (?s1 Set) (?s2 Set)) (or (not (member ?x ?s1)) (not (subset ?s1 ?s2)) (member ?x ?s2)))))
-(assume a0 (forall ((?x Elem) (?s1 Set) (?s2 Set)) (=> (and (member ?x ?s1) (subset ?s1 ?s2)) (member ?x ?s2))))
-(assume t95 (or (not (= (forall ((?x Elem) (?s1 Set) (?s2 Set)) (=> (and (member ?x ?s1) (subset ?s1 ?s2)) (member ?x ?s2))) (forall ((?x Elem) (?s1 Set) (?s2 Set)) (or (not (member ?x ?s1)) (not (subset ?s1 ?s2)) (member ?x ?s2))))) (not (forall ((?x Elem) (?s1 Set) (?s2 Set)) (=> (and (member ?x ?s1) (subset ?s1 ?s2)) (member ?x ?s2)))) (forall ((?x Elem) (?s1 Set) (?s2 Set)) (or (not (member ?x ?s1)) (not (subset ?s1 ?s2)) (member ?x ?s2)))))
-(assume t96 (= (forall ((?x Elem) (?s1 Set) (?s2 Set)) (=> (and (member ?x ?s1) (subset ?s1 ?s2)) (member ?x ?s2))) (forall ((?x Elem) (?s1 Set) (?s2 Set)) (or (not (member ?x ?s1)) (not (subset ?s1 ?s2)) (member ?x ?s2)))))
-(step t95' (cl (not (= (forall ((?x Elem) (?s1 Set) (?s2 Set)) (=> (and (member ?x ?s1) (subset ?s1 ?s2)) (member ?x ?s2))) (forall ((?x Elem) (?s1 Set) (?s2 Set)) (or (not (member ?x ?s1)) (not (subset ?s1 ?s2)) (member ?x ?s2))))) (not (forall ((?x Elem) (?s1 Set) (?s2 Set)) (=> (and (member ?x ?s1) (subset ?s1 ?s2)) (member ?x ?s2)))) (forall ((?x Elem) (?s1 Set) (?s2 Set)) (or (not (member ?x ?s1)) (not (subset ?s1 ?s2)) (member ?x ?s2)))) :rule or :premises (t95))
-(step st97 (cl (forall ((?x Elem) (?s1 Set) (?s2 Set)) (or (not (member ?x ?s1)) (not (subset ?s1 ?s2)) (member ?x ?s2)))) :rule resolution :premises (t95' t96 a0))
-(step t.end (cl) :rule resolution :premises (nst97.0 st97))

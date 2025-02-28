@@ -1,5 +1,0 @@
-(assume nst131.0 (not (not (or (not (fun_app$q lnull$d xs$)) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$))))))
-(assume nst131.1 (not (not (fun_app$q lnull$d xs$))))
-(assume nst131.2 (not (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$))))
-(step st131 (cl (not (or (not (fun_app$q lnull$d xs$)) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$)))) (not (fun_app$q lnull$d xs$)) (= lNil$ (fun_app$c (ldropn$ (suc$ n$)) xs$))) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst131.0 nst131.1 nst131.2 st131))

@@ -1,3 +1,0 @@
-(assume nt842.0 (not (= (= (= x0 x75) false) (not (= x0 x75)))))
-(step t842 (cl (= (= (= x0 x75) false) (not (= x0 x75)))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nt842.0 t842))

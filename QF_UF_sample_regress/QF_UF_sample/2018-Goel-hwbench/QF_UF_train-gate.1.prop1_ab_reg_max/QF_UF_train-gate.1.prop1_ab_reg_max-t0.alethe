@@ -1,5 +1,0 @@
-(assume nst0.0 (not (not (= y$id37_op (and y$45 y$v3_1517448508_35_op)))))
-(assume nst0.1 (not (not y$id37_op)))
-(assume nst0.2 (not (and y$45 y$v3_1517448508_35_op)))
-(step st0 (cl (not (= y$id37_op (and y$45 y$v3_1517448508_35_op))) (not y$id37_op) (and y$45 y$v3_1517448508_35_op)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst0.0 nst0.1 nst0.2 st0))

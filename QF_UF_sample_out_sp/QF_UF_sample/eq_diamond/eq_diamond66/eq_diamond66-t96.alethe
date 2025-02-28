@@ -1,6 +1,0 @@
-(assume nt96.0 (not (= x7 x8)))
-(assume t95 (or (= x7 x8) (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))))
-(assume t91 (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))
-(step t95' (cl (= x7 x8) (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))) :rule or :premises (t95))
-(step t96 (cl (= x7 x8)) :rule resolution :premises (t95' t91))
-(step t.end (cl) :rule resolution :premises (nt96.0 t96))

@@ -1,3 +1,0 @@
-(assume nst821.0 (not (= (= (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (and (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (=> (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (= x73 x74)))) true)))
-(step st821 (cl (= (= (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (and (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (=> (or (and (= x73 y73) (= y73 x74)) (and (= x73 z73) (= z73 x74))) (= x73 x74)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst821.0 st821))

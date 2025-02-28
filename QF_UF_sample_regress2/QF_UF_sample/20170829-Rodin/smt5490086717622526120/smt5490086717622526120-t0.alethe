@@ -1,5 +1,0 @@
-(assume nst0.0 (not (not (= (or (not red_SR) (not (not prt))) (or (not red_SR) prt)))))
-(assume nst0.1 (not (not (or (not red_SR) (not (not prt))))))
-(assume nst0.2 (not (or (not red_SR) prt)))
-(step st0 (cl (not (= (or (not red_SR) (not (not prt))) (or (not red_SR) prt))) (not (or (not red_SR) (not (not prt)))) (or (not red_SR) prt)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst0.0 nst0.1 nst0.2 st0))

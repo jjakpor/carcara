@@ -1,5 +1,0 @@
-(assume nst100.0 (not (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))))
-(assume nst100.1 (not (= x8 x9)))
-(assume t99 (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9)))
-(step st100 (cl (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9)))) (= x8 x9)) :rule implies :premises (t99))
-(step t.end (cl) :rule resolution :premises (nst100.0 nst100.1 st100))

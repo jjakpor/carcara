@@ -1,3 +1,0 @@
-(assume nt149.0 (not (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))
-(step t149 (cl (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt149.0 t149))

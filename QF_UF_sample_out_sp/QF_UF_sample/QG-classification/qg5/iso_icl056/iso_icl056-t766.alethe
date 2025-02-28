@@ -1,6 +1,0 @@
-(assume nt766.0 (not (= (= (op e1 e1) (op (op e1 e1) e1)) false)))
-(assume t759 (or (= (= (op e1 e1) (op (op e1 e1) e1)) false) (= (op e1 e1) (op (op e1 e1) e1))))
-(assume t765 (not (= (op e1 e1) (op (op e1 e1) e1))))
-(step t759' (cl (= (= (op e1 e1) (op (op e1 e1) e1)) false) (= (op e1 e1) (op (op e1 e1) e1))) :rule or :premises (t759))
-(step t766 (cl (= (= (op e1 e1) (op (op e1 e1) e1)) false)) :rule resolution :premises (t759' t765))
-(step t.end (cl) :rule resolution :premises (nt766.0 t766))

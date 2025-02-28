@@ -1,6 +1,0 @@
-(assume nt424.0 (not (not (p4 c_1))))
-(assume nt424.1 (not (p1 (f5 c_1) c_1)))
-(assume t423 (or (p1 (f5 c_1) c_1) (not (p4 c_1))))
-(step t423' (cl (p1 (f5 c_1) c_1) (not (p4 c_1))) :rule or :premises (t423))
-(step t424 (cl (not (p4 c_1)) (p1 (f5 c_1) c_1)) :rule reordering :premises (t423'))
-(step t.end (cl) :rule resolution :premises (nt424.0 nt424.1 t424))

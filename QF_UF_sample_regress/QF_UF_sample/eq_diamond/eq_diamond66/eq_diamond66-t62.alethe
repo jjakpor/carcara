@@ -1,5 +1,0 @@
-(assume nst62.0 (not (not (= (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (and (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (=> (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (= x9 x10)))))))
-(assume nst62.1 (not (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))))))
-(assume nst62.2 (not (and (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (=> (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (= x9 x10)))))
-(step st62 (cl (not (= (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (and (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (=> (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (= x9 x10))))) (not (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10)))) (and (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (=> (or (and (= x9 y9) (= y9 x10)) (and (= x9 z9) (= z9 x10))) (= x9 x10)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst62.0 nst62.1 nst62.2 st62))

@@ -1,4 +1,0 @@
-(assume nst360.0 (not (not (= e0 e2))))
-(assume t359 (and (not (= e0 e1)) (not (= e0 e2))))
-(step st360 (cl (not (= e0 e2))) :rule and :premises (t359) :args (1))
-(step t.end (cl) :rule resolution :premises (nst360.0 st360))

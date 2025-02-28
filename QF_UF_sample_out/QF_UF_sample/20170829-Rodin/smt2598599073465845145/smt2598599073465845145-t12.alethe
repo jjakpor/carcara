@@ -1,3 +1,0 @@
-(assume nt12.0 (not (= (= (not (= i2 (not (= b2 r2)))) (= i2 (= b2 r2))) true)))
-(step t12 (cl (= (= (not (= i2 (not (= b2 r2)))) (= i2 (= b2 r2))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt12.0 t12))

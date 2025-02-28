@@ -1,7 +1,0 @@
-(assume nst36.0 (not (= curr_init$0 prv_5$0)))
-(assume t32 (or (not (= (= curr_4$0 prv_5$0) (= curr_init$0 prv_5$0))) (not (= curr_4$0 prv_5$0)) (= curr_init$0 prv_5$0)))
-(assume t34 (= (= curr_4$0 prv_5$0) (= curr_init$0 prv_5$0)))
-(assume t35 (= curr_4$0 prv_5$0))
-(step t32' (cl (not (= (= curr_4$0 prv_5$0) (= curr_init$0 prv_5$0))) (not (= curr_4$0 prv_5$0)) (= curr_init$0 prv_5$0)) :rule or :premises (t32))
-(step st36 (cl (= curr_init$0 prv_5$0)) :rule resolution :premises (t32' t34 t35))
-(step t.end (cl) :rule resolution :premises (nst36.0 st36))

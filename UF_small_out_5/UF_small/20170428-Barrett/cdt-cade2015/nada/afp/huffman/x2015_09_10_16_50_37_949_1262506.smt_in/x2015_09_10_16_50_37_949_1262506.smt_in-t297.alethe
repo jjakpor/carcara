@@ -1,5 +1,0 @@
-(assume t1 (or (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) d$)) (not (and (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) d$)) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) d$))))))
-(assume t262 (not (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) d$))))
-(assume t296 (and (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) d$)) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) d$))))
-(step t1' (cl (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) d$)) (not (and (fun_app$b (less_eq$ (fun_app$a (freq$ t$) a$)) (fun_app$a (freq$ t$) d$)) (fun_app$b (less_eq$ (fun_app$a (freq$ t$) b$)) (fun_app$a (freq$ t$) d$))))) :rule or :premises (t1))
-(step st297 (cl) :rule resolution :premises (t1' t262 t296))

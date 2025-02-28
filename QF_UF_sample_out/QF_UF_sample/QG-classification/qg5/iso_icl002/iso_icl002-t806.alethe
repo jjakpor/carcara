@@ -1,6 +1,0 @@
-(assume t800 (or (= (= (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0)) false) (= (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0))))
-(assume t805 (not (= (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0))))
-(assume nt806.0 (not (= (= (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0)) false)))
-(step t800' (cl (= (= (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0)) false) (= (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0))) :rule or :premises (t800))
-(step t806 (cl (= (= (op e0 e0) (op (op (op e0 (op e0 e0)) e0) e0)) false)) :rule resolution :premises (t800' t805))
-(step t.end (cl) :rule resolution :premises (nt806.0 t806))

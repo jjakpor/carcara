@@ -1,5 +1,0 @@
-(assume nt367.0 (not (not (= (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (and (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (=> (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (= x32 x33)))))))
-(assume nt367.1 (not (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))))))
-(assume nt367.2 (not (and (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (=> (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (= x32 x33)))))
-(step t367 (cl (not (= (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (and (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (=> (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (= x32 x33))))) (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33)))) (and (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (=> (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))) (= x32 x33)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt367.0 nt367.1 nt367.2 t367))

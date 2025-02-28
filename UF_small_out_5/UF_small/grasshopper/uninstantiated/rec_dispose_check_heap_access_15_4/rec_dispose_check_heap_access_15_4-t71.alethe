@@ -1,5 +1,0 @@
-(assume nst71.0 (not (not (= (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0)))))
-(assume nst71.1 (not (not (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0))))
-(assume nst71.2 (not (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0)))
-(step st71 (cl (not (= (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0))) (not (lseg_struct$0 sk_?X$0 next$0 lst$0 null$0)) (lseg_struct$0 (lseg_domain$0 next$0 lst$0 null$0) next$0 lst$0 null$0)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst71.0 nst71.1 nst71.2 st71))

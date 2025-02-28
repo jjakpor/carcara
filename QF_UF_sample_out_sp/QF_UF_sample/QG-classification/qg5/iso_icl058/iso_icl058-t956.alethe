@@ -1,4 +1,0 @@
-(assume nt956.0 (not (not (not (not (= e0 (op e0 e0)))))))
-(assume nt956.1 (not (= e0 (op e0 e0))))
-(step t956 (cl (not (not (not (= e0 (op e0 e0))))) (= e0 (op e0 e0))) :rule not_not)
-(step t.end (cl) :rule resolution :premises (nt956.0 nt956.1 t956))

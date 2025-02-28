@@ -1,5 +1,0 @@
-(assume nst245.0 (not (= (or (= null$0 null$0) (not (Btwn$0 next$0 curr_init$0 null$0 null$0))) (or true (not (Btwn$0 next$0 curr_init$0 null$0 null$0))))))
-(assume t240 (= (= null$0 null$0) true))
-(assume t244 (= (not (Btwn$0 next$0 curr_init$0 null$0 null$0)) (not (Btwn$0 next$0 curr_init$0 null$0 null$0))))
-(step st245 (cl (= (or (= null$0 null$0) (not (Btwn$0 next$0 curr_init$0 null$0 null$0))) (or true (not (Btwn$0 next$0 curr_init$0 null$0 null$0))))) :rule cong :premises (t240 t244))
-(step t.end (cl) :rule resolution :premises (nst245.0 st245))

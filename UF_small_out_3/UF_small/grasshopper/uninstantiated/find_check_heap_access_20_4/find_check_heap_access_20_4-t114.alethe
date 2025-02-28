@@ -1,5 +1,0 @@
-(assume nst114.0 (not (= sk_?X_17$0 sk_?X_19$0)))
-(assume t112 (= sk_?X_17$0 sk_?X_18$0))
-(assume t113 (= sk_?X_18$0 sk_?X_19$0))
-(step st114 (cl (= sk_?X_17$0 sk_?X_19$0)) :rule trans :premises (t112 t113))
-(step t.end (cl) :rule resolution :premises (nst114.0 st114))

@@ -1,3 +1,0 @@
-(assume nst78.0 (not (= y$v_k_Press y$v_k_Press)))
-(step st78 (cl (= y$v_k_Press y$v_k_Press)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst78.0 st78))

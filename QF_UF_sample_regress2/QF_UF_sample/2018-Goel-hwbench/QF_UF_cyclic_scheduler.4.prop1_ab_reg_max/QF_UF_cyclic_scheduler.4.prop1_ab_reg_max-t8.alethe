@@ -1,6 +1,0 @@
-(assume nst8.0 (not (not (and y$a_q_error_customer_0 y$127))))
-(assume t2 (or (not (and y$a_q_error_customer_0 y$127)) y$a_q_error_customer_0))
-(assume t7 (not y$a_q_error_customer_0))
-(step t2' (cl (not (and y$a_q_error_customer_0 y$127)) y$a_q_error_customer_0) :rule or :premises (t2))
-(step st8 (cl (not (and y$a_q_error_customer_0 y$127))) :rule resolution :premises (t2' t7))
-(step t.end (cl) :rule resolution :premises (nst8.0 st8))

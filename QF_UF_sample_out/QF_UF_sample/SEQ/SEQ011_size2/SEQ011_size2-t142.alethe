@@ -1,3 +1,0 @@
-(assume nt142.0 (not (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0))))
-(step t142 (cl (= (not (not (p1 (f7 c_0) c_0))) (p1 (f7 c_0) c_0))) :rule rare_rewrite :args ("bool-double-not-elim" (p1 (f7 c_0) c_0)))
-(step t.end (cl) :rule resolution :premises (nt142.0 t142))

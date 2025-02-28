@@ -1,7 +1,0 @@
-(assume nst57.0 (not (= y$v_done y$v_k_Belt)))
-(assume t47 (or (not (= y$74 (= y$v_done y$v_k_Belt))) (not y$74) (= y$v_done y$v_k_Belt)))
-(assume t55 (= y$74 (= y$v_done y$v_k_Belt)))
-(assume t56 y$74)
-(step t47' (cl (not (= y$74 (= y$v_done y$v_k_Belt))) (not y$74) (= y$v_done y$v_k_Belt)) :rule or :premises (t47))
-(step st57 (cl (= y$v_done y$v_k_Belt)) :rule resolution :premises (t47' t55 t56))
-(step t.end (cl) :rule resolution :premises (nst57.0 st57))

@@ -1,6 +1,0 @@
-(assume nst513.0 (not (= x27 x28)))
-(assume t508 (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))
-(assume t512 (or (= x27 x28) (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))))
-(step t512' (cl (= x27 x28) (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))) :rule or :premises (t512))
-(step st513 (cl (= x27 x28)) :rule resolution :premises (t512' t508))
-(step t.end (cl) :rule resolution :premises (nst513.0 st513))

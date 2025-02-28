@@ -1,5 +1,0 @@
-(assume nst362.0 (not (not (= (= (op e0 e4) (op e4 e0)) (= (op (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op e1 e1))))))))
-(assume nst362.1 (not (not (= (op e0 e4) (op e4 e0)))))
-(assume nst362.2 (not (= (op (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op e1 e1))))))
-(step st362 (cl (not (= (= (op e0 e4) (op e4 e0)) (= (op (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op e1 e1)))))) (not (= (op e0 e4) (op e4 e0))) (= (op (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op e1 e1))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst362.0 nst362.1 nst362.2 st362))

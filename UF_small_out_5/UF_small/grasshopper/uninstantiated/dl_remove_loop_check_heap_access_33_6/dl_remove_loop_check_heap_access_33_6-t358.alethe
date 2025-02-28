@@ -1,5 +1,0 @@
-(assume nst358.0 (not (= (in$0 (read$0 next$0 d_init$0) Alloc$0) false)))
-(assume nst358.1 (not (not (not (in$0 (read$0 next$0 d_init$0) Alloc$0)))))
-(assume t357 (= (= (in$0 (read$0 next$0 d_init$0) Alloc$0) false) (not (in$0 (read$0 next$0 d_init$0) Alloc$0))))
-(step st358 (cl (= (in$0 (read$0 next$0 d_init$0) Alloc$0) false) (not (not (in$0 (read$0 next$0 d_init$0) Alloc$0)))) :rule equiv2 :premises (t357))
-(step t.end (cl) :rule resolution :premises (nst358.0 nst358.1 st358))

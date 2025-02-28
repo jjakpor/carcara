@@ -1,5 +1,0 @@
-(assume nst291.0 (not (not (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))))))
-(assume nst291.1 (not (= x6 x7)))
-(assume t290 (=> (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) (= x6 x7)))
-(step st291 (cl (not (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7)))) (= x6 x7)) :rule implies :premises (t290))
-(step t.end (cl) :rule resolution :premises (nst291.0 nst291.1 st291))

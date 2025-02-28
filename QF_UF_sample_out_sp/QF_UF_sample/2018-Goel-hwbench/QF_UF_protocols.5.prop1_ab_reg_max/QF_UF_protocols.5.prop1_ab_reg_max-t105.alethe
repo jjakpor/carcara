@@ -1,5 +1,0 @@
-(assume nt105.0 (not y$v3_1517448506_157_op))
-(assume nt105.1 (not (not (not y$281))))
-(assume a149 (= y$v3_1517448506_157_op (not y$281)))
-(step t105 (cl y$v3_1517448506_157_op (not (not y$281))) :rule equiv2 :premises (a149))
-(step t.end (cl) :rule resolution :premises (nt105.0 nt105.1 t105))

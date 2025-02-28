@@ -1,5 +1,0 @@
-(assume nst80.0 (not (not (= (or (not (not prt)) (not (or (not car) (not clk)))) (or prt (not (or (not car) (not clk))))))))
-(assume nst80.1 (not (not (or (not (not prt)) (not (or (not car) (not clk)))))))
-(assume nst80.2 (not (or prt (not (or (not car) (not clk))))))
-(step st80 (cl (not (= (or (not (not prt)) (not (or (not car) (not clk)))) (or prt (not (or (not car) (not clk)))))) (not (or (not (not prt)) (not (or (not car) (not clk))))) (or prt (not (or (not car) (not clk))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst80.0 nst80.1 nst80.2 st80))

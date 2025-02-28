@@ -1,7 +1,0 @@
-(assume nst276.0 (not (not (and (= b$ c$) (not (= c$ d$))))))
-(assume nst276.1 (not (not (and (= b$ c$) (not (= c$ d$))))))
-(assume nst276.2 (not (not (= b$ d$))))
-(assume t275 (or (not (= b$ d$)) (not (and (= b$ c$) (not (= c$ d$)))) (not (and (= b$ c$) (not (= c$ d$))))))
-(step t275' (cl (not (= b$ d$)) (not (and (= b$ c$) (not (= c$ d$)))) (not (and (= b$ c$) (not (= c$ d$))))) :rule or :premises (t275))
-(step st276 (cl (not (and (= b$ c$) (not (= c$ d$)))) (not (and (= b$ c$) (not (= c$ d$)))) (not (= b$ d$))) :rule reordering :premises (t275'))
-(step t.end (cl) :rule resolution :premises (nst276.0 nst276.1 nst276.2 st276))

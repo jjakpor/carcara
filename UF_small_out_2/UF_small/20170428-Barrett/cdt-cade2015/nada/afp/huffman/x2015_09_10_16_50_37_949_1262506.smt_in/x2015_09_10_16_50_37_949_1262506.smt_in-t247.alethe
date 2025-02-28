@@ -1,3 +1,0 @@
-(assume nst247.0 (not (= (not (not (= b$ c$))) (= b$ c$))))
-(step st247 (cl (= (not (not (= b$ c$))) (= b$ c$))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst247.0 st247))

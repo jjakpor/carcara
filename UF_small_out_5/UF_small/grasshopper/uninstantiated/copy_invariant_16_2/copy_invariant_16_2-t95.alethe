@@ -1,6 +1,0 @@
-(assume nst95.0 (not (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)))
-(assume t87 (or (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0) (not (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)))))
-(assume t94 (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)))
-(step t87' (cl (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0) (not (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)))) :rule or :premises (t87))
-(step st95 (cl (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)) :rule resolution :premises (t87' t94))
-(step t.end (cl) :rule resolution :premises (nst95.0 st95))

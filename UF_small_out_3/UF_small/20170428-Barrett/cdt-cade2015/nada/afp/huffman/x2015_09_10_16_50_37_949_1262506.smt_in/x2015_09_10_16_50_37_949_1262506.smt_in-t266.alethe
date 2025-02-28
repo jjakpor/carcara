@@ -1,3 +1,0 @@
-(assume nst266.0 (not (= (not (= b$ c$)) (not (= b$ c$)))))
-(step st266 (cl (= (not (= b$ c$)) (not (= b$ c$)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst266.0 st266))

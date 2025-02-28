@@ -1,3 +1,0 @@
-(assume nst573.0 (not (= (= (= x0 x51) false) (not (= x0 x51)))))
-(step st573 (cl (= (= (= x0 x51) false) (not (= x0 x51)))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nst573.0 st573))

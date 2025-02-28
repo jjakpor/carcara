@@ -1,7 +1,0 @@
-(assume nst466.0 (not (not (= c_0 (f5 c_1)))))
-(assume t82 (or (= (f6 c_1) (f5 c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))))
-(assume t326 (not (= (f6 c_1) (f5 c_1))))
-(assume t465 (= c_0 (f6 c_1)))
-(step t82' (cl (= (f6 c_1) (f5 c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) :rule or :premises (t82))
-(step st466 (cl (not (= c_0 (f5 c_1)))) :rule resolution :premises (t82' t326 t465))
-(step t.end (cl) :rule resolution :premises (nst466.0 st466))

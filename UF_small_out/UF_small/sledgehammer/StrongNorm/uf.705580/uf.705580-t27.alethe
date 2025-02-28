@@ -1,3 +1,0 @@
-(assume nst27.0 (not (or (not (forall ((?v0 S4) (?v1 S6)) (= (f3 f5 f176) (f6 (f7 (f8 f9 ?v0) (f15 f175 ?v1)) (f177 ?v0 ?v1))))) (= (f3 f5 f176) (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))))))
-(step st27 (cl (or (not (forall ((?v0 S4) (?v1 S6)) (= (f3 f5 f176) (f6 (f7 (f8 f9 ?v0) (f15 f175 ?v1)) (f177 ?v0 ?v1))))) (= (f3 f5 f176) (f6 (f7 (f8 f9 (f10 (f11 (f12 f13 f173) f22) f174)) (f15 f175 f22)) (f177 (f10 (f11 (f12 f13 f173) f22) f174) f22))))) :rule forall_inst :args ((f10 (f11 (f12 f13 f173) f22) f174) f22))
-(step t.end (cl) :rule resolution :premises (nst27.0 st27))

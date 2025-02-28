@@ -1,4 +1,0 @@
-(assume t714.t31 (and (and (and (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e0) (op e3 e2)))) (not (= (op e3 e0) (op e3 e3)))) (not (= (op e3 e0) (op e3 e4)))))
-(assume nt714.t32.0 (not (and (and (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e0) (op e3 e2)))) (not (= (op e3 e0) (op e3 e3))))))
-(step t714.t32 (cl (and (and (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e0) (op e3 e2)))) (not (= (op e3 e0) (op e3 e3))))) :rule and :premises (t714.t31) :args (0))
-(step t.end (cl) :rule resolution :premises (nt714.t32.0 t714.t32))

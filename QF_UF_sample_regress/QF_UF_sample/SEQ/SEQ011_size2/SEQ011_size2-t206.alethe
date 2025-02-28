@@ -1,7 +1,0 @@
-(assume nst206.0 (not (not (p1 (f5 c_0) c_0))))
-(assume nst206.1 (not (not (= c_1 (f5 c_0)))))
-(assume nst206.2 (not (not (= c_1 (f7 c_0)))))
-(assume nst206.3 (not (not (not (p1 (f7 c_0) c_0)))))
-(assume t205 (not (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0)))))
-(step st206 (cl (not (p1 (f5 c_0) c_0)) (not (= c_1 (f5 c_0))) (not (= c_1 (f7 c_0))) (not (not (p1 (f7 c_0) c_0)))) :rule not_and :premises (t205))
-(step t.end (cl) :rule resolution :premises (nst206.0 nst206.1 nst206.2 nst206.3 st206))

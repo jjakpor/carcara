@@ -1,7 +1,0 @@
-(assume nst72.0 (not (and y$v3_1517448506_516_op y$1017)))
-(assume a644 (= y$v3_1517448506_519_op (and y$v3_1517448506_516_op y$1017)))
-(assume t25 (or (not (= y$v3_1517448506_519_op (and y$v3_1517448506_516_op y$1017))) (not y$v3_1517448506_519_op) (and y$v3_1517448506_516_op y$1017)))
-(assume t71 y$v3_1517448506_519_op)
-(step t25' (cl (not (= y$v3_1517448506_519_op (and y$v3_1517448506_516_op y$1017))) (not y$v3_1517448506_519_op) (and y$v3_1517448506_516_op y$1017)) :rule or :premises (t25))
-(step st72 (cl (and y$v3_1517448506_516_op y$1017)) :rule resolution :premises (t25' a644 t71))
-(step t.end (cl) :rule resolution :premises (nst72.0 st72))

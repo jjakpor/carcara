@@ -1,6 +1,0 @@
-(assume nt304.0 (not (= x7 x8)))
-(assume t303 (or (= x7 x8) (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))))
-(assume t299 (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))
-(step t303' (cl (= x7 x8) (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))) :rule or :premises (t303))
-(step t304 (cl (= x7 x8)) :rule resolution :premises (t303' t299))
-(step t.end (cl) :rule resolution :premises (nt304.0 t304))

@@ -1,5 +1,0 @@
-(assume nst4.0 (not (not (= y$649 (and y$1 y$3 y$5 y$7 y$10 y$12 y$14 y$16 y$18 y$20 y$22 y$24 y$642 y$630)))))
-(assume nst4.1 (not (not y$649)))
-(assume nst4.2 (not (and y$1 y$3 y$5 y$7 y$10 y$12 y$14 y$16 y$18 y$20 y$22 y$24 y$642 y$630)))
-(step st4 (cl (not (= y$649 (and y$1 y$3 y$5 y$7 y$10 y$12 y$14 y$16 y$18 y$20 y$22 y$24 y$642 y$630))) (not y$649) (and y$1 y$3 y$5 y$7 y$10 y$12 y$14 y$16 y$18 y$20 y$22 y$24 y$642 y$630)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst4.0 nst4.1 nst4.2 st4))

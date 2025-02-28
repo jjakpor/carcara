@@ -1,4 +1,0 @@
-(assume nst289.0 (not (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25))))
-(assume t288 (and (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25))))
-(step st289 (cl (=> (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))) (= x24 x25))) :rule and :premises (t288) :args (1))
-(step t.end (cl) :rule resolution :premises (nst289.0 st289))

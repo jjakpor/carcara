@@ -1,6 +1,0 @@
-(assume nst685.0 (not (= x60 x61)))
-(assume t680 (or (and (= x60 y60) (= y60 x61)) (and (= x60 z60) (= z60 x61))))
-(assume t684 (or (= x60 x61) (not (or (and (= x60 y60) (= y60 x61)) (and (= x60 z60) (= z60 x61))))))
-(step t684' (cl (= x60 x61) (not (or (and (= x60 y60) (= y60 x61)) (and (= x60 z60) (= z60 x61))))) :rule or :premises (t684))
-(step st685 (cl (= x60 x61)) :rule resolution :premises (t684' t680))
-(step t.end (cl) :rule resolution :premises (nst685.0 st685))

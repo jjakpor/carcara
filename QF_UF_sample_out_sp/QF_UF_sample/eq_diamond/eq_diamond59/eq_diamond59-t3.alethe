@@ -1,5 +1,0 @@
-(assume nt3.0 (not (not (= (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (and (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15)))))))
-(assume nt3.1 (not (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))))
-(assume nt3.2 (not (and (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15)))))
-(step t3 (cl (not (= (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (and (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15))))) (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15)))) (and (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt3.0 nt3.1 nt3.2 t3))

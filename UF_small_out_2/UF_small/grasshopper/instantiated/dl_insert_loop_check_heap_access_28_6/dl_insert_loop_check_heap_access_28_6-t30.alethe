@@ -1,3 +1,0 @@
-(assume nst30.0 (not (= (not (dlseg_struct$0 sk_?X_92$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)) (not (dlseg_struct$0 sk_?X_92$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)))))
-(step st30 (cl (= (not (dlseg_struct$0 sk_?X_92$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)) (not (dlseg_struct$0 sk_?X_92$0 next$0 prev$0 curr_init$0 prv_init$0 null$0 d_init$0)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst30.0 st30))

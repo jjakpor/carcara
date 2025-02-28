@@ -1,3 +1,0 @@
-(assume nt274.0 (not (= (= (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (and (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (=> (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (= x23 x24)))) true)))
-(step t274 (cl (= (= (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (and (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (=> (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))) (= x23 x24)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt274.0 t274))

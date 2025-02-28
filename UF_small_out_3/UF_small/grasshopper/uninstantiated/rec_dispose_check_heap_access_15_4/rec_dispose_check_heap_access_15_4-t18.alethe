@@ -1,5 +1,0 @@
-(assume nst18.0 (not (= (= FP$0 sk_?X$0) (= FP$0 (lseg_domain$0 next$0 lst$0 null$0)))))
-(assume a8 (= sk_?X$0 (lseg_domain$0 next$0 lst$0 null$0)))
-(assume t17 (= FP$0 FP$0))
-(step st18 (cl (= (= FP$0 sk_?X$0) (= FP$0 (lseg_domain$0 next$0 lst$0 null$0)))) :rule cong :premises (t17 a8))
-(step t.end (cl) :rule resolution :premises (nst18.0 st18))

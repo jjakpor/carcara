@@ -1,6 +1,0 @@
-(assume nst15.0 (not (= flash nf)))
-(assume t13 (or (= flash nf0) (= flash nf)))
-(assume t14 (not (= flash nf0)))
-(step t13' (cl (= flash nf0) (= flash nf)) :rule or :premises (t13))
-(step st15 (cl (= flash nf)) :rule resolution :premises (t13' t14))
-(step t.end (cl) :rule resolution :premises (nst15.0 st15))

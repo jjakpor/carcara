@@ -1,8 +1,0 @@
-(assume nst291.0 (not (= (op (op e0 e0) (op e0 e0)) (op (op e0 (op e0 e0)) e0))))
-(assume nst291.1 (not (= (op (op e0 (op e0 e0)) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0)))))
-(assume nst291.2 (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))))
-(assume nst291.3 (not (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0))))
-(assume nst291.4 (not (= (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) (op e0 e0)))))
-(assume t290 (or (= (op (op e0 e0) (op e0 e0)) (op (op e0 (op e0 e0)) e0)) (= (op (op e0 (op e0 e0)) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0))) (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)) (= (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) (op e0 e0)))))
-(step st291 (cl (= (op (op e0 e0) (op e0 e0)) (op (op e0 (op e0 e0)) e0)) (= (op (op e0 (op e0 e0)) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) (op e0 e0))) (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)) (= (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) (op e0 e0)))) :rule or :premises (t290))
-(step t.end (cl) :rule resolution :premises (nst291.0 nst291.1 nst291.2 nst291.3 nst291.4 st291))

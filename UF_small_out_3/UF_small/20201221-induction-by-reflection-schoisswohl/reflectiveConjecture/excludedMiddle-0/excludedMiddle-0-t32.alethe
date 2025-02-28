@@ -1,5 +1,0 @@
-(assume a11 (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))))
-(assume t6 (or (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (pR aR))) (not (models empty (pR aR))))))
-(assume t31 (not (= (models empty (notR (pR aR))) (not (models empty (pR aR))))))
-(step t6' (cl (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (pR aR))) (not (models empty (pR aR))))) :rule or :premises (t6))
-(step st32 (cl) :rule resolution :premises (t6' t31 a11))

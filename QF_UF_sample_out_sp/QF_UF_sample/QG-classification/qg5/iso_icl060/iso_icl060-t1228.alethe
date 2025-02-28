@@ -1,5 +1,0 @@
-(assume nt1228.0 (not (not (and (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) (= e1 (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3)))))))
-(assume nt1228.1 (not (not (= e1 (op e3 (op (op e1 e3) e3))))))
-(assume t1227 (=> (and (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) (= e1 (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3)))) (not (= e1 (op e3 (op (op e1 e3) e3))))))
-(step t1228 (cl (not (and (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) (= e1 (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3))))) (not (= e1 (op e3 (op (op e1 e3) e3))))) :rule implies :premises (t1227))
-(step t.end (cl) :rule resolution :premises (nt1228.0 nt1228.1 t1228))

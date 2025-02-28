@@ -1,5 +1,0 @@
-(assume nst48.0 (not (= (union$0 sk_?X_5$0 sk_?X_3$0) (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_4$0))))
-(assume a10 (= sk_?X_3$0 sk_?X_4$0))
-(assume a11 (= sk_?X_5$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))
-(step st48 (cl (= (union$0 sk_?X_5$0 sk_?X_3$0) (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_4$0))) :rule cong :premises (a11 a10))
-(step t.end (cl) :rule resolution :premises (nst48.0 st48))

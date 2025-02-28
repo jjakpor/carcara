@@ -1,3 +1,0 @@
-(assume nst572.0 (not (= (= (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34)))) true)))
-(step st572 (cl (= (= (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst572.0 st572))

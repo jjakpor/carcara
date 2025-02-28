@@ -1,7 +1,0 @@
-(assume nst173.0 (not (models empty (qR bR))))
-(assume t3 (or (models empty (notR (pR aR))) (models empty (qR bR)) (not (or (models empty (notR (pR aR))) (models empty (qR bR))))))
-(assume t154 (not (models empty (notR (pR aR)))))
-(assume t172 (or (models empty (notR (pR aR))) (models empty (qR bR))))
-(step t3' (cl (models empty (notR (pR aR))) (models empty (qR bR)) (not (or (models empty (notR (pR aR))) (models empty (qR bR))))) :rule or :premises (t3))
-(step st173 (cl (models empty (qR bR))) :rule resolution :premises (t3' t154 t172))
-(step t.end (cl) :rule resolution :premises (nst173.0 st173))

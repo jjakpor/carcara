@@ -1,7 +1,0 @@
-(assume nst10.0 (not (and (not (= flash nf0)) (= nf nf0))))
-(assume a3 (not (not (and (not (= nf0 flash)) (= nf0 nf)))))
-(assume t6 (= (not (not (and (not (= nf0 flash)) (= nf0 nf)))) (and (not (= flash nf0)) (= nf nf0))))
-(assume t9 (or (not (= (not (not (and (not (= nf0 flash)) (= nf0 nf)))) (and (not (= flash nf0)) (= nf nf0)))) (not (not (not (and (not (= nf0 flash)) (= nf0 nf))))) (and (not (= flash nf0)) (= nf nf0))))
-(step t9' (cl (not (= (not (not (and (not (= nf0 flash)) (= nf0 nf)))) (and (not (= flash nf0)) (= nf nf0)))) (not (not (not (and (not (= nf0 flash)) (= nf0 nf))))) (and (not (= flash nf0)) (= nf nf0))) :rule or :premises (t9))
-(step st10 (cl (and (not (= flash nf0)) (= nf nf0))) :rule resolution :premises (t9' t6 a3))
-(step t.end (cl) :rule resolution :premises (nst10.0 st10))

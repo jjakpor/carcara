@@ -1,4 +1,0 @@
-(assume nst41.0 (not (not (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))))))
-(assume nst41.1 (not (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))))
-(step st41 (cl (not (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nst41.0 nst41.1 st41))

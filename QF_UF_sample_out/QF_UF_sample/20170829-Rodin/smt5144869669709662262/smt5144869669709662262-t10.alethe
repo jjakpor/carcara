@@ -1,5 +1,0 @@
-(assume t5 (= flash nf))
-(assume t9 (= nf nf0))
-(assume nt10.0 (not (= flash nf0)))
-(step t10 (cl (= flash nf0)) :rule trans :premises (t5 t9))
-(step t.end (cl) :rule resolution :premises (nt10.0 t10))

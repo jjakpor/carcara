@@ -1,8 +1,0 @@
-(assume nst237.0 (not (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) e3))))
-(assume nst237.1 (not (= e3 (op (op (op e1 e3) e1) e3))))
-(assume nst237.2 (not (= (op e1 e3) (op (op (op e1 e3) e1) e3))))
-(assume nst237.3 (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3))))
-(assume nst237.4 (not (= e1 (op (op (op e1 e3) e1) e3))))
-(assume t236 (or (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) e3)) (= e3 (op (op (op e1 e3) e1) e3)) (= (op e1 e3) (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)) (= e1 (op (op (op e1 e3) e1) e3))))
-(step st237 (cl (= (op (op e1 e3) e3) (op (op (op e1 e3) e1) e3)) (= e3 (op (op (op e1 e3) e1) e3)) (= (op e1 e3) (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)) (= e1 (op (op (op e1 e3) e1) e3))) :rule or :premises (t236))
-(step t.end (cl) :rule resolution :premises (nst237.0 nst237.1 nst237.2 nst237.3 nst237.4 st237))

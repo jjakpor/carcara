@@ -1,6 +1,0 @@
-(assume nst931.0 (not (not (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))))
-(assume t923 (or (not (= (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))) false)) (not (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))))
-(assume t930 (= (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))) false))
-(step t923' (cl (not (= (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))) false)) (not (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))) :rule or :premises (t923))
-(step st931 (cl (not (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))) :rule resolution :premises (t923' t930))
-(step t.end (cl) :rule resolution :premises (nst931.0 st931))

@@ -1,6 +1,0 @@
-(assume nst11.0 (not (= (or (not (= (models empty (notR (pR aR))) (not (models empty (pR aR))))) (models empty (notR (pR aR))) (not (not (models empty (pR aR))))) (or (not (= (models empty (notR (pR aR))) (not (models empty (pR aR))))) (models empty (notR (pR aR))) (models empty (pR aR))))))
-(assume t8 (= (not (= (models empty (notR (pR aR))) (not (models empty (pR aR))))) (not (= (models empty (notR (pR aR))) (not (models empty (pR aR)))))))
-(assume t9 (= (models empty (notR (pR aR))) (models empty (notR (pR aR)))))
-(assume t10 (= (not (not (models empty (pR aR)))) (models empty (pR aR))))
-(step st11 (cl (= (or (not (= (models empty (notR (pR aR))) (not (models empty (pR aR))))) (models empty (notR (pR aR))) (not (not (models empty (pR aR))))) (or (not (= (models empty (notR (pR aR))) (not (models empty (pR aR))))) (models empty (notR (pR aR))) (models empty (pR aR))))) :rule cong :premises (t8 t9 t10))
-(step t.end (cl) :rule resolution :premises (nst11.0 st11))

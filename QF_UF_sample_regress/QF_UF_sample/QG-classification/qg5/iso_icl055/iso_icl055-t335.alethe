@@ -1,7 +1,0 @@
-(assume nst335.0 (not (not (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1))))))
-(assume t319 (or (not (= (not (= (op e0 e2) (op e1 e2))) (not (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)))))) (not (not (= (op e0 e2) (op e1 e2)))) (not (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1))))))
-(assume t324 (= (not (= (op e0 e2) (op e1 e2))) (not (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1))))))
-(assume t334 (not (= (op e0 e2) (op e1 e2))))
-(step t319' (cl (not (= (not (= (op e0 e2) (op e1 e2))) (not (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)))))) (not (not (= (op e0 e2) (op e1 e2)))) (not (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1))))) :rule or :premises (t319))
-(step st335 (cl (not (= (op e1 (op e1 e1)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1))))) :rule resolution :premises (t319' t324 t334))
-(step t.end (cl) :rule resolution :premises (nst335.0 st335))

@@ -1,3 +1,0 @@
-(assume nst109.0 (not (= (not (= y$X$next y$n15s4)) (not (= y$X$next y$n15s4)))))
-(step st109 (cl (= (not (= y$X$next y$n15s4)) (not (= y$X$next y$n15s4)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst109.0 st109))

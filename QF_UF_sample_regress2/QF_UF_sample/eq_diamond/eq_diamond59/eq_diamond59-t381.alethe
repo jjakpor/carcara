@@ -1,6 +1,0 @@
-(assume nst381.0 (not (= x15 x16)))
-(assume t376 (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))))
-(assume t380 (or (= x15 x16) (not (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))))))
-(step t380' (cl (= x15 x16) (not (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))))) :rule or :premises (t380))
-(step st381 (cl (= x15 x16)) :rule resolution :premises (t380' t376))
-(step t.end (cl) :rule resolution :premises (nst381.0 st381))

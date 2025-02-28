@@ -1,4 +1,0 @@
-(assume nt759.0 (not (=> (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (= x67 x68))))
-(assume t758 (and (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (=> (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (= x67 x68))))
-(step t759 (cl (=> (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (= x67 x68))) :rule and :premises (t758) :args (1))
-(step t.end (cl) :rule resolution :premises (nt759.0 t759))

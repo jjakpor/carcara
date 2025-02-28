@@ -1,5 +1,0 @@
-(assume nt537.0 (not (not (= (= e1 (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))) false))))
-(assume nt537.1 (not (not (= e1 (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))))))
-(assume t536 (= (= (= e1 (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))) false) (not (= e1 (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))))))
-(step t537 (cl (not (= (= e1 (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))) false)) (not (= e1 (op (op e1 (op e1 e1)) (op e1 (op e1 e1)))))) :rule equiv1 :premises (t536))
-(step t.end (cl) :rule resolution :premises (nt537.0 nt537.1 t537))

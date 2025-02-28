@@ -1,5 +1,0 @@
-(assume nt411.0 (not (not (= (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (and (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37)))))))
-(assume nt411.1 (not (not (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))))))
-(assume nt411.2 (not (and (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37)))))
-(step t411 (cl (not (= (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (and (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37))))) (not (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37)))) (and (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt411.0 nt411.1 nt411.2 t411))

@@ -1,3 +1,0 @@
-(assume nst39.0 (not (= (or true (not (Btwn$0 next$0 lst$0 null$0 null$0))) true)))
-(step st39 (cl (= (or true (not (Btwn$0 next$0 lst$0 null$0 null$0))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst39.0 st39))

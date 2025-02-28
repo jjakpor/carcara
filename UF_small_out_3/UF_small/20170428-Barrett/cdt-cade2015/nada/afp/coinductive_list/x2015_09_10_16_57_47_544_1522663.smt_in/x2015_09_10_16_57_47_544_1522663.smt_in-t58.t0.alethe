@@ -1,6 +1,0 @@
-(assume nt58.0 (not (= (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)) (fun_app$h ?v1 ?v2))) (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)))))))
-(anchor :step t58 :args ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$) (:= (?v0 A_llist$) ?v0) (:= (?v1 Nat_a_llist_fun$) ?v1) (:= (?v2 Nat$) ?v2)))
-(step st58.t0 (cl (= (= (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)) (fun_app$h ?v1 ?v2)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2))))) :rule hole)
-(step t58.t0 (cl (= (= (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)) (fun_app$h ?v1 ?v2)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2))))) :rule trust)
-(step t58 (cl (= (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)) (fun_app$h ?v1 ?v2))) (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt58.0 t58))

@@ -1,4 +1,0 @@
-(assume nst221.0 (not (not (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))))))
-(assume nst221.1 (not (= e0 (op e4 (op e4 e0)))))
-(step st221 (cl (not (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0))))) (= e0 (op e4 (op e4 e0)))) :rule and_pos :args (1))
-(step t.end (cl) :rule resolution :premises (nst221.0 nst221.1 st221))

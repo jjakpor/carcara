@@ -1,4 +1,0 @@
-(assume nst16.0 (not (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0))))))
-(assume nst16.1 (not (not (in$0 x$0 (setenum$0 root_x$0)))))
-(step st16 (cl (not (and (not (in$0 x$0 (setenum$0 root_x$0))) (= root_x$0 x$0) (in$0 root_x$0 (setenum$0 root_x$0)))) (not (in$0 x$0 (setenum$0 root_x$0)))) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nst16.0 nst16.1 st16))

@@ -1,6 +1,0 @@
-(assume nst161.0 (not (fun_app$b (less_eq$ (depth$ t$ b$)) (depth$ t$ c$))))
-(assume t151 (or (not (= (fun_app$b (less_eq$ (depth$ t$ b$)) (depth$ t$ c$)) true)) (fun_app$b (less_eq$ (depth$ t$ b$)) (depth$ t$ c$))))
-(assume t160 (= (fun_app$b (less_eq$ (depth$ t$ b$)) (depth$ t$ c$)) true))
-(step t151' (cl (not (= (fun_app$b (less_eq$ (depth$ t$ b$)) (depth$ t$ c$)) true)) (fun_app$b (less_eq$ (depth$ t$ b$)) (depth$ t$ c$))) :rule or :premises (t151))
-(step st161 (cl (fun_app$b (less_eq$ (depth$ t$ b$)) (depth$ t$ c$))) :rule resolution :premises (t151' t160))
-(step t.end (cl) :rule resolution :premises (nst161.0 st161))

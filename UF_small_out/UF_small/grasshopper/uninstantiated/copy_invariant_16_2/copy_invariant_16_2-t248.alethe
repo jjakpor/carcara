@@ -1,7 +1,0 @@
-(assume nst248.0 (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0))))
-(assume nst248.1 (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))
-(assume nst248.2 (not (not (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))))
-(assume t247 (or (not (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))
-(step t247' (cl (not (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0))) :rule or :premises (t247))
-(step st248 (cl (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0)) (not (or (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))) :rule reordering :premises (t247'))
-(step t.end (cl) :rule resolution :premises (nst248.0 nst248.1 nst248.2 st248))

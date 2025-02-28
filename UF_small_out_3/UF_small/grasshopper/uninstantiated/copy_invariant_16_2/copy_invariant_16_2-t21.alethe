@@ -1,3 +1,0 @@
-(assume nst21.0 (not (= cp_2$0 cp_2$0)))
-(step st21 (cl (= cp_2$0 cp_2$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst21.0 st21))

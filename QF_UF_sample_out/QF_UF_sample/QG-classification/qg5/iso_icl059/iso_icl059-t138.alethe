@@ -1,8 +1,0 @@
-(assume t134 (= (= (op e4 e2) e3) (= e3 (op e4 e2))))
-(assume t135 (= (= (op e3 e2) e3) (= e3 (op e3 e2))))
-(assume t136 (= (= (op e2 e2) e3) (= e3 (op e2 e2))))
-(assume t137 (= (= (op e0 e2) e3) (= e3 (op e0 e2))))
-(assume t19 (= (= (op e1 e2) e3) (= e3 (op e1 e2))))
-(assume nt138.0 (not (= (or (= (op e4 e2) e3) (= (op e3 e2) e3) (= (op e2 e2) e3) (= (op e0 e2) e3) (= (op e1 e2) e3)) (or (= e3 (op e4 e2)) (= e3 (op e3 e2)) (= e3 (op e2 e2)) (= e3 (op e0 e2)) (= e3 (op e1 e2))))))
-(step t138 (cl (= (or (= (op e4 e2) e3) (= (op e3 e2) e3) (= (op e2 e2) e3) (= (op e0 e2) e3) (= (op e1 e2) e3)) (or (= e3 (op e4 e2)) (= e3 (op e3 e2)) (= e3 (op e2 e2)) (= e3 (op e0 e2)) (= e3 (op e1 e2))))) :rule cong :premises (t134 t135 t136 t137 t19))
-(step t.end (cl) :rule resolution :premises (nt138.0 t138))

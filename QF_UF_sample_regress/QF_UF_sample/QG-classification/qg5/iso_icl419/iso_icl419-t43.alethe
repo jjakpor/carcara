@@ -1,3 +1,0 @@
-(assume nst43.0 (not (= e3 e3)))
-(step st43 (cl (= e3 e3)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst43.0 st43))

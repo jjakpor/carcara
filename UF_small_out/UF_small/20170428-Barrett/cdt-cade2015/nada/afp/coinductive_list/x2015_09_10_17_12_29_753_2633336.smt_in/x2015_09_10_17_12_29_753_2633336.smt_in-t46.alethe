@@ -1,3 +1,0 @@
-(assume nst46.0 (not (= (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)))) (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)))))))
-(step st46 (cl (= (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)))) (forall ((?v0 A$) (?v1 A_llist$)) (not (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst46.0 st46))

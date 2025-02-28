@@ -1,7 +1,0 @@
-(assume t191.t7 (= false (p1 (f7 c_0) c_0)))
-(assume t191.t10 (= (p1 (f7 c_0) c_0) (p1 c_1 c_0)))
-(assume t191.t13 (= (p1 c_1 c_0) (p1 (f5 c_0) c_0)))
-(assume t191.t16 (= (p1 (f5 c_0) c_0) true))
-(assume nt191.t17.0 (not (= false true)))
-(step t191.t17 (cl (= false true)) :rule trans :premises (t191.t7 t191.t10 t191.t13 t191.t16))
-(step t.end (cl) :rule resolution :premises (nt191.t17.0 t191.t17))

@@ -1,6 +1,0 @@
-(assume t607 (or (= x54 x55) (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))))))
-(assume t603 (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))))
-(assume nt608.0 (not (= x54 x55)))
-(step t607' (cl (= x54 x55) (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))))) :rule or :premises (t607))
-(step t608 (cl (= x54 x55)) :rule resolution :premises (t607' t603))
-(step t.end (cl) :rule resolution :premises (nt608.0 t608))

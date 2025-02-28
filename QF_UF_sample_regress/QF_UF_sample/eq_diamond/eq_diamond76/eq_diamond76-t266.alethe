@@ -1,6 +1,0 @@
-(assume nst266.0 (not (= x22 x23)))
-(assume nst266.1 (not (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))))))
-(assume t265 (or (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23)))) (= x22 x23)))
-(step t265' (cl (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23)))) (= x22 x23)) :rule or :premises (t265))
-(step st266 (cl (= x22 x23) (not (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))))) :rule reordering :premises (t265'))
-(step t.end (cl) :rule resolution :premises (nst266.0 nst266.1 st266))

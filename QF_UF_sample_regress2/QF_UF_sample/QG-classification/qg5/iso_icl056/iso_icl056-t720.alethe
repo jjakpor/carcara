@@ -1,5 +1,0 @@
-(assume nst720.0 (not (= (or (or (or (or (= (op e3 e0) e2) (= (op e3 e1) e2)) (= (op e3 e2) e2)) (= (op e3 e3) e2)) (= (op e3 e4) e2)) (or (= e2 (op e3 e4)) (= e2 (op e3 e3)) (= e2 (op e3 e2)) (= e2 (op e3 e0)) (= e2 (op e3 e1))))))
-(assume t715 (= (or (or (or (or (= (op e3 e0) e2) (= (op e3 e1) e2)) (= (op e3 e2) e2)) (= (op e3 e3) e2)) (= (op e3 e4) e2)) (or (= (op e3 e4) e2) (= (op e3 e3) e2) (= (op e3 e2) e2) (= (op e3 e0) e2) (= (op e3 e1) e2))))
-(assume t719 (= (or (= (op e3 e4) e2) (= (op e3 e3) e2) (= (op e3 e2) e2) (= (op e3 e0) e2) (= (op e3 e1) e2)) (or (= e2 (op e3 e4)) (= e2 (op e3 e3)) (= e2 (op e3 e2)) (= e2 (op e3 e0)) (= e2 (op e3 e1)))))
-(step st720 (cl (= (or (or (or (or (= (op e3 e0) e2) (= (op e3 e1) e2)) (= (op e3 e2) e2)) (= (op e3 e3) e2)) (= (op e3 e4) e2)) (or (= e2 (op e3 e4)) (= e2 (op e3 e3)) (= e2 (op e3 e2)) (= e2 (op e3 e0)) (= e2 (op e3 e1))))) :rule trans :premises (t715 t719))
-(step t.end (cl) :rule resolution :premises (nst720.0 st720))

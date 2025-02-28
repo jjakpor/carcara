@@ -1,7 +1,0 @@
-(assume nst208.0 (not (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))))
-(assume t203 (or (not (= (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0))))) (not (or (= (f6 c_0) c_0) (= (f6 c_0) c_1))) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))))
-(assume t206 (= (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))))
-(assume t207 (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)))
-(step t203' (cl (not (= (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0))))) (not (or (= (f6 c_0) c_0) (= (f6 c_0) c_1))) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))) :rule or :premises (t203))
-(step st208 (cl (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))) :rule resolution :premises (t203' t206 t207))
-(step t.end (cl) :rule resolution :premises (nst208.0 st208))

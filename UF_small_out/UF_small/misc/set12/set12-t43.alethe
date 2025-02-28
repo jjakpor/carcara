@@ -1,7 +1,0 @@
-(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (intersection a (intersection b c)))) (member ?x (intersection (intersection a b) c))))))
-(define-fun @quantifiers_skolemize_4 () Elem (choice ((?x Elem)) (not (or (not (member ?x (intersection (intersection a b) c))) (member ?x (intersection a (intersection b c)))))))
-(assume nst43.0 (not (not (= (seteq (intersection a (intersection b c)) (intersection (intersection a b) c)) (and (subset (intersection a (intersection b c)) (intersection (intersection a b) c)) (subset (intersection (intersection a b) c) (intersection a (intersection b c))))))))
-(assume nst43.1 (not (seteq (intersection a (intersection b c)) (intersection (intersection a b) c))))
-(assume nst43.2 (not (not (and (subset (intersection a (intersection b c)) (intersection (intersection a b) c)) (subset (intersection (intersection a b) c) (intersection a (intersection b c)))))))
-(step st43 (cl (not (= (seteq (intersection a (intersection b c)) (intersection (intersection a b) c)) (and (subset (intersection a (intersection b c)) (intersection (intersection a b) c)) (subset (intersection (intersection a b) c) (intersection a (intersection b c)))))) (seteq (intersection a (intersection b c)) (intersection (intersection a b) c)) (not (and (subset (intersection a (intersection b c)) (intersection (intersection a b) c)) (subset (intersection (intersection a b) c) (intersection a (intersection b c)))))) :rule equiv_pos1)
-(step t.end (cl) :rule resolution :premises (nst43.0 nst43.1 nst43.2 st43))

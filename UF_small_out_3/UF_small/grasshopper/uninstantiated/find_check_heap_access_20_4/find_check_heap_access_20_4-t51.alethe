@@ -1,5 +1,0 @@
-(assume nst51.0 (not (not (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))))))
-(assume nst51.1 (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))))
-(assume t50 (=> (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))))
-(step st51 (cl (not (and (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)) (= root_x$0 x$0) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))) (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))) :rule implies :premises (t50))
-(step t.end (cl) :rule resolution :premises (nst51.0 nst51.1 st51))

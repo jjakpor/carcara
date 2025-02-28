@@ -1,4 +1,0 @@
-(assume nt299.0 (not (not (= e0 e3))))
-(assume t193 (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))))
-(step t299 (cl (not (= e0 e3))) :rule and :premises (t193) :args (1))
-(step t.end (cl) :rule resolution :premises (nt299.0 t299))

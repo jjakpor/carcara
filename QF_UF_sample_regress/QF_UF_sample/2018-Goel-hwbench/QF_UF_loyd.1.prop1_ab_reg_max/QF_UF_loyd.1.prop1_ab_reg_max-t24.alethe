@@ -1,3 +1,0 @@
-(assume a16 (= y$id14_op (not y$629)))
-(assume t23 (not (= y$id14_op (not y$629))))
-(step st24 (cl) :rule resolution :premises (a16 t23))

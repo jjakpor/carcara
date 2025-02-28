@@ -1,7 +1,0 @@
-(assume nst64.0 (not (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha))))))
-(assume t34 (or (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha)))) (not (= (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))) (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha))))))))
-(assume t60 (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))))
-(assume t63 (= (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))) (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha))))))
-(step t34' (cl (not (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha)))) (not (= (models empty (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha)))) (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha))))))) :rule or :premises (t34))
-(step st64 (cl (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha))))) :rule resolution :premises (t34' t60 t63))
-(step t.end (cl) :rule resolution :premises (nst64.0 st64))

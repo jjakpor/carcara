@@ -1,6 +1,0 @@
-(assume nst125.0 (not (= x10 x11)))
-(assume nst125.1 (not (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))))
-(assume t124 (or (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11)))) (= x10 x11)))
-(step t124' (cl (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11)))) (= x10 x11)) :rule or :premises (t124))
-(step st125 (cl (= x10 x11) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))) :rule reordering :premises (t124'))
-(step t.end (cl) :rule resolution :premises (nst125.0 nst125.1 st125))

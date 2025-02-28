@@ -1,5 +1,0 @@
-(assume nst130.0 (not (= (= prv_init$0 (read$0 prev$0 curr_init$0)) (= (read$0 prev$0 prv_5$0) (read$0 prev$0 prv_5$0)))))
-(assume t66 (= (read$0 prev$0 curr_init$0) (read$0 prev$0 prv_5$0)))
-(assume t69 (= prv_init$0 (read$0 prev$0 prv_5$0)))
-(step st130 (cl (= (= prv_init$0 (read$0 prev$0 curr_init$0)) (= (read$0 prev$0 prv_5$0) (read$0 prev$0 prv_5$0)))) :rule cong :premises (t69 t66))
-(step t.end (cl) :rule resolution :premises (nst130.0 st130))

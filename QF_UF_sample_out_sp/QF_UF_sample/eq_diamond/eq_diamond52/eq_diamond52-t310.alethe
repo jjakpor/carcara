@@ -1,3 +1,0 @@
-(assume nt310.0 (not (= (= (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (and (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (=> (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (= x27 x28)))) true)))
-(step t310 (cl (= (= (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (and (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (=> (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (= x27 x28)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt310.0 t310))

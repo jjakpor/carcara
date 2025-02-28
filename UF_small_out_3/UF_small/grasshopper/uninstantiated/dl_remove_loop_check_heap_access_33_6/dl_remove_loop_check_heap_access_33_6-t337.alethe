@@ -1,3 +1,0 @@
-(assume nst337.0 (not (= FP_Caller$0 FP_Caller$0)))
-(step st337 (cl (= FP_Caller$0 FP_Caller$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst337.0 st337))

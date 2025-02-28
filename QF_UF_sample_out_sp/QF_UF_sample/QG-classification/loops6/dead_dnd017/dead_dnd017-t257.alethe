@@ -1,6 +1,0 @@
-(assume nt257.0 (not (not (= e4 (op e4 (op e4 e4))))))
-(assume t254 (or (= e4 e0) (not (= e4 (op e4 (op e4 e4))))))
-(assume t256 (not (= e4 e0)))
-(step t254' (cl (= e4 e0) (not (= e4 (op e4 (op e4 e4))))) :rule or :premises (t254))
-(step t257 (cl (not (= e4 (op e4 (op e4 e4))))) :rule resolution :premises (t254' t256))
-(step t.end (cl) :rule resolution :premises (nt257.0 t257))

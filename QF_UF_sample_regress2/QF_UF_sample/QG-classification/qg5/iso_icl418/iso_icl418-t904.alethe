@@ -1,3 +1,0 @@
-(assume nst904.0 (not (= (and (and (and (and (= (op e3 e0) (op e0 e3)) (= (op e3 e1) (op e1 e3))) (= (op e3 e2) (op e2 e3))) (= (op e3 e3) (op e3 e3))) (= (op e3 e4) (op e4 e3))) (and (= (op e3 e4) (op e4 e3)) (= (op e3 e3) (op e3 e3)) (= (op e3 e2) (op e2 e3)) (= (op e3 e0) (op e0 e3)) (= (op e3 e1) (op e1 e3))))))
-(step st904 (cl (= (and (and (and (and (= (op e3 e0) (op e0 e3)) (= (op e3 e1) (op e1 e3))) (= (op e3 e2) (op e2 e3))) (= (op e3 e3) (op e3 e3))) (= (op e3 e4) (op e4 e3))) (and (= (op e3 e4) (op e4 e3)) (= (op e3 e3) (op e3 e3)) (= (op e3 e2) (op e2 e3)) (= (op e3 e0) (op e0 e3)) (= (op e3 e1) (op e1 e3))))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst904.0 st904))

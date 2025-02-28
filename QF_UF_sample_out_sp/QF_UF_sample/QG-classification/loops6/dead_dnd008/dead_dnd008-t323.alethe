@@ -1,5 +1,0 @@
-(assume nt323.0 (not (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))))
-(assume t315 (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= unit e2))))
-(assume t322 (= (or (not (= e2 (op e2 (op e2 e2)))) (= unit e2)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0))))
-(step t323 (cl (= (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit)) (or (not (= e2 (op e2 (op e2 e2)))) (= e2 e0)))) :rule trans :premises (t315 t322))
-(step t.end (cl) :rule resolution :premises (nt323.0 t323))

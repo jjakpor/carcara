@@ -1,6 +1,0 @@
-(assume nst411.0 (not (= (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))) (or (= (f6 c_1) (f5 c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))))))
-(assume t12 (= (not (= c_1 (f5 c_1))) (not (= c_1 (f5 c_1)))))
-(assume t58 (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1))))
-(assume t335 (= (not (= c_1 (f6 c_1))) (not (= c_1 (f6 c_1)))))
-(step st411 (cl (= (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))) (or (= (f6 c_1) (f5 c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))))) :rule cong :premises (t58 t335 t12))
-(step t.end (cl) :rule resolution :premises (nst411.0 st411))

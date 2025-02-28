@@ -1,6 +1,0 @@
-(assume t518 (or (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47)))) (= x46 x47)))
-(assume nt519.0 (not (= x46 x47)))
-(assume nt519.1 (not (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))))))
-(step t518' (cl (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47)))) (= x46 x47)) :rule or :premises (t518))
-(step t519 (cl (= x46 x47) (not (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))))) :rule reordering :premises (t518'))
-(step t.end (cl) :rule resolution :premises (nt519.0 nt519.1 t519))

@@ -1,6 +1,0 @@
-(assume nt423.0 (not (= x36 x37)))
-(assume nt423.1 (not (not (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))))))
-(assume t422 (or (not (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37)))) (= x36 x37)))
-(step t422' (cl (not (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37)))) (= x36 x37)) :rule or :premises (t422))
-(step t423 (cl (= x36 x37) (not (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))))) :rule reordering :premises (t422'))
-(step t.end (cl) :rule resolution :premises (nt423.0 nt423.1 t423))

@@ -1,3 +1,0 @@
-(assume nt236.0 (not (= (not (= e4 (op e4 (op e4 e4)))) (not (= e4 (op e4 (op e4 e4)))))))
-(step t236 (cl (= (not (= e4 (op e4 (op e4 e4)))) (not (= e4 (op e4 (op e4 e4)))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt236.0 t236))

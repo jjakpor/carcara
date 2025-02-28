@@ -1,5 +1,0 @@
-(define-fun @quantifiers_skolemize_5 () S6 (choice ((?v2 S6)) (not (not (= (f11 (f12 f14 f15) (f11 (f12 f14 f10) (f16 (f17 f18 f19) f9))) (f11 (f12 f34 f20) ?v2))))))
-(define-fun @quantifiers_skolemize_6 () S6 (choice ((?v2 S6)) (not (not (= (f11 (f12 f14 f15) (f11 (f12 f14 f8) (f16 (f17 f18 f19) f9))) (f11 (f12 f34 f20) ?v2))))))
-(assume nst180.0 (not (= (= f36 (f11 (f12 f13 (f11 (f12 f14 f15) (f11 (f12 f14 f10) (f16 (f17 f18 f19) f9)))) f20)) (= f36 (f11 (f12 f13 (f11 (f12 f14 f15) (f11 (f12 f14 f10) (f16 (f17 f18 f19) f9)))) f20)))))
-(step st180 (cl (= (= f36 (f11 (f12 f13 (f11 (f12 f14 f15) (f11 (f12 f14 f10) (f16 (f17 f18 f19) f9)))) f20)) (= f36 (f11 (f12 f13 (f11 (f12 f14 f15) (f11 (f12 f14 f10) (f16 (f17 f18 f19) f9)))) f20)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst180.0 st180))

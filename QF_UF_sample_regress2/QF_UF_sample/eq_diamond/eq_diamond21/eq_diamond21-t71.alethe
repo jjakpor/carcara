@@ -1,6 +1,0 @@
-(assume nst71.0 (not (= x5 x6)))
-(assume nst71.1 (not (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))))
-(assume t70 (or (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (= x5 x6)))
-(step t70' (cl (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (= x5 x6)) :rule or :premises (t70))
-(step st71 (cl (= x5 x6) (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))) :rule reordering :premises (t70'))
-(step t.end (cl) :rule resolution :premises (nst71.0 nst71.1 st71))

@@ -1,5 +1,0 @@
-(assume nst1.0 (not (not (= (not (not org)) org))))
-(assume nst1.1 (not (not (not (not org)))))
-(assume nst1.2 (not org))
-(step st1 (cl (not (= (not (not org)) org)) (not (not (not org))) org) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst1.0 nst1.1 nst1.2 st1))

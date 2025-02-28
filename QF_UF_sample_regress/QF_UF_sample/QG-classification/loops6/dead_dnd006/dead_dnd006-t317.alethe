@@ -1,5 +1,0 @@
-(assume nst317.0 (not (= (= unit e1) (= e0 e1))))
-(assume a9 (= unit e0))
-(assume t316 (= e1 e1))
-(step st317 (cl (= (= unit e1) (= e0 e1))) :rule cong :premises (a9 t316))
-(step t.end (cl) :rule resolution :premises (nst317.0 st317))

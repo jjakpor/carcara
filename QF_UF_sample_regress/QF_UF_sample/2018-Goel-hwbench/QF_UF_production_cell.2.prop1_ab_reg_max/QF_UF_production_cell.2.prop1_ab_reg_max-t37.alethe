@@ -1,5 +1,0 @@
-(assume nst37.0 (not (not (= y$72 (= y$v_count y$v_done)))))
-(assume nst37.1 (not (not y$72)))
-(assume nst37.2 (not (= y$v_count y$v_done)))
-(step st37 (cl (not (= y$72 (= y$v_count y$v_done))) (not y$72) (= y$v_count y$v_done)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst37.0 nst37.1 nst37.2 st37))

@@ -1,5 +1,0 @@
-(assume nst64.0 (not (not (or (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$)))))))
-(assume nst64.1 (not (fun_app$q lnull$d xs$)))
-(assume nst64.2 (not (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$)))))
-(step st64 (cl (not (or (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$))))) (fun_app$q lnull$d xs$) (= xs$ (lCons$ (lhd$ xs$) (ltl$ xs$)))) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst64.0 nst64.1 nst64.2 st64))

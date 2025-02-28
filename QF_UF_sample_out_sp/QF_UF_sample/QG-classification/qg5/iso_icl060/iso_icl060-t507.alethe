@@ -1,8 +1,0 @@
-(assume nt507.0 (not (= (or (= (op e4 e4) e0) (= (op e3 e4) e0) (= (op e2 e4) e0) (= (op e0 e4) e0) (= (op e1 e4) e0)) (or (= e0 (op e4 e4)) (= e0 (op e3 e4)) (= e0 (op e2 e4)) (= e0 (op e0 e4)) (= e0 (op e1 e4))))))
-(assume t503 (= (= (op e4 e4) e0) (= e0 (op e4 e4))))
-(assume t504 (= (= (op e3 e4) e0) (= e0 (op e3 e4))))
-(assume t505 (= (= (op e2 e4) e0) (= e0 (op e2 e4))))
-(assume t506 (= (= (op e0 e4) e0) (= e0 (op e0 e4))))
-(assume t131 (= (= (op e1 e4) e0) (= e0 (op e1 e4))))
-(step t507 (cl (= (or (= (op e4 e4) e0) (= (op e3 e4) e0) (= (op e2 e4) e0) (= (op e0 e4) e0) (= (op e1 e4) e0)) (or (= e0 (op e4 e4)) (= e0 (op e3 e4)) (= e0 (op e2 e4)) (= e0 (op e0 e4)) (= e0 (op e1 e4))))) :rule cong :premises (t503 t504 t505 t506 t131))
-(step t.end (cl) :rule resolution :premises (nt507.0 t507))

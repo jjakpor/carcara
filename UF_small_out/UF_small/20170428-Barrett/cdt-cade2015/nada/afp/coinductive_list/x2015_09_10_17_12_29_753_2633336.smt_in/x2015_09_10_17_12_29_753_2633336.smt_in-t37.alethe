@@ -1,5 +1,0 @@
-(assume nt37.0 (not (= (forall ((?v0 A$) (?v1 A_llist$)) (=> (= (lconcat$ xssa$) (lCons$ ?v0 ?v1)) thesis$)) (forall ((?v0 A$) (?v1 A_llist$)) (=> (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)) thesis$)))))
-(anchor :step t37 :args ((?v0 A$) (?v1 A_llist$) (:= (?v0 A$) ?v0) (:= (?v1 A_llist$) ?v1)))
-(step t37.t2 (cl (= (=> (= (lconcat$ xssa$) (lCons$ ?v0 ?v1)) thesis$) (=> (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)) thesis$))) :rule trust)
-(step t37 (cl (= (forall ((?v0 A$) (?v1 A_llist$)) (=> (= (lconcat$ xssa$) (lCons$ ?v0 ?v1)) thesis$)) (forall ((?v0 A$) (?v1 A_llist$)) (=> (= (lCons$ ?v0 ?v1) (lconcat$ xssa$)) thesis$)))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt37.0 t37))

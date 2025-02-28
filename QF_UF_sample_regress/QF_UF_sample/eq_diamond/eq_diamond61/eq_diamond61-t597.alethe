@@ -1,6 +1,0 @@
-(assume nst597.0 (not (= x53 x54)))
-(assume t592 (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))))
-(assume t596 (or (= x53 x54) (not (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))))))
-(step t596' (cl (= x53 x54) (not (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))))) :rule or :premises (t596))
-(step st597 (cl (= x53 x54)) :rule resolution :premises (t596' t592))
-(step t.end (cl) :rule resolution :premises (nst597.0 st597))

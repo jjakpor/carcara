@@ -1,6 +1,0 @@
-(assume nt15.0 (not (not prt)))
-(assume nt15.1 (not (not car)))
-(assume nt15.2 (not (not (not clk))))
-(assume t14 (not (and prt car (not clk))))
-(step t15 (cl (not prt) (not car) (not (not clk))) :rule not_and :premises (t14))
-(step t.end (cl) :rule resolution :premises (nt15.0 nt15.1 nt15.2 t15))

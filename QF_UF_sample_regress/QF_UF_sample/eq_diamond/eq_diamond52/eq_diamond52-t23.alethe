@@ -1,6 +1,0 @@
-(assume nst23.0 (not (= x5 x6)))
-(assume nst23.1 (not (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))))
-(assume t22 (or (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (= x5 x6)))
-(step t22' (cl (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (= x5 x6)) :rule or :premises (t22))
-(step st23 (cl (= x5 x6) (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))) :rule reordering :premises (t22'))
-(step t.end (cl) :rule resolution :premises (nst23.0 nst23.1 st23))

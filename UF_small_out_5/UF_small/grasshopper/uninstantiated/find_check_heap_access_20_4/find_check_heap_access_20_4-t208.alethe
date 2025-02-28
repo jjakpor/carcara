@@ -1,6 +1,0 @@
-(assume nst208.0 (not (not (in$0 x$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0)))))
-(assume nst208.1 (not (not (and (not (in$0 x$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0))) (not (in$0 x$0 (setenum$0 root_x$0))) (not (in$0 x$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))))))
-(assume t207 (or (not (and (not (in$0 x$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0))) (not (in$0 x$0 (setenum$0 root_x$0))) (not (in$0 x$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0)))))) (not (in$0 x$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0)))))
-(step t207' (cl (not (and (not (in$0 x$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0))) (not (in$0 x$0 (setenum$0 root_x$0))) (not (in$0 x$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0)))))) (not (in$0 x$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0)))) :rule or :premises (t207))
-(step st208 (cl (not (in$0 x$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0))) (not (and (not (in$0 x$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0))) (not (in$0 x$0 (setenum$0 root_x$0))) (not (in$0 x$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))))))) :rule reordering :premises (t207'))
-(step t.end (cl) :rule resolution :premises (nst208.0 nst208.1 st208))

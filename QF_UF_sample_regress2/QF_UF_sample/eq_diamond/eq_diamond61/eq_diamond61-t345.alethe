@@ -1,5 +1,0 @@
-(assume nst345.0 (not (not (= (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (and (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32)))))))
-(assume nst345.1 (not (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))))))
-(assume nst345.2 (not (and (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32)))))
-(step st345 (cl (not (= (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (and (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32))))) (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32)))) (and (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst345.0 nst345.1 nst345.2 st345))

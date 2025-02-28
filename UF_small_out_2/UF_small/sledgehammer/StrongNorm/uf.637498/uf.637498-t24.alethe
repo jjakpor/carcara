@@ -1,5 +1,0 @@
-(assume nst24.0 (not (not (= (forall ((?v0 S3)) (= (f115 (f133 f134 ?v0) f39) f1)) (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39)))))))
-(assume nst24.1 (not (not (forall ((?v0 S3)) (= (f115 (f133 f134 ?v0) f39) f1)))))
-(assume nst24.2 (not (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39)))))
-(step st24 (cl (not (= (forall ((?v0 S3)) (= (f115 (f133 f134 ?v0) f39) f1)) (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39))))) (not (forall ((?v0 S3)) (= (f115 (f133 f134 ?v0) f39) f1))) (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst24.0 nst24.1 nst24.2 st24))

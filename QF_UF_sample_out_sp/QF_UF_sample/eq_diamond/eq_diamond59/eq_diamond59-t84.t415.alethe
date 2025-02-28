@@ -1,3 +1,0 @@
-(assume nt84.t415.0 (not (= (= (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (and (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (=> (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (= x38 x39)))) true)))
-(step t84.t415 (cl (= (= (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (and (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (=> (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (= x38 x39)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt84.t415.0 t84.t415))

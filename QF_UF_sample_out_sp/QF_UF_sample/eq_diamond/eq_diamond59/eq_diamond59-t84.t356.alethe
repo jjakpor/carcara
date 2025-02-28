@@ -1,6 +1,0 @@
-(assume nt84.t356.0 (not (= x32 x33)))
-(assume t84.t355 (or (= x32 x33) (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))))))
-(assume t84.t351 (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))))
-(step t84.t355' (cl (= x32 x33) (not (or (and (= x32 y32) (= y32 x33)) (and (= x32 z32) (= z32 x33))))) :rule or :premises (t84.t355))
-(step t84.t356 (cl (= x32 x33)) :rule resolution :premises (t84.t355' t84.t351))
-(step t.end (cl) :rule resolution :premises (nt84.t356.0 t84.t356))

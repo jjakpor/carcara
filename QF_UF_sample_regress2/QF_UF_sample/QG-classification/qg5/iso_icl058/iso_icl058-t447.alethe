@@ -1,4 +1,0 @@
-(assume nst447.0 (not (not (= e1 e2))))
-(assume t77 (and (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4))) (not (= e1 e2))))
-(step st447 (cl (not (= e1 e2))) :rule and :premises (t77) :args (1))
-(step t.end (cl) :rule resolution :premises (nst447.0 st447))

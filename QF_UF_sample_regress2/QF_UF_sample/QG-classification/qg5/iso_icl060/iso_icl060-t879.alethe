@@ -1,6 +1,0 @@
-(assume nst879.0 (not (not (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))))))
-(assume t866 (or (not (= (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))) false)) (not (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))))))
-(assume t878 (= (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))) false))
-(step t866' (cl (not (= (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))) false)) (not (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))))) :rule or :premises (t866))
-(step st879 (cl (not (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))))) :rule resolution :premises (t866' t878))
-(step t.end (cl) :rule resolution :premises (nst879.0 st879))

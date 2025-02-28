@@ -1,3 +1,0 @@
-(assume nst4.0 (not (= (not (= (f5 f11 f25) (f5 f9 (f5 f11 f25)))) (not (= (f5 f11 f25) (f5 f9 (f5 f11 f25)))))))
-(step st4 (cl (= (not (= (f5 f11 f25) (f5 f9 (f5 f11 f25)))) (not (= (f5 f11 f25) (f5 f9 (f5 f11 f25)))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst4.0 st4))

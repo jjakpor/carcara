@@ -1,5 +1,0 @@
-(assume nst112.0 (not (not (= y$id44_op (= y$n5s8 y$v_k_Table)))))
-(assume nst112.1 (not (not y$id44_op)))
-(assume nst112.2 (not (= y$n5s8 y$v_k_Table)))
-(step st112 (cl (not (= y$id44_op (= y$n5s8 y$v_k_Table))) (not y$id44_op) (= y$n5s8 y$v_k_Table)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst112.0 nst112.1 nst112.2 st112))

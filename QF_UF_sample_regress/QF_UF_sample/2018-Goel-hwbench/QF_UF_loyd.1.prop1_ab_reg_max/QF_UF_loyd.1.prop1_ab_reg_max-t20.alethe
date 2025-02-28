@@ -1,4 +1,0 @@
-(assume nst20.0 (not y$642))
-(assume t5 (and y$1 y$3 y$5 y$7 y$10 y$12 y$14 y$16 y$18 y$20 y$22 y$24 y$642 y$630))
-(step st20 (cl y$642) :rule and :premises (t5) :args (12))
-(step t.end (cl) :rule resolution :premises (nst20.0 st20))

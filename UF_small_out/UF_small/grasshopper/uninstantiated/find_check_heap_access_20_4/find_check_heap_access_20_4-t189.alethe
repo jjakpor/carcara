@@ -1,5 +1,0 @@
-(assume nst189.0 (not (= (in$0 x$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))) false)))
-(assume t154 (= (in$0 x$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))) (in$0 x$0 (union$0 (intersection$0 Alloc$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))) (setminus$0 Alloc$0 Alloc$0)))))
-(assume t188 (= (in$0 x$0 (union$0 (intersection$0 Alloc$0 (union$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))) (setminus$0 Alloc$0 Alloc$0))) false))
-(step st189 (cl (= (in$0 x$0 (union$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) (setenum$0 root_x$0))) false)) :rule trans :premises (t154 t188))
-(step t.end (cl) :rule resolution :premises (nst189.0 st189))

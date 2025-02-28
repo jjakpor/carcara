@@ -1,3 +1,0 @@
-(assume nst31.0 (not (= (= (fun_app$ (ldropn$ n$) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$))) (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$))))))
-(step st31 (cl (= (= (fun_app$ (ldropn$ n$) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$))) (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$))))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst31.0 st31))

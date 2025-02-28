@@ -1,7 +1,0 @@
-(assume nst114.0 (not (= e1 (op (op e1 e3) (op (op e1 e3) e1)))))
-(assume t102 (or (not (= (= (op e2 (op e2 e1)) e1) (= e1 (op (op e1 e3) (op (op e1 e3) e1))))) (not (= (op e2 (op e2 e1)) e1)) (= e1 (op (op e1 e3) (op (op e1 e3) e1)))))
-(assume t106 (= (= (op e2 (op e2 e1)) e1) (= e1 (op (op e1 e3) (op (op e1 e3) e1)))))
-(assume t113 (= (op e2 (op e2 e1)) e1))
-(step t102' (cl (not (= (= (op e2 (op e2 e1)) e1) (= e1 (op (op e1 e3) (op (op e1 e3) e1))))) (not (= (op e2 (op e2 e1)) e1)) (= e1 (op (op e1 e3) (op (op e1 e3) e1)))) :rule or :premises (t102))
-(step st114 (cl (= e1 (op (op e1 e3) (op (op e1 e3) e1)))) :rule resolution :premises (t102' t106 t113))
-(step t.end (cl) :rule resolution :premises (nst114.0 st114))

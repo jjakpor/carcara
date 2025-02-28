@@ -1,4 +1,0 @@
-(assume nst18.0 (not (or (models empty (notR (qR bR))) (models empty (rR cR)))))
-(assume nst18.1 (not (not (models empty (rR cR)))))
-(step st18 (cl (or (models empty (notR (qR bR))) (models empty (rR cR))) (not (models empty (rR cR)))) :rule or_neg :args (1))
-(step t.end (cl) :rule resolution :premises (nst18.0 nst18.1 st18))

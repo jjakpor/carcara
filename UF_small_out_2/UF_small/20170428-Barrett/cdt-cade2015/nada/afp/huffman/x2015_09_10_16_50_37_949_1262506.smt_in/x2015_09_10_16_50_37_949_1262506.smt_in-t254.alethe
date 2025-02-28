@@ -1,7 +1,0 @@
-(assume nst254.0 (not (or (= a$ d$) (= b$ c$))))
-(assume t245 (or (not (= (or (not (not (= a$ d$))) (not (not (= b$ c$)))) (or (= a$ d$) (= b$ c$)))) (not (or (not (not (= a$ d$))) (not (not (= b$ c$))))) (or (= a$ d$) (= b$ c$))))
-(assume t248 (= (or (not (not (= a$ d$))) (not (not (= b$ c$)))) (or (= a$ d$) (= b$ c$))))
-(assume t253 (or (not (not (= a$ d$))) (not (not (= b$ c$)))))
-(step t245' (cl (not (= (or (not (not (= a$ d$))) (not (not (= b$ c$)))) (or (= a$ d$) (= b$ c$)))) (not (or (not (not (= a$ d$))) (not (not (= b$ c$))))) (or (= a$ d$) (= b$ c$))) :rule or :premises (t245))
-(step st254 (cl (or (= a$ d$) (= b$ c$))) :rule resolution :premises (t245' t248 t253))
-(step t.end (cl) :rule resolution :premises (nst254.0 st254))

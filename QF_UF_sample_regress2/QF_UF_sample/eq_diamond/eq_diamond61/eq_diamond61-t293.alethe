@@ -1,3 +1,0 @@
-(assume nst293.0 (not (= (= (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (and (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (=> (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (= x26 x27)))) true)))
-(step st293 (cl (= (= (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (and (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (=> (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (= x26 x27)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst293.0 st293))

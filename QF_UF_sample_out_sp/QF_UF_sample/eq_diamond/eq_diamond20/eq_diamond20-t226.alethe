@@ -1,6 +1,0 @@
-(assume nt226.0 (not (not (and (= x2 z2) (= z2 x3)))))
-(assume t2 (or (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (not (and (= x2 z2) (= z2 x3)))))
-(assume t225 (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))))
-(step t2' (cl (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (not (and (= x2 z2) (= z2 x3)))) :rule or :premises (t2))
-(step t226 (cl (not (and (= x2 z2) (= z2 x3)))) :rule resolution :premises (t2' t225))
-(step t.end (cl) :rule resolution :premises (nt226.0 t226))

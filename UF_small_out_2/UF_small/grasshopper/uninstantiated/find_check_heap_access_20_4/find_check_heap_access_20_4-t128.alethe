@@ -1,4 +1,0 @@
-(assume nst128.0 (not (= sk_?X_15$0 sk_?X_16$0)))
-(assume a28 (= sk_?X_16$0 sk_?X_15$0))
-(step st128 (cl (= sk_?X_15$0 sk_?X_16$0)) :rule symm :premises (a28))
-(step t.end (cl) :rule resolution :premises (nst128.0 st128))

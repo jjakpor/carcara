@@ -1,6 +1,0 @@
-(assume t365 (or (= (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)) false) (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1))))
-(assume t373 (not (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1))))
-(assume nt374.0 (not (= (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)) false)))
-(step t365' (cl (= (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)) false) (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1))) :rule or :premises (t365))
-(step t374 (cl (= (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)) false)) :rule resolution :premises (t365' t373))
-(step t.end (cl) :rule resolution :premises (nt374.0 t374))

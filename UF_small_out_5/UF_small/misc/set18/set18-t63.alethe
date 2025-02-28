@@ -1,7 +1,0 @@
-(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (difference b a))) (member ?x (difference b d))))))
-(assume nst63.0 (not (= (or (and (member @quantifiers_skolemize_3 b) (not (member @quantifiers_skolemize_3 d))) (not (member @quantifiers_skolemize_3 b)) (not (not (member @quantifiers_skolemize_3 d)))) (or (and (member @quantifiers_skolemize_3 b) (not (member @quantifiers_skolemize_3 d))) (not (member @quantifiers_skolemize_3 b)) (member @quantifiers_skolemize_3 d)))))
-(assume t60 (= (and (member @quantifiers_skolemize_3 b) (not (member @quantifiers_skolemize_3 d))) (and (member @quantifiers_skolemize_3 b) (not (member @quantifiers_skolemize_3 d)))))
-(assume t61 (= (not (member @quantifiers_skolemize_3 b)) (not (member @quantifiers_skolemize_3 b))))
-(assume t62 (= (not (not (member @quantifiers_skolemize_3 d))) (member @quantifiers_skolemize_3 d)))
-(step st63 (cl (= (or (and (member @quantifiers_skolemize_3 b) (not (member @quantifiers_skolemize_3 d))) (not (member @quantifiers_skolemize_3 b)) (not (not (member @quantifiers_skolemize_3 d)))) (or (and (member @quantifiers_skolemize_3 b) (not (member @quantifiers_skolemize_3 d))) (not (member @quantifiers_skolemize_3 b)) (member @quantifiers_skolemize_3 d)))) :rule cong :premises (t60 t61 t62))
-(step t.end (cl) :rule resolution :premises (nst63.0 st63))

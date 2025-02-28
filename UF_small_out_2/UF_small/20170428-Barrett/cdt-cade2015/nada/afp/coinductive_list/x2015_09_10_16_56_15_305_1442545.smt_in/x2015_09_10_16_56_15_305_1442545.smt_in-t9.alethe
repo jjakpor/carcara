@@ -1,5 +1,0 @@
-(assume nst9.0 (not (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))))
-(assume nst9.1 (not (not (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))))))
-(assume nst9.2 (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))
-(step st9 (cl (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) (not (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst9.0 nst9.1 nst9.2 st9))

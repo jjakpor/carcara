@@ -1,5 +1,0 @@
-(assume nt643.0 (not (not (= (not (= e0 e3)) (not (= e0 (op (op (op e0 (op e0 e0)) e0) e0)))))))
-(assume nt643.1 (not (not (not (= e0 e3)))))
-(assume nt643.2 (not (not (= e0 (op (op (op e0 (op e0 e0)) e0) e0)))))
-(step t643 (cl (not (= (not (= e0 e3)) (not (= e0 (op (op (op e0 (op e0 e0)) e0) e0))))) (not (not (= e0 e3))) (not (= e0 (op (op (op e0 (op e0 e0)) e0) e0)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt643.0 nt643.1 nt643.2 t643))

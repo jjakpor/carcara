@@ -1,5 +1,0 @@
-(assume nst7.0 (not (not (not (= nf nf0)))))
-(assume nst7.1 (not (= flash nf0)))
-(assume a3 (=> (not (= nf nf0)) (= flash nf0)))
-(step st7 (cl (not (not (= nf nf0))) (= flash nf0)) :rule implies :premises (a3))
-(step t.end (cl) :rule resolution :premises (nst7.0 nst7.1 st7))

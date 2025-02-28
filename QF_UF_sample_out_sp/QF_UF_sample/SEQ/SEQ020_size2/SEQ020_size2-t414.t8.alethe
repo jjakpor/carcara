@@ -1,4 +1,0 @@
-(assume nt414.t8.0 (not (not (not (not (= (f6 c_1) (f5 c_1)))))))
-(assume nt414.t8.1 (not (= (f6 c_1) (f5 c_1))))
-(step t414.t8 (cl (not (not (not (= (f6 c_1) (f5 c_1))))) (= (f6 c_1) (f5 c_1))) :rule not_not)
-(step t.end (cl) :rule resolution :premises (nt414.t8.0 nt414.t8.1 t414.t8))

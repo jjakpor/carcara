@@ -1,4 +1,0 @@
-(assume nst8.0 (not (not (and (fun_app$f (rbt_less$ less$ k$) t1$) (fun_app$f (rbt_greater$ less$ k$) t2$) (fun_app$f (rbt_sorted$ less$) t1$) (fun_app$f (rbt_sorted$ less$) t2$)))))
-(assume nst8.1 (not (fun_app$f (rbt_greater$ less$ k$) t2$)))
-(step st8 (cl (not (and (fun_app$f (rbt_less$ less$ k$) t1$) (fun_app$f (rbt_greater$ less$ k$) t2$) (fun_app$f (rbt_sorted$ less$) t1$) (fun_app$f (rbt_sorted$ less$) t2$))) (fun_app$f (rbt_greater$ less$ k$) t2$)) :rule and_pos :args (1))
-(step t.end (cl) :rule resolution :premises (nst8.0 nst8.1 st8))

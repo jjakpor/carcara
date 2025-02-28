@@ -1,6 +1,0 @@
-(assume t445 (or (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22)))) (= x21 x22)))
-(assume nt446.0 (not (= x21 x22)))
-(assume nt446.1 (not (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))))))
-(step t445' (cl (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22)))) (= x21 x22)) :rule or :premises (t445))
-(step t446 (cl (= x21 x22) (not (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))))) :rule reordering :premises (t445'))
-(step t.end (cl) :rule resolution :premises (nt446.0 nt446.1 t446))

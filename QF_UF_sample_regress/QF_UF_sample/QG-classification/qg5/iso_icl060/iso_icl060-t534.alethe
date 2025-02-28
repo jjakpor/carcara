@@ -1,5 +1,0 @@
-(assume nst534.0 (not (= (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) false)))
-(assume nst534.1 (not (not (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))))
-(assume t533 (= (= (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) false) (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op (op e1 e3) e3))))))
-(step st534 (cl (= (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) false) (not (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))) :rule equiv2 :premises (t533))
-(step t.end (cl) :rule resolution :premises (nst534.0 nst534.1 st534))

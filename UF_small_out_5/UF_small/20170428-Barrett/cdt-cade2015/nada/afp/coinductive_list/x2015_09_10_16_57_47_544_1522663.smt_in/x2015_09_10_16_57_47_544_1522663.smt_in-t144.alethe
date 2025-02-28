@@ -1,5 +1,0 @@
-(assume nst144.0 (not (not (= (forall ((?v0 A_llist$)) (=> (not (fun_app$q lnull$d ?v0)) (= (lCons$ (lhd$ ?v0) (ltl$ ?v0)) ?v0))) (forall ((?v0 A_llist$)) (or (fun_app$q lnull$d ?v0) (= ?v0 (lCons$ (lhd$ ?v0) (ltl$ ?v0)))))))))
-(assume nst144.1 (not (not (forall ((?v0 A_llist$)) (=> (not (fun_app$q lnull$d ?v0)) (= (lCons$ (lhd$ ?v0) (ltl$ ?v0)) ?v0))))))
-(assume nst144.2 (not (forall ((?v0 A_llist$)) (or (fun_app$q lnull$d ?v0) (= ?v0 (lCons$ (lhd$ ?v0) (ltl$ ?v0)))))))
-(step st144 (cl (not (= (forall ((?v0 A_llist$)) (=> (not (fun_app$q lnull$d ?v0)) (= (lCons$ (lhd$ ?v0) (ltl$ ?v0)) ?v0))) (forall ((?v0 A_llist$)) (or (fun_app$q lnull$d ?v0) (= ?v0 (lCons$ (lhd$ ?v0) (ltl$ ?v0))))))) (not (forall ((?v0 A_llist$)) (=> (not (fun_app$q lnull$d ?v0)) (= (lCons$ (lhd$ ?v0) (ltl$ ?v0)) ?v0)))) (forall ((?v0 A_llist$)) (or (fun_app$q lnull$d ?v0) (= ?v0 (lCons$ (lhd$ ?v0) (ltl$ ?v0)))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst144.0 nst144.1 nst144.2 st144))

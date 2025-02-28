@@ -1,7 +1,0 @@
-(assume nst239.0 (not (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0))))
-(assume t86 (not (= lst$0 (read$0 next$0 lst$0))))
-(assume t235 (or (= lst$0 (read$0 next$0 lst$0)) (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0)) (not (or (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0)) (= lst$0 (read$0 next$0 lst$0))))))
-(assume t238 (or (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0)) (= lst$0 (read$0 next$0 lst$0))))
-(step t235' (cl (= lst$0 (read$0 next$0 lst$0)) (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0)) (not (or (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0)) (= lst$0 (read$0 next$0 lst$0))))) :rule or :premises (t235))
-(step st239 (cl (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) lst$0))) :rule resolution :premises (t235' t86 t238))
-(step t.end (cl) :rule resolution :premises (nst239.0 st239))

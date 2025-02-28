@@ -1,5 +1,0 @@
-(assume nst22.0 (not (= (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$)) (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)))))
-(assume t19 (= (llength$ us$) (llength$a xs$)))
-(assume t21 (= (less_eq$ (llength$a xs$)) (less_eq$ (llength$ us$))))
-(step st22 (cl (= (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$)) (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)))) :rule cong :premises (t21 t19))
-(step t.end (cl) :rule resolution :premises (nst22.0 st22))

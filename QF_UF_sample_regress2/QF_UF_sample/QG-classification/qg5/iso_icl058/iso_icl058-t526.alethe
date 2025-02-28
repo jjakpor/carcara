@@ -1,4 +1,0 @@
-(assume nst526.0 (not (= (op e0 (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0))))
-(assume t525 (= (op (op (op e0 e0) e0) e0) (op e0 (op (op e0 e0) e0))))
-(step st526 (cl (= (op e0 (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0))) :rule symm :premises (t525))
-(step t.end (cl) :rule resolution :premises (nst526.0 st526))

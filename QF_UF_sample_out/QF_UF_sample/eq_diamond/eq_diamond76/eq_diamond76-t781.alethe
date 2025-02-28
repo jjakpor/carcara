@@ -1,4 +1,0 @@
-(assume t780 (and (or (and (= x69 y69) (= y69 x70)) (and (= x69 z69) (= z69 x70))) (=> (or (and (= x69 y69) (= y69 x70)) (and (= x69 z69) (= z69 x70))) (= x69 x70))))
-(assume nt781.0 (not (=> (or (and (= x69 y69) (= y69 x70)) (and (= x69 z69) (= z69 x70))) (= x69 x70))))
-(step t781 (cl (=> (or (and (= x69 y69) (= y69 x70)) (and (= x69 z69) (= z69 x70))) (= x69 x70))) :rule and :premises (t780) :args (1))
-(step t.end (cl) :rule resolution :premises (nt781.0 t781))

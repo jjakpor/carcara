@@ -1,6 +1,0 @@
-(assume nt336.0 (not (= x10 x11)))
-(assume nt336.1 (not (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))))
-(assume t335 (or (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11)))) (= x10 x11)))
-(step t335' (cl (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11)))) (= x10 x11)) :rule or :premises (t335))
-(step t336 (cl (= x10 x11) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))) :rule reordering :premises (t335'))
-(step t.end (cl) :rule resolution :premises (nt336.0 nt336.1 t336))

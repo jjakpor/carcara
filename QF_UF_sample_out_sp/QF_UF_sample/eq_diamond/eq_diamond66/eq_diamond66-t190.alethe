@@ -1,4 +1,0 @@
-(assume nt190.0 (not (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16))))
-(assume t189 (and (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16))))
-(step t190 (cl (=> (or (and (= x15 y15) (= y15 x16)) (and (= x15 z15) (= z15 x16))) (= x15 x16))) :rule and :premises (t189) :args (1))
-(step t.end (cl) :rule resolution :premises (nt190.0 t190))

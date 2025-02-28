@@ -1,5 +1,0 @@
-(assume nst19.0 (not (= (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$)))))) (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))))))
-(assume t16 (= (not (lnull$ (lconcat$ xssa$))) (not (lnull$ (lconcat$ xssa$)))))
-(assume t18 (= (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$))))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))))
-(step st19 (cl (= (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lCons$ ?v1 ?v2) (lconcat$ xssa$)))))) (= (not (lnull$ (lconcat$ xssa$))) (not (forall ((?v1 A$) (?v2 A_llist$)) (not (= (lconcat$ xssa$) (lCons$ ?v1 ?v2)))))))) :rule cong :premises (t16 t18))
-(step t.end (cl) :rule resolution :premises (nst19.0 st19))

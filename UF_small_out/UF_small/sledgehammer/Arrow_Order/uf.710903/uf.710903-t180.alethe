@@ -1,6 +1,0 @@
-(define-fun @quantifiers_skolemize_10 () S2 (choice ((?v6 S2)) (not (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v6))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f3 f4 ?v6)))))))
-(assume nst180.0 (not (not (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f21 f4))))))
-(assume nst180.1 (not (not (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f21 f8))))))
-(assume t64 (not (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f21 f4))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f21 f8))))))
-(step st180 (cl (not (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f21 f4)))) (not (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f21 f8))))) :rule not_equiv2 :premises (t64))
-(step t.end (cl) :rule resolution :premises (nst180.0 nst180.1 st180))

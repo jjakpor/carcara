@@ -1,5 +1,0 @@
-(assume nst808.0 (not (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))))))
-(assume nst808.1 (not (= x54 x55)))
-(assume t807 (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55)))
-(step st808 (cl (not (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55)))) (= x54 x55)) :rule implies :premises (t807))
-(step t.end (cl) :rule resolution :premises (nst808.0 nst808.1 st808))

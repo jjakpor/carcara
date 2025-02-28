@@ -1,5 +1,0 @@
-(assume nst36.0 (not (= (= (not (not prt)) prt) true)))
-(assume t30 (= (= (not (not prt)) prt) (= prt (not (not prt)))))
-(assume t35 (= (= prt (not (not prt))) true))
-(step st36 (cl (= (= (not (not prt)) prt) true)) :rule trans :premises (t30 t35))
-(step t.end (cl) :rule resolution :premises (nst36.0 st36))

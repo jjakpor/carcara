@@ -1,3 +1,0 @@
-(assume nst905.0 (not (= (or (or (or (or (= (op e4 e4) e0) (= (op e4 e4) e1)) (= (op e4 e4) e2)) (= (op e4 e4) e3)) (= (op e4 e4) e4)) (or (= (op e4 e4) e4) (= (op e4 e4) e3) (= (op e4 e4) e2) (= (op e4 e4) e0) (= (op e4 e4) e1)))))
-(step st905 (cl (= (or (or (or (or (= (op e4 e4) e0) (= (op e4 e4) e1)) (= (op e4 e4) e2)) (= (op e4 e4) e3)) (= (op e4 e4) e4)) (or (= (op e4 e4) e4) (= (op e4 e4) e3) (= (op e4 e4) e2) (= (op e4 e4) e0) (= (op e4 e4) e1)))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst905.0 st905))

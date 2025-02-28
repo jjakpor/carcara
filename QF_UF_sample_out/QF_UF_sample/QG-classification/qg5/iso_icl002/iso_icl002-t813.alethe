@@ -1,3 +1,0 @@
-(assume nt813.0 (not (= (= (op e2 e0) e1) (= e1 (op e2 e0)))))
-(step t813 (cl (= (= (op e2 e0) e1) (= e1 (op e2 e0)))) :rule rare_rewrite :args ("eq-symm" (op e2 e0) e1))
-(step t.end (cl) :rule resolution :premises (nt813.0 t813))

@@ -1,4 +1,0 @@
-(assume t84.t616 (and (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))) (=> (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))) (= x56 x57))))
-(assume nt84.t617.0 (not (=> (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))) (= x56 x57))))
-(step t84.t617 (cl (=> (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))) (= x56 x57))) :rule and :premises (t84.t616) :args (1))
-(step t.end (cl) :rule resolution :premises (nt84.t617.0 t84.t617))

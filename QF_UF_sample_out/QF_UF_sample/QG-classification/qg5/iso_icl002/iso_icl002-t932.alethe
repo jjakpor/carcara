@@ -1,7 +1,0 @@
-(assume t927 (or (not (= (not (= (op e0 e0) (op e0 e1))) (not (= (op e0 e0) (op e0 (op e0 (op e0 e0))))))) (not (not (= (op e0 e0) (op e0 e1)))) (not (= (op e0 e0) (op e0 (op e0 (op e0 e0)))))))
-(assume t929 (= (not (= (op e0 e0) (op e0 e1))) (not (= (op e0 e0) (op e0 (op e0 (op e0 e0)))))))
-(assume t931 (not (= (op e0 e0) (op e0 e1))))
-(assume nt932.0 (not (not (= (op e0 e0) (op e0 (op e0 (op e0 e0)))))))
-(step t927' (cl (not (= (not (= (op e0 e0) (op e0 e1))) (not (= (op e0 e0) (op e0 (op e0 (op e0 e0))))))) (not (not (= (op e0 e0) (op e0 e1)))) (not (= (op e0 e0) (op e0 (op e0 (op e0 e0)))))) :rule or :premises (t927))
-(step t932 (cl (not (= (op e0 e0) (op e0 (op e0 (op e0 e0)))))) :rule resolution :premises (t927' t929 t931))
-(step t.end (cl) :rule resolution :premises (nt932.0 t932))

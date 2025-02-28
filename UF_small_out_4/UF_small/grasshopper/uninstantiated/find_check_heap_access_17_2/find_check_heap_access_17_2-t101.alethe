@@ -1,3 +1,0 @@
-(assume nst101.0 (not (= (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)))))
-(step st101 (cl (= (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst101.0 st101))

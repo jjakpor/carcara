@@ -1,5 +1,0 @@
-(assume nt2.t93.0 (not (= (= (not y$26) (not (= y$X$next y$n15s4))) (= (not true) (not (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) y$n15s4))))))
-(assume t2.t90 (= (not y$26) (not true)))
-(assume t2.t92 (= (not (= y$X$next y$n15s4)) (not (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) y$n15s4))))
-(step t2.t93 (cl (= (= (not y$26) (not (= y$X$next y$n15s4))) (= (not true) (not (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) y$n15s4))))) :rule cong :premises (t2.t90 t2.t92))
-(step t.end (cl) :rule resolution :premises (nt2.t93.0 t2.t93))

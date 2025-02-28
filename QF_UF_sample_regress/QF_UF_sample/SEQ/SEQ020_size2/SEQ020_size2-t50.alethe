@@ -1,5 +1,0 @@
-(assume nst50.0 (not (not (= (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1))) true))))
-(assume nst50.1 (not (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1)))))
-(assume t49 (= (= (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1))) true) (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1)))))
-(step st50 (cl (not (= (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1))) true)) (= (not (not (= (f6 c_1) (f5 c_1)))) (= (f6 c_1) (f5 c_1)))) :rule equiv1 :premises (t49))
-(step t.end (cl) :rule resolution :premises (nst50.0 nst50.1 st50))

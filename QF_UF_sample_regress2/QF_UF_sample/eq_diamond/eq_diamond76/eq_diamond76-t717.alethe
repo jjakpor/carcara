@@ -1,6 +1,0 @@
-(assume nst717.0 (not (= x63 x64)))
-(assume nst717.1 (not (not (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))))))
-(assume t716 (or (not (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64)))) (= x63 x64)))
-(step t716' (cl (not (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64)))) (= x63 x64)) :rule or :premises (t716))
-(step st717 (cl (= x63 x64) (not (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))))) :rule reordering :premises (t716'))
-(step t.end (cl) :rule resolution :premises (nst717.0 nst717.1 st717))

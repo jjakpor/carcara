@@ -1,5 +1,0 @@
-(assume nst793.0 (not (not (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))))))
-(assume nst793.1 (not (= x70 x71)))
-(assume t792 (=> (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71))) (= x70 x71)))
-(step st793 (cl (not (or (and (= x70 y70) (= y70 x71)) (and (= x70 z70) (= z70 x71)))) (= x70 x71)) :rule implies :premises (t792))
-(step t.end (cl) :rule resolution :premises (nst793.0 nst793.1 st793))

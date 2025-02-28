@@ -1,6 +1,0 @@
-(assume nst762.0 (not (= x67 x68)))
-(assume t757 (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))))
-(assume t761 (or (= x67 x68) (not (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))))))
-(step t761' (cl (= x67 x68) (not (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))))) :rule or :premises (t761))
-(step st762 (cl (= x67 x68)) :rule resolution :premises (t761' t757))
-(step t.end (cl) :rule resolution :premises (nst762.0 st762))

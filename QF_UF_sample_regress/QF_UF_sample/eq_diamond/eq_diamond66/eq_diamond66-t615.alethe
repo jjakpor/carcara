@@ -1,3 +1,0 @@
-(assume nst615.0 (not (= (= (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (and (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55)))) true)))
-(step st615 (cl (= (= (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (and (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (=> (or (and (= x54 y54) (= y54 x55)) (and (= x54 z54) (= z54 x55))) (= x54 x55)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst615.0 st615))

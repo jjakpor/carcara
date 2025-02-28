@@ -1,5 +1,0 @@
-(assume nt100.0 (not (= y$v_count y$v_k_Table)))
-(assume t46 (= y$v_count y$v_done))
-(assume t99 (= y$v_done y$v_k_Table))
-(step t100 (cl (= y$v_count y$v_k_Table)) :rule trans :premises (t46 t99))
-(step t.end (cl) :rule resolution :premises (nt100.0 t100))

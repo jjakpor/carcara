@@ -1,3 +1,0 @@
-(assume nt208.0 (not (= (= (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (and (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (=> (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (= x18 x19)))) true)))
-(step t208 (cl (= (= (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (and (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (=> (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (= x18 x19)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt208.0 t208))

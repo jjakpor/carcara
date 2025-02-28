@@ -1,8 +1,0 @@
-(assume nt135.0 (not (= (forall ((?v0 S3) (?v1 S3)) (= (= (f3 (f15 f16 (f5 f11 ?v0)) (f5 f11 ?v1)) f1) (= (f3 (f15 f16 ?v0) ?v1) f1))) (forall ((?v0 S3) (?v1 S3)) (= (= f1 (f3 (f15 f16 ?v0) ?v1)) (= f1 (f3 (f15 f16 (f5 f11 ?v0)) (f5 f11 ?v1))))))))
-(anchor :step t135 :args ((?v0 S3) (?v1 S3) (:= (?v0 S3) ?v0) (:= (?v1 S3) ?v1)))
-(step t135.t1 (cl (= (= (f3 (f15 f16 ?v0) ?v1) f1) (= f1 (f3 (f15 f16 ?v0) ?v1)))) :rule trust)
-(step t135.t2 (cl (= (= (f3 (f15 f16 (f5 f11 ?v0)) (f5 f11 ?v1)) f1) (= f1 (f3 (f15 f16 (f5 f11 ?v0)) (f5 f11 ?v1))))) :rule trust)
-(step st135.t3 (cl (= (= (= (f3 (f15 f16 ?v0) ?v1) f1) (= (f3 (f15 f16 (f5 f11 ?v0)) (f5 f11 ?v1)) f1)) (= (= f1 (f3 (f15 f16 ?v0) ?v1)) (= f1 (f3 (f15 f16 (f5 f11 ?v0)) (f5 f11 ?v1)))))) :rule cong :premises (t135.t1 t135.t2))
-(step t135.t4 (cl (= (= (= (f3 (f15 f16 (f5 f11 ?v0)) (f5 f11 ?v1)) f1) (= (f3 (f15 f16 ?v0) ?v1) f1)) (= (= f1 (f3 (f15 f16 ?v0) ?v1)) (= f1 (f3 (f15 f16 (f5 f11 ?v0)) (f5 f11 ?v1)))))) :rule trust)
-(step t135 (cl (= (forall ((?v0 S3) (?v1 S3)) (= (= (f3 (f15 f16 (f5 f11 ?v0)) (f5 f11 ?v1)) f1) (= (f3 (f15 f16 ?v0) ?v1) f1))) (forall ((?v0 S3) (?v1 S3)) (= (= f1 (f3 (f15 f16 ?v0) ?v1)) (= f1 (f3 (f15 f16 (f5 f11 ?v0)) (f5 f11 ?v1))))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt135.0 t135))

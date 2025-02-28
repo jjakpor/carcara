@@ -1,6 +1,0 @@
-(assume nt18.0 (not (= (forall ((?v0 S5) (?v1 S5) (?v2 S9) (?v3 S10)) (=> (= ?v0 ?v1) (= (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v1) ?v3))) (forall ((?v0 S5) (?v1 S5) (?v2 S9) (?v3 S10)) (=> (= ?v1 ?v0) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v1)))))))
-(anchor :step t18 :args ((?v0 S5) (?v1 S5) (?v2 S9) (?v3 S10) (:= (?v0 S5) ?v0) (:= (?v1 S5) ?v1) (:= (?v2 S9) ?v2) (:= (?v3 S10) ?v3)))
-(step st18.t0 (cl (= (= ?v0 ?v1) (= ?v1 ?v0))) :rule hole)
-(step t18.t2 (cl (= (=> (= ?v0 ?v1) (= (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v1) ?v3)) (=> (= ?v1 ?v0) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v1))))) :rule trust)
-(step t18 (cl (= (forall ((?v0 S5) (?v1 S5) (?v2 S9) (?v3 S10)) (=> (= ?v0 ?v1) (= (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v1) ?v3))) (forall ((?v0 S5) (?v1 S5) (?v2 S9) (?v3 S10)) (=> (= ?v1 ?v0) (= ?v3 (f189 (f17 (f18 (f19 f20 ?v2) ?v0) ?v3) ?v1)))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt18.0 t18))

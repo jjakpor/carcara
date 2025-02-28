@@ -1,3 +1,0 @@
-(assume nst25.0 (not (= (not (= x2 x3)) (not (= x2 x3)))))
-(step st25 (cl (= (not (= x2 x3)) (not (= x2 x3)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst25.0 st25))

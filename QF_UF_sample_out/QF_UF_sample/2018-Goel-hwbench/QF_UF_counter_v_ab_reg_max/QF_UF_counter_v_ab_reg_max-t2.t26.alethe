@@ -1,7 +1,0 @@
-(assume t2.t14 (or (not (= (= y$s$4_op (ite y$6 y$n1s4 y$s$1_op)) (= y$s$4_op (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4))))) (not (= y$s$4_op (ite y$6 y$n1s4 y$s$1_op))) (= y$s$4_op (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)))))
-(assume t2.t25 (= (= y$s$4_op (ite y$6 y$n1s4 y$s$1_op)) (= y$s$4_op (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)))))
-(assume a4 (= y$s$4_op (ite y$6 y$n1s4 y$s$1_op)))
-(assume nt2.t26.0 (not (= y$s$4_op (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)))))
-(step t2.t14' (cl (not (= (= y$s$4_op (ite y$6 y$n1s4 y$s$1_op)) (= y$s$4_op (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4))))) (not (= y$s$4_op (ite y$6 y$n1s4 y$s$1_op))) (= y$s$4_op (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)))) :rule or :premises (t2.t14))
-(step t2.t26 (cl (= y$s$4_op (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)))) :rule resolution :premises (t2.t14' t2.t25 a4))
-(step t.end (cl) :rule resolution :premises (nt2.t26.0 t2.t26))

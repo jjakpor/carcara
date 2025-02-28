@@ -1,4 +1,0 @@
-(assume nst349.0 (not (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2))))
-(assume t348 (and (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2)) (= (op (op e1 e3) e1) e3)))
-(step st349 (cl (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2))) :rule and :premises (t348) :args (0))
-(step t.end (cl) :rule resolution :premises (nst349.0 st349))

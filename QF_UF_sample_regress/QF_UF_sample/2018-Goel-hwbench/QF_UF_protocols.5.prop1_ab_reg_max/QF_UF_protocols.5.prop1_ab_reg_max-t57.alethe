@@ -1,6 +1,0 @@
-(assume nst57.0 (not (not y$1092)))
-(assume t53 (or (not y$1092) y$prop$next))
-(assume t56 (not y$prop$next))
-(step t53' (cl (not y$1092) y$prop$next) :rule or :premises (t53))
-(step st57 (cl (not y$1092)) :rule resolution :premises (t53' t56))
-(step t.end (cl) :rule resolution :premises (nst57.0 st57))

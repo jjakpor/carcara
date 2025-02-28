@@ -1,5 +1,0 @@
-(assume nst36.0 (not (= (forall ((?v0 S9) (?v1 S5) (?v2 S10)) (=> (= (f189 ?v0 ?v1) ?v2) (= (f13 (f14 (f15 f16 ?v0) (f5 f187 ?v1)) ?v2) f1))) (forall ((?v0 S9) (?v1 S5)) (= f1 (f13 (f14 (f15 f16 ?v0) (f5 f187 ?v1)) (f189 ?v0 ?v1)))))))
-(assume t30 (= (forall ((?v0 S9) (?v1 S5) (?v2 S10)) (=> (= (f189 ?v0 ?v1) ?v2) (= (f13 (f14 (f15 f16 ?v0) (f5 f187 ?v1)) ?v2) f1))) (forall ((?v0 S9) (?v1 S5) (?v2 S10)) (=> (= ?v2 (f189 ?v0 ?v1)) (= f1 (f13 (f14 (f15 f16 ?v0) (f5 f187 ?v1)) ?v2))))))
-(assume t35 (= (forall ((?v0 S9) (?v1 S5) (?v2 S10)) (=> (= ?v2 (f189 ?v0 ?v1)) (= f1 (f13 (f14 (f15 f16 ?v0) (f5 f187 ?v1)) ?v2)))) (forall ((?v0 S9) (?v1 S5)) (= f1 (f13 (f14 (f15 f16 ?v0) (f5 f187 ?v1)) (f189 ?v0 ?v1))))))
-(step st36 (cl (= (forall ((?v0 S9) (?v1 S5) (?v2 S10)) (=> (= (f189 ?v0 ?v1) ?v2) (= (f13 (f14 (f15 f16 ?v0) (f5 f187 ?v1)) ?v2) f1))) (forall ((?v0 S9) (?v1 S5)) (= f1 (f13 (f14 (f15 f16 ?v0) (f5 f187 ?v1)) (f189 ?v0 ?v1)))))) :rule trans :premises (t30 t35))
-(step t.end (cl) :rule resolution :premises (nst36.0 st36))

@@ -1,7 +1,0 @@
-(assume t811 (or (not (= (= (op e4 (op e4 e3)) e3) (= e3 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3))))) (not (= (op e4 (op e4 e3)) e3)) (= e3 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3)))))
-(assume t815 (= (= (op e4 (op e4 e3)) e3) (= e3 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3)))))
-(assume t816 (= (op e4 (op e4 e3)) e3))
-(assume nt817.0 (not (= e3 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3)))))
-(step t811' (cl (not (= (= (op e4 (op e4 e3)) e3) (= e3 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3))))) (not (= (op e4 (op e4 e3)) e3)) (= e3 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3)))) :rule or :premises (t811))
-(step t817 (cl (= e3 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3)))) :rule resolution :premises (t811' t815 t816))
-(step t.end (cl) :rule resolution :premises (nt817.0 t817))

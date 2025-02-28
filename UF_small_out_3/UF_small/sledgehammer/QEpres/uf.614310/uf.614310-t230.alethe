@@ -1,7 +1,0 @@
-(define-fun @quantifiers_skolemize_5 () S6 (choice ((?v2 S6)) (not (not (= (f11 (f12 f14 f15) (f11 (f12 f14 f10) (f16 (f17 f18 f19) f9))) (f11 (f12 f34 f20) ?v2))))))
-(define-fun @quantifiers_skolemize_6 () S6 (choice ((?v2 S6)) (not (not (= (f11 (f12 f14 f15) (f11 (f12 f14 f8) (f16 (f17 f18 f19) f9))) (f11 (f12 f34 f20) ?v2))))))
-(assume nst230.0 (not (= (forall ((?v0 S6) (?v1 S6)) (=> (= (f33 ?v0 ?v1) f1) (= (f11 (f12 f34 ?v0) (f11 (f12 f35 ?v1) ?v0)) ?v1))) (forall ((?v0 S6) (?v1 S6)) (or (not (= f1 (f33 ?v0 ?v1))) (= ?v1 (f11 (f12 f34 ?v0) (f11 (f12 f35 ?v1) ?v0))))))))
-(assume t228 (= (forall ((?v0 S6) (?v1 S6)) (=> (= (f33 ?v0 ?v1) f1) (= (f11 (f12 f34 ?v0) (f11 (f12 f35 ?v1) ?v0)) ?v1))) (forall ((?v0 S6) (?v1 S6)) (=> (= f1 (f33 ?v0 ?v1)) (= ?v1 (f11 (f12 f34 ?v0) (f11 (f12 f35 ?v1) ?v0)))))))
-(assume t229 (= (forall ((?v0 S6) (?v1 S6)) (=> (= f1 (f33 ?v0 ?v1)) (= ?v1 (f11 (f12 f34 ?v0) (f11 (f12 f35 ?v1) ?v0))))) (forall ((?v0 S6) (?v1 S6)) (or (not (= f1 (f33 ?v0 ?v1))) (= ?v1 (f11 (f12 f34 ?v0) (f11 (f12 f35 ?v1) ?v0)))))))
-(step st230 (cl (= (forall ((?v0 S6) (?v1 S6)) (=> (= (f33 ?v0 ?v1) f1) (= (f11 (f12 f34 ?v0) (f11 (f12 f35 ?v1) ?v0)) ?v1))) (forall ((?v0 S6) (?v1 S6)) (or (not (= f1 (f33 ?v0 ?v1))) (= ?v1 (f11 (f12 f34 ?v0) (f11 (f12 f35 ?v1) ?v0))))))) :rule trans :premises (t228 t229))
-(step t.end (cl) :rule resolution :premises (nst230.0 st230))

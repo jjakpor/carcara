@@ -1,5 +1,0 @@
-(assume nst72.0 (not (= (= unit (op e1 e0)) (= e0 (op e1 e0)))))
-(assume a8 (= unit e0))
-(assume t71 (= (op e1 e0) (op e1 e0)))
-(step st72 (cl (= (= unit (op e1 e0)) (= e0 (op e1 e0)))) :rule cong :premises (a8 t71))
-(step t.end (cl) :rule resolution :premises (nst72.0 st72))

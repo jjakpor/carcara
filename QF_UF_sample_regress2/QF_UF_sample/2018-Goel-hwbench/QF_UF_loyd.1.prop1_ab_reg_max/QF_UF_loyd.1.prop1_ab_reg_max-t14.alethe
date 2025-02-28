@@ -1,5 +1,0 @@
-(assume nst14.0 (not (= (= y$630 (= y$prop y$629)) (= y$630 (= y$629 y$prop)))))
-(assume t12 (= y$630 y$630))
-(assume t13 (= (= y$prop y$629) (= y$629 y$prop)))
-(step st14 (cl (= (= y$630 (= y$prop y$629)) (= y$630 (= y$629 y$prop)))) :rule cong :premises (t12 t13))
-(step t.end (cl) :rule resolution :premises (nst14.0 st14))

@@ -1,4 +1,0 @@
-(assume t399 (and (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18))))
-(assume nt400.0 (not (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18))))
-(step t400 (cl (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18))) :rule and :premises (t399) :args (1))
-(step t.end (cl) :rule resolution :premises (nt400.0 t400))

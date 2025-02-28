@@ -1,6 +1,0 @@
-(assume nst15.0 (not (not prt)))
-(assume nst15.1 (not (not car)))
-(assume nst15.2 (not (not (not clk))))
-(assume t14 (not (and prt car (not clk))))
-(step st15 (cl (not prt) (not car) (not (not clk))) :rule not_and :premises (t14))
-(step t.end (cl) :rule resolution :premises (nst15.0 nst15.1 nst15.2 st15))

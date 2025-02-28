@@ -1,5 +1,0 @@
-(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (intersection a b))) (member ?x (intersection b a))))))
-(define-fun @quantifiers_skolemize_4 () Elem (choice ((?x Elem)) (not (or (not (member ?x (intersection b a))) (member ?x (intersection a b))))))
-(assume nst47.0 (not (= (not (not (forall ((?x Elem)) (or (not (member ?x (intersection a b))) (member ?x (intersection b a)))))) (forall ((?x Elem)) (or (not (member ?x (intersection a b))) (member ?x (intersection b a)))))))
-(step st47 (cl (= (not (not (forall ((?x Elem)) (or (not (member ?x (intersection a b))) (member ?x (intersection b a)))))) (forall ((?x Elem)) (or (not (member ?x (intersection a b))) (member ?x (intersection b a)))))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst47.0 st47))

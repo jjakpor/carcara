@@ -1,4 +1,0 @@
-(assume nt533.0 (not (and (not (= e0 e1)) (not (= e0 e2)))))
-(assume t355 (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))))
-(step t533 (cl (and (not (= e0 e1)) (not (= e0 e2)))) :rule and :premises (t355) :args (0))
-(step t.end (cl) :rule resolution :premises (nt533.0 t533))

@@ -1,5 +1,0 @@
-(assume nst337.0 (not (not (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))))))
-(assume nst337.1 (not (= x29 x30)))
-(assume t336 (=> (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (= x29 x30)))
-(step st337 (cl (not (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30)))) (= x29 x30)) :rule implies :premises (t336))
-(step t.end (cl) :rule resolution :premises (nst337.0 nst337.1 st337))

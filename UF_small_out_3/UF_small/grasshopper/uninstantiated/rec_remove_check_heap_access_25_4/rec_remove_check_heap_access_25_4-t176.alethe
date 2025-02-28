@@ -1,5 +1,0 @@
-(assume nst176.0 (not (= (= sk_?X_10$0 (lseg_domain$0 next$0 n1_2$0 null$0)) (= sk_?X_10$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)))))
-(assume t139 (= (lseg_domain$0 next$0 n1_2$0 null$0) (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)))
-(assume t175 (= sk_?X_10$0 sk_?X_10$0))
-(step st176 (cl (= (= sk_?X_10$0 (lseg_domain$0 next$0 n1_2$0 null$0)) (= sk_?X_10$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)))) :rule cong :premises (t175 t139))
-(step t.end (cl) :rule resolution :premises (nst176.0 st176))

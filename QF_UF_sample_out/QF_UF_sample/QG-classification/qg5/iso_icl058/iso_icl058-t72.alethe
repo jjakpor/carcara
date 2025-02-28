@@ -1,5 +1,0 @@
-(assume t66 (= (not (= e0 e4)) (not (= e4 e0))))
-(assume t71 (= (not (= e4 e0)) (not (= e0 (op (op e0 e0) e0)))))
-(assume nt72.0 (not (= (not (= e0 e4)) (not (= e0 (op (op e0 e0) e0))))))
-(step t72 (cl (= (not (= e0 e4)) (not (= e0 (op (op e0 e0) e0))))) :rule trans :premises (t66 t71))
-(step t.end (cl) :rule resolution :premises (nt72.0 t72))

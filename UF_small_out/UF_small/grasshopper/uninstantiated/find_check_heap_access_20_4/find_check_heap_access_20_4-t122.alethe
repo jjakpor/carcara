@@ -1,5 +1,0 @@
-(assume nst122.0 (not (= (= X_27$0 sk_?X_14$0) (= (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) sk_?X_14$0))))
-(assume t120 (= X_27$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0)))
-(assume t121 (= sk_?X_14$0 sk_?X_14$0))
-(step st122 (cl (= (= X_27$0 sk_?X_14$0) (= (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0) sk_?X_14$0))) :rule cong :premises (t120 t121))
-(step t.end (cl) :rule resolution :premises (nst122.0 st122))

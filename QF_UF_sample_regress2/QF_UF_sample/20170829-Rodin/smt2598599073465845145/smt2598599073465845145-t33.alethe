@@ -1,7 +1,0 @@
-(assume nst33.0 (not false))
-(assume a5 (= (not i2) (= r2 b2)))
-(assume t0 (or (not (= (= (not i2) (= r2 b2)) false)) (not (= (not i2) (= r2 b2))) false))
-(assume t32 (= (= (not i2) (= r2 b2)) false))
-(step t0' (cl (not (= (= (not i2) (= r2 b2)) false)) (not (= (not i2) (= r2 b2))) false) :rule or :premises (t0))
-(step st33 (cl false) :rule resolution :premises (t0' t32 a5))
-(step t.end (cl) :rule resolution :premises (nst33.0 st33))

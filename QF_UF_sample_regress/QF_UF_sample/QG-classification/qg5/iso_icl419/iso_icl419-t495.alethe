@@ -1,5 +1,0 @@
-(assume nst495.0 (not (= (= (op (op e3 e3) e3) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) false)))
-(assume t478 (= (= (op (op e3 e3) e3) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) (= e3 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(assume t494 (= (= e3 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) false))
-(step st495 (cl (= (= (op (op e3 e3) e3) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) false)) :rule trans :premises (t478 t494))
-(step t.end (cl) :rule resolution :premises (nst495.0 st495))

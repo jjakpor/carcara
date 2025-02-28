@@ -1,4 +1,0 @@
-(assume nt117.t1.0 (not (= (f5 c_0) c_1)))
-(assume t117.a0 (= c_1 (f5 c_0)))
-(step t117.t1 (cl (= (f5 c_0) c_1)) :rule symm :premises (t117.a0))
-(step t.end (cl) :rule resolution :premises (nt117.t1.0 t117.t1))

@@ -1,4 +1,0 @@
-(assume nst47.0 (not (= e4 (op e1 e1))))
-(assume a10 (and (and (and (= e1 (op e3 e0)) (= e2 (op e0 e0))) (= e3 (op e2 e0))) (= e4 (op e1 e1))))
-(step st47 (cl (= e4 (op e1 e1))) :rule and :premises (a10) :args (1))
-(step t.end (cl) :rule resolution :premises (nst47.0 st47))

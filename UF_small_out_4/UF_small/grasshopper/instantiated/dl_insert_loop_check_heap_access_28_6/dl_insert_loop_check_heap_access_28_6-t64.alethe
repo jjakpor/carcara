@@ -1,3 +1,0 @@
-(assume nst64.0 (not (= prev$0 prev$0)))
-(step st64 (cl (= prev$0 prev$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst64.0 st64))

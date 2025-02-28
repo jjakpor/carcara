@@ -1,3 +1,0 @@
-(assume nst56.0 (not (= sk_?X$0 sk_?X$0)))
-(step st56 (cl (= sk_?X$0 sk_?X$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst56.0 st56))

@@ -1,5 +1,0 @@
-(assume nst263.0 (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0))))))
-(assume nst263.1 (not (not (= e5 (op e5 e0)))))
-(assume nst263.2 (not (not (= e0 (op e5 (op e5 e0))))))
-(step st263 (cl (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (not (= e5 (op e5 e0))) (not (= e0 (op e5 (op e5 e0))))) :rule and_neg)
-(step t.end (cl) :rule resolution :premises (nst263.0 nst263.1 nst263.2 st263))

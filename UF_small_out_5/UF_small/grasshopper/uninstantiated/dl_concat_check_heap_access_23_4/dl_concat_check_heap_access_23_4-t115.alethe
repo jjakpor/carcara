@@ -1,5 +1,0 @@
-(assume nst115.0 (not (= (in$0 end1$0 FP$0) (in$0 end1$0 (union$0 (dlseg_domain$0 next$0 prev$0 start1$0 (read$0 next$0 end1$0) (read$0 next$0 end1$0) end1$0) (dlseg_domain$0 next$0 prev$0 start2$0 (read$0 next$0 end1$0) (read$0 next$0 end1$0) end2$0))))))
-(assume t50 (= end1$0 end1$0))
-(assume t114 (= FP$0 (union$0 (dlseg_domain$0 next$0 prev$0 start1$0 (read$0 next$0 end1$0) (read$0 next$0 end1$0) end1$0) (dlseg_domain$0 next$0 prev$0 start2$0 (read$0 next$0 end1$0) (read$0 next$0 end1$0) end2$0))))
-(step st115 (cl (= (in$0 end1$0 FP$0) (in$0 end1$0 (union$0 (dlseg_domain$0 next$0 prev$0 start1$0 (read$0 next$0 end1$0) (read$0 next$0 end1$0) end1$0) (dlseg_domain$0 next$0 prev$0 start2$0 (read$0 next$0 end1$0) (read$0 next$0 end1$0) end2$0))))) :rule cong :premises (t50 t114))
-(step t.end (cl) :rule resolution :premises (nst115.0 st115))

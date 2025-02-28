@@ -1,8 +1,0 @@
-(assume nst220.0 (not (=> (and (= a$ d$) (= a$ c$)) (= c$ d$))))
-(assume nst220.1 (not (= c$ d$)))
-(assume t213 (or (=> (and (= a$ d$) (= a$ c$)) (= c$ d$)) (and (= a$ d$) (= a$ c$))))
-(assume t219 (or (not (and (= a$ d$) (= a$ c$))) (= c$ d$)))
-(step t213' (cl (=> (and (= a$ d$) (= a$ c$)) (= c$ d$)) (and (= a$ d$) (= a$ c$))) :rule or :premises (t213))
-(step t219' (cl (not (and (= a$ d$) (= a$ c$))) (= c$ d$)) :rule or :premises (t219))
-(step st220 (cl (=> (and (= a$ d$) (= a$ c$)) (= c$ d$)) (= c$ d$)) :rule resolution :premises (t213' t219'))
-(step t.end (cl) :rule resolution :premises (nst220.0 nst220.1 st220))

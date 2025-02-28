@@ -1,5 +1,0 @@
-(assume nt368.0 (not (not (p4 c_1))))
-(assume nt368.1 (not (p1 (f6 c_1) c_1)))
-(assume t367 (or (not (p4 c_1)) (p1 (f6 c_1) c_1)))
-(step t368 (cl (not (p4 c_1)) (p1 (f6 c_1) c_1)) :rule or :premises (t367))
-(step t.end (cl) :rule resolution :premises (nt368.0 nt368.1 t368))

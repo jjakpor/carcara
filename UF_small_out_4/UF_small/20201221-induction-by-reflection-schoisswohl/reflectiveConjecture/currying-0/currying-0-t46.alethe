@@ -1,5 +1,0 @@
-(assume nst46.0 (not (not (= (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))) (not (models empty (orR (notR (pR aR)) (notR (qR bR)))))))))
-(assume nst46.1 (not (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))))))
-(assume nst46.2 (not (not (models empty (orR (notR (pR aR)) (notR (qR bR)))))))
-(step st46 (cl (not (= (models empty (notR (orR (notR (pR aR)) (notR (qR bR))))) (not (models empty (orR (notR (pR aR)) (notR (qR bR))))))) (not (models empty (notR (orR (notR (pR aR)) (notR (qR bR)))))) (not (models empty (orR (notR (pR aR)) (notR (qR bR)))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst46.0 nst46.1 nst46.2 st46))

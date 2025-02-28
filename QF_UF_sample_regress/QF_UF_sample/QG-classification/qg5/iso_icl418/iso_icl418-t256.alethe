@@ -1,3 +1,0 @@
-(assume nst256.0 (not (= (= (op e1 e3) e1) (= e1 (op e1 e3)))))
-(step st256 (cl (= (= (op e1 e3) e1) (= e1 (op e1 e3)))) :rule rare_rewrite :args ("eq-symm" (op e1 e3) e1))
-(step t.end (cl) :rule resolution :premises (nst256.0 st256))

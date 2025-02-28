@@ -1,3 +1,0 @@
-(assume nst15.0 (not (= (= prv_init$0 d_init$0) (= d_init$0 prv_init$0))))
-(step st15 (cl (= (= prv_init$0 d_init$0) (= d_init$0 prv_init$0))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst15.0 st15))

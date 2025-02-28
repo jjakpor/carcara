@@ -1,4 +1,0 @@
-(assume nst118.0 (not (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))))))
-(assume nst118.1 (not (= c_1 (f5 c_0))))
-(step st118 (cl (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (= c_1 (f5 c_0))) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nst118.0 nst118.1 st118))

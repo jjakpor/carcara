@@ -1,6 +1,0 @@
-(assume nst330.0 (not (not (= e2 (op e2 (op e2 e2))))))
-(assume t327 (or (= e2 e0) (not (= e2 (op e2 (op e2 e2))))))
-(assume t329 (not (= e2 e0)))
-(step t327' (cl (= e2 e0) (not (= e2 (op e2 (op e2 e2))))) :rule or :premises (t327))
-(step st330 (cl (not (= e2 (op e2 (op e2 e2))))) :rule resolution :premises (t327' t329))
-(step t.end (cl) :rule resolution :premises (nst330.0 st330))

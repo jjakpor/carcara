@@ -1,5 +1,0 @@
-(assume nst609.0 (not (not (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))))))
-(assume nst609.1 (not (= x53 x54)))
-(assume t608 (=> (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54))) (= x53 x54)))
-(step st609 (cl (not (or (and (= x53 y53) (= y53 x54)) (and (= x53 z53) (= z53 x54)))) (= x53 x54)) :rule implies :premises (t608))
-(step t.end (cl) :rule resolution :premises (nst609.0 nst609.1 st609))

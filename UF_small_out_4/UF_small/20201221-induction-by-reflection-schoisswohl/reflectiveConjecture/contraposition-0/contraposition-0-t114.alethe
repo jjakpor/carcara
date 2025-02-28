@@ -1,5 +1,0 @@
-(assume nst114.0 (not (not (= (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (models empty (orR (notR (pR aR)) (qR bR))))))))
-(assume nst114.1 (not (not (models empty (notR (orR (notR (pR aR)) (qR bR)))))))
-(assume nst114.2 (not (not (models empty (orR (notR (pR aR)) (qR bR))))))
-(step st114 (cl (not (= (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (models empty (orR (notR (pR aR)) (qR bR)))))) (not (models empty (notR (orR (notR (pR aR)) (qR bR))))) (not (models empty (orR (notR (pR aR)) (qR bR))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst114.0 nst114.1 nst114.2 st114))

@@ -1,5 +1,0 @@
-(assume nst191.0 (not (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))))))
-(assume nst191.1 (not (= x16 x17)))
-(assume t190 (=> (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17))) (= x16 x17)))
-(step st191 (cl (not (or (and (= x16 y16) (= y16 x17)) (and (= x16 z16) (= z16 x17)))) (= x16 x17)) :rule implies :premises (t190))
-(step t.end (cl) :rule resolution :premises (nst191.0 nst191.1 st191))

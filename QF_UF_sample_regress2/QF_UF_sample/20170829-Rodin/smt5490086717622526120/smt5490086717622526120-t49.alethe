@@ -1,6 +1,0 @@
-(assume nst49.0 (not prt))
-(assume nst49.1 (not (not red_SR)))
-(assume t48 (or (not red_SR) prt))
-(step t48' (cl (not red_SR) prt) :rule or :premises (t48))
-(step st49 (cl prt (not red_SR)) :rule reordering :premises (t48'))
-(step t.end (cl) :rule resolution :premises (nst49.0 nst49.1 st49))

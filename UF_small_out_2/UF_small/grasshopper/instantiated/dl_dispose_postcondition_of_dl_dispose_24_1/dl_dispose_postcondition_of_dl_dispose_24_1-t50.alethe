@@ -1,3 +1,0 @@
-(assume nst50.0 (not (= sk_?X_4$0 sk_?X_4$0)))
-(step st50 (cl (= sk_?X_4$0 sk_?X_4$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst50.0 st50))

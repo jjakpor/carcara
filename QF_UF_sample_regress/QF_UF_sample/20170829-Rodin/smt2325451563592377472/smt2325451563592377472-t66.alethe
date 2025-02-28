@@ -1,5 +1,0 @@
-(assume nst66.0 (not (= (= car (not (not car))) (= car car))))
-(assume t64 (= car car))
-(assume t65 (= (not (not car)) car))
-(step st66 (cl (= (= car (not (not car))) (= car car))) :rule cong :premises (t64 t65))
-(step t.end (cl) :rule resolution :premises (nst66.0 st66))

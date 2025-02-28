@@ -1,8 +1,0 @@
-(assume nt26.0 (not (= (forall ((?v0 S3)) (= f1 (f115 (f133 f134 ?v0) f39))) (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39))))))
-(anchor :step t26 :args ((?v0 S3) (:= (?v0 S3) ?v0)))
-(step t26.t1 (cl (= f1 (f115 (f133 f134 f5) f135))) :rule trust)
-(step t26.t2 (cl (= (f115 (f133 f134 ?v0) f39) (f115 (f133 f134 ?v0) f39))) :rule trust)
-(step st26.t3 (cl (= (= f1 (f115 (f133 f134 ?v0) f39)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39)))) :rule cong :premises (t26.t1 t26.t2))
-(step t26.t3 (cl (= (= f1 (f115 (f133 f134 ?v0) f39)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39)))) :rule trust)
-(step t26 (cl (= (forall ((?v0 S3)) (= f1 (f115 (f133 f134 ?v0) f39))) (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt26.0 t26))

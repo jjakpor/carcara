@@ -1,7 +1,0 @@
-(assume nst765.0 (not (not (= (op e1 e1) (op (op e1 e1) e1)))))
-(assume t760 (or (not (= (not (= (op e1 e1) (op e2 e1))) (not (= (op e1 e1) (op (op e1 e1) e1))))) (not (not (= (op e1 e1) (op e2 e1)))) (not (= (op e1 e1) (op (op e1 e1) e1)))))
-(assume t762 (= (not (= (op e1 e1) (op e2 e1))) (not (= (op e1 e1) (op (op e1 e1) e1)))))
-(assume t764 (not (= (op e1 e1) (op e2 e1))))
-(step t760' (cl (not (= (not (= (op e1 e1) (op e2 e1))) (not (= (op e1 e1) (op (op e1 e1) e1))))) (not (not (= (op e1 e1) (op e2 e1)))) (not (= (op e1 e1) (op (op e1 e1) e1)))) :rule or :premises (t760))
-(step st765 (cl (not (= (op e1 e1) (op (op e1 e1) e1)))) :rule resolution :premises (t760' t762 t764))
-(step t.end (cl) :rule resolution :premises (nst765.0 st765))

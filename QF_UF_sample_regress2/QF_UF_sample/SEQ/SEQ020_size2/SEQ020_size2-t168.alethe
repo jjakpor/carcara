@@ -1,5 +1,0 @@
-(assume nst168.0 (not (= (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0))))))
-(assume t166 (= (= (f7 c_0) c_0) (= c_0 (f7 c_0))))
-(assume t167 (= (= (f7 c_0) c_1) (= c_1 (f7 c_0))))
-(step st168 (cl (= (or (= (f7 c_0) c_0) (= (f7 c_0) c_1)) (or (= c_0 (f7 c_0)) (= c_1 (f7 c_0))))) :rule cong :premises (t166 t167))
-(step t.end (cl) :rule resolution :premises (nst168.0 st168))

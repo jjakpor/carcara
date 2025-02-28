@@ -1,5 +1,0 @@
-(assume nst160.0 (not (= (intersection$0 Alloc_1$0 FP_1$0) (intersection$0 Alloc_1$0 sk_?X_3$0))))
-(assume t29 (= Alloc_1$0 Alloc_1$0))
-(assume t30 (= FP_1$0 sk_?X_3$0))
-(step st160 (cl (= (intersection$0 Alloc_1$0 FP_1$0) (intersection$0 Alloc_1$0 sk_?X_3$0))) :rule cong :premises (t29 t30))
-(step t.end (cl) :rule resolution :premises (nst160.0 st160))

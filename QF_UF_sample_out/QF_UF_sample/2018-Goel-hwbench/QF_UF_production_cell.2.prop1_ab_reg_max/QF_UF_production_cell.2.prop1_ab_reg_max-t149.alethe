@@ -1,3 +1,0 @@
-(assume nt149.0 (not (= (not (= y$n1s8 y$n255s8)) (not (= y$n1s8 y$n255s8)))))
-(step t149 (cl (= (not (= y$n1s8 y$n255s8)) (not (= y$n1s8 y$n255s8)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt149.0 t149))

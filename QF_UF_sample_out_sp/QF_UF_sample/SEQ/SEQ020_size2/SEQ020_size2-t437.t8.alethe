@@ -1,5 +1,0 @@
-(assume nt437.t8.0 (not (= (p1 (f6 c_1) c_1) (p1 c_0 c_1))))
-(assume t437.t6 (= (f6 c_1) c_0))
-(assume t437.t7 (= c_1 c_1))
-(step t437.t8 (cl (= (p1 (f6 c_1) c_1) (p1 c_0 c_1))) :rule cong :premises (t437.t6 t437.t7))
-(step t.end (cl) :rule resolution :premises (nt437.t8.0 t437.t8))

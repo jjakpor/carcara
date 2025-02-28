@@ -1,6 +1,0 @@
-(assume nst348.0 (not (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0))))
-(assume nst348.1 (not (not (and (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0)) (not (in$0 (read$0 next$0 d_init$0) Alloc$0)) (not (in$0 (read$0 next$0 d_init$0) (union$0 FP_Caller$0 Alloc$0)))))))
-(assume t347 (or (not (and (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0)) (not (in$0 (read$0 next$0 d_init$0) Alloc$0)) (not (in$0 (read$0 next$0 d_init$0) (union$0 FP_Caller$0 Alloc$0))))) (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0))))
-(step t347' (cl (not (and (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0)) (not (in$0 (read$0 next$0 d_init$0) Alloc$0)) (not (in$0 (read$0 next$0 d_init$0) (union$0 FP_Caller$0 Alloc$0))))) (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0))) :rule or :premises (t347))
-(step st348 (cl (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0)) (not (and (not (in$0 (read$0 next$0 d_init$0) FP_Caller$0)) (not (in$0 (read$0 next$0 d_init$0) Alloc$0)) (not (in$0 (read$0 next$0 d_init$0) (union$0 FP_Caller$0 Alloc$0)))))) :rule reordering :premises (t347'))
-(step t.end (cl) :rule resolution :premises (nst348.0 nst348.1 st348))

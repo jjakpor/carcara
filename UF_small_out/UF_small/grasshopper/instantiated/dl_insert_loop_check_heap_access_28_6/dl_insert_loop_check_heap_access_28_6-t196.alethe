@@ -1,7 +1,0 @@
-(assume nst196.0 (not (= FP$0 (union$0 sk_?X_93$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0)))))
-(assume t186 (or (not (= (= FP$0 sk_?X_91$0) (= FP$0 (union$0 sk_?X_93$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0))))) (not (= FP$0 sk_?X_91$0)) (= FP$0 (union$0 sk_?X_93$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0)))))
-(assume t194 (= (= FP$0 sk_?X_91$0) (= FP$0 (union$0 sk_?X_93$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0)))))
-(assume t195 (= FP$0 sk_?X_91$0))
-(step t186' (cl (not (= (= FP$0 sk_?X_91$0) (= FP$0 (union$0 sk_?X_93$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0))))) (not (= FP$0 sk_?X_91$0)) (= FP$0 (union$0 sk_?X_93$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0)))) :rule or :premises (t186))
-(step st196 (cl (= FP$0 (union$0 sk_?X_93$0 (dlseg_domain$0 next$0 prev$0 prv_5$0 prv_init$0 null$0 d_init$0)))) :rule resolution :premises (t186' t194 t195))
-(step t.end (cl) :rule resolution :premises (nst196.0 st196))

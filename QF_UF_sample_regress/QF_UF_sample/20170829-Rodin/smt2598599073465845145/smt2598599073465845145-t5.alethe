@@ -1,3 +1,0 @@
-(assume nst5.0 (not (= (= (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2))))) true) (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2))))))))
-(step st5 (cl (= (= (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2))))) true) (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2))))))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nst5.0 st5))

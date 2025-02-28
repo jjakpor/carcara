@@ -1,7 +1,0 @@
-(assume nst198.0 (not (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))
-(assume t56 (or (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))) (not (or (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))))
-(assume t148 (not (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0))))
-(assume t197 (or (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))
-(step t56' (cl (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))) (not (or (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))) :rule or :premises (t56))
-(step st198 (cl (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))) :rule resolution :premises (t56' t148 t197))
-(step t.end (cl) :rule resolution :premises (nst198.0 st198))

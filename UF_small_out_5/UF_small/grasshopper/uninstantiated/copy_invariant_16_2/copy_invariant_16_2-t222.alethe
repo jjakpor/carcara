@@ -1,4 +1,0 @@
-(assume nst222.0 (not (= (not (in$0 curr_2$0 (lseg_domain$0 next$0 lst$0 curr_2$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0))))))
-(assume t221 (= (in$0 curr_2$0 (lseg_domain$0 next$0 lst$0 curr_2$0)) (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0))))
-(step st222 (cl (= (not (in$0 curr_2$0 (lseg_domain$0 next$0 lst$0 curr_2$0))) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 lst$0))))) :rule cong :premises (t221))
-(step t.end (cl) :rule resolution :premises (nst222.0 st222))

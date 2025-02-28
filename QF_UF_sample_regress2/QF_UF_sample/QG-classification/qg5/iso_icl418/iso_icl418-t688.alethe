@@ -1,8 +1,0 @@
-(assume nst688.0 (not (= (op e3 e4) (op e4 e3))))
-(assume nst688.1 (not (= (op e3 e3) (op e4 e3))))
-(assume nst688.2 (not (= (op e4 e3) (op e3 (op e3 e4)))))
-(assume nst688.3 (not (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3))))))
-(assume nst688.4 (not (= (op e4 e3) (op e3 (op e4 e3)))))
-(assume t687 (or (= (op e3 e4) (op e4 e3)) (= (op e3 e3) (op e4 e3)) (= (op e4 e3) (op e3 (op e3 e4))) (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e4 e3) (op e3 (op e4 e3)))))
-(step st688 (cl (= (op e3 e4) (op e4 e3)) (= (op e3 e3) (op e4 e3)) (= (op e4 e3) (op e3 (op e3 e4))) (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e4 e3) (op e3 (op e4 e3)))) :rule or :premises (t687))
-(step t.end (cl) :rule resolution :premises (nst688.0 nst688.1 nst688.2 nst688.3 nst688.4 st688))

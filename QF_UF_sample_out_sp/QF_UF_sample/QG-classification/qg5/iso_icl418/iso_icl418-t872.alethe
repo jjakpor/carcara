@@ -1,8 +1,0 @@
-(assume nt872.0 (not (= e4 (op e3 (op (op e4 e3) (op e4 e3))))))
-(assume nt872.1 (not (= e3 (op e3 (op (op e4 e3) (op e4 e3))))))
-(assume nt872.2 (not (= (op e3 e4) (op e3 (op (op e4 e3) (op e4 e3))))))
-(assume nt872.3 (not (= (op (op e4 e3) (op e4 e3)) (op e3 (op (op e4 e3) (op e4 e3))))))
-(assume nt872.4 (not (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3))))))
-(assume t871 (or (= e4 (op e3 (op (op e4 e3) (op e4 e3)))) (= e3 (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e3 e4) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op (op e4 e3) (op e4 e3)) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3))))))
-(step t872 (cl (= e4 (op e3 (op (op e4 e3) (op e4 e3)))) (= e3 (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e3 e4) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op (op e4 e3) (op e4 e3)) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3))))) :rule or :premises (t871))
-(step t.end (cl) :rule resolution :premises (nt872.0 nt872.1 nt872.2 nt872.3 nt872.4 t872))

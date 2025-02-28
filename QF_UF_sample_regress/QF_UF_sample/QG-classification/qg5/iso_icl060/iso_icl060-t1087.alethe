@@ -1,4 +1,0 @@
-(assume nst1087.0 (not (or (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))) (not (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (not (= (op e1 e3) (op e3 (op (op e1 e3) e3)))))))
-(assume nst1087.1 (not (not (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))))))
-(step st1087 (cl (or (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))) (not (= (op e1 e3) (op e3 (op e3 (op e1 e3))))) (not (= (op e1 e3) (op e3 (op (op e1 e3) e3))))) (not (not (= (op (op e1 e3) e1) (op e3 (op e1 e3)))))) :rule or_neg :args (1))
-(step t.end (cl) :rule resolution :premises (nst1087.0 nst1087.1 st1087))

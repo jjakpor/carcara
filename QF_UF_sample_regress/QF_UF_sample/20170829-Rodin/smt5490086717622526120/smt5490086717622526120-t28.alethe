@@ -1,5 +1,0 @@
-(assume nst28.0 (not (not (= (not rd2) (= rd2 false)))))
-(assume nst28.1 (not (not (not rd2))))
-(assume nst28.2 (not (= rd2 false)))
-(step st28 (cl (not (= (not rd2) (= rd2 false))) (not (not rd2)) (= rd2 false)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst28.0 nst28.1 nst28.2 st28))

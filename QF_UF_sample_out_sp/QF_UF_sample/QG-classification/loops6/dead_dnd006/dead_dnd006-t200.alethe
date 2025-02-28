@@ -1,6 +1,0 @@
-(assume nt200.0 (not (= e3 e0)))
-(assume nt200.1 (not (not (= e3 (op e3 (op e3 e3))))))
-(assume t199 (or (not (= e3 (op e3 (op e3 e3)))) (= e3 e0)))
-(step t199' (cl (not (= e3 (op e3 (op e3 e3)))) (= e3 e0)) :rule or :premises (t199))
-(step t200 (cl (= e3 e0) (not (= e3 (op e3 (op e3 e3))))) :rule reordering :premises (t199'))
-(step t.end (cl) :rule resolution :premises (nt200.0 nt200.1 t200))

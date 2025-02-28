@@ -1,6 +1,0 @@
-(assume t320 (or (not (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29)))) (= x28 x29)))
-(assume nt321.0 (not (= x28 x29)))
-(assume nt321.1 (not (not (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))))))
-(step t320' (cl (not (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29)))) (= x28 x29)) :rule or :premises (t320))
-(step t321 (cl (= x28 x29) (not (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))))) :rule reordering :premises (t320'))
-(step t.end (cl) :rule resolution :premises (nt321.0 nt321.1 t321))

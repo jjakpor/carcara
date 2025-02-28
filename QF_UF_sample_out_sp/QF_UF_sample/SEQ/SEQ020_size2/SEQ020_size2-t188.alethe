@@ -1,8 +1,0 @@
-(assume nt188.0 (not (=> (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false)))
-(assume nt188.1 (not (=> (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false)))
-(assume t186 (or (=> (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false) false))
-(assume t187 (or (=> (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false) (not false)))
-(step t186' (cl (=> (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false) false) :rule or :premises (t186))
-(step t187' (cl (=> (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false) (not false)) :rule or :premises (t187))
-(step t188 (cl (=> (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false) (=> (and (p1 (f6 c_0) c_0) (= c_0 (f6 c_0)) (= c_0 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false)) :rule resolution :premises (t186' t187'))
-(step t.end (cl) :rule resolution :premises (nt188.0 nt188.1 t188))

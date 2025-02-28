@@ -1,7 +1,0 @@
-(assume nst218.0 (not (not (and (= a$ d$) (= a$ c$)))))
-(assume nst218.1 (not (not (and (= a$ d$) (= a$ c$)))))
-(assume nst218.2 (not (= c$ d$)))
-(assume t217 (or (= c$ d$) (not (and (= a$ d$) (= a$ c$))) (not (and (= a$ d$) (= a$ c$)))))
-(step t217' (cl (= c$ d$) (not (and (= a$ d$) (= a$ c$))) (not (and (= a$ d$) (= a$ c$)))) :rule or :premises (t217))
-(step st218 (cl (not (and (= a$ d$) (= a$ c$))) (not (and (= a$ d$) (= a$ c$))) (= c$ d$)) :rule reordering :premises (t217'))
-(step t.end (cl) :rule resolution :premises (nst218.0 nst218.1 nst218.2 st218))

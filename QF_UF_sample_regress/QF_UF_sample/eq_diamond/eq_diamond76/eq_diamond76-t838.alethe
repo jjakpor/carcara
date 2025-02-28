@@ -1,6 +1,0 @@
-(assume nst838.0 (not (= x74 x75)))
-(assume nst838.1 (not (not (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))))))
-(assume t837 (or (not (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75)))) (= x74 x75)))
-(step t837' (cl (not (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75)))) (= x74 x75)) :rule or :premises (t837))
-(step st838 (cl (= x74 x75) (not (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))))) :rule reordering :premises (t837'))
-(step t.end (cl) :rule resolution :premises (nst838.0 nst838.1 st838))

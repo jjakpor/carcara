@@ -1,5 +1,0 @@
-(assume nst0.0 (not (not (= y$id84_op (not y$3079)))))
-(assume nst0.1 (not y$id84_op))
-(assume nst0.2 (not (not (not y$3079))))
-(step st0 (cl (not (= y$id84_op (not y$3079))) y$id84_op (not (not y$3079))) :rule equiv_pos1)
-(step t.end (cl) :rule resolution :premises (nst0.0 nst0.1 nst0.2 st0))

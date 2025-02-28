@@ -1,5 +1,0 @@
-(assume nst4.0 (not (= (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= x$0 root_x$0)) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0)))))
-(assume t2 (= (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (not (Btwn$0 next$0 x$0 root_x$0 x$0))))
-(assume t3 (= (= x$0 root_x$0) (= root_x$0 x$0)))
-(step st4 (cl (= (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= x$0 root_x$0)) (or (not (Btwn$0 next$0 x$0 root_x$0 x$0)) (= root_x$0 x$0)))) :rule cong :premises (t2 t3))
-(step t.end (cl) :rule resolution :premises (nst4.0 st4))

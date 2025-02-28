@@ -1,6 +1,0 @@
-(assume nt601.0 (not (= x35 x36)))
-(assume t600 (or (= x35 x36) (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))))
-(assume t596 (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))
-(step t600' (cl (= x35 x36) (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))) :rule or :premises (t600))
-(step t601 (cl (= x35 x36)) :rule resolution :premises (t600' t596))
-(step t.end (cl) :rule resolution :premises (nt601.0 t601))

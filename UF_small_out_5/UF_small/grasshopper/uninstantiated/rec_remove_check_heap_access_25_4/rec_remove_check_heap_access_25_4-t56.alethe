@@ -1,7 +1,0 @@
-(assume nst56.0 (not (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0))))
-(assume nst56.1 (not (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))
-(assume nst56.2 (not (not (or (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))))
-(assume t55 (or (not (or (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))) (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))
-(step t55' (cl (not (or (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))))) (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))) :rule or :premises (t55))
-(step st56 (cl (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0))) (not (or (in$0 lst$0 (lseg_domain$0 next$0 (read$0 next$0 lst$0) null$0)) (not (in$0 lst$0 (lseg_domain$0 next$0 lst$0 null$0)))))) :rule reordering :premises (t55'))
-(step t.end (cl) :rule resolution :premises (nst56.0 nst56.1 nst56.2 st56))

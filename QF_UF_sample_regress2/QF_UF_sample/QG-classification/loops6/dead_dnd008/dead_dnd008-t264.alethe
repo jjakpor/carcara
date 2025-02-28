@@ -1,5 +1,0 @@
-(assume nst264.0 (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0))))))
-(assume nst264.1 (not (not (= e5 (op e5 e0)))))
-(assume nst264.2 (not (not (= e0 (op e5 (op e5 e0))))))
-(step st264 (cl (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (not (= e5 (op e5 e0))) (not (= e0 (op e5 (op e5 e0))))) :rule and_neg)
-(step t.end (cl) :rule resolution :premises (nst264.0 nst264.1 nst264.2 st264))

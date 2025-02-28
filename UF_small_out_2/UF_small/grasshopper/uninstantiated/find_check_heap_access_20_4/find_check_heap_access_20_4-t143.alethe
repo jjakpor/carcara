@@ -1,3 +1,0 @@
-(assume nst143.0 (not (= sk_?X_25$0 sk_?X_25$0)))
-(step st143 (cl (= sk_?X_25$0 sk_?X_25$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst143.0 st143))

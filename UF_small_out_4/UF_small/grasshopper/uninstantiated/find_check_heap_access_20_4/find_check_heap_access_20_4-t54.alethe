@@ -1,5 +1,0 @@
-(assume nst54.0 (not (not (= (not (= n_5$0 null$0)) (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0)))))))
-(assume nst54.1 (not (not (not (= n_5$0 null$0)))))
-(assume nst54.2 (not (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0)))))
-(step st54 (cl (not (= (not (= n_5$0 null$0)) (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0))))) (not (not (= n_5$0 null$0))) (not (= (read$0 next$0 x$0) (read$0 next$0 root_x$0)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst54.0 nst54.1 nst54.2 st54))

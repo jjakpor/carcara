@@ -1,5 +1,0 @@
-(assume nst423.0 (not (= (= (op (op (op e0 (op e0 e0)) e0) e0) (op e0 (op (op (op e0 (op e0 e0)) e0) e0))) (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)))))
-(assume t406 (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)))
-(assume t422 (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) e0)))
-(step st423 (cl (= (= (op (op (op e0 (op e0 e0)) e0) e0) (op e0 (op (op (op e0 (op e0 e0)) e0) e0))) (= (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op (op e0 (op e0 e0)) e0) e0) e0)))) :rule cong :premises (t422 t406))
-(step t.end (cl) :rule resolution :premises (nst423.0 st423))

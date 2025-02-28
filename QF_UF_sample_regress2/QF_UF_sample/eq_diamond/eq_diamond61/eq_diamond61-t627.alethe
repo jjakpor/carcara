@@ -1,4 +1,0 @@
-(assume nst627.0 (not (=> (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))) (= x56 x57))))
-(assume t626 (and (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))) (=> (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))) (= x56 x57))))
-(step st627 (cl (=> (or (and (= x56 y56) (= y56 x57)) (and (= x56 z56) (= z56 x57))) (= x56 x57))) :rule and :premises (t626) :args (1))
-(step t.end (cl) :rule resolution :premises (nst627.0 st627))

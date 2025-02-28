@@ -1,5 +1,0 @@
-(assume nst66.0 (not (= (= prv_init$0 (read$0 prev$0 curr_init$0)) (= prv_init$0 (read$0 prev$0 prv_5$0)))))
-(assume t63 (= prv_init$0 prv_init$0))
-(assume t65 (= (read$0 prev$0 curr_init$0) (read$0 prev$0 prv_5$0)))
-(step st66 (cl (= (= prv_init$0 (read$0 prev$0 curr_init$0)) (= prv_init$0 (read$0 prev$0 prv_5$0)))) :rule cong :premises (t63 t65))
-(step t.end (cl) :rule resolution :premises (nst66.0 st66))

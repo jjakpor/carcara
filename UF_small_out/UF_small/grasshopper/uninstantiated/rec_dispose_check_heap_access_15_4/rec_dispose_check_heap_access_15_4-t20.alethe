@@ -1,7 +1,0 @@
-(assume nst20.0 (not (= FP$0 (lseg_domain$0 next$0 lst$0 null$0))))
-(assume t16 (or (not (= (= FP$0 sk_?X$0) (= FP$0 (lseg_domain$0 next$0 lst$0 null$0)))) (not (= FP$0 sk_?X$0)) (= FP$0 (lseg_domain$0 next$0 lst$0 null$0))))
-(assume t18 (= (= FP$0 sk_?X$0) (= FP$0 (lseg_domain$0 next$0 lst$0 null$0))))
-(assume t19 (= FP$0 sk_?X$0))
-(step t16' (cl (not (= (= FP$0 sk_?X$0) (= FP$0 (lseg_domain$0 next$0 lst$0 null$0)))) (not (= FP$0 sk_?X$0)) (= FP$0 (lseg_domain$0 next$0 lst$0 null$0))) :rule or :premises (t16))
-(step st20 (cl (= FP$0 (lseg_domain$0 next$0 lst$0 null$0))) :rule resolution :premises (t16' t18 t19))
-(step t.end (cl) :rule resolution :premises (nst20.0 st20))

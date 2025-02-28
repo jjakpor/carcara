@@ -1,5 +1,0 @@
-(assume nst356.0 (not (not (= (or (= (f5 c_1) c_0) (= (f5 c_1) c_1)) (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1)))))))
-(assume nst356.1 (not (not (or (= (f5 c_1) c_0) (= (f5 c_1) c_1)))))
-(assume nst356.2 (not (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1)))))
-(step st356 (cl (not (= (or (= (f5 c_1) c_0) (= (f5 c_1) c_1)) (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1))))) (not (or (= (f5 c_1) c_0) (= (f5 c_1) c_1))) (or (= c_0 (f5 c_1)) (= c_1 (f5 c_1)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst356.0 nst356.1 nst356.2 st356))

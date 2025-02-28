@@ -1,6 +1,0 @@
-(assume nst118.0 (not (= (lseg_set_X$0 next$0 n_5$0 root_x$0) (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0))))
-(assume a12 (= n_5$0 (read$0 next$0 x$0)))
-(assume t69 (= next$0 next$0))
-(assume t71 (= root_x$0 root_x$0))
-(step st118 (cl (= (lseg_set_X$0 next$0 n_5$0 root_x$0) (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0))) :rule cong :premises (t69 a12 t71))
-(step t.end (cl) :rule resolution :premises (nst118.0 st118))

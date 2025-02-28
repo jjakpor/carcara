@@ -1,7 +1,0 @@
-(assume nst1214.0 (not (and (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) (= e1 (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3))))))
-(assume nst1214.1 (not (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))))
-(assume nst1214.2 (not (not (= e1 (op (op (op e1 e3) e1) e3)))))
-(assume nst1214.3 (not (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)))))
-(assume nst1214.4 (not (not (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3))))))
-(step st1214 (cl (and (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) (= e1 (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3)))) (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (not (= e1 (op (op (op e1 e3) e1) e3))) (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3))) (not (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3))))) :rule and_neg)
-(step t.end (cl) :rule resolution :premises (nst1214.0 nst1214.1 nst1214.2 nst1214.3 nst1214.4 st1214))

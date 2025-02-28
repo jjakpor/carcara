@@ -1,3 +1,0 @@
-(assume nst1059.0 (not (= (= (= (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))) true) (= (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))))))
-(step st1059 (cl (= (= (= (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))) true) (= (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nst1059.0 st1059))

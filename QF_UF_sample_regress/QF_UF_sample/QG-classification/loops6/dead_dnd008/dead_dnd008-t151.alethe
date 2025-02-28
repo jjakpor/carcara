@@ -1,4 +1,0 @@
-(assume nst151.0 (not (and (= (op unit e1) e1) (= (op e1 unit) e1))))
-(assume t150 (and (and (= (op unit e0) e0) (= (op e0 unit) e0)) (and (= (op unit e1) e1) (= (op e1 unit) e1))))
-(step st151 (cl (and (= (op unit e1) e1) (= (op e1 unit) e1))) :rule and :premises (t150) :args (1))
-(step t.end (cl) :rule resolution :premises (nst151.0 st151))

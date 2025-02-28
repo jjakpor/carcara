@@ -1,4 +1,0 @@
-(assume nst261.0 (not (not (and (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0)))))
-(assume nst261.1 (not (= lst$0 sk_?e$0)))
-(step st261 (cl (not (and (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))) (= lst$0 sk_?e$0))) (= lst$0 sk_?e$0)) :rule and_pos :args (1))
-(step t.end (cl) :rule resolution :premises (nst261.0 nst261.1 st261))

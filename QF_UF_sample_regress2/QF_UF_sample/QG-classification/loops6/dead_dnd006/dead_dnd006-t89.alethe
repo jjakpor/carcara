@@ -1,3 +1,0 @@
-(assume nst89.0 (not (= (= (op unit e0) e0) (= e0 (op unit e0)))))
-(step st89 (cl (= (= (op unit e0) e0) (= e0 (op unit e0)))) :rule rare_rewrite :args ("eq-symm" (op unit e0) e0))
-(step t.end (cl) :rule resolution :premises (nst89.0 st89))

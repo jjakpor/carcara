@@ -1,5 +1,0 @@
-(assume nt2.t17.0 (not (= e0 (op e2 e2))))
-(assume t2.t14 (= e0 (op e2 (op e2 e0))))
-(assume t2.t16 (= (op e2 (op e2 e0)) (op e2 e2)))
-(step t2.t17 (cl (= e0 (op e2 e2))) :rule trans :premises (t2.t14 t2.t16))
-(step t.end (cl) :rule resolution :premises (nt2.t17.0 t2.t17))

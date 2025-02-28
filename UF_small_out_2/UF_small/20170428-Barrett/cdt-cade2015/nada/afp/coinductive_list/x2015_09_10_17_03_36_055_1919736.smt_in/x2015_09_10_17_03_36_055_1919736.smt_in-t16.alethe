@@ -1,3 +1,0 @@
-(assume nst16.0 (not (= (= (llength$a xs$) (llength$ us$)) (= (llength$ us$) (llength$a xs$)))))
-(step st16 (cl (= (= (llength$a xs$) (llength$ us$)) (= (llength$ us$) (llength$a xs$)))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst16.0 st16))

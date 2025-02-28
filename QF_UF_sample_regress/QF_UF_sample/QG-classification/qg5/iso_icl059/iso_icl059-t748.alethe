@@ -1,5 +1,0 @@
-(assume nst748.0 (not (= (op e0 (op (op e0 e0) e0)) (op e0 (op e0 (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))))
-(assume t30 (= e0 e0))
-(assume t747 (= (op (op e0 e0) e0) (op e0 (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))
-(step st748 (cl (= (op e0 (op (op e0 e0) e0)) (op e0 (op e0 (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) :rule cong :premises (t30 t747))
-(step t.end (cl) :rule resolution :premises (nst748.0 st748))

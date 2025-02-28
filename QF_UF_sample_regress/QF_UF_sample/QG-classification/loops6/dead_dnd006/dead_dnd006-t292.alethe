@@ -1,7 +1,0 @@
-(assume nst292.0 (not (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0))))
-(assume t278 (or (not (= (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0)))) (not (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit))) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0))))
-(assume t290 (= (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0))))
-(assume t291 (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)))
-(step t278' (cl (not (= (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0)))) (not (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit))) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0))) :rule or :premises (t278))
-(step st292 (cl (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0))) :rule resolution :premises (t278' t290 t291))
-(step t.end (cl) :rule resolution :premises (nst292.0 st292))

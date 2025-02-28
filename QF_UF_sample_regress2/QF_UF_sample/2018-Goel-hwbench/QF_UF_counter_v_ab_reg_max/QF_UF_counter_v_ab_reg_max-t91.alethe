@@ -1,3 +1,0 @@
-(assume nst91.0 (not (= y$28 y$28)))
-(step st91 (cl (= y$28 y$28)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst91.0 st91))

@@ -1,6 +1,0 @@
-(assume nst445.0 (not (= c_0 (f6 c_1))))
-(assume t330 (or (= c_0 (f6 c_1)) (= c_1 (f6 c_1))))
-(assume t444 (not (= c_1 (f6 c_1))))
-(step t330' (cl (= c_0 (f6 c_1)) (= c_1 (f6 c_1))) :rule or :premises (t330))
-(step st445 (cl (= c_0 (f6 c_1))) :rule resolution :premises (t330' t444))
-(step t.end (cl) :rule resolution :premises (nst445.0 st445))

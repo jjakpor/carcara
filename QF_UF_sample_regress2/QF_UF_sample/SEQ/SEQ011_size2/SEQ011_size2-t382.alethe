@@ -1,7 +1,0 @@
-(assume nst382.0 (not (not (p1 (f6 c_1) c_1))))
-(assume nst382.1 (not (not (= c_1 (f6 c_1)))))
-(assume nst382.2 (not (not (= c_1 (f7 c_1)))))
-(assume nst382.3 (not (not (not (p1 (f7 c_1) c_1)))))
-(assume t381 (not (and (p1 (f6 c_1) c_1) (= c_1 (f6 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))))
-(step st382 (cl (not (p1 (f6 c_1) c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f7 c_1))) (not (not (p1 (f7 c_1) c_1)))) :rule not_and :premises (t381))
-(step t.end (cl) :rule resolution :premises (nst382.0 nst382.1 nst382.2 nst382.3 st382))

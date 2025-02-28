@@ -1,6 +1,0 @@
-(assume nst61.0 (not (not (or (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 null$0)) (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)) (and (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0)) (Btwn$0 next$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0) null$0))))))
-(assume nst61.1 (not (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 null$0))))
-(assume nst61.2 (not (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0))))
-(assume nst61.3 (not (and (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0)) (Btwn$0 next$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0) null$0))))
-(step st61 (cl (not (or (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 null$0)) (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)) (and (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0)) (Btwn$0 next$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0) null$0)))) (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 null$0)) (not (Btwn$0 next$0 lst$0 (read$0 next$0 lst$0) null$0)) (and (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0)) (Btwn$0 next$0 (read$0 next$0 lst$0) (read$0 next$0 lst$0) null$0))) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst61.0 nst61.1 nst61.2 nst61.3 st61))

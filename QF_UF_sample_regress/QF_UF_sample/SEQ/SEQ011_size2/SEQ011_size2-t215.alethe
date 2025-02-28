@@ -1,8 +1,0 @@
-(assume nst215.0 (not (p1 (f7 c_0) c_0)))
-(assume nst215.1 (not (not (p1 (f5 c_0) c_0))))
-(assume nst215.2 (not (not (= c_1 (f7 c_0)))))
-(assume nst215.3 (not (not (= c_1 (f5 c_0)))))
-(assume t214 (or (not (p1 (f5 c_0) c_0)) (not (= c_1 (f5 c_0))) (not (= c_1 (f7 c_0))) (p1 (f7 c_0) c_0)))
-(step t214' (cl (not (p1 (f5 c_0) c_0)) (not (= c_1 (f5 c_0))) (not (= c_1 (f7 c_0))) (p1 (f7 c_0) c_0)) :rule or :premises (t214))
-(step st215 (cl (p1 (f7 c_0) c_0) (not (p1 (f5 c_0) c_0)) (not (= c_1 (f7 c_0))) (not (= c_1 (f5 c_0)))) :rule reordering :premises (t214'))
-(step t.end (cl) :rule resolution :premises (nst215.0 nst215.1 nst215.2 nst215.3 st215))

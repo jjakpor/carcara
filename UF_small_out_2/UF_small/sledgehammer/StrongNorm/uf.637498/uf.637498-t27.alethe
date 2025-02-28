@@ -1,5 +1,0 @@
-(assume nst27.0 (not (= (forall ((?v0 S3)) (= (f115 (f133 f134 ?v0) f39) f1)) (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39))))))
-(assume t25 (= (forall ((?v0 S3)) (= (f115 (f133 f134 ?v0) f39) f1)) (forall ((?v0 S3)) (= f1 (f115 (f133 f134 ?v0) f39)))))
-(assume t26 (= (forall ((?v0 S3)) (= f1 (f115 (f133 f134 ?v0) f39))) (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39)))))
-(step st27 (cl (= (forall ((?v0 S3)) (= (f115 (f133 f134 ?v0) f39) f1)) (forall ((?v0 S3)) (= (f115 (f133 f134 f5) f135) (f115 (f133 f134 ?v0) f39))))) :rule trans :premises (t25 t26))
-(step t.end (cl) :rule resolution :premises (nst27.0 st27))

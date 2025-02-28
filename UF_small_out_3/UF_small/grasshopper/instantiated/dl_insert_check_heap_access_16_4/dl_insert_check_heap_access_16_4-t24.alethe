@@ -1,4 +1,0 @@
-(assume nst24.0 (not (= FP$0 sk_?X$0)))
-(assume a33 (= sk_?X$0 FP$0))
-(step st24 (cl (= FP$0 sk_?X$0)) :rule symm :premises (a33))
-(step t.end (cl) :rule resolution :premises (nst24.0 st24))

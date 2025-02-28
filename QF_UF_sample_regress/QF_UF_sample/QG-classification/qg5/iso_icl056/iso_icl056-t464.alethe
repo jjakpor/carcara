@@ -1,4 +1,0 @@
-(assume nst464.0 (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))) (op (op e1 e1) e1))))
-(assume t463 (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))
-(step st464 (cl (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))) (op (op e1 e1) e1))) :rule symm :premises (t463))
-(step t.end (cl) :rule resolution :premises (nst464.0 st464))

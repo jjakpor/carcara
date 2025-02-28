@@ -1,3 +1,0 @@
-(assume nt31.0 (not (= (not (= x8 x9)) (not (= x8 x9)))))
-(step t31 (cl (= (not (= x8 x9)) (not (= x8 x9)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt31.0 t31))

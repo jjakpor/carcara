@@ -1,5 +1,0 @@
-(assume nst108.0 (not (= (and (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))))))
-(assume t106 (= (and (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))) (and true (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))))))
-(assume t107 (= (and true (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))))
-(step st108 (cl (= (and (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))))) :rule trans :premises (t106 t107))
-(step t.end (cl) :rule resolution :premises (nst108.0 st108))

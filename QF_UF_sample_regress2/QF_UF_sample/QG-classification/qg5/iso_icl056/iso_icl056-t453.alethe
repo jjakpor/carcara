@@ -1,8 +1,0 @@
-(assume nst453.0 (not (= (= (op (op e1 (op e1 e1)) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) false)))
-(assume nst453.1 (not (= (op (op e1 (op e1 e1)) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))
-(assume t451 (or (= (= (op (op e1 (op e1 e1)) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) false) (not (not (= (op (op e1 (op e1 e1)) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))))
-(assume t452 (or (not (not (not (= (op (op e1 (op e1 e1)) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))) (= (op (op e1 (op e1 e1)) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))
-(step t452' (cl (not (not (not (= (op (op e1 (op e1 e1)) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))) (= (op (op e1 (op e1 e1)) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))) :rule or :premises (t452))
-(step t451' (cl (= (= (op (op e1 (op e1 e1)) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) false) (not (not (= (op (op e1 (op e1 e1)) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))) :rule or :premises (t451))
-(step st453 (cl (= (= (op (op e1 (op e1 e1)) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) false) (= (op (op e1 (op e1 e1)) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))) :rule resolution :premises (t451' t452'))
-(step t.end (cl) :rule resolution :premises (nst453.0 nst453.1 st453))

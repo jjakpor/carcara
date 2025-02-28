@@ -1,5 +1,0 @@
-(assume nt188.0 (not (= (= (op e3 unit) e3) (= e3 (op e3 e0)))))
-(assume t184 (= (= (op e3 unit) e3) (= e3 (op e3 unit))))
-(assume t187 (= (= e3 (op e3 unit)) (= e3 (op e3 e0))))
-(step t188 (cl (= (= (op e3 unit) e3) (= e3 (op e3 e0)))) :rule trans :premises (t184 t187))
-(step t.end (cl) :rule resolution :premises (nt188.0 t188))

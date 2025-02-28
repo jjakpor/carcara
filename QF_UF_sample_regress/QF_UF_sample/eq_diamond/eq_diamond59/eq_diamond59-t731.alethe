@@ -1,5 +1,0 @@
-(assume nst731.0 (not (not (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))))))
-(assume nst731.1 (not (= x47 x48)))
-(assume t730 (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48)))
-(step st731 (cl (not (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48)))) (= x47 x48)) :rule implies :premises (t730))
-(step t.end (cl) :rule resolution :premises (nst731.0 nst731.1 st731))

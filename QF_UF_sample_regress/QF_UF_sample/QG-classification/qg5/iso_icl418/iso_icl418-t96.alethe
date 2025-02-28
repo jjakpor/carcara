@@ -1,3 +1,0 @@
-(assume nst96.0 (not (= (= (op e4 e3) (op e3 (op e3 e4))) (= (op e4 e3) (op e3 (op e3 e4))))))
-(step st96 (cl (= (= (op e4 e3) (op e3 (op e3 e4))) (= (op e4 e3) (op e3 (op e3 e4))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst96.0 st96))

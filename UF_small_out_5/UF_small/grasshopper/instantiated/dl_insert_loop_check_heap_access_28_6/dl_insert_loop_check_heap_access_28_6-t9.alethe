@@ -1,4 +1,0 @@
-(assume nst9.0 (not (=> (forall ((?x Loc) (?y Loc)) (or (not (Btwn$0 next$0 ?x ?y ?x)) (= ?y ?x))) (or (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) prv_5$0)) (= (read$0 next$0 d_init$0) prv_5$0)))))
-(assume nst9.1 (not (not (or (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) prv_5$0)) (= (read$0 next$0 d_init$0) prv_5$0)))))
-(step st9 (cl (=> (forall ((?x Loc) (?y Loc)) (or (not (Btwn$0 next$0 ?x ?y ?x)) (= ?y ?x))) (or (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) prv_5$0)) (= (read$0 next$0 d_init$0) prv_5$0))) (not (or (not (Btwn$0 next$0 prv_5$0 (read$0 next$0 d_init$0) prv_5$0)) (= (read$0 next$0 d_init$0) prv_5$0)))) :rule implies_neg2)
-(step t.end (cl) :rule resolution :premises (nst9.0 nst9.1 st9))

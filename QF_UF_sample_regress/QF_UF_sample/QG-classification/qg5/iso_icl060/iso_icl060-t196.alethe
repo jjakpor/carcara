@@ -1,3 +1,0 @@
-(assume nst196.0 (not (= (= (op (op e1 e3) e1) (op (op e1 e3) e1)) true)))
-(step st196 (cl (= (= (op (op e1 e3) e1) (op (op e1 e3) e1)) true)) :rule rare_rewrite :args ("eq-refl" (op (op e1 e3) e1)))
-(step t.end (cl) :rule resolution :premises (nst196.0 st196))

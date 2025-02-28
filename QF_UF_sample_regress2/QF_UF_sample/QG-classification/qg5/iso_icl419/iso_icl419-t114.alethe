@@ -1,3 +1,0 @@
-(assume nst114.0 (not (= (= e3 (op (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op e3 e3)))) (= e3 (op (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op e3 e3)))))))
-(step st114 (cl (= (= e3 (op (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op e3 e3)))) (= e3 (op (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op e3 e3)))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst114.0 st114))

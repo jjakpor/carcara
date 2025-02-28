@@ -1,6 +1,0 @@
-(assume t71 (or (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (= x5 x6)))
-(assume nt72.0 (not (= x5 x6)))
-(assume nt72.1 (not (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))))
-(step t71' (cl (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (= x5 x6)) :rule or :premises (t71))
-(step t72 (cl (= x5 x6) (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))) :rule reordering :premises (t71'))
-(step t.end (cl) :rule resolution :premises (nt72.0 nt72.1 t72))

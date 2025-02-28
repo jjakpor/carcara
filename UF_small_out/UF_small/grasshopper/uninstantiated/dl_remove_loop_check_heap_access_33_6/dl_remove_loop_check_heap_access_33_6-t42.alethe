@@ -1,5 +1,0 @@
-(assume nst42.0 (not (= (not (= curr_init$0 null$0)) (not (= prv_5$0 (read$0 next$0 d_init$0))))))
-(assume t8 (= (not (= curr_init$0 null$0)) (not (= null$0 curr_init$0))))
-(assume t41 (= (not (= null$0 curr_init$0)) (not (= prv_5$0 (read$0 next$0 d_init$0)))))
-(step st42 (cl (= (not (= curr_init$0 null$0)) (not (= prv_5$0 (read$0 next$0 d_init$0))))) :rule trans :premises (t8 t41))
-(step t.end (cl) :rule resolution :premises (nst42.0 st42))

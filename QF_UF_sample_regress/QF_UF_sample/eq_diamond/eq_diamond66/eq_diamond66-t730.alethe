@@ -1,5 +1,0 @@
-(assume nst730.0 (not (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))))))
-(assume nst730.1 (not (= x64 x65)))
-(assume t729 (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65)))
-(step st730 (cl (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65)))) (= x64 x65)) :rule implies :premises (t729))
-(step t.end (cl) :rule resolution :premises (nst730.0 nst730.1 st730))

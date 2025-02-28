@@ -1,6 +1,0 @@
-(assume nst9.0 (not (= start1$0 (read$0 next$0 end1$0))))
-(assume nst9.1 (not (not (and (= end1$0 (read$0 next$0 end1$0)) (= start1$0 (read$0 next$0 end1$0))))))
-(assume t8 (or (not (and (= end1$0 (read$0 next$0 end1$0)) (= start1$0 (read$0 next$0 end1$0)))) (= start1$0 (read$0 next$0 end1$0))))
-(step t8' (cl (not (and (= end1$0 (read$0 next$0 end1$0)) (= start1$0 (read$0 next$0 end1$0)))) (= start1$0 (read$0 next$0 end1$0))) :rule or :premises (t8))
-(step st9 (cl (= start1$0 (read$0 next$0 end1$0)) (not (and (= end1$0 (read$0 next$0 end1$0)) (= start1$0 (read$0 next$0 end1$0))))) :rule reordering :premises (t8'))
-(step t.end (cl) :rule resolution :premises (nst9.0 nst9.1 st9))

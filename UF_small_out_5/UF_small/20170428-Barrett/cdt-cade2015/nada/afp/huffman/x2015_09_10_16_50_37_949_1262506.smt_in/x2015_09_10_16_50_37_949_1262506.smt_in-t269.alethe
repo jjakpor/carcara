@@ -1,6 +1,0 @@
-(assume nst269.0 (not (= (or (not (= b$ c$)) (not (not (= c$ d$))) (not (= b$ d$))) (or (not (= b$ c$)) (= c$ d$) (not (= b$ d$))))))
-(assume t266 (= (not (= b$ c$)) (not (= b$ c$))))
-(assume t267 (= (not (not (= c$ d$))) (= c$ d$)))
-(assume t268 (= (not (= b$ d$)) (not (= b$ d$))))
-(step st269 (cl (= (or (not (= b$ c$)) (not (not (= c$ d$))) (not (= b$ d$))) (or (not (= b$ c$)) (= c$ d$) (not (= b$ d$))))) :rule cong :premises (t266 t267 t268))
-(step t.end (cl) :rule resolution :premises (nst269.0 st269))

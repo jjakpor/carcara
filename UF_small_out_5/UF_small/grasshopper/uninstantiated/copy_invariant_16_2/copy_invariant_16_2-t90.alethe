@@ -1,7 +1,0 @@
-(assume nst90.0 (not (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0))))
-(assume nst90.1 (not (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0))))
-(assume nst90.2 (not (not (or (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0))))))
-(assume t89 (or (not (or (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)))) (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0))))
-(step t89' (cl (not (or (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)))) (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0))) :rule or :premises (t89))
-(step st90 (cl (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0)) (not (or (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (not (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0)) (and (Btwn$0 next$0 lst$0 cp_2$0 cp_2$0) (Btwn$0 next$0 cp_2$0 cp_2$0 cp_2$0))))) :rule reordering :premises (t89'))
-(step t.end (cl) :rule resolution :premises (nst90.0 nst90.1 nst90.2 st90))

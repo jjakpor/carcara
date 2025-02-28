@@ -1,4 +1,0 @@
-(assume nst4.0 (not (not (= flash nf0))))
-(assume a5 (not (= nf0 flash)))
-(step st4 (cl (not (= flash nf0))) :rule not_symm :premises (a5))
-(step t.end (cl) :rule resolution :premises (nst4.0 st4))

@@ -1,4 +1,0 @@
-(assume nst20.0 (not (not (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))))))
-(assume nst20.1 (not (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))))
-(step st20 (cl (not (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0)))) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) :rule and_pos :args (1))
-(step t.end (cl) :rule resolution :premises (nst20.0 nst20.1 st20))

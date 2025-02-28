@@ -1,3 +1,0 @@
-(assume nt131.0 (not (= (= (f6 c_0) c_0) (= c_0 (f6 c_0)))))
-(step t131 (cl (= (= (f6 c_0) c_0) (= c_0 (f6 c_0)))) :rule rare_rewrite :args ("eq-symm" (f6 c_0) c_0))
-(step t.end (cl) :rule resolution :premises (nt131.0 t131))

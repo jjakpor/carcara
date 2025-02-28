@@ -1,5 +1,0 @@
-(assume nst245.0 (not (= (= unit e4) (= e0 e4))))
-(assume a11 (= unit e0))
-(assume t232 (= e4 e4))
-(step st245 (cl (= (= unit e4) (= e0 e4))) :rule cong :premises (a11 t232))
-(step t.end (cl) :rule resolution :premises (nst245.0 st245))

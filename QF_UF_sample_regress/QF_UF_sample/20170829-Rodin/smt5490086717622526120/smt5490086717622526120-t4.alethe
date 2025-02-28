@@ -1,3 +1,0 @@
-(assume nst4.0 (not (= (= (not (not prt)) prt) (= prt (not (not prt))))))
-(step st4 (cl (= (= (not (not prt)) prt) (= prt (not (not prt))))) :rule rare_rewrite :args ("eq-symm" (not (not prt)) prt))
-(step t.end (cl) :rule resolution :premises (nst4.0 st4))

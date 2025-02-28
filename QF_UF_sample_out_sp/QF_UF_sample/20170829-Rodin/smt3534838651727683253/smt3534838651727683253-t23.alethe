@@ -1,4 +1,0 @@
-(assume nt23.0 (not (= (not (= nf0 nf0)) (not true))))
-(assume t22 (= (= nf0 nf0) true))
-(step t23 (cl (= (not (= nf0 nf0)) (not true))) :rule cong :premises (t22))
-(step t.end (cl) :rule resolution :premises (nt23.0 t23))

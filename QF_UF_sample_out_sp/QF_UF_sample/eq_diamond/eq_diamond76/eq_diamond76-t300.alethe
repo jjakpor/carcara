@@ -1,6 +1,0 @@
-(assume nt300.0 (not (= x25 x26)))
-(assume t299 (or (= x25 x26) (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))))))
-(assume t295 (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))))
-(step t299' (cl (= x25 x26) (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))))) :rule or :premises (t299))
-(step t300 (cl (= x25 x26)) :rule resolution :premises (t299' t295))
-(step t.end (cl) :rule resolution :premises (nt300.0 t300))

@@ -1,4 +1,0 @@
-(assume nst661.0 (not (and (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2)) (= (op (op e1 e3) e1) e3))))
-(assume t617 (and (and (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2)) (= (op (op e1 e3) e1) e3)) (= (op (op e1 e4) e1) e4)))
-(step st661 (cl (and (and (and (= (op (op e1 e0) e1) e0) (= (op (op e1 e1) e1) e1)) (= (op (op e1 e2) e1) e2)) (= (op (op e1 e3) e1) e3))) :rule and :premises (t617) :args (0))
-(step t.end (cl) :rule resolution :premises (nst661.0 st661))

@@ -1,3 +1,0 @@
-(assume nst56.0 (not (= f25 f25)))
-(step st56 (cl (= f25 f25)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst56.0 st56))

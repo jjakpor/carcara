@@ -1,3 +1,0 @@
-(assume nst160.0 (not (= (not (not (models empty (orR (notR (pR aR)) (qR bR))))) (models empty (orR (notR (pR aR)) (qR bR))))))
-(step st160 (cl (= (not (not (models empty (orR (notR (pR aR)) (qR bR))))) (models empty (orR (notR (pR aR)) (qR bR))))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst160.0 st160))

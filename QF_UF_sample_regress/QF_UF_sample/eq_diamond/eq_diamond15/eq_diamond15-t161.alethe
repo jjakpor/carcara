@@ -1,5 +1,0 @@
-(assume nst161.0 (not (= (= x2 x3) (= x0 x14))))
-(assume t38 (= x2 x0))
-(assume t160 (= x3 x14))
-(step st161 (cl (= (= x2 x3) (= x0 x14))) :rule cong :premises (t38 t160))
-(step t.end (cl) :rule resolution :premises (nst161.0 st161))

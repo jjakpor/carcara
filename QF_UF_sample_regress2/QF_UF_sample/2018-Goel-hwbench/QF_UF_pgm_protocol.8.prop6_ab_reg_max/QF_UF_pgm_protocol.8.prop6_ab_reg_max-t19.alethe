@@ -1,4 +1,0 @@
-(assume nst19.0 (not (not (and y$111 y$v3_1517448504_183_op))))
-(assume nst19.1 (not y$v3_1517448504_183_op))
-(step st19 (cl (not (and y$111 y$v3_1517448504_183_op)) y$v3_1517448504_183_op) :rule and_pos :args (1))
-(step t.end (cl) :rule resolution :premises (nst19.0 nst19.1 st19))

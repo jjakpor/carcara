@@ -1,7 +1,0 @@
-(assume t218.t0 (or (not (= (= (op e4 unit) e4) (= e4 (op e4 e0)))) (not (= (op e4 unit) e4)) (= e4 (op e4 e0))))
-(assume t218.t5 (= (= (op e4 unit) e4) (= e4 (op e4 e0))))
-(assume t218.t7 (= (op e4 unit) e4))
-(assume nt218.t8.0 (not (= e4 (op e4 e0))))
-(step t218.t0' (cl (not (= (= (op e4 unit) e4) (= e4 (op e4 e0)))) (not (= (op e4 unit) e4)) (= e4 (op e4 e0))) :rule or :premises (t218.t0))
-(step t218.t8 (cl (= e4 (op e4 e0))) :rule resolution :premises (t218.t0' t218.t5 t218.t7))
-(step t.end (cl) :rule resolution :premises (nt218.t8.0 t218.t8))

@@ -1,4 +1,0 @@
-(assume nst719.0 (not (=> (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))) (= x46 x47))))
-(assume t718 (and (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))) (=> (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))) (= x46 x47))))
-(step st719 (cl (=> (or (and (= x46 y46) (= y46 x47)) (and (= x46 z46) (= z46 x47))) (= x46 x47))) :rule and :premises (t718) :args (1))
-(step t.end (cl) :rule resolution :premises (nst719.0 st719))

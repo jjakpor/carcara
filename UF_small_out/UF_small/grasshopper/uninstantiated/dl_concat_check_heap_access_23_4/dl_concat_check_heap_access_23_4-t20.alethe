@@ -1,6 +1,0 @@
-(assume nst20.0 (not (= (and (= (read$0 next$0 end1$0) null$0) (= (read$0 prev$0 start1$0) null$0) (in$0 end1$0 sk_?X_10$0)) (and (= null$0 (read$0 next$0 end1$0)) (= null$0 (read$0 prev$0 start1$0)) (in$0 end1$0 sk_?X_10$0)))))
-(assume t17 (= (= (read$0 next$0 end1$0) null$0) (= null$0 (read$0 next$0 end1$0))))
-(assume t18 (= (= (read$0 prev$0 start1$0) null$0) (= null$0 (read$0 prev$0 start1$0))))
-(assume t19 (= (in$0 end1$0 sk_?X_10$0) (in$0 end1$0 sk_?X_10$0)))
-(step st20 (cl (= (and (= (read$0 next$0 end1$0) null$0) (= (read$0 prev$0 start1$0) null$0) (in$0 end1$0 sk_?X_10$0)) (and (= null$0 (read$0 next$0 end1$0)) (= null$0 (read$0 prev$0 start1$0)) (in$0 end1$0 sk_?X_10$0)))) :rule cong :premises (t17 t18 t19))
-(step t.end (cl) :rule resolution :premises (nst20.0 st20))

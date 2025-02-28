@@ -1,5 +1,0 @@
-(assume nst45.0 (not (not (= (not (= (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ zero$)))) (not (= (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))))))))
-(assume nst45.1 (not (not (not (= (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ zero$)))))))
-(assume nst45.2 (not (not (= (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))))))
-(step st45 (cl (not (= (not (= (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ zero$)))) (not (= (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))))) (not (not (= (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ zero$))))) (not (= (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst45.0 nst45.1 nst45.2 st45))

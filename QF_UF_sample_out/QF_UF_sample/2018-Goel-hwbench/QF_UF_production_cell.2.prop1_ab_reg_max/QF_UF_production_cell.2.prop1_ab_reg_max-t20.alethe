@@ -1,5 +1,0 @@
-(assume nt20.0 (not (not (= y$68 (= y$v_at_press y$v_at_table)))))
-(assume nt20.1 (not (not y$68)))
-(assume nt20.2 (not (= y$v_at_press y$v_at_table)))
-(step t20 (cl (not (= y$68 (= y$v_at_press y$v_at_table))) (not y$68) (= y$v_at_press y$v_at_table)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt20.0 nt20.1 nt20.2 t20))

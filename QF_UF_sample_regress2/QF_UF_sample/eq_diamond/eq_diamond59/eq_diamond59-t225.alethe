@@ -1,5 +1,0 @@
-(assume nst225.0 (not (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))))
-(assume nst225.1 (not (= x0 x1)))
-(assume t224 (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1)))
-(step st225 (cl (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (= x0 x1)) :rule implies :premises (t224))
-(step t.end (cl) :rule resolution :premises (nst225.0 nst225.1 st225))

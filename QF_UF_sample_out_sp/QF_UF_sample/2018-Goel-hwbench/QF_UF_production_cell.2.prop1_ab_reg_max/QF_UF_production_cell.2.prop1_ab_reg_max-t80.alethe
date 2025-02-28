@@ -1,5 +1,0 @@
-(assume nt80.0 (not (= y$78 (= y$v_k_Deposit y$v_k_Press))))
-(assume a40 (= y$78 (= y$n0s8 y$v_k_Press)))
-(assume t79 (= (= y$n0s8 y$v_k_Press) (= y$v_k_Deposit y$v_k_Press)))
-(step t80 (cl (= y$78 (= y$v_k_Deposit y$v_k_Press))) :rule trans :premises (a40 t79))
-(step t.end (cl) :rule resolution :premises (nt80.0 t80))

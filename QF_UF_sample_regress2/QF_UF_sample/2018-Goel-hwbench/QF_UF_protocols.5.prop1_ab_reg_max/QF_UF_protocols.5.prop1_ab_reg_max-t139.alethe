@@ -1,5 +1,0 @@
-(assume nst139.0 (not (not y$f17)))
-(assume nst139.1 (not (not y$545)))
-(assume t138 (not (and y$f17 y$545)))
-(step st139 (cl (not y$f17) (not y$545)) :rule not_and :premises (t138))
-(step t.end (cl) :rule resolution :premises (nst139.0 nst139.1 st139))

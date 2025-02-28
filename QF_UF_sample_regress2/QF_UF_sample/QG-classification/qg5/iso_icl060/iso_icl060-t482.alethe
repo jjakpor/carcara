@@ -1,7 +1,0 @@
-(assume nst482.0 (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))))
-(assume t478 (or (not (= (not (= (op e0 e3) (op e4 e3))) (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))) (not (not (= (op e0 e3) (op e4 e3)))) (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))))
-(assume t480 (= (not (= (op e0 e3) (op e4 e3))) (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))))
-(assume t481 (not (= (op e0 e3) (op e4 e3))))
-(step t478' (cl (not (= (not (= (op e0 e3) (op e4 e3))) (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))))) (not (not (= (op e0 e3) (op e4 e3)))) (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) :rule or :premises (t478))
-(step st482 (cl (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) :rule resolution :premises (t478' t480 t481))
-(step t.end (cl) :rule resolution :premises (nst482.0 st482))

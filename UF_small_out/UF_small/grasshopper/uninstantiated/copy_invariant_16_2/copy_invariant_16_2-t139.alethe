@@ -1,5 +1,0 @@
-(assume nst139.0 (not (= (not (= null$0 null$0)) false)))
-(assume t137 (= (not (= null$0 null$0)) (not true)))
-(assume t138 (= (not true) false))
-(step st139 (cl (= (not (= null$0 null$0)) false)) :rule trans :premises (t137 t138))
-(step t.end (cl) :rule resolution :premises (nst139.0 st139))

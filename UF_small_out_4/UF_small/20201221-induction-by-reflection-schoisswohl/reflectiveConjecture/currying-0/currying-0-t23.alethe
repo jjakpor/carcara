@@ -1,5 +1,0 @@
-(assume nst23.0 (not (not (= (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))) (or (models empty (notR (pR aR))) (models empty (orR (notR (qR bR)) (rR cR))))))))
-(assume nst23.1 (not (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR))))))
-(assume nst23.2 (not (not (or (models empty (notR (pR aR))) (models empty (orR (notR (qR bR)) (rR cR)))))))
-(step st23 (cl (not (= (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))) (or (models empty (notR (pR aR))) (models empty (orR (notR (qR bR)) (rR cR)))))) (models empty (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))) (not (or (models empty (notR (pR aR))) (models empty (orR (notR (qR bR)) (rR cR)))))) :rule equiv_pos1)
-(step t.end (cl) :rule resolution :premises (nst23.0 nst23.1 nst23.2 st23))

@@ -1,4 +1,0 @@
-(assume nt100.0 (not (= (op unit e0) e0)))
-(assume t99 (and (= (op unit e0) e0) (= (op e0 unit) e0)))
-(step t100 (cl (= (op unit e0) e0)) :rule and :premises (t99) :args (0))
-(step t.end (cl) :rule resolution :premises (nt100.0 t100))

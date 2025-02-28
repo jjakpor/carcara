@@ -1,5 +1,0 @@
-(assume nst243.0 (not (= (not (= null$0 null$0)) false)))
-(assume t241 (= (not (= null$0 null$0)) (not true)))
-(assume t242 (= (not true) false))
-(step st243 (cl (= (not (= null$0 null$0)) false)) :rule trans :premises (t241 t242))
-(step t.end (cl) :rule resolution :premises (nst243.0 st243))

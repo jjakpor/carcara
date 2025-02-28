@@ -1,4 +1,0 @@
-(assume nst328.0 (not (not (= e1 e0))))
-(assume t327 (not (= e0 e1)))
-(step st328 (cl (not (= e1 e0))) :rule not_symm :premises (t327))
-(step t.end (cl) :rule resolution :premises (nst328.0 st328))

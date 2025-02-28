@@ -1,6 +1,0 @@
-(assume t14 (or (not (= (= (not (not (= x0 x58))) (= x0 x58)) true)) (= (not (not (= x0 x58))) (= x0 x58))))
-(assume t21 (= (= (not (not (= x0 x58))) (= x0 x58)) true))
-(assume nt22.0 (not (= (not (not (= x0 x58))) (= x0 x58))))
-(step t14' (cl (not (= (= (not (not (= x0 x58))) (= x0 x58)) true)) (= (not (not (= x0 x58))) (= x0 x58))) :rule or :premises (t14))
-(step t22 (cl (= (not (not (= x0 x58))) (= x0 x58))) :rule resolution :premises (t14' t21))
-(step t.end (cl) :rule resolution :premises (nt22.0 t22))

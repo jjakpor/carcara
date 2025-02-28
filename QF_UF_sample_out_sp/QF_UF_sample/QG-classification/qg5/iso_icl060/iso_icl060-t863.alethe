@@ -1,5 +1,0 @@
-(assume nt863.0 (not (= (= (op e1 e3) (op (op (op e1 e3) e3) (op e1 e3))) false)))
-(assume t852 (= (= (op e1 e3) (op (op (op e1 e3) e3) (op e1 e3))) (= (op (op e1 e3) (op e1 e3)) (op (op (op e1 e3) e3) (op e1 e3)))))
-(assume t862 (= (= (op (op e1 e3) (op e1 e3)) (op (op (op e1 e3) e3) (op e1 e3))) false))
-(step t863 (cl (= (= (op e1 e3) (op (op (op e1 e3) e3) (op e1 e3))) false)) :rule trans :premises (t852 t862))
-(step t.end (cl) :rule resolution :premises (nt863.0 t863))

@@ -1,3 +1,0 @@
-(assume nt210.0 (not (= y$33 y$33)))
-(step t210 (cl (= y$33 y$33)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt210.0 t210))

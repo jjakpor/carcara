@@ -1,4 +1,0 @@
-(assume nt675.0 (not (=> (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))) (= x42 x43))))
-(assume t674 (and (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))) (=> (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))) (= x42 x43))))
-(step t675 (cl (=> (or (and (= x42 y42) (= y42 x43)) (and (= x42 z42) (= z42 x43))) (= x42 x43))) :rule and :premises (t674) :args (1))
-(step t.end (cl) :rule resolution :premises (nt675.0 t675))

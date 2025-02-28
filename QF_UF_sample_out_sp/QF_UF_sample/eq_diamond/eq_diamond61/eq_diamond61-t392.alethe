@@ -1,3 +1,0 @@
-(assume nt392.0 (not (= (= (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (and (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (=> (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (= x35 x36)))) true)))
-(step t392 (cl (= (= (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (and (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (=> (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (= x35 x36)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt392.0 t392))

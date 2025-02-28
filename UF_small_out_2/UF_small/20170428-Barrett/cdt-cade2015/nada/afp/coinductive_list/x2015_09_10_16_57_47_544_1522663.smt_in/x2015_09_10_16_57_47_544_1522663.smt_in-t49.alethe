@@ -1,4 +1,0 @@
-(assume nst49.0 (not (=> (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)))) (= (fun_app$h (uvn$ (ltl$ xs$)) n$) (fun_app$h (fun_app$o (case_nat$ (lCons$ (lhd$ xs$) (ltl$ xs$))) (uvn$ (ltl$ xs$))) (suc$ n$))))))
-(assume nst49.1 (not (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2))))))
-(step st49 (cl (=> (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2)))) (= (fun_app$h (uvn$ (ltl$ xs$)) n$) (fun_app$h (fun_app$o (case_nat$ (lCons$ (lhd$ xs$) (ltl$ xs$))) (uvn$ (ltl$ xs$))) (suc$ n$)))) (forall ((?v0 A_llist$) (?v1 Nat_a_llist_fun$) (?v2 Nat$)) (= (fun_app$h ?v1 ?v2) (fun_app$h (fun_app$o (case_nat$ ?v0) ?v1) (suc$ ?v2))))) :rule implies_neg1)
-(step t.end (cl) :rule resolution :premises (nst49.0 nst49.1 st49))

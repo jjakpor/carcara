@@ -1,8 +1,0 @@
-(assume nt65.0 (not (= (forall ((?v0 S51)) (or (not (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0))) (not (= f1 (f75 f65 ?v0 f76))))) (forall ((?v0 S51)) (or (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0))) (not (= (f64 f65 f66 f67 f72 f78) (f75 f65 ?v0 f76))))))))
-(anchor :step t65 :args ((?v0 S51) (:= (?v0 S51) ?v0)))
-(step t65.t9 (cl (= f1 (f64 f65 f66 f67 f72 f78))) :rule trust)
-(step t65.t10 (cl (= (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0))) :rule trust)
-(step st65.t11 (cl (= (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0)) (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0)))) :rule cong :premises (t65.t9 t65.t10))
-(step t65.t16 (cl (= (or (not (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0))) (not (= f1 (f75 f65 ?v0 f76)))) (or (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0))) (not (= (f64 f65 f66 f67 f72 f78) (f75 f65 ?v0 f76)))))) :rule trust)
-(step t65 (cl (= (forall ((?v0 S51)) (or (not (= f1 (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0))) (not (= f1 (f75 f65 ?v0 f76))))) (forall ((?v0 S51)) (or (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) ?v0))) (not (= (f64 f65 f66 f67 f72 f78) (f75 f65 ?v0 f76))))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt65.0 t65))

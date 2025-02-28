@@ -1,5 +1,0 @@
-(assume nst1036.0 (not (= (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) false)))
-(assume nst1036.1 (not (not (not (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))))))
-(assume t1035 (= (= (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) false) (not (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))))
-(step st1036 (cl (= (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))) false) (not (not (= (op e0 (op e0 e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))))) :rule equiv2 :premises (t1035))
-(step t.end (cl) :rule resolution :premises (nst1036.0 nst1036.1 st1036))

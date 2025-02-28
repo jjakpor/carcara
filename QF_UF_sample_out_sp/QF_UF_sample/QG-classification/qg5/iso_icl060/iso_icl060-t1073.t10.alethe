@@ -1,8 +1,0 @@
-(assume nt1073.t10.0 (not (= (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))) false)))
-(assume nt1073.t10.1 (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))))
-(assume t1073.t8 (or (= (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))) false) (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))))))
-(assume t1073.t9 (or (not (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))))) (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))))
-(step t1073.t8' (cl (= (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))) false) (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))))) :rule or :premises (t1073.t8))
-(step t1073.t9' (cl (not (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))))) (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))) :rule or :premises (t1073.t9))
-(step t1073.t10 (cl (= (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))) false) (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))) :rule resolution :premises (t1073.t8' t1073.t9'))
-(step t.end (cl) :rule resolution :premises (nt1073.t10.0 nt1073.t10.1 t1073.t10))

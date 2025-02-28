@@ -1,5 +1,0 @@
-(assume t38 (= e2 (op e0 e0)))
-(assume t68 (= (op e2 e4) (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))
-(assume nt1039.0 (not (= (= e2 (op e2 e4)) (= (op e0 e0) (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))))
-(step t1039 (cl (= (= e2 (op e2 e4)) (= (op e0 e0) (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) :rule cong :premises (t38 t68))
-(step t.end (cl) :rule resolution :premises (nt1039.0 t1039))

@@ -1,6 +1,0 @@
-(assume nt62.0 (not (not y$1047)))
-(assume t40 (or (not y$1047) y$dve_invalid$next))
-(assume t61 (not y$dve_invalid$next))
-(step t40' (cl (not y$1047) y$dve_invalid$next) :rule or :premises (t40))
-(step t62 (cl (not y$1047)) :rule resolution :premises (t40' t61))
-(step t.end (cl) :rule resolution :premises (nt62.0 t62))

@@ -1,5 +1,0 @@
-(assume nst715.0 (not (not (= (= (op e4 e3) (op e3 (op e4 e3))) false))))
-(assume nst715.1 (not (not (= (op e4 e3) (op e3 (op e4 e3))))))
-(assume t714 (= (= (= (op e4 e3) (op e3 (op e4 e3))) false) (not (= (op e4 e3) (op e3 (op e4 e3))))))
-(step st715 (cl (not (= (= (op e4 e3) (op e3 (op e4 e3))) false)) (not (= (op e4 e3) (op e3 (op e4 e3))))) :rule equiv1 :premises (t714))
-(step t.end (cl) :rule resolution :premises (nst715.0 nst715.1 st715))

@@ -1,4 +1,0 @@
-(assume nst16.0 (not (= (not y$962) y$v3_1517448506_495_op)))
-(assume a603 (= y$v3_1517448506_495_op (not y$962)))
-(step st16 (cl (= (not y$962) y$v3_1517448506_495_op)) :rule symm :premises (a603))
-(step t.end (cl) :rule resolution :premises (nst16.0 st16))

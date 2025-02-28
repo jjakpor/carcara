@@ -1,5 +1,0 @@
-(assume nst381.0 (not (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))))
-(assume nst381.1 (not (= x33 x34)))
-(assume t380 (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34)))
-(step st381 (cl (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34)))) (= x33 x34)) :rule implies :premises (t380))
-(step t.end (cl) :rule resolution :premises (nst381.0 nst381.1 st381))

@@ -1,6 +1,0 @@
-(assume nst96.0 (not (= (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))))
-(assume a11 (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi)))))
-(assume t95 (or (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))))
-(step t95' (cl (not (forall ((env env) (phi form)) (= (models env (notR phi)) (not (models env phi))))) (= (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))) :rule or :premises (t95))
-(step st96 (cl (= (models empty (notR (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))) (not (models empty (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))) :rule resolution :premises (t95' a11))
-(step t.end (cl) :rule resolution :premises (nst96.0 st96))

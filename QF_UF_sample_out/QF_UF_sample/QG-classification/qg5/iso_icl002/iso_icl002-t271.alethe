@@ -1,8 +1,0 @@
-(assume t267 (= (= (op e4 e4) e2) (= e2 (op e4 e4))))
-(assume t7 (= (= (op e3 e4) e2) (= e2 (op e3 e4))))
-(assume t268 (= (= (op e2 e4) e2) (= e2 (op e2 e4))))
-(assume t269 (= (= (op e0 e4) e2) (= e2 (op e0 e4))))
-(assume t270 (= (= (op e1 e4) e2) (= e2 (op e1 e4))))
-(assume nt271.0 (not (= (or (= (op e4 e4) e2) (= (op e3 e4) e2) (= (op e2 e4) e2) (= (op e0 e4) e2) (= (op e1 e4) e2)) (or (= e2 (op e4 e4)) (= e2 (op e3 e4)) (= e2 (op e2 e4)) (= e2 (op e0 e4)) (= e2 (op e1 e4))))))
-(step t271 (cl (= (or (= (op e4 e4) e2) (= (op e3 e4) e2) (= (op e2 e4) e2) (= (op e0 e4) e2) (= (op e1 e4) e2)) (or (= e2 (op e4 e4)) (= e2 (op e3 e4)) (= e2 (op e2 e4)) (= e2 (op e0 e4)) (= e2 (op e1 e4))))) :rule cong :premises (t267 t7 t268 t269 t270))
-(step t.end (cl) :rule resolution :premises (nt271.0 t271))

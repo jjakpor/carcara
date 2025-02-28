@@ -1,7 +1,0 @@
-(assume nt344.0 (not (not (= (op (op e3 e4) e3) (op (op e4 e3) e3)))))
-(assume t335 (or (not (= (not (= (op e1 e3) (op e2 e3))) (not (= (op (op e3 e4) e3) (op (op e4 e3) e3))))) (not (not (= (op e1 e3) (op e2 e3)))) (not (= (op (op e3 e4) e3) (op (op e4 e3) e3)))))
-(assume t340 (= (not (= (op e1 e3) (op e2 e3))) (not (= (op (op e3 e4) e3) (op (op e4 e3) e3)))))
-(assume t343 (not (= (op e1 e3) (op e2 e3))))
-(step t335' (cl (not (= (not (= (op e1 e3) (op e2 e3))) (not (= (op (op e3 e4) e3) (op (op e4 e3) e3))))) (not (not (= (op e1 e3) (op e2 e3)))) (not (= (op (op e3 e4) e3) (op (op e4 e3) e3)))) :rule or :premises (t335))
-(step t344 (cl (not (= (op (op e3 e4) e3) (op (op e4 e3) e3)))) :rule resolution :premises (t335' t340 t343))
-(step t.end (cl) :rule resolution :premises (nt344.0 t344))

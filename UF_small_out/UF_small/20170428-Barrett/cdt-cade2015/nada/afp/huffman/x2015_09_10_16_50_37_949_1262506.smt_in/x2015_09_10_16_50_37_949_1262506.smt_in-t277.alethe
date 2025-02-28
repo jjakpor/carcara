@@ -1,6 +1,0 @@
-(assume nst277.0 (not (not (and (= b$ c$) (not (= c$ d$))))))
-(assume nst277.1 (not (not (= b$ d$))))
-(assume t276 (or (not (and (= b$ c$) (not (= c$ d$)))) (not (and (= b$ c$) (not (= c$ d$)))) (not (= b$ d$))))
-(step t276' (cl (not (and (= b$ c$) (not (= c$ d$)))) (not (and (= b$ c$) (not (= c$ d$)))) (not (= b$ d$))) :rule or :premises (t276))
-(step st277 (cl (not (and (= b$ c$) (not (= c$ d$)))) (not (= b$ d$))) :rule contraction :premises (t276'))
-(step t.end (cl) :rule resolution :premises (nst277.0 nst277.1 st277))

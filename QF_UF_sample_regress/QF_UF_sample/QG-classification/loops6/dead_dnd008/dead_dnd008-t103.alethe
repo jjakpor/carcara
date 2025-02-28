@@ -1,5 +1,0 @@
-(assume nst103.0 (not (not (= (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0))))))
-(assume nst103.1 (not (not (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit)))))
-(assume nst103.2 (not (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0))))
-(step st103 (cl (not (= (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit)) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0)))) (not (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit))) (or (not (= e1 (op e1 (op e1 e1)))) (= e1 e0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst103.0 nst103.1 nst103.2 st103))

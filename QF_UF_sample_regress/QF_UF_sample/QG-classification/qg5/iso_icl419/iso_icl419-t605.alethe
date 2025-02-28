@@ -1,5 +1,0 @@
-(assume nst605.0 (not (= (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3))) false)))
-(assume nst605.1 (not (not (not (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3)))))))
-(assume t604 (= (= (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3))) false) (not (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3))))))
-(step st605 (cl (= (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3))) false) (not (not (= (op e3 (op e3 e3)) (op (op e3 e3) (op e3 e3)))))) :rule equiv2 :premises (t604))
-(step t.end (cl) :rule resolution :premises (nst605.0 nst605.1 st605))

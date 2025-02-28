@@ -1,7 +1,0 @@
-(assume nst20.0 (not (= sk_?X_4$0 (lseg_domain$0 next$0 curr_2$0 cp_2$0))))
-(assume a13 (= sk_?X_4$0 (lseg_domain$0 next$0 curr_2$0 null$0)))
-(assume t13 (or (not (= (= sk_?X_4$0 (lseg_domain$0 next$0 curr_2$0 null$0)) (= sk_?X_4$0 (lseg_domain$0 next$0 curr_2$0 cp_2$0)))) (not (= sk_?X_4$0 (lseg_domain$0 next$0 curr_2$0 null$0))) (= sk_?X_4$0 (lseg_domain$0 next$0 curr_2$0 cp_2$0))))
-(assume t19 (= (= sk_?X_4$0 (lseg_domain$0 next$0 curr_2$0 null$0)) (= sk_?X_4$0 (lseg_domain$0 next$0 curr_2$0 cp_2$0))))
-(step t13' (cl (not (= (= sk_?X_4$0 (lseg_domain$0 next$0 curr_2$0 null$0)) (= sk_?X_4$0 (lseg_domain$0 next$0 curr_2$0 cp_2$0)))) (not (= sk_?X_4$0 (lseg_domain$0 next$0 curr_2$0 null$0))) (= sk_?X_4$0 (lseg_domain$0 next$0 curr_2$0 cp_2$0))) :rule or :premises (t13))
-(step st20 (cl (= sk_?X_4$0 (lseg_domain$0 next$0 curr_2$0 cp_2$0))) :rule resolution :premises (t13' t19 a13))
-(step t.end (cl) :rule resolution :premises (nst20.0 st20))

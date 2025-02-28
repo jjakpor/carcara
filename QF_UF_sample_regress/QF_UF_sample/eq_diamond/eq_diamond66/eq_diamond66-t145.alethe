@@ -1,4 +1,0 @@
-(assume nst145.0 (not (= x4 x3)))
-(assume t144 (= x3 x4))
-(step st145 (cl (= x4 x3)) :rule symm :premises (t144))
-(step t.end (cl) :rule resolution :premises (nst145.0 st145))

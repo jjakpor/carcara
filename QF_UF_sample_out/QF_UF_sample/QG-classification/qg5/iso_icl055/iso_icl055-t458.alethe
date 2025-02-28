@@ -1,4 +1,0 @@
-(assume t457 (= (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op e1 e1))))
-(assume nt458.0 (not (= (op (op (op e1 e1) (op e1 e1)) (op e1 e1)) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))
-(step t458 (cl (= (op (op (op e1 e1) (op e1 e1)) (op e1 e1)) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))) :rule symm :premises (t457))
-(step t.end (cl) :rule resolution :premises (nt458.0 t458))

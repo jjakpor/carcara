@@ -1,5 +1,0 @@
-(assume nst298.0 (not (= (not (= e0 e3)) (not (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))))
-(assume t293 (= (not (= e0 e3)) (not (= e3 e0))))
-(assume t297 (= (not (= e3 e0)) (not (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))))
-(step st298 (cl (= (not (= e0 e3)) (not (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))) :rule trans :premises (t293 t297))
-(step t.end (cl) :rule resolution :premises (nst298.0 st298))

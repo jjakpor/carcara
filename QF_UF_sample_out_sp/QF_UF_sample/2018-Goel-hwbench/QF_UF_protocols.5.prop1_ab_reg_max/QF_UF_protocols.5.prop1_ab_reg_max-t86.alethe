@@ -1,7 +1,0 @@
-(assume nt86.0 (not (and y$952 y$959)))
-(assume t14 (or (not (= y$v3_1517448506_495_op (and y$952 y$959))) (not y$v3_1517448506_495_op) (and y$952 y$959)))
-(assume a602 (= y$v3_1517448506_495_op (and y$952 y$959)))
-(assume t85 y$v3_1517448506_495_op)
-(step t14' (cl (not (= y$v3_1517448506_495_op (and y$952 y$959))) (not y$v3_1517448506_495_op) (and y$952 y$959)) :rule or :premises (t14))
-(step t86 (cl (and y$952 y$959)) :rule resolution :premises (t14' a602 t85))
-(step t.end (cl) :rule resolution :premises (nt86.0 t86))

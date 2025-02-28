@@ -1,5 +1,0 @@
-(assume nst295.0 (not (= (not (= curr_init$0 curr_init$0)) false)))
-(assume t242 (= (not true) false))
-(assume t294 (= (not (= curr_init$0 curr_init$0)) (not true)))
-(step st295 (cl (= (not (= curr_init$0 curr_init$0)) false)) :rule trans :premises (t294 t242))
-(step t.end (cl) :rule resolution :premises (nst295.0 st295))

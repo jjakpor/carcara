@@ -1,7 +1,0 @@
-(assume t130 (or (not (= (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0))))) (not (or (= (f6 c_0) c_0) (= (f6 c_0) c_1))) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))))
-(assume t133 (= (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))))
-(assume t134 (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)))
-(assume nt135.0 (not (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))))
-(step t130' (cl (not (= (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0))))) (not (or (= (f6 c_0) c_0) (= (f6 c_0) c_1))) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))) :rule or :premises (t130))
-(step t135 (cl (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0)))) :rule resolution :premises (t130' t133 t134))
-(step t.end (cl) :rule resolution :premises (nt135.0 t135))

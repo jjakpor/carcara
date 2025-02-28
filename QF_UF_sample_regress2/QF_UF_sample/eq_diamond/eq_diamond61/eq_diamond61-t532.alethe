@@ -1,5 +1,0 @@
-(assume nst532.0 (not (not (= (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (and (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (=> (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (= x48 x49)))))))
-(assume nst532.1 (not (not (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))))))
-(assume nst532.2 (not (and (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (=> (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (= x48 x49)))))
-(step st532 (cl (not (= (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (and (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (=> (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (= x48 x49))))) (not (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49)))) (and (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (=> (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (= x48 x49)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst532.0 nst532.1 nst532.2 st532))

@@ -1,4 +1,0 @@
-(assume t893 (= (op (op e0 e0) (op (op e0 (op e0 e0)) e0)) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))
-(assume nt1043.0 (not (= (op (op (op e0 (op e0 e0)) e0) (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0)))))
-(step t1043 (cl (= (op (op (op e0 (op e0 e0)) e0) (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0)))) :rule symm :premises (t893))
-(step t.end (cl) :rule resolution :premises (nt1043.0 t1043))

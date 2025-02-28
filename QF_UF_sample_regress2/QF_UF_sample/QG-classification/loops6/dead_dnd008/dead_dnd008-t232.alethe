@@ -1,5 +1,0 @@
-(assume nst232.0 (not (not (= (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit)) (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0))))))
-(assume nst232.1 (not (not (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit)))))
-(assume nst232.2 (not (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0))))
-(step st232 (cl (not (= (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit)) (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0)))) (not (or (not (= (op e4 (op e4 e4)) e4)) (= e4 unit))) (or (not (= e4 (op e4 (op e4 e4)))) (= e4 e0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst232.0 nst232.1 nst232.2 st232))

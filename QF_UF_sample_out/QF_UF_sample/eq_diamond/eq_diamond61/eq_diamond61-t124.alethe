@@ -1,6 +1,0 @@
-(assume t123 (or (= x10 x11) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))))
-(assume t119 (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))
-(assume nt124.0 (not (= x10 x11)))
-(step t123' (cl (= x10 x11) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))) :rule or :premises (t123))
-(step t124 (cl (= x10 x11)) :rule resolution :premises (t123' t119))
-(step t.end (cl) :rule resolution :premises (nt124.0 t124))

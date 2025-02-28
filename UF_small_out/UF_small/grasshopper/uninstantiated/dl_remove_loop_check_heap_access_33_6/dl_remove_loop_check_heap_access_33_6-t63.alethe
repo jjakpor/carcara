@@ -1,5 +1,0 @@
-(assume nst63.0 (not (not (= (= prv_init$0 (read$0 prev$0 curr_init$0)) (= prv_init$0 (read$0 prev$0 prv_5$0))))))
-(assume nst63.1 (not (not (= prv_init$0 (read$0 prev$0 curr_init$0)))))
-(assume nst63.2 (not (= prv_init$0 (read$0 prev$0 prv_5$0))))
-(step st63 (cl (not (= (= prv_init$0 (read$0 prev$0 curr_init$0)) (= prv_init$0 (read$0 prev$0 prv_5$0)))) (not (= prv_init$0 (read$0 prev$0 curr_init$0))) (= prv_init$0 (read$0 prev$0 prv_5$0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst63.0 nst63.1 nst63.2 st63))

@@ -1,3 +1,0 @@
-(assume nt64.0 (not (= car car)))
-(step t64 (cl (= car car)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt64.0 t64))

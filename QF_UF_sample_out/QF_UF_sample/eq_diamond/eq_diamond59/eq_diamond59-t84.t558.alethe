@@ -1,3 +1,0 @@
-(assume nt84.t558.0 (not (= (= (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (and (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52)))) true)))
-(step t84.t558 (cl (= (= (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (and (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (=> (or (and (= x51 y51) (= y51 x52)) (and (= x51 z51) (= z51 x52))) (= x51 x52)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt84.t558.0 t84.t558))

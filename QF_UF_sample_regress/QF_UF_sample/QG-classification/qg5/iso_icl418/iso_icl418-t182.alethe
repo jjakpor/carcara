@@ -1,8 +1,0 @@
-(assume nst182.0 (not (= (= (op e3 e4) (op (op e4 e3) (op e4 e3))) false)))
-(assume nst182.1 (not (= (op e3 e4) (op (op e4 e3) (op e4 e3)))))
-(assume t180 (or (= (= (op e3 e4) (op (op e4 e3) (op e4 e3))) false) (not (not (= (op e3 e4) (op (op e4 e3) (op e4 e3)))))))
-(assume t181 (or (not (not (not (= (op e3 e4) (op (op e4 e3) (op e4 e3)))))) (= (op e3 e4) (op (op e4 e3) (op e4 e3)))))
-(step t180' (cl (= (= (op e3 e4) (op (op e4 e3) (op e4 e3))) false) (not (not (= (op e3 e4) (op (op e4 e3) (op e4 e3)))))) :rule or :premises (t180))
-(step t181' (cl (not (not (not (= (op e3 e4) (op (op e4 e3) (op e4 e3)))))) (= (op e3 e4) (op (op e4 e3) (op e4 e3)))) :rule or :premises (t181))
-(step st182 (cl (= (= (op e3 e4) (op (op e4 e3) (op e4 e3))) false) (= (op e3 e4) (op (op e4 e3) (op e4 e3)))) :rule resolution :premises (t180' t181'))
-(step t.end (cl) :rule resolution :premises (nst182.0 nst182.1 st182))

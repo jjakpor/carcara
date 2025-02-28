@@ -1,4 +1,0 @@
-(assume nt21.0 (not (not org)))
-(assume a10 (not (or (and prt grn) org (and (not prt) rd1) rd2 (and grn (not prt)) (and rd1 prt))))
-(step t21 (cl (not org)) :rule not_or :premises (a10) :args (1))
-(step t.end (cl) :rule resolution :premises (nt21.0 t21))

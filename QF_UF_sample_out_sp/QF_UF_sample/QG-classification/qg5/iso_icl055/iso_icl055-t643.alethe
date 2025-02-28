@@ -1,4 +1,0 @@
-(assume nt643.0 (not (and (and (and (and (and (and (not (= (op e0 e4) (op e1 e4))) (not (= (op e0 e4) (op e2 e4)))) (not (= (op e0 e4) (op e3 e4)))) (not (= (op e0 e4) (op e4 e4)))) (not (= (op e1 e4) (op e2 e4)))) (not (= (op e1 e4) (op e3 e4)))) (not (= (op e1 e4) (op e4 e4))))))
-(assume t642 (and (and (and (and (and (and (and (not (= (op e0 e4) (op e1 e4))) (not (= (op e0 e4) (op e2 e4)))) (not (= (op e0 e4) (op e3 e4)))) (not (= (op e0 e4) (op e4 e4)))) (not (= (op e1 e4) (op e2 e4)))) (not (= (op e1 e4) (op e3 e4)))) (not (= (op e1 e4) (op e4 e4)))) (not (= (op e2 e4) (op e3 e4)))))
-(step t643 (cl (and (and (and (and (and (and (not (= (op e0 e4) (op e1 e4))) (not (= (op e0 e4) (op e2 e4)))) (not (= (op e0 e4) (op e3 e4)))) (not (= (op e0 e4) (op e4 e4)))) (not (= (op e1 e4) (op e2 e4)))) (not (= (op e1 e4) (op e3 e4)))) (not (= (op e1 e4) (op e4 e4))))) :rule and :premises (t642) :args (0))
-(step t.end (cl) :rule resolution :premises (nt643.0 t643))

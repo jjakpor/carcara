@@ -1,5 +1,0 @@
-(assume nst27.0 (not (=> (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false)))
-(assume t26 (or (=> (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false) (=> (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false)))
-(step t26' (cl (=> (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false) (=> (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false)) :rule or :premises (t26))
-(step st27 (cl (=> (and (p1 (f5 c_1) c_1) (= c_1 (f5 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false)) :rule contraction :premises (t26'))
-(step t.end (cl) :rule resolution :premises (nst27.0 st27))

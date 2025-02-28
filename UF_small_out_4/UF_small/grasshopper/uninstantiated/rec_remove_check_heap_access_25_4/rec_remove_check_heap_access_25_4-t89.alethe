@@ -1,3 +1,0 @@
-(assume nst89.0 (not (= (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0))) (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0))))))
-(step st89 (cl (= (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0))) (not (Btwn$0 next$0 (read$0 next$0 lst$0) lst$0 (read$0 next$0 lst$0))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst89.0 st89))

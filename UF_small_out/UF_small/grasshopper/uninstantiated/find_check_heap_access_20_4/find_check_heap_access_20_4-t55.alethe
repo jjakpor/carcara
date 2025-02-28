@@ -1,3 +1,0 @@
-(assume nst55.0 (not (= (= n_5$0 null$0) (= null$0 n_5$0))))
-(step st55 (cl (= (= n_5$0 null$0) (= null$0 n_5$0))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst55.0 st55))

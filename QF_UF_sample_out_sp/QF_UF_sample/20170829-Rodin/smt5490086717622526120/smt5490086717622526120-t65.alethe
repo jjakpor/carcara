@@ -1,4 +1,0 @@
-(assume nt65.0 (not (or (not (not prt)) (not red_MR))))
-(assume nt65.1 (not (not (not (not prt)))))
-(step t65 (cl (or (not (not prt)) (not red_MR)) (not (not (not prt)))) :rule or_neg :args (0))
-(step t.end (cl) :rule resolution :premises (nt65.0 nt65.1 t65))

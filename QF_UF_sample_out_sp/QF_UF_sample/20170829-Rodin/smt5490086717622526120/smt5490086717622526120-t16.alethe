@@ -1,4 +1,0 @@
-(assume nt16.0 (not (= org org_MR)))
-(assume a4 (= org_MR org))
-(step t16 (cl (= org org_MR)) :rule symm :premises (a4))
-(step t.end (cl) :rule resolution :premises (nt16.0 t16))

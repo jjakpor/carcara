@@ -1,5 +1,0 @@
-(assume nst639.0 (not (not (or (and (= x57 y57) (= y57 x58)) (and (= x57 z57) (= z57 x58))))))
-(assume nst639.1 (not (= x57 x58)))
-(assume t638 (=> (or (and (= x57 y57) (= y57 x58)) (and (= x57 z57) (= z57 x58))) (= x57 x58)))
-(step st639 (cl (not (or (and (= x57 y57) (= y57 x58)) (and (= x57 z57) (= z57 x58)))) (= x57 x58)) :rule implies :premises (t638))
-(step t.end (cl) :rule resolution :premises (nst639.0 nst639.1 st639))

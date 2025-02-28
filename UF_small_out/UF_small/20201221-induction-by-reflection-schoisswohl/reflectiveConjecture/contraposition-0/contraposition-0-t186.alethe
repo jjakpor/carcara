@@ -1,6 +1,0 @@
-(assume nst186.0 (not (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR))))))))
-(assume nst186.1 (not (models empty (notR (notR (qR bR))))))
-(assume nst186.2 (not (models empty (notR (qR bR)))))
-(assume t185 (or (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))) (models empty (notR (notR (qR bR)))) (models empty (notR (qR bR)))))
-(step st186 (cl (not (= (models empty (notR (notR (qR bR)))) (not (models empty (notR (qR bR)))))) (models empty (notR (notR (qR bR)))) (models empty (notR (qR bR)))) :rule or :premises (t185))
-(step t.end (cl) :rule resolution :premises (nst186.0 nst186.1 nst186.2 st186))

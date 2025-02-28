@@ -1,5 +1,0 @@
-(assume nst47.0 (not (= c_0 (f7 c_1))))
-(assume nst47.1 (not (= c_1 (f7 c_1))))
-(assume t46 (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1))))
-(step st47 (cl (= c_0 (f7 c_1)) (= c_1 (f7 c_1))) :rule or :premises (t46))
-(step t.end (cl) :rule resolution :premises (nst47.0 nst47.1 st47))

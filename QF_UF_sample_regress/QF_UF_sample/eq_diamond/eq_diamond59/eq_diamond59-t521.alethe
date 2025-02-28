@@ -1,4 +1,0 @@
-(assume nst521.0 (not (=> (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (= x28 x29))))
-(assume t520 (and (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (=> (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (= x28 x29))))
-(step st521 (cl (=> (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (= x28 x29))) :rule and :premises (t520) :args (1))
-(step t.end (cl) :rule resolution :premises (nst521.0 st521))

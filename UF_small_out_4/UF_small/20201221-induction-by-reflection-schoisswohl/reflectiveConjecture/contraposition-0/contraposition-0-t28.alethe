@@ -1,6 +1,0 @@
-(assume nst28.0 (not (= (or (not (= (not (models empty (qR bR))) (models empty (notR (qR bR))))) (not (not (models empty (qR bR)))) (models empty (notR (qR bR)))) (or (not (= (not (models empty (qR bR))) (models empty (notR (qR bR))))) (models empty (qR bR)) (models empty (notR (qR bR)))))))
-(assume t25 (= (not (= (not (models empty (qR bR))) (models empty (notR (qR bR))))) (not (= (not (models empty (qR bR))) (models empty (notR (qR bR)))))))
-(assume t26 (= (not (not (models empty (qR bR)))) (models empty (qR bR))))
-(assume t27 (= (models empty (notR (qR bR))) (models empty (notR (qR bR)))))
-(step st28 (cl (= (or (not (= (not (models empty (qR bR))) (models empty (notR (qR bR))))) (not (not (models empty (qR bR)))) (models empty (notR (qR bR)))) (or (not (= (not (models empty (qR bR))) (models empty (notR (qR bR))))) (models empty (qR bR)) (models empty (notR (qR bR)))))) :rule cong :premises (t25 t26 t27))
-(step t.end (cl) :rule resolution :premises (nst28.0 st28))

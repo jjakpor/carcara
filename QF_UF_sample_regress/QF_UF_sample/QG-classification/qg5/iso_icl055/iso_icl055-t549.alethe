@@ -1,4 +1,0 @@
-(assume nst549.0 (not (= (op e2 e1) (op e1 e2))))
-(assume t548 (and (and (= (op e0 e1) (op e1 e0)) (= (op e1 e1) (op e1 e1))) (= (op e2 e1) (op e1 e2))))
-(step st549 (cl (= (op e2 e1) (op e1 e2))) :rule and :premises (t548) :args (1))
-(step t.end (cl) :rule resolution :premises (nst549.0 st549))

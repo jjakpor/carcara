@@ -1,6 +1,0 @@
-(assume nt329.0 (not (not (= e1 (op e1 (op e1 e1))))))
-(assume t326 (or (= e1 e0) (not (= e1 (op e1 (op e1 e1))))))
-(assume t328 (not (= e1 e0)))
-(step t326' (cl (= e1 e0) (not (= e1 (op e1 (op e1 e1))))) :rule or :premises (t326))
-(step t329 (cl (not (= e1 (op e1 (op e1 e1))))) :rule resolution :premises (t326' t328))
-(step t.end (cl) :rule resolution :premises (nt329.0 t329))

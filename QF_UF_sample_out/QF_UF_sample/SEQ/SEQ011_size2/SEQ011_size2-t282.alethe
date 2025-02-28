@@ -1,5 +1,0 @@
-(assume t135 (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0))))
-(assume nt282.0 (not (= c_0 (f6 c_0))))
-(assume nt282.1 (not (= c_1 (f6 c_0))))
-(step t282 (cl (= c_0 (f6 c_0)) (= c_1 (f6 c_0))) :rule or :premises (t135))
-(step t.end (cl) :rule resolution :premises (nt282.0 nt282.1 t282))

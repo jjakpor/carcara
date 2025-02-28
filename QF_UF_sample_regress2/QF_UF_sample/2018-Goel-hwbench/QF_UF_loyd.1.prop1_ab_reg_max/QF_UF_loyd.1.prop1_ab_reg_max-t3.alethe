@@ -1,5 +1,0 @@
-(assume nst3.0 (not (not y$a_done)))
-(assume nst3.1 (not (not y$1)))
-(assume a2 (= y$a_done (not y$1)))
-(step st3 (cl (not y$a_done) (not y$1)) :rule equiv1 :premises (a2))
-(step t.end (cl) :rule resolution :premises (nst3.0 nst3.1 st3))

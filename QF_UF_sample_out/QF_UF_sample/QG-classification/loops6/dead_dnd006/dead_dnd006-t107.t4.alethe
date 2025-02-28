@@ -1,5 +1,0 @@
-(assume t107.t2 (= e2 e2))
-(assume t107.t3 (= (op e2 unit) (op e2 e0)))
-(assume nt107.t4.0 (not (= (= e2 (op e2 unit)) (= e2 (op e2 e0)))))
-(step t107.t4 (cl (= (= e2 (op e2 unit)) (= e2 (op e2 e0)))) :rule cong :premises (t107.t2 t107.t3))
-(step t.end (cl) :rule resolution :premises (nt107.t4.0 t107.t4))

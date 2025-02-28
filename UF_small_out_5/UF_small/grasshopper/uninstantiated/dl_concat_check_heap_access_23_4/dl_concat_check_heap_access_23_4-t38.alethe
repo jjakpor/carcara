@@ -1,4 +1,0 @@
-(assume nst38.0 (not (= (not (= null$0 start1$0)) (not (= (read$0 next$0 end1$0) start1$0)))))
-(assume t37 (= (= null$0 start1$0) (= (read$0 next$0 end1$0) start1$0)))
-(step st38 (cl (= (not (= null$0 start1$0)) (not (= (read$0 next$0 end1$0) start1$0)))) :rule cong :premises (t37))
-(step t.end (cl) :rule resolution :premises (nst38.0 st38))

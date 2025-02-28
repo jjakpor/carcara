@@ -1,5 +1,0 @@
-(assume nt1014.0 (not (not (= (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op e0 e0) e0))) false))))
-(assume nt1014.1 (not (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op e0 e0) e0))))))
-(assume t1013 (= (= (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op e0 e0) e0))) false) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op e0 e0) e0))))))
-(step t1014 (cl (not (= (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op e0 e0) e0))) false)) (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op e0 e0) e0))))) :rule equiv1 :premises (t1013))
-(step t.end (cl) :rule resolution :premises (nt1014.0 nt1014.1 t1014))

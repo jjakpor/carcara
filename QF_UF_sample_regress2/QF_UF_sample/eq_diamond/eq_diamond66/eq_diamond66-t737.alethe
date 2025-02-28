@@ -1,4 +1,0 @@
-(assume nst737.0 (not (not (not (not (= x0 x65))))))
-(assume nst737.1 (not (= x0 x65)))
-(step st737 (cl (not (not (not (= x0 x65)))) (= x0 x65)) :rule not_not)
-(step t.end (cl) :rule resolution :premises (nst737.0 nst737.1 st737))

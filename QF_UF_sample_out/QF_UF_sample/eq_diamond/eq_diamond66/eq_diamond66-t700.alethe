@@ -1,5 +1,0 @@
-(assume nt700.0 (not (not (= (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))) (and (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))) (=> (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))) (= x62 x63)))))))
-(assume nt700.1 (not (not (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))))))
-(assume nt700.2 (not (and (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))) (=> (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))) (= x62 x63)))))
-(step t700 (cl (not (= (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))) (and (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))) (=> (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))) (= x62 x63))))) (not (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63)))) (and (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))) (=> (or (and (= x62 y62) (= y62 x63)) (and (= x62 z62) (= z62 x63))) (= x62 x63)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt700.0 nt700.1 nt700.2 t700))

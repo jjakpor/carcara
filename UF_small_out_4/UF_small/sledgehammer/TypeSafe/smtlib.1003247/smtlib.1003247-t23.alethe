@@ -1,3 +1,0 @@
-(assume nst23.0 (not (= (= (f75 f65 f76 f76) (f64 f65 f66 f67 f72 f78)) (= (f64 f65 f66 f67 f72 f78) (f75 f65 f76 f76)))))
-(step st23 (cl (= (= (f75 f65 f76 f76) (f64 f65 f66 f67 f72 f78)) (= (f64 f65 f66 f67 f72 f78) (f75 f65 f76 f76)))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst23.0 st23))

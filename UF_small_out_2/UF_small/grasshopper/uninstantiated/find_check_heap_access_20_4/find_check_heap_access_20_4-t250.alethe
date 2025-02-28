@@ -1,7 +1,0 @@
-(assume nst250.0 (not (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))))
-(assume t64 (not (= root_x$0 x$0)))
-(assume t202 (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0)) (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))))))
-(assume t249 (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))))
-(step t202' (cl (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0)) (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))))) :rule or :premises (t202))
-(step st250 (cl (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))) :rule resolution :premises (t202' t64 t249))
-(step t.end (cl) :rule resolution :premises (nst250.0 st250))

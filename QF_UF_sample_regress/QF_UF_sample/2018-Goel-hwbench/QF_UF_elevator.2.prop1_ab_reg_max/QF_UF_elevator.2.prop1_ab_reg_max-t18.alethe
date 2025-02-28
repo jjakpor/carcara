@@ -1,7 +1,0 @@
-(assume nst18.0 (not y$id36_op))
-(assume t1 (or (not (= (not y$1517) y$id36_op)) (not (not y$1517)) y$id36_op))
-(assume t2 (= (not y$1517) y$id36_op))
-(assume t17 (not y$1517))
-(step t1' (cl (not (= (not y$1517) y$id36_op)) (not (not y$1517)) y$id36_op) :rule or :premises (t1))
-(step st18 (cl y$id36_op) :rule resolution :premises (t1' t2 t17))
-(step t.end (cl) :rule resolution :premises (nst18.0 st18))

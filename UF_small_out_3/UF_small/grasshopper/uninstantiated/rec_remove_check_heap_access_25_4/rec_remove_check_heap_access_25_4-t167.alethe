@@ -1,3 +1,0 @@
-(assume nst167.0 (not (= Alloc_1$0 Alloc_1$0)))
-(step st167 (cl (= Alloc_1$0 Alloc_1$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst167.0 st167))

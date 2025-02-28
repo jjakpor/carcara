@@ -1,4 +1,0 @@
-(assume nst202.0 (not (not (= e3 e0))))
-(assume t201 (not (= e0 e3)))
-(step st202 (cl (not (= e3 e0))) :rule not_symm :premises (t201))
-(step t.end (cl) :rule resolution :premises (nst202.0 st202))

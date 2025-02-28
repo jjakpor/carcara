@@ -1,8 +1,0 @@
-(assume t735 (or (= (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))) false) (not (not (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)))))))
-(assume t736 (or (not (not (not (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)))))) (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)))))
-(assume nt737.0 (not (= (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))) false)))
-(assume nt737.1 (not (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)))))
-(step t736' (cl (not (not (not (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)))))) (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)))) :rule or :premises (t736))
-(step t735' (cl (= (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))) false) (not (not (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)))))) :rule or :premises (t735))
-(step t737 (cl (= (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0))) false) (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) e0)))) :rule resolution :premises (t735' t736'))
-(step t.end (cl) :rule resolution :premises (nt737.0 nt737.1 t737))

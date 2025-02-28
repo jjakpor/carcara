@@ -1,6 +1,0 @@
-(assume nst39.0 (not (not (and (= null$0 curr_init$0) (= d_init$0 prv_init$0)))))
-(assume t37 (or (not (and (= null$0 curr_init$0) (= d_init$0 prv_init$0))) (= null$0 curr_init$0)))
-(assume t38 (not (= null$0 curr_init$0)))
-(step t37' (cl (not (and (= null$0 curr_init$0) (= d_init$0 prv_init$0))) (= null$0 curr_init$0)) :rule or :premises (t37))
-(step st39 (cl (not (and (= null$0 curr_init$0) (= d_init$0 prv_init$0)))) :rule resolution :premises (t37' t38))
-(step t.end (cl) :rule resolution :premises (nst39.0 st39))

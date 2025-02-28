@@ -1,5 +1,0 @@
-(assume nst496.0 (not (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))))))
-(assume nst496.1 (not (= x44 x45)))
-(assume t495 (=> (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (= x44 x45)))
-(step st496 (cl (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45)))) (= x44 x45)) :rule implies :premises (t495))
-(step t.end (cl) :rule resolution :premises (nst496.0 nst496.1 st496))

@@ -1,5 +1,0 @@
-(assume nst78.0 (not (not (forall ((env env) (phi form) (psi form)) (= (models env (orR phi psi)) (or (models env phi) (models env psi)))))))
-(assume nst78.1 (not (= (models empty (orR (notR (pR aR)) (qR bR))) (or (models empty (notR (pR aR))) (models empty (qR bR))))))
-(assume t77 (or (not (forall ((env env) (phi form) (psi form)) (= (models env (orR phi psi)) (or (models env phi) (models env psi))))) (= (models empty (orR (notR (pR aR)) (qR bR))) (or (models empty (notR (pR aR))) (models empty (qR bR))))))
-(step st78 (cl (not (forall ((env env) (phi form) (psi form)) (= (models env (orR phi psi)) (or (models env phi) (models env psi))))) (= (models empty (orR (notR (pR aR)) (qR bR))) (or (models empty (notR (pR aR))) (models empty (qR bR))))) :rule or :premises (t77))
-(step t.end (cl) :rule resolution :premises (nst78.0 nst78.1 st78))

@@ -1,6 +1,0 @@
-(assume nst102.0 (not (not (and (= e0 (op e0 (op e0 e0))) (not (= e0 (op e0 e0)))))))
-(assume t87 (or (not (= e0 (op e0 e0))) (not (and (= e0 (op e0 (op e0 e0))) (not (= e0 (op e0 e0)))))))
-(assume t101 (= e0 (op e0 e0)))
-(step t87' (cl (not (= e0 (op e0 e0))) (not (and (= e0 (op e0 (op e0 e0))) (not (= e0 (op e0 e0)))))) :rule or :premises (t87))
-(step st102 (cl (not (and (= e0 (op e0 (op e0 e0))) (not (= e0 (op e0 e0)))))) :rule resolution :premises (t87' t101))
-(step t.end (cl) :rule resolution :premises (nst102.0 st102))

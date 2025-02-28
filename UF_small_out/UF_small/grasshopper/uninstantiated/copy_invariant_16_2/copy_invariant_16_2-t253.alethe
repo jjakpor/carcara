@@ -1,3 +1,0 @@
-(assume nst253.0 (not (= (not (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))))
-(step st253 (cl (= (not (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst253.0 st253))

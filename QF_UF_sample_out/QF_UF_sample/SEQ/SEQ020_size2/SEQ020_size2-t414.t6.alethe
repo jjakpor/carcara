@@ -1,3 +1,0 @@
-(assume nt414.t6.0 (not (= (= (= (f6 c_1) (f5 c_1)) false) (not (= (f6 c_1) (f5 c_1))))))
-(step t414.t6 (cl (= (= (= (f6 c_1) (f5 c_1)) false) (not (= (f6 c_1) (f5 c_1))))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nt414.t6.0 t414.t6))

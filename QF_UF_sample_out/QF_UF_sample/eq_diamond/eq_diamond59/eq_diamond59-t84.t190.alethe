@@ -1,6 +1,0 @@
-(assume t84.t189 (or (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18)))) (= x17 x18)))
-(assume nt84.t190.0 (not (= x17 x18)))
-(assume nt84.t190.1 (not (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))))))
-(step t84.t189' (cl (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18)))) (= x17 x18)) :rule or :premises (t84.t189))
-(step t84.t190 (cl (= x17 x18) (not (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))))) :rule reordering :premises (t84.t189'))
-(step t.end (cl) :rule resolution :premises (nt84.t190.0 nt84.t190.1 t84.t190))

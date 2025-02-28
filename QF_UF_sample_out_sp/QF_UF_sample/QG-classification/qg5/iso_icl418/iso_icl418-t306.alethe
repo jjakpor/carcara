@@ -1,4 +1,0 @@
-(assume nt306.0 (not (= e3 (op (op e4 e3) e4))))
-(assume t305 (= (op (op e4 e3) e4) e3))
-(step t306 (cl (= e3 (op (op e4 e3) e4))) :rule symm :premises (t305))
-(step t.end (cl) :rule resolution :premises (nt306.0 t306))

@@ -1,4 +1,0 @@
-(assume nst737.0 (not (= (not (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0)))))))
-(assume t736 (= (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0)))))
-(step st737 (cl (= (not (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op e0 e0) e0)))))) :rule cong :premises (t736))
-(step t.end (cl) :rule resolution :premises (nst737.0 st737))

@@ -1,6 +1,0 @@
-(assume nt282.0 (not (= x5 x6)))
-(assume t281 (or (= x5 x6) (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))))
-(assume t277 (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))
-(step t281' (cl (= x5 x6) (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))) :rule or :premises (t281))
-(step t282 (cl (= x5 x6)) :rule resolution :premises (t281' t277))
-(step t.end (cl) :rule resolution :premises (nt282.0 t282))

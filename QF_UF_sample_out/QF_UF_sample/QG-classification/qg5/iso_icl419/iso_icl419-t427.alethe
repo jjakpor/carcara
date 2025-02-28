@@ -1,3 +1,0 @@
-(assume nt427.0 (not (= (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
-(step t427 (cl (= (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt427.0 t427))

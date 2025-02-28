@@ -1,5 +1,0 @@
-(assume t13 (= (= (= (not (not (= x0 x58))) (= x0 x58)) true) (= (not (not (= x0 x58))) (= x0 x58))))
-(assume nt14.0 (not (not (= (= (not (not (= x0 x58))) (= x0 x58)) true))))
-(assume nt14.1 (not (= (not (not (= x0 x58))) (= x0 x58))))
-(step t14 (cl (not (= (= (not (not (= x0 x58))) (= x0 x58)) true)) (= (not (not (= x0 x58))) (= x0 x58))) :rule equiv1 :premises (t13))
-(step t.end (cl) :rule resolution :premises (nt14.0 nt14.1 t14))

@@ -1,8 +1,0 @@
-(assume nt2.t87.0 (not (= (or (= (op e4 e4) e1) (= (op e3 e3) e1) (= (op e2 e2) e1) (= (op e0 e0) e1) (= (op e1 e1) e1)) (or (= e1 (op e4 e4)) (= e1 (op e3 e3)) (= e1 (op e2 e2)) (= e1 (op e0 e0)) (= e1 (op e1 e1))))))
-(assume t2.t82 (= (= (op e4 e4) e1) (= e1 (op e4 e4))))
-(assume t2.t83 (= (= (op e3 e3) e1) (= e1 (op e3 e3))))
-(assume t2.t84 (= (= (op e2 e2) e1) (= e1 (op e2 e2))))
-(assume t2.t85 (= (= (op e0 e0) e1) (= e1 (op e0 e0))))
-(assume t2.t86 (= (= (op e1 e1) e1) (= e1 (op e1 e1))))
-(step t2.t87 (cl (= (or (= (op e4 e4) e1) (= (op e3 e3) e1) (= (op e2 e2) e1) (= (op e0 e0) e1) (= (op e1 e1) e1)) (or (= e1 (op e4 e4)) (= e1 (op e3 e3)) (= e1 (op e2 e2)) (= e1 (op e0 e0)) (= e1 (op e1 e1))))) :rule cong :premises (t2.t82 t2.t83 t2.t84 t2.t85 t2.t86))
-(step t.end (cl) :rule resolution :premises (nt2.t87.0 t2.t87))

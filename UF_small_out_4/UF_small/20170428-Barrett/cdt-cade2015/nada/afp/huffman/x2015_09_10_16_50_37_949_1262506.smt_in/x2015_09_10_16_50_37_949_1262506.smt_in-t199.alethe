@@ -1,5 +1,0 @@
-(assume nst199.0 (not (= (forall ((?v0 A_tree$) (?v1 A$)) (=> (consistent$ ?v0) (= (fun_app$f (swapSyms$ ?v0 ?v1) ?v1) ?v0))) (forall ((?v0 A_tree$) (?v1 A$)) (or (not (consistent$ ?v0)) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1)))))))
-(assume t197 (= (forall ((?v0 A_tree$) (?v1 A$)) (=> (consistent$ ?v0) (= (fun_app$f (swapSyms$ ?v0 ?v1) ?v1) ?v0))) (forall ((?v0 A_tree$) (?v1 A$)) (=> (consistent$ ?v0) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1))))))
-(assume t198 (= (forall ((?v0 A_tree$) (?v1 A$)) (=> (consistent$ ?v0) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1)))) (forall ((?v0 A_tree$) (?v1 A$)) (or (not (consistent$ ?v0)) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1))))))
-(step st199 (cl (= (forall ((?v0 A_tree$) (?v1 A$)) (=> (consistent$ ?v0) (= (fun_app$f (swapSyms$ ?v0 ?v1) ?v1) ?v0))) (forall ((?v0 A_tree$) (?v1 A$)) (or (not (consistent$ ?v0)) (= ?v0 (fun_app$f (swapSyms$ ?v0 ?v1) ?v1)))))) :rule trans :premises (t197 t198))
-(step t.end (cl) :rule resolution :premises (nst199.0 st199))

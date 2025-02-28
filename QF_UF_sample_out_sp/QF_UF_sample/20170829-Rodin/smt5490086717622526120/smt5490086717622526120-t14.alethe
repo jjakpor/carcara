@@ -1,4 +1,0 @@
-(assume nt14.0 (not (= grn red_SR)))
-(assume a9 (= red_SR grn))
-(step t14 (cl (= grn red_SR)) :rule symm :premises (a9))
-(step t.end (cl) :rule resolution :premises (nt14.0 t14))

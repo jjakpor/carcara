@@ -1,5 +1,0 @@
-(assume nst1033.0 (not (not (= (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))) false))))
-(assume nst1033.1 (not (not (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))))))
-(assume t1032 (= (= (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))) false) (not (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))))))
-(step st1033 (cl (not (= (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))) false)) (not (= (op e0 (op e0 e0)) (op (op e0 e0) (op (op e0 (op e0 e0)) e0))))) :rule equiv1 :premises (t1032))
-(step t.end (cl) :rule resolution :premises (nst1033.0 nst1033.1 st1033))

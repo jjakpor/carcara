@@ -1,4 +1,0 @@
-(assume nst284.0 (not (or (not (= b$ c$)) (not (not (= c$ d$))) (not (= b$ d$)))))
-(assume nst284.1 (not (not (not (= b$ c$)))))
-(step st284 (cl (or (not (= b$ c$)) (not (not (= c$ d$))) (not (= b$ d$))) (not (not (= b$ c$)))) :rule or_neg :args (0))
-(step t.end (cl) :rule resolution :premises (nst284.0 nst284.1 st284))

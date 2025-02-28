@@ -1,3 +1,0 @@
-(assume nst898.0 (not (= (= (op e4 e0) (op e0 e4)) (= (op e0 e4) (op e4 e0)))))
-(step st898 (cl (= (= (op e4 e0) (op e0 e4)) (= (op e0 e4) (op e4 e0)))) :rule rare_rewrite :args ("eq-symm" (op e4 e0) (op e0 e4)))
-(step t.end (cl) :rule resolution :premises (nst898.0 st898))

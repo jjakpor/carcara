@@ -1,3 +1,0 @@
-(assume nst23.0 (not (= y$v_at_table y$v_at_table)))
-(step st23 (cl (= y$v_at_table y$v_at_table)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst23.0 st23))

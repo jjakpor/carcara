@@ -1,6 +1,0 @@
-(assume nt220.0 (not (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) (op e4 e3)))))
-(assume nt220.1 (not (not (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3)))))))
-(assume t219 (or (not (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) (op e4 e3)))))
-(step t219' (cl (not (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) (op e4 e3)))) :rule or :premises (t219))
-(step t220 (cl (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))) (not (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3)))))) :rule reordering :premises (t219'))
-(step t.end (cl) :rule resolution :premises (nt220.0 nt220.1 t220))

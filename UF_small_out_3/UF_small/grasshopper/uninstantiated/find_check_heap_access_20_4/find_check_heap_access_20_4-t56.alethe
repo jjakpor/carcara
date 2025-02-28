@@ -1,4 +1,0 @@
-(assume nst56.0 (not (= (not (= n_5$0 null$0)) (not (= null$0 n_5$0)))))
-(assume t55 (= (= n_5$0 null$0) (= null$0 n_5$0)))
-(step st56 (cl (= (not (= n_5$0 null$0)) (not (= null$0 n_5$0)))) :rule cong :premises (t55))
-(step t.end (cl) :rule resolution :premises (nst56.0 st56))

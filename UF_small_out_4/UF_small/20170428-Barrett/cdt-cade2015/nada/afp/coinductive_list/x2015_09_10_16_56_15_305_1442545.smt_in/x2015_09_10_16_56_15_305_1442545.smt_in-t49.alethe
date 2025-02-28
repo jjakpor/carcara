@@ -1,4 +1,0 @@
-(assume nst49.0 (not (= zero$ (fun_app$n llength$b lNil$))))
-(assume a89 (= (fun_app$n llength$b lNil$) zero$))
-(step st49 (cl (= zero$ (fun_app$n llength$b lNil$))) :rule symm :premises (a89))
-(step t.end (cl) :rule resolution :premises (nst49.0 st49))

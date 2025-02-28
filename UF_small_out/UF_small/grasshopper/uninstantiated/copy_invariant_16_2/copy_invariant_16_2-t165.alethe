@@ -1,7 +1,0 @@
-(assume nst165.0 (not (= cp_2$0 sk_?e$0)))
-(assume nst165.1 (not (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0))))
-(assume nst165.2 (not (not (or (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0)) (= cp_2$0 sk_?e$0)))))
-(assume t164 (or (not (or (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0)) (= cp_2$0 sk_?e$0))) (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0)) (= cp_2$0 sk_?e$0)))
-(step t164' (cl (not (or (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0)) (= cp_2$0 sk_?e$0))) (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0)) (= cp_2$0 sk_?e$0)) :rule or :premises (t164))
-(step st165 (cl (= cp_2$0 sk_?e$0) (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0)) (not (or (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0)) (= cp_2$0 sk_?e$0)))) :rule reordering :premises (t164'))
-(step t.end (cl) :rule resolution :premises (nst165.0 nst165.1 nst165.2 st165))

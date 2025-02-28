@@ -1,8 +1,0 @@
-(define-fun @quantifiers_skolemize_5 () S6 (choice ((?v2 S6)) (not (not (= (f11 (f12 f14 f15) (f11 (f12 f14 f10) (f16 (f17 f18 f19) f9))) (f11 (f12 f34 f20) ?v2))))))
-(define-fun @quantifiers_skolemize_6 () S6 (choice ((?v2 S6)) (not (not (= (f11 (f12 f14 f15) (f11 (f12 f14 f8) (f16 (f17 f18 f19) f9))) (f11 (f12 f34 f20) ?v2))))))
-(assume nt114.0 (not (= (forall ((?v0 S6)) (= (f11 (f12 f34 f23) ?v0) ?v0)) (forall ((?v0 S6)) (= ?v0 (f11 (f12 f34 f23) ?v0))))))
-(anchor :step t114 :args ((?v0 S6) (:= (?v0 S6) ?v0)))
-(step st114.t0 (cl (= (= (f11 (f12 f34 f23) ?v0) ?v0) (= ?v0 (f11 (f12 f34 f23) ?v0)))) :rule hole)
-(step t114.t0 (cl (= (= (f11 (f12 f34 f23) ?v0) ?v0) (= ?v0 (f11 (f12 f34 f23) ?v0)))) :rule trust)
-(step t114 (cl (= (forall ((?v0 S6)) (= (f11 (f12 f34 f23) ?v0) ?v0)) (forall ((?v0 S6)) (= ?v0 (f11 (f12 f34 f23) ?v0))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt114.0 t114))

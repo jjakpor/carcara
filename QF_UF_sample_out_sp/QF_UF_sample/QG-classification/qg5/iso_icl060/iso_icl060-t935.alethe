@@ -1,6 +1,0 @@
-(assume nt935.0 (not (not (= e1 (op e3 (op (op e1 e3) e1))))))
-(assume t926 (or (not (= (= e1 (op e3 (op (op e1 e3) e1))) false)) (not (= e1 (op e3 (op (op e1 e3) e1))))))
-(assume t934 (= (= e1 (op e3 (op (op e1 e3) e1))) false))
-(step t926' (cl (not (= (= e1 (op e3 (op (op e1 e3) e1))) false)) (not (= e1 (op e3 (op (op e1 e3) e1))))) :rule or :premises (t926))
-(step t935 (cl (not (= e1 (op e3 (op (op e1 e3) e1))))) :rule resolution :premises (t926' t934))
-(step t.end (cl) :rule resolution :premises (nt935.0 t935))

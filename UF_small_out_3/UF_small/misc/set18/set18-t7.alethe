@@ -1,7 +1,0 @@
-(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (difference b a))) (member ?x (difference b d))))))
-(assume nst7.0 (not (not (or (not (member @quantifiers_skolemize_3 d)) (not (subset d a)) (member @quantifiers_skolemize_3 a)))))
-(assume nst7.1 (not (not (member @quantifiers_skolemize_3 d))))
-(assume nst7.2 (not (not (subset d a))))
-(assume nst7.3 (not (member @quantifiers_skolemize_3 a)))
-(step st7 (cl (not (or (not (member @quantifiers_skolemize_3 d)) (not (subset d a)) (member @quantifiers_skolemize_3 a))) (not (member @quantifiers_skolemize_3 d)) (not (subset d a)) (member @quantifiers_skolemize_3 a)) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst7.0 nst7.1 nst7.2 nst7.3 st7))

@@ -1,4 +1,0 @@
-(assume nt747.0 (not (not (not (not (= (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1)))))))))
-(assume nt747.1 (not (= (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))
-(step t747 (cl (not (not (not (= (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))))) (= (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))) :rule not_not)
-(step t.end (cl) :rule resolution :premises (nt747.0 nt747.1 t747))

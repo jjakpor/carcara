@@ -1,5 +1,0 @@
-(assume nst255.0 (not (= a$ d$)))
-(assume nst255.1 (not (= b$ c$)))
-(assume t254 (or (= a$ d$) (= b$ c$)))
-(step st255 (cl (= a$ d$) (= b$ c$)) :rule or :premises (t254))
-(step t.end (cl) :rule resolution :premises (nst255.0 nst255.1 st255))

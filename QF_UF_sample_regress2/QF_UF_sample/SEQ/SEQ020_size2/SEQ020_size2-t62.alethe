@@ -1,5 +1,0 @@
-(assume nst62.0 (not (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1)))))
-(assume nst62.1 (not (not (not (= (f6 c_1) (f5 c_1))))))
-(assume nst62.2 (not (not (= c_0 (f6 c_1)))))
-(step st62 (cl (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_0 (f6 c_1)))) :rule and_neg)
-(step t.end (cl) :rule resolution :premises (nst62.0 nst62.1 nst62.2 st62))

@@ -1,4 +1,0 @@
-(assume nt33.0 (not (=> (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (= x12 x13))))
-(assume t32 (and (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (=> (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (= x12 x13))))
-(step t33 (cl (=> (or (and (= x12 y12) (= y12 x13)) (and (= x12 z12) (= z12 x13))) (= x12 x13))) :rule and :premises (t32) :args (1))
-(step t.end (cl) :rule resolution :premises (nt33.0 t33))

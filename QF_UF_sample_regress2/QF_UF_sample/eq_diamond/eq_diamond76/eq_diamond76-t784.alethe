@@ -1,6 +1,0 @@
-(assume nst784.0 (not (= x69 x70)))
-(assume t779 (or (and (= x69 y69) (= y69 x70)) (and (= x69 z69) (= z69 x70))))
-(assume t783 (or (= x69 x70) (not (or (and (= x69 y69) (= y69 x70)) (and (= x69 z69) (= z69 x70))))))
-(step t783' (cl (= x69 x70) (not (or (and (= x69 y69) (= y69 x70)) (and (= x69 z69) (= z69 x70))))) :rule or :premises (t783))
-(step st784 (cl (= x69 x70)) :rule resolution :premises (t783' t779))
-(step t.end (cl) :rule resolution :premises (nst784.0 st784))

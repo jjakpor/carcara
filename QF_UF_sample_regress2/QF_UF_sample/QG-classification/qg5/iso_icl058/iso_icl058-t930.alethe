@@ -1,5 +1,0 @@
-(assume nst930.0 (not (not (and (= (op (op (op e0 e0) e0) (op e0 e0)) (op (op e0 e0) (op (op e0 e0) e0))) (= (op e0 e0) (op (op e0 e0) (op (op e0 e0) e0))) (= (op e0 e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0)))))))
-(assume nst930.1 (not (= (op (op (op e0 e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op e0 e0)))))
-(assume t929 (=> (and (= (op (op (op e0 e0) e0) (op e0 e0)) (op (op e0 e0) (op (op e0 e0) e0))) (= (op e0 e0) (op (op e0 e0) (op (op e0 e0) e0))) (= (op e0 e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0)))) (= (op (op (op e0 e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op e0 e0)))))
-(step st930 (cl (not (and (= (op (op (op e0 e0) e0) (op e0 e0)) (op (op e0 e0) (op (op e0 e0) e0))) (= (op e0 e0) (op (op e0 e0) (op (op e0 e0) e0))) (= (op e0 e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0))))) (= (op (op (op e0 e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op e0 e0)))) :rule implies :premises (t929))
-(step t.end (cl) :rule resolution :premises (nst930.0 nst930.1 st930))

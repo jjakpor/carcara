@@ -1,6 +1,0 @@
-(assume nt369.0 (not (= x13 x14)))
-(assume nt369.1 (not (not (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))))))
-(assume t368 (or (not (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14)))) (= x13 x14)))
-(step t368' (cl (not (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14)))) (= x13 x14)) :rule or :premises (t368))
-(step t369 (cl (= x13 x14) (not (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))))) :rule reordering :premises (t368'))
-(step t.end (cl) :rule resolution :premises (nt369.0 nt369.1 t369))

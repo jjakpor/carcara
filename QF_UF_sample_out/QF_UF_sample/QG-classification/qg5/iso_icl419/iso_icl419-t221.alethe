@@ -1,7 +1,0 @@
-(assume t212 (or (not (= (= (op e0 (op e0 e0)) e0) (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3)))))) (not (= (op e0 (op e0 e0)) e0)) (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3))))))
-(assume t216 (= (= (op e0 (op e0 e0)) e0) (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3))))))
-(assume t220 (= (op e0 (op e0 e0)) e0))
-(assume nt221.0 (not (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3))))))
-(step t212' (cl (not (= (= (op e0 (op e0 e0)) e0) (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3)))))) (not (= (op e0 (op e0 e0)) e0)) (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3))))) :rule or :premises (t212))
-(step t221 (cl (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3))))) :rule resolution :premises (t212' t216 t220))
-(step t.end (cl) :rule resolution :premises (nt221.0 t221))

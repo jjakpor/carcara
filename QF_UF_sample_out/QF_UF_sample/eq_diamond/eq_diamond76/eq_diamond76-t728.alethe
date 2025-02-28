@@ -1,6 +1,0 @@
-(assume t727 (or (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65)))) (= x64 x65)))
-(assume nt728.0 (not (= x64 x65)))
-(assume nt728.1 (not (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))))))
-(step t727' (cl (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65)))) (= x64 x65)) :rule or :premises (t727))
-(step t728 (cl (= x64 x65) (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))))) :rule reordering :premises (t727'))
-(step t.end (cl) :rule resolution :premises (nt728.0 nt728.1 t728))

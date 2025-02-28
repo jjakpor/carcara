@@ -1,5 +1,0 @@
-(assume nt23.0 (not (= (= (not i2) (= b2 r2)) (= (not (not (not (= b2 r2)))) (= b2 r2)))))
-(assume t21 (= (not i2) (not (not (not (= b2 r2))))))
-(assume t22 (= (= b2 r2) (= b2 r2)))
-(step t23 (cl (= (= (not i2) (= b2 r2)) (= (not (not (not (= b2 r2)))) (= b2 r2)))) :rule cong :premises (t21 t22))
-(step t.end (cl) :rule resolution :premises (nt23.0 t23))

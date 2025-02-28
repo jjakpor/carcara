@@ -1,4 +1,0 @@
-(assume nst21.0 (not (not (and y$a_Cross_Train_1 y$a_Cross_Train_2))))
-(assume nst21.1 (not y$a_Cross_Train_1))
-(step st21 (cl (not (and y$a_Cross_Train_1 y$a_Cross_Train_2)) y$a_Cross_Train_1) :rule and_pos :args (0))
-(step t.end (cl) :rule resolution :premises (nst21.0 nst21.1 st21))

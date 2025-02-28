@@ -1,4 +1,0 @@
-(assume nst179.0 (not (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3))))))
-(assume nst179.1 (not (not (= e3 (op e3 (op e3 e3))))))
-(step st179 (cl (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))) (not (= e3 (op e3 (op e3 e3))))) :rule implies_neg2)
-(step t.end (cl) :rule resolution :premises (nst179.0 nst179.1 st179))

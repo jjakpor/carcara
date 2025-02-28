@@ -1,3 +1,0 @@
-(assume nt2.0 (not (= (= (= (not (not prt)) prt) true) (= (not (not prt)) prt))))
-(step t2 (cl (= (= (= (not (not prt)) prt) true) (= (not (not prt)) prt))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nt2.0 t2))

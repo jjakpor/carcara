@@ -1,5 +1,0 @@
-(assume nst21.0 (not (= (= null$0 prv_2$0) (= a_1$0 prv_2$0))))
-(assume t19 (= null$0 a_1$0))
-(assume t20 (= prv_2$0 prv_2$0))
-(step st21 (cl (= (= null$0 prv_2$0) (= a_1$0 prv_2$0))) :rule cong :premises (t19 t20))
-(step t.end (cl) :rule resolution :premises (nst21.0 st21))

@@ -1,7 +1,0 @@
-(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x (union (intersection a b) (intersection a c)))) (member ?x (intersection a (union b c)))))))
-(define-fun @quantifiers_skolemize_4 () Elem (choice ((?x Elem)) (not (or (not (member ?x (intersection a (union b c)))) (member ?x (union (intersection a b) (intersection a c)))))))
-(assume nst38.0 (not (and (subset (union (intersection a b) (intersection a c)) (intersection a (union b c))) (subset (intersection a (union b c)) (union (intersection a b) (intersection a c))))))
-(assume nst38.1 (not (not (subset (union (intersection a b) (intersection a c)) (intersection a (union b c))))))
-(assume nst38.2 (not (not (subset (intersection a (union b c)) (union (intersection a b) (intersection a c))))))
-(step st38 (cl (and (subset (union (intersection a b) (intersection a c)) (intersection a (union b c))) (subset (intersection a (union b c)) (union (intersection a b) (intersection a c)))) (not (subset (union (intersection a b) (intersection a c)) (intersection a (union b c)))) (not (subset (intersection a (union b c)) (union (intersection a b) (intersection a c))))) :rule and_neg)
-(step t.end (cl) :rule resolution :premises (nst38.0 nst38.1 nst38.2 st38))

@@ -1,4 +1,0 @@
-(assume nst385.0 (not (=> (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))) (= x34 x35))))
-(assume t384 (and (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))) (=> (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))) (= x34 x35))))
-(step st385 (cl (=> (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))) (= x34 x35))) :rule and :premises (t384) :args (1))
-(step t.end (cl) :rule resolution :premises (nst385.0 st385))

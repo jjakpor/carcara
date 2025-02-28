@@ -1,5 +1,0 @@
-(assume nst186.0 (not (= (op e3 unit) (op e3 e0))))
-(assume a11 (= unit e0))
-(assume t185 (= e3 e3))
-(step st186 (cl (= (op e3 unit) (op e3 e0))) :rule cong :premises (t185 a11))
-(step t.end (cl) :rule resolution :premises (nst186.0 st186))

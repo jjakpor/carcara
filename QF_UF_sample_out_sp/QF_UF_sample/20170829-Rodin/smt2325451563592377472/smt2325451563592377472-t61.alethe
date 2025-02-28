@@ -1,3 +1,0 @@
-(assume nt61.0 (not (= (= (= (not (not car)) car) true) (= (not (not car)) car))))
-(step t61 (cl (= (= (= (not (not car)) car) true) (= (not (not car)) car))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nt61.0 t61))

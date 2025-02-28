@@ -1,5 +1,0 @@
-(assume nt416.0 (not (= (= e3 (op (op (op e1 e3) e3) e3)) false)))
-(assume t405 (= (= e3 (op (op (op e1 e3) e3) e3)) (= (op e3 e3) (op (op (op e1 e3) e3) e3))))
-(assume t415 (= (= (op e3 e3) (op (op (op e1 e3) e3) e3)) false))
-(step t416 (cl (= (= e3 (op (op (op e1 e3) e3) e3)) false)) :rule trans :premises (t405 t415))
-(step t.end (cl) :rule resolution :premises (nt416.0 t416))

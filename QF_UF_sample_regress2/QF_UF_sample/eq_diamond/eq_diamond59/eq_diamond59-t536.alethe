@@ -1,5 +1,0 @@
-(assume nst536.0 (not (not (= (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (and (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (=> (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (= x30 x31)))))))
-(assume nst536.1 (not (not (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))))))
-(assume nst536.2 (not (and (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (=> (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (= x30 x31)))))
-(step st536 (cl (not (= (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (and (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (=> (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (= x30 x31))))) (not (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31)))) (and (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (=> (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))) (= x30 x31)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst536.0 nst536.1 nst536.2 st536))

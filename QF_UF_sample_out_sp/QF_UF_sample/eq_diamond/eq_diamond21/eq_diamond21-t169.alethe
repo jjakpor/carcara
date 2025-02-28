@@ -1,5 +1,0 @@
-(assume nt169.0 (not (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))))))
-(assume nt169.1 (not (= x14 x15)))
-(assume t168 (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15)))
-(step t169 (cl (not (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15)))) (= x14 x15)) :rule implies :premises (t168))
-(step t.end (cl) :rule resolution :premises (nt169.0 nt169.1 t169))

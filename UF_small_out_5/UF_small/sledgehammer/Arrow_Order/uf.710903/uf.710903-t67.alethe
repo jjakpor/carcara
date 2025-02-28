@@ -1,8 +1,0 @@
-(define-fun @quantifiers_skolemize_10 () S2 (choice ((?v6 S2)) (not (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v6))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f3 f4 ?v6)))))))
-(assume nst67.0 (not (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f21 f8)))))
-(assume nst67.1 (not (not (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f21 f4))))))
-(assume nst67.2 (not (not (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f21 f4))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f21 f8)))))))
-(assume t66 (or (not (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f21 f4))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f21 f8))))) (not (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f21 f4)))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f21 f8)))))
-(step t66' (cl (not (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f21 f4))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f21 f8))))) (not (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f21 f4)))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f21 f8)))) :rule or :premises (t66))
-(step st67 (cl (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f21 f8))) (not (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f21 f4)))) (not (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f21 f4))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f21 f8)))))) :rule reordering :premises (t66'))
-(step t.end (cl) :rule resolution :premises (nst67.0 nst67.1 nst67.2 st67))

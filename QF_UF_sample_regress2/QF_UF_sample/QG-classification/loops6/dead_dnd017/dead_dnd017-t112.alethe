@@ -1,8 +1,0 @@
-(assume nst112.0 (not (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2))))))
-(assume nst112.1 (not (= e2 (op e2 (op e2 e2)))))
-(assume t105 (or (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2)))) (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0))))))
-(assume t111 (or (not (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0))))) (= e2 (op e2 (op e2 e2)))))
-(step t111' (cl (not (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0))))) (= e2 (op e2 (op e2 e2)))) :rule or :premises (t111))
-(step t105' (cl (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2)))) (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0))))) :rule or :premises (t105))
-(step st112 (cl (=> (and (= e2 (op e2 e0)) (= e0 (op e2 (op e2 e0)))) (= e2 (op e2 (op e2 e2)))) (= e2 (op e2 (op e2 e2)))) :rule resolution :premises (t105' t111'))
-(step t.end (cl) :rule resolution :premises (nst112.0 nst112.1 st112))

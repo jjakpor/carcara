@@ -1,6 +1,0 @@
-(assume nst545.0 (not (= x30 x31)))
-(assume nst545.1 (not (not (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))))))
-(assume t544 (or (not (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31)))) (= x30 x31)))
-(step t544' (cl (not (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31)))) (= x30 x31)) :rule or :premises (t544))
-(step st545 (cl (= x30 x31) (not (or (and (= x30 y30) (= y30 x31)) (and (= x30 z30) (= z30 x31))))) :rule reordering :premises (t544'))
-(step t.end (cl) :rule resolution :premises (nst545.0 nst545.1 st545))

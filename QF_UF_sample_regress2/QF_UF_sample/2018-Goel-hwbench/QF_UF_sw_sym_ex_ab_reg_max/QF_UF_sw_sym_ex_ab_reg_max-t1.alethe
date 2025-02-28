@@ -1,5 +1,0 @@
-(assume nst1.0 (not (not (= y$219 (and y$L0 y$2 y$4 y$6 y$8 y$10 y$12 y$14 y$LoneHot y$18 y$20 y$215 y$205)))))
-(assume nst1.1 (not (not y$219)))
-(assume nst1.2 (not (and y$L0 y$2 y$4 y$6 y$8 y$10 y$12 y$14 y$LoneHot y$18 y$20 y$215 y$205)))
-(step st1 (cl (not (= y$219 (and y$L0 y$2 y$4 y$6 y$8 y$10 y$12 y$14 y$LoneHot y$18 y$20 y$215 y$205))) (not y$219) (and y$L0 y$2 y$4 y$6 y$8 y$10 y$12 y$14 y$LoneHot y$18 y$20 y$215 y$205)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst1.0 nst1.1 nst1.2 st1))

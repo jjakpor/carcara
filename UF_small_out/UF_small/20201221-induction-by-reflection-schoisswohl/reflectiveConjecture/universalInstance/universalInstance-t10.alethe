@@ -1,4 +1,0 @@
-(assume nst10.0 (not (not (and (not (p (eval_alpha empty aR))) (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha)) (= (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha) (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))))))
-(assume nst10.1 (not (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha))))
-(step st10 (cl (not (and (not (p (eval_alpha empty aR))) (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha)) (= (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha) (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha))))) (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha))) :rule and_pos :args (1))
-(step t.end (cl) :rule resolution :premises (nst10.0 nst10.1 st10))

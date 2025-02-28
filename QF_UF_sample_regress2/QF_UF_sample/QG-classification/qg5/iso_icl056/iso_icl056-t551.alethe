@@ -1,5 +1,0 @@
-(assume nst551.0 (not (= (not (= e3 e1)) (not (= e1 (op e1 (op e1 e1)))))))
-(assume t548 (= (not (= e3 e1)) (not (= (op e1 (op e1 e1)) e1))))
-(assume t550 (= (not (= (op e1 (op e1 e1)) e1)) (not (= e1 (op e1 (op e1 e1))))))
-(step st551 (cl (= (not (= e3 e1)) (not (= e1 (op e1 (op e1 e1)))))) :rule trans :premises (t548 t550))
-(step t.end (cl) :rule resolution :premises (nst551.0 st551))

@@ -1,4 +1,0 @@
-(assume nst32.0 (not (not (= null$0 start1$0))))
-(assume a25 (not (= start1$0 null$0)))
-(step st32 (cl (not (= null$0 start1$0))) :rule not_symm :premises (a25))
-(step t.end (cl) :rule resolution :premises (nst32.0 st32))

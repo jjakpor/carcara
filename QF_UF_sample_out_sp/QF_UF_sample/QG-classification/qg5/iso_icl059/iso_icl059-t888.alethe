@@ -1,5 +1,0 @@
-(assume nt888.0 (not (= (or (or (or (or (= (op e0 e3) e2) (= (op e1 e3) e2)) (= (op e2 e3) e2)) (= (op e3 e3) e2)) (= (op e4 e3) e2)) (or (= e2 (op e4 e3)) (= e2 (op e3 e3)) (= e2 (op e2 e3)) (= e2 (op e0 e3)) (= e2 (op e1 e3))))))
-(assume t882 (= (or (or (or (or (= (op e0 e3) e2) (= (op e1 e3) e2)) (= (op e2 e3) e2)) (= (op e3 e3) e2)) (= (op e4 e3) e2)) (or (= (op e4 e3) e2) (= (op e3 e3) e2) (= (op e2 e3) e2) (= (op e0 e3) e2) (= (op e1 e3) e2))))
-(assume t887 (= (or (= (op e4 e3) e2) (= (op e3 e3) e2) (= (op e2 e3) e2) (= (op e0 e3) e2) (= (op e1 e3) e2)) (or (= e2 (op e4 e3)) (= e2 (op e3 e3)) (= e2 (op e2 e3)) (= e2 (op e0 e3)) (= e2 (op e1 e3)))))
-(step t888 (cl (= (or (or (or (or (= (op e0 e3) e2) (= (op e1 e3) e2)) (= (op e2 e3) e2)) (= (op e3 e3) e2)) (= (op e4 e3) e2)) (or (= e2 (op e4 e3)) (= e2 (op e3 e3)) (= e2 (op e2 e3)) (= e2 (op e0 e3)) (= e2 (op e1 e3))))) :rule trans :premises (t882 t887))
-(step t.end (cl) :rule resolution :premises (nt888.0 t888))

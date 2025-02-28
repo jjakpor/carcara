@@ -1,5 +1,0 @@
-(assume nt169.0 (not (= (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8) false)))
-(assume t1 (= (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8) (and (not (= y$n0s8 y$n1s8)) (not (= y$n0s8 y$n255s8)) (not (= y$n0s8 y$n5s8)) (not (= y$n1s8 y$n255s8)) (not (= y$n1s8 y$n5s8)) (not (= y$n255s8 y$n5s8)))))
-(assume t168 (= (and (not (= y$n0s8 y$n1s8)) (not (= y$n0s8 y$n255s8)) (not (= y$n0s8 y$n5s8)) (not (= y$n1s8 y$n255s8)) (not (= y$n1s8 y$n5s8)) (not (= y$n255s8 y$n5s8))) false))
-(step t169 (cl (= (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8) false)) :rule trans :premises (t1 t168))
-(step t.end (cl) :rule resolution :premises (nt169.0 t169))

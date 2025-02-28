@@ -1,8 +1,0 @@
-(define-fun @quantifiers_skolemize_3 () Elem (choice ((?x Elem)) (not (or (not (member ?x b)) (member ?x (union a b))))))
-(assume nst1.0 (not (member @quantifiers_skolemize_3 (union a b))))
-(assume nst1.1 (not (not (or (member @quantifiers_skolemize_3 a) (member @quantifiers_skolemize_3 b)))))
-(assume nst1.2 (not (not (= (member @quantifiers_skolemize_3 (union a b)) (or (member @quantifiers_skolemize_3 a) (member @quantifiers_skolemize_3 b))))))
-(assume t0 (or (not (= (member @quantifiers_skolemize_3 (union a b)) (or (member @quantifiers_skolemize_3 a) (member @quantifiers_skolemize_3 b)))) (member @quantifiers_skolemize_3 (union a b)) (not (or (member @quantifiers_skolemize_3 a) (member @quantifiers_skolemize_3 b)))))
-(step t0' (cl (not (= (member @quantifiers_skolemize_3 (union a b)) (or (member @quantifiers_skolemize_3 a) (member @quantifiers_skolemize_3 b)))) (member @quantifiers_skolemize_3 (union a b)) (not (or (member @quantifiers_skolemize_3 a) (member @quantifiers_skolemize_3 b)))) :rule or :premises (t0))
-(step st1 (cl (member @quantifiers_skolemize_3 (union a b)) (not (or (member @quantifiers_skolemize_3 a) (member @quantifiers_skolemize_3 b))) (not (= (member @quantifiers_skolemize_3 (union a b)) (or (member @quantifiers_skolemize_3 a) (member @quantifiers_skolemize_3 b))))) :rule reordering :premises (t0'))
-(step t.end (cl) :rule resolution :premises (nst1.0 nst1.1 nst1.2 st1))

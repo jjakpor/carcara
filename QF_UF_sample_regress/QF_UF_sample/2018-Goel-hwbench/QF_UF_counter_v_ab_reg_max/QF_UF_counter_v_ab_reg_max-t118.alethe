@@ -1,5 +1,0 @@
-(assume nst118.0 (not (not (= y$2 (= y$X y$n1s4)))))
-(assume nst118.1 (not (not y$2)))
-(assume nst118.2 (not (= y$X y$n1s4)))
-(step st118 (cl (not (= y$2 (= y$X y$n1s4))) (not y$2) (= y$X y$n1s4)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst118.0 nst118.1 nst118.2 st118))

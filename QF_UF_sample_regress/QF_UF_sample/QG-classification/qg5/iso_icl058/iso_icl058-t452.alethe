@@ -1,5 +1,0 @@
-(assume nst452.0 (not (= (= (op (op (op e0 e0) e0) e0) (op (op e0 e0) (op e0 e0))) (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))))
-(assume t393 (= (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))
-(assume t451 (= (op (op e0 e0) (op e0 e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))
-(step st452 (cl (= (= (op (op (op e0 e0) e0) e0) (op (op e0 e0) (op e0 e0))) (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))) :rule cong :premises (t393 t451))
-(step t.end (cl) :rule resolution :premises (nst452.0 st452))

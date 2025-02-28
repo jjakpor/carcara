@@ -1,4 +1,0 @@
-(assume nt266.t6.0 (not (and (= (op unit e5) e5) (= (op e5 unit) e5))))
-(assume t146 (and (and (and (and (and (and (= (op unit e0) e0) (= (op e0 unit) e0)) (and (= (op unit e1) e1) (= (op e1 unit) e1))) (and (= (op unit e2) e2) (= (op e2 unit) e2))) (and (= (op unit e3) e3) (= (op e3 unit) e3))) (and (= (op unit e4) e4) (= (op e4 unit) e4))) (and (= (op unit e5) e5) (= (op e5 unit) e5))))
-(step t266.t6 (cl (and (= (op unit e5) e5) (= (op e5 unit) e5))) :rule and :premises (t146) :args (1))
-(step t.end (cl) :rule resolution :premises (nt266.t6.0 t266.t6))

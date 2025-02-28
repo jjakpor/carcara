@@ -1,5 +1,0 @@
-(assume nt30.0 (not (= y$v_A y$v_at_table)))
-(assume t12 (= y$v_A y$v_B))
-(assume t29 (= y$v_B y$v_at_table))
-(step t30 (cl (= y$v_A y$v_at_table)) :rule trans :premises (t12 t29))
-(step t.end (cl) :rule resolution :premises (nt30.0 t30))

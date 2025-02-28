@@ -1,5 +1,0 @@
-(assume nst719.0 (not (not (= (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (and (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65)))))))
-(assume nst719.1 (not (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))))))
-(assume nst719.2 (not (and (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65)))))
-(step st719 (cl (not (= (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (and (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65))))) (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65)))) (and (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (=> (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))) (= x64 x65)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst719.0 nst719.1 nst719.2 st719))

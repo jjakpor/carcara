@@ -1,3 +1,0 @@
-(assume nst49.0 (not (= (lseg_domain$0 next$0 cp_2$0 cp_2$0) (lseg_domain$0 next$0 cp_2$0 cp_2$0))))
-(step st49 (cl (= (lseg_domain$0 next$0 cp_2$0 cp_2$0) (lseg_domain$0 next$0 cp_2$0 cp_2$0))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst49.0 st49))

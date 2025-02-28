@@ -1,3 +1,0 @@
-(assume nt1166.0 (not (= (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3))) (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3))))))
-(step t1166 (cl (= (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3))) (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt1166.0 t1166))

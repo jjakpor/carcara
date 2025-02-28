@@ -1,5 +1,0 @@
-(assume nst510.0 (not (= (or (not (= (op e0 e3) e0)) (= (op e3 e3) e3)) (or (not (= e0 (op e0 e3))) (= e3 (op e3 e3))))))
-(assume t8 (= (= (op e3 e3) e3) (= e3 (op e3 e3))))
-(assume t509 (= (not (= (op e0 e3) e0)) (not (= e0 (op e0 e3)))))
-(step st510 (cl (= (or (not (= (op e0 e3) e0)) (= (op e3 e3) e3)) (or (not (= e0 (op e0 e3))) (= e3 (op e3 e3))))) :rule cong :premises (t509 t8))
-(step t.end (cl) :rule resolution :premises (nst510.0 st510))

@@ -1,5 +1,0 @@
-(assume nst169.0 (not (= sk_?X_20$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_22$0))))
-(assume a16 (= sk_?X_20$0 (union$0 sk_?X_23$0 sk_?X_21$0)))
-(assume t168 (= (union$0 sk_?X_23$0 sk_?X_21$0) (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_22$0)))
-(step st169 (cl (= sk_?X_20$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_22$0))) :rule trans :premises (a16 t168))
-(step t.end (cl) :rule resolution :premises (nst169.0 st169))

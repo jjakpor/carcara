@@ -1,5 +1,0 @@
-(assume nst14.0 (not (not y$prop)))
-(assume nst14.1 (not (not y$1557)))
-(assume a35 (= y$prop (not y$1557)))
-(step st14 (cl (not y$prop) (not y$1557)) :rule equiv1 :premises (a35))
-(step t.end (cl) :rule resolution :premises (nst14.0 nst14.1 st14))

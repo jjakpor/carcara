@@ -1,4 +1,0 @@
-(assume t663 (= (op (op e0 (op e0 e0)) (op e0 e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) e0))))
-(assume nt664.0 (not (= (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) e0)) (op (op e0 (op e0 e0)) (op e0 e0)))))
-(step t664 (cl (= (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op (op e0 (op e0 e0)) e0) e0)) (op (op e0 (op e0 e0)) (op e0 e0)))) :rule symm :premises (t663))
-(step t.end (cl) :rule resolution :premises (nt664.0 t664))

@@ -1,5 +1,0 @@
-(assume nst9.0 (not (not (= (not (not (and (not (= nf0 flash)) (= nf0 nf)))) (and (not (= flash nf0)) (= nf nf0))))))
-(assume nst9.1 (not (not (not (not (and (not (= nf0 flash)) (= nf0 nf)))))))
-(assume nst9.2 (not (and (not (= flash nf0)) (= nf nf0))))
-(step st9 (cl (not (= (not (not (and (not (= nf0 flash)) (= nf0 nf)))) (and (not (= flash nf0)) (= nf nf0)))) (not (not (not (and (not (= nf0 flash)) (= nf0 nf))))) (and (not (= flash nf0)) (= nf nf0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst9.0 nst9.1 nst9.2 st9))

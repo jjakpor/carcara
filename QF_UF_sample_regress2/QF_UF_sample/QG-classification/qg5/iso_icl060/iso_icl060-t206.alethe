@@ -1,3 +1,0 @@
-(assume nst206.0 (not (= (= e3 (op (op (op e1 e3) e1) e1)) (= e3 (op (op (op e1 e3) e1) e1)))))
-(step st206 (cl (= (= e3 (op (op (op e1 e3) e1) e1)) (= e3 (op (op (op e1 e3) e1) e1)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst206.0 st206))

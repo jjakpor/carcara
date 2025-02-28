@@ -1,4 +1,0 @@
-(assume nt1019.0 (not (and (and (= (op e3 (op e3 e0)) e0) (= (op e3 (op e3 e1)) e1)) (= (op e3 (op e3 e2)) e2))))
-(assume t1018 (and (and (and (= (op e3 (op e3 e0)) e0) (= (op e3 (op e3 e1)) e1)) (= (op e3 (op e3 e2)) e2)) (= (op e3 (op e3 e3)) e3)))
-(step t1019 (cl (and (and (= (op e3 (op e3 e0)) e0) (= (op e3 (op e3 e1)) e1)) (= (op e3 (op e3 e2)) e2))) :rule and :premises (t1018) :args (0))
-(step t.end (cl) :rule resolution :premises (nt1019.0 t1019))

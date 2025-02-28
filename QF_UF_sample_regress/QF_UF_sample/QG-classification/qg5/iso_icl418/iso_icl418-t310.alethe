@@ -1,5 +1,0 @@
-(assume nst310.0 (not (= (= (op (op e4 e3) e4) (op (op e4 e3) e3)) false)))
-(assume nst310.1 (not (not (not (= (op (op e4 e3) e4) (op (op e4 e3) e3))))))
-(assume t309 (= (= (= (op (op e4 e3) e4) (op (op e4 e3) e3)) false) (not (= (op (op e4 e3) e4) (op (op e4 e3) e3)))))
-(step st310 (cl (= (= (op (op e4 e3) e4) (op (op e4 e3) e3)) false) (not (not (= (op (op e4 e3) e4) (op (op e4 e3) e3))))) :rule equiv2 :premises (t309))
-(step t.end (cl) :rule resolution :premises (nst310.0 nst310.1 st310))

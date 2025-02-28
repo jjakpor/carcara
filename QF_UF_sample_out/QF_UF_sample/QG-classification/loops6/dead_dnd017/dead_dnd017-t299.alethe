@@ -1,7 +1,0 @@
-(assume t286 (or (not (= (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0)))) (not (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit))) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0))))
-(assume t297 (= (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0))))
-(assume t298 (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)))
-(assume nt299.0 (not (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0))))
-(step t286' (cl (not (= (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit)) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0)))) (not (or (not (= (op e5 (op e5 e5)) e5)) (= e5 unit))) (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0))) :rule or :premises (t286))
-(step t299 (cl (or (not (= e5 (op e5 (op e5 e5)))) (= e5 e0))) :rule resolution :premises (t286' t297 t298))
-(step t.end (cl) :rule resolution :premises (nt299.0 t299))

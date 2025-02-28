@@ -1,4 +1,0 @@
-(assume nst56.0 (not (= (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c compow$ n$) f$) x$)))) (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)))))))
-(assume t55 (= (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c compow$ n$) f$) x$))) (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)))))
-(step st56 (cl (= (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c compow$ n$) f$) x$)))) (not (= (fun_app$ (ldrop$ (enat$ n$)) (iterates$ f$ x$)) (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)))))) :rule cong :premises (t55))
-(step t.end (cl) :rule resolution :premises (nst56.0 st56))

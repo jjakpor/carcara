@@ -1,5 +1,0 @@
-(assume nst499.0 (not (not (= (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46)))))))
-(assume nst499.1 (not (not (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))))))
-(assume nst499.2 (not (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46)))))
-(step st499 (cl (not (= (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46))))) (not (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46)))) (and (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (=> (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))) (= x45 x46)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst499.0 nst499.1 nst499.2 st499))

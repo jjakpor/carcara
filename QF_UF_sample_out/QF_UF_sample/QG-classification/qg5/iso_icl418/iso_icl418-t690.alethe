@@ -1,4 +1,0 @@
-(assume t281 (and (and (and (and (and (and (and (and (and (not (= (op e0 e3) (op e1 e3))) (not (= (op e0 e3) (op e2 e3)))) (not (= (op e0 e3) (op e3 e3)))) (not (= (op e0 e3) (op e4 e3)))) (not (= (op e1 e3) (op e2 e3)))) (not (= (op e1 e3) (op e3 e3)))) (not (= (op e1 e3) (op e4 e3)))) (not (= (op e2 e3) (op e3 e3)))) (not (= (op e2 e3) (op e4 e3)))) (not (= (op e3 e3) (op e4 e3)))))
-(assume nt690.0 (not (not (= (op e3 e3) (op e4 e3)))))
-(step t690 (cl (not (= (op e3 e3) (op e4 e3)))) :rule and :premises (t281) :args (1))
-(step t.end (cl) :rule resolution :premises (nt690.0 t690))

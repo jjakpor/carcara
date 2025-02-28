@@ -1,4 +1,0 @@
-(assume nst111.0 (not (not (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0)))))
-(assume nst111.1 (not (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0)))
-(step st111 (cl (not (and (Btwn$0 next$0 c_init$0 prv_5$0 prv_5$0) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0))) (Btwn$0 next$0 prv_5$0 prv_5$0 prv_5$0)) :rule and_pos :args (1))
-(step t.end (cl) :rule resolution :premises (nst111.0 nst111.1 st111))

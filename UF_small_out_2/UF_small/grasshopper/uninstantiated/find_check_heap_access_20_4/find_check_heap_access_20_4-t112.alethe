@@ -1,4 +1,0 @@
-(assume nst112.0 (not (= sk_?X_17$0 sk_?X_18$0)))
-(assume a29 (= sk_?X_18$0 sk_?X_17$0))
-(step st112 (cl (= sk_?X_17$0 sk_?X_18$0)) :rule symm :premises (a29))
-(step t.end (cl) :rule resolution :premises (nst112.0 st112))

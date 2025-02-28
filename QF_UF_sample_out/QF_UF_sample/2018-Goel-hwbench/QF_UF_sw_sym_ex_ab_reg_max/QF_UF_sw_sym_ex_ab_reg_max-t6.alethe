@@ -1,4 +1,0 @@
-(assume t2 (and y$L0 y$2 y$4 y$6 y$8 y$10 y$12 y$14 y$LoneHot y$18 y$20 y$215 y$205))
-(assume nt6.0 (not y$14))
-(step t6 (cl y$14) :rule and :premises (t2) :args (7))
-(step t.end (cl) :rule resolution :premises (nt6.0 t6))

@@ -1,6 +1,0 @@
-(assume nt397.t16.0 (not (= (p1 (f5 c_1) c_1) true)))
-(assume t397.t15 (or (= (p1 (f5 c_1) c_1) true) (not (p1 (f5 c_1) c_1))))
-(assume t397.a0 (p1 (f5 c_1) c_1))
-(step t397.t15' (cl (= (p1 (f5 c_1) c_1) true) (not (p1 (f5 c_1) c_1))) :rule or :premises (t397.t15))
-(step t397.t16 (cl (= (p1 (f5 c_1) c_1) true)) :rule resolution :premises (t397.t15' t397.a0))
-(step t.end (cl) :rule resolution :premises (nt397.t16.0 t397.t16))

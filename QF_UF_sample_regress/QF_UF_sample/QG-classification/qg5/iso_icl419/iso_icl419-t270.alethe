@@ -1,5 +1,0 @@
-(assume nst270.0 (not (= (= e3 (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) false)))
-(assume t256 (= (= e3 (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(assume t269 (= (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) false))
-(step st270 (cl (= (= e3 (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) false)) :rule trans :premises (t256 t269))
-(step t.end (cl) :rule resolution :premises (nst270.0 st270))

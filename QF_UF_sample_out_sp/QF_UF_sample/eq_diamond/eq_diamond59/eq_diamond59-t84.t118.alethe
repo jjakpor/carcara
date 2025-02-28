@@ -1,5 +1,0 @@
-(assume nt84.t118.0 (not (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))))))
-(assume nt84.t118.1 (not (= x1 x2)))
-(assume t84.t117 (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2)))
-(step t84.t118 (cl (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2)))) (= x1 x2)) :rule implies :premises (t84.t117))
-(step t.end (cl) :rule resolution :premises (nt84.t118.0 nt84.t118.1 t84.t118))

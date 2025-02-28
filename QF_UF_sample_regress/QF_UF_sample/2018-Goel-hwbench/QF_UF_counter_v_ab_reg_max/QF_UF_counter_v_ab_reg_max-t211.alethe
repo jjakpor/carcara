@@ -1,5 +1,0 @@
-(assume nst211.0 (not (= (= y$n15s4 y$s$1_op) (= y$n15s4 (Add_4_4_4 y$X y$n1s4)))))
-(assume a3 (= y$s$1_op (Add_4_4_4 y$X y$n1s4)))
-(assume t125 (= y$n15s4 y$n15s4))
-(step st211 (cl (= (= y$n15s4 y$s$1_op) (= y$n15s4 (Add_4_4_4 y$X y$n1s4)))) :rule cong :premises (t125 a3))
-(step t.end (cl) :rule resolution :premises (nst211.0 st211))

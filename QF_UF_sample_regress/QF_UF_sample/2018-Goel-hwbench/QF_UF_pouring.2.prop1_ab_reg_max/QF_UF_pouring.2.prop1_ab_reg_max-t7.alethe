@@ -1,6 +1,0 @@
-(assume nst7.0 (not (not y$a_q4_Bottle_1)))
-(assume t3 (or (not y$a_q4_Bottle_1) (not y$53)))
-(assume t6 y$53)
-(step t3' (cl (not y$a_q4_Bottle_1) (not y$53)) :rule or :premises (t3))
-(step st7 (cl (not y$a_q4_Bottle_1)) :rule resolution :premises (t3' t6))
-(step t.end (cl) :rule resolution :premises (nst7.0 st7))

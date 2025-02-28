@@ -1,5 +1,0 @@
-(assume t1 (or (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))))
-(assume t582 (not (and (= x6 z6) (= z6 x7))))
-(assume t584 (not (and (= x6 y6) (= y6 x7))))
-(step t1' (cl (and (= x6 y6) (= y6 x7)) (and (= x6 z6) (= z6 x7))) :rule or :premises (t1))
-(step t585 (cl) :rule resolution :premises (t1' t582 t584))

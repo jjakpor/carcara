@@ -1,4 +1,0 @@
-(assume nst83.0 (not (=> (and (p4 c8) (= c8 c_1)) (p4 c_1))))
-(assume nst83.1 (not (and (p4 c8) (= c8 c_1))))
-(step st83 (cl (=> (and (p4 c8) (= c8 c_1)) (p4 c_1)) (and (p4 c8) (= c8 c_1))) :rule implies_neg1)
-(step t.end (cl) :rule resolution :premises (nst83.0 nst83.1 st83))

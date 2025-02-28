@@ -1,3 +1,0 @@
-(assume nst138.0 (not (= (not true) false)))
-(step st138 (cl (= (not true) false)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst138.0 st138))

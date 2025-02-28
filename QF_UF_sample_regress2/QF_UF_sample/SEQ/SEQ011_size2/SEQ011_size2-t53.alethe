@@ -1,4 +1,0 @@
-(assume nst53.0 (not (=> (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false)))
-(assume nst53.1 (not (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1)))))
-(step st53 (cl (=> (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1))) false) (and (p1 (f6 c_1) c_1) (= c_0 (f6 c_1)) (= c_0 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) :rule implies_neg1)
-(step t.end (cl) :rule resolution :premises (nst53.0 nst53.1 st53))

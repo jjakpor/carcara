@@ -1,3 +1,0 @@
-(assume nst163.0 (not (= FP_2$0 FP_2$0)))
-(step st163 (cl (= FP_2$0 FP_2$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst163.0 st163))

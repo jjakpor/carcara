@@ -1,4 +1,0 @@
-(assume nst160.0 (not (and (not (= e0 e1)) (not (= e0 e2)))))
-(assume t159 (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))))
-(step st160 (cl (and (not (= e0 e1)) (not (= e0 e2)))) :rule and :premises (t159) :args (0))
-(step t.end (cl) :rule resolution :premises (nst160.0 st160))

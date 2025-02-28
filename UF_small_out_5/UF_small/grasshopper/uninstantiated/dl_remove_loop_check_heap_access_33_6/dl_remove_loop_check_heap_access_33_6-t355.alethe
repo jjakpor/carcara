@@ -1,4 +1,0 @@
-(assume nst355.0 (not (= (union$0 FP_Caller$0 Alloc$0) Alloc$0)))
-(assume a28 (= Alloc$0 (union$0 FP_Caller$0 Alloc$0)))
-(step st355 (cl (= (union$0 FP_Caller$0 Alloc$0) Alloc$0)) :rule symm :premises (a28))
-(step t.end (cl) :rule resolution :premises (nst355.0 st355))

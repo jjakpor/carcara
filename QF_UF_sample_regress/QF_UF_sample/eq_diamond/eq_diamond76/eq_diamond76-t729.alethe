@@ -1,6 +1,0 @@
-(assume nst729.0 (not (= x64 x65)))
-(assume t724 (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))))
-(assume t728 (or (= x64 x65) (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))))))
-(step t728' (cl (= x64 x65) (not (or (and (= x64 y64) (= y64 x65)) (and (= x64 z64) (= z64 x65))))) :rule or :premises (t728))
-(step st729 (cl (= x64 x65)) :rule resolution :premises (t728' t724))
-(step t.end (cl) :rule resolution :premises (nst729.0 st729))

@@ -1,4 +1,0 @@
-(assume nst233.0 (not (= (not (= (op e4 (op e4 e4)) e4)) (not (= e4 (op e4 (op e4 e4)))))))
-(assume t232 (= (= (op e4 (op e4 e4)) e4) (= e4 (op e4 (op e4 e4)))))
-(step st233 (cl (= (not (= (op e4 (op e4 e4)) e4)) (not (= e4 (op e4 (op e4 e4)))))) :rule cong :premises (t232))
-(step t.end (cl) :rule resolution :premises (nst233.0 st233))

@@ -1,6 +1,0 @@
-(assume nst87.0 (not (not (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))))
-(assume nst87.1 (not (not (and (not (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))) (not (in$0 x$0 (setenum$0 root_x$0))) (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))))))))
-(assume t86 (or (not (and (not (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))) (not (in$0 x$0 (setenum$0 root_x$0))) (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)))))) (not (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))))
-(step t86' (cl (not (and (not (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))) (not (in$0 x$0 (setenum$0 root_x$0))) (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)))))) (not (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))) :rule or :premises (t86))
-(step st87 (cl (not (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))) (not (and (not (in$0 x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))) (not (in$0 x$0 (setenum$0 root_x$0))) (not (in$0 x$0 (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0))))))) :rule reordering :premises (t86'))
-(step t.end (cl) :rule resolution :premises (nst87.0 nst87.1 st87))

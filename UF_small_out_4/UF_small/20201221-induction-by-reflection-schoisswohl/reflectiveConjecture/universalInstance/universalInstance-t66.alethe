@@ -1,3 +1,0 @@
-(assume nst66.0 (not (or (not (forall ((env env) (t0 term_alpha)) (= (models env (pR t0)) (p (eval_alpha env t0))))) (= (models (push_alpha empty v0_alpha (eval_alpha empty aR)) (pR (inj_alpha v0_alpha))) (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))))))
-(step st66 (cl (or (not (forall ((env env) (t0 term_alpha)) (= (models env (pR t0)) (p (eval_alpha env t0))))) (= (models (push_alpha empty v0_alpha (eval_alpha empty aR)) (pR (inj_alpha v0_alpha))) (p (eval_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))))) :rule forall_inst :args ((push_alpha empty v0_alpha (eval_alpha empty aR)) (inj_alpha v0_alpha)))
-(step t.end (cl) :rule resolution :premises (nst66.0 st66))

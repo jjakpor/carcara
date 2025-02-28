@@ -1,5 +1,0 @@
-(assume t4 (= (= (not (not prt)) prt) (= prt (not (not prt)))))
-(assume t9 (= (= prt (not (not prt))) true))
-(assume nt10.0 (not (= (= (not (not prt)) prt) true)))
-(step t10 (cl (= (= (not (not prt)) prt) true)) :rule trans :premises (t4 t9))
-(step t.end (cl) :rule resolution :premises (nt10.0 t10))

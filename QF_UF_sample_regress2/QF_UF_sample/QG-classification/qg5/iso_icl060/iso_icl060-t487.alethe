@@ -1,5 +1,0 @@
-(assume nst487.0 (not (not (= (= (op e2 e2) e2) (= (op e1 e3) (op (op e1 e3) (op e1 e3)))))))
-(assume nst487.1 (not (not (= (op e2 e2) e2))))
-(assume nst487.2 (not (= (op e1 e3) (op (op e1 e3) (op e1 e3)))))
-(step st487 (cl (not (= (= (op e2 e2) e2) (= (op e1 e3) (op (op e1 e3) (op e1 e3))))) (not (= (op e2 e2) e2)) (= (op e1 e3) (op (op e1 e3) (op e1 e3)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst487.0 nst487.1 nst487.2 st487))

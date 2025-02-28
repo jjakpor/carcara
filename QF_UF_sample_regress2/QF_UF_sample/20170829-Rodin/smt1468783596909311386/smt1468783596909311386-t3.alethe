@@ -1,7 +1,0 @@
-(assume nst3.0 (not rd1))
-(assume a5 (not (not rd1)))
-(assume t1 (or (not (= (not (not rd1)) rd1)) (not (not (not rd1))) rd1))
-(assume t2 (= (not (not rd1)) rd1))
-(step t1' (cl (not (= (not (not rd1)) rd1)) (not (not (not rd1))) rd1) :rule or :premises (t1))
-(step st3 (cl rd1) :rule resolution :premises (t1' t2 a5))
-(step t.end (cl) :rule resolution :premises (nst3.0 st3))

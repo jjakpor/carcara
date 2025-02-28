@@ -1,4 +1,0 @@
-(assume nt98.0 (not (and (and (= (op unit e0) e0) (= (op e0 unit) e0)) (and (= (op unit e1) e1) (= (op e1 unit) e1)))))
-(assume t97 (and (and (and (= (op unit e0) e0) (= (op e0 unit) e0)) (and (= (op unit e1) e1) (= (op e1 unit) e1))) (and (= (op unit e2) e2) (= (op e2 unit) e2))))
-(step t98 (cl (and (and (= (op unit e0) e0) (= (op e0 unit) e0)) (and (= (op unit e1) e1) (= (op e1 unit) e1)))) :rule and :premises (t97) :args (0))
-(step t.end (cl) :rule resolution :premises (nt98.0 t98))

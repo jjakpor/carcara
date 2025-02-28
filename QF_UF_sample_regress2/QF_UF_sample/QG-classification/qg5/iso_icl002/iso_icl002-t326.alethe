@@ -1,5 +1,0 @@
-(assume nst326.0 (not (not (= (not (= e0 e4)) (not (= e0 (op e0 e0)))))))
-(assume nst326.1 (not (not (not (= e0 e4)))))
-(assume nst326.2 (not (not (= e0 (op e0 e0)))))
-(step st326 (cl (not (= (not (= e0 e4)) (not (= e0 (op e0 e0))))) (not (not (= e0 e4))) (not (= e0 (op e0 e0)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst326.0 nst326.1 nst326.2 st326))

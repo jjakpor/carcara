@@ -1,5 +1,0 @@
-(assume nst174.0 (not (= (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_22$0) (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)))))
-(assume a44 (= sk_?X_22$0 (setenum$0 root_x$0)))
-(assume t173 (= (lseg_set_domain$0 next$0 x$0 root_x$0) (lseg_set_domain$0 next$0 x$0 root_x$0)))
-(step st174 (cl (= (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) sk_?X_22$0) (union$0 (lseg_set_domain$0 next$0 x$0 root_x$0) (setenum$0 root_x$0)))) :rule cong :premises (t173 a44))
-(step t.end (cl) :rule resolution :premises (nst174.0 st174))

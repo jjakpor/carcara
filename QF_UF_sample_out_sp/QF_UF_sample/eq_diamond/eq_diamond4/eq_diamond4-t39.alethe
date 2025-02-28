@@ -1,5 +1,0 @@
-(assume nt39.0 (not (= (= x0 x3) false)))
-(assume nt39.1 (not (not (not (= x0 x3)))))
-(assume t38 (= (= (= x0 x3) false) (not (= x0 x3))))
-(step t39 (cl (= (= x0 x3) false) (not (not (= x0 x3)))) :rule equiv2 :premises (t38))
-(step t.end (cl) :rule resolution :premises (nt39.0 nt39.1 t39))

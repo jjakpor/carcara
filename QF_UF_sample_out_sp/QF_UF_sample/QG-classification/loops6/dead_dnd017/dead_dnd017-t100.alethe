@@ -1,7 +1,0 @@
-(assume nt100.0 (not (= e0 (op e0 e0))))
-(assume t87 (or (not (= (= (op unit e0) e0) (= e0 (op e0 e0)))) (not (= (op unit e0) e0)) (= e0 (op e0 e0))))
-(assume t92 (= (= (op unit e0) e0) (= e0 (op e0 e0))))
-(assume t99 (= (op unit e0) e0))
-(step t87' (cl (not (= (= (op unit e0) e0) (= e0 (op e0 e0)))) (not (= (op unit e0) e0)) (= e0 (op e0 e0))) :rule or :premises (t87))
-(step t100 (cl (= e0 (op e0 e0))) :rule resolution :premises (t87' t92 t99))
-(step t.end (cl) :rule resolution :premises (nt100.0 t100))

@@ -1,3 +1,0 @@
-(assume nst6.0 (not (= (not (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)))) (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)))))
-(step st6 (cl (= (not (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)))) (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst6.0 st6))

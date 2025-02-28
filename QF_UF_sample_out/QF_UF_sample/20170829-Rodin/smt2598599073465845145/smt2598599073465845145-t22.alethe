@@ -1,3 +1,0 @@
-(assume nt22.0 (not (= (= b2 r2) (= b2 r2))))
-(step t22 (cl (= (= b2 r2) (= b2 r2))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt22.0 t22))

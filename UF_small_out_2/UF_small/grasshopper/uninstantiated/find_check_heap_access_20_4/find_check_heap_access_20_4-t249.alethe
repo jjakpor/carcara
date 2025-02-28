@@ -1,6 +1,0 @@
-(assume nst249.0 (not (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0)))))
-(assume t204 (or (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))) (not (and (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))) (not (in$0 x$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0)))))))
-(assume t248 (and (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))) (not (in$0 x$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0)))))
-(step t204' (cl (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))) (not (and (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0))) (not (in$0 x$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0)))))) :rule or :premises (t204))
-(step st249 (cl (or (= root_x$0 x$0) (not (Btwn$0 next$0 (read$0 next$0 x$0) x$0 root_x$0)))) :rule resolution :premises (t204' t248))
-(step t.end (cl) :rule resolution :premises (nst249.0 st249))

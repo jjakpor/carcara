@@ -1,5 +1,0 @@
-(assume nst403.0 (not (= (or (or (or (or (= (op e4 e0) e3) (= (op e4 e1) e3)) (= (op e4 e2) e3)) (= (op e4 e3) e3)) (= (op e4 e4) e3)) (or (= e3 (op e4 e4)) (= e3 (op e4 e3)) (= e3 (op e4 e2)) (= e3 (op e4 e0)) (= e3 (op e4 e1))))))
-(assume t398 (= (or (or (or (or (= (op e4 e0) e3) (= (op e4 e1) e3)) (= (op e4 e2) e3)) (= (op e4 e3) e3)) (= (op e4 e4) e3)) (or (= (op e4 e4) e3) (= (op e4 e3) e3) (= (op e4 e2) e3) (= (op e4 e0) e3) (= (op e4 e1) e3))))
-(assume t402 (= (or (= (op e4 e4) e3) (= (op e4 e3) e3) (= (op e4 e2) e3) (= (op e4 e0) e3) (= (op e4 e1) e3)) (or (= e3 (op e4 e4)) (= e3 (op e4 e3)) (= e3 (op e4 e2)) (= e3 (op e4 e0)) (= e3 (op e4 e1)))))
-(step st403 (cl (= (or (or (or (or (= (op e4 e0) e3) (= (op e4 e1) e3)) (= (op e4 e2) e3)) (= (op e4 e3) e3)) (= (op e4 e4) e3)) (or (= e3 (op e4 e4)) (= e3 (op e4 e3)) (= e3 (op e4 e2)) (= e3 (op e4 e0)) (= e3 (op e4 e1))))) :rule trans :premises (t398 t402))
-(step t.end (cl) :rule resolution :premises (nst403.0 st403))

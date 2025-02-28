@@ -1,7 +1,0 @@
-(assume nst67.0 (not (= Axiom_6$0 true)))
-(assume t63 (or (not (= Axiom_6$0 (= Axiom_6$0 true))) (not Axiom_6$0) (= Axiom_6$0 true)))
-(assume t65 (= Axiom_6$0 (= Axiom_6$0 true)))
-(assume t66 Axiom_6$0)
-(step t63' (cl (not (= Axiom_6$0 (= Axiom_6$0 true))) (not Axiom_6$0) (= Axiom_6$0 true)) :rule or :premises (t63))
-(step st67 (cl (= Axiom_6$0 true)) :rule resolution :premises (t63' t65 t66))
-(step t.end (cl) :rule resolution :premises (nst67.0 st67))

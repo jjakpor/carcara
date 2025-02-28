@@ -1,3 +1,0 @@
-(assume nst153.0 (not (= (= (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))) (and (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))) (=> (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))) (= x13 x14)))) true)))
-(step st153 (cl (= (= (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))) (and (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))) (=> (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))) (= x13 x14)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst153.0 st153))

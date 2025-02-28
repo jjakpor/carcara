@@ -1,3 +1,0 @@
-(assume nt644.0 (not (= (= e0 e3) (= e3 e0))))
-(step t644 (cl (= (= e0 e3) (= e3 e0))) :rule rare_rewrite :args ("eq-symm" e0 e3))
-(step t.end (cl) :rule resolution :premises (nt644.0 t644))

@@ -1,5 +1,0 @@
-(assume t25 (= x2 x1))
-(assume t37 (= x1 x0))
-(assume nt38.0 (not (= x2 x0)))
-(step t38 (cl (= x2 x0)) :rule trans :premises (t25 t37))
-(step t.end (cl) :rule resolution :premises (nt38.0 t38))

@@ -1,7 +1,0 @@
-(assume nt76.0 (not (and y$v3_1517448506_501_op y$982)))
-(assume t23 (or (not (= y$v3_1517448506_504_op (and y$v3_1517448506_501_op y$982))) (not y$v3_1517448506_504_op) (and y$v3_1517448506_501_op y$982)))
-(assume a619 (= y$v3_1517448506_504_op (and y$v3_1517448506_501_op y$982)))
-(assume t75 y$v3_1517448506_504_op)
-(step t23' (cl (not (= y$v3_1517448506_504_op (and y$v3_1517448506_501_op y$982))) (not y$v3_1517448506_504_op) (and y$v3_1517448506_501_op y$982)) :rule or :premises (t23))
-(step t76 (cl (and y$v3_1517448506_501_op y$982)) :rule resolution :premises (t23' a619 t75))
-(step t.end (cl) :rule resolution :premises (nt76.0 t76))

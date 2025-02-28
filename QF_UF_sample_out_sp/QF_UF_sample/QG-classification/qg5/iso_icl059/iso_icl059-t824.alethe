@@ -1,4 +1,0 @@
-(assume nt824.0 (not (and (and (and (= (op e3 (op e3 e0)) e0) (= (op e3 (op e3 e1)) e1)) (= (op e3 (op e3 e2)) e2)) (= (op e3 (op e3 e3)) e3))))
-(assume t823 (and (and (and (and (= (op e3 (op e3 e0)) e0) (= (op e3 (op e3 e1)) e1)) (= (op e3 (op e3 e2)) e2)) (= (op e3 (op e3 e3)) e3)) (= (op e3 (op e3 e4)) e4)))
-(step t824 (cl (and (and (and (= (op e3 (op e3 e0)) e0) (= (op e3 (op e3 e1)) e1)) (= (op e3 (op e3 e2)) e2)) (= (op e3 (op e3 e3)) e3))) :rule and :premises (t823) :args (0))
-(step t.end (cl) :rule resolution :premises (nt824.0 t824))

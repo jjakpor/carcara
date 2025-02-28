@@ -1,5 +1,0 @@
-(assume nst116.0 (not (not (= (= X_27$0 (lseg_set_X$0 next$0 n_5$0 root_x$0)) (= X_27$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0))))))
-(assume nst116.1 (not (not (= X_27$0 (lseg_set_X$0 next$0 n_5$0 root_x$0)))))
-(assume nst116.2 (not (= X_27$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0))))
-(step st116 (cl (not (= (= X_27$0 (lseg_set_X$0 next$0 n_5$0 root_x$0)) (= X_27$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0)))) (not (= X_27$0 (lseg_set_X$0 next$0 n_5$0 root_x$0))) (= X_27$0 (lseg_set_X$0 next$0 (read$0 next$0 x$0) root_x$0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst116.0 nst116.1 nst116.2 st116))

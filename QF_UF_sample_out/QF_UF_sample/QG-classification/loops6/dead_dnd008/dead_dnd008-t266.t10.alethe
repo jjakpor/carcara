@@ -1,4 +1,0 @@
-(assume t266.t9 (= (op e5 (op e5 e0)) e0))
-(assume nt266.t10.0 (not (= e0 (op e5 (op e5 e0)))))
-(step t266.t10 (cl (= e0 (op e5 (op e5 e0)))) :rule symm :premises (t266.t9))
-(step t.end (cl) :rule resolution :premises (nt266.t10.0 t266.t10))

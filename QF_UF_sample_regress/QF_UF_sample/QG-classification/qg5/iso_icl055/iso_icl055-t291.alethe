@@ -1,5 +1,0 @@
-(assume nst291.0 (not (not (= (not (= e0 e3)) (not (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))))))
-(assume nst291.1 (not (not (not (= e0 e3)))))
-(assume nst291.2 (not (not (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))))
-(step st291 (cl (not (= (not (= e0 e3)) (not (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))))) (not (not (= e0 e3))) (not (= (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst291.0 nst291.1 nst291.2 st291))

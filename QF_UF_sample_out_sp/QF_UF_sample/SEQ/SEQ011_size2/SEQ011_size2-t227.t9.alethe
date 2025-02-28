@@ -1,3 +1,0 @@
-(assume nt227.t9.0 (not (= c_0 c_0)))
-(step t227.t9 (cl (= c_0 c_0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt227.t9.0 t227.t9))

@@ -1,3 +1,0 @@
-(assume nt1024.0 (not (= (not (= (op e1 e3) (op (op e1 e3) (op (op e1 e3) e3)))) (not (= (op e1 e3) (op (op e1 e3) (op (op e1 e3) e3)))))))
-(step t1024 (cl (= (not (= (op e1 e3) (op (op e1 e3) (op (op e1 e3) e3)))) (not (= (op e1 e3) (op (op e1 e3) (op (op e1 e3) e3)))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt1024.0 t1024))

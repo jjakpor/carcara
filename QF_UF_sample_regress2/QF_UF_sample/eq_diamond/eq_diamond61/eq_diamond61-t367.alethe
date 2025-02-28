@@ -1,5 +1,0 @@
-(assume nst367.0 (not (not (= (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34)))))))
-(assume nst367.1 (not (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))))))
-(assume nst367.2 (not (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34)))))
-(step st367 (cl (not (= (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34))))) (not (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34)))) (and (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (=> (or (and (= x33 y33) (= y33 x34)) (and (= x33 z33) (= z33 x34))) (= x33 x34)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst367.0 nst367.1 nst367.2 st367))

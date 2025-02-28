@@ -1,7 +1,0 @@
-(assume nt88.0 (not (not (and (p4 c8) (= c8 c_1)))))
-(assume nt88.1 (not (not (and (p4 c8) (= c8 c_1)))))
-(assume nt88.2 (not (p4 c_1)))
-(assume t87 (or (p4 c_1) (not (and (p4 c8) (= c8 c_1))) (not (and (p4 c8) (= c8 c_1)))))
-(step t87' (cl (p4 c_1) (not (and (p4 c8) (= c8 c_1))) (not (and (p4 c8) (= c8 c_1)))) :rule or :premises (t87))
-(step t88 (cl (not (and (p4 c8) (= c8 c_1))) (not (and (p4 c8) (= c8 c_1))) (p4 c_1)) :rule reordering :premises (t87'))
-(step t.end (cl) :rule resolution :premises (nt88.0 nt88.1 nt88.2 t88))

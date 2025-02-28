@@ -1,3 +1,0 @@
-(assume nt540.0 (not (= (= (= e1 (op e1 (op e1 e1))) false) (not (= e1 (op e1 (op e1 e1)))))))
-(step t540 (cl (= (= (= e1 (op e1 (op e1 e1))) false) (not (= e1 (op e1 (op e1 e1)))))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nt540.0 t540))

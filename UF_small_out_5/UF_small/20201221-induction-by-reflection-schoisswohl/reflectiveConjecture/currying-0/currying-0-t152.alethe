@@ -1,3 +1,0 @@
-(assume nst152.0 (not (= (not (not (models empty (orR (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR))) (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))) (models empty (orR (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR))) (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))))
-(step st152 (cl (= (not (not (models empty (orR (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR))) (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))) (models empty (orR (notR (orR (notR (notR (orR (notR (pR aR)) (notR (qR bR))))) (rR cR))) (notR (orR (notR (pR aR)) (orR (notR (qR bR)) (rR cR)))))))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst152.0 st152))

@@ -1,6 +1,0 @@
-(assume nt89.0 (not (not (and y$a_consume0$next_rhs_op y$956))))
-(assume t12 (or y$v3_1517448506_493_op (not (and y$a_consume0$next_rhs_op y$956))))
-(assume t88 (not y$v3_1517448506_493_op))
-(step t12' (cl y$v3_1517448506_493_op (not (and y$a_consume0$next_rhs_op y$956))) :rule or :premises (t12))
-(step t89 (cl (not (and y$a_consume0$next_rhs_op y$956))) :rule resolution :premises (t12' t88))
-(step t.end (cl) :rule resolution :premises (nt89.0 t89))

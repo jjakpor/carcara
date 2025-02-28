@@ -1,5 +1,0 @@
-(assume t178 (= (op e0 e1) (op e0 (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))
-(assume t168 (= (op e1 e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))
-(assume nt275.0 (not (= (= (op e0 e1) (op e1 e0)) (= (op e0 (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))))
-(step t275 (cl (= (= (op e0 e1) (op e1 e0)) (= (op e0 (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) e0)))) :rule cong :premises (t178 t168))
-(step t.end (cl) :rule resolution :premises (nt275.0 t275))

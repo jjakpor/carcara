@@ -1,6 +1,0 @@
-(assume t58 (or (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (= x0 x1)))
-(assume nt59.0 (not (= x0 x1)))
-(assume nt59.1 (not (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))))
-(step t58' (cl (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (= x0 x1)) :rule or :premises (t58))
-(step t59 (cl (= x0 x1) (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))) :rule reordering :premises (t58'))
-(step t.end (cl) :rule resolution :premises (nt59.0 nt59.1 t59))

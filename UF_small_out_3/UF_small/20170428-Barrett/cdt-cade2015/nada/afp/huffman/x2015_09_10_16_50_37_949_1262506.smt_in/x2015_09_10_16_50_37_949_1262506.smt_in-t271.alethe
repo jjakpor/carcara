@@ -1,4 +1,0 @@
-(assume nst271.0 (not (=> (and (= b$ c$) (not (= c$ d$))) (not (= b$ d$)))))
-(assume nst271.1 (not (and (= b$ c$) (not (= c$ d$)))))
-(step st271 (cl (=> (and (= b$ c$) (not (= c$ d$))) (not (= b$ d$))) (and (= b$ c$) (not (= c$ d$)))) :rule implies_neg1)
-(step t.end (cl) :rule resolution :premises (nst271.0 nst271.1 st271))

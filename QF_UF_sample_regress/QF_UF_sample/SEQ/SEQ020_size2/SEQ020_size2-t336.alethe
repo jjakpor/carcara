@@ -1,3 +1,0 @@
-(assume nst336.0 (not (= (not (p1 (f6 c_1) c_1)) (not (p1 (f6 c_1) c_1)))))
-(step st336 (cl (= (not (p1 (f6 c_1) c_1)) (not (p1 (f6 c_1) c_1)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst336.0 st336))

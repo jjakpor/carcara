@@ -1,5 +1,0 @@
-(assume nst80.0 (not (= (= e3 (op e0 e3)) (= e3 (op (op (op e4 e3) (op e4 e3)) e3)))))
-(assume t39 (= e3 e3))
-(assume t79 (= (op e0 e3) (op (op (op e4 e3) (op e4 e3)) e3)))
-(step st80 (cl (= (= e3 (op e0 e3)) (= e3 (op (op (op e4 e3) (op e4 e3)) e3)))) :rule cong :premises (t39 t79))
-(step t.end (cl) :rule resolution :premises (nst80.0 st80))

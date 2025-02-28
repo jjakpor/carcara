@@ -1,4 +1,0 @@
-(assume t123 (and (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11))))
-(assume nt124.0 (not (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11))))
-(step t124 (cl (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11))) :rule and :premises (t123) :args (1))
-(step t.end (cl) :rule resolution :premises (nt124.0 t124))

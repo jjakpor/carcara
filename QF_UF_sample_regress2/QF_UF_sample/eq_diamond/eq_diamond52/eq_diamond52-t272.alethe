@@ -1,6 +1,0 @@
-(assume nst272.0 (not (= x23 x24)))
-(assume nst272.1 (not (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))))
-(assume t271 (or (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24)))) (= x23 x24)))
-(step t271' (cl (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24)))) (= x23 x24)) :rule or :premises (t271))
-(step st272 (cl (= x23 x24) (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))) :rule reordering :premises (t271'))
-(step t.end (cl) :rule resolution :premises (nst272.0 nst272.1 st272))

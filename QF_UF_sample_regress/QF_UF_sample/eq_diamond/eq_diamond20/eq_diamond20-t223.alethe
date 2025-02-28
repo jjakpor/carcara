@@ -1,5 +1,0 @@
-(assume nst223.0 (not (= (= x2 x3) false)))
-(assume t216 (= (= x2 x3) (= x0 x19)))
-(assume t222 (= (= x0 x19) false))
-(step st223 (cl (= (= x2 x3) false)) :rule trans :premises (t216 t222))
-(step t.end (cl) :rule resolution :premises (nst223.0 st223))

@@ -1,5 +1,0 @@
-(assume nst281.0 (not (= (= e5 (op e5 unit)) (= e5 (op e5 e0)))))
-(assume t279 (= e5 e5))
-(assume t280 (= (op e5 unit) (op e5 e0)))
-(step st281 (cl (= (= e5 (op e5 unit)) (= e5 (op e5 e0)))) :rule cong :premises (t279 t280))
-(step t.end (cl) :rule resolution :premises (nst281.0 st281))

@@ -1,6 +1,0 @@
-(assume nt535.0 (not (= x29 x30)))
-(assume t534 (or (= x29 x30) (not (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))))))
-(assume t530 (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))))
-(step t534' (cl (= x29 x30) (not (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))))) :rule or :premises (t534))
-(step t535 (cl (= x29 x30)) :rule resolution :premises (t534' t530))
-(step t.end (cl) :rule resolution :premises (nt535.0 t535))

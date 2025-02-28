@@ -1,3 +1,0 @@
-(assume t33 false)
-(assume t34 (not false))
-(step st35 (cl) :rule resolution :premises (t33 t34))

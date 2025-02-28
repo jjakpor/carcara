@@ -1,6 +1,0 @@
-(assume nst81.0 (not (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha))))
-(assume t77 (or (not (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v)))) (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha))))
-(assume t80 (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v))))
-(step t77' (cl (not (forall ((env env) (v var_alpha) (x alpha)) (= x (evalV_alpha (push_alpha env v x) v)))) (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha))) :rule or :premises (t77))
-(step st81 (cl (= (eval_alpha empty aR) (evalV_alpha (push_alpha empty v0_alpha (eval_alpha empty aR)) v0_alpha))) :rule resolution :premises (t77' t80))
-(step t.end (cl) :rule resolution :premises (nst81.0 st81))

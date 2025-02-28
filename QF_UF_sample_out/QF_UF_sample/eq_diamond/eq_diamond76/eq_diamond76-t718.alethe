@@ -1,6 +1,0 @@
-(assume t717 (or (= x63 x64) (not (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))))))
-(assume t713 (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))))
-(assume nt718.0 (not (= x63 x64)))
-(step t717' (cl (= x63 x64) (not (or (and (= x63 y63) (= y63 x64)) (and (= x63 z63) (= z63 x64))))) :rule or :premises (t717))
-(step t718 (cl (= x63 x64)) :rule resolution :premises (t717' t713))
-(step t.end (cl) :rule resolution :premises (nt718.0 t718))

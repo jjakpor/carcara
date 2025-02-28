@@ -1,4 +1,0 @@
-(assume nst2.0 (not (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))))
-(assume nst2.1 (not (not (fun_app$h lnull$ xs$))))
-(step st2 (cl (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))) (not (fun_app$h lnull$ xs$))) :rule and_pos :args (1))
-(step t.end (cl) :rule resolution :premises (nst2.0 nst2.1 st2))

@@ -1,4 +1,0 @@
-(assume nt173.0 (not (= (not (= e1 e2)) (not (= e2 e1)))))
-(assume t172 (= (= e1 e2) (= e2 e1)))
-(step t173 (cl (= (not (= e1 e2)) (not (= e2 e1)))) :rule cong :premises (t172))
-(step t.end (cl) :rule resolution :premises (nt173.0 t173))

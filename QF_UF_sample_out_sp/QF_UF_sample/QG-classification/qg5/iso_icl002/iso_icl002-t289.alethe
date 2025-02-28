@@ -1,4 +1,0 @@
-(assume nt289.0 (not (or (or (or (or (= (op e0 e4) e2) (= (op e1 e4) e2)) (= (op e2 e4) e2)) (= (op e3 e4) e2)) (= (op e4 e4) e2))))
-(assume t288 (and (or (or (or (or (= (op e4 e0) e2) (= (op e4 e1) e2)) (= (op e4 e2) e2)) (= (op e4 e3) e2)) (= (op e4 e4) e2)) (or (or (or (or (= (op e0 e4) e2) (= (op e1 e4) e2)) (= (op e2 e4) e2)) (= (op e3 e4) e2)) (= (op e4 e4) e2))))
-(step t289 (cl (or (or (or (or (= (op e0 e4) e2) (= (op e1 e4) e2)) (= (op e2 e4) e2)) (= (op e3 e4) e2)) (= (op e4 e4) e2))) :rule and :premises (t288) :args (1))
-(step t.end (cl) :rule resolution :premises (nt289.0 t289))

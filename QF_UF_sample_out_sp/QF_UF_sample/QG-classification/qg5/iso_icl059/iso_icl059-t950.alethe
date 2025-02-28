@@ -1,5 +1,0 @@
-(assume nt950.0 (not (= (or (or (or (or (= (op e4 e0) e1) (= (op e4 e1) e1)) (= (op e4 e2) e1)) (= (op e4 e3) e1)) (= (op e4 e4) e1)) (or (= e1 (op e4 e4)) (= e1 (op e4 e3)) (= e1 (op e4 e2)) (= e1 (op e4 e0)) (= e1 (op e4 e1))))))
-(assume t946 (= (or (or (or (or (= (op e4 e0) e1) (= (op e4 e1) e1)) (= (op e4 e2) e1)) (= (op e4 e3) e1)) (= (op e4 e4) e1)) (or (= (op e4 e4) e1) (= (op e4 e3) e1) (= (op e4 e2) e1) (= (op e4 e0) e1) (= (op e4 e1) e1))))
-(assume t949 (= (or (= (op e4 e4) e1) (= (op e4 e3) e1) (= (op e4 e2) e1) (= (op e4 e0) e1) (= (op e4 e1) e1)) (or (= e1 (op e4 e4)) (= e1 (op e4 e3)) (= e1 (op e4 e2)) (= e1 (op e4 e0)) (= e1 (op e4 e1)))))
-(step t950 (cl (= (or (or (or (or (= (op e4 e0) e1) (= (op e4 e1) e1)) (= (op e4 e2) e1)) (= (op e4 e3) e1)) (= (op e4 e4) e1)) (or (= e1 (op e4 e4)) (= e1 (op e4 e3)) (= e1 (op e4 e2)) (= e1 (op e4 e0)) (= e1 (op e4 e1))))) :rule trans :premises (t946 t949))
-(step t.end (cl) :rule resolution :premises (nt950.0 t950))

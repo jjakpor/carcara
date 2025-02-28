@@ -1,3 +1,0 @@
-(assume nst86.0 (not (= (models empty (notR (orR (notR (notR (orR (notR (pR aR)) (qR bR)))) (notR (notR (orR (notR (notR (qR bR))) (notR (pR aR)))))))) (models empty (notR (orR (notR (notR (orR (notR (pR aR)) (qR bR)))) (notR (notR (orR (notR (notR (qR bR))) (notR (pR aR)))))))))))
-(step st86 (cl (= (models empty (notR (orR (notR (notR (orR (notR (pR aR)) (qR bR)))) (notR (notR (orR (notR (notR (qR bR))) (notR (pR aR)))))))) (models empty (notR (orR (notR (notR (orR (notR (pR aR)) (qR bR)))) (notR (notR (orR (notR (notR (qR bR))) (notR (pR aR)))))))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst86.0 st86))

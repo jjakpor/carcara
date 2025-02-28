@@ -1,6 +1,0 @@
-(assume nt348.0 (not (= x11 x12)))
-(assume t347 (or (= x11 x12) (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))))))
-(assume t343 (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))))
-(step t347' (cl (= x11 x12) (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))))) :rule or :premises (t347))
-(step t348 (cl (= x11 x12)) :rule resolution :premises (t347' t343))
-(step t.end (cl) :rule resolution :premises (nt348.0 t348))

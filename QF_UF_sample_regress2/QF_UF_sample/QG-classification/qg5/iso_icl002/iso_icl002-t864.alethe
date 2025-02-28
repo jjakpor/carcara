@@ -1,8 +1,0 @@
-(assume nst864.0 (not (= e0 (op (op e0 e0) (op (op e0 (op e0 e0)) e0)))))
-(assume nst864.1 (not (= e0 (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op e0 (op e0 e0)) e0)))))
-(assume nst864.2 (not (= e0 (op (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) e0)))))
-(assume nst864.3 (not (= e0 (op e0 (op (op e0 (op e0 e0)) e0)))))
-(assume nst864.4 (not (= e0 (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)))))
-(assume t863 (or (= e0 (op (op e0 e0) (op (op e0 (op e0 e0)) e0))) (= e0 (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op e0 (op e0 e0)) e0))) (= e0 (op (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) e0))) (= e0 (op e0 (op (op e0 (op e0 e0)) e0))) (= e0 (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)))))
-(step st864 (cl (= e0 (op (op e0 e0) (op (op e0 (op e0 e0)) e0))) (= e0 (op (op (op (op e0 (op e0 e0)) e0) e0) (op (op e0 (op e0 e0)) e0))) (= e0 (op (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) e0))) (= e0 (op e0 (op (op e0 (op e0 e0)) e0))) (= e0 (op (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) e0)))) :rule or :premises (t863))
-(step t.end (cl) :rule resolution :premises (nst864.0 nst864.1 nst864.2 nst864.3 nst864.4 st864))

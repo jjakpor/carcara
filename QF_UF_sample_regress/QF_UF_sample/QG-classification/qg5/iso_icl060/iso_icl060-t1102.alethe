@@ -1,5 +1,0 @@
-(assume nst1102.0 (not (not (= (= (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) true))))
-(assume nst1102.1 (not (= (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))))
-(assume t1101 (= (= (= (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) true) (= (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))))
-(step st1102 (cl (not (= (= (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) true)) (= (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) :rule equiv1 :premises (t1101))
-(step t.end (cl) :rule resolution :premises (nst1102.0 nst1102.1 st1102))

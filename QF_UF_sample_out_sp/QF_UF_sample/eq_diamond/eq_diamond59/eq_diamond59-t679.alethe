@@ -1,5 +1,0 @@
-(assume nt679.0 (not (not (= (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (and (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (=> (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (= x43 x44)))))))
-(assume nt679.1 (not (not (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))))))
-(assume nt679.2 (not (and (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (=> (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (= x43 x44)))))
-(step t679 (cl (not (= (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (and (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (=> (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (= x43 x44))))) (not (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44)))) (and (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (=> (or (and (= x43 y43) (= y43 x44)) (and (= x43 z43) (= z43 x44))) (= x43 x44)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt679.0 nt679.1 nt679.2 t679))

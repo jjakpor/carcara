@@ -1,4 +1,0 @@
-(assume nst48.0 (not (= compow$ funpow$)))
-(assume a5 (= funpow$ compow$))
-(step st48 (cl (= compow$ funpow$)) :rule symm :premises (a5))
-(step t.end (cl) :rule resolution :premises (nst48.0 st48))

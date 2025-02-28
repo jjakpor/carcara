@@ -1,5 +1,0 @@
-(assume nst221.0 (not (= (= y$42 (not y$44)) (= (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (not true)))))
-(assume t219 (= y$42 (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
-(assume t220 (= (not y$44) (not true)))
-(step st221 (cl (= (= y$42 (not y$44)) (= (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (not true)))) :rule cong :premises (t219 t220))
-(step t.end (cl) :rule resolution :premises (nst221.0 st221))

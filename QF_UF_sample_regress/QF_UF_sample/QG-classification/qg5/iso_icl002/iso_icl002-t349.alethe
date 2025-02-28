@@ -1,5 +1,0 @@
-(assume nst349.0 (not (= (or (not (= e2 (op e2 e4))) (= e4 (op e4 e4))) (or (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))) (= (op e0 e0) (op (op e0 e0) (op e0 e0)))))))
-(assume t347 (= (not (= e2 (op e2 e4))) (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) (op e0 e0))))))
-(assume t348 (= (= e4 (op e4 e4)) (= (op e0 e0) (op (op e0 e0) (op e0 e0)))))
-(step st349 (cl (= (or (not (= e2 (op e2 e4))) (= e4 (op e4 e4))) (or (not (= (op (op e0 (op e0 e0)) e0) (op (op (op e0 (op e0 e0)) e0) (op e0 e0)))) (= (op e0 e0) (op (op e0 e0) (op e0 e0)))))) :rule cong :premises (t347 t348))
-(step t.end (cl) :rule resolution :premises (nst349.0 st349))

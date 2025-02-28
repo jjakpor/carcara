@@ -1,3 +1,0 @@
-(assume nst832.0 (not (= (= (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (and (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (=> (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (= x74 x75)))) true)))
-(step st832 (cl (= (= (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (and (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (=> (or (and (= x74 y74) (= y74 x75)) (and (= x74 z74) (= z74 x75))) (= x74 x75)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst832.0 st832))

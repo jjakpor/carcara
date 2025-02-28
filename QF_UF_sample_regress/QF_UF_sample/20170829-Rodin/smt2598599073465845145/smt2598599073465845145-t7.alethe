@@ -1,3 +1,0 @@
-(assume nst7.0 (not (= (not (= i2 (not (= b2 r2)))) (not (= i2 (not (= b2 r2)))))))
-(step st7 (cl (= (not (= i2 (not (= b2 r2)))) (not (= i2 (not (= b2 r2)))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst7.0 st7))

@@ -1,5 +1,0 @@
-(assume nst19.0 (not (not (or (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) f76))) (not (= (f64 f65 f66 f67 f72 f78) (f75 f65 f76 f76)))))))
-(assume nst19.1 (not (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) f76)))))
-(assume nst19.2 (not (not (= (f64 f65 f66 f67 f72 f78) (f75 f65 f76 f76)))))
-(step st19 (cl (not (or (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) f76))) (not (= (f64 f65 f66 f67 f72 f78) (f75 f65 f76 f76))))) (not (= (f64 f65 f66 f67 f72 f78) (f64 f65 f66 f67 (f68 (f69 (f70 f71 f72) f73) f74) f76))) (not (= (f64 f65 f66 f67 f72 f78) (f75 f65 f76 f76)))) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst19.0 nst19.1 nst19.2 st19))

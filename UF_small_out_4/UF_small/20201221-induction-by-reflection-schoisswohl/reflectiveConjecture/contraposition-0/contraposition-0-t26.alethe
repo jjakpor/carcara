@@ -1,3 +1,0 @@
-(assume nst26.0 (not (= (not (not (models empty (qR bR)))) (models empty (qR bR)))))
-(step st26 (cl (= (not (not (models empty (qR bR)))) (models empty (qR bR)))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst26.0 st26))

@@ -1,5 +1,0 @@
-(assume nst58.0 (not (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)))))
-(assume nst58.1 (not (not (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))))
-(assume t57 (not (= (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))))
-(step st58 (cl (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (not (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))) :rule not_equiv2 :premises (t57))
-(step t.end (cl) :rule resolution :premises (nst58.0 nst58.1 st58))

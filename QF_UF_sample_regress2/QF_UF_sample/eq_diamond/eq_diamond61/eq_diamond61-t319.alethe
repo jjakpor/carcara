@@ -1,4 +1,0 @@
-(assume nst319.0 (not (=> (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (= x28 x29))))
-(assume t318 (and (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (=> (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (= x28 x29))))
-(step st319 (cl (=> (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (= x28 x29))) :rule and :premises (t318) :args (1))
-(step t.end (cl) :rule resolution :premises (nst319.0 st319))

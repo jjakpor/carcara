@@ -1,5 +1,0 @@
-(assume nst578.0 (not (= (or (or (or (or (= (op e0 e0) e2) (= (op e1 e0) e2)) (= (op e2 e0) e2)) (= (op e3 e0) e2)) (= (op e4 e0) e2)) (or (= e2 (op e4 e0)) (= e2 (op e3 e0)) (= e2 (op e2 e0)) (= e2 (op e0 e0)) (= e2 (op e1 e0))))))
-(assume t573 (= (or (or (or (or (= (op e0 e0) e2) (= (op e1 e0) e2)) (= (op e2 e0) e2)) (= (op e3 e0) e2)) (= (op e4 e0) e2)) (or (= (op e4 e0) e2) (= (op e3 e0) e2) (= (op e2 e0) e2) (= (op e0 e0) e2) (= (op e1 e0) e2))))
-(assume t577 (= (or (= (op e4 e0) e2) (= (op e3 e0) e2) (= (op e2 e0) e2) (= (op e0 e0) e2) (= (op e1 e0) e2)) (or (= e2 (op e4 e0)) (= e2 (op e3 e0)) (= e2 (op e2 e0)) (= e2 (op e0 e0)) (= e2 (op e1 e0)))))
-(step st578 (cl (= (or (or (or (or (= (op e0 e0) e2) (= (op e1 e0) e2)) (= (op e2 e0) e2)) (= (op e3 e0) e2)) (= (op e4 e0) e2)) (or (= e2 (op e4 e0)) (= e2 (op e3 e0)) (= e2 (op e2 e0)) (= e2 (op e0 e0)) (= e2 (op e1 e0))))) :rule trans :premises (t573 t577))
-(step t.end (cl) :rule resolution :premises (nst578.0 st578))

@@ -1,6 +1,0 @@
-(assume nst520.0 (not (= x45 x46)))
-(assume t515 (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))))
-(assume t519 (or (= x45 x46) (not (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))))))
-(step t519' (cl (= x45 x46) (not (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))))) :rule or :premises (t519))
-(step st520 (cl (= x45 x46)) :rule resolution :premises (t519' t515))
-(step t.end (cl) :rule resolution :premises (nst520.0 st520))

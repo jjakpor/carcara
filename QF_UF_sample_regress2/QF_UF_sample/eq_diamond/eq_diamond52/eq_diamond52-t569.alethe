@@ -1,6 +1,0 @@
-(assume nst569.0 (not (= x50 x51)))
-(assume nst569.1 (not (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))))))
-(assume t568 (or (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51)))) (= x50 x51)))
-(step t568' (cl (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51)))) (= x50 x51)) :rule or :premises (t568))
-(step st569 (cl (= x50 x51) (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))))) :rule reordering :premises (t568'))
-(step t.end (cl) :rule resolution :premises (nst569.0 nst569.1 st569))

@@ -1,6 +1,0 @@
-(assume nst61.0 (not (not (fun_app$h lnull$ xs$))))
-(assume t3 (or (not (fun_app$h lnull$ xs$)) (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))))
-(assume t60 (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))
-(step t3' (cl (not (fun_app$h lnull$ xs$)) (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) :rule or :premises (t3))
-(step st61 (cl (not (fun_app$h lnull$ xs$))) :rule resolution :premises (t3' t60))
-(step t.end (cl) :rule resolution :premises (nst61.0 st61))

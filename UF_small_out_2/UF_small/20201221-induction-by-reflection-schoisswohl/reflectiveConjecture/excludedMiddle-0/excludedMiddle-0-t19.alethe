@@ -1,6 +1,0 @@
-(assume nst19.0 (not (not (= (models empty (notR (pR aR))) (not (models empty (pR aR)))))))
-(assume nst19.1 (not (models empty (notR (pR aR)))))
-(assume nst19.2 (not (models empty (pR aR))))
-(assume t18 (or (not (= (models empty (notR (pR aR))) (not (models empty (pR aR))))) (models empty (notR (pR aR))) (models empty (pR aR))))
-(step st19 (cl (not (= (models empty (notR (pR aR))) (not (models empty (pR aR))))) (models empty (notR (pR aR))) (models empty (pR aR))) :rule or :premises (t18))
-(step t.end (cl) :rule resolution :premises (nst19.0 nst19.1 nst19.2 st19))

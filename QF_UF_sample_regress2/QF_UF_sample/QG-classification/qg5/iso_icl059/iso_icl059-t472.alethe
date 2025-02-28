@@ -1,5 +1,0 @@
-(assume nst472.0 (not (= (= e1 (op e3 e3)) (= (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0))))))
-(assume t44 (= e1 (op (op (op e0 e0) e0) e0)))
-(assume t61 (= (op e3 e3) (op (op (op e0 e0) e0) (op (op e0 e0) e0))))
-(step st472 (cl (= (= e1 (op e3 e3)) (= (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0))))) :rule cong :premises (t44 t61))
-(step t.end (cl) :rule resolution :premises (nst472.0 st472))

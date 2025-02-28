@@ -1,5 +1,0 @@
-(assume nt624.0 (not (not (= (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (and (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (=> (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (= x38 x39)))))))
-(assume nt624.1 (not (not (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))))))
-(assume nt624.2 (not (and (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (=> (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (= x38 x39)))))
-(step t624 (cl (not (= (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (and (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (=> (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (= x38 x39))))) (not (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39)))) (and (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (=> (or (and (= x38 y38) (= y38 x39)) (and (= x38 z38) (= z38 x39))) (= x38 x39)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt624.0 nt624.1 nt624.2 t624))

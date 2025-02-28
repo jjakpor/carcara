@@ -1,6 +1,0 @@
-(assume nt780.t33.0 (not (not (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))))
-(assume t780.t1 (or (not (= (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) false)) (not (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))))
-(assume t780.t32 (= (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) false))
-(step t780.t1' (cl (not (= (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) false)) (not (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))) :rule or :premises (t780.t1))
-(step t780.t33 (cl (not (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))) :rule resolution :premises (t780.t1' t780.t32))
-(step t.end (cl) :rule resolution :premises (nt780.t33.0 t780.t33))

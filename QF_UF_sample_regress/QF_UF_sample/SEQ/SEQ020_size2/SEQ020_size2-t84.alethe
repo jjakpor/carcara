@@ -1,3 +1,0 @@
-(assume nst84.0 (not (= (not (p4 c_1)) (not (p4 c_1)))))
-(step st84 (cl (= (not (p4 c_1)) (not (p4 c_1)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst84.0 st84))

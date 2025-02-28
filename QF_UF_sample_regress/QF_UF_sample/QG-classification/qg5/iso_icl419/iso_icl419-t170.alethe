@@ -1,8 +1,0 @@
-(assume nst170.0 (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(assume nst170.1 (not (= e3 (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(assume nst170.2 (not (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(assume nst170.3 (not (= (op e3 e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(assume nst170.4 (not (= (op (op e3 e3) (op e3 e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(assume t169 (or (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) (= e3 (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) (= (op e3 e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) (= (op (op e3 e3) (op e3 e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(step st170 (cl (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) (= e3 (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) (= (op e3 e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) (= (op (op e3 e3) (op e3 e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))) :rule or :premises (t169))
-(step t.end (cl) :rule resolution :premises (nst170.0 nst170.1 nst170.2 nst170.3 nst170.4 st170))

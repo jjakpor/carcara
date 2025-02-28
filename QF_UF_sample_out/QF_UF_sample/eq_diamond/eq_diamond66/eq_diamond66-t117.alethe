@@ -1,4 +1,0 @@
-(assume t116 (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6))))
-(assume nt117.0 (not (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6))))
-(step t117 (cl (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6))) :rule and :premises (t116) :args (1))
-(step t.end (cl) :rule resolution :premises (nt117.0 t117))

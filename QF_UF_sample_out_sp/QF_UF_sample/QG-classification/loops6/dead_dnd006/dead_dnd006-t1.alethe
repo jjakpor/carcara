@@ -1,4 +1,0 @@
-(assume nt1.0 (not (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1))))))
-(assume nt1.1 (not (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))))
-(step t1 (cl (=> (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0)))) (= e1 (op e1 (op e1 e1)))) (and (= e1 (op e1 e0)) (= e0 (op e1 (op e1 e0))))) :rule implies_neg1)
-(step t.end (cl) :rule resolution :premises (nt1.0 nt1.1 t1))

@@ -1,5 +1,0 @@
-(assume nst33.0 (not (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))))
-(assume nst33.1 (not (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)))))
-(assume nst33.2 (not (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))))
-(step st33 (cl (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) :rule equiv_pos1)
-(step t.end (cl) :rule resolution :premises (nst33.0 nst33.1 nst33.2 st33))

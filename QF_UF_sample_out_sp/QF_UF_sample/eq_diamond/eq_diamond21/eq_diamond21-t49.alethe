@@ -1,4 +1,0 @@
-(assume nt49.0 (not (= x1 x0)))
-(assume t48 (= x0 x1))
-(step t49 (cl (= x1 x0)) :rule symm :premises (t48))
-(step t.end (cl) :rule resolution :premises (nt49.0 t49))

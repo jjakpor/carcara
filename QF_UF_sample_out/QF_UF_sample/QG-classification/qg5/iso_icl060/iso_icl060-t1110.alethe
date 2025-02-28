@@ -1,6 +1,0 @@
-(assume t1102 (or (not (= (= (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) true)) (= (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))))
-(assume t1109 (= (= (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) true))
-(assume nt1110.0 (not (= (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))))
-(step t1102' (cl (not (= (= (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) true)) (= (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) :rule or :premises (t1102))
-(step t1110 (cl (= (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) :rule resolution :premises (t1102' t1109))
-(step t.end (cl) :rule resolution :premises (nt1110.0 t1110))

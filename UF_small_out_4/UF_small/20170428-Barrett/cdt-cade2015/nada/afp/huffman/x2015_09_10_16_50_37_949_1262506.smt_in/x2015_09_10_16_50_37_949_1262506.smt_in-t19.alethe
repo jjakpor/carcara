@@ -1,5 +1,0 @@
-(assume nst19.0 (not (= (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$)) (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$)))))
-(assume a8 (= (depth$ t$ d$) (height$ t$)))
-(assume t18 (= (less_eq$ (depth$ t$ a$)) (less_eq$ (depth$ t$ a$))))
-(step st19 (cl (= (fun_app$b (less_eq$ (depth$ t$ a$)) (depth$ t$ d$)) (fun_app$b (less_eq$ (depth$ t$ a$)) (height$ t$)))) :rule cong :premises (t18 a8))
-(step t.end (cl) :rule resolution :premises (nst19.0 st19))

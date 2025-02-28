@@ -1,5 +1,0 @@
-(assume nt145.0 (not (= (or (or (or (or (= (op e1 e0) e4) (= (op e1 e1) e4)) (= (op e1 e2) e4)) (= (op e1 e3) e4)) (= (op e1 e4) e4)) (or (= e4 (op e1 e4)) (= e4 (op e1 e3)) (= e4 (op e1 e2)) (= e4 (op e1 e0)) (= e4 (op e1 e1))))))
-(assume t139 (= (or (or (or (or (= (op e1 e0) e4) (= (op e1 e1) e4)) (= (op e1 e2) e4)) (= (op e1 e3) e4)) (= (op e1 e4) e4)) (or (= (op e1 e4) e4) (= (op e1 e3) e4) (= (op e1 e2) e4) (= (op e1 e0) e4) (= (op e1 e1) e4))))
-(assume t144 (= (or (= (op e1 e4) e4) (= (op e1 e3) e4) (= (op e1 e2) e4) (= (op e1 e0) e4) (= (op e1 e1) e4)) (or (= e4 (op e1 e4)) (= e4 (op e1 e3)) (= e4 (op e1 e2)) (= e4 (op e1 e0)) (= e4 (op e1 e1)))))
-(step t145 (cl (= (or (or (or (or (= (op e1 e0) e4) (= (op e1 e1) e4)) (= (op e1 e2) e4)) (= (op e1 e3) e4)) (= (op e1 e4) e4)) (or (= e4 (op e1 e4)) (= e4 (op e1 e3)) (= e4 (op e1 e2)) (= e4 (op e1 e0)) (= e4 (op e1 e1))))) :rule trans :premises (t139 t144))
-(step t.end (cl) :rule resolution :premises (nt145.0 t145))

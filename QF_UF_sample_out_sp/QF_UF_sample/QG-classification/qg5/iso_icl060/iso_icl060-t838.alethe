@@ -1,8 +1,0 @@
-(assume nt838.0 (not (= (or (= (op e4 e4) e2) (= (op e4 e3) e2) (= (op e4 e2) e2) (= (op e4 e0) e2) (= (op e4 e1) e2)) (or (= e2 (op e4 e4)) (= e2 (op e4 e3)) (= e2 (op e4 e2)) (= e2 (op e4 e0)) (= e2 (op e4 e1))))))
-(assume t835 (= (= (op e4 e4) e2) (= e2 (op e4 e4))))
-(assume t446 (= (= (op e4 e3) e2) (= e2 (op e4 e3))))
-(assume t836 (= (= (op e4 e2) e2) (= e2 (op e4 e2))))
-(assume t837 (= (= (op e4 e0) e2) (= e2 (op e4 e0))))
-(assume t120 (= (= (op e4 e1) e2) (= e2 (op e4 e1))))
-(step t838 (cl (= (or (= (op e4 e4) e2) (= (op e4 e3) e2) (= (op e4 e2) e2) (= (op e4 e0) e2) (= (op e4 e1) e2)) (or (= e2 (op e4 e4)) (= e2 (op e4 e3)) (= e2 (op e4 e2)) (= e2 (op e4 e0)) (= e2 (op e4 e1))))) :rule cong :premises (t835 t446 t836 t837 t120))
-(step t.end (cl) :rule resolution :premises (nt838.0 t838))

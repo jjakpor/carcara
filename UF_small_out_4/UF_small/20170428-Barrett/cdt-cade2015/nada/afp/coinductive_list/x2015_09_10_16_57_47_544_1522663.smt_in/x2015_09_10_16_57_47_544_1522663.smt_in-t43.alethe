@@ -1,5 +1,0 @@
-(assume nst43.0 (not (not (forall ((?v0 A_llist$) (?v1 Nat$)) (= (fun_app$h (uvn$ ?v0) ?v1) (fun_app$c (ldropn$ ?v1) ?v0))))))
-(assume nst43.1 (not (= (fun_app$h (uvn$ (ltl$ xs$)) n$) (fun_app$c (ldropn$ n$) (ltl$ xs$)))))
-(assume t42 (or (not (forall ((?v0 A_llist$) (?v1 Nat$)) (= (fun_app$h (uvn$ ?v0) ?v1) (fun_app$c (ldropn$ ?v1) ?v0)))) (= (fun_app$h (uvn$ (ltl$ xs$)) n$) (fun_app$c (ldropn$ n$) (ltl$ xs$)))))
-(step st43 (cl (not (forall ((?v0 A_llist$) (?v1 Nat$)) (= (fun_app$h (uvn$ ?v0) ?v1) (fun_app$c (ldropn$ ?v1) ?v0)))) (= (fun_app$h (uvn$ (ltl$ xs$)) n$) (fun_app$c (ldropn$ n$) (ltl$ xs$)))) :rule or :premises (t42))
-(step t.end (cl) :rule resolution :premises (nst43.0 nst43.1 st43))

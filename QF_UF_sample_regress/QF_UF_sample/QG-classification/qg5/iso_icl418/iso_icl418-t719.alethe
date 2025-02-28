@@ -1,5 +1,0 @@
-(assume nst719.0 (not (= (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op e3 (op e4 e3))) false)))
-(assume nst719.1 (not (not (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op e3 (op e4 e3)))))))
-(assume t718 (= (= (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op e3 (op e4 e3))) false) (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op e3 (op e4 e3))))))
-(step st719 (cl (= (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op e3 (op e4 e3))) false) (not (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op e3 (op e4 e3)))))) :rule equiv2 :premises (t718))
-(step t.end (cl) :rule resolution :premises (nst719.0 nst719.1 st719))

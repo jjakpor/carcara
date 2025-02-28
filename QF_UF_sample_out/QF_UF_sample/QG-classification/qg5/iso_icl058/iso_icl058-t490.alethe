@@ -1,4 +1,0 @@
-(assume t471 (= (= (op e4 e4) e4) (= e4 (op e4 e4))))
-(assume nt490.0 (not (= (not (= (op e4 e4) e4)) (not (= e4 (op e4 e4))))))
-(step t490 (cl (= (not (= (op e4 e4) e4)) (not (= e4 (op e4 e4))))) :rule cong :premises (t471))
-(step t.end (cl) :rule resolution :premises (nt490.0 t490))

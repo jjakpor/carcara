@@ -1,7 +1,0 @@
-(assume nst8.0 (not (= xs$ (ltake$ (llength$ us$) xs$))))
-(assume nst8.1 (not (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$)))))
-(assume nst8.2 (not (not (or (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))) (= xs$ (ltake$ (llength$ us$) xs$))))))
-(assume t7 (or (not (or (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))) (= xs$ (ltake$ (llength$ us$) xs$)))) (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))) (= xs$ (ltake$ (llength$ us$) xs$))))
-(step t7' (cl (not (or (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))) (= xs$ (ltake$ (llength$ us$) xs$)))) (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))) (= xs$ (ltake$ (llength$ us$) xs$))) :rule or :premises (t7))
-(step st8 (cl (= xs$ (ltake$ (llength$ us$) xs$)) (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))) (not (or (not (fun_app$ (less_eq$ (llength$a xs$)) (llength$ us$))) (= xs$ (ltake$ (llength$ us$) xs$))))) :rule reordering :premises (t7'))
-(step t.end (cl) :rule resolution :premises (nst8.0 nst8.1 nst8.2 st8))

@@ -1,4 +1,0 @@
-(assume nt558.0 (not (or (or (or (or (= (op e0 e2) e3) (= (op e1 e2) e3)) (= (op e2 e2) e3)) (= (op e3 e2) e3)) (= (op e4 e2) e3))))
-(assume t557 (and (or (or (or (or (= (op e2 e0) e3) (= (op e2 e1) e3)) (= (op e2 e2) e3)) (= (op e2 e3) e3)) (= (op e2 e4) e3)) (or (or (or (or (= (op e0 e2) e3) (= (op e1 e2) e3)) (= (op e2 e2) e3)) (= (op e3 e2) e3)) (= (op e4 e2) e3))))
-(step t558 (cl (or (or (or (or (= (op e0 e2) e3) (= (op e1 e2) e3)) (= (op e2 e2) e3)) (= (op e3 e2) e3)) (= (op e4 e2) e3))) :rule and :premises (t557) :args (1))
-(step t.end (cl) :rule resolution :premises (nt558.0 t558))

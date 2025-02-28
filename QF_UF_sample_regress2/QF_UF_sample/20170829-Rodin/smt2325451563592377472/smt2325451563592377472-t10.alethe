@@ -1,5 +1,0 @@
-(assume nst10.0 (not (= (= clk (not (not clk))) true)))
-(assume t8 (= (= clk (not (not clk))) (= clk clk)))
-(assume t9 (= (= clk clk) true))
-(step st10 (cl (= (= clk (not (not clk))) true)) :rule trans :premises (t8 t9))
-(step t.end (cl) :rule resolution :premises (nst10.0 st10))

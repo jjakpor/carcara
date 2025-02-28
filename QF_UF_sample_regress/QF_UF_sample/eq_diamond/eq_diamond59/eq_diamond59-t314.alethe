@@ -1,6 +1,0 @@
-(assume nst314.0 (not (= x8 x9)))
-(assume nst314.1 (not (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))))
-(assume t313 (or (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9)))) (= x8 x9)))
-(step t313' (cl (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9)))) (= x8 x9)) :rule or :premises (t313))
-(step st314 (cl (= x8 x9) (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))) :rule reordering :premises (t313'))
-(step t.end (cl) :rule resolution :premises (nst314.0 nst314.1 st314))

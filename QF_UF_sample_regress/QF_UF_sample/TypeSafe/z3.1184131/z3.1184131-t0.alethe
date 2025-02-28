@@ -1,5 +1,0 @@
-(assume nst0.0 (not (not (= (not (= f1 (f3 f4 f5 f6 f7 (f8 f9)))) false))))
-(assume nst0.1 (not (not (not (= f1 (f3 f4 f5 f6 f7 (f8 f9)))))))
-(assume nst0.2 (not false))
-(step st0 (cl (not (= (not (= f1 (f3 f4 f5 f6 f7 (f8 f9)))) false)) (not (not (= f1 (f3 f4 f5 f6 f7 (f8 f9))))) false) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst0.0 nst0.1 nst0.2 st0))

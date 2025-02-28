@@ -1,5 +1,0 @@
-(assume nst93.0 (not (not (and (= (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op e0 e0))) (= e0 (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))))
-(assume nst93.1 (not (= e0 (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op e0 e0)))))
-(assume t92 (=> (and (= (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op e0 e0))) (= e0 (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))) (= e0 (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op e0 e0)))))
-(step st93 (cl (not (and (= (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op e0 e0))) (= e0 (op (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))) (= e0 (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op e0 e0)))) :rule implies :premises (t92))
-(step t.end (cl) :rule resolution :premises (nst93.0 nst93.1 st93))

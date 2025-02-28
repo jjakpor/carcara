@@ -1,7 +1,0 @@
-(assume nst17.0 (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))))
-(assume nst17.1 (not (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))
-(assume nst17.2 (not (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))))
-(assume t16 (or (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))
-(step t16' (cl (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))))) (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))) :rule or :premises (t16))
-(step st17 (cl (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$)) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$))) (not (= (not (fun_app$h lnull$ (fun_app$c (ltake$ n$) xs$))) (and (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) (not (fun_app$h lnull$ xs$)))))) :rule reordering :premises (t16'))
-(step t.end (cl) :rule resolution :premises (nst17.0 nst17.1 nst17.2 st17))

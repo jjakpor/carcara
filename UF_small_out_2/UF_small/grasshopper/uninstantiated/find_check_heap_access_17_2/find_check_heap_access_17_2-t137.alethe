@@ -1,6 +1,0 @@
-(assume nst137.0 (not (Btwn$0 next$0 x$0 root_x$0 root_x$0)))
-(assume t134 (or (Btwn$0 next$0 x$0 root_x$0 root_x$0) (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))))
-(assume t136 (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))
-(step t134' (cl (Btwn$0 next$0 x$0 root_x$0 root_x$0) (not (lseg_set_struct$0 (lseg_set_domain$0 next$0 x$0 root_x$0) next$0 x$0 root_x$0 (lseg_set_X$0 next$0 x$0 root_x$0)))) :rule or :premises (t134))
-(step st137 (cl (Btwn$0 next$0 x$0 root_x$0 root_x$0)) :rule resolution :premises (t134' t136))
-(step t.end (cl) :rule resolution :premises (nst137.0 st137))

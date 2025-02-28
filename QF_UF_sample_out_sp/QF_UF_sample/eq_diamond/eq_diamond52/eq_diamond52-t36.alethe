@@ -1,6 +1,0 @@
-(assume nt36.0 (not (= x4 x5)))
-(assume t35 (or (= x4 x5) (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))))
-(assume t31 (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))
-(step t35' (cl (= x4 x5) (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))) :rule or :premises (t35))
-(step t36 (cl (= x4 x5)) :rule resolution :premises (t35' t31))
-(step t.end (cl) :rule resolution :premises (nt36.0 t36))

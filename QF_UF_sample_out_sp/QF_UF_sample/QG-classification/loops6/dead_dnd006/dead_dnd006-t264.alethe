@@ -1,4 +1,0 @@
-(assume nt264.0 (not (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5))))))
-(assume nt264.1 (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0))))))
-(step t264 (cl (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5)))) (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0))))) :rule implies_neg1)
-(step t.end (cl) :rule resolution :premises (nt264.0 nt264.1 t264))

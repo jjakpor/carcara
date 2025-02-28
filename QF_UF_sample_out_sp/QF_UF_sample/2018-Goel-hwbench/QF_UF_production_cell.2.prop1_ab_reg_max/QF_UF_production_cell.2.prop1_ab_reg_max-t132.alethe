@@ -1,5 +1,0 @@
-(assume nt132.0 (not (not (= y$1526 (= y$1525 y$prop)))))
-(assume nt132.1 (not (not y$1526)))
-(assume nt132.2 (not (= y$1525 y$prop)))
-(step t132 (cl (not (= y$1526 (= y$1525 y$prop))) (not y$1526) (= y$1525 y$prop)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt132.0 nt132.1 nt132.2 t132))

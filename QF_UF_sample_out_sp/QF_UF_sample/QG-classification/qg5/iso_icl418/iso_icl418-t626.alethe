@@ -1,5 +1,0 @@
-(assume nt626.0 (not (not (= (= (op (op e0 e4) e0) e4) (= e4 (op (op (op (op e4 e3) (op e4 e3)) e4) (op (op e4 e3) (op e4 e3))))))))
-(assume nt626.1 (not (not (= (op (op e0 e4) e0) e4))))
-(assume nt626.2 (not (= e4 (op (op (op (op e4 e3) (op e4 e3)) e4) (op (op e4 e3) (op e4 e3))))))
-(step t626 (cl (not (= (= (op (op e0 e4) e0) e4) (= e4 (op (op (op (op e4 e3) (op e4 e3)) e4) (op (op e4 e3) (op e4 e3)))))) (not (= (op (op e0 e4) e0) e4)) (= e4 (op (op (op (op e4 e3) (op e4 e3)) e4) (op (op e4 e3) (op e4 e3))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt626.0 nt626.1 nt626.2 t626))

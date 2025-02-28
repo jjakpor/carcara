@@ -1,3 +1,0 @@
-(assume nst174.0 (not (= (not (= c_0 (f6 c_0))) (not (= c_0 (f6 c_0))))))
-(step st174 (cl (= (not (= c_0 (f6 c_0))) (not (= c_0 (f6 c_0))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst174.0 st174))

@@ -1,5 +1,0 @@
-(assume nt511.0 (not (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))))))
-(assume nt511.1 (not (= x27 x28)))
-(assume t510 (=> (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28))) (= x27 x28)))
-(step t511 (cl (not (or (and (= x27 y27) (= y27 x28)) (and (= x27 z27) (= z27 x28)))) (= x27 x28)) :rule implies :premises (t510))
-(step t.end (cl) :rule resolution :premises (nt511.0 nt511.1 t511))

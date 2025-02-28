@@ -1,4 +1,0 @@
-(assume nst190.0 (not (= (op e3 unit) e3)))
-(assume t189 (and (= (op unit e3) e3) (= (op e3 unit) e3)))
-(step st190 (cl (= (op e3 unit) e3)) :rule and :premises (t189) :args (1))
-(step t.end (cl) :rule resolution :premises (nst190.0 st190))

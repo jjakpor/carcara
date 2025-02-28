@@ -1,4 +1,0 @@
-(assume t531 (and (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (=> (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (= x29 x30))))
-(assume nt532.0 (not (=> (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (= x29 x30))))
-(step t532 (cl (=> (or (and (= x29 y29) (= y29 x30)) (and (= x29 z29) (= z29 x30))) (= x29 x30))) :rule and :premises (t531) :args (1))
-(step t.end (cl) :rule resolution :premises (nt532.0 t532))

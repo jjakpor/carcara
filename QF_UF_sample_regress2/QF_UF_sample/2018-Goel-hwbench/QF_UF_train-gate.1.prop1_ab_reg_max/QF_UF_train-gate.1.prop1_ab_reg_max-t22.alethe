@@ -1,5 +1,0 @@
-(assume nst22.0 (not (not y$a_Cross_Train_1)))
-(assume nst22.1 (not (not y$5)))
-(assume a4 (= y$a_Cross_Train_1 (not y$5)))
-(step st22 (cl (not y$a_Cross_Train_1) (not y$5)) :rule equiv1 :premises (a4))
-(step t.end (cl) :rule resolution :premises (nst22.0 nst22.1 st22))

@@ -1,5 +1,0 @@
-(assume nt401.0 (not (not (= (not (= (op e1 e0) (op e1 e4))) (not (= (op (op (op e3 e3) (op e3 e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))))))
-(assume nt401.1 (not (not (not (= (op e1 e0) (op e1 e4))))))
-(assume nt401.2 (not (not (= (op (op (op e3 e3) (op e3 e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))))
-(step t401 (cl (not (= (not (= (op e1 e0) (op e1 e4))) (not (= (op (op (op e3 e3) (op e3 e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))) (not (not (= (op e1 e0) (op e1 e4)))) (not (= (op (op (op e3 e3) (op e3 e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt401.0 nt401.1 nt401.2 t401))

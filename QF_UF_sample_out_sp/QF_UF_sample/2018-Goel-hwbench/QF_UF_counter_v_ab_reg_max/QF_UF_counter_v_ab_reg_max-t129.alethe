@@ -1,6 +1,0 @@
-(assume nt129.0 (not (= (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X) (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))))
-(assume t16 (= y$en y$en))
-(assume t128 (= (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4))))
-(assume t122 (= y$X y$n1s4))
-(step t129 (cl (= (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X) (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))) :rule cong :premises (t16 t128 t122))
-(step t.end (cl) :rule resolution :premises (nt129.0 t129))

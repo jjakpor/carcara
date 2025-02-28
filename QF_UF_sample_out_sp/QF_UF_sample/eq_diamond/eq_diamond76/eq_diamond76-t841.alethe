@@ -1,5 +1,0 @@
-(assume nt841.0 (not (= (= x11 x12) (= x0 x75))))
-(assume t146 (= x11 x0))
-(assume t840 (= x12 x75))
-(step t841 (cl (= (= x11 x12) (= x0 x75))) :rule cong :premises (t146 t840))
-(step t.end (cl) :rule resolution :premises (nt841.0 t841))

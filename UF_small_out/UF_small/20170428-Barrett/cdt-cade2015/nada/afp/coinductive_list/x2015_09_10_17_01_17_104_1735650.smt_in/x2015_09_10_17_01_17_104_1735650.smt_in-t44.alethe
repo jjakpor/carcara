@@ -1,6 +1,0 @@
-(assume nst44.0 (not (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))))
-(assume t40 (or (not (forall ((?v0 Nat$) (?v1 A_a_fun$) (?v2 A$)) (= (fun_app$ (ldropn$ ?v0) (iterates$ ?v1 ?v2)) (iterates$ ?v1 (fun_app$a (fun_app$b (fun_app$c funpow$ ?v0) ?v1) ?v2))))) (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))))
-(assume t43 (forall ((?v0 Nat$) (?v1 A_a_fun$) (?v2 A$)) (= (fun_app$ (ldropn$ ?v0) (iterates$ ?v1 ?v2)) (iterates$ ?v1 (fun_app$a (fun_app$b (fun_app$c funpow$ ?v0) ?v1) ?v2)))))
-(step t40' (cl (not (forall ((?v0 Nat$) (?v1 A_a_fun$) (?v2 A$)) (= (fun_app$ (ldropn$ ?v0) (iterates$ ?v1 ?v2)) (iterates$ ?v1 (fun_app$a (fun_app$b (fun_app$c funpow$ ?v0) ?v1) ?v2))))) (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))) :rule or :premises (t40))
-(step st44 (cl (= (iterates$ f$ (fun_app$a (fun_app$b (fun_app$c funpow$ n$) f$) x$)) (fun_app$ (ldropn$ n$) (iterates$ f$ x$)))) :rule resolution :premises (t40' t43))
-(step t.end (cl) :rule resolution :premises (nst44.0 st44))

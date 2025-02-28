@@ -1,5 +1,0 @@
-(assume nt730.0 (not (not (= (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (and (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (=> (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (= x65 x66)))))))
-(assume nt730.1 (not (not (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))))))
-(assume nt730.2 (not (and (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (=> (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (= x65 x66)))))
-(step t730 (cl (not (= (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (and (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (=> (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (= x65 x66))))) (not (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66)))) (and (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (=> (or (and (= x65 y65) (= y65 x66)) (and (= x65 z65) (= z65 x66))) (= x65 x66)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt730.0 nt730.1 nt730.2 t730))

@@ -1,5 +1,0 @@
-(assume nst0.0 (not (not (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))))
-(assume nst0.1 (not (fun_app$h lnull$ xs$)))
-(assume nst0.2 (not (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))))
-(step st0 (cl (not (or (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$)))) (fun_app$h lnull$ xs$) (= n$ (fun_app$n (enat_unfold$b lnull$ uud$) lNil$))) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst0.0 nst0.1 nst0.2 st0))

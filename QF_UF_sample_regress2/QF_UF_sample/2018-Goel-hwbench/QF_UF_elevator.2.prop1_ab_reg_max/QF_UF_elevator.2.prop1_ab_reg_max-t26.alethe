@@ -1,6 +1,0 @@
-(assume nst26.0 (not (not y$v3_1517448494_34_op)))
-(assume t20 (or (not y$v3_1517448494_34_op) (and y$a_in_elevator_Person_0 y$a_in_elevator_Person_1)))
-(assume t25 (not (and y$a_in_elevator_Person_0 y$a_in_elevator_Person_1)))
-(step t20' (cl (not y$v3_1517448494_34_op) (and y$a_in_elevator_Person_0 y$a_in_elevator_Person_1)) :rule or :premises (t20))
-(step st26 (cl (not y$v3_1517448494_34_op)) :rule resolution :premises (t20' t25))
-(step t.end (cl) :rule resolution :premises (nst26.0 st26))

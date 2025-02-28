@@ -1,5 +1,0 @@
-(assume nt104.0 (not (= y$v_A y$v_k_Table)))
-(assume t12 (= y$v_A y$v_B))
-(assume t103 (= y$v_B y$v_k_Table))
-(step t104 (cl (= y$v_A y$v_k_Table)) :rule trans :premises (t12 t103))
-(step t.end (cl) :rule resolution :premises (nt104.0 t104))

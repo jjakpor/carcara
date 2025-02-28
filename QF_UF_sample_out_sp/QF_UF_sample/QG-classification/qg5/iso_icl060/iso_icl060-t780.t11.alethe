@@ -1,5 +1,0 @@
-(assume nt780.t11.0 (not (= (= e3 (op e4 (op e4 e3))) (= e3 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3))))))
-(assume t14 (= e3 e3))
-(assume t780.t10 (= (op e4 (op e4 e3)) (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3))))
-(step t780.t11 (cl (= (= e3 (op e4 (op e4 e3))) (= e3 (op (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3))))) :rule cong :premises (t14 t780.t10))
-(step t.end (cl) :rule resolution :premises (nt780.t11.0 t780.t11))

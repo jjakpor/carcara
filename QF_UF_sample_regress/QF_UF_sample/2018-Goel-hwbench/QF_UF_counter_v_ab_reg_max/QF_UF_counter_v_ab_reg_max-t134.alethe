@@ -1,6 +1,0 @@
-(assume nst134.0 (not (= (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
-(assume t47 (= y$n1s4 y$n1s4))
-(assume t132 (= (= y$n1s4 y$n15s4) (= y$n15s4 y$n1s4)))
-(assume t133 (= (Add_4_4_4 y$n1s4 y$n1s4) (Add_4_4_4 y$n1s4 y$n1s4)))
-(step st134 (cl (= (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)))) :rule cong :premises (t132 t47 t133))
-(step t.end (cl) :rule resolution :premises (nst134.0 st134))

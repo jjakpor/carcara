@@ -1,7 +1,0 @@
-(assume nst182.0 (not (not (in$0 prv_2$0 Alloc_1$0))))
-(assume a58 (not (in$0 null$0 Alloc_1$0)))
-(assume t179 (or (not (= (not (in$0 null$0 Alloc_1$0)) (not (in$0 prv_2$0 Alloc_1$0)))) (not (not (in$0 null$0 Alloc_1$0))) (not (in$0 prv_2$0 Alloc_1$0))))
-(assume t181 (= (not (in$0 null$0 Alloc_1$0)) (not (in$0 prv_2$0 Alloc_1$0))))
-(step t179' (cl (not (= (not (in$0 null$0 Alloc_1$0)) (not (in$0 prv_2$0 Alloc_1$0)))) (not (not (in$0 null$0 Alloc_1$0))) (not (in$0 prv_2$0 Alloc_1$0))) :rule or :premises (t179))
-(step st182 (cl (not (in$0 prv_2$0 Alloc_1$0))) :rule resolution :premises (t179' t181 a58))
-(step t.end (cl) :rule resolution :premises (nst182.0 st182))

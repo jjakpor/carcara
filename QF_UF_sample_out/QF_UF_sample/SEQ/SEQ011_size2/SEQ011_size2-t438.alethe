@@ -1,5 +1,0 @@
-(assume t437 (or (=> (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))) (= (f6 c_1) (f5 c_1))) (=> (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))) (= (f6 c_1) (f5 c_1)))))
-(assume nt438.0 (not (=> (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))) (= (f6 c_1) (f5 c_1)))))
-(step t437' (cl (=> (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))) (= (f6 c_1) (f5 c_1))) (=> (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))) (= (f6 c_1) (f5 c_1)))) :rule or :premises (t437))
-(step t438 (cl (=> (and (= c_0 (f5 c_1)) (= c_0 (f6 c_1))) (= (f6 c_1) (f5 c_1)))) :rule contraction :premises (t437'))
-(step t.end (cl) :rule resolution :premises (nt438.0 t438))

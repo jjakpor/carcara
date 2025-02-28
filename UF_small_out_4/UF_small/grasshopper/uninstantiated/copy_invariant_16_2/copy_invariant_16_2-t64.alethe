@@ -1,4 +1,0 @@
-(assume nst64.0 (not (= (not (in$0 sk_?e$0 FP$0)) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))))
-(assume t63 (= (in$0 sk_?e$0 FP$0) (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))
-(step st64 (cl (= (not (in$0 sk_?e$0 FP$0)) (not (in$0 sk_?e$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))) :rule cong :premises (t63))
-(step t.end (cl) :rule resolution :premises (nst64.0 st64))

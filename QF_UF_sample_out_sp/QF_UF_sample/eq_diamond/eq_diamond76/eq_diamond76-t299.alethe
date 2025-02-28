@@ -1,6 +1,0 @@
-(assume nt299.0 (not (= x25 x26)))
-(assume nt299.1 (not (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))))))
-(assume t298 (or (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26)))) (= x25 x26)))
-(step t298' (cl (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26)))) (= x25 x26)) :rule or :premises (t298))
-(step t299 (cl (= x25 x26) (not (or (and (= x25 y25) (= y25 x26)) (and (= x25 z25) (= z25 x26))))) :rule reordering :premises (t298'))
-(step t.end (cl) :rule resolution :premises (nt299.0 nt299.1 t299))

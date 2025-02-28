@@ -1,5 +1,0 @@
-(assume nt685.t1.0 (not (= (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) (op (op (op e1 e3) e1) (op e1 e3)))))
-(assume t332 (= (op (op e1 e3) e1) (op (op e1 e3) e1)))
-(assume t685.t0 (= (op (op (op e1 e3) e1) (op (op e1 e3) e3)) (op e1 e3)))
-(step t685.t1 (cl (= (op (op (op e1 e3) e1) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) (op (op (op e1 e3) e1) (op e1 e3)))) :rule cong :premises (t332 t685.t0))
-(step t.end (cl) :rule resolution :premises (nt685.t1.0 t685.t1))

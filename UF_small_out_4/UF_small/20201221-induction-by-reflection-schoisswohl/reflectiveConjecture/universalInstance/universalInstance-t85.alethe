@@ -1,6 +1,0 @@
-(assume nst85.0 (not (not (models empty (pR aR)))))
-(assume t55 (not (or (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (pR aR)))))
-(assume t84 (or (or (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (pR aR))) (not (models empty (pR aR)))))
-(step t84' (cl (or (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (pR aR))) (not (models empty (pR aR)))) :rule or :premises (t84))
-(step st85 (cl (not (models empty (pR aR)))) :rule resolution :premises (t84' t55))
-(step t.end (cl) :rule resolution :premises (nst85.0 st85))

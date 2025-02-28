@@ -1,5 +1,0 @@
-(assume nt96.0 (not (= (= y$27 (not (= y$n15s4 y$X$next))) (= y$27 (not (= y$X$next y$n15s4))))))
-(assume t93 (= y$27 y$27))
-(assume t95 (= (not (= y$n15s4 y$X$next)) (not (= y$X$next y$n15s4))))
-(step t96 (cl (= (= y$27 (not (= y$n15s4 y$X$next))) (= y$27 (not (= y$X$next y$n15s4))))) :rule cong :premises (t93 t95))
-(step t.end (cl) :rule resolution :premises (nt96.0 t96))

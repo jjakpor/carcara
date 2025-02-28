@@ -1,5 +1,0 @@
-(assume t640 (= (= (= (op e3 e4) (op e3 (op e4 e3))) false) (not (= (op e3 e4) (op e3 (op e4 e3))))))
-(assume nt641.0 (not (= (= (op e3 e4) (op e3 (op e4 e3))) false)))
-(assume nt641.1 (not (not (not (= (op e3 e4) (op e3 (op e4 e3)))))))
-(step t641 (cl (= (= (op e3 e4) (op e3 (op e4 e3))) false) (not (not (= (op e3 e4) (op e3 (op e4 e3)))))) :rule equiv2 :premises (t640))
-(step t.end (cl) :rule resolution :premises (nt641.0 nt641.1 t641))

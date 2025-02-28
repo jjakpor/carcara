@@ -1,5 +1,0 @@
-(assume nst162.0 (not (not (= (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (models empty (orR (notR (pR aR)) (qR bR))))))))
-(assume nst162.1 (not (models empty (notR (orR (notR (pR aR)) (qR bR))))))
-(assume nst162.2 (not (not (not (models empty (orR (notR (pR aR)) (qR bR)))))))
-(step st162 (cl (not (= (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (models empty (orR (notR (pR aR)) (qR bR)))))) (models empty (notR (orR (notR (pR aR)) (qR bR)))) (not (not (models empty (orR (notR (pR aR)) (qR bR)))))) :rule equiv_pos1)
-(step t.end (cl) :rule resolution :premises (nst162.0 nst162.1 nst162.2 st162))

@@ -1,3 +1,0 @@
-(assume nst78.0 (not (= sk_?X_78$0 sk_?X_78$0)))
-(step st78 (cl (= sk_?X_78$0 sk_?X_78$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst78.0 st78))

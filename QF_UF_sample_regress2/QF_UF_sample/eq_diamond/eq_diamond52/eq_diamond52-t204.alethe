@@ -1,4 +1,0 @@
-(assume nst204.0 (not (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18))))
-(assume t203 (and (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18))))
-(step st204 (cl (=> (or (and (= x17 y17) (= y17 x18)) (and (= x17 z17) (= z17 x18))) (= x17 x18))) :rule and :premises (t203) :args (1))
-(step t.end (cl) :rule resolution :premises (nst204.0 st204))

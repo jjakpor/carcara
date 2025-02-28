@@ -1,4 +1,0 @@
-(assume nst150.0 (not Axiom_32$0))
-(assume t149 (and (Btwn$0 next$0 c_init$0 curr_init$0 curr_init$0) (or (and (= null$0 prv_init$0) (= c_init$0 curr_init$0)) (and (= curr_init$0 (read$0 next$0 prv_init$0)) (= null$0 (read$0 prev$0 c_init$0)) (in$0 prv_init$0 sk_?X_94$0))) Axiom_32$0))
-(step st150 (cl Axiom_32$0) :rule and :premises (t149) :args (2))
-(step t.end (cl) :rule resolution :premises (nst150.0 st150))

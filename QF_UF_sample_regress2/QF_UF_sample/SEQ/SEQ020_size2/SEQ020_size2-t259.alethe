@@ -1,7 +1,0 @@
-(assume nst259.0 (not (p1 (f7 c_0) c_0)))
-(assume nst259.1 (not (not (= c_1 (f7 c_0)))))
-(assume nst259.2 (not (not (= c_1 (f6 c_0)))))
-(assume nst259.3 (not (not (p1 (f6 c_0) c_0))))
-(assume t258 (or (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))))
-(step st259 (cl (p1 (f7 c_0) c_0) (not (= c_1 (f7 c_0))) (not (= c_1 (f6 c_0))) (not (p1 (f6 c_0) c_0))) :rule or :premises (t258))
-(step t.end (cl) :rule resolution :premises (nst259.0 nst259.1 nst259.2 nst259.3 st259))

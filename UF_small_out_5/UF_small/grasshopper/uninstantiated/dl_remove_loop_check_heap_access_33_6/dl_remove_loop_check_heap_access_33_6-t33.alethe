@@ -1,3 +1,0 @@
-(assume nst33.0 (not (= prv_5$0 prv_5$0)))
-(step st33 (cl (= prv_5$0 prv_5$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst33.0 st33))

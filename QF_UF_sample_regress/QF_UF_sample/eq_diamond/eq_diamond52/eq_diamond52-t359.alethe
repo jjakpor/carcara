@@ -1,5 +1,0 @@
-(assume nst359.0 (not (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))))))
-(assume nst359.1 (not (= x31 x32)))
-(assume t358 (=> (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))) (= x31 x32)))
-(step st359 (cl (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32)))) (= x31 x32)) :rule implies :premises (t358))
-(step t.end (cl) :rule resolution :premises (nst359.0 nst359.1 st359))

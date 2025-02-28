@@ -1,5 +1,0 @@
-(assume nst356.0 (not (not (= (= e3 (op (op (op e1 e3) e3) e1)) false))))
-(assume nst356.1 (not (not (= e3 (op (op (op e1 e3) e3) e1)))))
-(assume t355 (= (= (= e3 (op (op (op e1 e3) e3) e1)) false) (not (= e3 (op (op (op e1 e3) e3) e1)))))
-(step st356 (cl (not (= (= e3 (op (op (op e1 e3) e3) e1)) false)) (not (= e3 (op (op (op e1 e3) e3) e1)))) :rule equiv1 :premises (t355))
-(step t.end (cl) :rule resolution :premises (nst356.0 nst356.1 st356))

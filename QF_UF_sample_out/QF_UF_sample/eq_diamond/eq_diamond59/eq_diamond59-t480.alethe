@@ -1,6 +1,0 @@
-(assume t479 (or (= x24 x25) (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))))))
-(assume t475 (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))))
-(assume nt480.0 (not (= x24 x25)))
-(step t479' (cl (= x24 x25) (not (or (and (= x24 y24) (= y24 x25)) (and (= x24 z24) (= z24 x25))))) :rule or :premises (t479))
-(step t480 (cl (= x24 x25)) :rule resolution :premises (t479' t475))
-(step t.end (cl) :rule resolution :premises (nt480.0 t480))

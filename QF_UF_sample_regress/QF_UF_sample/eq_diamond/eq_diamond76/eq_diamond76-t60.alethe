@@ -1,6 +1,0 @@
-(assume nst60.0 (not (= x7 x8)))
-(assume t55 (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))
-(assume t59 (or (= x7 x8) (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))))
-(step t59' (cl (= x7 x8) (not (or (and (= x7 y7) (= y7 x8)) (and (= x7 z7) (= z7 x8))))) :rule or :premises (t59))
-(step st60 (cl (= x7 x8)) :rule resolution :premises (t59' t55))
-(step t.end (cl) :rule resolution :premises (nst60.0 st60))

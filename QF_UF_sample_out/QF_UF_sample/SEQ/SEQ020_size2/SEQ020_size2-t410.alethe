@@ -1,5 +1,0 @@
-(assume nt410.0 (not (not (= (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))) (or (= (f6 c_1) (f5 c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))))))
-(assume nt410.1 (not (not (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))))))
-(assume nt410.2 (not (or (= (f6 c_1) (f5 c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))))
-(step t410 (cl (not (= (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))) (or (= (f6 c_1) (f5 c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1)))))) (not (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))) (or (= (f6 c_1) (f5 c_1)) (not (= c_1 (f6 c_1))) (not (= c_1 (f5 c_1))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt410.0 nt410.1 nt410.2 t410))

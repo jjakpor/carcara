@@ -1,5 +1,0 @@
-(assume nt1.0 (not (not rd1)))
-(assume nt1.1 (not (not rd2)))
-(assume a6 (=> rd1 (not rd2)))
-(step t1 (cl (not rd1) (not rd2)) :rule implies :premises (a6))
-(step t.end (cl) :rule resolution :premises (nt1.0 nt1.1 t1))

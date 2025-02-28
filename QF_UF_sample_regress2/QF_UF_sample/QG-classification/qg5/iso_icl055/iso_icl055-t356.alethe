@@ -1,5 +1,0 @@
-(assume nst356.0 (not (= (= e2 (op e0 (op e0 e2))) (= (op e1 e1) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)))))))
-(assume t35 (= e2 (op e1 e1)))
-(assume t355 (= (op e0 (op e0 e2)) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)))))
-(step st356 (cl (= (= e2 (op e0 (op e0 e2))) (= (op e1 e1) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op e1 e1)))))) :rule cong :premises (t35 t355))
-(step t.end (cl) :rule resolution :premises (nst356.0 st356))

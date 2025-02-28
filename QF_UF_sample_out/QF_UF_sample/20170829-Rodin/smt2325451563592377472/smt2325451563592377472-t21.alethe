@@ -1,7 +1,0 @@
-(assume t0 (or (not (= (or (not prt) (not car) (not (not clk))) (or (not prt) (not car) clk))) (not (or (not prt) (not car) (not (not clk)))) (or (not prt) (not car) clk)))
-(assume t13 (= (or (not prt) (not car) (not (not clk))) (or (not prt) (not car) clk)))
-(assume t20 (or (not prt) (not car) (not (not clk))))
-(assume nt21.0 (not (or (not prt) (not car) clk)))
-(step t0' (cl (not (= (or (not prt) (not car) (not (not clk))) (or (not prt) (not car) clk))) (not (or (not prt) (not car) (not (not clk)))) (or (not prt) (not car) clk)) :rule or :premises (t0))
-(step t21 (cl (or (not prt) (not car) clk)) :rule resolution :premises (t0' t13 t20))
-(step t.end (cl) :rule resolution :premises (nt21.0 t21))

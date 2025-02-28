@@ -1,4 +1,0 @@
-(assume nst19.0 (not (= null$0 a_1$0)))
-(assume a48 (= a_1$0 null$0))
-(step st19 (cl (= null$0 a_1$0)) :rule symm :premises (a48))
-(step t.end (cl) :rule resolution :premises (nst19.0 st19))

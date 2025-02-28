@@ -1,4 +1,0 @@
-(assume t380 (and (and (and (and (= (op e1 (op e1 e0)) e0) (= (op e1 (op e1 e1)) e1)) (= (op e1 (op e1 e2)) e2)) (= (op e1 (op e1 e3)) e3)) (= (op e1 (op e1 e4)) e4)))
-(assume nt381.0 (not (and (and (and (= (op e1 (op e1 e0)) e0) (= (op e1 (op e1 e1)) e1)) (= (op e1 (op e1 e2)) e2)) (= (op e1 (op e1 e3)) e3))))
-(step t381 (cl (and (and (and (= (op e1 (op e1 e0)) e0) (= (op e1 (op e1 e1)) e1)) (= (op e1 (op e1 e2)) e2)) (= (op e1 (op e1 e3)) e3))) :rule and :premises (t380) :args (0))
-(step t.end (cl) :rule resolution :premises (nt381.0 t381))

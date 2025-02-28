@@ -1,5 +1,0 @@
-(assume nt73.0 (not (= (forall ((env env) (v var_alpha)) (= (eval_alpha env (inj_alpha v)) (evalV_alpha env v))) (forall ((env env) (v var_alpha)) (= (evalV_alpha env v) (eval_alpha env (inj_alpha v)))))))
-(anchor :step t73 :args ((env env) (v var_alpha) (:= (env env) env) (:= (v var_alpha) v)))
-(step t73.t0 (cl (= (= (eval_alpha env (inj_alpha v)) (evalV_alpha env v)) (= (evalV_alpha env v) (eval_alpha env (inj_alpha v))))) :rule trust)
-(step t73 (cl (= (forall ((env env) (v var_alpha)) (= (eval_alpha env (inj_alpha v)) (evalV_alpha env v))) (forall ((env env) (v var_alpha)) (= (evalV_alpha env v) (eval_alpha env (inj_alpha v)))))) :rule bind)
-(step t.end (cl) :rule resolution :premises (nt73.0 t73))

@@ -1,5 +1,0 @@
-(assume nst384.0 (not (= (or (not (= e0 (op e0 e1))) (= e0 (op e1 e0))) (or (not (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3))))) (= (op e3 e3) (op (op (op e3 e3) (op e3 e3)) (op e3 e3)))))))
-(assume t89 (= (= e0 (op e1 e0)) (= (op e3 e3) (op (op (op e3 e3) (op e3 e3)) (op e3 e3)))))
-(assume t383 (= (not (= e0 (op e0 e1))) (not (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3)))))))
-(step st384 (cl (= (or (not (= e0 (op e0 e1))) (= e0 (op e1 e0))) (or (not (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3))))) (= (op e3 e3) (op (op (op e3 e3) (op e3 e3)) (op e3 e3)))))) :rule cong :premises (t383 t89))
-(step t.end (cl) :rule resolution :premises (nst384.0 st384))

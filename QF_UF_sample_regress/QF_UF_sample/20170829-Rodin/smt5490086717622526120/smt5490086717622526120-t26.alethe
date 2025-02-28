@@ -1,4 +1,0 @@
-(assume nst26.0 (not (= rd1 red_MR)))
-(assume a8 (= red_MR rd1))
-(step st26 (cl (= rd1 red_MR)) :rule symm :premises (a8))
-(step t.end (cl) :rule resolution :premises (nst26.0 st26))

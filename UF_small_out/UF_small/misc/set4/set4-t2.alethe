@@ -1,5 +1,0 @@
-(assume nst2.0 (not (= (member x s1) (member x s2))))
-(assume a4 (= s1 s2))
-(assume t1 (= x x))
-(step st2 (cl (= (member x s1) (member x s2))) :rule cong :premises (t1 a4))
-(step t.end (cl) :rule resolution :premises (nst2.0 st2))

@@ -1,5 +1,0 @@
-(assume t414.t5 (= (= c_1 (f5 c_1)) (= (f6 c_1) (f5 c_1))))
-(assume t414.t10 (= (= (f6 c_1) (f5 c_1)) false))
-(assume nt414.t11.0 (not (= (= c_1 (f5 c_1)) false)))
-(step t414.t11 (cl (= (= c_1 (f5 c_1)) false)) :rule trans :premises (t414.t5 t414.t10))
-(step t.end (cl) :rule resolution :premises (nt414.t11.0 t414.t11))

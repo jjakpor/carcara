@@ -1,6 +1,0 @@
-(assume t104 (or car (or (not car) clk)))
-(assume t92 (not (or (not car) clk)))
-(assume nt105.0 (not car))
-(step t104' (cl car (or (not car) clk)) :rule or :premises (t104))
-(step t105 (cl car) :rule resolution :premises (t104' t92))
-(step t.end (cl) :rule resolution :premises (nt105.0 t105))

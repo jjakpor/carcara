@@ -1,5 +1,0 @@
-(assume nst328.0 (not (= (and (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))))))
-(assume t326 (= (and (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))) (and true (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))))))
-(assume t327 (= (and true (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))))
-(step st328 (cl (= (and (or (= root_x$0 root_x$0) (not (Btwn$0 next$0 x$0 root_x$0 root_x$0))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0)))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 x$0 root_x$0))))) :rule trans :premises (t326 t327))
-(step t.end (cl) :rule resolution :premises (nst328.0 st328))

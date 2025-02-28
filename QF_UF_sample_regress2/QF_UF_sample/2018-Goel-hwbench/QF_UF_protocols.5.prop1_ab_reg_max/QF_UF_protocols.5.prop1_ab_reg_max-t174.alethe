@@ -1,5 +1,0 @@
-(assume nst174.0 (not (not y$a_consume1$next)))
-(assume nst174.1 (not y$a_consume1$next_rhs_op))
-(assume t173 (= y$a_consume1$next y$a_consume1$next_rhs_op))
-(step st174 (cl (not y$a_consume1$next) y$a_consume1$next_rhs_op) :rule equiv1 :premises (t173))
-(step t.end (cl) :rule resolution :premises (nst174.0 nst174.1 st174))

@@ -1,3 +1,0 @@
-(assume nst24.0 (not (= prv_3$0 prv_3$0)))
-(step st24 (cl (= prv_3$0 prv_3$0)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nst24.0 st24))

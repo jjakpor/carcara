@@ -1,4 +1,0 @@
-(assume nst279.0 (not (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6))))
-(assume t278 (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6))))
-(step st279 (cl (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6))) :rule and :premises (t278) :args (1))
-(step t.end (cl) :rule resolution :premises (nst279.0 st279))

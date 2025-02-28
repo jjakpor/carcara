@@ -1,5 +1,0 @@
-(assume nst262.0 (not (= (or (or (or (or (= (op e2 e0) e0) (= (op e2 e1) e0)) (= (op e2 e2) e0)) (= (op e2 e3) e0)) (= (op e2 e4) e0)) (or (= e0 (op e2 e4)) (= e0 (op e2 e3)) (= e0 (op e2 e2)) (= e0 (op e2 e0)) (= e0 (op e2 e1))))))
-(assume t256 (= (or (or (or (or (= (op e2 e0) e0) (= (op e2 e1) e0)) (= (op e2 e2) e0)) (= (op e2 e3) e0)) (= (op e2 e4) e0)) (or (= (op e2 e4) e0) (= (op e2 e3) e0) (= (op e2 e2) e0) (= (op e2 e0) e0) (= (op e2 e1) e0))))
-(assume t261 (= (or (= (op e2 e4) e0) (= (op e2 e3) e0) (= (op e2 e2) e0) (= (op e2 e0) e0) (= (op e2 e1) e0)) (or (= e0 (op e2 e4)) (= e0 (op e2 e3)) (= e0 (op e2 e2)) (= e0 (op e2 e0)) (= e0 (op e2 e1)))))
-(step st262 (cl (= (or (or (or (or (= (op e2 e0) e0) (= (op e2 e1) e0)) (= (op e2 e2) e0)) (= (op e2 e3) e0)) (= (op e2 e4) e0)) (or (= e0 (op e2 e4)) (= e0 (op e2 e3)) (= e0 (op e2 e2)) (= e0 (op e2 e0)) (= e0 (op e2 e1))))) :rule trans :premises (t256 t261))
-(step t.end (cl) :rule resolution :premises (nst262.0 st262))

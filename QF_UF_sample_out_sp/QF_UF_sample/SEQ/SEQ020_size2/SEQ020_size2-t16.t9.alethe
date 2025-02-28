@@ -1,4 +1,0 @@
-(assume nt16.t9.0 (not (= (f7 c_1) c_1)))
-(assume t16.a1 (= c_1 (f7 c_1)))
-(step t16.t9 (cl (= (f7 c_1) c_1)) :rule symm :premises (t16.a1))
-(step t.end (cl) :rule resolution :premises (nt16.t9.0 t16.t9))

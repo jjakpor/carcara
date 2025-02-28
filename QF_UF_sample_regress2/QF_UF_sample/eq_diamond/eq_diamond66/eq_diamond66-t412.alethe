@@ -1,6 +1,0 @@
-(assume nst412.0 (not (= x35 x36)))
-(assume nst412.1 (not (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))))
-(assume t411 (or (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36)))) (= x35 x36)))
-(step t411' (cl (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36)))) (= x35 x36)) :rule or :premises (t411))
-(step st412 (cl (= x35 x36) (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))) :rule reordering :premises (t411'))
-(step t.end (cl) :rule resolution :premises (nst412.0 nst412.1 st412))

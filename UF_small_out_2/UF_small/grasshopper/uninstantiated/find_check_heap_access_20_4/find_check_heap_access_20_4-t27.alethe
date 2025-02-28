@@ -1,5 +1,0 @@
-(assume nst27.0 (not (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))))
-(assume t26 (or (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))))
-(step t26' (cl (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0))) (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))) :rule or :premises (t26))
-(step st27 (cl (=> (and (= root_x$0 x$0) (= (read$0 next$0 root_x$0) (read$0 next_2$0 root_x$0))) (= (read$0 next_2$0 x$0) (read$0 next$0 x$0)))) :rule contraction :premises (t26'))
-(step t.end (cl) :rule resolution :premises (nst27.0 st27))

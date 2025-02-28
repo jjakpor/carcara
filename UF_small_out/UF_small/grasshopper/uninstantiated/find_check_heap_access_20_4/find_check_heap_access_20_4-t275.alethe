@@ -1,4 +1,0 @@
-(assume nst275.0 (not (= (not (in$0 root_x$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))))))
-(assume t274 (= (in$0 root_x$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0)) (in$0 root_x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))))
-(step st275 (cl (= (not (in$0 root_x$0 (lseg_set_domain$0 next$0 n_5$0 root_x$0))) (not (in$0 root_x$0 (lseg_set_domain$0 next$0 (read$0 next$0 x$0) root_x$0))))) :rule cong :premises (t274))
-(step t.end (cl) :rule resolution :premises (nst275.0 st275))

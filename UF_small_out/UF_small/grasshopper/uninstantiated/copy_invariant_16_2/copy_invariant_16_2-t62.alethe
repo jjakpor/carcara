@@ -1,7 +1,0 @@
-(assume nst62.0 (not (= FP$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))
-(assume t53 (or (not (= (= FP$0 sk_?X$0) (= FP$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (not (= FP$0 sk_?X$0)) (= FP$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))
-(assume t60 (= (= FP$0 sk_?X$0) (= FP$0 (lseg_domain$0 next$0 lst$0 cp_2$0))))
-(assume t61 (= FP$0 sk_?X$0))
-(step t53' (cl (not (= (= FP$0 sk_?X$0) (= FP$0 (lseg_domain$0 next$0 lst$0 cp_2$0)))) (not (= FP$0 sk_?X$0)) (= FP$0 (lseg_domain$0 next$0 lst$0 cp_2$0))) :rule or :premises (t53))
-(step st62 (cl (= FP$0 (lseg_domain$0 next$0 lst$0 cp_2$0))) :rule resolution :premises (t53' t60 t61))
-(step t.end (cl) :rule resolution :premises (nst62.0 st62))

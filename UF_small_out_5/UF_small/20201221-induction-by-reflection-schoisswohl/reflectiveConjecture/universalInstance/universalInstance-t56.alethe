@@ -1,6 +1,0 @@
-(assume nst56.0 (not (not (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))))
-(assume t49 (or (or (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (pR aR))) (not (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))))
-(assume t55 (not (or (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (pR aR)))))
-(step t49' (cl (or (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))) (models empty (pR aR))) (not (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))) :rule or :premises (t49))
-(step st56 (cl (not (models empty (notR (forallR_alpha v0_alpha (pR (inj_alpha v0_alpha))))))) :rule resolution :premises (t49' t55))
-(step t.end (cl) :rule resolution :premises (nst56.0 st56))

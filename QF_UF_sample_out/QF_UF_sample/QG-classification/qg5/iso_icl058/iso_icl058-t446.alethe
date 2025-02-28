@@ -1,5 +1,0 @@
-(assume t443 (= (not (= e1 e2)) (not (= e2 e1))))
-(assume t445 (= (not (= e2 e1)) (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
-(assume nt446.0 (not (= (not (= e1 e2)) (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))))
-(step t446 (cl (= (not (= e1 e2)) (not (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))) :rule trans :premises (t443 t445))
-(step t.end (cl) :rule resolution :premises (nt446.0 t446))

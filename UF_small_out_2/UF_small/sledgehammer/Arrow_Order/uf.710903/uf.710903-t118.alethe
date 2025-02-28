@@ -1,8 +1,0 @@
-(define-fun @quantifiers_skolemize_10 () S2 (choice ((?v6 S2)) (not (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v6))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f3 f4 ?v6)))))))
-(assume nt118.0 (not (not (forall ((?v0 S2)) (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f5 (f6 (f7 (f3 f8 ?v0)) f9) f10))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v0))))))))
-(assume nt118.1 (not (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f5 (f6 (f7 (f3 f8 @quantifiers_skolemize_10)) f9) f10))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 @quantifiers_skolemize_10))))))
-(anchor :step t118)
-(assume t118.a0 (forall ((?v0 S2)) (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f5 (f6 (f7 (f3 f8 ?v0)) f9) f10))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v0))))))
-(step t118.t3 (cl (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f5 (f6 (f7 (f3 f8 @quantifiers_skolemize_10)) f9) f10))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 @quantifiers_skolemize_10))))) :rule trust)
-(step t118 (cl (not (forall ((?v0 S2)) (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f5 (f6 (f7 (f3 f8 ?v0)) f9) f10))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 ?v0)))))) (= (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f9) (f5 (f6 (f7 (f3 f8 @quantifiers_skolemize_10)) f9) f10))) (= (f11 f12 f13) (f14 (f17 (f18 f19 f20) f10) (f3 f8 @quantifiers_skolemize_10))))) :rule subproof :discharge (t118.a0))
-(step t.end (cl) :rule resolution :premises (nt118.0 nt118.1 t118))

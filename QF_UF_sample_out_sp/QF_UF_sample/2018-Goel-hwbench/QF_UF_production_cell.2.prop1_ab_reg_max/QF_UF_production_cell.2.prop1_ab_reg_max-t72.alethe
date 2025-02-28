@@ -1,5 +1,0 @@
-(assume nt72.0 (not (= y$v_count y$v_k_Deposit)))
-(assume t46 (= y$v_count y$v_done))
-(assume t71 (= y$v_done y$v_k_Deposit))
-(step t72 (cl (= y$v_count y$v_k_Deposit)) :rule trans :premises (t46 t71))
-(step t.end (cl) :rule resolution :premises (nt72.0 t72))

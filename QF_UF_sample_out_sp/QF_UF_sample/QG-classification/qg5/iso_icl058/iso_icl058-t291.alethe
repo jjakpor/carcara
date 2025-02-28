@@ -1,8 +1,0 @@
-(assume nt291.0 (not (= (or (= (op e3 e0) e4) (= (op e3 e0) e3) (= (op e3 e0) e2) (= (op e3 e0) e0) (= (op e3 e0) e1)) (or (= e4 (op e3 e0)) (= e3 (op e3 e0)) (= e2 (op e3 e0)) (= e0 (op e3 e0)) (= e1 (op e3 e0))))))
-(assume t288 (= (= (op e3 e0) e4) (= e4 (op e3 e0))))
-(assume t219 (= (= (op e3 e0) e3) (= e3 (op e3 e0))))
-(assume t289 (= (= (op e3 e0) e2) (= e2 (op e3 e0))))
-(assume t121 (= (= (op e3 e0) e0) (= e0 (op e3 e0))))
-(assume t290 (= (= (op e3 e0) e1) (= e1 (op e3 e0))))
-(step t291 (cl (= (or (= (op e3 e0) e4) (= (op e3 e0) e3) (= (op e3 e0) e2) (= (op e3 e0) e0) (= (op e3 e0) e1)) (or (= e4 (op e3 e0)) (= e3 (op e3 e0)) (= e2 (op e3 e0)) (= e0 (op e3 e0)) (= e1 (op e3 e0))))) :rule cong :premises (t288 t219 t289 t121 t290))
-(step t.end (cl) :rule resolution :premises (nt291.0 t291))

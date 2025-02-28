@@ -1,4 +1,0 @@
-(assume nst406.0 (not (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) e0))))
-(assume t405 (= (op (op (op (op e0 (op e0 e0)) e0) e0) e0) (op e0 (op (op (op e0 (op e0 e0)) e0) e0))))
-(step st406 (cl (= (op e0 (op (op (op e0 (op e0 e0)) e0) e0)) (op (op (op (op e0 (op e0 e0)) e0) e0) e0))) :rule symm :premises (t405))
-(step t.end (cl) :rule resolution :premises (nst406.0 st406))

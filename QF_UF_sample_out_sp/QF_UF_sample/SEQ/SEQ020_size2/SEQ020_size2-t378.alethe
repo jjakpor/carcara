@@ -1,3 +1,0 @@
-(assume nt378.0 (not (= (not (= c_0 (f7 c_1))) (not (= c_0 (f7 c_1))))))
-(step t378 (cl (= (not (= c_0 (f7 c_1))) (not (= c_0 (f7 c_1))))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt378.0 t378))

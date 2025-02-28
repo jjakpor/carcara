@@ -1,3 +1,0 @@
-(assume nst23.0 (not (= (= (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)) true) (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)))))
-(step st23 (cl (= (= (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)) true) (fun_app$ (less_eq$ (llength$ us$)) (llength$a xs$)))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nst23.0 st23))

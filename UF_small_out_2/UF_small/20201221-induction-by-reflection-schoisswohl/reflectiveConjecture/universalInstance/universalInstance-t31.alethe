@@ -1,3 +1,0 @@
-(assume nst31.0 (not (or (not (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha))))) (models (push_alpha empty v0_alpha (eval_alpha empty aR)) (pR (inj_alpha v0_alpha))))))
-(step st31 (cl (or (not (forall ((x alpha)) (models (push_alpha empty v0_alpha x) (pR (inj_alpha v0_alpha))))) (models (push_alpha empty v0_alpha (eval_alpha empty aR)) (pR (inj_alpha v0_alpha))))) :rule forall_inst :args ((eval_alpha empty aR)))
-(step t.end (cl) :rule resolution :premises (nst31.0 st31))

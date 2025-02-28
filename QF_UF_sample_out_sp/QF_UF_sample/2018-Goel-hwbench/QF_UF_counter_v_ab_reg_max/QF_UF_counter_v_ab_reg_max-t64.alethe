@@ -1,5 +1,0 @@
-(assume nt64.0 (not (= (= y$2 (= y$n1s4 y$X)) (= y$2 (= y$X y$n1s4)))))
-(assume t62 (= y$2 y$2))
-(assume t63 (= (= y$n1s4 y$X) (= y$X y$n1s4)))
-(step t64 (cl (= (= y$2 (= y$n1s4 y$X)) (= y$2 (= y$X y$n1s4)))) :rule cong :premises (t62 t63))
-(step t.end (cl) :rule resolution :premises (nt64.0 t64))

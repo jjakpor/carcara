@@ -1,5 +1,0 @@
-(assume t84 (= (not (p4 c_1)) (not (p4 c_1))))
-(assume t86 (= (not (= (f5 c_1) (f6 c_1))) (not (= (f6 c_1) (f5 c_1)))))
-(assume nt87.0 (not (= (or (not (p4 c_1)) (not (= (f5 c_1) (f6 c_1)))) (or (not (p4 c_1)) (not (= (f6 c_1) (f5 c_1)))))))
-(step t87 (cl (= (or (not (p4 c_1)) (not (= (f5 c_1) (f6 c_1)))) (or (not (p4 c_1)) (not (= (f6 c_1) (f5 c_1)))))) :rule cong :premises (t84 t86))
-(step t.end (cl) :rule resolution :premises (nt87.0 t87))

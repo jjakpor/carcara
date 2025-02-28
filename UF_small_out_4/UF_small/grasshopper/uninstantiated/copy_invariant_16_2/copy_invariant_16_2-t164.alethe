@@ -1,5 +1,0 @@
-(assume nst164.0 (not (not (or (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0)) (= cp_2$0 sk_?e$0)))))
-(assume nst164.1 (not (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0))))
-(assume nst164.2 (not (= cp_2$0 sk_?e$0)))
-(step st164 (cl (not (or (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0)) (= cp_2$0 sk_?e$0))) (not (Btwn$0 next$0 cp_2$0 sk_?e$0 cp_2$0)) (= cp_2$0 sk_?e$0)) :rule or_pos)
-(step t.end (cl) :rule resolution :premises (nst164.0 nst164.1 nst164.2 st164))
