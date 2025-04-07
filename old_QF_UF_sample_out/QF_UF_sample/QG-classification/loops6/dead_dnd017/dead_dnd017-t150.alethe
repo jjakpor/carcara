@@ -1,4 +1,0 @@
-(assume t149 (and (and (and (and (and (and (and (and (and (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4))) (not (= e0 e5))) (not (= e1 e2))) (not (= e1 e3))) (not (= e1 e4))) (not (= e1 e5))) (not (= e2 e3))) (not (= e2 e4))) (not (= e2 e5))) (not (= e3 e4))))
-(assume nt150.0 (not (and (and (and (and (and (and (and (and (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4))) (not (= e0 e5))) (not (= e1 e2))) (not (= e1 e3))) (not (= e1 e4))) (not (= e1 e5))) (not (= e2 e3))) (not (= e2 e4))) (not (= e2 e5)))))
-(step t150 (cl (and (and (and (and (and (and (and (and (and (and (and (not (= e0 e1)) (not (= e0 e2))) (not (= e0 e3))) (not (= e0 e4))) (not (= e0 e5))) (not (= e1 e2))) (not (= e1 e3))) (not (= e1 e4))) (not (= e1 e5))) (not (= e2 e3))) (not (= e2 e4))) (not (= e2 e5)))) :rule and :premises (t149))
-(step t.end (cl) :rule resolution :premises (nt150.0 t150))

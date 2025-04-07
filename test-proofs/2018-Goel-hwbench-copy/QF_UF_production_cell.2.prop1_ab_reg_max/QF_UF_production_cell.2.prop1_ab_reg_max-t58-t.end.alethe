@@ -1,6 +1,0 @@
-(assume nt58.0 (not (not (= y$76 (= y$v_k_Belt y$v_k_Deposit)))))
-(assume nt58.1 (not (not y$76)))
-(assume nt58.2 (not (= y$v_k_Belt y$v_k_Deposit)))
-(assume t58 (or (not (= y$76 (= y$v_k_Belt y$v_k_Deposit))) (not y$76) (= y$v_k_Belt y$v_k_Deposit)))
-(step t58' (cl (not (= y$76 (= y$v_k_Belt y$v_k_Deposit))) (not y$76) (= y$v_k_Belt y$v_k_Deposit)) :rule or :premises (t58))
-(step t.end (cl) :rule resolution :premises (nt58.0 nt58.1 nt58.2 t58'))

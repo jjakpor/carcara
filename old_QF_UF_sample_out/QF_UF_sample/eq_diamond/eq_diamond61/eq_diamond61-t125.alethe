@@ -1,5 +1,0 @@
-(assume nt125.0 (not (not (= (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (and (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12)))))))
-(assume nt125.1 (not (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))))))
-(assume nt125.2 (not (and (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12)))))
-(step t125 (cl (not (= (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (and (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12))))) (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12)))) (and (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (=> (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))) (= x11 x12)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt125.0 nt125.1 nt125.2 t125))

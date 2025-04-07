@@ -1,6 +1,0 @@
-(assume t0 (or (not rd1) (not rd2)))
-(assume t3 rd1)
-(assume nt4.0 (not (not rd2)))
-(step t0' (cl (not rd1) (not rd2)) :rule or :premises (t0))
-(step t4 (cl (not rd2)) :rule resolution :premises (t0' t3))
-(step t.end (cl) :rule resolution :premises (nt4.0 t4))

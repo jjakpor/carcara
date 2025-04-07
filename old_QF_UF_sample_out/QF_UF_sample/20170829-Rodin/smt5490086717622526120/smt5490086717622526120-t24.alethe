@@ -1,5 +1,0 @@
-(assume t16 (= org org_MR))
-(assume t23 (= org_MR false))
-(assume nt24.0 (not (= org false)))
-(step t24 (cl (= org false)) :rule trans :premises (t16 t23))
-(step t.end (cl) :rule resolution :premises (nt24.0 t24))

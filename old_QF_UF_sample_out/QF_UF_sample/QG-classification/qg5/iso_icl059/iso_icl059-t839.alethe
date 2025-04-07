@@ -1,6 +1,0 @@
-(assume t833 (or (= (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0))) false) (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0)))))
-(assume t838 (not (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0)))))
-(assume nt839.0 (not (= (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0))) false)))
-(step t833' (cl (= (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0))) false) (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0)))) :rule or :premises (t833))
-(step t839 (cl (= (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0))) false)) :rule resolution :premises (t833' t838))
-(step t.end (cl) :rule resolution :premises (nt839.0 t839))

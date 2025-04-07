@@ -1,3 +1,0 @@
-(assume nt165.0 (not (not y$a_consume0$next_rhs_op)))
-(assume t165 (not y$a_consume0$next_rhs_op))
-(step t.end (cl) :rule resolution :premises (nt165.0 t165))

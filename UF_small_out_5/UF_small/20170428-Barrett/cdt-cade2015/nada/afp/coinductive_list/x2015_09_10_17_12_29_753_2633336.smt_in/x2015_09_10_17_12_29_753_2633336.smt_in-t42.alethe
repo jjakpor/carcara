@@ -1,5 +1,0 @@
-(assume nst42.0 (not (not (= (not thesis$) (= thesis$ false)))))
-(assume nst42.1 (not (not (not thesis$))))
-(assume nst42.2 (not (= thesis$ false)))
-(step st42 (cl (not (= (not thesis$) (= thesis$ false))) (not (not thesis$)) (= thesis$ false)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nst42.0 nst42.1 nst42.2 st42))

@@ -1,7 +1,0 @@
-(assume t3 (or (not (= y$1407 (= y$1406 y$prop))) (not y$1407) (= y$1406 y$prop)))
-(assume t8 (= y$1407 (= y$1406 y$prop)))
-(assume t11 y$1407)
-(assume nt12.0 (not (= y$1406 y$prop)))
-(step t3' (cl (not (= y$1407 (= y$1406 y$prop))) (not y$1407) (= y$1406 y$prop)) :rule or :premises (t3))
-(step t12 (cl (= y$1406 y$prop)) :rule resolution :premises (t3' t8 t11))
-(step t.end (cl) :rule resolution :premises (nt12.0 t12))

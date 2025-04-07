@@ -1,3 +1,0 @@
-(assume nt192.0 (not (not y$a_consume1$next)))
-(assume t192 (not y$a_consume1$next))
-(step t.end (cl) :rule resolution :premises (nt192.0 t192))

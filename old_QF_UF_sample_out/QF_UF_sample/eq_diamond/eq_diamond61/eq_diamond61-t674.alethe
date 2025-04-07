@@ -1,6 +1,0 @@
-(assume t11 (or (= x1 x2) (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))))))
-(assume t673 (not (= x1 x2)))
-(assume nt674.0 (not (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))))))
-(step t11' (cl (= x1 x2) (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))))) :rule or :premises (t11))
-(step t674 (cl (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))))) :rule resolution :premises (t11' t673))
-(step t.end (cl) :rule resolution :premises (nt674.0 t674))

@@ -1,5 +1,0 @@
-(assume a0 (= (= (f a) d) (= d (f a))))
-(assume a1 (= (= d (f b)) (= d (f b))))
-(assume a2 (not (= (or (= (f a) d) (= d (f b))) (or (= d (f a)) (= d (f b))))))
-(step t0 (cl (= (or (= (f a) d) (= d (f b))) (or (= d (f a)) (= d (f b))))) :rule cong :premises (a0 a1))
-(step t1 (cl) :rule resolution :premises (a2 t0))

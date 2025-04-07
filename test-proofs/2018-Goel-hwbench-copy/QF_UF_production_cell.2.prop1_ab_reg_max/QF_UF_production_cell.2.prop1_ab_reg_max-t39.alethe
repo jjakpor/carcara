@@ -1,5 +1,0 @@
-(assume t19 (= y$v_B y$v_at_press))
-(assume t38 (= y$v_at_press y$v_count))
-(assume nt39.0 (not (= y$v_B y$v_count)))
-(step t39 (cl (= y$v_B y$v_count)) :rule trans :premises (t19 t38))
-(step t.end (cl) :rule resolution :premises (nt39.0 t39))

@@ -1,4 +1,0 @@
-(assume t98 (and (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9))))
-(assume nt99.0 (not (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9))))
-(step t99 (cl (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9))) :rule and :premises (t98))
-(step t.end (cl) :rule resolution :premises (nt99.0 t99))

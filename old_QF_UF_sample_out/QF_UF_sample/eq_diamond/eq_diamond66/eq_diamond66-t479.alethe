@@ -1,6 +1,0 @@
-(assume t478 (or (= x41 x42) (not (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))))))
-(assume t474 (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))))
-(assume nt479.0 (not (= x41 x42)))
-(step t478' (cl (= x41 x42) (not (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))))) :rule or :premises (t478))
-(step t479 (cl (= x41 x42)) :rule resolution :premises (t478' t474))
-(step t.end (cl) :rule resolution :premises (nt479.0 t479))

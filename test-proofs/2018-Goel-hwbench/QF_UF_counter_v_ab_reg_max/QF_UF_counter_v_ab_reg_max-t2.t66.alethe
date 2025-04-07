@@ -1,7 +1,0 @@
-(assume t2.t62 (or (not (= y$2 (= y$X y$n1s4))) (not y$2) (= y$X y$n1s4)))
-(assume t2.t7 (= y$2 (= y$X y$n1s4)))
-(assume t2.t65 y$2)
-(assume nt2.t66.0 (not (= y$X y$n1s4)))
-(step t2.t62' (cl (not (= y$2 (= y$X y$n1s4))) (not y$2) (= y$X y$n1s4)) :rule or :premises (t2.t62))
-(step t2.t66 (cl (= y$X y$n1s4)) :rule resolution :premises (t2.t62' t2.t7 t2.t65))
-(step t.end (cl) :rule resolution :premises (nt2.t66.0 t2.t66))

@@ -1,5 +1,0 @@
-(assume t154 (= (and (not (= y$n0s8 y$n1s8)) (not (= y$n0s8 y$n255s8)) (not (= y$n0s8 y$n5s8)) (not (= y$n1s8 y$n255s8)) (not (= y$n1s8 y$n5s8)) (not (= y$n255s8 y$n5s8))) (and (not (= y$v_k_Table y$n1s8)) (not (= y$v_k_Table y$n255s8)) (not (= y$v_k_Table y$v_k_Table)) (not (= y$n1s8 y$n255s8)) (not (= y$n1s8 y$v_k_Table)) (not (= y$n255s8 y$v_k_Table)))))
-(assume t167 (= (and (not (= y$v_k_Table y$n1s8)) (not (= y$v_k_Table y$n255s8)) (not (= y$v_k_Table y$v_k_Table)) (not (= y$n1s8 y$n255s8)) (not (= y$n1s8 y$v_k_Table)) (not (= y$n255s8 y$v_k_Table))) false))
-(assume nt168.0 (not (= (and (not (= y$n0s8 y$n1s8)) (not (= y$n0s8 y$n255s8)) (not (= y$n0s8 y$n5s8)) (not (= y$n1s8 y$n255s8)) (not (= y$n1s8 y$n5s8)) (not (= y$n255s8 y$n5s8))) false)))
-(step t168 (cl (= (and (not (= y$n0s8 y$n1s8)) (not (= y$n0s8 y$n255s8)) (not (= y$n0s8 y$n5s8)) (not (= y$n1s8 y$n255s8)) (not (= y$n1s8 y$n5s8)) (not (= y$n255s8 y$n5s8))) false)) :rule trans :premises (t154 t167))
-(step t.end (cl) :rule resolution :premises (nt168.0 t168))

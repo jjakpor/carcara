@@ -1,6 +1,0 @@
-(assume t27 (or (= d (f a)) (= d (f b))))
-(assume nt28.0 (not (= d (f b))))
-(assume nt28.1 (not (= d (f a))))
-(step t27' (cl (= d (f a)) (= d (f b))) :rule or :premises (t27))
-(step t28 (cl (= d (f b)) (= d (f a))) :rule reordering :premises (t27'))
-(step t.end (cl) :rule resolution :premises (nt28.0 nt28.1 t28))

@@ -1,5 +1,0 @@
-(assume t66 (= (= car (not (not car))) (= car car)))
-(assume t67 (= (= car car) true))
-(assume nt68.0 (not (= (= car (not (not car))) true)))
-(step t68 (cl (= (= car (not (not car))) true)) :rule trans :premises (t66 t67))
-(step t.end (cl) :rule resolution :premises (nt68.0 t68))

@@ -1,3 +1,0 @@
-(assume nt21.0 (not (= y$v_A y$v_at_press)))
-(assume t21 (= y$v_A y$v_at_press))
-(step t.end (cl) :rule resolution :premises (nt21.0 t21))

@@ -1,8 +1,0 @@
-(assume t843 (or (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0))) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op e0 e0))) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
-(assume nt844.0 (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0)))))
-(assume nt844.1 (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)))))
-(assume nt844.2 (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op e0 e0)))))
-(assume nt844.3 (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))
-(assume nt844.4 (not (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))))
-(step t844 (cl (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op e0 e0) e0))) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op e0 e0))) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (= (op (op e0 e0) e0) (op (op (op e0 e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))))) :rule or :premises (t843))
-(step t.end (cl) :rule resolution :premises (nt844.0 nt844.1 nt844.2 nt844.3 nt844.4 t844))

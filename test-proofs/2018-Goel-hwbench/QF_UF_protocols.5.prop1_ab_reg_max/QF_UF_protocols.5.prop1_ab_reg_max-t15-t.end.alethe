@@ -1,6 +1,0 @@
-(assume nt15.0 (not (not (= (not y$962) y$v3_1517448506_495_op))))
-(assume nt15.1 (not (not (not y$962))))
-(assume nt15.2 (not y$v3_1517448506_495_op))
-(assume t15 (or (not (= (not y$962) y$v3_1517448506_495_op)) (not (not y$962)) y$v3_1517448506_495_op))
-(step t15' (cl (not (= (not y$962) y$v3_1517448506_495_op)) (not (not y$962)) y$v3_1517448506_495_op) :rule or :premises (t15))
-(step t.end (cl) :rule resolution :premises (nt15.0 nt15.1 nt15.2 t15'))

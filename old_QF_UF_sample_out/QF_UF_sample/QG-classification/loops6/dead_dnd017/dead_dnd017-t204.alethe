@@ -1,4 +1,0 @@
-(assume t142 (and (and (and (or (not (= (op e0 (op e0 e0)) e0)) (= e0 unit)) (or (not (= (op e1 (op e1 e1)) e1)) (= e1 unit))) (or (not (= (op e2 (op e2 e2)) e2)) (= e2 unit))) (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit))))
-(assume nt204.0 (not (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit))))
-(step t204 (cl (or (not (= (op e3 (op e3 e3)) e3)) (= e3 unit))) :rule and :premises (t142))
-(step t.end (cl) :rule resolution :premises (nt204.0 t204))

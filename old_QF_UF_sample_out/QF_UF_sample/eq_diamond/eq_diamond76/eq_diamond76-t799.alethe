@@ -1,3 +1,0 @@
-(assume nt799.0 (not (= (= (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (and (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (=> (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (= x71 x72)))) true)))
-(step t799 (cl (= (= (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (and (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (=> (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (= x71 x72)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt799.0 t799))

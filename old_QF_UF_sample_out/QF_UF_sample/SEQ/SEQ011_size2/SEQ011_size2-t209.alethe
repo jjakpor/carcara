@@ -1,4 +1,0 @@
-(assume nt209.0 (not (or (not (p1 (f5 c_0) c_0)) (not (= c_1 (f5 c_0))) (not (= c_1 (f7 c_0))) (not (not (p1 (f7 c_0) c_0))))))
-(assume nt209.1 (not (not (not (= c_1 (f7 c_0))))))
-(step t209 (cl (or (not (p1 (f5 c_0) c_0)) (not (= c_1 (f5 c_0))) (not (= c_1 (f7 c_0))) (not (not (p1 (f7 c_0) c_0)))) (not (not (= c_1 (f7 c_0))))) :rule or_neg)
-(step t.end (cl) :rule resolution :premises (nt209.0 nt209.1 t209))

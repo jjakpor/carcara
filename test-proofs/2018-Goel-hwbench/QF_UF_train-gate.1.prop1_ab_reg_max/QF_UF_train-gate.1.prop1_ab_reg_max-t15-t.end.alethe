@@ -1,3 +1,0 @@
-(assume nt15.0 (not y$1437))
-(assume t15 y$1437)
-(step t.end (cl) :rule resolution :premises (nt15.0 t15))

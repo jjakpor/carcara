@@ -1,5 +1,0 @@
-(assume t222 (= (= (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (not true)) (= (not true) (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))))
-(assume t231 (= (= (not true) (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
-(assume nt232.0 (not (= (= (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (not true)) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))))
-(step t232 (cl (= (= (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (not true)) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) :rule trans :premises (t222 t231))
-(step t.end (cl) :rule resolution :premises (nt232.0 t232))

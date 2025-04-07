@@ -1,6 +1,0 @@
-(assume t111.t1 (or (not (= (p4 c_0) true)) (p4 c_0)))
-(assume t111.t7 (= (p4 c_0) true))
-(assume nt111.t8.0 (not (p4 c_0)))
-(step t111.t1' (cl (not (= (p4 c_0) true)) (p4 c_0)) :rule or :premises (t111.t1))
-(step t111.t8 (cl (p4 c_0)) :rule resolution :premises (t111.t1' t111.t7))
-(step t.end (cl) :rule resolution :premises (nt111.t8.0 t111.t8))

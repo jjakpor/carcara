@@ -1,3 +1,0 @@
-(assume nt158.0 (not (= (= (op e2 unit) e2) (= e2 (op e2 unit)))))
-(step t158 (cl (= (= (op e2 unit) e2) (= e2 (op e2 unit)))) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt158.0 t158))

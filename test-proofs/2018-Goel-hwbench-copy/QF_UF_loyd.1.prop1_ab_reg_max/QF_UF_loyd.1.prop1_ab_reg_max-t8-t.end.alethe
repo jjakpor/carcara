@@ -1,3 +1,0 @@
-(assume nt8.0 (not (not (and y$a_done y$7))))
-(assume t8 (not (and y$a_done y$7)))
-(step t.end (cl) :rule resolution :premises (nt8.0 t8))

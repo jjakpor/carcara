@@ -1,5 +1,0 @@
-(assume t1056 (= (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) (= (op e0 e0) (op (op (op e0 e0) e0) e0))))
-(assume t984 (= (= (op e0 e0) (op (op (op e0 e0) e0) e0)) false))
-(assume nt1057.0 (not (= (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false)))
-(step t1057 (cl (= (= (op e0 e0) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false)) :rule trans :premises (t1056 t984))
-(step t.end (cl) :rule resolution :premises (nt1057.0 t1057))

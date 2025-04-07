@@ -1,8 +1,0 @@
-(assume t658 (= (= (op e4 e3) e4) (= e4 (op e4 e3))))
-(assume t399 (= (= (op e4 e3) e3) (= e3 (op e4 e3))))
-(assume t659 (= (= (op e4 e3) e2) (= e2 (op e4 e3))))
-(assume t660 (= (= (op e4 e3) e0) (= e0 (op e4 e3))))
-(assume t3 (= (= (op e4 e3) e1) (= e1 (op e4 e3))))
-(assume nt661.0 (not (= (or (= (op e4 e3) e4) (= (op e4 e3) e3) (= (op e4 e3) e2) (= (op e4 e3) e0) (= (op e4 e3) e1)) (or (= e4 (op e4 e3)) (= e3 (op e4 e3)) (= e2 (op e4 e3)) (= e0 (op e4 e3)) (= e1 (op e4 e3))))))
-(step t661 (cl (= (or (= (op e4 e3) e4) (= (op e4 e3) e3) (= (op e4 e3) e2) (= (op e4 e3) e0) (= (op e4 e3) e1)) (or (= e4 (op e4 e3)) (= e3 (op e4 e3)) (= e2 (op e4 e3)) (= e0 (op e4 e3)) (= e1 (op e4 e3))))) :rule cong :premises (t658 t399 t659 t660 t3))
-(step t.end (cl) :rule resolution :premises (nt661.0 t661))

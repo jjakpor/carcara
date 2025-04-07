@@ -1,5 +1,0 @@
-(assume t30 (= (not (not (= d (f b)))) (= d (f b))))
-(assume t31 (= (not (= d (f a))) (not (= d (f a)))))
-(assume nt32.0 (not (= (or (not (not (= d (f b)))) (not (= d (f a)))) (or (= d (f b)) (not (= d (f a)))))))
-(step t32 (cl (= (or (not (not (= d (f b)))) (not (= d (f a)))) (or (= d (f b)) (not (= d (f a)))))) :rule cong :premises (t30 t31))
-(step t.end (cl) :rule resolution :premises (nt32.0 t32))

@@ -1,6 +1,0 @@
-(assume t99' (or (not (not (not y$287))) y$287))
-(assume t118 (not (not y$287)))
-(assume nt119.0 (not y$287))
-(step t99'' (cl (not (not (not y$287))) y$287) :rule or :premises (t99'))
-(step t119 (cl y$287) :rule resolution :premises (t99'' t118))
-(step t.end (cl) :rule resolution :premises (nt119.0 t119))

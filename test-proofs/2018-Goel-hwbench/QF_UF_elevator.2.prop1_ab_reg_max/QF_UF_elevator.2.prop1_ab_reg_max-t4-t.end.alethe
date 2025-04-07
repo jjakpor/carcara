@@ -1,6 +1,0 @@
-(assume nt4.0 (not (not (= (= y$1518 (= y$prop y$1517)) (= y$1518 (= y$1517 y$prop))))))
-(assume nt4.1 (not (not (= y$1518 (= y$prop y$1517)))))
-(assume nt4.2 (not (= y$1518 (= y$1517 y$prop))))
-(assume t4 (or (not (= (= y$1518 (= y$prop y$1517)) (= y$1518 (= y$1517 y$prop)))) (not (= y$1518 (= y$prop y$1517))) (= y$1518 (= y$1517 y$prop))))
-(step t4' (cl (not (= (= y$1518 (= y$prop y$1517)) (= y$1518 (= y$1517 y$prop)))) (not (= y$1518 (= y$prop y$1517))) (= y$1518 (= y$1517 y$prop))) :rule or :premises (t4))
-(step t.end (cl) :rule resolution :premises (nt4.0 nt4.1 nt4.2 t4'))

@@ -1,3 +1,0 @@
-(assume nt2.t35.0 (not (= y$28 y$28)))
-(step t2.t35 (cl (= y$28 y$28)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt2.t35.0 t2.t35))

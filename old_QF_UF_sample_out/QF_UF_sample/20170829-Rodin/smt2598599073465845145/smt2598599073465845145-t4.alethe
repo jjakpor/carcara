@@ -1,5 +1,0 @@
-(assume nt4.0 (not (not (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2))))))))
-(assume nt4.1 (not (not (not (= i2 (not (= b2 r2)))))))
-(assume nt4.2 (not (= i2 (not (not (= b2 r2))))))
-(step t4 (cl (not (= (not (= i2 (not (= b2 r2)))) (= i2 (not (not (= b2 r2)))))) (not (not (= i2 (not (= b2 r2))))) (= i2 (not (not (= b2 r2))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt4.0 nt4.1 nt4.2 t4))

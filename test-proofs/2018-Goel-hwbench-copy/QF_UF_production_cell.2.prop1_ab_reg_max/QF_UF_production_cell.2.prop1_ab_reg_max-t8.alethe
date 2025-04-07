@@ -1,3 +1,0 @@
-(assume nt8.0 (not (= y$v_B y$v_B)))
-(step t8 (cl (= y$v_B y$v_B)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt8.0 t8))

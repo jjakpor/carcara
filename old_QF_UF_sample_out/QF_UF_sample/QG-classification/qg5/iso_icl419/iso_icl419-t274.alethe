@@ -1,5 +1,0 @@
-(assume nt274.0 (not (not (= (= (op (op e0 e2) e0) e2) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)))))))
-(assume nt274.1 (not (not (= (op (op e0 e2) e0) e2))))
-(assume nt274.2 (not (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)))))
-(step t274 (cl (not (= (= (op (op e0 e2) e0) e2) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3))))) (not (= (op (op e0 e2) e0) e2)) (= (op (op (op e3 e3) (op e3 e3)) e3) (op (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt274.0 nt274.1 nt274.2 t274))

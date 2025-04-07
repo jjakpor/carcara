@@ -1,3 +1,0 @@
-(assume nt84.0 (not (= (ite y$en y$s$4_op y$X) (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X))))
-(assume t84 (= (ite y$en y$s$4_op y$X) (ite y$en (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)) y$X)))
-(step t.end (cl) :rule resolution :premises (nt84.0 t84))

@@ -1,5 +1,0 @@
-(assume t977 (= (= (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) (not (not (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1)))))) (= (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1))))))
-(assume t978 (= (= (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1)))) true))
-(assume nt979.0 (not (= (= (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) (not (not (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1)))))) true)))
-(step t979 (cl (= (= (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1))) (not (not (= (op e3 (op (op e1 e3) e1)) (op (op (op e1 e3) e3) (op (op e1 e3) e1)))))) true)) :rule trans :premises (t977 t978))
-(step t.end (cl) :rule resolution :premises (nt979.0 t979))

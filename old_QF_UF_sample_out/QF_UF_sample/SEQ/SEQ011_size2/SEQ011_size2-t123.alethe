@@ -1,8 +1,0 @@
-(assume t116 (or (=> (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))))
-(assume t122 (or (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (= (f6 c_0) (f5 c_0))))
-(assume nt123.0 (not (=> (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0)))))
-(assume nt123.1 (not (= (f6 c_0) (f5 c_0))))
-(step t122' (cl (not (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) (= (f6 c_0) (f5 c_0))) :rule or :premises (t122))
-(step t116' (cl (=> (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0)))) :rule or :premises (t116))
-(step t123 (cl (=> (and (= c_1 (f5 c_0)) (= c_1 (f6 c_0))) (= (f6 c_0) (f5 c_0))) (= (f6 c_0) (f5 c_0))) :rule resolution :premises (t116' t122'))
-(step t.end (cl) :rule resolution :premises (nt123.0 nt123.1 t123))

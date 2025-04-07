@@ -1,3 +1,0 @@
-(assume nt86.0 (not (= y$v_count y$v_k_Press)))
-(assume t86 (= y$v_count y$v_k_Press))
-(step t.end (cl) :rule resolution :premises (nt86.0 t86))

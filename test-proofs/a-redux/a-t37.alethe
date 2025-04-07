@@ -1,5 +1,0 @@
-(assume t36 (or (or (not (not (= d (f b)))) (not (= d (f a)))) (or (not (not (= d (f b)))) (not (= d (f a))))))
-(assume nt37.0 (not (or (not (not (= d (f b)))) (not (= d (f a))))))
-(step t36' (cl (or (not (not (= d (f b)))) (not (= d (f a)))) (or (not (not (= d (f b)))) (not (= d (f a))))) :rule or :premises (t36))
-(step t37 (cl (or (not (not (= d (f b)))) (not (= d (f a))))) :rule contraction :premises (t36'))
-(step t.end (cl) :rule resolution :premises (nt37.0 t37))

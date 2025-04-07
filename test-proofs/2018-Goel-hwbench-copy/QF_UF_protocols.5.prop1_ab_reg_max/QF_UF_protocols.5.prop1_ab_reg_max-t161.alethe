@@ -1,6 +1,0 @@
-(assume t94 (or (not (and y$291 y$953)) y$291))
-(assume t160 (not y$291))
-(assume nt161.0 (not (not (and y$291 y$953))))
-(step t94' (cl (not (and y$291 y$953)) y$291) :rule or :premises (t94))
-(step t161 (cl (not (and y$291 y$953))) :rule resolution :premises (t94' t160))
-(step t.end (cl) :rule resolution :premises (nt161.0 t161))

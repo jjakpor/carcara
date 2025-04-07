@@ -1,5 +1,0 @@
-(assume t762 (= (= (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)) false) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)))))
-(assume nt763.0 (not (= (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)) false)))
-(assume nt763.1 (not (not (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))))
-(step t763 (cl (= (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)) false) (not (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))) :rule equiv2 :premises (t762))
-(step t.end (cl) :rule resolution :premises (nt763.0 nt763.1 t763))

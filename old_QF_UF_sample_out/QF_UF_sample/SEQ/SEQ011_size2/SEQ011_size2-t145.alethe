@@ -1,5 +1,0 @@
-(assume t143 (= (= (p1 (f7 c_0) c_0) (not (not (p1 (f7 c_0) c_0)))) (= (p1 (f7 c_0) c_0) (p1 (f7 c_0) c_0))))
-(assume t144 (= (= (p1 (f7 c_0) c_0) (p1 (f7 c_0) c_0)) true))
-(assume nt145.0 (not (= (= (p1 (f7 c_0) c_0) (not (not (p1 (f7 c_0) c_0)))) true)))
-(step t145 (cl (= (= (p1 (f7 c_0) c_0) (not (not (p1 (f7 c_0) c_0)))) true)) :rule trans :premises (t143 t144))
-(step t.end (cl) :rule resolution :premises (nt145.0 t145))

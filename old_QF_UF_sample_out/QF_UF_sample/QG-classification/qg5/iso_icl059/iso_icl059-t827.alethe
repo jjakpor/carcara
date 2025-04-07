@@ -1,4 +1,0 @@
-(assume t826 (and (= (op e3 (op e3 e0)) e0) (= (op e3 (op e3 e1)) e1)))
-(assume nt827.0 (not (= (op e3 (op e3 e0)) e0)))
-(step t827 (cl (= (op e3 (op e3 e0)) e0)) :rule and :premises (t826))
-(step t.end (cl) :rule resolution :premises (nt827.0 t827))

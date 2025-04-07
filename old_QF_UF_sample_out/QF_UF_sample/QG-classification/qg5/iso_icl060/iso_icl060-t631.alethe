@@ -1,3 +1,0 @@
-(assume nt631.0 (not (= (not (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))))) (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))))))
-(step t631 (cl (= (not (not (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))))) (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) (op e1 e3))))) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt631.0 t631))

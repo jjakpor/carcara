@@ -1,7 +1,0 @@
-(assume t19' (or (not (= (not y$974) y$v3_1517448506_500_op)) (not (not y$974)) y$v3_1517448506_500_op))
-(assume t20 (= (not y$974) y$v3_1517448506_500_op))
-(assume t80 (not y$974))
-(assume nt81.0 (not y$v3_1517448506_500_op))
-(step t19'' (cl (not (= (not y$974) y$v3_1517448506_500_op)) (not (not y$974)) y$v3_1517448506_500_op) :rule or :premises (t19'))
-(step t81 (cl y$v3_1517448506_500_op) :rule resolution :premises (t19'' t20 t80))
-(step t.end (cl) :rule resolution :premises (nt81.0 t81))

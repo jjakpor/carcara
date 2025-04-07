@@ -1,7 +1,0 @@
-(assume t269 (or (= e5 (op e5 (op e5 e5))) (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0))))) (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))))))
-(assume nt270.0 (not (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))))))
-(assume nt270.1 (not (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))))))
-(assume nt270.2 (not (= e5 (op e5 (op e5 e5)))))
-(step t269' (cl (= e5 (op e5 (op e5 e5))) (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0))))) (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))))) :rule or :premises (t269))
-(step t270 (cl (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0))))) (not (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0))))) (= e5 (op e5 (op e5 e5)))) :rule reordering :premises (t269'))
-(step t.end (cl) :rule resolution :premises (nt270.0 nt270.1 nt270.2 t270))

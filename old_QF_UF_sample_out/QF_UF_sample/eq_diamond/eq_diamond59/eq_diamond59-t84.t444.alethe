@@ -1,6 +1,0 @@
-(assume t84.t443 (or (= x40 x41) (not (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))))))
-(assume t84.t439 (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))))
-(assume nt84.t444.0 (not (= x40 x41)))
-(step t84.t443' (cl (= x40 x41) (not (or (and (= x40 y40) (= y40 x41)) (and (= x40 z40) (= z40 x41))))) :rule or :premises (t84.t443))
-(step t84.t444 (cl (= x40 x41)) :rule resolution :premises (t84.t443' t84.t439))
-(step t.end (cl) :rule resolution :premises (nt84.t444.0 t84.t444))

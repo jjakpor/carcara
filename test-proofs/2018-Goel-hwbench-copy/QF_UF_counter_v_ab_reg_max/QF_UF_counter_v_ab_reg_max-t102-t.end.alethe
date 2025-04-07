@@ -1,3 +1,0 @@
-(assume nt102.0 (not (= (= y$28 (= (not (= y$X$next y$n15s4)) y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4)))))))
-(assume t102 (= (= y$28 (= (not (= y$X$next y$n15s4)) y$prop$next)) (= y$28 (= y$prop$next (not (= y$X$next y$n15s4))))))
-(step t.end (cl) :rule resolution :premises (nt102.0 t102))

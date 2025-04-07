@@ -324,7 +324,7 @@ fn proof_list_to_node(commands: Vec<ProofCommand>, root_id: Option<&str>) -> Opt
                 let mut frame = stack.pop().unwrap();
                 if stack.is_empty() {
                     // Tracing
-                    println!("{:?}", frame.accumulator[15]);
+                    // println!("{:?}", frame.accumulator[15]);
                     break frame.accumulator;
                 }
 

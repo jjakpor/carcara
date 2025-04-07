@@ -1,5 +1,0 @@
-(assume t377 (= (= (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) false) (not (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))))))
-(assume nt378.0 (not (not (= (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) false))))
-(assume nt378.1 (not (not (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))))))
-(step t378 (cl (not (= (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) false)) (not (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))))) :rule equiv1 :premises (t377))
-(step t.end (cl) :rule resolution :premises (nt378.0 nt378.1 t378))

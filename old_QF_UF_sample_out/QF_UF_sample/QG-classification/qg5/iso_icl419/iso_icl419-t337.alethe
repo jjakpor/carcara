@@ -1,5 +1,0 @@
-(assume t336 (or (not (= (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))) (= (op (op e3 e3) (op e3 e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3))))))
-(assume nt337.0 (not (not (= (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))))
-(assume nt337.1 (not (= (op (op e3 e3) (op e3 e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3))))))
-(step t337 (cl (not (= (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))) (= (op (op e3 e3) (op e3 e3)) (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op e3 e3))))) :rule or :premises (t336))
-(step t.end (cl) :rule resolution :premises (nt337.0 nt337.1 t337))

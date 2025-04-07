@@ -1,7 +1,0 @@
-(assume t88 (or (not (= (not (= (op e2 e0) (op e3 e0))) (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))) (not (not (= (op e2 e0) (op e3 e0)))) (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))))
-(assume t92 (= (not (= (op e2 e0) (op e3 e0))) (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))))
-(assume t100 (not (= (op e2 e0) (op e3 e0))))
-(assume nt101.0 (not (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))))
-(step t88' (cl (not (= (not (= (op e2 e0) (op e3 e0))) (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1)))))) (not (not (= (op e2 e0) (op e3 e0)))) (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))) :rule or :premises (t88))
-(step t101 (cl (not (= (op (op e1 e3) (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e1))))) :rule resolution :premises (t88' t92 t100))
-(step t.end (cl) :rule resolution :premises (nt101.0 t101))

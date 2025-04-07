@@ -1,5 +1,0 @@
-(assume nt172.0 (not (not (= (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (not (not (p1 (f7 c_0) c_0)))) (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (p1 (f7 c_0) c_0))))))
-(assume nt172.1 (not (not (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (not (not (p1 (f7 c_0) c_0)))))))
-(assume nt172.2 (not (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (p1 (f7 c_0) c_0))))
-(step t172 (cl (not (= (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (not (not (p1 (f7 c_0) c_0)))) (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (p1 (f7 c_0) c_0)))) (not (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (not (not (p1 (f7 c_0) c_0))))) (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (p1 (f7 c_0) c_0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt172.0 nt172.1 nt172.2 t172))

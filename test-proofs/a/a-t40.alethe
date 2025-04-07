@@ -1,7 +1,0 @@
-(assume a0 (or (= d (f b)) (= d (f a))))
-(assume a1 (or (= d (f b)) (not (= d (f a)))))
-(assume a2 (not (= d (f b))))
-(step t0 (cl (= d (f b)) (= d (f a))) :rule or :premises (a0))
-(step t1 (cl (= d (f b)) (not (= d (f a)))) :rule or :premises (a1))
-(step t2 (cl (= d (f b))) :rule trust :premises (t0 t1))
-(step t3 (cl) :rule resolution :premises (a2 t2))

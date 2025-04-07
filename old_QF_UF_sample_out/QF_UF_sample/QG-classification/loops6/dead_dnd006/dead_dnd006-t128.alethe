@@ -1,5 +1,0 @@
-(assume t125 (= (not (= e2 (op e2 (op e2 e2)))) (not (= e2 (op e2 (op e2 e2))))))
-(assume t127 (= (= unit e2) (= e0 e2)))
-(assume nt128.0 (not (= (or (not (= e2 (op e2 (op e2 e2)))) (= unit e2)) (or (not (= e2 (op e2 (op e2 e2)))) (= e0 e2)))))
-(step t128 (cl (= (or (not (= e2 (op e2 (op e2 e2)))) (= unit e2)) (or (not (= e2 (op e2 (op e2 e2)))) (= e0 e2)))) :rule cong :premises (t125 t127))
-(step t.end (cl) :rule resolution :premises (nt128.0 t128))

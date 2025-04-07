@@ -1,5 +1,0 @@
-(assume nt71.0 (not (not (= (= y$s$4_op (ite y$6 y$n1s4 y$s$1_op)) (= y$s$4_op (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)))))))
-(assume nt71.1 (not (not (= y$s$4_op (ite y$6 y$n1s4 y$s$1_op)))))
-(assume nt71.2 (not (= y$s$4_op (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)))))
-(step t71 (cl (not (= (= y$s$4_op (ite y$6 y$n1s4 y$s$1_op)) (= y$s$4_op (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4))))) (not (= y$s$4_op (ite y$6 y$n1s4 y$s$1_op))) (= y$s$4_op (ite (= y$X y$n15s4) y$n1s4 (Add_4_4_4 y$X y$n1s4)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt71.0 nt71.1 nt71.2 t71))

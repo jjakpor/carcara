@@ -1,5 +1,0 @@
-(assume t339.t2 (= (= (p1 (f6 c_1) c_1) true) (p1 (f6 c_1) c_1)))
-(assume nt339.t3.0 (not (= (p1 (f6 c_1) c_1) true)))
-(assume nt339.t3.1 (not (not (p1 (f6 c_1) c_1))))
-(step t339.t3 (cl (= (p1 (f6 c_1) c_1) true) (not (p1 (f6 c_1) c_1))) :rule equiv2 :premises (t339.t2))
-(step t.end (cl) :rule resolution :premises (nt339.t3.0 nt339.t3.1 t339.t3))

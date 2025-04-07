@@ -1,5 +1,0 @@
-(assume t742 (= (= (op (op e4 e0) e4) e0) (= e0 (op (op e4 e0) e4))))
-(assume t744 (= (= e0 (op (op e4 e0) e4)) (= (op e3 e3) (op (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))
-(assume nt745.0 (not (= (= (op (op e4 e0) e4) e0) (= (op e3 e3) (op (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))))
-(step t745 (cl (= (= (op (op e4 e0) e4) e0) (= (op e3 e3) (op (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))) :rule trans :premises (t742 t744))
-(step t.end (cl) :rule resolution :premises (nt745.0 t745))

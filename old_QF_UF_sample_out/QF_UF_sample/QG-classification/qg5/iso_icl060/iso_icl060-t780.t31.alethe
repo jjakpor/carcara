@@ -1,6 +1,0 @@
-(assume t780.t29 (or (= (= (op e3 e1) (op e3 e3)) false) (= (op e3 e1) (op e3 e3))))
-(assume t780.t30 (not (= (op e3 e1) (op e3 e3))))
-(assume nt780.t31.0 (not (= (= (op e3 e1) (op e3 e3)) false)))
-(step t780.t29' (cl (= (= (op e3 e1) (op e3 e3)) false) (= (op e3 e1) (op e3 e3))) :rule or :premises (t780.t29))
-(step t780.t31 (cl (= (= (op e3 e1) (op e3 e3)) false)) :rule resolution :premises (t780.t29' t780.t30))
-(step t.end (cl) :rule resolution :premises (nt780.t31.0 t780.t31))

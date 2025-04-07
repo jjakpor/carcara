@@ -1,3 +1,0 @@
-(assume nt28.0 (not (not (= y$id185_op (and y$111 y$v3_1517448504_183_op)))))
-(assume t28 (not (= y$id185_op (and y$111 y$v3_1517448504_183_op))))
-(step t.end (cl) :rule resolution :premises (nt28.0 t28))

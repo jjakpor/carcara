@@ -1,5 +1,0 @@
-(assume t468 (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))
-(assume t617 (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))
-(assume nt618.0 (not (= (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0))) (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))))
-(step t618 (cl (= (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) e0))) (= (op (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0))) (op (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)))))) :rule cong :premises (t468 t617))
-(step t.end (cl) :rule resolution :premises (nt618.0 t618))

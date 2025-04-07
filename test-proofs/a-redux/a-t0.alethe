@@ -1,5 +1,0 @@
-(assume nt0.0 (not (not (= (or (not (= (f a) d)) (not (= d (f b)))) (or (not (= d (f a))) (not (= d (f b))))))))
-(assume nt0.1 (not (not (or (not (= (f a) d)) (not (= d (f b)))))))
-(assume nt0.2 (not (or (not (= d (f a))) (not (= d (f b))))))
-(step t0 (cl (not (= (or (not (= (f a) d)) (not (= d (f b)))) (or (not (= d (f a))) (not (= d (f b)))))) (not (or (not (= (f a) d)) (not (= d (f b))))) (or (not (= d (f a))) (not (= d (f b))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt0.0 nt0.1 nt0.2 t0))

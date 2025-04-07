@@ -1,8 +1,0 @@
-(assume t385 (or (= e4 (op (op (op e4 e3) (op e4 e3)) e3)) (= e3 (op (op (op e4 e3) (op e4 e3)) e3)) (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e3)) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e3)) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e3))))
-(assume nt386.0 (not (= e4 (op (op (op e4 e3) (op e4 e3)) e3))))
-(assume nt386.1 (not (= e3 (op (op (op e4 e3) (op e4 e3)) e3))))
-(assume nt386.2 (not (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e3))))
-(assume nt386.3 (not (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e3))))
-(assume nt386.4 (not (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e3))))
-(step t386 (cl (= e4 (op (op (op e4 e3) (op e4 e3)) e3)) (= e3 (op (op (op e4 e3) (op e4 e3)) e3)) (= (op e3 e4) (op (op (op e4 e3) (op e4 e3)) e3)) (= (op (op e4 e3) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e3)) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) e3))) :rule or :premises (t385))
-(step t.end (cl) :rule resolution :premises (nt386.0 nt386.1 nt386.2 nt386.3 nt386.4 t386))

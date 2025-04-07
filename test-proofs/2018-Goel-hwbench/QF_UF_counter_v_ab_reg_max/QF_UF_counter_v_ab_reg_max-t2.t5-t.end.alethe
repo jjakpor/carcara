@@ -1,3 +1,0 @@
-(assume nt2.t5.0 (not (= (= y$n1s4 y$X) (= y$X y$n1s4))))
-(assume t2.t5 (= (= y$n1s4 y$X) (= y$X y$n1s4)))
-(step t.end (cl) :rule resolution :premises (nt2.t5.0 t2.t5))

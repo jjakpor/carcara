@@ -1,4 +1,0 @@
-(assume t219.t6 (and (= (op unit e4) e4) (= (op e4 unit) e4)))
-(assume nt219.t7.0 (not (= (op e4 unit) e4)))
-(step t219.t7 (cl (= (op e4 unit) e4)) :rule and :premises (t219.t6))
-(step t.end (cl) :rule resolution :premises (nt219.t7.0 t219.t7))

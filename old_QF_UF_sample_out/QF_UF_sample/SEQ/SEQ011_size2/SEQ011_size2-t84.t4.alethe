@@ -1,3 +1,0 @@
-(assume nt84.t4.0 (not (= (= (p4 c8) true) (p4 c8))))
-(step t84.t4 (cl (= (= (p4 c8) true) (p4 c8))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nt84.t4.0 t84.t4))

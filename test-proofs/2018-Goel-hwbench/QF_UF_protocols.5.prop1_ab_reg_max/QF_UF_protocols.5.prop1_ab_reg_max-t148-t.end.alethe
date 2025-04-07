@@ -1,3 +1,0 @@
-(assume nt148.0 (not (not y$a_got_msg_Receiver)))
-(assume t148 (not y$a_got_msg_Receiver))
-(step t.end (cl) :rule resolution :premises (nt148.0 t148))

@@ -1,5 +1,0 @@
-(assume nt13.0 (not (not y$1406)))
-(assume nt13.1 (not y$prop))
-(assume t13 (or (not y$1406) y$prop))
-(step t13' (cl (not y$1406) y$prop) :rule or :premises (t13))
-(step t.end (cl) :rule resolution :premises (nt13.0 nt13.1 t13'))

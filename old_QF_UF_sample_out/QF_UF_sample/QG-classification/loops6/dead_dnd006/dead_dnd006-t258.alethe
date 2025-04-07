@@ -1,7 +1,0 @@
-(assume t251 (or (not (= (= (op e4 unit) e4) (= e4 (op e4 e0)))) (not (= (op e4 unit) e4)) (= e4 (op e4 e0))))
-(assume t255 (= (= (op e4 unit) e4) (= e4 (op e4 e0))))
-(assume t257 (= (op e4 unit) e4))
-(assume nt258.0 (not (= e4 (op e4 e0))))
-(step t251' (cl (not (= (= (op e4 unit) e4) (= e4 (op e4 e0)))) (not (= (op e4 unit) e4)) (= e4 (op e4 e0))) :rule or :premises (t251))
-(step t258 (cl (= e4 (op e4 e0))) :rule resolution :premises (t251' t255 t257))
-(step t.end (cl) :rule resolution :premises (nt258.0 t258))

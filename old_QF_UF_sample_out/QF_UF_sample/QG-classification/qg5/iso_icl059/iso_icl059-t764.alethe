@@ -1,4 +1,0 @@
-(assume nt764.0 (not (not (not (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0)))))))
-(assume nt764.1 (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))
-(step t764 (cl (not (not (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))))) (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) e0))) :rule not_not)
-(step t.end (cl) :rule resolution :premises (nt764.0 nt764.1 t764))

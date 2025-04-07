@@ -1,5 +1,0 @@
-(assume nt54.0 (not (not y$en)))
-(assume nt54.1 (not (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
-(assume t54 (or (not y$en) (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
-(step t54' (cl (not y$en) (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)))) :rule or :premises (t54))
-(step t.end (cl) :rule resolution :premises (nt54.0 nt54.1 t54'))

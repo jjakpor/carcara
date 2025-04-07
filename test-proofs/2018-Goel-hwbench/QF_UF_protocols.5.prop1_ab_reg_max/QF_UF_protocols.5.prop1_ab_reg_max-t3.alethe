@@ -1,5 +1,0 @@
-(assume nt3.0 (not (not (= y$313 (= y$a_consume0$next y$a_consume0$next_rhs_op)))))
-(assume nt3.1 (not (not y$313)))
-(assume nt3.2 (not (= y$a_consume0$next y$a_consume0$next_rhs_op)))
-(step t3 (cl (not (= y$313 (= y$a_consume0$next y$a_consume0$next_rhs_op))) (not y$313) (= y$a_consume0$next y$a_consume0$next_rhs_op)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt3.0 nt3.1 nt3.2 t3))

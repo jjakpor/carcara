@@ -1,7 +1,0 @@
-(assume t346 (or (not (= (or (not (= (f5 c_1) (f6 c_1))) (not (p4 c_1))) (or (not (= (f6 c_1) (f5 c_1))) (not (p4 c_1))))) (not (or (not (= (f5 c_1) (f6 c_1))) (not (p4 c_1)))) (or (not (= (f6 c_1) (f5 c_1))) (not (p4 c_1)))))
-(assume t350 (= (or (not (= (f5 c_1) (f6 c_1))) (not (p4 c_1))) (or (not (= (f6 c_1) (f5 c_1))) (not (p4 c_1)))))
-(assume t351 (or (not (= (f5 c_1) (f6 c_1))) (not (p4 c_1))))
-(assume nt352.0 (not (or (not (= (f6 c_1) (f5 c_1))) (not (p4 c_1)))))
-(step t346' (cl (not (= (or (not (= (f5 c_1) (f6 c_1))) (not (p4 c_1))) (or (not (= (f6 c_1) (f5 c_1))) (not (p4 c_1))))) (not (or (not (= (f5 c_1) (f6 c_1))) (not (p4 c_1)))) (or (not (= (f6 c_1) (f5 c_1))) (not (p4 c_1)))) :rule or :premises (t346))
-(step t352 (cl (or (not (= (f6 c_1) (f5 c_1))) (not (p4 c_1)))) :rule resolution :premises (t346' t350 t351))
-(step t.end (cl) :rule resolution :premises (nt352.0 t352))

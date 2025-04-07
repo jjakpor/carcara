@@ -1,3 +1,0 @@
-(assume nt24.0 (not (not y$a_in_elevator_Person_0)))
-(assume t24 (not y$a_in_elevator_Person_0))
-(step t.end (cl) :rule resolution :premises (nt24.0 t24))

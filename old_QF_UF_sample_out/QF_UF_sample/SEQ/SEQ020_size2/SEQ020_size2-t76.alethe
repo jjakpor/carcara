@@ -1,4 +1,0 @@
-(assume nt76.0 (not (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1))))))
-(assume nt76.1 (not (not (not (not (= (f6 c_1) (f5 c_1)))))))
-(step t76 (cl (or (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (not (not (not (= (f6 c_1) (f5 c_1)))))) :rule or_neg)
-(step t.end (cl) :rule resolution :premises (nt76.0 nt76.1 t76))

@@ -1,3 +1,0 @@
-(assume nt264.t2.0 (not (= e5 e5)))
-(step t264.t2 (cl (= e5 e5)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt264.t2.0 t264.t2))

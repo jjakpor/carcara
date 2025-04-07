@@ -1,7 +1,0 @@
-(assume t167 (not (and (not (p1 (f7 c_0) c_0)) (= c_0 (f7 c_0)) (= c_0 (f6 c_0)) (p1 (f6 c_0) c_0))))
-(assume nt168.0 (not (not (not (p1 (f7 c_0) c_0)))))
-(assume nt168.1 (not (not (= c_0 (f7 c_0)))))
-(assume nt168.2 (not (not (= c_0 (f6 c_0)))))
-(assume nt168.3 (not (not (p1 (f6 c_0) c_0))))
-(step t168 (cl (not (not (p1 (f7 c_0) c_0))) (not (= c_0 (f7 c_0))) (not (= c_0 (f6 c_0))) (not (p1 (f6 c_0) c_0))) :rule not_and :premises (t167))
-(step t.end (cl) :rule resolution :premises (nt168.0 nt168.1 nt168.2 nt168.3 t168))

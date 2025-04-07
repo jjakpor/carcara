@@ -1,3 +1,0 @@
-(assume nt16.0 (not (= y$en y$en)))
-(assume t16 (= y$en y$en))
-(step t.end (cl) :rule resolution :premises (nt16.0 t16))

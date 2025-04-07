@@ -1,4 +1,0 @@
-(assume t312 (and (and (and (= (op e0 e1) (op e1 e0)) (= (op e1 e1) (op e1 e1))) (= (op e2 e1) (op e1 e2))) (= (op e3 e1) (op e1 e3))))
-(assume nt313.0 (not (and (and (= (op e0 e1) (op e1 e0)) (= (op e1 e1) (op e1 e1))) (= (op e2 e1) (op e1 e2)))))
-(step t313 (cl (and (and (= (op e0 e1) (op e1 e0)) (= (op e1 e1) (op e1 e1))) (= (op e2 e1) (op e1 e2)))) :rule and :premises (t312))
-(step t.end (cl) :rule resolution :premises (nt313.0 t313))

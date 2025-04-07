@@ -1,7 +1,0 @@
-(assume t125' (or (not (= y$v3_1517448506_340_op (and y$v3_1517448506_305_op y$617))) (not y$v3_1517448506_340_op) (and y$v3_1517448506_305_op y$617)))
-(assume a366 (= y$v3_1517448506_340_op (and y$v3_1517448506_305_op y$617)))
-(assume t132 y$v3_1517448506_340_op)
-(assume nt133.0 (not (and y$v3_1517448506_305_op y$617)))
-(step t125'' (cl (not (= y$v3_1517448506_340_op (and y$v3_1517448506_305_op y$617))) (not y$v3_1517448506_340_op) (and y$v3_1517448506_305_op y$617)) :rule or :premises (t125'))
-(step t133 (cl (and y$v3_1517448506_305_op y$617)) :rule resolution :premises (t125'' a366 t132))
-(step t.end (cl) :rule resolution :premises (nt133.0 t133))

@@ -1,5 +1,0 @@
-(assume nt7.0 (not (not (= (= flash nf) (= flash nf0)))))
-(assume nt7.1 (not (not (= flash nf))))
-(assume nt7.2 (not (= flash nf0)))
-(step t7 (cl (not (= (= flash nf) (= flash nf0))) (not (= flash nf)) (= flash nf0)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt7.0 nt7.1 nt7.2 t7))

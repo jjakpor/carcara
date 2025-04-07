@@ -1,6 +1,0 @@
-(assume t765 (or (= x50 x51) (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))))))
-(assume t761 (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))))
-(assume nt766.0 (not (= x50 x51)))
-(step t765' (cl (= x50 x51) (not (or (and (= x50 y50) (= y50 x51)) (and (= x50 z50) (= z50 x51))))) :rule or :premises (t765))
-(step t766 (cl (= x50 x51)) :rule resolution :premises (t765' t761))
-(step t.end (cl) :rule resolution :premises (nt766.0 t766))

@@ -1,4 +1,0 @@
-(assume t62.t11 (and (and (= (op e2 (op e2 e0)) e0) (= (op e2 (op e2 e1)) e1)) (= (op e2 (op e2 e2)) e2)))
-(assume nt62.t12.0 (not (and (= (op e2 (op e2 e0)) e0) (= (op e2 (op e2 e1)) e1))))
-(step t62.t12 (cl (and (= (op e2 (op e2 e0)) e0) (= (op e2 (op e2 e1)) e1))) :rule and :premises (t62.t11))
-(step t.end (cl) :rule resolution :premises (nt62.t12.0 t62.t12))

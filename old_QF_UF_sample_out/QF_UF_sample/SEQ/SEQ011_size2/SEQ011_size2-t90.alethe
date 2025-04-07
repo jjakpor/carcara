@@ -1,8 +1,0 @@
-(assume t83 (or (=> (and (p4 c8) (= c8 c_1)) (p4 c_1)) (and (p4 c8) (= c8 c_1))))
-(assume t89 (or (not (and (p4 c8) (= c8 c_1))) (p4 c_1)))
-(assume nt90.0 (not (=> (and (p4 c8) (= c8 c_1)) (p4 c_1))))
-(assume nt90.1 (not (p4 c_1)))
-(step t83' (cl (=> (and (p4 c8) (= c8 c_1)) (p4 c_1)) (and (p4 c8) (= c8 c_1))) :rule or :premises (t83))
-(step t89' (cl (not (and (p4 c8) (= c8 c_1))) (p4 c_1)) :rule or :premises (t89))
-(step t90 (cl (=> (and (p4 c8) (= c8 c_1)) (p4 c_1)) (p4 c_1)) :rule resolution :premises (t83' t89'))
-(step t.end (cl) :rule resolution :premises (nt90.0 nt90.1 t90))

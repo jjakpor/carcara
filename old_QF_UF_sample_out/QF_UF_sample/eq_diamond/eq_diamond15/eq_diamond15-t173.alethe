@@ -1,6 +1,0 @@
-(assume t172 (or (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (not (and (= x2 y2) (= y2 x3)))))
-(assume t170 (not (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3)))))
-(assume nt173.0 (not (not (and (= x2 y2) (= y2 x3)))))
-(step t172' (cl (or (and (= x2 y2) (= y2 x3)) (and (= x2 z2) (= z2 x3))) (not (and (= x2 y2) (= y2 x3)))) :rule or :premises (t172))
-(step t173 (cl (not (and (= x2 y2) (= y2 x3)))) :rule resolution :premises (t172' t170))
-(step t.end (cl) :rule resolution :premises (nt173.0 t173))

@@ -1,3 +1,0 @@
-(assume nt40.0 (not (= y$v_A y$v_count)))
-(assume t40 (= y$v_A y$v_count))
-(step t.end (cl) :rule resolution :premises (nt40.0 t40))

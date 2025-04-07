@@ -1,3 +1,0 @@
-(assume nt84.t239.0 (not (= (= (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (and (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23)))) true)))
-(step t84.t239 (cl (= (= (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (and (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (=> (or (and (= x22 y22) (= y22 x23)) (and (= x22 z22) (= z22 x23))) (= x22 x23)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt84.t239.0 t84.t239))

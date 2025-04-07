@@ -1,3 +1,0 @@
-(assume nt123.0 (not (= (= y$X y$n1s4) (= y$n1s4 y$n1s4))))
-(assume t123 (= (= y$X y$n1s4) (= y$n1s4 y$n1s4)))
-(step t.end (cl) :rule resolution :premises (nt123.0 t123))

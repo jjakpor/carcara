@@ -1,7 +1,0 @@
-(assume t217 (or (not (= (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (and (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1))))) (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (and (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1)))))
-(assume t221 (= (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (and (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1)))))
-(assume t222 (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))))
-(assume nt223.0 (not (and (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1)))))
-(step t217' (cl (not (= (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (and (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1))))) (not (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1)))) (and (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1)))) :rule or :premises (t217))
-(step t223 (cl (and (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (=> (or (and (= x0 y0) (= y0 x1)) (and (= x0 z0) (= z0 x1))) (= x0 x1)))) :rule resolution :premises (t217' t221 t222))
-(step t.end (cl) :rule resolution :premises (nt223.0 t223))

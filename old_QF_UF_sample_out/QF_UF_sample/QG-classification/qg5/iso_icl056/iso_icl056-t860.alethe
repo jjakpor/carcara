@@ -1,4 +1,0 @@
-(assume t859 (= (op (op e1 (op e1 e1)) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) e1)))
-(assume nt860.0 (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) e1) (op (op e1 (op e1 e1)) (op e1 e1)))))
-(step t860 (cl (= (op (op (op e1 e1) (op e1 (op e1 e1))) e1) (op (op e1 (op e1 e1)) (op e1 e1)))) :rule symm :premises (t859))
-(step t.end (cl) :rule resolution :premises (nt860.0 t860))

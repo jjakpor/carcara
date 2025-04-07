@@ -1,5 +1,0 @@
-(assume t75 (or (or (or (not car) (not clk)) (not (not car))) (or (or (not car) (not clk)) (not (not car)))))
-(assume nt76.0 (not (or (or (not car) (not clk)) (not (not car)))))
-(step t75' (cl (or (or (not car) (not clk)) (not (not car))) (or (or (not car) (not clk)) (not (not car)))) :rule or :premises (t75))
-(step t76 (cl (or (or (not car) (not clk)) (not (not car)))) :rule contraction :premises (t75'))
-(step t.end (cl) :rule resolution :premises (nt76.0 t76))

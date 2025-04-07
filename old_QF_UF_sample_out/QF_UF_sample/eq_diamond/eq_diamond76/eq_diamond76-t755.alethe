@@ -1,3 +1,0 @@
-(assume nt755.0 (not (= (= (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (and (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (=> (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (= x67 x68)))) true)))
-(step t755 (cl (= (= (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (and (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (=> (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))) (= x67 x68)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt755.0 t755))

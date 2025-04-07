@@ -1,4 +1,0 @@
-(assume t817 (= (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op e4 e3) (op (op e4 e3) (op e4 e3)))) (= (op (op e4 e3) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))))))
-(assume nt818.0 (not (= (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))) (not (= (op (op e4 e3) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))))))))
-(step t818 (cl (= (not (= (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))) (not (= (op (op e4 e3) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op (op e4 e3) (op e4 e3))))))) :rule cong :premises (t817))
-(step t.end (cl) :rule resolution :premises (nt818.0 t818))

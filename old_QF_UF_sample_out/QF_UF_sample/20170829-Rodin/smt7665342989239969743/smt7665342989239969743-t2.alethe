@@ -1,3 +1,0 @@
-(assume nt2.0 (not (= (not (not org)) org)))
-(step t2 (cl (= (not (not org)) org)) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt2.0 t2))

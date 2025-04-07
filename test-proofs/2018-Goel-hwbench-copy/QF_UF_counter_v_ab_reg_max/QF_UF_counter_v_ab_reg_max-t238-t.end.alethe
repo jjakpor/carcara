@@ -1,3 +1,0 @@
-(assume nt238.0 (not (not y$en)))
-(assume t238 (not y$en))
-(step t.end (cl) :rule resolution :premises (nt238.0 t238))

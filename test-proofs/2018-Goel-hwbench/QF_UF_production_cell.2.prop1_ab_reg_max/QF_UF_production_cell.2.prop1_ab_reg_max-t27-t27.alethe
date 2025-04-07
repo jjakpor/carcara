@@ -1,7 +1,0 @@
-(assume t20' (or (not (= y$68 (= y$v_at_press y$v_at_table))) (not y$68) (= y$v_at_press y$v_at_table)))
-(assume t25 (= y$68 (= y$v_at_press y$v_at_table)))
-(assume t26 y$68)
-(assume nt27.0 (not (= y$v_at_press y$v_at_table)))
-(step t20'' (cl (not (= y$68 (= y$v_at_press y$v_at_table))) (not y$68) (= y$v_at_press y$v_at_table)) :rule or :premises (t20'))
-(step t27 (cl (= y$v_at_press y$v_at_table)) :rule resolution :premises (t20'' t25 t26))
-(step t.end (cl) :rule resolution :premises (nt27.0 t27))

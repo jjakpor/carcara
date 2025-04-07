@@ -1,5 +1,0 @@
-(assume t235 (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2)))
-(assume nt236.0 (not (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))))))
-(assume nt236.1 (not (= x1 x2)))
-(step t236 (cl (not (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2)))) (= x1 x2)) :rule implies :premises (t235))
-(step t.end (cl) :rule resolution :premises (nt236.0 nt236.1 t236))

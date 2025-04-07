@@ -1,5 +1,0 @@
-(assume t221 (= (op e3 e3) (op (op e3 e3) (op (op e3 e3) (op e3 e3)))))
-(assume t222 (= (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))
-(assume nt223.0 (not (= (= (op e3 e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
-(step t223 (cl (= (= (op e3 e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))) (= (op (op e3 e3) (op (op e3 e3) (op e3 e3))) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule cong :premises (t221 t222))
-(step t.end (cl) :rule resolution :premises (nt223.0 t223))

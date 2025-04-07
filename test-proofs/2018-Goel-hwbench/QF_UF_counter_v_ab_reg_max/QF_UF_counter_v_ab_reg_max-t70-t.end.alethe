@@ -1,3 +1,0 @@
-(assume nt70.0 (not (= y$X$next_rhs_op y$X$next_rhs_op)))
-(assume t70 (= y$X$next_rhs_op y$X$next_rhs_op))
-(step t.end (cl) :rule resolution :premises (nt70.0 t70))

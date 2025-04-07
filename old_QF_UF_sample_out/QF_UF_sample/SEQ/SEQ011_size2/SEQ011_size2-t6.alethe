@@ -1,3 +1,0 @@
-(assume nt6.0 (not (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) (= (p1 (f7 c_1) c_1) (not (not (p1 (f7 c_1) c_1)))))))
-(step t6 (cl (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) (= (p1 (f7 c_1) c_1) (not (not (p1 (f7 c_1) c_1)))))) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt6.0 t6))

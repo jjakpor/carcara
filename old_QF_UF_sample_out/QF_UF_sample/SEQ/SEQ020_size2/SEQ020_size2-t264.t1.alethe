@@ -1,4 +1,0 @@
-(assume t264.a0 (= c_0 (f5 c_0)))
-(assume nt264.t1.0 (not (= (f5 c_0) c_0)))
-(step t264.t1 (cl (= (f5 c_0) c_0)) :rule symm :premises (t264.a0))
-(step t.end (cl) :rule resolution :premises (nt264.t1.0 t264.t1))

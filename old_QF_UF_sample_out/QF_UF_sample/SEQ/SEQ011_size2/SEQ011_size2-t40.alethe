@@ -1,8 +1,0 @@
-(assume t39 (or (not (p1 (f5 c_1) c_1)) (not (= c_1 (f5 c_1))) (not (= c_1 (f7 c_1))) (p1 (f7 c_1) c_1)))
-(assume nt40.0 (not (p1 (f7 c_1) c_1)))
-(assume nt40.1 (not (not (p1 (f5 c_1) c_1))))
-(assume nt40.2 (not (not (= c_1 (f7 c_1)))))
-(assume nt40.3 (not (not (= c_1 (f5 c_1)))))
-(step t39' (cl (not (p1 (f5 c_1) c_1)) (not (= c_1 (f5 c_1))) (not (= c_1 (f7 c_1))) (p1 (f7 c_1) c_1)) :rule or :premises (t39))
-(step t40 (cl (p1 (f7 c_1) c_1) (not (p1 (f5 c_1) c_1)) (not (= c_1 (f7 c_1))) (not (= c_1 (f5 c_1)))) :rule reordering :premises (t39'))
-(step t.end (cl) :rule resolution :premises (nt40.0 nt40.1 nt40.2 nt40.3 t40))

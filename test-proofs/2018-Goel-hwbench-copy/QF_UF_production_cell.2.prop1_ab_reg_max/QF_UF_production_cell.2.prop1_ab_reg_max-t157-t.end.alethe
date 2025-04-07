@@ -1,3 +1,0 @@
-(assume nt157.0 (not (= (= y$v_k_Table y$n255s8) (= y$n255s8 y$v_k_Table))))
-(assume t157 (= (= y$v_k_Table y$n255s8) (= y$n255s8 y$v_k_Table)))
-(step t.end (cl) :rule resolution :premises (nt157.0 t157))

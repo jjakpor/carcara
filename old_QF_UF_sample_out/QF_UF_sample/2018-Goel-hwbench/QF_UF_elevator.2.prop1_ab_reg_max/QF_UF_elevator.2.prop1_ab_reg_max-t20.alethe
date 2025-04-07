@@ -1,5 +1,0 @@
-(assume a36 (= y$v3_1517448494_34_op (and y$a_in_elevator_Person_0 y$a_in_elevator_Person_1)))
-(assume nt20.0 (not (not y$v3_1517448494_34_op)))
-(assume nt20.1 (not (and y$a_in_elevator_Person_0 y$a_in_elevator_Person_1)))
-(step t20 (cl (not y$v3_1517448494_34_op) (and y$a_in_elevator_Person_0 y$a_in_elevator_Person_1)) :rule equiv1 :premises (a36))
-(step t.end (cl) :rule resolution :premises (nt20.0 nt20.1 t20))

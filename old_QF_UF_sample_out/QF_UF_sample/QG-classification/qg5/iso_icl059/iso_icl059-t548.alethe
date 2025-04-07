@@ -1,6 +1,0 @@
-(assume t519 (or (not (= (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false)) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))))
-(assume t547 (= (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false))
-(assume nt548.0 (not (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))))
-(step t519' (cl (not (= (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))) false)) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) :rule or :premises (t519))
-(step t548 (cl (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) :rule resolution :premises (t519' t547))
-(step t.end (cl) :rule resolution :premises (nt548.0 t548))

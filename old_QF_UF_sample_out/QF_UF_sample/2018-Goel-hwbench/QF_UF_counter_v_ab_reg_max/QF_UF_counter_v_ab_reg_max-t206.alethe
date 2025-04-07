@@ -1,5 +1,0 @@
-(assume nt206.0 (not (not (= (= y$42 (not y$44)) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))))
-(assume nt206.1 (not (not (= y$42 (not y$44)))))
-(assume nt206.2 (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
-(step t206 (cl (not (= (= y$42 (not y$44)) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) (not (= y$42 (not y$44))) (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt206.0 nt206.1 nt206.2 t206))

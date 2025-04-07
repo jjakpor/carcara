@@ -1,5 +1,0 @@
-(assume nt61.0 (not (not (= (= y$2 (= y$n1s4 y$X)) (= y$2 (= y$X y$n1s4))))))
-(assume nt61.1 (not (not (= y$2 (= y$n1s4 y$X)))))
-(assume nt61.2 (not (= y$2 (= y$X y$n1s4))))
-(step t61 (cl (not (= (= y$2 (= y$n1s4 y$X)) (= y$2 (= y$X y$n1s4)))) (not (= y$2 (= y$n1s4 y$X))) (= y$2 (= y$X y$n1s4))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt61.0 nt61.1 nt61.2 t61))

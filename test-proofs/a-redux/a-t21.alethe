@@ -1,7 +1,0 @@
-(assume t8 (or (not (= (or (not (= d (f b))) (not (not (= d (f a))))) (or (not (= d (f b))) (= d (f a))))) (not (or (not (= d (f b))) (not (not (= d (f a)))))) (or (not (= d (f b))) (= d (f a)))))
-(assume t10 (= (or (not (= d (f b))) (not (not (= d (f a))))) (or (not (= d (f b))) (= d (f a)))))
-(assume t20 (or (not (= d (f b))) (not (not (= d (f a))))))
-(assume nt21.0 (not (or (not (= d (f b))) (= d (f a)))))
-(step t8' (cl (not (= (or (not (= d (f b))) (not (not (= d (f a))))) (or (not (= d (f b))) (= d (f a))))) (not (or (not (= d (f b))) (not (not (= d (f a)))))) (or (not (= d (f b))) (= d (f a)))) :rule or :premises (t8))
-(step t21 (cl (or (not (= d (f b))) (= d (f a)))) :rule resolution :premises (t8' t10 t20))
-(step t.end (cl) :rule resolution :premises (nt21.0 t21))

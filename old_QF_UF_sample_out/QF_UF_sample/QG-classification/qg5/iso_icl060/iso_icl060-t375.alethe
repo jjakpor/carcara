@@ -1,6 +1,0 @@
-(assume t362 (or (= (= (op (op (op e1 e3) e1) e1) (op (op (op e1 e3) e3) e1)) false) (= (op (op (op e1 e3) e1) e1) (op (op (op e1 e3) e3) e1))))
-(assume t374 (not (= (op (op (op e1 e3) e1) e1) (op (op (op e1 e3) e3) e1))))
-(assume nt375.0 (not (= (= (op (op (op e1 e3) e1) e1) (op (op (op e1 e3) e3) e1)) false)))
-(step t362' (cl (= (= (op (op (op e1 e3) e1) e1) (op (op (op e1 e3) e3) e1)) false) (= (op (op (op e1 e3) e1) e1) (op (op (op e1 e3) e3) e1))) :rule or :premises (t362))
-(step t375 (cl (= (= (op (op (op e1 e3) e1) e1) (op (op (op e1 e3) e3) e1)) false)) :rule resolution :premises (t362' t374))
-(step t.end (cl) :rule resolution :premises (nt375.0 t375))

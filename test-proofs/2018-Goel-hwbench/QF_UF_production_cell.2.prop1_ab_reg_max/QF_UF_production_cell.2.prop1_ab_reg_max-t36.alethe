@@ -1,7 +1,0 @@
-(assume t28 (or (not (= y$70 (= y$v_at_table y$v_count))) (not y$70) (= y$v_at_table y$v_count)))
-(assume t34 (= y$70 (= y$v_at_table y$v_count)))
-(assume t35 y$70)
-(assume nt36.0 (not (= y$v_at_table y$v_count)))
-(step t28' (cl (not (= y$70 (= y$v_at_table y$v_count))) (not y$70) (= y$v_at_table y$v_count)) :rule or :premises (t28))
-(step t36 (cl (= y$v_at_table y$v_count)) :rule resolution :premises (t28' t34 t35))
-(step t.end (cl) :rule resolution :premises (nt36.0 t36))

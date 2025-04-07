@@ -1,3 +1,0 @@
-(assume nt75.0 (not (= y$6 y$6)))
-(assume t75 (= y$6 y$6))
-(step t.end (cl) :rule resolution :premises (nt75.0 t75))

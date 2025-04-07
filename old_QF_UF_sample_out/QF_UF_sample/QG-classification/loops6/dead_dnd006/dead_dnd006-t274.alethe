@@ -1,5 +1,0 @@
-(assume t273 (or (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5)))) (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5))))))
-(assume nt274.0 (not (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5))))))
-(step t273' (cl (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5)))) (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5))))) :rule or :premises (t273))
-(step t274 (cl (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5))))) :rule contraction :premises (t273'))
-(step t.end (cl) :rule resolution :premises (nt274.0 t274))

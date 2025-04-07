@@ -1,4 +1,0 @@
-(assume nt266.0 (not (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0))))))
-(assume nt266.1 (not (= c_0 (f6 c_0))))
-(step t266 (cl (not (and (= c_0 (f5 c_0)) (= c_0 (f6 c_0)))) (= c_0 (f6 c_0))) :rule and_pos)
-(step t.end (cl) :rule resolution :premises (nt266.0 nt266.1 t266))

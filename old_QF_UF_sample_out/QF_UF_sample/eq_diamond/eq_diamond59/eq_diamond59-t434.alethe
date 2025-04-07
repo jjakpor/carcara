@@ -1,5 +1,0 @@
-(assume t433 (=> (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21))) (= x20 x21)))
-(assume nt434.0 (not (not (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21))))))
-(assume nt434.1 (not (= x20 x21)))
-(step t434 (cl (not (or (and (= x20 y20) (= y20 x21)) (and (= x20 z20) (= z20 x21)))) (= x20 x21)) :rule implies :premises (t433))
-(step t.end (cl) :rule resolution :premises (nt434.0 nt434.1 t434))

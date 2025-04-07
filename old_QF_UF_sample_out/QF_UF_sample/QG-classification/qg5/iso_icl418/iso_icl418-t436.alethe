@@ -1,6 +1,0 @@
-(assume t420 (or (not (= (= e4 (op (op (op e4 e3) (op e4 e3)) e3)) false)) (not (= e4 (op (op (op e4 e3) (op e4 e3)) e3)))))
-(assume t435 (= (= e4 (op (op (op e4 e3) (op e4 e3)) e3)) false))
-(assume nt436.0 (not (not (= e4 (op (op (op e4 e3) (op e4 e3)) e3)))))
-(step t420' (cl (not (= (= e4 (op (op (op e4 e3) (op e4 e3)) e3)) false)) (not (= e4 (op (op (op e4 e3) (op e4 e3)) e3)))) :rule or :premises (t420))
-(step t436 (cl (not (= e4 (op (op (op e4 e3) (op e4 e3)) e3)))) :rule resolution :premises (t420' t435))
-(step t.end (cl) :rule resolution :premises (nt436.0 t436))

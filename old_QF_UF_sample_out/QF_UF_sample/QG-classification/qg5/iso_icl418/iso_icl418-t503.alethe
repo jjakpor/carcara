@@ -1,6 +1,0 @@
-(assume t486 (or (not (= (= e3 (op (op (op e4 e3) (op e4 e3)) e4)) false)) (not (= e3 (op (op (op e4 e3) (op e4 e3)) e4)))))
-(assume t502 (= (= e3 (op (op (op e4 e3) (op e4 e3)) e4)) false))
-(assume nt503.0 (not (not (= e3 (op (op (op e4 e3) (op e4 e3)) e4)))))
-(step t486' (cl (not (= (= e3 (op (op (op e4 e3) (op e4 e3)) e4)) false)) (not (= e3 (op (op (op e4 e3) (op e4 e3)) e4)))) :rule or :premises (t486))
-(step t503 (cl (not (= e3 (op (op (op e4 e3) (op e4 e3)) e4)))) :rule resolution :premises (t486' t502))
-(step t.end (cl) :rule resolution :premises (nt503.0 t503))

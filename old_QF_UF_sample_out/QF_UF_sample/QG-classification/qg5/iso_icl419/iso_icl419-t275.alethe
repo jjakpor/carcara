@@ -1,3 +1,0 @@
-(assume nt275.0 (not (= (= (op (op e0 e2) e0) e2) (= e2 (op (op e0 e2) e0)))))
-(step t275 (cl (= (= (op (op e0 e2) e0) e2) (= e2 (op (op e0 e2) e0)))) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt275.0 t275))

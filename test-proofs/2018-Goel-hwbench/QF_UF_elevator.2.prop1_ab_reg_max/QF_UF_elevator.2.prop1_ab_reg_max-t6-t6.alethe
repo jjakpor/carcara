@@ -1,3 +1,0 @@
-(assume nt6.0 (not (= (= y$prop y$1517) (= y$1517 y$prop))))
-(step t6 (cl (= (= y$prop y$1517) (= y$1517 y$prop))) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt6.0 t6))

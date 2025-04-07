@@ -1,4 +1,0 @@
-(assume nt342.0 (not (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1)))))
-(assume nt342.1 (not (= c_1 (f6 c_1))))
-(step t342 (cl (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f6 c_1)) (p1 (f6 c_1) c_1))) (= c_1 (f6 c_1))) :rule and_pos)
-(step t.end (cl) :rule resolution :premises (nt342.0 nt342.1 t342))

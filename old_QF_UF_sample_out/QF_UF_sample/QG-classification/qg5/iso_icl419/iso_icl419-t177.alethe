@@ -1,5 +1,0 @@
-(assume t174 (= (not (= (op e0 e2) (op e1 e2))) (not (= (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))))))
-(assume t176 (= (not (= (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))) (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
-(assume nt177.0 (not (= (not (= (op e0 e2) (op e1 e2))) (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))))
-(step t177 (cl (= (not (= (op e0 e2) (op e1 e2))) (not (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))) :rule trans :premises (t174 t176))
-(step t.end (cl) :rule resolution :premises (nt177.0 t177))

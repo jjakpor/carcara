@@ -1,8 +1,0 @@
-(assume t270 (or (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5)))) (= e5 (op e5 (op e5 e5)))))
-(assume t271 (or (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5)))) (not (= e5 (op e5 (op e5 e5))))))
-(assume nt272.0 (not (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5))))))
-(assume nt272.1 (not (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5))))))
-(step t270' (cl (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5)))) (= e5 (op e5 (op e5 e5)))) :rule or :premises (t270))
-(step t271' (cl (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5)))) (not (= e5 (op e5 (op e5 e5))))) :rule or :premises (t271))
-(step t272 (cl (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5)))) (=> (and (= e5 (op e5 e0)) (= e0 (op e5 (op e5 e0)))) (= e5 (op e5 (op e5 e5))))) :rule resolution :premises (t270' t271'))
-(step t.end (cl) :rule resolution :premises (nt272.0 nt272.1 t272))

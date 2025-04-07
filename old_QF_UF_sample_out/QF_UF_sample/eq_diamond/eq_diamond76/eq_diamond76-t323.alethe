@@ -1,5 +1,0 @@
-(assume nt323.0 (not (not (= (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (and (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (=> (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (= x28 x29)))))))
-(assume nt323.1 (not (not (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))))))
-(assume nt323.2 (not (and (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (=> (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (= x28 x29)))))
-(step t323 (cl (not (= (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (and (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (=> (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (= x28 x29))))) (not (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29)))) (and (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (=> (or (and (= x28 y28) (= y28 x29)) (and (= x28 z28) (= z28 x29))) (= x28 x29)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt323.0 nt323.1 nt323.2 t323))

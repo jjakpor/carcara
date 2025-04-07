@@ -1,6 +1,0 @@
-(assume t84.t256 (or (= x23 x24) (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))))
-(assume t84.t252 (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))
-(assume nt84.t257.0 (not (= x23 x24)))
-(step t84.t256' (cl (= x23 x24) (not (or (and (= x23 y23) (= y23 x24)) (and (= x23 z23) (= z23 x24))))) :rule or :premises (t84.t256))
-(step t84.t257 (cl (= x23 x24)) :rule resolution :premises (t84.t256' t84.t252))
-(step t.end (cl) :rule resolution :premises (nt84.t257.0 t84.t257))

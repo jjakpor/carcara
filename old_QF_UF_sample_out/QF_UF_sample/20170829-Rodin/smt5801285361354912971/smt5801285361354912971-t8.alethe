@@ -1,6 +1,0 @@
-(assume t5 (or (not org) (and (not rd1) (not rd2))))
-(assume t7 (not (and (not rd1) (not rd2))))
-(assume nt8.0 (not (not org)))
-(step t5' (cl (not org) (and (not rd1) (not rd2))) :rule or :premises (t5))
-(step t8 (cl (not org)) :rule resolution :premises (t5' t7))
-(step t.end (cl) :rule resolution :premises (nt8.0 t8))

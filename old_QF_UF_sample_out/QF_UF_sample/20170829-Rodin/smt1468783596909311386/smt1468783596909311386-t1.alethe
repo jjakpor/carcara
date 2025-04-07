@@ -1,5 +1,0 @@
-(assume nt1.0 (not (not (= (not (not rd1)) rd1))))
-(assume nt1.1 (not (not (not (not rd1)))))
-(assume nt1.2 (not rd1))
-(step t1 (cl (not (= (not (not rd1)) rd1)) (not (not (not rd1))) rd1) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt1.0 nt1.1 nt1.2 t1))

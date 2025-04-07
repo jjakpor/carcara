@@ -1,4 +1,0 @@
-(assume t62.t9 (and (and (and (and (= (op e2 (op e2 e0)) e0) (= (op e2 (op e2 e1)) e1)) (= (op e2 (op e2 e2)) e2)) (= (op e2 (op e2 e3)) e3)) (= (op e2 (op e2 e4)) e4)))
-(assume nt62.t10.0 (not (and (and (and (= (op e2 (op e2 e0)) e0) (= (op e2 (op e2 e1)) e1)) (= (op e2 (op e2 e2)) e2)) (= (op e2 (op e2 e3)) e3))))
-(step t62.t10 (cl (and (and (and (= (op e2 (op e2 e0)) e0) (= (op e2 (op e2 e1)) e1)) (= (op e2 (op e2 e2)) e2)) (= (op e2 (op e2 e3)) e3))) :rule and :premises (t62.t9))
-(step t.end (cl) :rule resolution :premises (nt62.t10.0 t62.t10))

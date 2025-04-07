@@ -1,5 +1,0 @@
-(assume t734 (= (= x14 x15) (= x0 x65)))
-(assume t740 (= (= x0 x65) false))
-(assume nt741.0 (not (= (= x14 x15) false)))
-(step t741 (cl (= (= x14 x15) false)) :rule trans :premises (t734 t740))
-(step t.end (cl) :rule resolution :premises (nt741.0 t741))

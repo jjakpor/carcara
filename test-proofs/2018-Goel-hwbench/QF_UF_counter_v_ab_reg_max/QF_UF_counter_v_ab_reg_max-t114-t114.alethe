@@ -1,3 +1,0 @@
-(assume nt114.0 (not (= y$44 y$44)))
-(step t114 (cl (= y$44 y$44)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt114.0 t114))

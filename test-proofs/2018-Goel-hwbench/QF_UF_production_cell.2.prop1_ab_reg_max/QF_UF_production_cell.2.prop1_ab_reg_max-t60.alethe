@@ -1,5 +1,0 @@
-(assume t36 (= y$v_at_table y$v_count))
-(assume t59 (= y$v_count y$v_k_Belt))
-(assume nt60.0 (not (= y$v_at_table y$v_k_Belt)))
-(step t60 (cl (= y$v_at_table y$v_k_Belt)) :rule trans :premises (t36 t59))
-(step t.end (cl) :rule resolution :premises (nt60.0 t60))

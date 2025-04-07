@@ -1,3 +1,0 @@
-(assume nt89.0 (not (not (and y$a_consume0$next_rhs_op y$956))))
-(assume t89 (not (and y$a_consume0$next_rhs_op y$956)))
-(step t.end (cl) :rule resolution :premises (nt89.0 t89))

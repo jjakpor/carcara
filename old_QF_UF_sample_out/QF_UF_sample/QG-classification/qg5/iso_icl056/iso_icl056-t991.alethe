@@ -1,3 +1,0 @@
-(assume nt991.0 (not (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))) (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))))))
-(step t991 (cl (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))) (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))))) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt991.0 t991))

@@ -1,5 +1,0 @@
-(assume t4 (= (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) true) (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1))))
-(assume nt5.0 (not (not (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) true))))
-(assume nt5.1 (not (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1))))
-(step t5 (cl (not (= (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1)) true)) (= (not (not (p1 (f7 c_1) c_1))) (p1 (f7 c_1) c_1))) :rule equiv1 :premises (t4))
-(step t.end (cl) :rule resolution :premises (nt5.0 nt5.1 t5))

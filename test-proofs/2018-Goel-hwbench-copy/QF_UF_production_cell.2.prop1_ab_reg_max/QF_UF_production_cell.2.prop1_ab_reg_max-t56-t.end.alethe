@@ -1,3 +1,0 @@
-(assume nt56.0 (not y$74))
-(assume t56 y$74)
-(step t.end (cl) :rule resolution :premises (nt56.0 t56))

@@ -1,3 +1,0 @@
-(assume nt2.t12.0 (not (= y$X$next_rhs_op y$X$next_rhs_op)))
-(assume t2.t12 (= y$X$next_rhs_op y$X$next_rhs_op))
-(step t.end (cl) :rule resolution :premises (nt2.t12.0 t2.t12))

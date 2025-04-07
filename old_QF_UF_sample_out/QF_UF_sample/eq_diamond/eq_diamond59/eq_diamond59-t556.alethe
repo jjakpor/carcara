@@ -1,6 +1,0 @@
-(assume t555 (or (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32)))) (= x31 x32)))
-(assume nt556.0 (not (= x31 x32)))
-(assume nt556.1 (not (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))))))
-(step t555' (cl (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32)))) (= x31 x32)) :rule or :premises (t555))
-(step t556 (cl (= x31 x32) (not (or (and (= x31 y31) (= y31 x32)) (and (= x31 z31) (= z31 x32))))) :rule reordering :premises (t555'))
-(step t.end (cl) :rule resolution :premises (nt556.0 nt556.1 t556))

@@ -1,5 +1,0 @@
-(assume nt532.0 (not (not (= (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (and (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48)))))))
-(assume nt532.1 (not (not (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))))))
-(assume nt532.2 (not (and (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48)))))
-(step t532 (cl (not (= (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (and (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48))))) (not (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48)))) (and (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (=> (or (and (= x47 y47) (= y47 x48)) (and (= x47 z47) (= z47 x48))) (= x47 x48)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt532.0 nt532.1 nt532.2 t532))

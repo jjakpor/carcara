@@ -1,7 +1,0 @@
-(assume t183 (or (not (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3))) (not (= e3 (op e3 e0)))))
-(assume t203 (not (= e3 (op e3 (op e3 e3)))))
-(assume t211 (= e3 (op e3 e0)))
-(assume nt212.0 (not (not (= e0 (op e3 (op e3 e0))))))
-(step t183' (cl (not (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3))) (not (= e3 (op e3 e0)))) :rule or :premises (t183))
-(step t212 (cl (not (= e0 (op e3 (op e3 e0))))) :rule resolution :premises (t183' t203 t211))
-(step t.end (cl) :rule resolution :premises (nt212.0 t212))

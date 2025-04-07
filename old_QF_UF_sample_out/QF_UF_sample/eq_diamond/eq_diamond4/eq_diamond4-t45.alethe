@@ -1,6 +1,0 @@
-(assume t13 (or (not (= (= x1 x2) false)) (not (= x1 x2))))
-(assume t44 (= (= x1 x2) false))
-(assume nt45.0 (not (not (= x1 x2))))
-(step t13' (cl (not (= (= x1 x2) false)) (not (= x1 x2))) :rule or :premises (t13))
-(step t45 (cl (not (= x1 x2))) :rule resolution :premises (t13' t44))
-(step t.end (cl) :rule resolution :premises (nt45.0 t45))

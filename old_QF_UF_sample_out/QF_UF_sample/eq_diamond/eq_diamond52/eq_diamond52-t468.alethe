@@ -1,4 +1,0 @@
-(assume t467 (and (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42))))
-(assume nt468.0 (not (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42))))
-(step t468 (cl (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42))) :rule and :premises (t467))
-(step t.end (cl) :rule resolution :premises (nt468.0 t468))

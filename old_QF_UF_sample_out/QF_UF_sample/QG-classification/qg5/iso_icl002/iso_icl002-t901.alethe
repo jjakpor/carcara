@@ -1,5 +1,0 @@
-(assume t899 (= (or (or (or (or (= (op e2 e4) e0) (= (op e2 e4) e1)) (= (op e2 e4) e2)) (= (op e2 e4) e3)) (= (op e2 e4) e4)) (or (= (op e2 e4) e4) (= (op e2 e4) e3) (= (op e2 e4) e2) (= (op e2 e4) e0) (= (op e2 e4) e1))))
-(assume t900 (= (or (= (op e2 e4) e4) (= (op e2 e4) e3) (= (op e2 e4) e2) (= (op e2 e4) e0) (= (op e2 e4) e1)) (or (= e4 (op e2 e4)) (= e3 (op e2 e4)) (= e2 (op e2 e4)) (= e0 (op e2 e4)) (= e1 (op e2 e4)))))
-(assume nt901.0 (not (= (or (or (or (or (= (op e2 e4) e0) (= (op e2 e4) e1)) (= (op e2 e4) e2)) (= (op e2 e4) e3)) (= (op e2 e4) e4)) (or (= e4 (op e2 e4)) (= e3 (op e2 e4)) (= e2 (op e2 e4)) (= e0 (op e2 e4)) (= e1 (op e2 e4))))))
-(step t901 (cl (= (or (or (or (or (= (op e2 e4) e0) (= (op e2 e4) e1)) (= (op e2 e4) e2)) (= (op e2 e4) e3)) (= (op e2 e4) e4)) (or (= e4 (op e2 e4)) (= e3 (op e2 e4)) (= e2 (op e2 e4)) (= e0 (op e2 e4)) (= e1 (op e2 e4))))) :rule trans :premises (t899 t900))
-(step t.end (cl) :rule resolution :premises (nt901.0 t901))

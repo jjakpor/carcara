@@ -1,4 +1,0 @@
-(assume t153.t4 (= (p1 (f6 c_0) c_0) true))
-(assume nt153.t5.0 (not (= true (p1 (f6 c_0) c_0))))
-(step t153.t5 (cl (= true (p1 (f6 c_0) c_0))) :rule symm :premises (t153.t4))
-(step t.end (cl) :rule resolution :premises (nt153.t5.0 t153.t5))

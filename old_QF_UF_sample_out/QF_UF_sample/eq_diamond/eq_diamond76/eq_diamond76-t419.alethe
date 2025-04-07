@@ -1,5 +1,0 @@
-(assume t418 (=> (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))) (= x36 x37)))
-(assume nt419.0 (not (not (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37))))))
-(assume nt419.1 (not (= x36 x37)))
-(step t419 (cl (not (or (and (= x36 y36) (= y36 x37)) (and (= x36 z36) (= z36 x37)))) (= x36 x37)) :rule implies :premises (t418))
-(step t.end (cl) :rule resolution :premises (nt419.0 nt419.1 t419))

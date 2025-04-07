@@ -1,5 +1,0 @@
-(assume t867 (= (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))) (= (op e1 e3) (op (op e1 e3) e3))))
-(assume t877 (= (= (op e1 e3) (op (op e1 e3) e3)) false))
-(assume nt878.0 (not (= (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))) false)))
-(step t878 (cl (= (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))) false)) :rule trans :premises (t867 t877))
-(step t.end (cl) :rule resolution :premises (nt878.0 t878))

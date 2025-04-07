@@ -1,5 +1,0 @@
-(assume nt714.t19.0 (not (not (= (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))))))
-(assume nt714.t19.1 (not (not (not (= (op e3 e0) (op e3 e1))))))
-(assume nt714.t19.2 (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))))
-(step t714.t19 (cl (not (= (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e1) (op e3 (op (op e1 e3) e1)))))) (not (not (= (op e3 e0) (op e3 e1)))) (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt714.t19.0 nt714.t19.1 nt714.t19.2 t714.t19))

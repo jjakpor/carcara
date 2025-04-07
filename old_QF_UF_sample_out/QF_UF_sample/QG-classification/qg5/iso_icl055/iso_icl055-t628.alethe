@@ -1,5 +1,0 @@
-(assume t611 (= (= (op e1 e1) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op e1 e1) (op e1 e1)))) (= (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))))))
-(assume t627 (= (= (op (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1))))) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))))) false))
-(assume nt628.0 (not (= (= (op e1 e1) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op e1 e1) (op e1 e1)))) false)))
-(step t628 (cl (= (= (op e1 e1) (op (op (op e1 e1) (op (op (op e1 e1) (op e1 e1)) (op (op e1 e1) (op e1 e1)))) (op (op e1 e1) (op e1 e1)))) false)) :rule trans :premises (t611 t627))
-(step t.end (cl) :rule resolution :premises (nt628.0 t628))

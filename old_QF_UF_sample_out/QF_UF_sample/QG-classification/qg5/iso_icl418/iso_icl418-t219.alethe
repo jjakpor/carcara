@@ -1,5 +1,0 @@
-(assume t218 (or (not (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) (op e4 e3)))))
-(assume nt219.0 (not (not (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3)))))))
-(assume nt219.1 (not (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) (op e4 e3)))))
-(step t219 (cl (not (= (op e4 e3) (op (op e4 e3) (op (op e4 e3) (op e4 e3))))) (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) (op e4 e3)))) :rule or :premises (t218))
-(step t.end (cl) :rule resolution :premises (nt219.0 nt219.1 t219))

@@ -1,5 +1,0 @@
-(assume nt23.0 (not (not (= (or (= (f a) d) (= d (f b))) (or (= d (f a)) (= d (f b)))))))
-(assume nt23.1 (not (not (or (= (f a) d) (= d (f b))))))
-(assume nt23.2 (not (or (= d (f a)) (= d (f b)))))
-(step t23 (cl (not (= (or (= (f a) d) (= d (f b))) (or (= d (f a)) (= d (f b))))) (not (or (= (f a) d) (= d (f b)))) (or (= d (f a)) (= d (f b)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt23.0 nt23.1 nt23.2 t23))

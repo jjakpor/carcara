@@ -1,5 +1,0 @@
-(assume t830 (= (= (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0))) false) (not (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0))))))
-(assume nt831.0 (not (= (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0))) false)))
-(assume nt831.1 (not (not (not (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0)))))))
-(step t831 (cl (= (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0))) false) (not (not (= (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0)))))) :rule equiv2 :premises (t830))
-(step t.end (cl) :rule resolution :premises (nt831.0 nt831.1 t831))

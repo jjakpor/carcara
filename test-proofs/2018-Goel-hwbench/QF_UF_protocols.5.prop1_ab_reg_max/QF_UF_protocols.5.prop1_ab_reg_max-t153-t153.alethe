@@ -1,6 +1,0 @@
-(assume t141' (or y$v3_1517448506_302_op (not (not y$545))))
-(assume t152 (not y$v3_1517448506_302_op))
-(assume nt153.0 (not (not (not y$545))))
-(step t141'' (cl y$v3_1517448506_302_op (not (not y$545))) :rule or :premises (t141'))
-(step t153 (cl (not (not y$545))) :rule resolution :premises (t141'' t152))
-(step t.end (cl) :rule resolution :premises (nt153.0 t153))

@@ -1,3 +1,0 @@
-(assume nt168.0 (not (= (and (not (= y$n0s8 y$n1s8)) (not (= y$n0s8 y$n255s8)) (not (= y$n0s8 y$n5s8)) (not (= y$n1s8 y$n255s8)) (not (= y$n1s8 y$n5s8)) (not (= y$n255s8 y$n5s8))) false)))
-(assume t168 (= (and (not (= y$n0s8 y$n1s8)) (not (= y$n0s8 y$n255s8)) (not (= y$n0s8 y$n5s8)) (not (= y$n1s8 y$n255s8)) (not (= y$n1s8 y$n5s8)) (not (= y$n255s8 y$n5s8))) false))
-(step t.end (cl) :rule resolution :premises (nt168.0 t168))

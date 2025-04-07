@@ -1,3 +1,0 @@
-(assume nt4.0 (not (= y$14 y$prop)))
-(assume t4 (= y$14 y$prop))
-(step t.end (cl) :rule resolution :premises (nt4.0 t4))

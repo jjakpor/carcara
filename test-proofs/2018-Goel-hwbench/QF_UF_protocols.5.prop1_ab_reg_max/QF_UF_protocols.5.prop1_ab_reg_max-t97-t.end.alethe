@@ -1,3 +1,0 @@
-(assume nt97.0 (not (= (and y$287 y$288) y$v3_1517448506_161_op)))
-(assume t97 (= (and y$287 y$288) y$v3_1517448506_161_op))
-(step t.end (cl) :rule resolution :premises (nt97.0 t97))

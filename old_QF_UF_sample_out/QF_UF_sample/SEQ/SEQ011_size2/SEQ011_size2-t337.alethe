@@ -1,7 +1,0 @@
-(assume t336 (or (= (f6 c_1) (f5 c_1)) (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1)))) (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))))))
-(assume nt337.0 (not (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))))))
-(assume nt337.1 (not (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))))))
-(assume nt337.2 (not (= (f6 c_1) (f5 c_1))))
-(step t336' (cl (= (f6 c_1) (f5 c_1)) (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1)))) (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1))))) :rule or :premises (t336))
-(step t337 (cl (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1)))) (not (and (= c_1 (f5 c_1)) (= c_1 (f6 c_1)))) (= (f6 c_1) (f5 c_1))) :rule reordering :premises (t336'))
-(step t.end (cl) :rule resolution :premises (nt337.0 nt337.1 nt337.2 t337))

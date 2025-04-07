@@ -1,3 +1,0 @@
-(assume nt218.0 (not (= (= (f5 c_0) c_1) (= c_1 (f5 c_0)))))
-(step t218 (cl (= (= (f5 c_0) c_1) (= c_1 (f5 c_0)))) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt218.0 t218))

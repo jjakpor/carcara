@@ -1,3 +1,0 @@
-(assume nt213.0 (not (= y$33 (= y$n15s4 (Add_4_4_4 y$X y$n1s4)))))
-(assume t213 (= y$33 (= y$n15s4 (Add_4_4_4 y$X y$n1s4))))
-(step t.end (cl) :rule resolution :premises (nt213.0 t213))

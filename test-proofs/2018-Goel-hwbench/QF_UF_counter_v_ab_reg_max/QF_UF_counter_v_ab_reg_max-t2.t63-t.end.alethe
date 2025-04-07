@@ -1,6 +1,0 @@
-(assume nt2.t63.0 (not (not (= y$58 (and y$2 y$13 y$28 y$26 y$45 y$44)))))
-(assume nt2.t63.1 (not (not y$58)))
-(assume nt2.t63.2 (not (and y$2 y$13 y$28 y$26 y$45 y$44)))
-(assume t2.t63 (or (not (= y$58 (and y$2 y$13 y$28 y$26 y$45 y$44))) (not y$58) (and y$2 y$13 y$28 y$26 y$45 y$44)))
-(step t2.t63' (cl (not (= y$58 (and y$2 y$13 y$28 y$26 y$45 y$44))) (not y$58) (and y$2 y$13 y$28 y$26 y$45 y$44)) :rule or :premises (t2.t63))
-(step t.end (cl) :rule resolution :premises (nt2.t63.0 nt2.t63.1 nt2.t63.2 t2.t63'))

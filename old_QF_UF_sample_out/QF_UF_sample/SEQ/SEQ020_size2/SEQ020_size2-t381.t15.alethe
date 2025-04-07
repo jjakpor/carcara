@@ -1,8 +1,0 @@
-(assume t381.t13 (or (= (p1 (f7 c_1) c_1) false) (not (not (p1 (f7 c_1) c_1)))))
-(assume t381.t14 (or (not (not (not (p1 (f7 c_1) c_1)))) (p1 (f7 c_1) c_1)))
-(assume nt381.t15.0 (not (= (p1 (f7 c_1) c_1) false)))
-(assume nt381.t15.1 (not (p1 (f7 c_1) c_1)))
-(step t381.t13' (cl (= (p1 (f7 c_1) c_1) false) (not (not (p1 (f7 c_1) c_1)))) :rule or :premises (t381.t13))
-(step t381.t14' (cl (not (not (not (p1 (f7 c_1) c_1)))) (p1 (f7 c_1) c_1)) :rule or :premises (t381.t14))
-(step t381.t15 (cl (= (p1 (f7 c_1) c_1) false) (p1 (f7 c_1) c_1)) :rule resolution :premises (t381.t13' t381.t14'))
-(step t.end (cl) :rule resolution :premises (nt381.t15.0 nt381.t15.1 t381.t15))

@@ -1,3 +1,0 @@
-(assume nt16.0 (not (= (not y$962) y$v3_1517448506_495_op)))
-(assume t16 (= (not y$962) y$v3_1517448506_495_op))
-(step t.end (cl) :rule resolution :premises (nt16.0 t16))

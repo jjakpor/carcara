@@ -1,7 +1,0 @@
-(assume t150 (or (not (= y$45 (= y$45 true))) (not y$45) (= y$45 true)))
-(assume t152 (= y$45 (= y$45 true)))
-(assume t153 y$45)
-(assume nt154.0 (not (= y$45 true)))
-(step t150' (cl (not (= y$45 (= y$45 true))) (not y$45) (= y$45 true)) :rule or :premises (t150))
-(step t154 (cl (= y$45 true)) :rule resolution :premises (t150' t152 t153))
-(step t.end (cl) :rule resolution :premises (nt154.0 t154))

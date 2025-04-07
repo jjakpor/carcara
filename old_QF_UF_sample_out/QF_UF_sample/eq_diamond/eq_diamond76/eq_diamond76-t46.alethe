@@ -1,5 +1,0 @@
-(assume t45 (=> (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))) (= x8 x9)))
-(assume nt46.0 (not (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9))))))
-(assume nt46.1 (not (= x8 x9)))
-(step t46 (cl (not (or (and (= x8 y8) (= y8 x9)) (and (= x8 z8) (= z8 x9)))) (= x8 x9)) :rule implies :premises (t45))
-(step t.end (cl) :rule resolution :premises (nt46.0 nt46.1 t46))

@@ -1,4 +1,0 @@
-(assume nt169.0 (not (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3))))))
-(assume nt169.1 (not (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))))
-(step t169 (cl (=> (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0)))) (= e3 (op e3 (op e3 e3)))) (and (= e3 (op e3 e0)) (= e0 (op e3 (op e3 e0))))) :rule implies_neg1)
-(step t.end (cl) :rule resolution :premises (nt169.0 nt169.1 t169))

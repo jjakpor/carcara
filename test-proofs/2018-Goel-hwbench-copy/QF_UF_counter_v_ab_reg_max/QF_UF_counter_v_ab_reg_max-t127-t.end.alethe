@@ -1,3 +1,0 @@
-(assume nt127.0 (not (= (Add_4_4_4 y$X y$n1s4) (Add_4_4_4 y$n1s4 y$n1s4))))
-(assume t127 (= (Add_4_4_4 y$X y$n1s4) (Add_4_4_4 y$n1s4 y$n1s4)))
-(step t.end (cl) :rule resolution :premises (nt127.0 t127))

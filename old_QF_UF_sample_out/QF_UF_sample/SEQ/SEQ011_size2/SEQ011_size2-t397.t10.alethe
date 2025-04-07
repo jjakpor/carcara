@@ -1,5 +1,0 @@
-(assume t397.t8 (= (f7 c_1) c_0))
-(assume t397.t9 (= c_1 c_1))
-(assume nt397.t10.0 (not (= (p1 (f7 c_1) c_1) (p1 c_0 c_1))))
-(step t397.t10 (cl (= (p1 (f7 c_1) c_1) (p1 c_0 c_1))) :rule cong :premises (t397.t8 t397.t9))
-(step t.end (cl) :rule resolution :premises (nt397.t10.0 t397.t10))

@@ -1,8 +1,0 @@
-(assume t915 (= (= (op e2 e4) (op e4 e2)) (= (op e2 e4) (op e4 e2))))
-(assume t916 (= (= (op e2 e3) (op e3 e2)) (= (op e2 e3) (op e3 e2))))
-(assume t917 (= (= (op e2 e2) (op e2 e2)) true))
-(assume t918 (= (= (op e2 e0) (op e0 e2)) (= (op e0 e2) (op e2 e0))))
-(assume t919 (= (= (op e2 e1) (op e1 e2)) (= (op e1 e2) (op e2 e1))))
-(assume nt920.0 (not (= (and (= (op e2 e4) (op e4 e2)) (= (op e2 e3) (op e3 e2)) (= (op e2 e2) (op e2 e2)) (= (op e2 e0) (op e0 e2)) (= (op e2 e1) (op e1 e2))) (and (= (op e2 e4) (op e4 e2)) (= (op e2 e3) (op e3 e2)) true (= (op e0 e2) (op e2 e0)) (= (op e1 e2) (op e2 e1))))))
-(step t920 (cl (= (and (= (op e2 e4) (op e4 e2)) (= (op e2 e3) (op e3 e2)) (= (op e2 e2) (op e2 e2)) (= (op e2 e0) (op e0 e2)) (= (op e2 e1) (op e1 e2))) (and (= (op e2 e4) (op e4 e2)) (= (op e2 e3) (op e3 e2)) true (= (op e0 e2) (op e2 e0)) (= (op e1 e2) (op e2 e1))))) :rule cong :premises (t915 t916 t917 t918 t919))
-(step t.end (cl) :rule resolution :premises (nt920.0 t920))

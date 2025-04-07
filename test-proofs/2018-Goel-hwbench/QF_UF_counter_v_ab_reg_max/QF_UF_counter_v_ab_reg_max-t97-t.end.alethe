@@ -1,3 +1,0 @@
-(assume nt97.0 (not (= y$27 (not (= y$X$next y$n15s4)))))
-(assume t97 (= y$27 (not (= y$X$next y$n15s4))))
-(step t.end (cl) :rule resolution :premises (nt97.0 t97))

@@ -1,5 +1,0 @@
-(assume t308 (or (p1 (f5 c_0) c_0) (not (p4 c_0))))
-(assume nt309.0 (not (p1 (f5 c_0) c_0)))
-(assume nt309.1 (not (not (p4 c_0))))
-(step t309 (cl (p1 (f5 c_0) c_0) (not (p4 c_0))) :rule or :premises (t308))
-(step t.end (cl) :rule resolution :premises (nt309.0 nt309.1 t309))

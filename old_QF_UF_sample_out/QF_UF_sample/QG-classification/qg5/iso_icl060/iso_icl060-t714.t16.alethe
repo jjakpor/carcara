@@ -1,5 +1,0 @@
-(assume t714.t15 (= (= (= (op e3 e1) (op e3 (op (op e1 e3) e1))) false) (not (= (op e3 e1) (op e3 (op (op e1 e3) e1))))))
-(assume nt714.t16.0 (not (= (= (op e3 e1) (op e3 (op (op e1 e3) e1))) false)))
-(assume nt714.t16.1 (not (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1)))))))
-(step t714.t16 (cl (= (= (op e3 e1) (op e3 (op (op e1 e3) e1))) false) (not (not (= (op e3 e1) (op e3 (op (op e1 e3) e1)))))) :rule equiv2 :premises (t714.t15))
-(step t.end (cl) :rule resolution :premises (nt714.t16.0 nt714.t16.1 t714.t16))

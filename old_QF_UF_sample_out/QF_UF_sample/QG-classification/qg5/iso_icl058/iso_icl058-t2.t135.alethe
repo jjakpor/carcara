@@ -1,4 +1,0 @@
-(assume t2.t134 (and (and (and (and (and (and (and (and (and (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e0) (op e3 e2)))) (not (= (op e3 e0) (op e3 e3)))) (not (= (op e3 e0) (op e3 e4)))) (not (= (op e3 e1) (op e3 e2)))) (not (= (op e3 e1) (op e3 e3)))) (not (= (op e3 e1) (op e3 e4)))) (not (= (op e3 e2) (op e3 e3)))) (not (= (op e3 e2) (op e3 e4)))) (not (= (op e3 e3) (op e3 e4)))))
-(assume nt2.t135.0 (not (not (= (op e3 e3) (op e3 e4)))))
-(step t2.t135 (cl (not (= (op e3 e3) (op e3 e4)))) :rule and :premises (t2.t134))
-(step t.end (cl) :rule resolution :premises (nt2.t135.0 t2.t135))

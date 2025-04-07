@@ -1,5 +1,0 @@
-(assume t898 (= (= e1 (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op e1 e1)))) (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))
-(assume t790 (= (= (op (op e1 e1) (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))) false))
-(assume nt899.0 (not (= (= e1 (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op e1 e1)))) false)))
-(step t899 (cl (= (= e1 (op (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op e1 (op e1 e1)))) false)) :rule trans :premises (t898 t790))
-(step t.end (cl) :rule resolution :premises (nt899.0 t899))

@@ -1,5 +1,0 @@
-(assume t16 (= (= x0 x58) (= x0 x58)))
-(assume t17 (= (not (not (= x0 x58))) (= x0 x58)))
-(assume nt18.0 (not (= (= (= x0 x58) (not (not (= x0 x58)))) (= (= x0 x58) (= x0 x58)))))
-(step t18 (cl (= (= (= x0 x58) (not (not (= x0 x58)))) (= (= x0 x58) (= x0 x58)))) :rule cong :premises (t16 t17))
-(step t.end (cl) :rule resolution :premises (nt18.0 t18))

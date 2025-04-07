@@ -1,4 +1,0 @@
-(assume nt21.0 (not (not (and y$a_in_elevator_Person_0 y$a_in_elevator_Person_1))))
-(assume nt21.1 (not y$a_in_elevator_Person_0))
-(step t21 (cl (not (and y$a_in_elevator_Person_0 y$a_in_elevator_Person_1)) y$a_in_elevator_Person_0) :rule and_pos)
-(step t.end (cl) :rule resolution :premises (nt21.0 nt21.1 t21))

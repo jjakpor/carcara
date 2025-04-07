@@ -1,5 +1,0 @@
-(assume nt412.0 (not (and (not (= (f6 c_1) (f5 c_1))) (= c_1 (f6 c_1)))))
-(assume nt412.1 (not (not (not (= (f6 c_1) (f5 c_1))))))
-(assume nt412.2 (not (not (= c_1 (f6 c_1)))))
-(step t412 (cl (and (not (= (f6 c_1) (f5 c_1))) (= c_1 (f6 c_1))) (not (not (= (f6 c_1) (f5 c_1)))) (not (= c_1 (f6 c_1)))) :rule and_neg)
-(step t.end (cl) :rule resolution :premises (nt412.0 nt412.1 nt412.2 t412))

@@ -1,4 +1,0 @@
-(assume t8 (and (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15))))
-(assume nt9.0 (not (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15))))
-(step t9 (cl (=> (or (and (= x14 y14) (= y14 x15)) (and (= x14 z14) (= z14 x15))) (= x14 x15))) :rule and :premises (t8))
-(step t.end (cl) :rule resolution :premises (nt9.0 t9))

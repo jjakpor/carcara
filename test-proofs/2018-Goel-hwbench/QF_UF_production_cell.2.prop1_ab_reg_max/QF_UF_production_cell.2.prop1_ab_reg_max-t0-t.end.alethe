@@ -1,6 +1,0 @@
-(assume nt0.0 (not (not (= (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8) false))))
-(assume nt0.1 (not (not (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8))))
-(assume nt0.2 (not false))
-(assume t0 (or (not (= (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8) false)) (not (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8)) false))
-(step t0' (cl (not (= (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8) false)) (not (distinct y$n0s8 y$n1s8 y$n255s8 y$n5s8)) false) :rule or :premises (t0))
-(step t.end (cl) :rule resolution :premises (nt0.0 nt0.1 nt0.2 t0'))

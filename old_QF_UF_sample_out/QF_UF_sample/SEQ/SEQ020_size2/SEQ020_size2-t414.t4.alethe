@@ -1,3 +1,0 @@
-(assume nt414.t4.0 (not (= (f5 c_1) (f5 c_1))))
-(step t414.t4 (cl (= (f5 c_1) (f5 c_1))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt414.t4.0 t414.t4))

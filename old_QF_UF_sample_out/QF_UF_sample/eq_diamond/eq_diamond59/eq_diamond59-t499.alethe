@@ -1,4 +1,0 @@
-(assume t498 (and (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (=> (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (= x26 x27))))
-(assume nt499.0 (not (=> (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (= x26 x27))))
-(step t499 (cl (=> (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (= x26 x27))) :rule and :premises (t498))
-(step t.end (cl) :rule resolution :premises (nt499.0 t499))

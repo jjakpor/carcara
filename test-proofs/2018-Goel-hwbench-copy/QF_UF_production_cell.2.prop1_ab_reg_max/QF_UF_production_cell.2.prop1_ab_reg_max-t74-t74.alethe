@@ -1,5 +1,0 @@
-(assume t27 (= y$v_at_press y$v_at_table))
-(assume t73 (= y$v_at_table y$v_k_Deposit))
-(assume nt74.0 (not (= y$v_at_press y$v_k_Deposit)))
-(step t74 (cl (= y$v_at_press y$v_k_Deposit)) :rule trans :premises (t27 t73))
-(step t.end (cl) :rule resolution :premises (nt74.0 t74))

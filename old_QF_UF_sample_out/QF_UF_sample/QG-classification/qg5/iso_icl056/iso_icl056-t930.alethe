@@ -1,5 +1,0 @@
-(assume t924 (= (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))) (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1)))))
-(assume t929 (= (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 e1))) false))
-(assume nt930.0 (not (= (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))) false)))
-(step t930 (cl (= (= (op e1 (op e1 e1)) (op (op e1 e1) (op (op e1 e1) (op e1 (op e1 e1))))) false)) :rule trans :premises (t924 t929))
-(step t.end (cl) :rule resolution :premises (nt930.0 t930))

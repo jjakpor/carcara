@@ -1,8 +1,0 @@
-; cargo run slice QF_UF_sample/2018-Goel-hwbench/QF_UF_counter_v_ab_reg_max.alethe QF_UF_sample/2018-Goel-hwbench/QF_UF_counter_v_ab_reg_max.smt2 --from t2.t136 --small -v
-(assume a0 (or (not (= y$58 (= y$n15s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))) (not y$58) (= y$n15s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))))
-(assume a1 (= y$58 (= y$n15s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))))
-(assume a2 y$58)
-(assume a3 (not (= y$n15s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))))
-(step t0 (cl (not (= y$58 (= y$n15s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))) (not y$58) (= y$n15s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))) :rule or :premises (a0))
-(step t1 (cl (= y$n15s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))) :rule resolution :premises (a1 a2 a3 t0))
-(step t2 (cl) :rule resolution :premises (a3 t1))

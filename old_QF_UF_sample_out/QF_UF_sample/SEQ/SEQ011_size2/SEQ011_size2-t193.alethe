@@ -1,4 +1,0 @@
-(assume nt193.0 (not (not (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0))))))
-(assume nt193.1 (not (= c_1 (f5 c_0))))
-(step t193 (cl (not (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0)))) (= c_1 (f5 c_0))) :rule and_pos)
-(step t.end (cl) :rule resolution :premises (nt193.0 nt193.1 t193))

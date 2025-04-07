@@ -1,4 +1,0 @@
-(assume t236 (and (and (and (and (and (not (= (op e0 e0) (op e1 e0))) (not (= (op e0 e0) (op e2 e0)))) (not (= (op e0 e0) (op e3 e0)))) (not (= (op e0 e0) (op e4 e0)))) (not (= (op e1 e0) (op e2 e0)))) (not (= (op e1 e0) (op e3 e0)))))
-(assume nt237.0 (not (and (and (and (and (not (= (op e0 e0) (op e1 e0))) (not (= (op e0 e0) (op e2 e0)))) (not (= (op e0 e0) (op e3 e0)))) (not (= (op e0 e0) (op e4 e0)))) (not (= (op e1 e0) (op e2 e0))))))
-(step t237 (cl (and (and (and (and (not (= (op e0 e0) (op e1 e0))) (not (= (op e0 e0) (op e2 e0)))) (not (= (op e0 e0) (op e3 e0)))) (not (= (op e0 e0) (op e4 e0)))) (not (= (op e1 e0) (op e2 e0))))) :rule and :premises (t236))
-(step t.end (cl) :rule resolution :premises (nt237.0 t237))

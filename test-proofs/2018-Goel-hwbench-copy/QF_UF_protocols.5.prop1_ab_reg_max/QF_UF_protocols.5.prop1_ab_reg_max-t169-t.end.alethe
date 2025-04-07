@@ -1,5 +1,0 @@
-(assume nt169.0 (not (not (not (not y$1086)))))
-(assume nt169.1 (not y$1086))
-(assume t169 (or (not (not (not y$1086))) y$1086))
-(step t169' (cl (not (not (not y$1086))) y$1086) :rule or :premises (t169))
-(step t.end (cl) :rule resolution :premises (nt169.0 nt169.1 t169'))

@@ -1,7 +1,0 @@
-(assume t172 (or (not (= (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (not (not (p1 (f7 c_0) c_0)))) (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (p1 (f7 c_0) c_0)))) (not (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (not (not (p1 (f7 c_0) c_0))))) (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (p1 (f7 c_0) c_0))))
-(assume t176 (= (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (not (not (p1 (f7 c_0) c_0)))) (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (p1 (f7 c_0) c_0))))
-(assume t199 (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (not (not (p1 (f7 c_0) c_0)))))
-(assume nt200.0 (not (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (p1 (f7 c_0) c_0))))
-(step t172' (cl (not (= (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (not (not (p1 (f7 c_0) c_0)))) (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (p1 (f7 c_0) c_0)))) (not (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (not (not (p1 (f7 c_0) c_0))))) (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (p1 (f7 c_0) c_0))) :rule or :premises (t172))
-(step t200 (cl (or (not (p1 (f6 c_0) c_0)) (not (= c_0 (f6 c_0))) (not (= c_0 (f7 c_0))) (p1 (f7 c_0) c_0))) :rule resolution :premises (t172' t176 t199))
-(step t.end (cl) :rule resolution :premises (nt200.0 t200))

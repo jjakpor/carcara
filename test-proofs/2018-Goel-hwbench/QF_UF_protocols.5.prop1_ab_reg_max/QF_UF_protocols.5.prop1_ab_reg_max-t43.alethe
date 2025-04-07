@@ -1,5 +1,0 @@
-(assume nt43.0 (not (not (= (not y$1092) y$id34$next_op))))
-(assume nt43.1 (not (not (not y$1092))))
-(assume nt43.2 (not y$id34$next_op))
-(step t43 (cl (not (= (not y$1092) y$id34$next_op)) (not (not y$1092)) y$id34$next_op) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt43.0 nt43.1 nt43.2 t43))

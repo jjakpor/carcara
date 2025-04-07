@@ -1,7 +1,0 @@
-(assume a0 (or (not (= (or (= (f a) d) (= d (f b))) (or (= d (f a)) (= d (f b))))) (not (or (= (f a) d) (= d (f b)))) (or (= d (f a)) (= d (f b)))))
-(assume a1 (= (or (= (f a) d) (= d (f b))) (or (= d (f a)) (= d (f b)))))
-(assume a2 (or (= (f a) d) (= d (f b))))
-(assume a3 (not (or (= d (f a)) (= d (f b)))))
-(step t0 (cl (not (= (or (= (f a) d) (= d (f b))) (or (= d (f a)) (= d (f b))))) (not (or (= (f a) d) (= d (f b)))) (or (= d (f a)) (= d (f b)))) :rule or :premises (a0))
-(step t1 (cl (or (= d (f a)) (= d (f b)))) :rule resolution :premises (a1 t0 a2))
-(step t2 (cl) :rule resolution :premises (a3 t1))

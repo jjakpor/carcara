@@ -1,3 +1,0 @@
-(assume nt43.0 (not (= (= (f7 c_1) c_1) (= c_1 (f7 c_1)))))
-(step t43 (cl (= (= (f7 c_1) c_1) (= c_1 (f7 c_1)))) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt43.0 t43))

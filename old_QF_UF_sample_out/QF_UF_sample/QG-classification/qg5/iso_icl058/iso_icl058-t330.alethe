@@ -1,4 +1,0 @@
-(assume t329 (and (and (and (and (and (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e0) (op e3 e2)))) (not (= (op e3 e0) (op e3 e3)))) (not (= (op e3 e0) (op e3 e4)))) (not (= (op e3 e1) (op e3 e2)))) (not (= (op e3 e1) (op e3 e3)))))
-(assume nt330.0 (not (and (and (and (and (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e0) (op e3 e2)))) (not (= (op e3 e0) (op e3 e3)))) (not (= (op e3 e0) (op e3 e4)))) (not (= (op e3 e1) (op e3 e2))))))
-(step t330 (cl (and (and (and (and (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e0) (op e3 e2)))) (not (= (op e3 e0) (op e3 e3)))) (not (= (op e3 e0) (op e3 e4)))) (not (= (op e3 e1) (op e3 e2))))) :rule and :premises (t329))
-(step t.end (cl) :rule resolution :premises (nt330.0 t330))

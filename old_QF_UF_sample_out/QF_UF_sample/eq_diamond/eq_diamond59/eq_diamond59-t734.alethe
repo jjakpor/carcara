@@ -1,5 +1,0 @@
-(assume nt734.0 (not (not (= (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (and (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (=> (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (= x48 x49)))))))
-(assume nt734.1 (not (not (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))))))
-(assume nt734.2 (not (and (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (=> (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (= x48 x49)))))
-(step t734 (cl (not (= (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (and (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (=> (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (= x48 x49))))) (not (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49)))) (and (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (=> (or (and (= x48 y48) (= y48 x49)) (and (= x48 z48) (= z48 x49))) (= x48 x49)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt734.0 nt734.1 nt734.2 t734))

@@ -1,5 +1,0 @@
-(assume t21 (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6)))
-(assume nt22.0 (not (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))))))
-(assume nt22.1 (not (= x5 x6)))
-(step t22 (cl (not (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6)))) (= x5 x6)) :rule implies :premises (t21))
-(step t.end (cl) :rule resolution :premises (nt22.0 nt22.1 t22))

@@ -1,5 +1,0 @@
-(assume t228 (= (= x3 x4) (= x0 x20)))
-(assume t234 (= (= x0 x20) false))
-(assume nt235.0 (not (= (= x3 x4) false)))
-(step t235 (cl (= (= x3 x4) false)) :rule trans :premises (t228 t234))
-(step t.end (cl) :rule resolution :premises (nt235.0 t235))

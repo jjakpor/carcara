@@ -1,7 +1,0 @@
-(assume t261 (or (not (= (not (= (op e0 e2) (op e0 e3))) (not (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))) (not (not (= (op e0 e2) (op e0 e3)))) (not (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
-(assume t266 (= (not (= (op e0 e2) (op e0 e3))) (not (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
-(assume t267 (not (= (op e0 e2) (op e0 e3))))
-(assume nt268.0 (not (not (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))))
-(step t261' (cl (not (= (not (= (op e0 e2) (op e0 e3))) (not (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3)))))) (not (not (= (op e0 e2) (op e0 e3)))) (not (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule or :premises (t261))
-(step t268 (cl (not (= (op (op e3 e3) e3) (op (op e3 e3) (op (op (op e3 e3) (op e3 e3)) e3))))) :rule resolution :premises (t261' t266 t267))
-(step t.end (cl) :rule resolution :premises (nt268.0 t268))

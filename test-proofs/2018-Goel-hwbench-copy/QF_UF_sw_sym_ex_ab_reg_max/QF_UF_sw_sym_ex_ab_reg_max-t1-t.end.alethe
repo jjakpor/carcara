@@ -1,6 +1,0 @@
-(assume nt1.0 (not (not (= y$219 (and y$L0 y$2 y$4 y$6 y$8 y$10 y$12 y$14 y$LoneHot y$18 y$20 y$215 y$205)))))
-(assume nt1.1 (not (not y$219)))
-(assume nt1.2 (not (and y$L0 y$2 y$4 y$6 y$8 y$10 y$12 y$14 y$LoneHot y$18 y$20 y$215 y$205)))
-(assume t1 (or (not (= y$219 (and y$L0 y$2 y$4 y$6 y$8 y$10 y$12 y$14 y$LoneHot y$18 y$20 y$215 y$205))) (not y$219) (and y$L0 y$2 y$4 y$6 y$8 y$10 y$12 y$14 y$LoneHot y$18 y$20 y$215 y$205)))
-(step t1' (cl (not (= y$219 (and y$L0 y$2 y$4 y$6 y$8 y$10 y$12 y$14 y$LoneHot y$18 y$20 y$215 y$205))) (not y$219) (and y$L0 y$2 y$4 y$6 y$8 y$10 y$12 y$14 y$LoneHot y$18 y$20 y$215 y$205)) :rule or :premises (t1))
-(step t.end (cl) :rule resolution :premises (nt1.0 nt1.1 nt1.2 t1'))

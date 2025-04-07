@@ -1,3 +1,0 @@
-(assume nt61.0 (not (not y$dve_invalid$next)))
-(assume t61 (not y$dve_invalid$next))
-(step t.end (cl) :rule resolution :premises (nt61.0 t61))

@@ -1,4 +1,0 @@
-(assume nt416.0 (not (not (and (not (= (f6 c_1) (f5 c_1))) (= c_1 (f6 c_1))))))
-(assume nt416.1 (not (= c_1 (f6 c_1))))
-(step t416 (cl (not (and (not (= (f6 c_1) (f5 c_1))) (= c_1 (f6 c_1)))) (= c_1 (f6 c_1))) :rule and_pos)
-(step t.end (cl) :rule resolution :premises (nt416.0 nt416.1 t416))

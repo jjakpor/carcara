@@ -1,6 +1,0 @@
-(assume t508 (or (= x45 x46) (not (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))))))
-(assume t504 (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))))
-(assume nt509.0 (not (= x45 x46)))
-(step t508' (cl (= x45 x46) (not (or (and (= x45 y45) (= y45 x46)) (and (= x45 z45) (= z45 x46))))) :rule or :premises (t508))
-(step t509 (cl (= x45 x46)) :rule resolution :premises (t508' t504))
-(step t.end (cl) :rule resolution :premises (nt509.0 t509))

@@ -1,4 +1,0 @@
-(assume nt1217.0 (not (not (and (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) (= e1 (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3)))))))
-(assume nt1217.1 (not (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))))
-(step t1217 (cl (not (and (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3))) (= e1 (op (op (op e1 e3) e1) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op e3 (op (op e1 e3) e3))))) (not (= (op (op (op e1 e3) e1) e3) (op (op (op e1 e3) e3) e3)))) :rule and_pos)
-(step t.end (cl) :rule resolution :premises (nt1217.0 nt1217.1 t1217))

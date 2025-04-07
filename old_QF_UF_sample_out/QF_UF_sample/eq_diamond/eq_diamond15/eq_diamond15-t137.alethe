@@ -1,6 +1,0 @@
-(assume t136 (or (= x11 x12) (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))))))
-(assume t132 (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))))
-(assume nt137.0 (not (= x11 x12)))
-(step t136' (cl (= x11 x12) (not (or (and (= x11 y11) (= y11 x12)) (and (= x11 z11) (= z11 x12))))) :rule or :premises (t136))
-(step t137 (cl (= x11 x12)) :rule resolution :premises (t136' t132))
-(step t.end (cl) :rule resolution :premises (nt137.0 t137))

@@ -1,3 +1,0 @@
-(assume nt66.0 (not (and y$v3_1517448506_460_op y$v3_1517448506_529_op)))
-(assume t66 (and y$v3_1517448506_460_op y$v3_1517448506_529_op))
-(step t.end (cl) :rule resolution :premises (nt66.0 t66))

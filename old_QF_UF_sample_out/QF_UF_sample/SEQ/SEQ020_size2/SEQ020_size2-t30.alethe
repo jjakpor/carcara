@@ -1,6 +1,0 @@
-(assume t27 (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1)) false))
-(assume t29 (or (not (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1)) false)) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1)))))
-(assume nt30.0 (not (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1)))))
-(step t29' (cl (not (=> (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1)) false)) (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1)))) :rule or :premises (t29))
-(step t30 (cl (not (and (not (p1 (f7 c_1) c_1)) (= c_1 (f7 c_1)) (= c_1 (f5 c_1)) (p1 (f5 c_1) c_1)))) :rule resolution :premises (t27 t29'))
-(step t.end (cl) :rule resolution :premises (nt30.0 t30))

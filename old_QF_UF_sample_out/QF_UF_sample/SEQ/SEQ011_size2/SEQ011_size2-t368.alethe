@@ -1,4 +1,0 @@
-(assume nt368.0 (not (not (and (p1 (f6 c_1) c_1) (= c_1 (f6 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1))))))
-(assume nt368.1 (not (p1 (f6 c_1) c_1)))
-(step t368 (cl (not (and (p1 (f6 c_1) c_1) (= c_1 (f6 c_1)) (= c_1 (f7 c_1)) (not (p1 (f7 c_1) c_1)))) (p1 (f6 c_1) c_1)) :rule and_pos)
-(step t.end (cl) :rule resolution :premises (nt368.0 nt368.1 t368))

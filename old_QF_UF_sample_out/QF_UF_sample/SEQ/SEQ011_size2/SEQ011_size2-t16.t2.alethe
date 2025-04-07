@@ -1,3 +1,0 @@
-(assume nt16.t2.0 (not (= (= (p1 (f7 c_1) c_1) false) (not (p1 (f7 c_1) c_1)))))
-(step t16.t2 (cl (= (= (p1 (f7 c_1) c_1) false) (not (p1 (f7 c_1) c_1)))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nt16.t2.0 t16.t2))

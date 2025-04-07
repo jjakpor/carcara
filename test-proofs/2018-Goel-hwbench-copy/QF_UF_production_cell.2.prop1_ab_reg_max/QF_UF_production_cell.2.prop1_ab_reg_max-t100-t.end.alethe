@@ -1,3 +1,0 @@
-(assume nt100.0 (not (= y$v_count y$v_k_Table)))
-(assume t100 (= y$v_count y$v_k_Table))
-(step t.end (cl) :rule resolution :premises (nt100.0 t100))

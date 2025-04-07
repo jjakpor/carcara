@@ -1,7 +1,0 @@
-(assume t954 (or (not (= (not (= (op e1 e1) (op e1 e3))) (not (= (op e1 e1) (op e1 (op e1 (op e1 e1))))))) (not (not (= (op e1 e1) (op e1 e3)))) (not (= (op e1 e1) (op e1 (op e1 (op e1 e1)))))))
-(assume t956 (= (not (= (op e1 e1) (op e1 e3))) (not (= (op e1 e1) (op e1 (op e1 (op e1 e1)))))))
-(assume t957 (not (= (op e1 e1) (op e1 e3))))
-(assume nt958.0 (not (not (= (op e1 e1) (op e1 (op e1 (op e1 e1)))))))
-(step t954' (cl (not (= (not (= (op e1 e1) (op e1 e3))) (not (= (op e1 e1) (op e1 (op e1 (op e1 e1))))))) (not (not (= (op e1 e1) (op e1 e3)))) (not (= (op e1 e1) (op e1 (op e1 (op e1 e1)))))) :rule or :premises (t954))
-(step t958 (cl (not (= (op e1 e1) (op e1 (op e1 (op e1 e1)))))) :rule resolution :premises (t954' t956 t957))
-(step t.end (cl) :rule resolution :premises (nt958.0 t958))

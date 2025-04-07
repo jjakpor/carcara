@@ -1,5 +1,0 @@
-(assume nt502.0 (not (not (= (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (and (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (=> (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (= x44 x45)))))))
-(assume nt502.1 (not (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))))))
-(assume nt502.2 (not (and (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (=> (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (= x44 x45)))))
-(step t502 (cl (not (= (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (and (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (=> (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (= x44 x45))))) (not (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45)))) (and (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (=> (or (and (= x44 y44) (= y44 x45)) (and (= x44 z44) (= z44 x45))) (= x44 x45)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt502.0 nt502.1 nt502.2 t502))

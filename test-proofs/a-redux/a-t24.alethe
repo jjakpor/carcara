@@ -1,3 +1,0 @@
-(assume nt24.0 (not (= (= d (f b)) (= d (f b)))))
-(step t24 (cl (= (= d (f b)) (= d (f b)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt24.0 t24))

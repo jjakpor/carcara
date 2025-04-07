@@ -1,4 +1,0 @@
-(assume t751 (and (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (=> (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (= x49 x50))))
-(assume nt752.0 (not (=> (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (= x49 x50))))
-(step t752 (cl (=> (or (and (= x49 y49) (= y49 x50)) (and (= x49 z49) (= z49 x50))) (= x49 x50))) :rule and :premises (t751))
-(step t.end (cl) :rule resolution :premises (nt752.0 t752))

@@ -1,6 +1,0 @@
-(assume t23 (or clk (not prt) (not car)))
-(assume t93 (not clk))
-(assume t105 car)
-(assume t91 prt)
-(step t23' (cl clk (not prt) (not car)) :rule or :premises (t23))
-(step t106 (cl) :rule resolution :premises (t23' t93 t105 t91))

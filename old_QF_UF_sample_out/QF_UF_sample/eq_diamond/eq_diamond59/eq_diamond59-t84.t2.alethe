@@ -1,5 +1,0 @@
-(assume nt84.t2.0 (not (not (= (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (and (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11)))))))
-(assume nt84.t2.1 (not (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))))))
-(assume nt84.t2.2 (not (and (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11)))))
-(step t84.t2 (cl (not (= (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (and (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11))))) (not (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11)))) (and (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (=> (or (and (= x10 y10) (= y10 x11)) (and (= x10 z10) (= z10 x11))) (= x10 x11)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt84.t2.0 nt84.t2.1 nt84.t2.2 t84.t2))

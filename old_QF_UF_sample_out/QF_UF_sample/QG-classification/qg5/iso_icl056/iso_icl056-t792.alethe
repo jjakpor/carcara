@@ -1,6 +1,0 @@
-(assume t713 (or (not (= (= e1 (op (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))) false)) (not (= e1 (op (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))))
-(assume t791 (= (= e1 (op (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))) false))
-(assume nt792.0 (not (not (= e1 (op (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))))
-(step t713' (cl (not (= (= e1 (op (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))) false)) (not (= e1 (op (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))) :rule or :premises (t713))
-(step t792 (cl (not (= e1 (op (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))) :rule resolution :premises (t713' t791))
-(step t.end (cl) :rule resolution :premises (nt792.0 t792))

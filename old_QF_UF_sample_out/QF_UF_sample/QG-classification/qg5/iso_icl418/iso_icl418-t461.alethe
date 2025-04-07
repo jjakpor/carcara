@@ -1,8 +1,0 @@
-(assume t459 (or (= (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)) false) (not (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4))))))
-(assume t460 (or (not (not (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4))))) (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4))))
-(assume nt461.0 (not (= (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)) false)))
-(assume nt461.1 (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4))))
-(step t459' (cl (= (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)) false) (not (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4))))) :rule or :premises (t459))
-(step t460' (cl (not (not (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4))))) (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4))) :rule or :premises (t460))
-(step t461 (cl (= (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4)) false) (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op (op (op e4 e3) (op e4 e3)) e4))) :rule resolution :premises (t459' t460'))
-(step t.end (cl) :rule resolution :premises (nt461.0 nt461.1 t461))

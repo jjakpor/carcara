@@ -1,5 +1,0 @@
-(assume t294 (= (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) e1)) false) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) e1)))))
-(assume nt295.0 (not (not (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) e1)) false))))
-(assume nt295.1 (not (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) e1)))))
-(step t295 (cl (not (= (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) e1)) false)) (not (= (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))) (op (op e1 e1) e1)))) :rule equiv1 :premises (t294))
-(step t.end (cl) :rule resolution :premises (nt295.0 nt295.1 t295))

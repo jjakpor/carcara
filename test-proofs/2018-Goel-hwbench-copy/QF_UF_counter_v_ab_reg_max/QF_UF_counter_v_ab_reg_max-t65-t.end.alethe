@@ -1,3 +1,0 @@
-(assume nt65.0 (not (= y$2 (= y$X y$n1s4))))
-(assume t65 (= y$2 (= y$X y$n1s4)))
-(step t.end (cl) :rule resolution :premises (nt65.0 t65))

@@ -1,3 +1,0 @@
-(assume nt2.t116.0 (not (= (= false (not (= y$n15s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))) (= (not (= y$n15s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))) false))))
-(step t2.t116 (cl (= (= false (not (= y$n15s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)))) (= (not (= y$n15s4 (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))) false))) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt2.t116.0 t2.t116))

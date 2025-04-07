@@ -1,5 +1,0 @@
-(assume t46 (= y$v_count y$v_done))
-(assume t85 (= y$v_done y$v_k_Press))
-(assume nt86.0 (not (= y$v_count y$v_k_Press)))
-(step t86 (cl (= y$v_count y$v_k_Press)) :rule trans :premises (t46 t85))
-(step t.end (cl) :rule resolution :premises (nt86.0 t86))

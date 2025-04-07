@@ -1,3 +1,0 @@
-(assume nt161.0 (not (not (and y$291 y$953))))
-(assume t161 (not (and y$291 y$953)))
-(step t.end (cl) :rule resolution :premises (nt161.0 t161))

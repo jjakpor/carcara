@@ -1,7 +1,0 @@
-(assume t113 (or (not (= (= y$id44_op (and y$59 y$1522)) (= y$id44_op (and y$59 (= y$n5s8 y$v_done))))) (not (= y$id44_op (and y$59 y$1522))) (= y$id44_op (and y$59 (= y$n5s8 y$v_done)))))
-(assume t117 (= (= y$id44_op (and y$59 y$1522)) (= y$id44_op (and y$59 (= y$n5s8 y$v_done)))))
-(assume a44 (= y$id44_op (and y$59 y$1522)))
-(assume nt118.0 (not (= y$id44_op (and y$59 (= y$n5s8 y$v_done)))))
-(step t113' (cl (not (= (= y$id44_op (and y$59 y$1522)) (= y$id44_op (and y$59 (= y$n5s8 y$v_done))))) (not (= y$id44_op (and y$59 y$1522))) (= y$id44_op (and y$59 (= y$n5s8 y$v_done)))) :rule or :premises (t113))
-(step t118 (cl (= y$id44_op (and y$59 (= y$n5s8 y$v_done)))) :rule resolution :premises (t113' t117 a44))
-(step t.end (cl) :rule resolution :premises (nt118.0 t118))

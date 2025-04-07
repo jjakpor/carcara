@@ -1,7 +1,0 @@
-(assume t123 (or (p4 c_0) (not (p4 c8)) (not (= c8 c_0))))
-(assume t322 (not (p4 c_0)))
-(assume t106 (p4 c8))
-(assume nt323.0 (not (not (= c8 c_0))))
-(step t123' (cl (p4 c_0) (not (p4 c8)) (not (= c8 c_0))) :rule or :premises (t123))
-(step t323 (cl (not (= c8 c_0))) :rule resolution :premises (t123' t322 t106))
-(step t.end (cl) :rule resolution :premises (nt323.0 t323))

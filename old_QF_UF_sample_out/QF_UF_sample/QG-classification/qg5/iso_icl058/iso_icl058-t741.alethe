@@ -1,4 +1,0 @@
-(assume t740 (and (and (and (and (and (and (and (not (= (op e0 e4) (op e1 e4))) (not (= (op e0 e4) (op e2 e4)))) (not (= (op e0 e4) (op e3 e4)))) (not (= (op e0 e4) (op e4 e4)))) (not (= (op e1 e4) (op e2 e4)))) (not (= (op e1 e4) (op e3 e4)))) (not (= (op e1 e4) (op e4 e4)))) (not (= (op e2 e4) (op e3 e4)))))
-(assume nt741.0 (not (and (and (and (and (and (and (not (= (op e0 e4) (op e1 e4))) (not (= (op e0 e4) (op e2 e4)))) (not (= (op e0 e4) (op e3 e4)))) (not (= (op e0 e4) (op e4 e4)))) (not (= (op e1 e4) (op e2 e4)))) (not (= (op e1 e4) (op e3 e4)))) (not (= (op e1 e4) (op e4 e4))))))
-(step t741 (cl (and (and (and (and (and (and (not (= (op e0 e4) (op e1 e4))) (not (= (op e0 e4) (op e2 e4)))) (not (= (op e0 e4) (op e3 e4)))) (not (= (op e0 e4) (op e4 e4)))) (not (= (op e1 e4) (op e2 e4)))) (not (= (op e1 e4) (op e3 e4)))) (not (= (op e1 e4) (op e4 e4))))) :rule and :premises (t740))
-(step t.end (cl) :rule resolution :premises (nt741.0 t741))

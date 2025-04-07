@@ -1,5 +1,0 @@
-(assume t7 (= f1 (f3 f4 f5 f6 f7 (f8 f9))))
-(assume t8 (= (f3 f4 f5 f6 f7 (f8 f9)) (f3 f4 f5 f6 f7 (f8 f9))))
-(assume nt9.0 (not (= (= f1 (f3 f4 f5 f6 f7 (f8 f9))) (= (f3 f4 f5 f6 f7 (f8 f9)) (f3 f4 f5 f6 f7 (f8 f9))))))
-(step t9 (cl (= (= f1 (f3 f4 f5 f6 f7 (f8 f9))) (= (f3 f4 f5 f6 f7 (f8 f9)) (f3 f4 f5 f6 f7 (f8 f9))))) :rule cong :premises (t7 t8))
-(step t.end (cl) :rule resolution :premises (nt9.0 t9))

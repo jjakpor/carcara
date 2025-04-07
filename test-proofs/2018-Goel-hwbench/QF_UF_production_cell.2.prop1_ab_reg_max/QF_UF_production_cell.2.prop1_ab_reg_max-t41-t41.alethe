@@ -1,5 +1,0 @@
-(assume t6 (= y$n0s8 y$v_A))
-(assume t40 (= y$v_A y$v_count))
-(assume nt41.0 (not (= y$n0s8 y$v_count)))
-(step t41 (cl (= y$n0s8 y$v_count)) :rule trans :premises (t6 t40))
-(step t.end (cl) :rule resolution :premises (nt41.0 t41))

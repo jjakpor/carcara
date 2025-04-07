@@ -1,6 +1,0 @@
-(assume t17 (or (not y$962) (not y$963)))
-(assume t83 y$963)
-(assume nt84.0 (not (not y$962)))
-(step t17' (cl (not y$962) (not y$963)) :rule or :premises (t17))
-(step t84 (cl (not y$962)) :rule resolution :premises (t17' t83))
-(step t.end (cl) :rule resolution :premises (nt84.0 t84))

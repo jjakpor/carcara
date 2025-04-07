@@ -1,4 +1,0 @@
-(assume t153 (and (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))) (=> (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))) (= x13 x14))))
-(assume nt154.0 (not (=> (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))) (= x13 x14))))
-(step t154 (cl (=> (or (and (= x13 y13) (= y13 x14)) (and (= x13 z13) (= z13 x14))) (= x13 x14))) :rule and :premises (t153))
-(step t.end (cl) :rule resolution :premises (nt154.0 t154))

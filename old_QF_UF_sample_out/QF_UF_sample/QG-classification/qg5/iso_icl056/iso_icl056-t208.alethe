@@ -1,5 +1,0 @@
-(assume nt208.0 (not (not (= (not (= e0 e4)) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))))))
-(assume nt208.1 (not (not (not (= e0 e4)))))
-(assume nt208.2 (not (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))))
-(step t208 (cl (not (= (not (= e0 e4)) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))) (not (not (= e0 e4))) (not (= (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt208.0 nt208.1 nt208.2 t208))

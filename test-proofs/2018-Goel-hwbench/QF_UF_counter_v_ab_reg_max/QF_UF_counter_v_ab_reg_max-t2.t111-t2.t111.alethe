@@ -1,5 +1,0 @@
-(assume t2.t109 (= (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)) (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4))))
-(assume t2.t110 (= (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)) true))
-(assume nt2.t111.0 (not (= (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)) true)))
-(step t2.t111 (cl (= (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (ite y$en (ite (= y$n1s4 y$n15s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4)) true)) :rule trans :premises (t2.t109 t2.t110))
-(step t.end (cl) :rule resolution :premises (nt2.t111.0 t2.t111))

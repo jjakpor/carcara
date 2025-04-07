@@ -1,5 +1,0 @@
-(assume nt3.0 (not (not y$a_q4_Bottle_1)))
-(assume nt3.1 (not (not y$53)))
-(assume t3 (or (not y$a_q4_Bottle_1) (not y$53)))
-(step t3' (cl (not y$a_q4_Bottle_1) (not y$53)) :rule or :premises (t3))
-(step t.end (cl) :rule resolution :premises (nt3.0 nt3.1 t3'))

@@ -1,6 +1,0 @@
-(assume nt37.0 (not (not (= y$72 (= y$v_count y$v_done)))))
-(assume nt37.1 (not (not y$72)))
-(assume nt37.2 (not (= y$v_count y$v_done)))
-(assume t37 (or (not (= y$72 (= y$v_count y$v_done))) (not y$72) (= y$v_count y$v_done)))
-(step t37' (cl (not (= y$72 (= y$v_count y$v_done))) (not y$72) (= y$v_count y$v_done)) :rule or :premises (t37))
-(step t.end (cl) :rule resolution :premises (nt37.0 nt37.1 nt37.2 t37'))

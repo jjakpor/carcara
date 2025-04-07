@@ -1,4 +1,0 @@
-(assume t503 (and (and (and (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e0) (op e3 e2)))) (not (= (op e3 e0) (op e3 e3)))) (not (= (op e3 e0) (op e3 e4)))))
-(assume nt504.0 (not (and (and (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e0) (op e3 e2)))) (not (= (op e3 e0) (op e3 e3))))))
-(step t504 (cl (and (and (not (= (op e3 e0) (op e3 e1))) (not (= (op e3 e0) (op e3 e2)))) (not (= (op e3 e0) (op e3 e3))))) :rule and :premises (t503))
-(step t.end (cl) :rule resolution :premises (nt504.0 t504))

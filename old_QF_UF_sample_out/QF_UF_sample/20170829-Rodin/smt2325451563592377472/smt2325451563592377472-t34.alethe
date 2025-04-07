@@ -1,3 +1,0 @@
-(assume nt34.0 (not (= (= prt prt) true)))
-(step t34 (cl (= (= prt prt) true)) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt34.0 t34))

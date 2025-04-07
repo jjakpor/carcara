@@ -1,3 +1,0 @@
-(assume nt65.0 (not y$v3_1517448506_530_op))
-(assume t65 y$v3_1517448506_530_op)
-(step t.end (cl) :rule resolution :premises (nt65.0 t65))

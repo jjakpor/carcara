@@ -1,3 +1,0 @@
-(assume nt928.0 (not (= (= (op e0 e0) (op e0 e0)) true)))
-(step t928 (cl (= (= (op e0 e0) (op e0 e0)) true)) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt928.0 t928))

@@ -1,3 +1,0 @@
-(assume nt5.0 (not (= (= (not (not clk)) clk) (= clk (not (not clk))))))
-(step t5 (cl (= (= (not (not clk)) clk) (= clk (not (not clk))))) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt5.0 t5))

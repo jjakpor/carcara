@@ -1,5 +1,0 @@
-(assume t42 (= (= (f7 c_1) c_0) (= c_0 (f7 c_1))))
-(assume t43 (= (= (f7 c_1) c_1) (= c_1 (f7 c_1))))
-(assume nt44.0 (not (= (or (= (f7 c_1) c_0) (= (f7 c_1) c_1)) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1))))))
-(step t44 (cl (= (or (= (f7 c_1) c_0) (= (f7 c_1) c_1)) (or (= c_0 (f7 c_1)) (= c_1 (f7 c_1))))) :rule cong :premises (t42 t43))
-(step t.end (cl) :rule resolution :premises (nt44.0 t44))

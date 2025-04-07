@@ -1,4 +1,0 @@
-(assume t80 (and (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6))))
-(assume nt81.0 (not (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6))))
-(step t81 (cl (=> (or (and (= x5 y5) (= y5 x6)) (and (= x5 z5) (= z5 x6))) (= x5 x6))) :rule and :premises (t80))
-(step t.end (cl) :rule resolution :premises (nt81.0 t81))

@@ -1,3 +1,0 @@
-(assume a36 (= y$id37_op (and y$45 y$v3_1517448508_35_op)))
-(assume t28 (not (= y$id37_op (and y$45 y$v3_1517448508_35_op))))
-(step t29 (cl) :rule resolution :premises (a36 t28))

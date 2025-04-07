@@ -1,4 +1,0 @@
-(assume t241 (and (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (=> (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (= x21 x22))))
-(assume nt242.0 (not (=> (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (= x21 x22))))
-(step t242 (cl (=> (or (and (= x21 y21) (= y21 x22)) (and (= x21 z21) (= z21 x22))) (= x21 x22))) :rule and :premises (t241))
-(step t.end (cl) :rule resolution :premises (nt242.0 t242))

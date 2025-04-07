@@ -1,5 +1,0 @@
-(assume t102.t3 (= (p4 c_0) (p4 c8)))
-(assume t102.t6 (= (p4 c8) true))
-(assume nt102.t7.0 (not (= (p4 c_0) true)))
-(step t102.t7 (cl (= (p4 c_0) true)) :rule trans :premises (t102.t3 t102.t6))
-(step t.end (cl) :rule resolution :premises (nt102.t7.0 t102.t7))

@@ -1,5 +1,0 @@
-(assume nt204.0 (not (not (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))))
-(assume nt204.1 (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))
-(assume t204 (or (not (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))
-(step t204' (cl (not (not (not (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) :rule or :premises (t204))
-(step t.end (cl) :rule resolution :premises (nt204.0 nt204.1 t204'))

@@ -1,4 +1,0 @@
-(assume nt413.0 (not (or (not (p1 (f5 c_1) c_1)) (not (= c_0 (f5 c_1))) (not (= c_0 (f7 c_1))) (not (not (p1 (f7 c_1) c_1))))))
-(assume nt413.1 (not (not (not (p1 (f5 c_1) c_1)))))
-(step t413 (cl (or (not (p1 (f5 c_1) c_1)) (not (= c_0 (f5 c_1))) (not (= c_0 (f7 c_1))) (not (not (p1 (f7 c_1) c_1)))) (not (not (p1 (f5 c_1) c_1)))) :rule or_neg)
-(step t.end (cl) :rule resolution :premises (nt413.0 nt413.1 t413))

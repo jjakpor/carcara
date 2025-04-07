@@ -1,7 +1,0 @@
-(assume t23 (or (not (= (or (= (f a) d) (= d (f b))) (or (= d (f a)) (= d (f b))))) (not (or (= (f a) d) (= d (f b)))) (or (= d (f a)) (= d (f b)))))
-(assume t25 (= (or (= (f a) d) (= d (f b))) (or (= d (f a)) (= d (f b)))))
-(assume a2 (or (= (f a) d) (= d (f b))))
-(assume nt26.0 (not (or (= d (f a)) (= d (f b)))))
-(step t23' (cl (not (= (or (= (f a) d) (= d (f b))) (or (= d (f a)) (= d (f b))))) (not (or (= (f a) d) (= d (f b)))) (or (= d (f a)) (= d (f b)))) :rule or :premises (t23))
-(step t26 (cl (or (= d (f a)) (= d (f b)))) :rule resolution :premises (t23' t25 a2))
-(step t.end (cl) :rule resolution :premises (nt26.0 t26))

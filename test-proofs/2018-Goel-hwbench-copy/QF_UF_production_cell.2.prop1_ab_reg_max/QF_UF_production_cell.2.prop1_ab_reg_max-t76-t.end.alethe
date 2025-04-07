@@ -1,3 +1,0 @@
-(assume nt76.0 (not (= y$v_A y$v_k_Deposit)))
-(assume t76 (= y$v_A y$v_k_Deposit))
-(step t.end (cl) :rule resolution :premises (nt76.0 t76))

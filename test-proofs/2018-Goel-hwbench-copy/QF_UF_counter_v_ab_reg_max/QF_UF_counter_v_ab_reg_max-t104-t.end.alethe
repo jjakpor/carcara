@@ -1,6 +1,0 @@
-(assume nt104.0 (not (not (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next))))))
-(assume nt104.1 (not (not (= y$28 (= y$prop$next y$27)))))
-(assume nt104.2 (not (= y$28 (= y$27 y$prop$next))))
-(assume t104 (or (not (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next)))) (not (= y$28 (= y$prop$next y$27))) (= y$28 (= y$27 y$prop$next))))
-(step t104' (cl (not (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next)))) (not (= y$28 (= y$prop$next y$27))) (= y$28 (= y$27 y$prop$next))) :rule or :premises (t104))
-(step t.end (cl) :rule resolution :premises (nt104.0 nt104.1 nt104.2 t104'))

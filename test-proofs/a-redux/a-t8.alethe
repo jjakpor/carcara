@@ -1,5 +1,0 @@
-(assume nt8.0 (not (not (= (or (not (= d (f b))) (not (not (= d (f a))))) (or (not (= d (f b))) (= d (f a)))))))
-(assume nt8.1 (not (not (or (not (= d (f b))) (not (not (= d (f a))))))))
-(assume nt8.2 (not (or (not (= d (f b))) (= d (f a)))))
-(step t8 (cl (not (= (or (not (= d (f b))) (not (not (= d (f a))))) (or (not (= d (f b))) (= d (f a))))) (not (or (not (= d (f b))) (not (not (= d (f a)))))) (or (not (= d (f b))) (= d (f a)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt8.0 nt8.1 nt8.2 t8))

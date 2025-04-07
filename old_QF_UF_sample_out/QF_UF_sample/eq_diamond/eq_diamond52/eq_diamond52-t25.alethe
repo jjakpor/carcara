@@ -1,4 +1,0 @@
-(assume t24 (= x5 x6))
-(assume nt25.0 (not (= x6 x5)))
-(step t25 (cl (= x6 x5)) :rule symm :premises (t24))
-(step t.end (cl) :rule resolution :premises (nt25.0 t25))

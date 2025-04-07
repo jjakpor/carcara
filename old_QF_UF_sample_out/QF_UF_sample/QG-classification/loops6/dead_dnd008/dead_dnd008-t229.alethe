@@ -1,5 +1,0 @@
-(assume t228 (=> (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))) (= e4 (op e4 (op e4 e4)))))
-(assume nt229.0 (not (not (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0)))))))
-(assume nt229.1 (not (= e4 (op e4 (op e4 e4)))))
-(step t229 (cl (not (and (= e4 (op e4 e0)) (= e0 (op e4 (op e4 e0))))) (= e4 (op e4 (op e4 e4)))) :rule implies :premises (t228))
-(step t.end (cl) :rule resolution :premises (nt229.0 nt229.1 t229))

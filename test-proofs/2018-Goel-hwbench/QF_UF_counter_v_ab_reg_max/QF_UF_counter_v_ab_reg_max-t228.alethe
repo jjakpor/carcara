@@ -1,3 +1,0 @@
-(assume nt228.0 (not (= (= false (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false))))
-(step t228 (cl (= (= false (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))) (= (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)) false))) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt228.0 t228))

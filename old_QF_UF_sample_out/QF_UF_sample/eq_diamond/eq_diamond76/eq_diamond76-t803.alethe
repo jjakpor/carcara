@@ -1,4 +1,0 @@
-(assume t802 (and (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (=> (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (= x71 x72))))
-(assume nt803.0 (not (=> (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (= x71 x72))))
-(step t803 (cl (=> (or (and (= x71 y71) (= y71 x72)) (and (= x71 z71) (= z71 x72))) (= x71 x72))) :rule and :premises (t802))
-(step t.end (cl) :rule resolution :premises (nt803.0 t803))

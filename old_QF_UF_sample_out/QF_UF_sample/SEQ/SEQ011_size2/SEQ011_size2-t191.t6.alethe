@@ -1,6 +1,0 @@
-(assume t191.t5 (or (= (p1 (f7 c_0) c_0) false) (p1 (f7 c_0) c_0)))
-(assume t191.a3 (not (p1 (f7 c_0) c_0)))
-(assume nt191.t6.0 (not (= (p1 (f7 c_0) c_0) false)))
-(step t191.t5' (cl (= (p1 (f7 c_0) c_0) false) (p1 (f7 c_0) c_0)) :rule or :premises (t191.t5))
-(step t191.t6 (cl (= (p1 (f7 c_0) c_0) false)) :rule resolution :premises (t191.t5' t191.a3))
-(step t.end (cl) :rule resolution :premises (nt191.t6.0 t191.t6))

@@ -1,6 +1,0 @@
-(assume t202 (=> (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false))
-(assume t204 (or (not (=> (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false)) (not (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0))))))
-(assume nt205.0 (not (not (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0))))))
-(step t204' (cl (not (=> (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0))) false)) (not (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0))))) :rule or :premises (t204))
-(step t205 (cl (not (and (p1 (f5 c_0) c_0) (= c_1 (f5 c_0)) (= c_1 (f7 c_0)) (not (p1 (f7 c_0) c_0))))) :rule resolution :premises (t202 t204'))
-(step t.end (cl) :rule resolution :premises (nt205.0 t205))

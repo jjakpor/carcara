@@ -1,3 +1,0 @@
-(assume nt139.0 (not (= y$1525 y$prop)))
-(assume t139 (= y$1525 y$prop))
-(step t.end (cl) :rule resolution :premises (nt139.0 t139))

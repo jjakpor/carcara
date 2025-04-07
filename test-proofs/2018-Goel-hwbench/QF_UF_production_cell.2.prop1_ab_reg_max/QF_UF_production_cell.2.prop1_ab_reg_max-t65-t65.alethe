@@ -1,3 +1,0 @@
-(assume nt65.0 (not (= y$v_k_Deposit y$v_k_Deposit)))
-(step t65 (cl (= y$v_k_Deposit y$v_k_Deposit)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt65.0 t65))

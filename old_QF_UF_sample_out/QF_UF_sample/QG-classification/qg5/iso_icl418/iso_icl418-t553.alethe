@@ -1,5 +1,0 @@
-(assume t552 (or (not (= (op e4 e3) (op (op e4 e3) e4))) (= (op e4 e3) (op e4 (op e4 e3)))))
-(assume nt553.0 (not (not (= (op e4 e3) (op (op e4 e3) e4)))))
-(assume nt553.1 (not (= (op e4 e3) (op e4 (op e4 e3)))))
-(step t553 (cl (not (= (op e4 e3) (op (op e4 e3) e4))) (= (op e4 e3) (op e4 (op e4 e3)))) :rule or :premises (t552))
-(step t.end (cl) :rule resolution :premises (nt553.0 nt553.1 t553))

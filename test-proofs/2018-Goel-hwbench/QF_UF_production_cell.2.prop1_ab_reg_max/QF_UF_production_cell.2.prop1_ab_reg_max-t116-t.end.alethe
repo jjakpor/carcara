@@ -1,3 +1,0 @@
-(assume nt116.0 (not (= (and y$59 y$1522) (and y$59 (= y$n5s8 y$v_done)))))
-(assume t116 (= (and y$59 y$1522) (and y$59 (= y$n5s8 y$v_done))))
-(step t.end (cl) :rule resolution :premises (nt116.0 t116))

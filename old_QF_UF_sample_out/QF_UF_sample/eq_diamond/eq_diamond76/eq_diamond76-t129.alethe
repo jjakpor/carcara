@@ -1,4 +1,0 @@
-(assume t128 (and (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2))))
-(assume nt129.0 (not (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2))))
-(step t129 (cl (=> (or (and (= x1 y1) (= y1 x2)) (and (= x1 z1) (= z1 x2))) (= x1 x2))) :rule and :premises (t128))
-(step t.end (cl) :rule resolution :premises (nt129.0 t129))

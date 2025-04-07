@@ -1,5 +1,0 @@
-(assume nt2.0 (not (not (= y$62 (= y$n0s8 y$v_A)))))
-(assume nt2.1 (not (not y$62)))
-(assume nt2.2 (not (= y$n0s8 y$v_A)))
-(step t2 (cl (not (= y$62 (= y$n0s8 y$v_A))) (not y$62) (= y$n0s8 y$v_A)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt2.0 nt2.1 nt2.2 t2))

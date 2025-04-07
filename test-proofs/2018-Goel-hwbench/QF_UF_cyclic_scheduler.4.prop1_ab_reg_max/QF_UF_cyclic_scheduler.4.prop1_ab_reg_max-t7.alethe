@@ -1,6 +1,0 @@
-(assume t3 (or (not y$a_q_error_customer_0) (not y$37)))
-(assume t6 y$37)
-(assume nt7.0 (not (not y$a_q_error_customer_0)))
-(step t3' (cl (not y$a_q_error_customer_0) (not y$37)) :rule or :premises (t3))
-(step t7 (cl (not y$a_q_error_customer_0)) :rule resolution :premises (t3' t6))
-(step t.end (cl) :rule resolution :premises (nt7.0 t7))

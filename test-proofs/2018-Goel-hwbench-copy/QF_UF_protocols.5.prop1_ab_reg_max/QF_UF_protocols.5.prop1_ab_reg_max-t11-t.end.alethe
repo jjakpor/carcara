@@ -1,5 +1,0 @@
-(assume nt11.0 (not (not y$a_consume0$next)))
-(assume nt11.1 (not y$a_consume0$next_rhs_op))
-(assume t11 (or (not y$a_consume0$next) y$a_consume0$next_rhs_op))
-(step t11' (cl (not y$a_consume0$next) y$a_consume0$next_rhs_op) :rule or :premises (t11))
-(step t.end (cl) :rule resolution :premises (nt11.0 nt11.1 t11'))

@@ -1,5 +1,0 @@
-(assume t32 (= e0 (op e3 e3)))
-(assume t743 (= (op (op e4 e0) e4) (op (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(assume nt744.0 (not (= (= e0 (op (op e4 e0) e4)) (= (op e3 e3) (op (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))))
-(step t744 (cl (= (= e0 (op (op e4 e0) e4)) (= (op e3 e3) (op (op (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))) :rule cong :premises (t32 t743))
-(step t.end (cl) :rule resolution :premises (nt744.0 t744))

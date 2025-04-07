@@ -1,3 +1,0 @@
-(assume nt171.0 (not (not false)))
-(step t171 (cl (not false)) :rule false)
-(step t.end (cl) :rule resolution :premises (nt171.0 t171))

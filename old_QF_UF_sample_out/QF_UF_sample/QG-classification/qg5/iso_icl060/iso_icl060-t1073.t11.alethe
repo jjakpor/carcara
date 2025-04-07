@@ -1,5 +1,0 @@
-(assume nt1073.t11.0 (not (not (= (not (= (op e3 e0) (op e3 e4))) (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))))))
-(assume nt1073.t11.1 (not (not (not (= (op e3 e0) (op e3 e4))))))
-(assume nt1073.t11.2 (not (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))))
-(step t1073.t11 (cl (not (= (not (= (op e3 e0) (op e3 e4))) (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3)))))) (not (not (= (op e3 e0) (op e3 e4)))) (not (= (op e3 (op (op e1 e3) e1)) (op e3 (op (op e1 e3) e3))))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt1073.t11.0 nt1073.t11.1 nt1073.t11.2 t1073.t11))

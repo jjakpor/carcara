@@ -1,7 +1,0 @@
-(assume t45' (or (not (= y$1093 (= y$1092 y$prop$next))) (not y$1093) (= y$1092 y$prop$next)))
-(assume t50 (= y$1093 (= y$1092 y$prop$next)))
-(assume t51 y$1093)
-(assume nt52.0 (not (= y$1092 y$prop$next)))
-(step t45'' (cl (not (= y$1093 (= y$1092 y$prop$next))) (not y$1093) (= y$1092 y$prop$next)) :rule or :premises (t45'))
-(step t52 (cl (= y$1092 y$prop$next)) :rule resolution :premises (t45'' t50 t51))
-(step t.end (cl) :rule resolution :premises (nt52.0 t52))

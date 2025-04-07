@@ -1,6 +1,0 @@
-(assume t174' (or (not y$a_consume1$next) y$a_consume1$next_rhs_op))
-(assume t191 (not y$a_consume1$next_rhs_op))
-(assume nt192.0 (not (not y$a_consume1$next)))
-(step t174'' (cl (not y$a_consume1$next) y$a_consume1$next_rhs_op) :rule or :premises (t174'))
-(step t192 (cl (not y$a_consume1$next)) :rule resolution :premises (t174'' t191))
-(step t.end (cl) :rule resolution :premises (nt192.0 t192))

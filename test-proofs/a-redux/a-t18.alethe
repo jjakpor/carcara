@@ -1,4 +1,0 @@
-(assume nt18.0 (not (or (not (= d (f b))) (not (not (= d (f a)))))))
-(assume nt18.1 (not (not (not (not (= d (f a)))))))
-(step t18 (cl (or (not (= d (f b))) (not (not (= d (f a))))) (not (not (not (= d (f a)))))) :rule or_neg)
-(step t.end (cl) :rule resolution :premises (nt18.0 nt18.1 t18))

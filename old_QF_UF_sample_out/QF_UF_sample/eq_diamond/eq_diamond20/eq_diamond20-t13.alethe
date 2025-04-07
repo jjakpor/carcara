@@ -1,5 +1,0 @@
-(assume t12 (= (= (= x2 x3) false) (not (= x2 x3))))
-(assume nt13.0 (not (not (= (= x2 x3) false))))
-(assume nt13.1 (not (not (= x2 x3))))
-(step t13 (cl (not (= (= x2 x3) false)) (not (= x2 x3))) :rule equiv1 :premises (t12))
-(step t.end (cl) :rule resolution :premises (nt13.0 nt13.1 t13))

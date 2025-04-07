@@ -1,3 +1,0 @@
-(assume nt117.0 (not (= (= y$id44_op (and y$59 y$1522)) (= y$id44_op (and y$59 (= y$n5s8 y$v_done))))))
-(assume t117 (= (= y$id44_op (and y$59 y$1522)) (= y$id44_op (and y$59 (= y$n5s8 y$v_done)))))
-(step t.end (cl) :rule resolution :premises (nt117.0 t117))

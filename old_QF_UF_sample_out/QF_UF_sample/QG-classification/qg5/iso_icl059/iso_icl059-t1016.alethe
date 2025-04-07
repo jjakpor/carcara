@@ -1,5 +1,0 @@
-(assume t324 (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))
-(assume t1015 (= (op (op e0 e0) (op (op e0 e0) e0)) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))
-(assume nt1016.0 (not (= (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op e0 e0) e0))) (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))))
-(step t1016 (cl (= (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op e0 e0) (op (op e0 e0) e0))) (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) (op (op (op e0 e0) e0) e0))))) :rule cong :premises (t324 t1015))
-(step t.end (cl) :rule resolution :premises (nt1016.0 t1016))

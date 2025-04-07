@@ -1,5 +1,0 @@
-(assume t84.t634 (= (= (= x0 x58) false) (not (= x0 x58))))
-(assume nt84.t635.0 (not (= (= x0 x58) false)))
-(assume nt84.t635.1 (not (not (not (= x0 x58)))))
-(step t84.t635 (cl (= (= x0 x58) false) (not (not (= x0 x58)))) :rule equiv2 :premises (t84.t634))
-(step t.end (cl) :rule resolution :premises (nt84.t635.0 nt84.t635.1 t84.t635))

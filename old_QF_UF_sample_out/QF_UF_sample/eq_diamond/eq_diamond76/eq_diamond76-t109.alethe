@@ -1,4 +1,0 @@
-(assume t108 (= x3 x4))
-(assume nt109.0 (not (= x4 x3)))
-(step t109 (cl (= x4 x3)) :rule symm :premises (t108))
-(step t.end (cl) :rule resolution :premises (nt109.0 t109))

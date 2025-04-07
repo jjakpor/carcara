@@ -1,5 +1,0 @@
-(assume nt2.t166.0 (not (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
-(assume nt2.t166.1 (not (not y$en)))
-(assume t2.t166 (or (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4))) (not y$en)))
-(step t2.t166' (cl (= (ite y$en (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4)) y$n1s4) (ite (= y$n15s4 y$n1s4) y$n1s4 (Add_4_4_4 y$n1s4 y$n1s4))) (not y$en)) :rule or :premises (t2.t166))
-(step t.end (cl) :rule resolution :premises (nt2.t166.0 nt2.t166.1 t2.t166'))

@@ -1,3 +1,0 @@
-(assume nt78.0 (not (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4)))))
-(assume t78 (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4))))
-(step t.end (cl) :rule resolution :premises (nt78.0 t78))

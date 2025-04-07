@@ -1,3 +1,0 @@
-(assume nt85.0 (not (= y$v_done y$v_k_Press)))
-(assume t85 (= y$v_done y$v_k_Press))
-(step t.end (cl) :rule resolution :premises (nt85.0 t85))

@@ -1,3 +1,0 @@
-(assume nt165.0 (not (= (= y$n1s4 y$n1s4) true)))
-(step t165 (cl (= (= y$n1s4 y$n1s4) true)) :rule rare_rewrite :args ("eq-refl" y$n1s4))
-(step t.end (cl) :rule resolution :premises (nt165.0 t165))

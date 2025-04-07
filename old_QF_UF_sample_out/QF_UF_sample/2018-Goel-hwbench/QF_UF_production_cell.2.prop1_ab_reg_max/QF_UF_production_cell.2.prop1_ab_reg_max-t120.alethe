@@ -1,3 +1,0 @@
-(assume nt120.0 (not (= (= y$59 true) y$59)))
-(step t120 (cl (= (= y$59 true) y$59)) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt120.0 t120))

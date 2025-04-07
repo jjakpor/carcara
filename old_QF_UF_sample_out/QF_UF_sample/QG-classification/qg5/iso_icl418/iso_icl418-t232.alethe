@@ -1,4 +1,0 @@
-(assume t231 (= (op e4 e3) (op (op (op e4 e3) (op e4 e3)) (op e4 e3))))
-(assume nt232.0 (not (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op e4 e3))))
-(step t232 (cl (= (op (op (op e4 e3) (op e4 e3)) (op e4 e3)) (op e4 e3))) :rule symm :premises (t231))
-(step t.end (cl) :rule resolution :premises (nt232.0 t232))

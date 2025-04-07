@@ -1,4 +1,0 @@
-(assume t36 (= x4 x5))
-(assume nt37.0 (not (= x5 x4)))
-(step t37 (cl (= x5 x4)) :rule symm :premises (t36))
-(step t.end (cl) :rule resolution :premises (nt37.0 t37))

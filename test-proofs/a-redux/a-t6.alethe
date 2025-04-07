@@ -1,5 +1,0 @@
-(assume t5 (or (not (= d (f a))) (not (= d (f b)))))
-(assume nt6.0 (not (not (= d (f a)))))
-(assume nt6.1 (not (not (= d (f b)))))
-(step t6 (cl (not (= d (f a))) (not (= d (f b)))) :rule or :premises (t5))
-(step t.end (cl) :rule resolution :premises (nt6.0 nt6.1 t6))

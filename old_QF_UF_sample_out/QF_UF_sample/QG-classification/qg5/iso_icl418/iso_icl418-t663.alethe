@@ -1,7 +1,0 @@
-(assume t656 (or (not (= (= (op (op e1 e3) e1) e3) (= e3 (op (op (op e4 e3) e3) (op e4 e3))))) (not (= (op (op e1 e3) e1) e3)) (= e3 (op (op (op e4 e3) e3) (op e4 e3)))))
-(assume t660 (= (= (op (op e1 e3) e1) e3) (= e3 (op (op (op e4 e3) e3) (op e4 e3)))))
-(assume t662 (= (op (op e1 e3) e1) e3))
-(assume nt663.0 (not (= e3 (op (op (op e4 e3) e3) (op e4 e3)))))
-(step t656' (cl (not (= (= (op (op e1 e3) e1) e3) (= e3 (op (op (op e4 e3) e3) (op e4 e3))))) (not (= (op (op e1 e3) e1) e3)) (= e3 (op (op (op e4 e3) e3) (op e4 e3)))) :rule or :premises (t656))
-(step t663 (cl (= e3 (op (op (op e4 e3) e3) (op e4 e3)))) :rule resolution :premises (t656' t660 t662))
-(step t.end (cl) :rule resolution :premises (nt663.0 t663))

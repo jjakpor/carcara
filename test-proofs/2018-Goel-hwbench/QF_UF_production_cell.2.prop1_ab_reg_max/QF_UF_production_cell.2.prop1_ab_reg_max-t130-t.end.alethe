@@ -1,6 +1,0 @@
-(assume nt130.0 (not (not (= (not y$1525) y$id44_op))))
-(assume nt130.1 (not (not (not y$1525))))
-(assume nt130.2 (not y$id44_op))
-(assume t130 (or (not (= (not y$1525) y$id44_op)) (not (not y$1525)) y$id44_op))
-(step t130' (cl (not (= (not y$1525) y$id44_op)) (not (not y$1525)) y$id44_op) :rule or :premises (t130))
-(step t.end (cl) :rule resolution :premises (nt130.0 nt130.1 nt130.2 t130'))

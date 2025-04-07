@@ -1,3 +1,0 @@
-(assume nt724.0 (not (= (= (= e0 (op (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) e0))) false) (not (= e0 (op (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) e0)))))))
-(step t724 (cl (= (= (= e0 (op (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) e0))) false) (not (= e0 (op (op (op e0 (op e0 e0)) e0) (op (op e0 (op e0 e0)) e0)))))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nt724.0 t724))

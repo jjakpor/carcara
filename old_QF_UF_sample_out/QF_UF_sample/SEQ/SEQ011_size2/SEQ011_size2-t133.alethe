@@ -1,5 +1,0 @@
-(assume t131 (= (= (f6 c_0) c_0) (= c_0 (f6 c_0))))
-(assume t132 (= (= (f6 c_0) c_1) (= c_1 (f6 c_0))))
-(assume nt133.0 (not (= (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0))))))
-(step t133 (cl (= (or (= (f6 c_0) c_0) (= (f6 c_0) c_1)) (or (= c_0 (f6 c_0)) (= c_1 (f6 c_0))))) :rule cong :premises (t131 t132))
-(step t.end (cl) :rule resolution :premises (nt133.0 t133))

@@ -1,6 +1,0 @@
-(assume t787 (or (= x52 x53) (not (or (and (= x52 y52) (= y52 x53)) (and (= x52 z52) (= z52 x53))))))
-(assume t783 (or (and (= x52 y52) (= y52 x53)) (and (= x52 z52) (= z52 x53))))
-(assume nt788.0 (not (= x52 x53)))
-(step t787' (cl (= x52 x53) (not (or (and (= x52 y52) (= y52 x53)) (and (= x52 z52) (= z52 x53))))) :rule or :premises (t787))
-(step t788 (cl (= x52 x53)) :rule resolution :premises (t787' t783))
-(step t.end (cl) :rule resolution :premises (nt788.0 t788))

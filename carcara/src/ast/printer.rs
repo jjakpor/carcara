@@ -86,6 +86,32 @@ pub fn write_asserts(
     Ok(())
 }
 
+pub fn write_define_funs(
+    pool: &mut PrimitivePool,
+    prelude: &ProblemPrelude,
+    dest: &mut dyn io::Write,
+    constant_definitions: &Vec<(String, Rc<Term>)>,
+    use_sharing: bool,
+) -> io::Result<()> {
+    let mut printer = AlethePrinter::new(pool, prelude, use_sharing, dest);
+    // We have to override the default prefix "@p_" because symbols starting with "@" are reserved
+    // in SMT-LIB.
+    printer.term_sharing_variable_prefix = "p_";
+    // Since we are printing an SMT-LIB problem, we have to be
+    // compliant. For Carcara, this means that arithmetic constants
+    // cannot use the GMP notation
+    printer.smt_lib_strict = true;
+    
+    for (name, value) in constant_definitions {
+        write!(printer.inner, "(define-fun {} () ", quote_symbol(name))?;
+        printer.pool.sort(value).print_with_sharing(&mut printer)?;
+        write!(printer.inner, " ")?;
+        value.print_with_sharing(&mut printer)?;
+        writeln!(printer.inner, ")")?;
+    }
+    Ok(())
+}
+
 trait PrintProof {
     fn write_proof(&mut self, proof: &Proof) -> io::Result<()>;
 }

@@ -1,3 +1,0 @@
-(assume nt84.t283.0 (not (= (= (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (and (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (=> (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (= x26 x27)))) true)))
-(step t84.t283 (cl (= (= (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (and (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (=> (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))) (= x26 x27)))) true)) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt84.t283.0 t84.t283))

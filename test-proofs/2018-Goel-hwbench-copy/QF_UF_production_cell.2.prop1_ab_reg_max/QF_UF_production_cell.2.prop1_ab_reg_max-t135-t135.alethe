@@ -1,3 +1,0 @@
-(assume nt135.0 (not (= (= y$prop y$1525) (= y$1525 y$prop))))
-(step t135 (cl (= (= y$prop y$1525) (= y$1525 y$prop))) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt135.0 t135))

@@ -1,6 +1,0 @@
-(assume t153.t3 (or (= (p1 (f6 c_0) c_0) true) (not (p1 (f6 c_0) c_0))))
-(assume t153.a3 (p1 (f6 c_0) c_0))
-(assume nt153.t4.0 (not (= (p1 (f6 c_0) c_0) true)))
-(step t153.t3' (cl (= (p1 (f6 c_0) c_0) true) (not (p1 (f6 c_0) c_0))) :rule or :premises (t153.t3))
-(step t153.t4 (cl (= (p1 (f6 c_0) c_0) true)) :rule resolution :premises (t153.t3' t153.a3))
-(step t.end (cl) :rule resolution :premises (nt153.t4.0 t153.t4))

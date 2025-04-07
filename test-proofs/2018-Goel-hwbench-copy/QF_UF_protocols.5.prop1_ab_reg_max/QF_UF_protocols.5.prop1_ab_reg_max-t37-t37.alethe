@@ -1,7 +1,0 @@
-(assume t33' (or (not (= (= y$1048 (= y$dve_invalid$next y$1047)) (= y$1048 (= y$1047 y$dve_invalid$next)))) (not (= y$1048 (= y$dve_invalid$next y$1047))) (= y$1048 (= y$1047 y$dve_invalid$next))))
-(assume t36 (= (= y$1048 (= y$dve_invalid$next y$1047)) (= y$1048 (= y$1047 y$dve_invalid$next))))
-(assume a664 (= y$1048 (= y$dve_invalid$next y$1047)))
-(assume nt37.0 (not (= y$1048 (= y$1047 y$dve_invalid$next))))
-(step t33'' (cl (not (= (= y$1048 (= y$dve_invalid$next y$1047)) (= y$1048 (= y$1047 y$dve_invalid$next)))) (not (= y$1048 (= y$dve_invalid$next y$1047))) (= y$1048 (= y$1047 y$dve_invalid$next))) :rule or :premises (t33'))
-(step t37 (cl (= y$1048 (= y$1047 y$dve_invalid$next))) :rule resolution :premises (t33'' t36 a664))
-(step t.end (cl) :rule resolution :premises (nt37.0 t37))

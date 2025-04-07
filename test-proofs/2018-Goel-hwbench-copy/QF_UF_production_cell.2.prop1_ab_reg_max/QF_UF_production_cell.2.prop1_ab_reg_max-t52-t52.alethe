@@ -1,5 +1,0 @@
-(assume t6 (= y$n0s8 y$v_A))
-(assume t51 (= y$v_A y$v_done))
-(assume nt52.0 (not (= y$n0s8 y$v_done)))
-(step t52 (cl (= y$n0s8 y$v_done)) :rule trans :premises (t6 t51))
-(step t.end (cl) :rule resolution :premises (nt52.0 t52))

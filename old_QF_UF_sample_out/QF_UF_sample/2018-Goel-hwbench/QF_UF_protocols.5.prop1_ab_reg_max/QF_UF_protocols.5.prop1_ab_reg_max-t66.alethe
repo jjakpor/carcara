@@ -1,7 +1,0 @@
-(assume t28 (or (not (= y$v3_1517448506_530_op (and y$v3_1517448506_460_op y$v3_1517448506_529_op))) (not y$v3_1517448506_530_op) (and y$v3_1517448506_460_op y$v3_1517448506_529_op)))
-(assume a661 (= y$v3_1517448506_530_op (and y$v3_1517448506_460_op y$v3_1517448506_529_op)))
-(assume t65 y$v3_1517448506_530_op)
-(assume nt66.0 (not (and y$v3_1517448506_460_op y$v3_1517448506_529_op)))
-(step t28' (cl (not (= y$v3_1517448506_530_op (and y$v3_1517448506_460_op y$v3_1517448506_529_op))) (not y$v3_1517448506_530_op) (and y$v3_1517448506_460_op y$v3_1517448506_529_op)) :rule or :premises (t28))
-(step t66 (cl (and y$v3_1517448506_460_op y$v3_1517448506_529_op)) :rule resolution :premises (t28' a661 t65))
-(step t.end (cl) :rule resolution :premises (nt66.0 t66))

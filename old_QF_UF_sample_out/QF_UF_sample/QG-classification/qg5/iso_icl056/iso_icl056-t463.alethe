@@ -1,5 +1,0 @@
-(assume t317 (= (op (op e1 e1) e1) (op e1 (op e1 e1))))
-(assume t462 (= (op e1 (op e1 e1)) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1)))))))
-(assume nt463.0 (not (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))))
-(step t463 (cl (= (op (op e1 e1) e1) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op (op e1 e1) (op e1 (op e1 e1))))))) :rule trans :premises (t317 t462))
-(step t.end (cl) :rule resolution :premises (nt463.0 t463))

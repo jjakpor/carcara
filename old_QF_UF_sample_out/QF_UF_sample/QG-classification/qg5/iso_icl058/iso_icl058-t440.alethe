@@ -1,7 +1,0 @@
-(assume t433 (or (not (= (not (= (op e3 e3) (op e3 e4))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) (not (not (= (op e3 e3) (op e3 e4)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
-(assume t438 (= (not (= (op e3 e3) (op e3 e4))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
-(assume t439 (not (= (op e3 e3) (op e3 e4))))
-(assume nt440.0 (not (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))))
-(step t433' (cl (not (= (not (= (op e3 e3) (op e3 e4))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) (not (not (= (op e3 e3) (op e3 e4)))) (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))) :rule or :premises (t433))
-(step t440 (cl (not (= (op (op (op (op e0 e0) e0) e0) (op (op e0 e0) e0)) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0))))) :rule resolution :premises (t433' t438 t439))
-(step t.end (cl) :rule resolution :premises (nt440.0 t440))

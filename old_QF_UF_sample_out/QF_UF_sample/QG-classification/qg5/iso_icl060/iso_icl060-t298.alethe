@@ -1,5 +1,0 @@
-(assume t275 (= (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)) (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) e3))))
-(assume t297 (= (= (op (op (op e1 e3) e1) (op (op e1 e3) e1)) (op (op (op e1 e3) e1) e3)) false))
-(assume nt298.0 (not (= (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)) false)))
-(step t298 (cl (= (= (op (op e1 e3) e1) (op (op (op e1 e3) e1) e3)) false)) :rule trans :premises (t275 t297))
-(step t.end (cl) :rule resolution :premises (nt298.0 t298))

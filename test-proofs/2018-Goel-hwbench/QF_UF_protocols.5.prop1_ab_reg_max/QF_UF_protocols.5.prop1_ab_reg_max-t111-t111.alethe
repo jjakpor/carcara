@@ -1,6 +1,0 @@
-(assume t107' (or (not (and y$a_ready_Consumer y$278)) y$a_ready_Consumer))
-(assume t110 (not y$a_ready_Consumer))
-(assume nt111.0 (not (not (and y$a_ready_Consumer y$278))))
-(step t107'' (cl (not (and y$a_ready_Consumer y$278)) y$a_ready_Consumer) :rule or :premises (t107'))
-(step t111 (cl (not (and y$a_ready_Consumer y$278))) :rule resolution :premises (t107'' t110))
-(step t.end (cl) :rule resolution :premises (nt111.0 t111))

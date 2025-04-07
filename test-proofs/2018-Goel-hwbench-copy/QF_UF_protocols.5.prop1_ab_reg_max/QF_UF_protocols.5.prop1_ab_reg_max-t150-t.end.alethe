@@ -1,3 +1,0 @@
-(assume nt150.0 (not (not y$v3_1517448506_301_op)))
-(assume t150 (not y$v3_1517448506_301_op))
-(step t.end (cl) :rule resolution :premises (nt150.0 t150))

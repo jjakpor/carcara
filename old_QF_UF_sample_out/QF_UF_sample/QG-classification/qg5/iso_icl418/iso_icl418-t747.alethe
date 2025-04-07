@@ -1,4 +1,0 @@
-(assume t746 (and (and (= (op (op e3 e0) e3) e0) (= (op (op e3 e1) e3) e1)) (= (op (op e3 e2) e3) e2)))
-(assume nt747.0 (not (= (op (op e3 e2) e3) e2)))
-(step t747 (cl (= (op (op e3 e2) e3) e2)) :rule and :premises (t746))
-(step t.end (cl) :rule resolution :premises (nt747.0 t747))

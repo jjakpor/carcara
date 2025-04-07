@@ -1,8 +1,0 @@
-(assume t458 (or (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3)) (= e3 (op (op (op e1 e3) e3) e3)) (= (op e1 e3) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= e1 (op (op (op e1 e3) e3) e3))))
-(assume nt459.0 (not (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3))))
-(assume nt459.1 (not (= e3 (op (op (op e1 e3) e3) e3))))
-(assume nt459.2 (not (= (op e1 e3) (op (op (op e1 e3) e3) e3))))
-(assume nt459.3 (not (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3))))
-(assume nt459.4 (not (= e1 (op (op (op e1 e3) e3) e3))))
-(step t459 (cl (= (op (op e1 e3) e3) (op (op (op e1 e3) e3) e3)) (= e3 (op (op (op e1 e3) e3) e3)) (= (op e1 e3) (op (op (op e1 e3) e3) e3)) (= (op (op e1 e3) e1) (op (op (op e1 e3) e3) e3)) (= e1 (op (op (op e1 e3) e3) e3))) :rule or :premises (t458))
-(step t.end (cl) :rule resolution :premises (nt459.0 nt459.1 nt459.2 nt459.3 nt459.4 t459))

@@ -1,3 +1,0 @@
-(assume nt2.0 (not (= (not car) (not car))))
-(step t2 (cl (= (not car) (not car))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt2.0 t2))

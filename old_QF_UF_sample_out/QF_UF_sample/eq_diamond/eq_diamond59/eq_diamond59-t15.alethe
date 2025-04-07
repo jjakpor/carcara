@@ -1,3 +1,0 @@
-(assume nt15.0 (not (= (= (not (not (= x0 x58))) (= x0 x58)) (= (= x0 x58) (not (not (= x0 x58)))))))
-(step t15 (cl (= (= (not (not (= x0 x58))) (= x0 x58)) (= (= x0 x58) (not (not (= x0 x58)))))) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt15.0 t15))

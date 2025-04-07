@@ -1,5 +1,0 @@
-(assume t72 (or (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1))))))
-(assume nt73.0 (not (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1))))))
-(step t72' (cl (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1)))) (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1))))) :rule or :premises (t72))
-(step t73 (cl (=> (and (not (= (f6 c_1) (f5 c_1))) (= c_0 (f6 c_1))) (not (= c_0 (f5 c_1))))) :rule contraction :premises (t72'))
-(step t.end (cl) :rule resolution :premises (nt73.0 t73))

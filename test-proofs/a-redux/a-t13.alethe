@@ -1,3 +1,0 @@
-(assume nt13.0 (not (= (= (not (= d (f a))) (not (= d (f b)))) (= (not (= d (f b))) (not (= d (f a)))))))
-(step t13 (cl (= (= (not (= d (f a))) (not (= d (f b)))) (= (not (= d (f b))) (not (= d (f a)))))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nt13.0 t13))

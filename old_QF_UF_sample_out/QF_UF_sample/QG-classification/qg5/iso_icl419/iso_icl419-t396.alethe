@@ -1,5 +1,0 @@
-(assume t394 (= (op e3 e3) (op (op (op e3 e3) (op e3 e3)) (op e3 e3))))
-(assume t395 (= (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))
-(assume nt396.0 (not (= (= (op e3 e3) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))) (= (op (op (op e3 e3) (op e3 e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))))
-(step t396 (cl (= (= (op e3 e3) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))) (= (op (op (op e3 e3) (op e3 e3)) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))) :rule cong :premises (t394 t395))
-(step t.end (cl) :rule resolution :premises (nt396.0 t396))

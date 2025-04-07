@@ -1,3 +1,0 @@
-(assume nst43.0 (not (= (= thesis$ false) (not thesis$))))
-(step st43 (cl (= (= thesis$ false) (not thesis$))) :rule hole)
-(step t.end (cl) :rule resolution :premises (nst43.0 st43))

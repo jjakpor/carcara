@@ -1,3 +1,0 @@
-(assume nt2.t20.0 (not (= (= y$6 (= y$n15s4 y$X)) (= y$6 (= y$X y$n15s4)))))
-(assume t2.t20 (= (= y$6 (= y$n15s4 y$X)) (= y$6 (= y$X y$n15s4))))
-(step t.end (cl) :rule resolution :premises (nt2.t20.0 t2.t20))

@@ -1,3 +1,0 @@
-(assume nt125.0 (not (= (not (p1 (f5 c_0) c_0)) (not (p1 (f5 c_0) c_0)))))
-(step t125 (cl (= (not (p1 (f5 c_0) c_0)) (not (p1 (f5 c_0) c_0)))) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt125.0 t125))

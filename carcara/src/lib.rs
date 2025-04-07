@@ -45,7 +45,7 @@ mod utils;
 
 use crate::benchmarking::{CollectResults, OnlineBenchmarkResults, RunMeasurement};
 use ast::printer::proof_to_string;
-use ast::{pool, Operator, PrimitivePool, Problem, Proof, ProofCommand, ProofIter, ProofStep, Rc, Subproof, Term, TermPool};
+use ast::{pool, Operator, PrimitivePool, Problem, ProblemPrelude, Proof, ProofCommand, ProofIter, ProofStep, Rc, Subproof, Term, TermPool};
 use checker::{error::CheckerError, CheckerStatistics};
 use parser::{ParserError, Position};
 use core::{panic, slice};
@@ -812,7 +812,7 @@ pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
 
 
     
-    let mut new_proof : Proof = Proof { constant_definitions: proof.constant_definitions.clone(), commands: negation_commands};
+    let mut new_proof : Proof = Proof { constant_definitions: Vec::new(), commands: negation_commands};
     for c in &sliced_step_commands {
         new_proof.commands.push(c.clone());
     }
@@ -826,7 +826,6 @@ pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     }
 
 
-
     let proof_string = proof_to_string(pool, &problem.prelude, &new_proof, false);
 
     let mut asserts = Vec::new();
@@ -838,12 +837,13 @@ pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
         }
     }
     
+    
     let mut problem_string = String::new();
-    write!(&mut problem_string, "{}", problem.prelude).unwrap();
+    write!(&mut problem_string, "{}", &problem.prelude).unwrap();
 
     let mut bytes = Vec::new();
+     ast::printer::write_define_funs(pool, &problem.prelude, &mut bytes, &proof.constant_definitions, false);
     ast::printer::write_asserts(pool, &problem.prelude, &mut bytes, &asserts, false);
-    
     write!(&mut problem_string, "{}", String::from_utf8(bytes).unwrap()).unwrap();
     writeln!(&mut problem_string, "(check-sat)").unwrap();
     writeln!(&mut problem_string, "(exit)").unwrap();
@@ -958,7 +958,8 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
                 new_proof.commands.push(ProofCommand::Step(final_step));
             }
             
-            let proof_string = proof_to_string(pool, &problem.prelude, &new_proof, false);
+            let new_prelude = ProblemPrelude {function_declarations: Vec::new(), sort_declarations: problem.prelude.sort_declarations.clone(), logic: problem.prelude.logic.clone()};
+            let proof_string = proof_to_string(pool, &new_prelude, &new_proof, false);
         
             let mut asserts = Vec::new();
             processed_premises.clear();
@@ -972,10 +973,10 @@ pub fn small_slice2(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
             }
         
             let mut problem_string = String::new();
-            write!(&mut problem_string, "{}", problem.prelude).unwrap();
+            write!(&mut problem_string, "{}", &new_prelude).unwrap();
         
             let mut bytes = Vec::new();
-            ast::printer::write_asserts(pool, &problem.prelude, &mut bytes, &asserts, false);
+            ast::printer::write_asserts(pool, &new_prelude, &mut bytes, &asserts, false);
             
             write!(&mut problem_string, "{}", String::from_utf8(bytes).unwrap()).unwrap();
             writeln!(&mut problem_string, "(check-sat)").unwrap();

@@ -1,6 +1,0 @@
-(assume t124 (or (= e1 e0) (not (= e1 (op e1 (op e1 e1))))))
-(assume t139 (not (= e1 e0)))
-(assume nt140.0 (not (not (= e1 (op e1 (op e1 e1))))))
-(step t124' (cl (= e1 e0) (not (= e1 (op e1 (op e1 e1))))) :rule or :premises (t124))
-(step t140 (cl (not (= e1 (op e1 (op e1 e1))))) :rule resolution :premises (t124' t139))
-(step t.end (cl) :rule resolution :premises (nt140.0 t140))

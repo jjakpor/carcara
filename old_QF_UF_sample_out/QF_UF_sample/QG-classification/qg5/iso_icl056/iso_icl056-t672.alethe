@@ -1,5 +1,0 @@
-(assume t671 (= (= (op e1 (op e1 e1)) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))) (= (op (op e1 (op e1 e1)) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1))))))
-(assume t459 (= (= (op (op e1 (op e1 e1)) (op e1 (op e1 e1))) (op (op (op e1 e1) (op e1 (op e1 e1))) (op e1 (op e1 e1)))) false))
-(assume nt672.0 (not (= (= (op e1 (op e1 e1)) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))) false)))
-(step t672 (cl (= (= (op e1 (op e1 e1)) (op (op e1 (op e1 e1)) (op (op e1 e1) (op e1 (op e1 e1))))) false)) :rule trans :premises (t671 t459))
-(step t.end (cl) :rule resolution :premises (nt672.0 t672))

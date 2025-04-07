@@ -1,8 +1,0 @@
-(assume t522 (= (= e1 (op e3 e4)) (= (op e4 e3) (op e3 e4))))
-(assume t671 (= (= e1 (op e3 e3)) (= (op e4 e3) (op e3 e3))))
-(assume t53 (= (= e1 (op e3 e2)) (= (op e4 e3) (op e3 (op e3 e4)))))
-(assume t672 (= (= e1 (op e3 e0)) (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3))))))
-(assume t673 (= (= e1 (op e3 e1)) (= (op e4 e3) (op e3 (op e4 e3)))))
-(assume nt674.0 (not (= (or (= e1 (op e3 e4)) (= e1 (op e3 e3)) (= e1 (op e3 e2)) (= e1 (op e3 e0)) (= e1 (op e3 e1))) (or (= (op e4 e3) (op e3 e4)) (= (op e4 e3) (op e3 e3)) (= (op e4 e3) (op e3 (op e3 e4))) (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e4 e3) (op e3 (op e4 e3)))))))
-(step t674 (cl (= (or (= e1 (op e3 e4)) (= e1 (op e3 e3)) (= e1 (op e3 e2)) (= e1 (op e3 e0)) (= e1 (op e3 e1))) (or (= (op e4 e3) (op e3 e4)) (= (op e4 e3) (op e3 e3)) (= (op e4 e3) (op e3 (op e3 e4))) (= (op e4 e3) (op e3 (op (op e4 e3) (op e4 e3)))) (= (op e4 e3) (op e3 (op e4 e3)))))) :rule cong :premises (t522 t671 t53 t672 t673))
-(step t.end (cl) :rule resolution :premises (nt674.0 t674))

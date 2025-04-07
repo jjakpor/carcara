@@ -1,7 +1,0 @@
-(assume t2.t16' (or (not (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4)))) (not (= (= y$n15s4 y$X) y$6)) (= y$6 (= y$X y$n15s4))))
-(assume t2.t21 (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4))))
-(assume a2 (= (= y$n15s4 y$X) y$6))
-(assume nt2.t22.0 (not (= y$6 (= y$X y$n15s4))))
-(step t2.t16'' (cl (not (= (= (= y$n15s4 y$X) y$6) (= y$6 (= y$X y$n15s4)))) (not (= (= y$n15s4 y$X) y$6)) (= y$6 (= y$X y$n15s4))) :rule or :premises (t2.t16'))
-(step t2.t22 (cl (= y$6 (= y$X y$n15s4))) :rule resolution :premises (t2.t16'' t2.t21 a2))
-(step t.end (cl) :rule resolution :premises (nt2.t22.0 t2.t22))

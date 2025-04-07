@@ -1,5 +1,0 @@
-(assume t26 (= rd1 red_MR))
-(assume t5 (= prt prt))
-(assume nt34.0 (not (= (and rd1 prt) (and red_MR prt))))
-(step t34 (cl (= (and rd1 prt) (and red_MR prt))) :rule cong :premises (t26 t5))
-(step t.end (cl) :rule resolution :premises (nt34.0 t34))

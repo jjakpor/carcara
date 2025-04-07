@@ -1,7 +1,0 @@
-(assume t62.t15 (or (not (= (= (op e3 (op e3 e4)) e4) (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))))) (not (= (op e3 (op e3 e4)) e4)) (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3))))))
-(assume t62.t19 (= (= (op e3 (op e3 e4)) e4) (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3))))))
-(assume t62.t21 (= (op e3 (op e3 e4)) e4))
-(assume nt62.t22.0 (not (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3))))))
-(step t62.t15' (cl (not (= (= (op e3 (op e3 e4)) e4) (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3)))))) (not (= (op e3 (op e3 e4)) e4)) (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3))))) :rule or :premises (t62.t15))
-(step t62.t22 (cl (= (op (op e1 e3) e3) (op e3 (op e3 (op (op e1 e3) e3))))) :rule resolution :premises (t62.t15' t62.t19 t62.t21))
-(step t.end (cl) :rule resolution :premises (nt62.t22.0 t62.t22))

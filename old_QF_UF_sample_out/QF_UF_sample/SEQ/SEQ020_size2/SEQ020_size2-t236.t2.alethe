@@ -1,3 +1,0 @@
-(assume nt236.t2.0 (not (= (= (p1 (f6 c_0) c_0) true) (p1 (f6 c_0) c_0))))
-(step t236.t2 (cl (= (= (p1 (f6 c_0) c_0) true) (p1 (f6 c_0) c_0))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nt236.t2.0 t236.t2))

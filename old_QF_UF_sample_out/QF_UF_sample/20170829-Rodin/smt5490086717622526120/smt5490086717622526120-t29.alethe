@@ -1,3 +1,0 @@
-(assume nt29.0 (not (= (= rd2 false) (not rd2))))
-(step t29 (cl (= (= rd2 false) (not rd2))) :rule rare_rewrite)
-(step t.end (cl) :rule resolution :premises (nt29.0 t29))

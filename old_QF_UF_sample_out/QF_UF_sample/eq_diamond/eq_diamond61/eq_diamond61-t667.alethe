@@ -1,5 +1,0 @@
-(assume t666 (= (= (= x0 x60) false) (not (= x0 x60))))
-(assume nt667.0 (not (= (= x0 x60) false)))
-(assume nt667.1 (not (not (not (= x0 x60)))))
-(step t667 (cl (= (= x0 x60) false) (not (not (= x0 x60)))) :rule equiv2 :premises (t666))
-(step t.end (cl) :rule resolution :premises (nt667.0 nt667.1 t667))

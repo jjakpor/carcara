@@ -1,3 +1,0 @@
-(assume nt57.0 (not (= y$v_done y$v_k_Belt)))
-(assume t57 (= y$v_done y$v_k_Belt))
-(step t.end (cl) :rule resolution :premises (nt57.0 t57))

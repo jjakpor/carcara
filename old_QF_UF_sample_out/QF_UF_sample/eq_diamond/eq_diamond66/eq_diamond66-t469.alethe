@@ -1,5 +1,0 @@
-(assume nt469.0 (not (not (= (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (and (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42)))))))
-(assume nt469.1 (not (not (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))))))
-(assume nt469.2 (not (and (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42)))))
-(step t469 (cl (not (= (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (and (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42))))) (not (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42)))) (and (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (=> (or (and (= x41 y41) (= y41 x42)) (and (= x41 z41) (= z41 x42))) (= x41 x42)))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt469.0 nt469.1 nt469.2 t469))

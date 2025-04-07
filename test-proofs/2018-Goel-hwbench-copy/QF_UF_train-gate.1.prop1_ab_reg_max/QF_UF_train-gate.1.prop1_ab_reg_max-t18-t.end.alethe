@@ -1,3 +1,0 @@
-(assume nt18.0 (not y$id37_op))
-(assume t18 y$id37_op)
-(step t.end (cl) :rule resolution :premises (nt18.0 t18))

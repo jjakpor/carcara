@@ -1,7 +1,0 @@
-(assume t568 (or (not (= (not (= (op e2 e0) (op e2 e3))) (not (= (op (op e1 e3) e3) (op (op e1 e3) (op (op e1 e3) e1)))))) (not (not (= (op e2 e0) (op e2 e3)))) (not (= (op (op e1 e3) e3) (op (op e1 e3) (op (op e1 e3) e1))))))
-(assume t573 (= (not (= (op e2 e0) (op e2 e3))) (not (= (op (op e1 e3) e3) (op (op e1 e3) (op (op e1 e3) e1))))))
-(assume t578 (not (= (op e2 e0) (op e2 e3))))
-(assume nt579.0 (not (not (= (op (op e1 e3) e3) (op (op e1 e3) (op (op e1 e3) e1))))))
-(step t568' (cl (not (= (not (= (op e2 e0) (op e2 e3))) (not (= (op (op e1 e3) e3) (op (op e1 e3) (op (op e1 e3) e1)))))) (not (not (= (op e2 e0) (op e2 e3)))) (not (= (op (op e1 e3) e3) (op (op e1 e3) (op (op e1 e3) e1))))) :rule or :premises (t568))
-(step t579 (cl (not (= (op (op e1 e3) e3) (op (op e1 e3) (op (op e1 e3) e1))))) :rule resolution :premises (t568' t573 t578))
-(step t.end (cl) :rule resolution :premises (nt579.0 t579))

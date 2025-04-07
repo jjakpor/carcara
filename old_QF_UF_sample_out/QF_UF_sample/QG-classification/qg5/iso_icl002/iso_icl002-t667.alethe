@@ -1,5 +1,0 @@
-(assume t666 (= (= (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op e0 e0))) false) (not (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op e0 e0))))))
-(assume nt667.0 (not (= (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op e0 e0))) false)))
-(assume nt667.1 (not (not (not (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op e0 e0)))))))
-(step t667 (cl (= (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op e0 e0))) false) (not (not (= (op e0 (op e0 e0)) (op (op e0 (op e0 e0)) (op e0 e0)))))) :rule equiv2 :premises (t666))
-(step t.end (cl) :rule resolution :premises (nt667.0 nt667.1 t667))

@@ -1,5 +1,0 @@
-(assume t84.t375 (=> (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))) (= x34 x35)))
-(assume nt84.t376.0 (not (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35))))))
-(assume nt84.t376.1 (not (= x34 x35)))
-(step t84.t376 (cl (not (or (and (= x34 y34) (= y34 x35)) (and (= x34 z34) (= z34 x35)))) (= x34 x35)) :rule implies :premises (t84.t375))
-(step t.end (cl) :rule resolution :premises (nt84.t376.0 nt84.t376.1 t84.t376))

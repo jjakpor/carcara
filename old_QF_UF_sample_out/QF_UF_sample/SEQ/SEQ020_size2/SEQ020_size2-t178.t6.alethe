@@ -1,6 +1,0 @@
-(assume t178.t5 (or (= (p1 (f7 c_0) c_0) false) (p1 (f7 c_0) c_0)))
-(assume t178.a3 (not (p1 (f7 c_0) c_0)))
-(assume nt178.t6.0 (not (= (p1 (f7 c_0) c_0) false)))
-(step t178.t5' (cl (= (p1 (f7 c_0) c_0) false) (p1 (f7 c_0) c_0)) :rule or :premises (t178.t5))
-(step t178.t6 (cl (= (p1 (f7 c_0) c_0) false)) :rule resolution :premises (t178.t5' t178.a3))
-(step t.end (cl) :rule resolution :premises (nt178.t6.0 t178.t6))

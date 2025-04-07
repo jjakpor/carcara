@@ -1,8 +1,0 @@
-(assume t840 (= (= e2 (op e4 e4)) (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3)))))
-(assume t887 (= (= e2 (op e3 e4)) (= (op e1 e3) (op e3 (op (op e1 e3) e3)))))
-(assume t888 (= (= e2 (op e2 e4)) (= (op e1 e3) (op (op e1 e3) (op (op e1 e3) e3)))))
-(assume t173 (= (= e2 (op e0 e4)) (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3)))))
-(assume t889 (= (= e2 (op e1 e4)) (= (op e1 e3) (op e1 (op (op e1 e3) e3)))))
-(assume nt890.0 (not (= (or (= e2 (op e4 e4)) (= e2 (op e3 e4)) (= e2 (op e2 e4)) (= e2 (op e0 e4)) (= e2 (op e1 e4))) (or (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))) (= (op e1 e3) (op e3 (op (op e1 e3) e3))) (= (op e1 e3) (op (op e1 e3) (op (op e1 e3) e3))) (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) (= (op e1 e3) (op e1 (op (op e1 e3) e3)))))))
-(step t890 (cl (= (or (= e2 (op e4 e4)) (= e2 (op e3 e4)) (= e2 (op e2 e4)) (= e2 (op e0 e4)) (= e2 (op e1 e4))) (or (= (op e1 e3) (op (op (op e1 e3) e3) (op (op e1 e3) e3))) (= (op e1 e3) (op e3 (op (op e1 e3) e3))) (= (op e1 e3) (op (op e1 e3) (op (op e1 e3) e3))) (= (op e1 e3) (op (op (op e1 e3) e1) (op (op e1 e3) e3))) (= (op e1 e3) (op e1 (op (op e1 e3) e3)))))) :rule cong :premises (t840 t887 t888 t173 t889))
-(step t.end (cl) :rule resolution :premises (nt890.0 t890))

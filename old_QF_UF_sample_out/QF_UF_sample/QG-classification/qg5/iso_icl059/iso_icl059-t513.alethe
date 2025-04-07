@@ -1,4 +1,0 @@
-(assume t512 (= (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0)) (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))
-(assume nt513.0 (not (= (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0))) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))))
-(step t513 (cl (= (not (= (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)) (op (op (op e0 e0) e0) e0))) (not (= (op (op (op e0 e0) e0) e0) (op (op (op (op e0 e0) e0) e0) (op (op (op e0 e0) e0) e0)))))) :rule cong :premises (t512))
-(step t.end (cl) :rule resolution :premises (nt513.0 t513))

@@ -1,3 +1,0 @@
-(assume nt16.0 (not (= (= y$n0s8 y$v_at_press) (= y$v_B y$v_at_press))))
-(assume t16 (= (= y$n0s8 y$v_at_press) (= y$v_B y$v_at_press)))
-(step t.end (cl) :rule resolution :premises (nt16.0 t16))

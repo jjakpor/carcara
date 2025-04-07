@@ -1,3 +1,0 @@
-(assume nt2.t203.0 (not (= (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4))) (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4))))))
-(assume t2.t203 (= (and (= y$X y$n1s4) (= y$n15s4 (Add_4_4_4 y$X y$n1s4))) (and (= y$n1s4 y$n1s4) (= y$n15s4 (Add_4_4_4 y$n1s4 y$n1s4)))))
-(step t.end (cl) :rule resolution :premises (nt2.t203.0 t2.t203))

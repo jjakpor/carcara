@@ -1,6 +1,0 @@
-(assume t84.t288 (or (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27)))) (= x26 x27)))
-(assume nt84.t289.0 (not (= x26 x27)))
-(assume nt84.t289.1 (not (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))))))
-(step t84.t288' (cl (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27)))) (= x26 x27)) :rule or :premises (t84.t288))
-(step t84.t289 (cl (= x26 x27) (not (or (and (= x26 y26) (= y26 x27)) (and (= x26 z26) (= z26 x27))))) :rule reordering :premises (t84.t288'))
-(step t.end (cl) :rule resolution :premises (nt84.t289.0 nt84.t289.1 t84.t289))

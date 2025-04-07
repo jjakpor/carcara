@@ -1,4 +1,0 @@
-(assume t327 (= (= e0 e4) (= e4 e0)))
-(assume nt328.0 (not (= (not (= e0 e4)) (not (= e4 e0)))))
-(step t328 (cl (= (not (= e0 e4)) (not (= e4 e0)))) :rule cong :premises (t327))
-(step t.end (cl) :rule resolution :premises (nt328.0 t328))

@@ -1,4 +1,0 @@
-(assume t2 (= (= r2 b2) (= b2 r2)))
-(assume nt16.0 (not (= (not (= r2 b2)) (not (= b2 r2)))))
-(step t16 (cl (= (not (= r2 b2)) (not (= b2 r2)))) :rule cong :premises (t2))
-(step t.end (cl) :rule resolution :premises (nt16.0 t16))

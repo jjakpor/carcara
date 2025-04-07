@@ -1,3 +1,0 @@
-(assume nt15.0 (not (= y$v_at_press y$v_at_press)))
-(step t15 (cl (= y$v_at_press y$v_at_press)) :rule refl)
-(step t.end (cl) :rule resolution :premises (nt15.0 t15))

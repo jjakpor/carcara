@@ -1,4 +1,0 @@
-(assume nt436.0 (not (=> (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f6 c_1)) (p1 (f6 c_1) c_1)) false)))
-(assume nt436.1 (not (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f6 c_1)) (p1 (f6 c_1) c_1))))
-(step t436 (cl (=> (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f6 c_1)) (p1 (f6 c_1) c_1)) false) (and (not (p1 (f7 c_1) c_1)) (= c_0 (f7 c_1)) (= c_0 (f6 c_1)) (p1 (f6 c_1) c_1))) :rule implies_neg1)
-(step t.end (cl) :rule resolution :premises (nt436.0 nt436.1 t436))

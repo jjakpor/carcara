@@ -1,5 +1,0 @@
-(assume t3 (= (not (= d (f b))) (not (= d (f b)))))
-(assume t9 (= (not (not (= d (f a)))) (= d (f a))))
-(assume nt10.0 (not (= (or (not (= d (f b))) (not (not (= d (f a))))) (or (not (= d (f b))) (= d (f a))))))
-(step t10 (cl (= (or (not (= d (f b))) (not (not (= d (f a))))) (or (not (= d (f b))) (= d (f a))))) :rule cong :premises (t3 t9))
-(step t.end (cl) :rule resolution :premises (nt10.0 t10))

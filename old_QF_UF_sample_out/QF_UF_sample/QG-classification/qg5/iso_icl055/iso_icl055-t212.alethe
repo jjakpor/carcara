@@ -1,4 +1,0 @@
-(assume t211 (and (and (and (= (op e1 (op e1 e0)) e0) (= (op e1 (op e1 e1)) e1)) (= (op e1 (op e1 e2)) e2)) (= (op e1 (op e1 e3)) e3)))
-(assume nt212.0 (not (and (and (= (op e1 (op e1 e0)) e0) (= (op e1 (op e1 e1)) e1)) (= (op e1 (op e1 e2)) e2))))
-(step t212 (cl (and (and (= (op e1 (op e1 e0)) e0) (= (op e1 (op e1 e1)) e1)) (= (op e1 (op e1 e2)) e2))) :rule and :premises (t211))
-(step t.end (cl) :rule resolution :premises (nt212.0 t212))

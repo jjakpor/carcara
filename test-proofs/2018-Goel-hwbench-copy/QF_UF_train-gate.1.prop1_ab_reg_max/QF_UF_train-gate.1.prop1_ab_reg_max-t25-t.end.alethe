@@ -1,3 +1,0 @@
-(assume nt25.0 (not (not (and y$a_Cross_Train_1 y$a_Cross_Train_2))))
-(assume t25 (not (and y$a_Cross_Train_1 y$a_Cross_Train_2)))
-(step t.end (cl) :rule resolution :premises (nt25.0 t25))

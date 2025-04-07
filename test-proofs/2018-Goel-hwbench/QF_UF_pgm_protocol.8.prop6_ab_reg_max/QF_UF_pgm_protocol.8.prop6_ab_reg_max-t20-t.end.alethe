@@ -1,5 +1,0 @@
-(assume nt20.0 (not (not y$v3_1517448504_183_op)))
-(assume nt20.1 (not (and y$a_r4 y$v3_1517448504_182_op)))
-(assume t20 (or (not y$v3_1517448504_183_op) (and y$a_r4 y$v3_1517448504_182_op)))
-(step t20' (cl (not y$v3_1517448504_183_op) (and y$a_r4 y$v3_1517448504_182_op)) :rule or :premises (t20))
-(step t.end (cl) :rule resolution :premises (nt20.0 nt20.1 t20'))

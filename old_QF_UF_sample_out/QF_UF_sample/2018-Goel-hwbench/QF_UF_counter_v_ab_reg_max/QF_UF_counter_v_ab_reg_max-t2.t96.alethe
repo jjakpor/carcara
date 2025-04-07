@@ -1,4 +1,0 @@
-(assume t2.t95 (= (= y$45 true) y$45))
-(assume nt2.t96.0 (not (= y$45 (= y$45 true))))
-(step t2.t96 (cl (= y$45 (= y$45 true))) :rule symm :premises (t2.t95))
-(step t.end (cl) :rule resolution :premises (nt2.t96.0 t2.t96))

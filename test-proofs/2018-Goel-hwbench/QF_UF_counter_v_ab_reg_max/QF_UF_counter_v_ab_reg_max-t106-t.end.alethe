@@ -1,3 +1,0 @@
-(assume nt106.0 (not (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next)))))
-(assume t106 (= (= y$28 (= y$prop$next y$27)) (= y$28 (= y$27 y$prop$next))))
-(step t.end (cl) :rule resolution :premises (nt106.0 t106))

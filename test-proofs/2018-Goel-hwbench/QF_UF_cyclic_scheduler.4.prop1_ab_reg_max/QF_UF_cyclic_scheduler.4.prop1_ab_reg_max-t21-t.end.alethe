@@ -1,3 +1,0 @@
-(assume nt21.0 (not (not y$prop)))
-(assume t21 (not y$prop))
-(step t.end (cl) :rule resolution :premises (nt21.0 t21))

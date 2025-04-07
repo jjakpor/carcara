@@ -1,5 +1,0 @@
-(assume nt90.t0.0 (not (not (= (= (op e1 unit) e1) (= e1 (op e1 e0))))))
-(assume nt90.t0.1 (not (not (= (op e1 unit) e1))))
-(assume nt90.t0.2 (not (= e1 (op e1 e0))))
-(step t90.t0 (cl (not (= (= (op e1 unit) e1) (= e1 (op e1 e0)))) (not (= (op e1 unit) e1)) (= e1 (op e1 e0))) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt90.t0.0 nt90.t0.1 nt90.t0.2 t90.t0))

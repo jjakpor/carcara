@@ -1,7 +1,0 @@
-(assume t76 (or (not (p1 (f6 c_1) c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f7 c_1))) (p1 (f7 c_1) c_1)))
-(assume nt77.0 (not (not (p1 (f6 c_1) c_1))))
-(assume nt77.1 (not (not (= c_0 (f6 c_1)))))
-(assume nt77.2 (not (not (= c_0 (f7 c_1)))))
-(assume nt77.3 (not (p1 (f7 c_1) c_1)))
-(step t77 (cl (not (p1 (f6 c_1) c_1)) (not (= c_0 (f6 c_1))) (not (= c_0 (f7 c_1))) (p1 (f7 c_1) c_1)) :rule or :premises (t76))
-(step t.end (cl) :rule resolution :premises (nt77.0 nt77.1 nt77.2 nt77.3 t77))

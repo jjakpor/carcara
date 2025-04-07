@@ -1,6 +1,0 @@
-(assume t760 (or (not (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68)))) (= x67 x68)))
-(assume nt761.0 (not (= x67 x68)))
-(assume nt761.1 (not (not (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))))))
-(step t760' (cl (not (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68)))) (= x67 x68)) :rule or :premises (t760))
-(step t761 (cl (= x67 x68) (not (or (and (= x67 y67) (= y67 x68)) (and (= x67 z67) (= z67 x68))))) :rule reordering :premises (t760'))
-(step t.end (cl) :rule resolution :premises (nt761.0 nt761.1 t761))

@@ -1,5 +1,0 @@
-(assume nt17.0 (not (not (= (not org_MR) (= org_MR false)))))
-(assume nt17.1 (not (not (not org_MR))))
-(assume nt17.2 (not (= org_MR false)))
-(step t17 (cl (not (= (not org_MR) (= org_MR false))) (not (not org_MR)) (= org_MR false)) :rule equiv_pos2)
-(step t.end (cl) :rule resolution :premises (nt17.0 nt17.1 nt17.2 t17))

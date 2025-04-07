@@ -1,5 +1,0 @@
-(assume t84.t81 (=> (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))) (= x4 x5)))
-(assume nt84.t82.0 (not (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5))))))
-(assume nt84.t82.1 (not (= x4 x5)))
-(step t84.t82 (cl (not (or (and (= x4 y4) (= y4 x5)) (and (= x4 z4) (= z4 x5)))) (= x4 x5)) :rule implies :premises (t84.t81))
-(step t.end (cl) :rule resolution :premises (nt84.t82.0 nt84.t82.1 t84.t82))

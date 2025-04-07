@@ -1,5 +1,0 @@
-(assume t6 (= (= (p1 (f7 c_1) c_1) (not (not (p1 (f7 c_1) c_1)))) (= (p1 (f7 c_1) c_1) (p1 (f7 c_1) c_1))))
-(assume t7 (= (= (p1 (f7 c_1) c_1) (p1 (f7 c_1) c_1)) true))
-(assume nt8.0 (not (= (= (p1 (f7 c_1) c_1) (not (not (p1 (f7 c_1) c_1)))) true)))
-(step t8 (cl (= (= (p1 (f7 c_1) c_1) (not (not (p1 (f7 c_1) c_1)))) true)) :rule trans :premises (t6 t7))
-(step t.end (cl) :rule resolution :premises (nt8.0 t8))

@@ -1,3 +1,0 @@
-(assume nt479.0 (not (= (= (= e3 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) false) (not (= e3 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))))
-(step t479 (cl (= (= (= e3 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3))) false) (not (= e3 (op (op (op e3 e3) (op e3 e3)) (op (op (op e3 e3) (op e3 e3)) e3)))))) :rule equiv_simplify)
-(step t.end (cl) :rule resolution :premises (nt479.0 t479))

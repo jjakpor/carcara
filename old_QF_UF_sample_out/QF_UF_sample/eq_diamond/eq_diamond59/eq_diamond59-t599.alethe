@@ -1,5 +1,0 @@
-(assume t598 (=> (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))) (= x35 x36)))
-(assume nt599.0 (not (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36))))))
-(assume nt599.1 (not (= x35 x36)))
-(step t599 (cl (not (or (and (= x35 y35) (= y35 x36)) (and (= x35 z35) (= z35 x36)))) (= x35 x36)) :rule implies :premises (t598))
-(step t.end (cl) :rule resolution :premises (nt599.0 nt599.1 t599))

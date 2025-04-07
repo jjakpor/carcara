@@ -1,6 +1,0 @@
-(assume t987 (or (= (op e4 (op e3 e4)) (op (op e3 e4) e4)) (not (and (= (op e4 (op e3 e4)) (op (op e3 e4) e4)) (= (op (op e3 e4) e3) (op e3 (op e3 e4))) (= (op (op e3 e4) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))) (= (op (op e3 e4) (op e4 e3)) (op (op e4 e3) (op e3 e4)))))))
-(assume t1007 (not (= (op e4 (op e3 e4)) (op (op e3 e4) e4))))
-(assume nt1008.0 (not (not (and (= (op e4 (op e3 e4)) (op (op e3 e4) e4)) (= (op (op e3 e4) e3) (op e3 (op e3 e4))) (= (op (op e3 e4) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))) (= (op (op e3 e4) (op e4 e3)) (op (op e4 e3) (op e3 e4)))))))
-(step t987' (cl (= (op e4 (op e3 e4)) (op (op e3 e4) e4)) (not (and (= (op e4 (op e3 e4)) (op (op e3 e4) e4)) (= (op (op e3 e4) e3) (op e3 (op e3 e4))) (= (op (op e3 e4) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))) (= (op (op e3 e4) (op e4 e3)) (op (op e4 e3) (op e3 e4)))))) :rule or :premises (t987))
-(step t1008 (cl (not (and (= (op e4 (op e3 e4)) (op (op e3 e4) e4)) (= (op (op e3 e4) e3) (op e3 (op e3 e4))) (= (op (op e3 e4) (op (op e4 e3) (op e4 e3))) (op (op (op e4 e3) (op e4 e3)) (op e3 e4))) (= (op (op e3 e4) (op e4 e3)) (op (op e4 e3) (op e3 e4)))))) :rule resolution :premises (t987' t1007))
-(step t.end (cl) :rule resolution :premises (nt1008.0 t1008))

@@ -1,4 +1,0 @@
-(assume t208 (and (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (=> (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (= x18 x19))))
-(assume nt209.0 (not (=> (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (= x18 x19))))
-(step t209 (cl (=> (or (and (= x18 y18) (= y18 x19)) (and (= x18 z18) (= z18 x19))) (= x18 x19))) :rule and :premises (t208))
-(step t.end (cl) :rule resolution :premises (nt209.0 t209))
