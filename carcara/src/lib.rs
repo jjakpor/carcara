@@ -651,7 +651,7 @@ pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     write!(&mut problem_string, "{}", &problem.prelude).unwrap();
 
     let mut bytes = Vec::new();
-     ast::printer::write_define_funs(pool, &problem.prelude, &mut bytes, &proof.constant_definitions, false);
+    // ast::printer::write_define_funs(pool, &problem.prelude, &mut bytes, &proof.constant_definitions, false);
     ast::printer::write_asserts(pool, &problem.prelude, &mut bytes, &asserts, false);
     write!(&mut problem_string, "{}", String::from_utf8(bytes).unwrap()).unwrap();
     writeln!(&mut problem_string, "(check-sat)").unwrap();
