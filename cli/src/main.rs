@@ -613,6 +613,7 @@ fn slice_command(
     options: SliceCommandOptions,
 ) -> CliResult<(ast::Problem, ast::Proof, ast::PrimitivePool)> {
     use std::io::Write;
+    use std::fs;
     let (problem, proof) = get_instance(&options.input)?;
     let (problem, proof, mut pool) = parser::parse_instance(problem, proof, options.parsing.into())
         .map_err(carcara::Error::from)?;
@@ -625,11 +626,16 @@ fn slice_command(
         let sliced_proof_file_name = format!("{}-{}.alethe", file_name_without_extension, options.from); 
         
         // create_dir_all(file_name_without_extension.clone())?;
+        /*
         let mut sliced_problem_file = File::create(format!("{}", sliced_problem_file_name))?;
-        
         write!(sliced_problem_file, "{}", sliced_problem_string)?;
+        */
+        fs::write(sliced_problem_file_name, sliced_problem_string)?;
+        fs::write(sliced_proof_file_name, sliced_proof_string)?;
+        /* 
         let mut sliced_proof_file = File::create(format!("{}", sliced_proof_file_name))?;
         write!(sliced_proof_file, "{}", sliced_proof_string)?;
+        */
         
 
         sliced_proof
