@@ -430,7 +430,6 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
 
     // With either step or subproof we want to add this into our new subproof structure in case context has been added
     let goal_command = match the_step {
-        // TODO: Add bind support (would mostly be this case I think)
         Some(ProofCommand::Step(step)) => {
 
             let last_clause = if subproof_stack.is_empty() {
@@ -523,7 +522,6 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
             }
             
             // Now need to make thing to add loop
-
             let mut new_premises: Vec<(usize, usize)> = Vec::new();
             for premise in &step.premises {
                 new_premises.push(premise_map.get(premise).unwrap().premise_index.unwrap()); 
@@ -535,7 +533,7 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
 
         }
         
-        // TODO: implement
+        
         Some(ProofCommand::Subproof(sp)) => {
             
             let last_command = sp.commands.last().unwrap();
@@ -564,7 +562,6 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
 
                 goal_command = Some(ProofCommand::Subproof(new_subproof));
                 
-                 // goal_command
                 } else {
                     panic!("Second to last subproof command is not step.");
                 };
@@ -572,7 +569,6 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
             } else {
                 panic!("Subproof does not end in step")
             }
-            // sliced_index = commands.len() - 1;
             goal_command.expect("Goal command never got set")
         }
 
@@ -588,9 +584,7 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
         
         let mut iter = new_subproofs.into_iter().rev();
         let mut outer = iter.next();
-        // println!("Outer: {:?}", outer.as_ref().unwrap().commands.last().unwrap().id());
         for mut subproof in iter {
-            // println!("Subproof {:?}\n", subproof);
             let len = subproof.commands.len();
             subproof.commands.insert(len - 2, ProofCommand::Subproof(outer.unwrap()));
             outer = Some(subproof);
@@ -621,7 +615,7 @@ pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
 
 
     
-    let mut new_proof : Proof = Proof { constant_definitions: Vec::new(), commands: negation_commands};
+    let mut new_proof : Proof = Proof { constant_definitions: proof.constant_definitions.clone(), commands: negation_commands};
     for c in &sliced_step_commands {
         new_proof.commands.push(c.clone());
     }
@@ -651,7 +645,7 @@ pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     write!(&mut problem_string, "{}", &problem.prelude).unwrap();
 
     let mut bytes = Vec::new();
-    // ast::printer::write_define_funs(pool, &problem.prelude, &mut bytes, &proof.constant_definitions, false);
+    ast::printer::write_declare_funs(pool, &problem.prelude, &mut bytes, &proof.constant_definitions, false);
     ast::printer::write_asserts(pool, &problem.prelude, &mut bytes, &asserts, false);
     write!(&mut problem_string, "{}", String::from_utf8(bytes).unwrap()).unwrap();
     writeln!(&mut problem_string, "(check-sat)").unwrap();
