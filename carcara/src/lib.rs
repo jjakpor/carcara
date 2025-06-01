@@ -363,7 +363,8 @@ fn negation_conjuncts(clause: &[Rc<Term>], pool: &mut PrimitivePool) -> Vec<Rc<T
 }
 
 /* 
-
+Gets the step to slice as well as everything directly associated with it, i.e., its premises and the subproofs it is in.
+Returns a vector containing the step to slice inside a reconstructed subproof stack, preceded by any premises that are not inside a subproof.
 */
 pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<ProofCommand> {
     #[derive(Debug)]
