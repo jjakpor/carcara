@@ -619,9 +619,11 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
 
 }
 
+/* Slices a step with its associated subproof structure and constructs a resolution proof of it by
+   resolving the step (or its outermost subproof) with its negation.
+*/
 pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut PrimitivePool) -> (Proof, String, String) {
     use std::fmt::Write;
-
 
     let mut sliced_step_commands = sliced_step(proof, id, pool);
     let last =sliced_step_commands.last().unwrap();
