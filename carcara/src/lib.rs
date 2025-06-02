@@ -626,31 +626,29 @@ pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     use std::fmt::Write;
 
     let mut sliced_step_commands = sliced_step(proof, id, pool);
-    let last =sliced_step_commands.last().unwrap();
-    let empty = last.clause().is_empty();
-
-    let mut negation_commands = Vec::new();
-    let negated_goal = negation_conjuncts(last.clause(), pool);
-    let mut resolution_premises: Vec<(usize, usize)> = Vec::new();
-    for (i, conjunct) in negated_goal.iter().enumerate() {
-        negation_commands.push(ProofCommand::Assume { id: format!("n{}.{}", last.id(), i), term: conjunct.clone() });
-        resolution_premises.push((0, i));
-    }
-
-
     
-    let mut new_proof : Proof = Proof { constant_definitions: Vec::new(), commands: negation_commands};
+    // The resolution premises are false and (not false)
+    let mut resolution_premises: Vec<(usize, usize)> = Vec::new();
+    let mut new_proof : Proof = Proof { constant_definitions: Vec::new(), commands: Vec::new()};
+    let false_term: Rc<Term> = pool.add(Term::new_bool(false));
+    new_proof.commands.push(ProofCommand::Assume { id: "slice_assume_false".to_string(), term: false_term.clone() });
     for c in &sliced_step_commands {
         new_proof.commands.push(c.clone());
     }
 
 
-    if !empty {
-        resolution_premises.push((0, new_proof.commands.len() - 1));
-        let resolution_step = ProofStep { id: "t.end".to_string(), clause: Vec::new(), rule: "resolution".to_string(), premises: resolution_premises, args: Vec::new(), discharge: Vec::new() };
-        new_proof.commands.push(ProofCommand::Step(resolution_step));
-
-    }
+    new_proof.commands.push(
+        ProofCommand::Step(
+            ProofStep { id: "slice_not_false".to_string(),
+             clause: [pool.add(Term::Op(Operator::Not, [false_term.clone()].to_vec()))].to_vec(),
+              rule: "not_false".to_string(),
+               premises: Vec::new(), args: Vec::new(), discharge: Vec::new() }));
+    
+    resolution_premises.push((0, 0));
+    resolution_premises.push((0, new_proof.commands.len() - 1));
+    let resolution_step = ProofStep { id: "t.end".to_string(), clause: Vec::new(), rule: "resolution".to_string(), premises: resolution_premises, args: Vec::new(), discharge: Vec::new() };
+    new_proof.commands.push(ProofCommand::Step(resolution_step));
+    
 
 
     let proof_string = proof_to_string(pool, &problem.prelude, &new_proof, false);
