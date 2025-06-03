@@ -332,7 +332,7 @@ fn extract_step(sliced_step: Option<&ProofCommand>) -> &ProofStep {
                 panic!("Subproof does not end in step")
             }
         },
-        _ => panic!("Command is not step or subproof despite matching")
+        _ => panic!("Cannot extract step from command that is not Step or Subproof")
     }
 }
 
@@ -367,16 +367,6 @@ Gets the step to slice as well as everything directly associated with it, i.e., 
 Returns a vector containing the step to slice inside a reconstructed subproof stack, preceded by any premises that are not inside a subproof.
 */
 pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<ProofCommand> {
-    #[derive(Debug)]
-    struct Premise {
-        termified: Option<Rc<Term>>,
-        singleton: bool, // Cases considered are single and multiple, not empty,
-        
-        // i is with respect to the indexing of this list of commands, i.e., the negated goal assumptions are not considered and must be added later
-        assumption_index: Option<(usize, usize)>,
-        premise_index: Option<(usize, usize)>
-    }
-
     let ASSUME_FALSE_OFFSET = 1;
     
     let mut commands: Vec<ProofCommand> = Vec::new();
@@ -430,7 +420,6 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
         }
         let len = sp.commands.len();
         
-        /* When I was doing branching on bindlike, these couldn't be added as is-we'd need an index change. i decided to discard it for now for faster uf support, though explicitly nonminimal */
         // Add the second-to-last (penultimate) step of the subproof using the special trust rule.
         let penult = &sp.commands[len - 2];
         let penult_step = extract_step(Some(penult));
@@ -451,62 +440,45 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
     let goal_command = match the_step {
         Some(ProofCommand::Step(step)) => {
 
-            let mut premise_map: HashMap<(usize, usize), Premise> = HashMap::new();
+            // In this version, this maps the indices of premises in the original proof to the indices of premises in the sliced proof
+            let mut premise_map: HashMap<(usize, usize), (usize, usize)> = HashMap::new();
 
+            // Sort the premise indices for ease of processing
             let mut sorted_premises = step.premises.clone();
             sorted_premises.sort_unstable();
 
-            // Construct premise map
-            for  premise in &sorted_premises { 
-                if premise.0 == 0 {
-                    let premise_command = iter.get_premise(*premise);
-                    let premise_clause = premise_command.clause();
-                    let termified = termify_clause(premise_clause, pool);
-                    premise_map.insert(*premise, Premise {termified: Some(termified), singleton: premise_clause.len() == 1, assumption_index: None, premise_index: None});
-                    
-                } else {
-                    break;
-                }
-                
-            }
-
-            // Add termified assumes and update map for location of assumption
+            // Processed premises are those that have been mapped to premises in the sliced version of the proof
             let mut processed_premises: HashSet<(usize, usize)> = HashSet::new();
+
+            // First, handle each premise that occurs outside of a subproof
             for premise in &sorted_premises {
                 if premise.0 == 0 && processed_premises.insert(*premise) {
-                    let entry_opt = premise_map.get_mut(premise);
-                    let entry = entry_opt.unwrap();
                     let premise_command = iter.get_premise(*premise);
-                    commands.push(ProofCommand::Assume { id: premise_command.id().to_string(), term: entry.termified.as_ref().unwrap().clone()});
+                    // Construct the new command based on whether the premise is an assume or an Alethe step
+                    let new_command = match premise_command {
+                        // If it's an assume, just copy it verbatim.
+                        ProofCommand::Assume { id, term } => premise_command.clone(),
+                        // If it's an Alethe step (represented by a Step or Subproof, )
+                        _ => 
+                        ProofCommand::Step(ProofStep{ 
+                        id: premise_command.id().to_string(), 
+                        clause: premise_command.clause().to_vec(), 
+                        rule: "trust".to_string(),
+                         premises: Vec::new(), 
+                         args: extract_step(Some(premise_command)).args.clone().to_vec(), // I'm not sure if the args are needed, but I'm including them to be safe
+                         discharge: Vec::new() // The trust rule doesn't discharge any assumptions
+                        })
                     
-                    entry.assumption_index = Some((0, ASSUME_FALSE_OFFSET + commands.len() - 1));
-                    if entry.singleton {
-                        entry.premise_index = entry.assumption_index;
-                    }
-                } else if premise.0 != 0 { // Change to else if to stop early breaking with repeated premise
+                    };
+                    commands.push(new_command);
+                    premise_map.insert(*premise, (0, ASSUME_FALSE_OFFSET + commands.len() - 1)); // Index calculation
+                } else if premise.0 != 0 { // Changed to else if to stop early breaking with repeated premise
                     break;
                 }
             }
 
-            // Add or steps to break up any artificially termified disjunctions
-            for (premise, entry) in &mut premise_map {
-                
-                if !entry.singleton {
-                    let premise_command = iter.get_premise(*premise);
-                    let or_step = ProofStep {
-                        clause: premise_command.clause().to_vec(),
-                        rule: "or".to_string(),
-                        premises: [entry.assumption_index.unwrap()].to_vec(), 
-                        id: format!("{}'", premise_command.id()), 
-                        args: Vec::new(), discharge: Vec::new()
-                    };
-        
-                    commands.push(ProofCommand::Step(or_step));
-                    entry.premise_index = Some((0, ASSUME_FALSE_OFFSET + commands.len() - 1));
-                }
-            }
 
-            // Now need to add to subproofs and add to premise map from there
+            // Now we need to handle the premises that are in subproofs. We add them to the corresponding subproofs in the new proof and update the premise map accordingly
             for premise in &sorted_premises {
                 
                 if premise.0 == 0 {
@@ -517,27 +489,26 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
                 if processed_premises.insert(*premise) {
                     // Find premise id in current subproof
                     // If it is present, make premise index its location
-                    // If it is absent, then add as trust step, and premise_index should be wherever we add this
+                    // If it is absent, then add as trust step, and premise index should be wherever we add this
                     let premise_command = iter.get_premise(*premise);
                     let premise_pos = new_subproofs[stack_depth].commands.iter().position(|c| c.id() == premise_command.id());
                     if let Some(i) = premise_pos {
-                        let entry = Premise {termified: None, singleton: true, assumption_index: None, premise_index: Some((premise.0, i))};
-                        premise_map.insert(*premise, entry);
+                        premise_map.insert(*premise, (premise.0, i));
                     } else {
                         let step = ProofStep {id: premise_command.id().to_string(), clause: premise_command.clause().to_vec(), rule: "trust".to_string(), premises: Vec::new(), args: extract_step(Some(premise_command)).args.clone(), discharge: Vec::new()};
                         // Add as trust step
                         let len = new_subproofs[stack_depth].commands.len();
                         new_subproofs[stack_depth].commands.insert(len - 2, ProofCommand::Step(step));
-                        let entry = Premise {termified: None, singleton: false, assumption_index: None, premise_index: Some((premise.0, new_subproofs[stack_depth].commands.len() - 3))}; // -1 then -2 because of last two steps
+                        let entry = (premise.0, new_subproofs[stack_depth].commands.len() - 3); // -1 then -2 because of last two steps
                         premise_map.insert(*premise, entry);
                     }
                 }
             }
             
-            // Now need to make thing to add loop
+            // Now that we have created all the commands and know where they are, we can make a list of the indices of the premises in the new proof
             let mut new_premises: Vec<(usize, usize)> = Vec::new();
             for premise in &step.premises {
-                new_premises.push(premise_map.get(premise).unwrap().premise_index.unwrap()); 
+                new_premises.push(*premise_map.get(premise).unwrap()); 
             }
             /*  The step being sliced out gets a unique identifier. s stands for sliced. 
                 This is to avoid naming conflicts when slicing the second to last step of a subproof.  
