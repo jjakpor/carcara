@@ -377,6 +377,7 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
         premise_index: Option<(usize, usize)>
     }
 
+    let ASSUME_FALSE_OFFSET = 1;
     
     let mut commands: Vec<ProofCommand> = Vec::new();
     let mut iter = proof.iter();
@@ -450,12 +451,6 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
     let goal_command = match the_step {
         Some(ProofCommand::Step(step)) => {
 
-            let last_clause = if subproof_stack.is_empty() {
-                step.clause.clone()
-            } else {
-                subproof_stack.first().unwrap().commands.last().unwrap().clause().to_vec()
-            };
-            let negation_length = negation_conjuncts(&last_clause, pool).len();
             let mut premise_map: HashMap<(usize, usize), Premise> = HashMap::new();
 
             let mut sorted_premises = step.premises.clone();
@@ -484,7 +479,7 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
                     let premise_command = iter.get_premise(*premise);
                     commands.push(ProofCommand::Assume { id: premise_command.id().to_string(), term: entry.termified.as_ref().unwrap().clone()});
                     
-                    entry.assumption_index = Some((0, negation_length + commands.len() - 1));
+                    entry.assumption_index = Some((0, ASSUME_FALSE_OFFSET + commands.len() - 1));
                     if entry.singleton {
                         entry.premise_index = entry.assumption_index;
                     }
@@ -507,7 +502,7 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
                     };
         
                     commands.push(ProofCommand::Step(or_step));
-                    entry.premise_index = Some((0, negation_length + commands.len() - 1));
+                    entry.premise_index = Some((0, ASSUME_FALSE_OFFSET + commands.len() - 1));
                 }
             }
 
@@ -619,8 +614,8 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
 
 }
 
-/* Slices a step with its associated subproof structure and constructs a resolution proof of it by
-   resolving the step (or its outermost subproof) with its negation.
+/* Slices a step with its associated subproof structure and constructs a proof containing that step.
+   The beginning of the proof is an assumption of false that gets resolved with (not false) in the end.
 */
 pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut PrimitivePool) -> (Proof, String, String) {
     use std::fmt::Write;
@@ -629,7 +624,7 @@ pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     
     // The resolution premises are false and (not false)
     let mut resolution_premises: Vec<(usize, usize)> = Vec::new();
-    let mut new_proof : Proof = Proof { constant_definitions: Vec::new(), commands: Vec::new()};
+    let mut new_proof : Proof = Proof { constant_definitions: proof.constant_definitions.clone(), commands: Vec::new()};
     let false_term: Rc<Term> = pool.add(Term::new_bool(false));
     new_proof.commands.push(ProofCommand::Assume { id: "slice_assume_false".to_string(), term: false_term.clone() });
     for c in &sliced_step_commands {
@@ -641,11 +636,11 @@ pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
         ProofCommand::Step(
             ProofStep { id: "slice_not_false".to_string(),
              clause: [pool.add(Term::Op(Operator::Not, [false_term.clone()].to_vec()))].to_vec(),
-              rule: "not_false".to_string(),
+              rule: "false".to_string(),
                premises: Vec::new(), args: Vec::new(), discharge: Vec::new() }));
     
-    resolution_premises.push((0, 0));
-    resolution_premises.push((0, new_proof.commands.len() - 1));
+    resolution_premises.push((0, 0)); // False
+    resolution_premises.push((0, new_proof.commands.len() - 1)); // Not false
     let resolution_step = ProofStep { id: "t.end".to_string(), clause: Vec::new(), rule: "resolution".to_string(), premises: resolution_premises, args: Vec::new(), discharge: Vec::new() };
     new_proof.commands.push(ProofCommand::Step(resolution_step));
     
