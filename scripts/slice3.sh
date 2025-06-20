@@ -19,8 +19,8 @@ nr_valid_total=0
 nr_holey_total=0
 nr_invalid_total=0
 
-log_file="$input_dir/log.txt"
-> "$log_file"  # Clear the log file at the start
+log_file="$input_dir/log.txt" 
+"" > "$log_file"  # Clear the log file at the start
 
 # Avoid subshell by using process substitution
 while read -r proof_file; do
@@ -43,6 +43,7 @@ while read -r proof_file; do
         sliced_file_without_extension="$target_dir/$short_name-$step_id"
         sliced_proof_file="$sliced_file_without_extension.alethe"
         sliced_problem_file="$sliced_file_without_extension.smt2"
+
 
         eval "$dev_carcara slice $proof_file $problem_file --from $step_id --small > /dev/null"
         mv "$base_name-$step_id.smt2" "$target_dir"
