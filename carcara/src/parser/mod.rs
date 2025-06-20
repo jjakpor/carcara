@@ -31,7 +31,7 @@ pub struct Config {
     pub apply_function_defs: bool,
 
     /// If `true`, the parser will eliminate `let` bindings from terms during parsing. This is done
-    /// by replacing any occurence of a variable bound in the `let` binding with its corresponding
+    /// by replacing any occurrence of a variable bound in the `let` binding with its corresponding
     /// value.
     pub expand_lets: bool,
 
@@ -507,7 +507,7 @@ impl<'a, R: BufRead> Parser<'a, R> {
     fn interpret_div_as_real_lit(&mut self, a: &Rc<Term>, b: &Rc<Term>) -> Option<Rc<Term>> {
         // If the term is a division between two positive integer constants, and their GCD is 1,
         // then it should be interpreted as a rational literal. The only exception to this is the
-        // term '(/ 1 1)', which is still interpreted as a divison term.
+        // term '(/ 1 1)', which is still interpreted as a division term.
 
         let [a, b] = [a, b].map(|t| match t.as_ref() {
             Term::Const(Constant::Integer(i)) => Some(i),
@@ -818,15 +818,30 @@ impl<'a, R: BufRead> Parser<'a, R> {
 
         let mut constant_definitions = Vec::new();
 
+        // Some proofs may include an extra set of surrounding parentheses around the whole proof
+        let mut has_extra_surrounding_parens = false;
+        let mut read_first_token = false;
+
         // Some solvers print the satisfiability result (unsat) together with the proof. To save the
         // user from having to remove this, we consume this first "unsat" token if it exists
         if self.current_token == Token::Symbol("unsat".into()) {
             self.next_token()?;
         }
 
-        while self.current_token != Token::Eof {
+        while self.current_token != Token::Eof && self.current_token != Token::CloseParen {
             self.expect_token(Token::OpenParen)?;
+
+            if !read_first_token && self.current_token == Token::OpenParen
+                || self.current_token == Token::CloseParen
+            {
+                has_extra_surrounding_parens = true;
+                read_first_token = true;
+                continue;
+            }
+            read_first_token = true;
+
             let (token, position) = self.next_token()?;
+
             let (id, command) = match token {
                 Token::ReservedWord(Reserved::Assume) => {
                     let (id, term) = self.parse_assume_command()?;
@@ -911,6 +926,12 @@ impl<'a, R: BufRead> Parser<'a, R> {
             let index = stack.last().unwrap().0.commands.len() - 1;
             self.state.step_ids.insert(id, index);
         }
+
+        if has_extra_surrounding_parens {
+            self.expect_token(Token::CloseParen)?;
+        }
+        self.expect_token(Token::Eof)?;
+
         let commands = match stack.len() {
             0 => unreachable!(),
             1 => stack.pop().unwrap().0.commands,

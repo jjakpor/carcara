@@ -107,7 +107,7 @@ pub enum CheckerError {
     WrongNumberOfTermsInOp(Operator, Range, usize),
 
     #[error("expected term '{1}' to appear in '{0}' term")]
-    TermDoesntApperInOp(Operator, Rc<Term>),
+    TermDoesntAppearInOp(Operator, Rc<Term>),
 
     #[error("expected {1} terms in clause of step '{0}', got {2}")]
     WrongLengthOfPremiseClause(String, Range, usize),
@@ -178,6 +178,9 @@ pub enum CheckerError {
 
     #[error(transparent)]
     BindingListEquality(#[from] EqualityError<BindingList>),
+
+    #[error(transparent)]
+    IntegerEquality(#[from] EqualityError<Integer>),
 
     #[error("unknown rule")]
     UnknownRule,
@@ -266,7 +269,7 @@ pub enum QuantifierError {
     #[error("binding is missing in right-hand side: '{0}'")]
     CnfBindingIsMissing(String),
 
-    #[error("result clause doensn't appear in CNF of original term: '{0}'")]
+    #[error("result clause doesn't appear in CNF of original term: '{0}'")]
     ClauseDoesntAppearInCnf(Rc<Term>),
 }
 
