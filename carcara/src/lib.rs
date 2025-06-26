@@ -45,13 +45,12 @@ mod utils;
 
 use crate::benchmarking::{CollectResults, OnlineBenchmarkResults, RunMeasurement};
 use ast::printer::proof_to_string;
-use ast::{pool, Operator, PrimitivePool, Problem, ProblemPrelude, Proof, ProofCommand, ProofIter, ProofStep, Rc, Subproof, Term, TermPool};
+use ast::{Operator, PrimitivePool, Problem, Proof, ProofCommand, ProofStep, Rc, Subproof, Term, TermPool};
 use checker::{error::CheckerError, CheckerStatistics};
 use parser::{ParserError, Position};
-use core::{panic, slice};
+use core::panic;
 use std::collections::{HashMap, HashSet};
 use std::io;
-use std::ops::Sub;
 use std::time::{Duration, Instant};
 use thiserror::Error;
 
@@ -319,7 +318,7 @@ pub fn generate_lia_smt_instances<T: io::BufRead>(
 }
 
 
-/* Extracts the step represented by a ProofCom,=mand. For a ProofCommand::Step, it 
+/* Extracts the step represented by a ProofCommand. For a ProofCommand::Step, it 
    is the underlying step. For a ProofCommand::Subproof, it is the the conclusion of the subproof. */
 fn extract_step(sliced_step: Option<&ProofCommand>) -> &ProofStep {
     match sliced_step {
@@ -336,38 +335,13 @@ fn extract_step(sliced_step: Option<&ProofCommand>) -> &ProofStep {
     }
 }
 
-/* Converts terms to clauses where
-  - {} => false
-  - {p} => p
-  - {p1, p2, ... pn} => (or p1 p2 .. pn)
-*/
-fn termify_clause(clause: &[Rc<Term>], pool: &mut PrimitivePool) -> Rc<Term> {
-    if clause.is_empty() {
-        pool.add(Term::new_bool(false))
-    } else if clause.len() == 1 {
-        clause[0].clone()
-    } else {
-        pool.add(Term::Op(Operator::Or, clause.to_vec()))
-    }  
-}
-
-/**
- * clause: a clause
- * pool: The term pool to add the negations to
- * 
- * Returns: a vector containing the negation of each disjunct in a clause
- */
-fn negation_conjuncts(clause: &[Rc<Term>], pool: &mut PrimitivePool) -> Vec<Rc<Term>> {
-    let negs : Vec<Rc<Term>> = clause.iter().map(|t| pool.add(Term::Op(Operator::Not, [t.clone()].to_vec()))).collect();
-    negs
-}
 
 /* 
 Gets the step to slice as well as everything directly associated with it, i.e., its premises and the subproofs it is in.
 Returns a vector containing the step to slice inside a reconstructed subproof stack, preceded by any premises that are not inside a subproof.
 */
-pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<ProofCommand> {
-    let ASSUME_FALSE_OFFSET = 1;
+pub fn sliced_step(proof: &Proof, id: &str) -> Vec<ProofCommand> {
+    const ASSUME_FALSE_OFFSET: usize = 1;
     
     let mut commands: Vec<ProofCommand> = Vec::new();
     let mut iter = proof.iter();
@@ -402,7 +376,7 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
       the last step of a subproof isn't really "inside" that subproof in the same sense 
       as the other steps. It doesn't rely on the anchor or assumptions, 
       so we shouldn't copy them. */
-    if let ProofCommand::Subproof(sp) = the_step.unwrap() {
+    if let ProofCommand::Subproof(_) = the_step.unwrap() {
         subproof_stack.pop();
     }
 
@@ -420,24 +394,24 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
         }
         let len = sp.commands.len();
         
-        // Add the second-to-last (penultimate) step of the subproof using the special trust rule.
+        // Create the second-to-last (penultimate) step of the subproof using the special trust rule.
         let penult = &sp.commands[len - 2];
         let penult_step = extract_step(Some(penult));
         let new_penult_step = ProofStep {id: penult_step.id.clone(), clause: penult_step.clause.clone(), rule:"trust".to_string(), premises:Vec::new(), args:penult_step.args.clone(), discharge: Vec::new()};
         
-        // Add the last step of the subproof using the same rule that originally closed the subproof
+        // Create the last step of the subproof using the same rule that originally closed the subproof.
         let ult = &sp.commands[len - 1];
         let ult_step = extract_step(Some(ult));
         let new_ult_step = ProofStep {id: ult_step.id.clone(), clause: ult_step.clause.clone(), rule:ult_step.rule.clone(), premises:Vec::new(), args:ult_step.args.clone(), discharge: ult_step.discharge.clone()};
 
+        // Add the new versions of the last two steps to the subproof.
         current_subproof.commands.push(ProofCommand::Step(new_penult_step));
         current_subproof.commands.push(ProofCommand::Step(new_ult_step));  
     }
 
-    let sliced_index : usize;
-
-    // Collect all premises
+    // Collect all premises of the step being sliced.
     let goal_command = match the_step {
+        // In this case, we are slicing a normal step. We must create a new step with the same clause and rule, but with premises that are mapped to the new proof.
         Some(ProofCommand::Step(step)) => {
 
             // In this version, this maps the indices of premises in the original proof to the indices of premises in the sliced proof
@@ -457,7 +431,7 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
                     // Construct the new command based on whether the premise is an assume or an Alethe step
                     let new_command = match premise_command {
                         // If it's an assume, just copy it verbatim.
-                        ProofCommand::Assume { id, term } => premise_command.clone(),
+                        ProofCommand::Assume { id: _, term: _ } => premise_command.clone(),
                         // If it's an Alethe step (represented by a Step or Subproof, )
                         _ => 
                         ProofCommand::Step(ProofStep{ 
@@ -521,43 +495,47 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
 
         }
         
-        
+        // In this case, we are slicing the last step of a subproof. We must create a new subproof with the same context, but with the second-to-last step using the trust rule and the last step using the same rule as before.
         Some(ProofCommand::Subproof(sp)) => {
             
+            // First, get the original last command of the subproof.
             let last_command = sp.commands.last().unwrap();
             let mut goal_command : Option<ProofCommand> = None;
 
+
+            // Collect all the assumes in the subproof.
             let mut subproof_assumptions = Vec::new();
             
             for command in &sp.commands {
                 if let ProofCommand::Assume { .. } = command {
                     subproof_assumptions.push(command.clone());
                 } else {
-                    break;
+                    break; // Stop when we reach the first non-assume command
                 }
             }
+
+            // Get the step from the last command.
             if let ProofCommand::Step(closing_step) =  last_command {
+                // Create a new subproof with the same context.
                 let mut new_subproof = Subproof {args: sp.args.clone(), commands: Vec::new(), context_id: sp.context_id.clone() };
-                let penult = sp.commands[sp.commands.len() - 2].clone();
                 
+                // Create the second-to-last step with the trust rule.
+                let penult = sp.commands[sp.commands.len() - 2].clone();
                 if let ProofCommand::Step(ps) = penult {
                     let new_penult = ProofCommand::Step(ProofStep { id: ps.id.clone(), clause: ps.clause.clone(), rule: "trust".to_string(), premises: Vec::new(), args: ps.args.clone(), discharge: Vec::new() });
+                    // Add all of the assumptions.
                     for a in subproof_assumptions {
                         new_subproof.commands.push(a);
                     }
+                    // Add the last two steps.
                     new_subproof.commands.push(new_penult);
                     new_subproof.commands.push(ProofCommand::Step(closing_step.clone()));
 
                 goal_command = Some(ProofCommand::Subproof(new_subproof));
                 
-                } else {
-                    panic!("Second to last subproof command is not step.");
-                };
-
-            } else {
-                panic!("Subproof does not end in step")
-            }
-            goal_command.expect("Goal command never got set")
+                } 
+            } 
+            goal_command.expect("Goal command never got set") 
         }
 
         _ => panic!("Slice command is not step or subproof") // TODO: replace with Carcara error
@@ -588,10 +566,10 @@ pub fn sliced_step(proof: &Proof, id: &str, pool: &mut PrimitivePool) -> Vec<Pro
 /* Slices a step with its associated subproof structure and constructs a proof containing that step.
    The beginning of the proof is an assumption of false that gets resolved with (not false) in the end.
 */
-pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut PrimitivePool) -> (Proof, String, String) {
+pub fn small_slice(problem: &Problem, proof: &Proof, id: &str, pool: &mut PrimitivePool) -> (Proof, String, String) {
     use std::fmt::Write;
 
-    let mut sliced_step_commands = sliced_step(proof, id, pool);
+    let sliced_step_commands = sliced_step(proof, id);
     
     // The resolution premises are false and (not false)
     let mut resolution_premises: Vec<(usize, usize)> = Vec::new();
@@ -633,7 +611,7 @@ pub fn small_slice3(problem: &Problem, proof: &Proof, id: &str, pool: &mut Primi
     write!(&mut problem_string, "{}", &problem.prelude).unwrap();
 
     let mut bytes = Vec::new();
-    ast::printer::write_asserts(pool, &problem.prelude, &mut bytes, &asserts, false);
+    let _ = ast::printer::write_asserts(pool, &problem.prelude, &mut bytes, &asserts, false);
     write!(&mut problem_string, "{}", String::from_utf8(bytes).unwrap()).unwrap();
     writeln!(&mut problem_string, "(check-sat)").unwrap();
     writeln!(&mut problem_string, "(exit)").unwrap();

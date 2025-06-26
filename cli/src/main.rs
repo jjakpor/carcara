@@ -4,7 +4,7 @@ mod logger;
 mod path_args;
 
 use carcara::{
-    ast, benchmarking::OnlineBenchmarkResults, check, check_and_elaborate, check_parallel, checker, elaborator, generate_lia_smt_instances, parser, small_slice3
+    ast, benchmarking::OnlineBenchmarkResults, check, check_and_elaborate, check_parallel, checker, elaborator, generate_lia_smt_instances, parser, small_slice
 };
 use clap::{AppSettings, ArgEnum, Args, Parser, Subcommand};
 use const_format::{formatcp, str_index};
@@ -12,7 +12,7 @@ use error::{CliError, CliResult};
 use git_version::git_version;
 use path_args::{get_instances_from_paths, infer_problem_path};
 use std::{
-    fs::{create_dir_all, File},
+    fs::{File},
     io::{self, BufRead, IsTerminal},
     path::Path,
     sync::atomic,
@@ -611,32 +611,20 @@ fn bench_command(options: BenchCommandOptions) -> CliResult<()> {
 fn slice_command(
     options: SliceCommandOptions,
 ) -> CliResult<(ast::Problem, ast::Proof, ast::PrimitivePool)> {
-    use std::io::Write;
     use std::fs;
     let (problem, proof) = get_instance(&options.input)?;
     let (problem, proof, mut pool) = parser::parse_instance(problem, proof, options.parsing.into())
         .map_err(carcara::Error::from)?;
     
     let sliced= if options.small {
-        // small_slice1b(&proof, &options.from)
-        let (sliced_proof, sliced_problem_string, sliced_proof_string) = small_slice3(&problem, &proof, &options.from, &mut pool);
+        let (sliced_proof, sliced_problem_string, sliced_proof_string) = small_slice(&problem, &proof, &options.from, &mut pool);
         let file_name_without_extension = options.input.proof_file.clone().replace(".alethe", ""); 
         let sliced_problem_file_name = format!("{}-{}.smt2", file_name_without_extension, options.from);
         let sliced_proof_file_name = format!("{}-{}.alethe", file_name_without_extension, options.from); 
         
-        // create_dir_all(file_name_without_extension.clone())?;
-        /*
-        let mut sliced_problem_file = File::create(format!("{}", sliced_problem_file_name))?;
-        write!(sliced_problem_file, "{}", sliced_problem_string)?;
-        */
         fs::write(sliced_problem_file_name, sliced_problem_string)?;
         fs::write(sliced_proof_file_name, sliced_proof_string)?;
-        /* 
-        let mut sliced_proof_file = File::create(format!("{}", sliced_proof_file_name))?;
-        write!(sliced_proof_file, "{}", sliced_proof_string)?;
-        */
-        
-
+       
         sliced_proof
     } else {
         let node = ast::ProofNode::from_commands_with_root_id(proof.commands, &options.from)
