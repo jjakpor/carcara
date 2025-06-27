@@ -92,6 +92,19 @@ struct Input {
 }
 
 #[derive(Args)]
+struct SliceOutput {
+    /// The path the output proof should be written to. If this argument is present, 
+    /// the problem file argument must be as well. If neither is present, the output 
+    /// will be written to the working directory.
+    proof_file: Option<String>,
+
+    /// The path the output problem should be written to. If this argument is present, 
+    /// the proof file argument must be as well. If neither is present, the output 
+    /// will be written to the working directory.
+    problem_file: Option<String>
+}
+
+#[derive(Args)]
 struct StatsOptions {
     /// Enables the gathering of performance statistics
     #[clap(long)]
@@ -384,6 +397,9 @@ struct BenchCommandOptions {
 struct SliceCommandOptions {
     #[clap(flatten)]
     input: Input,
+
+    #[clap(flatten)]
+    output: SliceOutput,
 
     #[clap(flatten)]
     parsing: ParsingOptions,
