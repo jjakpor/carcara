@@ -369,15 +369,14 @@ pub fn sliced_step(proof: &Proof, id: &str) -> Option<Vec<ProofCommand>> {
     match from_step {
         None => None,
         Some(from_step) => {
-            /* Construct a stack of subproofs that just contains any added context from its corresponding
-               subproof in the original proof, any assumes in the subproof, the second-to-last step, and the conclusion.
-            */
+            // Construct a stack of subproofs that just contains any added context from its corresponding
+            // subproof in the original proof, any assumes in the subproof, the second-to-last step, and the conclusion.
             let mut new_subproofs: Vec<Subproof> = Vec::new();
 
-            /* The step we're slicing is a "subproof" when it's the last step of a subproof. However,
-            the last step of a subproof isn't really "inside" that subproof in the same sense
-            as the other steps. It doesn't rely on the anchor or assumptions,
-            so we shouldn't copy them. */
+            // The step we're slicing is a "subproof" when it's the last step of a subproof. However,
+            // the last step of a subproof isn't really "inside" that subproof in the same sense
+            // as the other steps. It doesn't rely on the anchor or assumptions,
+            // so we shouldn't copy them.
             if let ProofCommand::Subproof(_) = from_step {
                 subproof_stack.pop();
             }
@@ -592,6 +591,7 @@ pub fn sliced_step(proof: &Proof, id: &str) -> Option<Vec<ProofCommand>> {
                 _ => return None, // Return none if the command being sliced exists but is not a step or a subproof
             };
 
+            // Build up the subproof structure the sliced step is in, starting with the innermost subproof.
             if new_subproofs.is_empty() {
                 commands.push(goal_command);
             } else {
@@ -616,10 +616,9 @@ pub fn sliced_step(proof: &Proof, id: &str) -> Option<Vec<ProofCommand>> {
     }
 }
 
-/* Slices a step with its associated subproof structure and constructs a proof containing that step.
-   The beginning of the proof is an assumption of false that gets resolved with (not false) in the end.
-*/
-pub fn small_slice(
+// Slices a step with its associated subproof structure and constructs a proof containing that step.
+// The beginning of the proof is an assumption of false that gets resolved with (not false) in the end.
+pub fn slice(
     problem: &Problem,
     proof: &Proof,
     id: &str,
@@ -628,7 +627,7 @@ pub fn small_slice(
     use std::fmt::Write;
 
     if let Some(sliced_step_commands) = sliced_step(proof, id) {
-        // The resolution premises are false and (not false)
+        // The resolution premises are (cl false) and (cl (not false)).
         let mut resolution_premises: Vec<(usize, usize)> = Vec::new();
         let mut new_proof: Proof = Proof {
             constant_definitions: proof.constant_definitions.clone(),
@@ -666,6 +665,7 @@ pub fn small_slice(
 
         let proof_string = proof_to_string(pool, &problem.prelude, &new_proof, false);
 
+        // Create an assertion in the problem for each assumption in the proof.
         let mut asserts = Vec::new();
 
         for command in &new_proof.commands {

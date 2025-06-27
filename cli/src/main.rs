@@ -13,10 +13,7 @@ use error::{CliError, CliResult};
 use git_version::git_version;
 use path_args::{get_instances_from_paths, infer_problem_path};
 use std::{
-    fs::File,
-    io::{self, BufRead, IsTerminal},
-    path::Path,
-    sync::atomic,
+    fs::File, io::{self, BufRead, IsTerminal}, path::Path, sync::atomic
 };
 
 // `git describe --all` will try to find any ref (including tags) that describes the current commit.
@@ -97,12 +94,12 @@ struct SliceOutput {
     /// The path the output proof should be written to. If this argument is present,
     /// the problem file argument must be as well. If neither is present, the output
     /// will be written to the working directory.
-    proof_file: Option<String>,
+    sliced_proof_file: Option<String>,
 
     /// The path the output problem should be written to. If this argument is present,
     /// the proof file argument must be as well. If neither is present, the output
     /// will be written to the working directory.
-    problem_file: Option<String>,
+    sliced_problem_file: Option<String>,
 }
 
 #[derive(Args)]
@@ -399,6 +396,7 @@ struct SliceCommandOptions {
     #[clap(flatten)]
     input: Input,
 
+    
     #[clap(flatten)]
     output: SliceOutput,
 
@@ -411,8 +409,6 @@ struct SliceCommandOptions {
     #[clap(long, short = 'd')]
     max_distance: Option<usize>,
 
-    #[clap(long)]
-    small: bool,
 
     // To make slice more convenient to use, we accept (and ignore!) some options from the `check`
     // subcommand
@@ -629,6 +625,7 @@ fn slice_command(
     options: SliceCommandOptions,
 ) -> CliResult<(ast::Problem, ast::Proof, ast::PrimitivePool)> {
     use std::fs;
+
     let (problem, proof) = get_instance(&options.input)?;
     let (problem, proof, mut pool) =
         parser::parse_instance(problem, proof, options.parsing.into())?;
@@ -637,12 +634,26 @@ fn slice_command(
         let (sliced_proof, sliced_problem_string, sliced_proof_string) =
             small_slice(&problem, &proof, &options.from, &mut pool)
                 .ok_or(CliError::InvalidSliceId(options.from.clone()))?;
-        let file_name_without_extension = options.input.proof_file.clone().replace(".alethe", "");
-        let sliced_problem_file_name =
-            format!("{}-{}.smt2", file_name_without_extension, options.from);
-        let sliced_proof_file_name =
-            format!("{}-{}.alethe", file_name_without_extension, options.from);
+        
 
+        let sliced_proof_file_name;
+        let sliced_problem_file_name;
+        
+
+        if options.output.sliced_proof_file.is_none() || options.output.sliced_problem_file.is_none() {
+            if options.output.sliced_proof_file.is_none() != options.output.sliced_problem_file.is_none() {
+            log::warn!("Only one output filepath was specified, so both the output problem and proof will be written with default names to the directory containing the input proof.")
+        }
+        let path = Path::new(&options.input.proof_file);
+        let path_without_extension = path.with_extension("");
+        let base_name = path_without_extension.file_name().unwrap();
+            sliced_proof_file_name = format!("{}-{}.alethe", base_name.display(), options.from);
+            sliced_problem_file_name = format!("{}-{}.smt2", base_name.display(), options.from);
+        } else {
+            sliced_proof_file_name = options.output.sliced_proof_file.unwrap();
+            sliced_problem_file_name = options.output.sliced_problem_file.unwrap();        
+        }
+        
         fs::write(sliced_problem_file_name, sliced_problem_string)?;
         fs::write(sliced_proof_file_name, sliced_proof_string)?;
 
