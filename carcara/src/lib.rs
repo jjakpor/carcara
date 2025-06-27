@@ -403,7 +403,7 @@ pub fn sliced_step(proof: &Proof, id: &str) -> Vec<ProofCommand> {
         let new_penult_step = ProofStep {
             id: penult_step.id.clone(),
             clause: penult_step.clause.clone(),
-            rule: "trust".to_string(),
+            rule: "trust".to_owned(),
             premises: Vec::new(),
             args: penult_step.args.clone(),
             discharge: Vec::new(),
@@ -454,11 +454,11 @@ pub fn sliced_step(proof: &Proof, id: &str) -> Vec<ProofCommand> {
                         ProofCommand::Assume { id: _, term: _ } => premise_command.clone(),
                         // If it's an Alethe step (represented by a Step or Subproof, )
                         _ => ProofCommand::Step(ProofStep {
-                            id: premise_command.id().to_string(),
+                            id: premise_command.id().to_owned(),
                             clause: premise_command.clause().to_vec(),
-                            rule: "trust".to_string(),
+                            rule: "trust".to_owned(),
                             premises: Vec::new(),
-                            args: extract_step(Some(premise_command)).args.clone().to_vec(), // I'm not sure if the args are needed, but I'm including them to be safe
+                            args: extract_step(Some(premise_command)).args.clone(), // I'm not sure if the args are needed, but I'm including them to be safe
                             discharge: Vec::new(), // The trust rule doesn't discharge any assumptions
                         }),
                     };
@@ -491,9 +491,9 @@ pub fn sliced_step(proof: &Proof, id: &str) -> Vec<ProofCommand> {
                         premise_map.insert(*premise, (premise.0, i));
                     } else {
                         let step = ProofStep {
-                            id: premise_command.id().to_string(),
+                            id: premise_command.id().to_owned(),
                             clause: premise_command.clause().to_vec(),
-                            rule: "trust".to_string(),
+                            rule: "trust".to_owned(),
                             premises: Vec::new(),
                             args: extract_step(Some(premise_command)).args.clone(),
                             discharge: Vec::new(),
@@ -512,7 +512,7 @@ pub fn sliced_step(proof: &Proof, id: &str) -> Vec<ProofCommand> {
             // Now that we have created all the commands and know where they are, we can make a list of the indices of the premises in the new proof
             let mut new_premises: Vec<(usize, usize)> = Vec::new();
             for premise in &step.premises {
-                new_premises.push(*premise_map.get(premise).unwrap());
+                new_premises.push(premise_map[premise]);
             }
             /*  The step being sliced out gets a unique identifier. s stands for sliced.
             This is to avoid naming conflicts when slicing the second to last step of a subproof.
@@ -554,7 +554,7 @@ pub fn sliced_step(proof: &Proof, id: &str) -> Vec<ProofCommand> {
                 let mut new_subproof = Subproof {
                     args: sp.args.clone(),
                     commands: Vec::new(),
-                    context_id: sp.context_id.clone(),
+                    context_id: sp.context_id,
                 };
 
                 // Create the second-to-last step with the trust rule.
@@ -563,7 +563,7 @@ pub fn sliced_step(proof: &Proof, id: &str) -> Vec<ProofCommand> {
                     let new_penult = ProofCommand::Step(ProofStep {
                         id: ps.id.clone(),
                         clause: ps.clause.clone(),
-                        rule: "trust".to_string(),
+                        rule: "trust".to_owned(),
                         premises: Vec::new(),
                         args: ps.args.clone(),
                         discharge: Vec::new(),
@@ -630,7 +630,7 @@ pub fn small_slice(
     };
     let false_term: Rc<Term> = pool.add(Term::new_bool(false));
     new_proof.commands.push(ProofCommand::Assume {
-        id: "slice_assume_false".to_string(),
+        id: "slice_assume_false".to_owned(),
         term: false_term.clone(),
     });
     for c in &sliced_step_commands {
@@ -638,9 +638,9 @@ pub fn small_slice(
     }
 
     new_proof.commands.push(ProofCommand::Step(ProofStep {
-        id: "slice_not_false".to_string(),
+        id: "slice_not_false".to_owned(),
         clause: [pool.add(Term::Op(Operator::Not, [false_term.clone()].to_vec()))].to_vec(),
-        rule: "false".to_string(),
+        rule: "false".to_owned(),
         premises: Vec::new(),
         args: Vec::new(),
         discharge: Vec::new(),
@@ -649,9 +649,9 @@ pub fn small_slice(
     resolution_premises.push((0, 0)); // False
     resolution_premises.push((0, new_proof.commands.len() - 1)); // Not false
     let resolution_step = ProofStep {
-        id: "t.end".to_string(),
+        id: "t.end".to_owned(),
         clause: Vec::new(),
-        rule: "resolution".to_string(),
+        rule: "resolution".to_owned(),
         premises: resolution_premises,
         args: Vec::new(),
         discharge: Vec::new(),
