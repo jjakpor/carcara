@@ -5,7 +5,7 @@ mod path_args;
 
 use carcara::{
     ast, benchmarking::OnlineBenchmarkResults, check, check_and_elaborate, check_parallel, checker,
-    elaborator, generate_lia_smt_instances, parser, small_slice,
+    elaborator, generate_lia_smt_instances, parser, slice,
 };
 use clap::{AppSettings, ArgEnum, Args, Parser, Subcommand};
 use const_format::{formatcp, str_index};
@@ -13,7 +13,10 @@ use error::{CliError, CliResult};
 use git_version::git_version;
 use path_args::{get_instances_from_paths, infer_problem_path};
 use std::{
-    fs::File, io::{self, BufRead, IsTerminal}, path::Path, sync::atomic
+    fs::File,
+    io::{self, BufRead, IsTerminal},
+    path::Path,
+    sync::atomic,
 };
 
 // `git describe --all` will try to find any ref (including tags) that describes the current commit.
@@ -72,7 +75,7 @@ enum Command {
     /// Checks a series of proof files and records performance statistics.
     Bench(BenchCommandOptions),
 
-    /// Given a step, takes a slice of a proof consisting of all its transitive premises.
+    /// Given a step, takes a slice of a proof consisting of its premises.
     Slice(SliceCommandOptions),
 
     /// Generates the equivalent SMT instance for every `lia_generic` step in a proof.
@@ -396,7 +399,6 @@ struct SliceCommandOptions {
     #[clap(flatten)]
     input: Input,
 
-    
     #[clap(flatten)]
     output: SliceOutput,
 
@@ -408,7 +410,6 @@ struct SliceCommandOptions {
 
     #[clap(long, short = 'd')]
     max_distance: Option<usize>,
-
 
     // To make slice more convenient to use, we accept (and ignore!) some options from the `check`
     // subcommand
@@ -632,28 +633,30 @@ fn slice_command(
 
     let sliced = {
         let (sliced_proof, sliced_problem_string, sliced_proof_string) =
-            small_slice(&problem, &proof, &options.from, &mut pool)
+            slice(&problem, &proof, &options.from, &mut pool)
                 .ok_or(CliError::InvalidSliceId(options.from.clone()))?;
-        
 
         let sliced_proof_file_name;
         let sliced_problem_file_name;
-        
 
-        if options.output.sliced_proof_file.is_none() || options.output.sliced_problem_file.is_none() {
-            if options.output.sliced_proof_file.is_none() != options.output.sliced_problem_file.is_none() {
-            log::warn!("Only one output filepath was specified, so both the output problem and proof will be written with default names to the directory containing the input proof.")
-        }
-        let path = Path::new(&options.input.proof_file);
-        let path_without_extension = path.with_extension("");
-        let base_name = path_without_extension.file_name().unwrap();
+        if options.output.sliced_proof_file.is_none()
+            || options.output.sliced_problem_file.is_none()
+        {
+            if options.output.sliced_proof_file.is_none()
+                != options.output.sliced_problem_file.is_none()
+            {
+                log::warn!("Only one output filepath was specified, so both the output problem and proof will be written with default names to the directory containing the input proof.")
+            }
+            let path = Path::new(&options.input.proof_file);
+            let path_without_extension = path.with_extension("");
+            let base_name = path_without_extension.file_name().unwrap();
             sliced_proof_file_name = format!("{}-{}.alethe", base_name.display(), options.from);
             sliced_problem_file_name = format!("{}-{}.smt2", base_name.display(), options.from);
         } else {
             sliced_proof_file_name = options.output.sliced_proof_file.unwrap();
-            sliced_problem_file_name = options.output.sliced_problem_file.unwrap();        
+            sliced_problem_file_name = options.output.sliced_problem_file.unwrap();
         }
-        
+
         fs::write(sliced_problem_file_name, sliced_problem_string)?;
         fs::write(sliced_proof_file_name, sliced_proof_string)?;
 
