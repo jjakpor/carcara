@@ -586,10 +586,10 @@ pub fn sliced_step(proof: &Proof, id: &str) -> Option<Vec<ProofCommand>> {
                             goal_command = Some(ProofCommand::Subproof(new_subproof));
                         }
                     }
-                    goal_command.expect("Goal command never got set")
+                    goal_command.expect("Goal command never got set") // This should never happen
                 }
 
-                _ => return None,
+                _ => return None, // Return none if the command being sliced exists but is not a step or a subproof
             };
 
             if new_subproofs.is_empty() {

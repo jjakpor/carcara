@@ -77,17 +77,14 @@ pub fn write_asserts(
     // compliant. For Carcara, this means that arithmetic constants
     // cannot use the GMP notation
     printer.smt_lib_strict = true;
-    
+
     for assertion in asserts {
         write!(printer.inner, "(assert ")?;
-            assertion.print_with_sharing(&mut printer)?;
-            writeln!(printer.inner, ")")?;
+        assertion.print_with_sharing(&mut printer)?;
+        writeln!(printer.inner, ")")?;
     }
     Ok(())
 }
-
-
-
 
 trait PrintProof {
     fn write_proof(&mut self, proof: &Proof) -> io::Result<()>;
